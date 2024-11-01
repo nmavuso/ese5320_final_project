@@ -35,6 +35,28 @@ std::vector<std::vector<unsigned char>> test_cdc(const char* file) {
     return chunks;
 }
 
+
+void test_lzw () {
+
+    char chunk[] = "YOUR_TEST_STRING_HERE";
+    int resultSize;
+    int* result = encode(chunk, &resultSize);
+
+    printf("Encoded result: ");
+    for (int i = 0; i < resultSize; i++) {
+        printf("%d ", result[i]);
+    }
+    printf("\n");
+
+    // Free allocated memory for result and dictionary
+    free(result);
+    for (int i = 0; i < dictSize; i++) {
+        free(dictionary[i]);
+    }
+    free(dictionary);
+
+}
+
 // Main function
 int main() {
     std::vector<std::vector<unsigned char>> chunks = test_cdc("prince.txt");
@@ -42,7 +64,8 @@ int main() {
     for (size_t i = 0; i < chunks.size(); ++i) {
         std::cout << "Chunk " << i + 1 << " size: " << chunks[i].size() << " bytes" << std::endl;
     }
-
+    
+    
     return 0;
 
 }
