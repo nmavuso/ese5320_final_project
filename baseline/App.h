@@ -6,6 +6,8 @@
 #define MAX_CHUNK_SIZE 8192
 #define INITIAL_DICT_CAPACITY 256
 #include "cmd.h"
+#include "lzw.h"
+#include "cdc.h"
 
 uint64_t compute_prime_power_window();
 uint64_t initialize_hash(unsigned char* input, unsigned int window_size);
