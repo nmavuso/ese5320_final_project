@@ -1,9 +1,0 @@
-#define WIN_SIZE 16
-#define PRIME 3
-#define MODULUS 256
-#define TARGET 0
-#define NUM_CHUNKS 1000
-#define MAX_CHUNK_SIZE 8192
-#define INITIAL_DICT_CAPACITY 256
-
-

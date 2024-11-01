@@ -3,12 +3,7 @@
 #include <cstdio>
 #include <cstdlib>
 #include <cstdint>
-
-#define PRIME 3
-#define MODULUS 256
-#define MIN_CHUNK_SIZE 64    // Minimum chunk size
-#define MAX_CHUNK_SIZE 1024  // Maximum chunk size
-#define WINDOW_SIZE 16       // Define a window size for hash computation
+#include "Encoder.h"
 
 uint64_t compute_prime_power_window() {
     uint64_t power = 1;
