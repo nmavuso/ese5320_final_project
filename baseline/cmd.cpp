@@ -124,31 +124,3 @@ void deduplicate_chunks(char chunks[NUM_CHUNKS][MAX_CHUNK_SIZE], int chunk_sizes
         }
     }
 }
-
-int main()
-{
-    char chunks[NUM_CHUNKS][MAX_CHUNK_SIZE];
-    int chunk_sizes[NUM_CHUNKS];
-    HashTable *hash_table = initialize_hash_table();
-
-    // Initialize chunks with some sample data
-    for (int i = 0; i < NUM_CHUNKS; i++)
-    {
-        chunk_sizes[i] = (i % 100) + 1; // Varying sizes from 1 to 100 bytes
-        for (int j = 0; j < chunk_sizes[i]; j++)
-        {
-            chunks[i][j] = (uint8_t)(i + j);
-        }
-    }
-
-    // Deduplicate chunks
-    deduplicate_chunks(chunks, chunk_sizes, hash_table);
-
-    // Clean up
-    for (int i = 0; i < HASH_TABLE_SIZE; i++)
-    {
-        free(hash_table->entries[i]);
-    }
-    free(hash_table);
-    return 0;
-}
