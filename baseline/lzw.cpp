@@ -98,3 +98,25 @@ int* encode(char* chunk, int* resultSize) {
 
     return result;
 }
+
+// Main function for testing
+int main() {
+    char chunk[] = "YOUR_TEST_STRING_HERE";
+    int resultSize;
+    int* result = encode(chunk, &resultSize);
+
+    printf("Encoded result: ");
+    for (int i = 0; i < resultSize; i++) {
+        printf("%d ", result[i]);
+    }
+    printf("\n");
+
+    // Free allocated memory for result and dictionary
+    free(result);
+    for (int i = 0; i < dictSize; i++) {
+        free(dictionary[i]);
+    }
+    free(dictionary);
+
+    return 0;
+}
