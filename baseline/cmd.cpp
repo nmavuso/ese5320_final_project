@@ -5,6 +5,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <math.h>
+#include "lzw.h"
 #define NUM_CHUNKS 1000
 #define MAX_CHUNK_SIZE 8192
 
@@ -24,7 +25,7 @@ uint64_t compute_hash(char *chunk, int size)
 typedef struct HashEntry
 {
     uint64_t key;
-    int **value;            // LZW encoded chunk
+    int *value;             // LZW encoded chunk
     int size;               // size of the encoded chunk
     struct HashEntry *next; // collision detection
 } HashEntry;
@@ -37,7 +38,7 @@ typedef struct
 } HashTable;
 
 // Function to insert into hash table
-void insert_hash_table(HashTable *table, uint64_t key, int **value, int size)
+void insert_hash_table(HashTable *table, uint64_t key, int *value, int size)
 {
     int index = key % table->size;
     HashEntry *new_entry = (HashEntry *)malloc(sizeof(HashEntry));
@@ -63,7 +64,7 @@ void insert_hash_table(HashTable *table, uint64_t key, int **value, int size)
 }
 
 // Function to lookup in hash table
-int **lookup_hash_table(HashTable *table, uint64_t key, int *size)
+int *lookup_hash_table(HashTable *table, uint64_t key, int *size)
 {
     int index = key % table->size;
     HashEntry *entry = table->entries[index];
@@ -107,7 +108,7 @@ void deduplicate_chunks(char chunks[NUM_CHUNKS][MAX_CHUNK_SIZE], int chunk_sizes
     {
         uint64_t chunk_hash = compute_hash(chunks[i], chunk_sizes[i]);
         int existing_size;
-        int **existing = lookup_hash_table(hash_table, chunk_hash, &existing_size);
+        int *existing = lookup_hash_table(hash_table, chunk_hash, &existing_size);
 
         if (existing != NULL && existing_size == chunk_sizes[i] &&
             memcmp(existing, chunks[i], chunk_sizes[i]) == 0)
@@ -117,7 +118,7 @@ void deduplicate_chunks(char chunks[NUM_CHUNKS][MAX_CHUNK_SIZE], int chunk_sizes
         else
         {
             int encoded_size;
-            int **encoding = lzw_encode(chunks[i], chunk_sizes[i], &encoded_size); // assuming this function exists
+            int *encoding = encode(chunks[i], &encoded_size); // lzw fucntion
             insert_hash_table(hash_table, chunk_hash, encoding, encoded_size);
             printf("Chunk %d is unique\n", i);
         }

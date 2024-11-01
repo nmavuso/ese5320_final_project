@@ -2,7 +2,7 @@
 #define CHUNK_DEDUPLICATION_H
 
 #include <stdint.h>
-
+#include "lzw.h"
 // Constants
 #define NUM_CHUNKS 1000
 #define MAX_CHUNK_SIZE 8192
