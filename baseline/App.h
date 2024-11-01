@@ -10,3 +10,6 @@ uint64_t compute_prime_power_window();
 uint64_t initialize_hash(unsigned char* input, unsigned int window_size);
 uint64_t update_hash(uint64_t hash, unsigned char outgoing, unsigned char incoming);
 std::vector<std::vector<unsigned char>> cdc(unsigned char* buff, unsigned int buff_size);
+uint64_t compute_hash(uint8_t *chunk, int size);
+void initializeDictionary();
+int* encode(char* chunk, int* resultSize);
