@@ -1,29 +1,31 @@
+#include <iostream>
+#include <vector>
+#include <cstdio>
+#include <cstdlib>
 #include "App.h"
+#include "cmd.h"
+#include "lzw.h"
 
-std::vector<std::vector<unsigned char>> test_cdc(const char *file)
-{
-    FILE *fp = fopen(file, "rb");
-    if (fp == NULL)
-    {
+std::vector<std::vector<unsigned char>> test_cdc(const char* file) {
+    FILE* fp = fopen(file, "rb");
+    if (fp == nullptr) {
         perror("Error opening file");
         return {};
     }
 
-    fseek(fp, 0, SEEK_END);    // Seek to end of file
-    int file_size = ftell(fp); // Get file size
-    fseek(fp, 0, SEEK_SET);    // Seek back to beginning of file
+    fseek(fp, 0, SEEK_END);
+    int file_size = ftell(fp);
+    fseek(fp, 0, SEEK_SET);
 
-    unsigned char *buff = (unsigned char *)malloc(file_size);
-    if (buff == NULL)
-    {
+    unsigned char* buff = (unsigned char*)malloc(file_size);
+    if (buff == nullptr) {
         perror("Not enough memory");
         fclose(fp);
         return {};
     }
 
     int bytes_read = fread(buff, sizeof(unsigned char), file_size, fp);
-    if (bytes_read != file_size)
-    {
+    if (bytes_read != file_size) {
         perror("File read error");
         free(buff);
         fclose(fp);
@@ -33,81 +35,61 @@ std::vector<std::vector<unsigned char>> test_cdc(const char *file)
     std::vector<std::vector<unsigned char>> chunks = cdc(buff, file_size);
 
     free(buff);
-    fclose(fp);
-
+    free(fp);
+	
     return chunks;
 }
 
-void test_cmd()
-{
+std::vector<std::vector<unsigned char>> test_cmd(const std::vector<std::vector<unsigned char>>& chunks) {
+    HashTable* hash_table = initialize_hash_table();
+    if (hash_table == nullptr) {
+        return {};
+    }
 
-    char chunks[NUM_CHUNKS][MAX_CHUNK_SIZE];
-    int chunk_sizes[NUM_CHUNKS];
-    HashTable *hash_table = initialize_hash_table();
-
-    // Initialize chunks with some sample data
-    for (int i = 0; i < NUM_CHUNKS; i++)
-    {
-        chunk_sizes[i] = (i % 100) + 1; // Varying sizes from 1 to 100 bytes
-        for (int j = 0; j < chunk_sizes[i]; j++)
-        {
-            chunks[i][j] = (uint8_t)(i + j);
+    std::vector<std::vector<unsigned char>> unique_chunks;
+    for (const auto& chunk : chunks) {
+        bool is_unique = deduplicate_chunks(chunk.data(), chunk.size(), hash_table);
+        if (is_unique) {
+            unique_chunks.push_back(chunk);
         }
     }
 
-    // Deduplicate chunks
-    deduplicate_chunks(chunks, chunk_sizes, hash_table);
-
-    // Clean up
-    for (int i = 0; i < HASH_TABLE_SIZE; i++)
-    {
-        free(hash_table->entries[i]);
+    for (int i = 0; i < HASH_TABLE_SIZE; ++i) {
+        HashEntry* entry = hash_table->entries[i];
+	while (entry) {
+		HashEntry* next = entry->next;
+		free(entry->value);
+		free(entry);
+		entry = next;
+	}
     }
+	
+    free(hash_table->entries);
     free(hash_table);
+
+    return unique_chunks;
 }
 
-void test_lzw()
-{
+void test_lzw(const std::vector<std::vector<unsigned char>>& unique_chunks) {
+    for (size_t i = 0; i < unique_chunks.size(); ++i) {
+        const auto& chunk = unique_chunks[i];
 
-    char chunk[] = "YOUR_TEST_STRING_HERE I AM SAM SAM I AM";
-    int resultSize;
-    int *result = encode(chunk, &resultSize);
+        int resultSize;
+        int* encoded_result = encode(reinterpret_cast<const char*>(chunk.data()), chunk.size(), &resultSize);
 
-    printf("Encoded result: ");
-    for (int i = 0; i < resultSize; i++)
-    {
-        printf("%d ", result[i]);
+        std::cout << "Encoded result for chunk " << i + 1 << ": ";
+        for (int j = 0; j < resultSize; ++j) {
+            std::cout << encoded_result[j] << " ";
+        }
+        std::cout << std::endl;
+
+        free(encoded_result);
     }
-    printf("\n");
-
-    // Free allocated memory for result and dictionary
-    free(result);
-    for (int i = 0; i < dictSize; i++)
-    {
-        free(dictionary[i]);
-    }
-    free(dictionary);
 }
 
-// Main function
-int main()
-{
+int main() {
     std::vector<std::vector<unsigned char>> chunks = test_cdc("prince.txt");
-
-    for (size_t i = 0; i < chunks.size(); ++i)
-    {
-        std::cout << "Chunk " << i + 1 << " size: " << chunks[i].size() << " bytes" << std::endl;
-    }
-
-    // 1) initialize a hash table through cdm code
-    // 2) send list of chunks to CDM through deduplicate_chunks()
-    // this function will take care of calls to LZW encode
-    // 3) The value in the hash table will be the indexes in the memory
-
-    // CDM
-
-    // LZW
-    test_lzw();
-
+    std::vector<std::vector<unsigned char>> unique_chunks = test_cmd(chunks);
+    test_lzw(unique_chunks);
     return 0;
 }

@@ -3,7 +3,10 @@
 #include <cstdio>
 #include <cstdlib>
 #include <cstdint>
-#include "Encoder.h"
+#include "App.h"
+#include "cdc.h"
+#define MIN_CHUNK_SIZE 1024
+#define WINDOW_SIZE 16
 
 uint64_t compute_prime_power_window() {
     uint64_t power = 1;
@@ -93,16 +96,4 @@ std::vector<std::vector<unsigned char>> test_cdc(const char* file) {
     fclose(fp);
 
     return chunks;
-}
-
-// Main function
-int main() {
-    std::vector<std::vector<unsigned char>> chunks = test_cdc("prince.txt");
-
-    for (size_t i = 0; i < chunks.size(); ++i) {
-        std::cout << "Chunk " << i + 1 << " size: " << chunks[i].size() << " bytes" << std::endl;
-    }
-
-    return 0;
-
 }

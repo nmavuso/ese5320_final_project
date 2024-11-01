@@ -3,141 +3,137 @@
 #include <string.h>
 #include <stdbool.h>
 #include "lzw.h"
-// Initial dictionary size and allocation
+
 #define INITIAL_DICT_CAPACITY 256
 
 static int dictSize = 0;
 static int dictCapacity = INITIAL_DICT_CAPACITY;
-char **dictionary = NULL; // Initialize dictionary as a pointer to hold dynamic allocation
+char **dictionary = NULL;
 
-// Function to initialize the dictionary
-void initializeDictionary()
-{
-    dictionary = (char **)malloc(dictCapacity * sizeof(char *));
-    if (dictionary == NULL)
-    {
-        fprintf(stderr, "Memory allocation for dictionary failed\n");
-        exit(1);
+// Initialize dictionary only if it hasn't been initialized
+void initializeDictionary() {
+    if (dictionary == NULL) {
+        dictionary = (char **)malloc(dictCapacity * sizeof(char *));
+        if (dictionary == NULL) {
+            fprintf(stderr, "Memory allocation for dictionary failed\n");
+            exit(1);
+        }
+        dictSize = 0;
     }
 }
 
-// Function to encode a chunk of text
-int *encode(char *chunk, int *resultSize)
-{
-    if (dictionary == NULL)
-    {
-        initializeDictionary(); // Initialize dictionary if it hasn't been
+// Free dictionary memory to avoid memory leaks
+void freeDictionary() {
+    if (dictionary != NULL) {
+        for (int i = 0; i < dictSize; i++) {
+            free(dictionary[i]);
+        }
+        free(dictionary);
+        dictionary = NULL;
+        dictSize = 0;
+        dictCapacity = INITIAL_DICT_CAPACITY;
+    }
+}
+
+// Function to encode a chunk of text using LZW encoding
+int *encode(char *chunk, int *resultSize) {
+    if (dictionary == NULL) {
+        initializeDictionary();
     }
 
     int chunkSize = strlen(chunk);
-    char foundChars[chunkSize + 1]; // +1 for null terminator
-    foundChars[0] = '\0';           // Initialize as an empty string
+    if (chunkSize == 0) {
+        *resultSize = 0;
+        return NULL;
+    }
+
+    char *foundChars = (char *)malloc((chunkSize + 1) * sizeof(char));
+    if (foundChars == NULL) {
+        fprintf(stderr, "Memory allocation for foundChars failed\n");
+        exit(1);
+    }
+    foundChars[0] = '\0';
 
     int *result = (int *)malloc(chunkSize * sizeof(int));
-    if (result == NULL)
-    {
+    if (result == NULL) {
         fprintf(stderr, "Memory allocation for result failed\n");
+        free(foundChars);
         exit(1);
     }
     *resultSize = 0;
 
-    for (int i = 0; i < chunkSize; i++)
-    {
+    for (int i = 0; i < chunkSize; i++) {
         char character[2] = {chunk[i], '\0'};
-        char charsToAdd[chunkSize + 1];
-        strcpy(charsToAdd, foundChars);
-        strcat(charsToAdd, character);
+        strcat(foundChars, character);
 
-        bool exists = false;
         int foundIndex = -1;
-
-        // Check if charsToAdd is already in the dictionary
-        for (int j = 0; j < dictSize; j++)
-        {
-            if (strcmp(dictionary[j], charsToAdd) == 0)
-            {
-                exists = true;
+        for (int j = 0; j < dictSize; j++) {
+            if (strcmp(dictionary[j], foundChars) == 0) {
                 foundIndex = j;
                 break;
             }
         }
 
-        if (exists)
-        {
-            strcpy(foundChars, charsToAdd);
-        }
-        else
-        {
-            // Output the code for foundChars if it exists in the dictionary
-            for (int k = 0; k < dictSize; k++)
-            {
-                if (strcmp(dictionary[k], foundChars) == 0)
-                {
-                    result[*resultSize] = k;
-                    (*resultSize)++;
-                    break;
-                }
-            }
-
-            // Check if we need to expand the dictionary
-            if (dictSize >= dictCapacity)
-            {
+        if (foundIndex != -1) {
+            continue; // foundChars already in dictionary; continue to build string
+        } else {
+            if (dictSize >= dictCapacity) {
                 dictCapacity *= 2;
                 dictionary = (char **)realloc(dictionary, dictCapacity * sizeof(char *));
-                if (dictionary == NULL)
-                {
+                if (dictionary == NULL) {
                     fprintf(stderr, "Memory reallocation for dictionary failed\n");
+                    free(result);
+                    free(foundChars);
                     exit(1);
                 }
             }
 
-            // Add charsToAdd to the dictionary
-            dictionary[dictSize] = (char *)malloc((strlen(charsToAdd) + 1) * sizeof(char));
-            strcpy(dictionary[dictSize++], charsToAdd);
+            dictionary[dictSize] = (char *)malloc((strlen(foundChars) + 1) * sizeof(char));
+            if (dictionary[dictSize] == NULL) {
+                fprintf(stderr, "Memory allocation for dictionary entry failed\n");
+                free(result);
+                free(foundChars);
+                exit(1);
+            }
+            strcpy(dictionary[dictSize++], foundChars);
 
-            // Update foundChars to the current character
-            strcpy(foundChars, character);
+            if (foundIndex != -1) {
+                result[*resultSize] = foundIndex;
+                (*resultSize)++;
+            }
+
+            strcpy(foundChars, character);  // Reset foundChars to current character
         }
     }
 
-    // Output the last foundChars if it's not empty
-    if (strlen(foundChars) > 0)
-    {
-        for (int k = 0; k < dictSize; k++)
-        {
-            if (strcmp(dictionary[k], foundChars) == 0)
-            {
-                result[*resultSize] = k;
+    if (strlen(foundChars) > 0) {
+        for (int j = 0; j < dictSize; j++) {
+            if (strcmp(dictionary[j], foundChars) == 0) {
+                result[*resultSize] = j;
                 (*resultSize)++;
                 break;
             }
         }
     }
 
+    free(foundChars);
     return result;
 }
 
 // Main function for testing
-int test_lzw()
-{
+int test_lzw() {
     char chunk[] = "YOUR_TEST_STRING_HERE";
     int resultSize;
     int *result = encode(chunk, &resultSize);
 
     printf("Encoded result: ");
-    for (int i = 0; i < resultSize; i++)
-    {
+    for (int i = 0; i < resultSize; i++) {
         printf("%d ", result[i]);
     }
     printf("\n");
 
-    // Free allocated memory for result and dictionary
     free(result);
-    for (int i = 0; i < dictSize; i++)
-    {
-        free(dictionary[i]);
-    }
-    free(dictionary);
+    freeDictionary();
 
     return 0;
 }

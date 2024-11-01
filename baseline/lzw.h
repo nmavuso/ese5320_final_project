@@ -15,7 +15,7 @@ void initializeDictionary();
 //   - chunk: the text chunk to encode
 //   - resultSize: pointer to store the size of the result
 // Returns: an integer array containing encoded values
-int *encode(char *chunk, int *resultSize);
+int *encode(const char *chunk, int chunk_size, int *resultSize);
 
 // Function to free memory allocated for the dictionary
 void freeDictionary();

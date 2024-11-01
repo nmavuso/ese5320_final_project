@@ -27,8 +27,8 @@ typedef struct
 // Function prototypes
 uint64_t compute_hash(char *chunk, int size);
 void insert_hash_table(HashTable *table, uint64_t key, int **value, int size);
-int **lookup_hash_table(HashTable *table, uint64_t key, int *size);
+int *lookup_hash_table(HashTable *table, uint64_t key, int *size);
 HashTable *initialize_hash_table();
-void deduplicate_chunks(char chunks[NUM_CHUNKS][MAX_CHUNK_SIZE], int chunk_sizes[NUM_CHUNKS], HashTable *hash_table);
+bool deduplicate_chunks(const unsigned char* chunk, int chunk_sizes, HashTable *hash_table);
 
 #endif // CHUNK_DEDUPLICATION_H
