@@ -35,6 +35,9 @@ std::vector<std::vector<unsigned char>> test_cdc(const char* file) {
     return chunks;
 }
 
+void test_cdm () {
+
+}
 
 void test_lzw () {
 
@@ -64,6 +67,10 @@ int main() {
     for (size_t i = 0; i < chunks.size(); ++i) {
         std::cout << "Chunk " << i + 1 << " size: " << chunks[i].size() << " bytes" << std::endl;
     }
+
+    //Send the list of chunks to CDM 
+
+    //EN
     
     
     return 0;
