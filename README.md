@@ -1,6 +1,9 @@
-# ese5320_final_project
-Members: Ahmed Abdellah
+# ESE5320 Final Project: Deduplication and Compression
+Members:
+Ahmed Abdellah
+
 Nhlanhla Mavuso 
+
 Joaquin Revello
 
 **Deduplication and Compression **
