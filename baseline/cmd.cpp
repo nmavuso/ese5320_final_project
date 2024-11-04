@@ -7,7 +7,7 @@
 #define MAX_CHUNK_SIZE 8192
 #define HASH_TABLE_SIZE 1000
 
-uint64_t compute_hash(char *chunk, int size)
+uint64_t compute_hash(const unsigned char *chunk, int size)
 {
     uint64_t hash = 0;
     for (int i = 0; i < size; i++)
@@ -124,7 +124,7 @@ int *lookup_hash_table(HashTable *table, uint64_t key, int *size)
     *size = 0;
     return NULL;
 }
-bool deduplicate_chunks(char *chunk, int chunk_size, HashTable *hash_table)
+bool deduplicate_chunks(const unsigned char *chunk, int chunk_size, HashTable *hash_table)
 {
     // Initialize hash table if it’s null
     if (hash_table == nullptr)
@@ -154,7 +154,7 @@ bool deduplicate_chunks(char *chunk, int chunk_size, HashTable *hash_table)
     {
         // Encode the unique chunk using LZW
         int encoded_size;
-        int *encoding = encode(reinterpret_cast<const char *>(chunk), chunk_size, &encoded_size);
+        int *encoding = encode(chunk, chunk_size, &encoded_size);
         if (encoding == nullptr)
         {
             fprintf(stderr, "Failed to encode chunk\n");
