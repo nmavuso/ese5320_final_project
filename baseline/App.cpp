@@ -100,10 +100,36 @@ void test_lzw(const std::vector<std::vector<unsigned char>> &unique_chunks)
     }
 }
 
+// Main function for testing
+int lzw_custom_test()
+{
+    // char chunk[] = "I AM SAM SAM I AM";
+    // char chunk[] = "ABABABA";
+    char chunk[] = "itty bitty bit bin";
+    int resultSize;
+    int *result = encode(reinterpret_cast<const unsigned char*>(chunk), &resultSize);
+
+    printf("Encoded result in TEST: ");
+    printf("Hello %d ", resultSize);
+
+    for (int i = 0; i < resultSize; i++)
+    {
+        printf("%d ", result[i]);
+    }
+    printf("\n");
+
+    free(result);
+    freeDictionary();
+
+    return 0;
+}
+
 int main()
 {
-    std::vector<std::vector<unsigned char>> chunks = test_cdc("prince.txt");
-    std::vector<std::vector<unsigned char>> unique_chunks = test_cmd(chunks);
-    test_lzw(unique_chunks);
+    // std::vector<std::vector<unsigned char>> chunks = test_cdc("prince.txt");
+    // std::vector<std::vector<unsigned char>> unique_chunks = test_cmd(chunks);
+    // test_lzw(unique_chunks);
+
+    lzw_custom_test();
     return 0;
 }
