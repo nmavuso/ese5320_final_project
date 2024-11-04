@@ -154,7 +154,7 @@ bool deduplicate_chunks(const unsigned char *chunk, int chunk_size, HashTable *h
     {
         // Encode the unique chunk using LZW
         int encoded_size;
-        int *encoding = encode(chunk, chunk_size, &encoded_size);
+        int *encoding = encode(chunk, &encoded_size);
         if (encoding == nullptr)
         {
             fprintf(stderr, "Failed to encode chunk\n");

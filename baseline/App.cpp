@@ -87,7 +87,7 @@ void test_lzw(const std::vector<std::vector<unsigned char>> &unique_chunks)
         const auto &chunk = unique_chunks[i];
 
         int resultSize;
-        int *encoded_result = encode((chunk.data()), chunk.size(), &resultSize);
+        int *encoded_result = encode((chunk.data()), &resultSize);
 
         std::cout << "Encoded result for chunk " << i + 1 << ": ";
         for (int j = 0; j < resultSize; ++j)

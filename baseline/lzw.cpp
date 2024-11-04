@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdbool.h>
 #include "lzw.h"
+#include <cstring>
 
 #define INITIAL_DICT_CAPACITY 256
 
@@ -49,7 +50,7 @@ int *encode(const unsigned char *chunk, int *resultSize)
         initializeDictionary();
     }
 
-    int chunkSize = strlen(chunk);
+    int chunkSize = std::strlen(reinterpret_cast<const char*>(chunk));
     if (chunkSize == 0)
     {
         *resultSize = 0;
@@ -75,7 +76,7 @@ int *encode(const unsigned char *chunk, int *resultSize)
 
     for (int i = 0; i < chunkSize; i++)
     {
-        char character[2] = {chunk[i], '\0'};
+        char character[2] = {static_cast<char>(chunk[i]), '\0'};
         strcat(foundChars, character);
 
         int foundIndex = -1;
@@ -149,7 +150,7 @@ int test_lzw()
 {
     char chunk[] = "YOUR_TEST_STRING_HERE";
     int resultSize;
-    int *result = encode(chunk, &resultSize);
+    int *result = encode(reinterpret_cast<const unsigned char*>(chunk), &resultSize);
 
     printf("Encoded result: ");
     for (int i = 0; i < resultSize; i++)
