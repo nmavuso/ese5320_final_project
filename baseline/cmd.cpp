@@ -3,6 +3,8 @@
 #include <string.h>
 #include <stdlib.h>
 #include "lzw.h"
+#include <iostream>
+
 #define NUM_CHUNKS 1000
 #define MAX_CHUNK_SIZE 8192
 #define HASH_TABLE_SIZE 1000
@@ -33,6 +35,7 @@ typedef struct
 
 HashTable *initialize_hash_table()
 {
+    std::cout << "Creating a new hash table..." << std::endl;
     HashTable *table = (HashTable *)malloc(sizeof(HashTable));
     if (!table)
     {
@@ -124,7 +127,7 @@ int *lookup_hash_table(HashTable *table, uint64_t key, int *size)
     *size = 0;
     return NULL;
 }
-bool deduplicate_chunks(const unsigned char *chunk, int chunk_size, HashTable *hash_table)
+int *deduplicate_chunks(const unsigned char *chunk, int chunk_size, HashTable *hash_table)
 {
     // Initialize hash table if it’s null
     if (hash_table == nullptr)
@@ -144,11 +147,16 @@ bool deduplicate_chunks(const unsigned char *chunk, int chunk_size, HashTable *h
     int existing_size;
     int *existing = lookup_hash_table(hash_table, chunk_hash, &existing_size);
 
-    if (existing != nullptr && existing_size == chunk_size &&
-        memcmp(existing, chunk, chunk_size) == 0)
+    // if (existing != nullptr && existing_size == chunk_size &&
+    //     memcmp(existing, chunk, chunk_size) == 0)
+    // {
+    //     printf("Chunk is a duplicate\n");
+    //     return false; // Indicate that this chunk is a duplicate
+    // }
+    if (existing != nullptr && existing_size == chunk_size)
     {
-        printf("Chunk is a duplicate\n");
-        return false; // Indicate that this chunk is a duplicate
+        std::cout << "Duplicate found!" << std::endl;
+        return existing;
     }
     else
     {
@@ -158,12 +166,20 @@ bool deduplicate_chunks(const unsigned char *chunk, int chunk_size, HashTable *h
         if (encoding == nullptr)
         {
             fprintf(stderr, "Failed to encode chunk\n");
-            return false; // Indicate encoding failure
+            return NULL; // Indicate encoding failure
         }
+
+        // for debugging
+        std::cout << "Encoded result: ";
+        for (int j = 0; j < encoded_size; ++j)
+        {
+            std::cout << encoding[j] << " ";
+        }
+        std::cout << std::endl;
 
         // Insert the encoded chunk into the hash table
         insert_hash_table(hash_table, chunk_hash, encoding, encoded_size);
         printf("Chunk is unique\n");
-        return true; // Indicate that this chunk is unique
+        return encoding; // Indicate that this chunk is unique
     }
 }

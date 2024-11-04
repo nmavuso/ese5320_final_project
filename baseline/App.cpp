@@ -40,11 +40,12 @@ std::vector<std::vector<unsigned char>> test_cdc(const char *file)
 
     free(buff);
     free(fp);
+    std::cout << "Success on CDC!" << std::endl;
 
     return chunks;
 }
 
-std::vector<std::vector<unsigned char>> test_cmd(const std::vector<std::vector<unsigned char>> &chunks)
+std::vector<int *> test_cmd(const std::vector<std::vector<unsigned char>> &chunks)
 {
     HashTable *hash_table = initialize_hash_table();
     if (hash_table == nullptr)
@@ -52,16 +53,21 @@ std::vector<std::vector<unsigned char>> test_cmd(const std::vector<std::vector<u
         return {};
     }
 
-    std::vector<std::vector<unsigned char>> unique_chunks;
+    std::vector<int *> decode_queue;
     for (const auto &chunk : chunks)
     {
-        bool is_unique = deduplicate_chunks(chunk.data(), chunk.size(), hash_table);
-        if (is_unique)
+        int *result = deduplicate_chunks(chunk.data(), chunk.size(), hash_table);
+        if (result != NULL)
         {
-            unique_chunks.push_back(chunk);
+            decode_queue.insert(decode_queue.begin(), result);
+        }
+        else
+        {
+            perror("ERROR! Deduplicate returned NULL");
         }
     }
 
+    // cleanup
     for (int i = 0; i < HASH_TABLE_SIZE; ++i)
     {
         HashEntry *entry = hash_table->entries[i];
@@ -77,7 +83,7 @@ std::vector<std::vector<unsigned char>> test_cmd(const std::vector<std::vector<u
     free(hash_table->entries);
     free(hash_table);
 
-    return unique_chunks;
+    return decode_queue;
 }
 
 void test_lzw(const std::vector<std::vector<unsigned char>> &unique_chunks)
@@ -102,8 +108,15 @@ void test_lzw(const std::vector<std::vector<unsigned char>> &unique_chunks)
 
 int main()
 {
+    std::cout << "Testing CDC..." << std::endl;
     std::vector<std::vector<unsigned char>> chunks = test_cdc("prince.txt");
-    std::vector<std::vector<unsigned char>> unique_chunks = test_cmd(chunks);
-    test_lzw(unique_chunks);
+    test_lzw(chunks); // NOTE: this will encode all chunks
+
+    std::cout << "Testing CMD & LZW..." << std::endl;
+
+    // Design choice: can either return list of unique chunks or decoding stream
+    // std::vector<std::vector<unsigned char>> unique_chunks = test_cmd(chunks);
+    std::vector<int *> decoding_stream = test_cmd(chunks);
+
     return 0;
 }
