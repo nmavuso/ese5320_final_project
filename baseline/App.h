@@ -5,6 +5,11 @@
 #define NUM_CHUNKS 1000
 #define MAX_CHUNK_SIZE 8192
 #define INITIAL_DICT_CAPACITY 256
+#define PACKET_SIZE 1500
+#define TARGET_SPEED 400 * 1024 * 1024
+#define PACKET_SPEED  TARGET_SPEED/PACKET_SIZE
+
+
 #include "cmd.h"
 #include "lzw.h"
 #include "cdc.h"

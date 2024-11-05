@@ -2,9 +2,12 @@
 #include <vector>
 #include <cstdio>
 #include <cstdlib>
+#include <chrono>
+#include <thread>
 #include "App.h"
 #include "cmd.h"
 #include "lzw.h"
+
 
 std::vector<std::vector<unsigned char>> test_cdc(const char *file)
 {
@@ -29,13 +32,12 @@ std::vector<std::vector<unsigned char>> test_cdc(const char *file)
 
     int bytes_read = fread(buff, sizeof(unsigned char), file_size, fp);
     if (bytes_read != file_size)
-    {
+     {
         perror("File read error");
         free(buff);
         fclose(fp);
         return {};
     }
-
     std::vector<std::vector<unsigned char>> chunks = cdc(buff, file_size);
 
     free(buff);
@@ -126,10 +128,24 @@ int lzw_custom_test()
 
 int main()
 {
-    // std::vector<std::vector<unsigned char>> chunks = test_cdc("prince.txt");
-    // std::vector<std::vector<unsigned char>> unique_chunks = test_cmd(chunks);
-    // test_lzw(unique_chunks);
 
-    lzw_custom_test();
+ const int transmission_rate_bytes_per_second = 50 * 1024 * 1024; // 50 MB/s
+
+    std::vector<std::vector<unsigned char>> chunks = test_cdc("prince.txt");
+    std::vector<std::vector<unsigned char>> unique_chunks = test_cmd(chunks);
+
+    for (const auto &chunk : unique_chunks)
+    {
+        test_lzw({chunk});
+        int delay_ms = (chunk.size() * 1000) / transmission_rate_bytes_per_second;
+        std::this_thread::sleep_for(std::chrono::milliseconds(delay_ms));
+    }
+
+
+     //std::vector<std::vector<unsigned char>> chunks = test_cdc("prince.txt");
+     //std::vector<std::vector<unsigned char>> unique_chunks = test_cmd(chunks);
+     //test_lzw(unique_chunks);
+
+    //lzw_custom_test();
     return 0;
 }
