@@ -4,6 +4,9 @@
 #include <stdbool.h>
 #include "lzw.h"
 #include <cstring>
+#include <unordered_map>
+#include <vector>
+#include <iostream>
 
 // Global dictionary variables
 char **dictionary = NULL;
