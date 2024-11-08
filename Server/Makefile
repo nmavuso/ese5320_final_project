@@ -7,7 +7,7 @@ CXX = g++
 TARGET = p1
 
 # Source files
-SRCS = App_hw.c cdc_hw.c cmd_hw.c lzw_hw.c
+SRCS = encoder.cpp App_hw.c cdc_hw.c cmd_hw.c lzw_hw.c
 
 # Object files
 OBJS = $(SRCS:.c=.o)
