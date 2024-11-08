@@ -7,16 +7,16 @@ CXX = g++
 TARGET = p1
 
 # Source files
-SRCS = cmd_hw.cpp lzw_hw.cpp
+SRCS = App_hw.c cdc_hw.c cmd_hw.c lzw_hw.c
 
 # Object files
-OBJS = $(SRCS:.cpp=.o)
+OBJS = $(SRCS:.c=.o)
 
 # Build target
 all: $(TARGET)
 
 # Compile each source file into an object file
-%.o: %.cpp
+%.o: %.c
 	$(CXX) -c $< -o $@
 
 # Link object files to create the executable

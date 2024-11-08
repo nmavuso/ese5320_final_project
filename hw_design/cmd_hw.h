@@ -24,7 +24,7 @@ typedef struct {
 
 uint64_t compute_hash(const unsigned char *chunk, int size);
 
-HashTable *initialize_hash_table(void);
+void initialize_hash_table(HashTable *table);
 
 void free_hash_table(HashTable *table);
 

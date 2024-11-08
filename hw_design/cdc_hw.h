@@ -12,12 +12,18 @@
 
 extern const uint64_t PRIME_POWER_WINDOW_SIZE;
 
+typedef struct {
+	unsigned char data[MAX_CHUNK_SIZE];
+        int size;
+} Chunk;
+
 uint64_t compute_prime_power_window();
 
-uint64_t initialize_hash(unsigned char* input, unsigned int window_size);
+uint64_t initialize_hash(const unsigned char* input, unsigned int window_size);
 
 uint64_t update_hash(uint64_t hash, unsigned char outgoing, unsigned char incoming);
 
-std::vector<std::vector<unsigned char>> cdc(unsigned char* buff, unsigned int buff_size);
+void cdc(const unsigned char *buff, unsigned int buff_size, Chunk chunks[], int *num_chunks);
+
 
 #endif // CDC_HW_H
