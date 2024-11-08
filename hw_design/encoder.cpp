@@ -45,7 +45,7 @@ int appHost(unsigned char* buff, unsigned int length) {
  //Step 3: Deduplication
  
 
- for (size_t i = 0; i < num_chunks; ++i) {
+ for (int i = 0; i < num_chunks; ++i) {
     unsigned char *chunk_data = chunks[i].data;
     int chunk_size = chunks[i].size;
 
@@ -179,7 +179,15 @@ int main(int argc, char* argv[]) {
 
 	int bytes_written = fwrite(&file[0], 1, offset, outfd);
 	printf("write file with %d\n", bytes_written);
-	fclose(outfd);
+	
+    // Find size of output file
+	fseek(outfd, 0, SEEK_END);
+    long outputFileLength = ftell(outfd);
+	std::cout << "--------------- Compression Ratio ---------------" << std::endl;
+	long compressionRatio = offset / outputFileLength;
+	std::cout << compressionRatio << std::endl;
+    
+    fclose(outfd);
 
 	for (int i = 0; i < NUM_PACKETS; i++) {
 		free(input[i]);
@@ -188,7 +196,7 @@ int main(int argc, char* argv[]) {
 	free(file);
 	std::cout << "--------------- Key Throughputs ---------------" << std::endl;
 	float ethernet_latency = ethernet_timer.latency() / 1000.0;
-	float input_throughput = (bytes_written * 8 / 1000000.0) / ethernet_latency; // Mb/s
+	float input_throughput = (bytes_written / 1000000.0) / ethernet_latency; // Mb/s
 	std::cout << "Input Throughput to Encoder: " << input_throughput << " Mb/s."
 			<< " (Latency: " << ethernet_latency << "s)." << std::endl;
 
