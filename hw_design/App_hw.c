@@ -16,7 +16,7 @@ int appHost(unsigned char* buff, unsigned int length) {
  initialize_hash_table(&hash_table);
 
  // Step 1: Ethernet Input .....
- unsigned char buff[] = "I AM SAM SAM I AM WAIT WHO AM I? OH YES I AM SAM SAM I AM";
+ //unsigned char buff[] = "I AM SAM SAM I AM WAIT WHO AM I? OH YES I AM SAM SAM I AM";
  unsigned int buff_size = sizeof(buff) - 1;
  //Step 2: Chunking the Ethernet input
  Chunk chunks[NUM_CHUNKS];

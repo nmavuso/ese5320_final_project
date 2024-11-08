@@ -3,6 +3,7 @@
 #include <string.h>
 #include "lzw_hw.h"
 #include "cmd_hw.h"
+#include "sha3.h"
 
 #define NUM_CHUNKS 3
 #define MAX_CHUNK_SIZE 8192
@@ -13,11 +14,17 @@ HashEntry hash_table_entries[HASH_TABLE_SIZE];
 HashEntry *hash_table_array[HASH_TABLE_SIZE];
 
 uint64_t compute_hash(const unsigned char *chunk, int size) {
-    uint64_t hash = 0;
-    for (int i = 0; i < size; i++) {
-        hash += chunk[i];
+ 
+    uint8_t hash_output[64]; 
+    sha3_ctx_t sha3; 
+    sha3_init(&sha3, 64); 
+    sha3_update(&sha3, chunk, (size_t) size); 
+    sha3_final(hash_output, &sha3); 
+    uint64_t res = 0; 
+    for(int i = 0; i < 8; i++) {
+        res |= ((uint64_t) hash_output[i]) << (8 * i); 
     }
-    return hash % HASH_TABLE_SIZE;
+    return res % HASH_TABLE_SIZE;
 }
 
 void initialize_hash_table(HashTable *table) {
