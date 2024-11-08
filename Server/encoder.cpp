@@ -171,8 +171,17 @@ int main(int argc, char* argv[]) {
 
 	// write file to root and you can use diff tool on board
 	FILE *outfd = fopen("output_cpu.bin", "wb");
+
 	int bytes_written = fwrite(&file[0], 1, offset, outfd);
 	printf("write file with %d\n", bytes_written);
+
+	// Find size of output file
+	fseek(outfd, 0, SEEK_END);
+    long outputFileLength = ftell(outfd);
+	std::cout << "--------------- Compression Ratio ---------------" << std::endl;
+	long compressionRatio = offset / outputFileLength;
+	std::cout << compressionRatio << std::endl;
+
 	fclose(outfd);
 
 	for (int i = 0; i < NUM_PACKETS; i++) {
