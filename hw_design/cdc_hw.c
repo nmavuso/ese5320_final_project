@@ -5,8 +5,8 @@
 #include <cstdlib>
 #include <cstdint>
 #include "cdc_hw.h"
-#define MIN_CHUNK_SIZE 1024
-#define WINDOW_SIZE 16
+//#define MIN_CHUNK_SIZE 1024
+//#define WINDOW_SIZE 16
 
 uint64_t compute_prime_power_window() {
     uint64_t power = 1;

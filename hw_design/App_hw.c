@@ -15,7 +15,7 @@ int main() {
  initialize_hash_table(&hash_table);
 
  // Step 1: Ethernet Input .....
- unsigned char buff[] = "I AM SAM SAM I AM";
+ unsigned char buff[] = "I AM SAM SAM I AM WAIT WHO AM I? OH YES I AM SAM SAM I AM";
  unsigned int buff_size = sizeof(buff) - 1;
  //Step 2: Chunking the Ethernet input
  Chunk chunks[NUM_CHUNKS];
@@ -40,7 +40,7 @@ int main() {
       if (encode_success == 0) {
         printf("Chunk %d successfully encoded. Encoded data: ", i+1);
         for (int j = 0; j < encoded_size; ++j) {
-          printf("%d", encoded_data[j]);
+          printf("%d ", encoded_data[j]);
         }
         printf("\n");
        } 
