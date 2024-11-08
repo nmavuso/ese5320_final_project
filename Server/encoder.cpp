@@ -129,15 +129,15 @@ int main(int argc, char* argv[]) {
 
 
 	// decode
-	done = buffer[1] & DONE_BIT_L;
-	length = buffer[0] | (buffer[1] << 8);
+	done = buff[1] & DONE_BIT_L;
+	length = buff[0] | (buff[1] << 8);
 	length &= ~DONE_BIT_H;
 	// printing takes time so be weary of transfer rate
 	//printf("length: %d offset %d\n",length,offset);
 
 	// we are just memcpy'ing here, but you should call your
 	// top function here.
-	memcpy(&file[offset], &buffer[HEADER], length);
+	memcpy(&file[offset], &buff[HEADER], length);
 
 	offset += length;
 	writer++;
