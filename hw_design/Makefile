@@ -4,7 +4,7 @@
 CXX = g++
 
 # Target executable
-TARGET = p1
+TARGET = app
 
 # Source files
 SRCS = App_hw.c cdc_hw.c cmd_hw.c lzw_hw.c

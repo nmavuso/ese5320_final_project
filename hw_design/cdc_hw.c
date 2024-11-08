@@ -31,7 +31,7 @@ uint64_t update_hash(uint64_t hash, unsigned char outgoing, unsigned char incomi
     return hash;
 }
 
-void cdc(const unsigned char* buff, unsigned int buff_size, Chunk chunks[], int *num_chunks) {
+void cdc(const unsigned char* buff, unsigned int buff_size, Chunk chunks[], int *num_chunks) {    
     uint64_t rolling_hash = initialize_hash(buff, WINDOW_SIZE);
     int chunk_index = 0;
     

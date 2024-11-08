@@ -78,10 +78,10 @@ int main(int argc, char* argv[]) {
 	count++;
 
   	//Ethernet input 
-	// get packet
+        // get packet
 	//unsigned char* buffer = input[writer];
-	unsigned char* buff = input[writer];
-	/*************************************/
+        unsigned char* buff = input[writer];
+        /*************************************/
 	/********** Initialization ***********/
 	/*************************************/
  	HashTable hash_table;

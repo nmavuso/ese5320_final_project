@@ -4,7 +4,7 @@
 CXX = g++
 
 # Target executable
-TARGET = p1
+TARGET = p2
 
 # Source files
 SRCS = encoder.cpp server.cpp cdc_hw.c cmd_hw.c lzw_hw.c
