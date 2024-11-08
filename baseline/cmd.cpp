@@ -9,7 +9,7 @@
 
 uint64_t compute_hash(const unsigned char *chunk, int size)
 {
-    uint64_t hash = 0;
+uint64_t hash = 0;
     for (int i = 0; i < size; i++)
     {
         hash += chunk[i];

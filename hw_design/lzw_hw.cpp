@@ -119,22 +119,3 @@ int decoding(const int *encoded_data, int encoded_size) {
     return 0;
 }
 
-int main() {
-    const char *s ="WYS*WYGWYS*WYSWYSG";
-    int encoded_data[INPUT_SIZE];
-    int encoded_size;
-
-    printf("Encoding:\n");
-    encoding(s, encoded_data, &encoded_size);
-
-    printf("\nCompressed output stream:\n");
-    for (int i = 0; i < encoded_size; i++) {
-        printf("%d ", encoded_data[i]);
-    }
-    printf("\n\nDecoding:\n");
-
-    decoding(encoded_data, encoded_size);
-    printf("\n");
-
-    return 0;
-}

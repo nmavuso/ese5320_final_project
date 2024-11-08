@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Nov  6 22:14:01 2024
+# Process ID: 29040
+# Current directory: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project
+# Command line: vivado
+# Log file: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/vivado.log
+# Journal file: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/vivado.jou
+#-----------------------------------------------------------
+start_gui
+xterm: cannot load font "-Misc-Fixed-bold-R-*-*-13-120-75-75-C-60-ISO8859-1"
+xterm: cannot load font "-misc-fixed-medium-r-normal-*-13-120-75-75-c-120-iso10646-1"
