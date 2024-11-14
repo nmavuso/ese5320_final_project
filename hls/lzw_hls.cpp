@@ -1,14 +1,7 @@
 #include <stdio.h>
 #include <string.h>
+#include "lzw_hls.h"
 
-#define TABLE_SIZE 4096  // Dictionary size
-#define INPUT_SIZE 1024  // Maximum input size
-#define CHAR_MAX 255     // Maximum single-character value
-
-typedef struct {
-    char str[INPUT_SIZE];
-    int code;
-} DictionaryEntry;
 
 // Encoding Function
 void encoding(const char *input, int *output_code, int *output_size) {
@@ -181,7 +174,10 @@ void decoding(const int *encoded_data, int encoded_size, char *output) {
 }
 
 // Unified LZW Function
-void lzw_fpga(const char *s, int *output_code, int *output_size, const int *encoded_data, int encoded_size, char *output) {
+int lzw_fpga(const char *s, int *output_code, int *output_size, char *output) {
     encoding(s, output_code, output_size);
-    decoding(encoded_data, encoded_size, output);
+    const int *encoded_data = output_code;
+    decoding(encoded_data, *output_size, output);
+
+    return 0;
 }
