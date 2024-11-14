@@ -7,7 +7,7 @@ CXX = g++
 TARGET = app
 
 # Source files
-SRCS = App_hw.c cdc_hw.c cmd_hw.c lzw_hw.c
+SRCS = App_hw.c cdc_hw.c cmd_hw.c lzw_hw.c sha3.c
 
 # Object files
 OBJS = $(SRCS:.c=.o)

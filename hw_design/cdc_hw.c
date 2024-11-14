@@ -31,7 +31,7 @@ uint64_t update_hash(uint64_t hash, unsigned char outgoing, unsigned char incomi
     return hash;
 }
 
-void cdc(const unsigned char* buff, unsigned int buff_size, Chunk chunks[], int *num_chunks) {    
+void cdc(const unsigned char* buff, unsigned int buff_size, Chunk chunks[], int *num_chunks) {
     uint64_t rolling_hash = initialize_hash(buff, WINDOW_SIZE);
     int chunk_index = 0;
     
@@ -39,6 +39,7 @@ void cdc(const unsigned char* buff, unsigned int buff_size, Chunk chunks[], int 
     int current_chunk_size = 0;
 
     for (unsigned int i = 0; i < buff_size; ++i) {
+        printf("2323\n");
         current_chunk.data[current_chunk.size++] = buff[i];
 
         if (i >= WINDOW_SIZE) {
