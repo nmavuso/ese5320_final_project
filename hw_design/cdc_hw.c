@@ -1,9 +1,9 @@
 
-#include <iostream>
-#include <vector>
-#include <cstdio>
-#include <cstdlib>
-#include <cstdint>
+#include <iostream.h>
+#include <vector.h>
+#include <cstdio.h>
+#include <cstdlib.h>
+#include <cstdint.h>
 #include "cdc_hw.h"
 //#define MIN_CHUNK_SIZE 1024
 //#define WINDOW_SIZE 16

@@ -1,0 +1,23 @@
+## ==============================================================
+## Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+## Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+## ==============================================================
+
+BEGIN main_top
+
+## Peripheral Options
+OPTION IPTYPE = PERIPHERAL
+OPTION IMP_NETLIST = TRUE
+OPTION HDL = VHDL
+OPTION ARCH_SUPPORT_MAP = (zynquplus=DEVELOPMENT)
+OPTION IP_GROUP = MICROBLAZE:PPC:USER
+OPTION DESC = main_top
+
+# OPTION STYLE = MIX
+# OPTION RUN_NGCBUILD = TRUE
+
+PARAMETER RESET_ACTIVE_LOW = 1, DT = integer, RANGE = (0, 1)
+PORT aclk = "", DIR = I, SIGIS = Clk, ASSIGNMENT = REQUIRE
+PORT aresetn = "", DIR = I, SIGIS = Rst, ASSIGNMENT = REQUIRE
+
+END

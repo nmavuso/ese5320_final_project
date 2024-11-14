@@ -91,7 +91,6 @@ int decoding(const int *encoded_data, int encoded_size) {
     }
 
     int old_code = encoded_data[0];
-    printf("%s", table[old_code].str);
     char c = table[old_code].str[0];
     int count = CHAR_MAX;
 
@@ -105,7 +104,6 @@ int decoding(const int *encoded_data, int encoded_size) {
             strcpy(entry, table[new_code].str);
         }
 
-        printf("%s", entry);
         c = entry[0];
 
         if (table_size < TABLE_SIZE) {
