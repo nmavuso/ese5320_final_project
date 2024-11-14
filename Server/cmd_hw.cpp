@@ -7,7 +7,7 @@
 
 #define NUM_CHUNKS 3
 #define MAX_CHUNK_SIZE 8192
-#define HASH_TABLE_SIZE 1000
+#define HASH_TABLE_SIZE 1024
 #define INPUT_SIZE 256
 
 HashEntry hash_table_entries[HASH_TABLE_SIZE];
