@@ -158,15 +158,16 @@ int main(int argc, char* argv[]) {
 
 		count++;
 
-		// get packet
+                // get packet
 		unsigned char* buffer = input[writer];
-
+     
 		// decode
 		done = buffer[1] & DONE_BIT_L;
 		length = buffer[0] | (buffer[1] << 8);
 		length &= ~DONE_BIT_H;
 		//printf("length: %d offset %d\n",length,offset);
-		memcpy(&file[offset], &buffer[HEADER], length);
+		appHost(buffer, length);
+                memcpy(&file[offset], &buffer[HEADER], length);
 
 		offset += length;
 		writer++;
