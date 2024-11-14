@@ -47,6 +47,16 @@
 			<location>/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</location>
 		</link>
 		<link>
+			<name>source/lzw_hls.h</name>
+			<type>1</type>
+			<location>/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.h</location>
+		</link>
+		<link>
+			<name>testbench/Testbench.cpp</name>
+			<type>1</type>
+			<location>/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/Testbench.cpp</location>
+		</link>
+		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
 			<location>/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/fpga_acceleration/solution1/solution1.directive</location>

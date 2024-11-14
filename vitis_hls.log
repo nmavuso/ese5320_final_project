@@ -1,14 +1,18 @@
 INFO: Applying HLS Y2K22 patch v1.2 for IP revision
 INFO: [HLS 200-10] Running '/mnt/pollux/software/xilinx/2020.2/Vitis_HLS/2020.2/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'nmavuso' on host 'big16.seas.upenn.edu' (Linux_x86_64 version 6.4.0-150600.23.7-default) on Tue Nov 12 23:00:07 EST 2024
+INFO: [HLS 200-10] For user 'nmavuso' on host 'big15.seas.upenn.edu' (Linux_x86_64 version 6.4.0-150600.23.7-default) on Thu Nov 14 00:08:37 EST 2024
 INFO: [HLS 200-10] On os "openSUSE Leap 15.6"
 INFO: [HLS 200-10] In directory '/mnt/castor/seas_home/n/nmavuso/ese5320_final_project'
-Sourcing Tcl script '/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/fpga_acceleration/solution1/csynth.tcl'
+Sourcing Tcl script '/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/fpga_acceleration/solution1/csim.tcl'
 INFO: [HLS 200-1510] Running: open_project fpga_acceleration 
 INFO: [HLS 200-10] Opening project '/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/fpga_acceleration'.
 INFO: [HLS 200-1510] Running: set_top lzw_fpga 
 INFO: [HLS 200-1510] Running: add_files hls/lzw_hls.cpp 
 INFO: [HLS 200-10] Adding design file 'hls/lzw_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files hls/lzw_hls.h 
+INFO: [HLS 200-10] Adding design file 'hls/lzw_hls.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb hls/Testbench.cpp 
+INFO: [HLS 200-10] Adding test bench file 'hls/Testbench.cpp' to the project
 INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vitis 
 INFO: [HLS 200-10] Opening solution '/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/fpga_acceleration/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.7ns.
@@ -27,190 +31,13 @@ INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_
 INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
 INFO: [HLS 200-1510] Running: set_directive_top -name main lzw_fpga 
 INFO: [HLS 200-1510] Running: set_directive_top -name lzw_fpga lzw_fpga 
-INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 207.936 MB.
-INFO: [HLS 200-10] Analyzing design file 'hls/lzw_hls.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.2 seconds. CPU system time: 0.16 seconds. Elapsed time: 2.15 seconds; current allocated memory: 209.438 MB.
-INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
-INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_23_1' (hls/lzw_hls.cpp:23:19) in function 'encoding' partially with a factor of 16 (hls/lzw_hls.cpp:23:19)
-INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_120_1' (hls/lzw_hls.cpp:120:20) in function 'decoding' partially with a factor of 16 (hls/lzw_hls.cpp:120:20)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.64 seconds. CPU system time: 0.34 seconds. Elapsed time: 5.32 seconds; current allocated memory: 212.904 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 212.905 MB.
-INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.06 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.46 seconds; current allocated memory: 214.895 MB.
-INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 214.156 MB.
-INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_120_1' (hls/lzw_hls.cpp:120) in function 'decoding' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_132_2' (hls/lzw_hls.cpp:132) in function 'decoding' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_144_4' (hls/lzw_hls.cpp:144) in function 'decoding' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_151_5' (hls/lzw_hls.cpp:152) in function 'decoding' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_158_6' (hls/lzw_hls.cpp:159) in function 'decoding' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_166_7' (hls/lzw_hls.cpp:166) in function 'decoding' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_23_1' (hls/lzw_hls.cpp:23) in function 'encoding' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'Loop-3' in function 'encoding' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_100_11' (hls/lzw_hls.cpp:100) in function 'encoding' automatically.
-INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_33_2' (hls/lzw_hls.cpp:35) in function 'encoding' for pipelining.
-WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'VITIS_LOOP_49_4' (hls/lzw_hls.cpp:49) because its parent loop or function is pipelined.
-WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'VITIS_LOOP_69_7' (hls/lzw_hls.cpp:69) because its parent loop or function is pipelined.
-WARNING: [HLS 200-932] Cannot unroll loop 'VITIS_LOOP_40_3' (hls/lzw_hls.cpp:41) in function 'encoding' completely: variable loop bound.
-WARNING: [HLS 200-936] Cannot unroll loop 'VITIS_LOOP_49_4' (hls/lzw_hls.cpp:49) in function 'encoding': cannot completely unroll a loop with a variable trip count.
-Resolution: For help on HLS 200-936 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-936.html
-WARNING: [HLS 200-932] Cannot unroll loop 'VITIS_LOOP_52_5' (hls/lzw_hls.cpp:52) in function 'encoding' completely: variable loop bound.
-WARNING: [HLS 200-932] Cannot unroll loop 'VITIS_LOOP_64_6' (hls/lzw_hls.cpp:65) in function 'encoding' completely: variable loop bound.
-WARNING: [HLS 200-936] Cannot unroll loop 'VITIS_LOOP_69_7' (hls/lzw_hls.cpp:69) in function 'encoding': cannot completely unroll a loop with a variable trip count.
-Resolution: For help on HLS 200-936 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-936.html
-WARNING: [HLS 200-932] Cannot unroll loop 'VITIS_LOOP_72_8' (hls/lzw_hls.cpp:72) in function 'encoding' completely: variable loop bound.
-WARNING: [HLS 200-932] Cannot unroll loop 'VITIS_LOOP_84_9' (hls/lzw_hls.cpp:85) in function 'encoding' completely: variable loop bound.
-INFO: [XFORM 203-101] Partitioning array 'table.str' (hls/lzw_hls.cpp:15) in dimension 1 with a cyclic factor 16.
-INFO: [XFORM 203-101] Partitioning array 'table.code' (hls/lzw_hls.cpp:15) in dimension 1 with a cyclic factor 16.
-INFO: [XFORM 203-101] Partitioning array 'table.str' (hls/lzw_hls.cpp:114) in dimension 1 with a cyclic factor 16.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.51 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.62 seconds; current allocated memory: 236.860 MB.
-WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_49_4' (hls/lzw_hls.cpp:49:35) in function 'encoding' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
-Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html
-WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_69_7' (hls/lzw_hls.cpp:69:39) in function 'encoding' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
-Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html
-WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_33_2' (hls/lzw_hls.cpp:35:7) in function 'encoding' more than one sub loop.
-Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html
-WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_98_10' (hls/lzw_hls.cpp:98:32) in function 'encoding' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
-Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html
-WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_137_3' (hls/lzw_hls.cpp:128:9) in function 'decoding' more than one sub loop.
-Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html
-INFO: [HLS 200-472] Inferring partial write operation for 'table.str[0]' (hls/lzw_hls.cpp:25:18)
-INFO: [HLS 200-472] Inferring partial write operation for 'table.str[0]' (hls/lzw_hls.cpp:26:25)
-INFO: [HLS 200-472] Inferring partial write operation for 'table.code[0]' (hls/lzw_hls.cpp:27:23)
-INFO: [HLS 200-472] Inferring partial write operation for 'p' 
-INFO: [HLS 200-472] Inferring partial write operation for 'p' (hls/lzw_hls.cpp:30:20)
-INFO: [HLS 200-472] Inferring partial write operation for 'temp' (hls/lzw_hls.cpp:41:25)
-INFO: [HLS 200-472] Inferring partial write operation for 'temp' (hls/lzw_hls.cpp:44:21)
-INFO: [HLS 200-472] Inferring partial write operation for 'temp' (hls/lzw_hls.cpp:45:25)
-INFO: [HLS 200-472] Inferring partial write operation for 'p' (hls/lzw_hls.cpp:64:43)
-INFO: [HLS 200-472] Inferring partial write operation for 'p' (hls/lzw_hls.cpp:92:18)
-INFO: [HLS 200-472] Inferring partial write operation for 'p' (hls/lzw_hls.cpp:93:18)
-INFO: [HLS 200-472] Inferring partial write operation for 'table.str[0]' (hls/lzw_hls.cpp:84:67)
-INFO: [HLS 200-472] Inferring partial write operation for 'table.code[0]' (hls/lzw_hls.cpp:87:40)
-INFO: [HLS 200-472] Inferring partial write operation for 'table.str[0]' (hls/lzw_hls.cpp:122:18)
-INFO: [HLS 200-472] Inferring partial write operation for 'table.str[0]' (hls/lzw_hls.cpp:123:25)
-INFO: [HLS 200-472] Inferring partial write operation for 'entry' (hls/lzw_hls.cpp:147:24)
-INFO: [HLS 200-472] Inferring partial write operation for 'entry' (hls/lzw_hls.cpp:148:22)
-INFO: [HLS 200-472] Inferring partial write operation for 'entry' (hls/lzw_hls.cpp:151:48)
-INFO: [HLS 200-472] Inferring partial write operation for 'table.str[0]' (hls/lzw_hls.cpp:169:38)
-INFO: [HLS 200-472] Inferring partial write operation for 'table.str[0]' (hls/lzw_hls.cpp:170:42)
-INFO: [HLS 200-472] Inferring partial write operation for 'table.str[0]' (hls/lzw_hls.cpp:166:64)
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.6 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.72 seconds; current allocated memory: 256.097 MB.
-INFO: [HLS 200-10] Starting hardware synthesis ...
-INFO: [HLS 200-10] Synthesizing 'lzw_fpga' ...
-WARNING: [SYN 201-107] Renaming port name 'lzw_fpga/output' to 'lzw_fpga/output_r' to avoid the conflict with HDL keywords or other object names.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'encoding' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_23_1'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'VITIS_LOOP_23_1'
-INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Loop 2'
-WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for loop 'VITIS_LOOP_33_2': contains subloop(s) that are not unrolled or flattened.
-WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for loop 'VITIS_LOOP_49_4': contains subloop(s) that are not unrolled or flattened.
-WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for loop 'VITIS_LOOP_69_7': contains subloop(s) that are not unrolled or flattened.
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_100_11'.
-WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln100', hls/lzw_hls.cpp:100)) in the first pipeline iteration (II = 1 cycles).
-Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-878.html
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_100_11'
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.72 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.94 seconds; current allocated memory: 259.240 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1.35 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.44 seconds; current allocated memory: 263.155 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'decoding' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_120_1'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'VITIS_LOOP_120_1'
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_132_2'.
-WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln132', hls/lzw_hls.cpp:132)) in the first pipeline iteration (II = 1 cycles).
-Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-878.html
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 71, loop 'VITIS_LOOP_132_2'
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_144_4'.
-WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln144', hls/lzw_hls.cpp:144)) in the first pipeline iteration (II = 1 cycles).
-Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-878.html
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_144_4'
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_151_5'.
-WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln151', hls/lzw_hls.cpp:151)) in the first pipeline iteration (II = 1 cycles).
-Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-878.html
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_151_5'
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_158_6'.
-WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln158', hls/lzw_hls.cpp:158)) in the first pipeline iteration (II = 1 cycles).
-Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-878.html
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 72, loop 'VITIS_LOOP_158_6'
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_166_7'.
-WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln166', hls/lzw_hls.cpp:166)) in the first pipeline iteration (II = 1 cycles).
-Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-878.html
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_166_7'
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.09 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.27 seconds; current allocated memory: 265.532 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1.3 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.38 seconds; current allocated memory: 269.047 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'main' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.38 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.48 seconds; current allocated memory: 269.132 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 269.356 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'encoding' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Generating core module 'mux_1664_32_1_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mux_1664_8_1_1': 3 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'encoding'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.34 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.4 seconds; current allocated memory: 275.614 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'decoding' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Generating core module 'mux_1632_8_1_1': 5 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'decoding'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.87 seconds. CPU system time: 0.06 seconds. Elapsed time: 1.14 seconds; current allocated memory: 291.969 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'main' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
-INFO: [RTGEN 206-500] Setting interface mode on port 'main/gmem' to 'm_axi'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'main/s' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'main/output_code' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'main/output_size' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'main/encoded_data' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'main/encoded_size' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'main/output_r' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on function 'main' to 's_axilite & ap_ctrl_chain'.
-INFO: [RTGEN 206-100] Bundling port 's', 'output_code', 'output_size', 'encoded_data', 'encoded_size', 'output_r' to AXI-Lite port control.
-INFO: [RTGEN 206-100] Finished creating RTL model for 'main'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.78 seconds. CPU system time: 0.04 seconds. Elapsed time: 1 seconds; current allocated memory: 302.850 MB.
-INFO: [RTMG 210-278] Implementing memory 'lzw_fpga_encoding_table_str_0_ram (RAM)' using auto RAMs.
-INFO: [RTMG 210-278] Implementing memory 'lzw_fpga_encoding_table_code_0_ram (RAM)' using auto RAMs.
-INFO: [RTMG 210-278] Implementing memory 'lzw_fpga_encoding_p_ram (RAM)' using auto RAMs.
-ERROR: [HLS 200-445] Unexpected error generating RTL model: generate_json error: Timing constraint file not found: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/fpga_acceleration/solution1/.autopilot/db/main.constraint.tcl
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 13.42 seconds. CPU system time: 0.92 seconds. Elapsed time: 21.09 seconds; current allocated memory: 309.839 MB.
-command 'ap_source' returned error code
-    while executing
-"source /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/fpga_acceleration/solution1/csynth.tcl"
-    invoked from within
-"hls::main /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/fpga_acceleration/solution1/csynth.tcl"
-    ("uplevel" body line 1)
-    invoked from within
-"uplevel 1 hls::main {*}$newargs"
-    (procedure "hls_proc" line 16)
-    invoked from within
-"hls_proc [info nameofexecutable] $argv"
-INFO: [HLS 200-112] Total CPU user time: 16.95 seconds. Total CPU system time: 1.79 seconds. Total elapsed time: 28.05 seconds; peak allocated memory: 302.850 MB.
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../hls/Testbench.cpp in debug mode
+   Compiling ../../../../hls/lzw_hls.cpp in debug mode
+   Generating csim.exe
+TEST PASSED
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0.57 seconds. CPU system time: 0.35 seconds. Elapsed time: 3.87 seconds; current allocated memory: 208.178 MB.
