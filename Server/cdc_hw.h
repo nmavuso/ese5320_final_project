@@ -6,7 +6,7 @@
 
 #define AVERAGE_CHUNK_SIZE 4096
 #define MIN_CHUNK_SIZE 1024
-#define WINDOW_SIZE 8196 //changed from 16
+#define WINDOW_SIZE 16 //changed from 16
 #define MAX_CHUNK_SIZE 8192
 #define PRIME 257
 #define MODULUS 1000000007
