@@ -28,18 +28,26 @@ int offset = 0;
 unsigned char* file;
 
 int appHost(unsigned char* buffer, unsigned int length, FILE* outfc) {
+    /*************************************/
+    /********** Initialization ***********/
+    /*************************************/
     HashTable hash_table;
     initialize_hash_table(&hash_table);
 
+    // Step 1: Process Ethernet Input
     unsigned int buffer_size = length;
+
+    // Step 2: Chunking the Ethernet input
     Chunk chunks[NUM_PACKETS];
     int num_chunks = 0;
-
     cdc(buffer, buffer_size, chunks, &num_chunks);
+
+    // Step 3: Deduplication and Encoding
     for (int i = 0; i < num_chunks; ++i) {
         unsigned char* chunk_data = chunks[i].data;
         int chunk_size = chunks[i].size;
 
+        // Deduplicate chunk
         int is_new_chunk = deduplicate_chunks(chunk_data, chunk_size, &hash_table);
         if (is_new_chunk == 1) {
             int encoded_data[INPUT_SIZE];
@@ -47,13 +55,16 @@ int appHost(unsigned char* buffer, unsigned int length, FILE* outfc) {
             int encode_success = encoding((const char*)chunk_data, encoded_data, &encoded_size);
 
             if (encode_success == 0) {
-                fwrite(encoded_data, sizeof(int), encoded_size, outfc);
-                std::cout << "Encoded Chunk " << i + 1 << " successfully." << std::endl;
+                std::cout << "Encoded Chunk " << i + 1 << " successfully as: ";
+                for (int j = 0; j < encoded_size; ++j) {
+                    std::cout << encoded_data[j] << " ";
+                }
+                std::cout << std::endl;
             } else {
                 std::cerr << "Encoding failed for chunk " << i + 1 << std::endl;
             }
         } else {
-            std::cout << "Chunk " << i + 1 << " is a duplicate." << std::endl;
+            std::cout << "Chunk " << i + 1 << " is a duplicate and was not re-encoded." << std::endl;
         }
     }
 
@@ -72,7 +83,7 @@ void handle_input(int argc, char* argv[], int* blocksize) {
                 printf("Block size set to %d bytes.\n", *blocksize);
                 break;
             case ':':
-                std::cerr << "Option -" << (char)optopt << " requires a parameter." << std::endl;
+                printf("Option -%c requires a parameter.\n", optopt);
                 break;
             default:
                 std::cerr << "Invalid option provided." << std::endl;
@@ -90,22 +101,29 @@ int main(int argc, char* argv[]) {
     int packet_count = 0;
     ESE532_Server server;
 
+    // Default block size
     int blocksize = BLOCKSIZE;
+
+    // Parse command line arguments for block size
     handle_input(argc, argv, &blocksize);
 
-    file = (unsigned char*)calloc(70000000, sizeof(unsigned char));
+    file = (unsigned char*)malloc(sizeof(unsigned char) * 70000000);
     if (!file) {
-        std::cerr << "Error: Memory allocation for file buffer failed." << std::endl;
-        return EXIT_FAILURE;
+        std::cerr << "Memory allocation failed for file buffer!" << std::endl;
+        return 1;
     }
 
     for (int i = 0; i < NUM_PACKETS; i++) {
-        input[i] = (unsigned char*)calloc(NUM_ELEMENTS + HEADER, sizeof(unsigned char));
+        input[i] = (unsigned char*)malloc(sizeof(unsigned char) * (NUM_ELEMENTS + HEADER));
         if (!input[i]) {
-            std::cerr << "Error: Memory allocation failed for input buffer at packet " << i << "." << std::endl;
-            for (int j = 0; j < i; j++) free(input[j]);
+            std::cerr << "Memory allocation failed for input buffer!" << std::endl;
+
+            // Free previously allocated buffers
+            for (int j = 0; j < i; j++) {
+                free(input[j]);
+            }
             free(file);
-            return EXIT_FAILURE;
+            return 1;
         }
     }
 
@@ -113,69 +131,105 @@ int main(int argc, char* argv[]) {
 
     FILE* outfc = fopen("output_compressed.bin", "wb");
     if (!outfc) {
-        perror("Error opening output_compressed.bin");
-        for (int i = 0; i < NUM_PACKETS; i++) free(input[i]);
+        perror("Failed to open output file for compressed data.");
+        for (int i = 0; i < NUM_PACKETS; i++) {
+            free(input[i]);
+        }
         free(file);
-        return EXIT_FAILURE;
+        return 1;
     }
 
     writer = PIPE_DEPTH;
+    server.get_packet(input[writer]);
+    packet_count++;
+
+    unsigned char* buffer = input[writer];
+    is_done = buffer[1] & DONE_BIT_L;
+    length = buffer[0] | (buffer[1] << 8);
+    length &= ~DONE_BIT_H;
+
+    appHost(buffer, length, outfc);
+    memcpy(&file[offset], &buffer[HEADER], length);
+
+    offset += length;
+    writer++;
 
     while (!is_done) {
+        if (writer == NUM_PACKETS) {
+            writer = 0;
+        }
+
         ethernet_timer.start();
         int packet_status = server.get_packet(input[writer]);
         ethernet_timer.stop();
 
         if (packet_status < 0) {
-            std::cerr << "Error: Failed to retrieve packet." << std::endl;
+            std::cerr << "Failed to retrieve packet from server." << std::endl;
             break;
         }
 
         packet_count++;
-        unsigned char* buffer = input[writer];
+
+        buffer = input[writer];
         is_done = buffer[1] & DONE_BIT_L;
         length = buffer[0] | (buffer[1] << 8);
         length &= ~DONE_BIT_H;
 
-        appHost(buffer, length, outfc);
+       // appHost(buffer, length, outfc);
         memcpy(&file[offset], &buffer[HEADER], length);
 
         offset += length;
-        writer = (writer + 1) % NUM_PACKETS;
+        writer++;
     }
 
-    fseek(outfc, 0, SEEK_END);
+     fseek(outfc, 0, SEEK_END);
     long compressed_outputFileLength = ftell(outfc);
     fclose(outfc);
 
     FILE* outfd = fopen("output_cpu.bin", "wb");
     if (!outfd) {
-        perror("Error opening output_cpu.bin");
-        for (int i = 0; i < NUM_PACKETS; i++) free(input[i]);
+        perror("Failed to open output file for CPU data.");
+        for (int i = 0; i < NUM_PACKETS; i++) {
+            free(input[i]);
+        }
         free(file);
-        return EXIT_FAILURE;
+        return 1;
     }
 
-    int bytes_written = fwrite(file, 1, offset, outfd);
-    fclose(outfd);
-
+    int bytes_written = fwrite(&file[0], 1, offset, outfd);
     if (bytes_written < offset) {
         std::cerr << "Error: Could not write all data to output_cpu.bin." << std::endl;
     } else {
-        std::cout << "Written " << bytes_written << " bytes to output_cpu.bin." << std::endl;
+        std::cout << "Written file with " << bytes_written << " bytes." << std::endl;
     }
 
-    std::cout << "Original File Size: " << offset << " bytes" << std::endl;
-    std::cout << "Compressed File Size: " << compressed_outputFileLength << " bytes" << std::endl;
-    std::cout << "Compression Ratio: "
-              << (offset > 0 ? (float)compressed_outputFileLength / offset : 0) << std::endl;
+    fseek(outfd, 0, SEEK_END);
+    long outputFileLength = ftell(outfd);
 
+    fclose(outfd);
+
+    std::cout << "--------------- Compression Ratio ---------------" << std::endl;
+    if (bytes_written > 0) {
+       // float compressionRatio = (float)bytes_written / (float)outputFileLength;
+        std::cout << "Original File size: " << outputFileLength << std::endl;
+    } else {
+        std::cerr << "No bytes written to compressed file; compression ratio cannot be calculated." << std::endl;
+    }
+
+
+   std::cout << "Original File size: " << outputFileLength << std::endl;
+   std::cout << "Compressed File size: " << compressed_outputFileLength << std::endl;  
+    std::cout << "--------------- Key Throughputs ---------------" << std::endl;
     float ethernet_latency = ethernet_timer.latency() / 1000.0;
-    float input_throughput = (bytes_written / 1000000.0) / ethernet_latency;
-    std::cout << "Input Throughput to Encoder: " << input_throughput << " Mb/s (Latency: " << ethernet_latency << " s)." << std::endl;
+    float input_throughput = (bytes_written / 1000000.0) / ethernet_latency; // Mb/s
+    std::cout << "Input Throughput to Encoder: " << input_throughput << " Mb/s."
+              << " (Latency: " << ethernet_latency << " s)." << std::endl;
 
-    for (int i = 0; i < NUM_PACKETS; i++) free(input[i]);
+   for (int i = 0; i < NUM_PACKETS; i++) {
+        free(input[i]);
+    }
+
     free(file);
-
-    return EXIT_SUCCESS;
+ 
+   return 0;
 }
