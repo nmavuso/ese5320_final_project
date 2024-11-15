@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vitis_hls" Owner="joaquinr" Host="polaris.seas.upenn.edu" Pid="1126" HostCore="20" HostMemory="32547400">
-    </Process>
-</ProcessHandle>

@@ -78,7 +78,7 @@ fpga: package/sd_card.img
 
 $(XO): hls/lzw_hls.c
 	-@$(RM) $@
-	$(VPP) $(VPP_OPTS) -k krnl_lzw --compile -I"$(<D)" --config fpga_acceleration/design.cfg -o"$@" "$<"
+	$(VPP) $(VPP_OPTS) -k lzw_fpga --compile -I"$(<D)" --config fpga_acceleration/design.cfg -o"$@" "$<"
 
 $(XCLBIN): $(XO)
 	$(VPP) $(VPP_OPTS) --link --config fpga_acceleration/design.cfg -o"$@" $(+)

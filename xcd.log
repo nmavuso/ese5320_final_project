@@ -1,11 +1,7 @@
-Fri Nov 15 10:32:17 2024: Server was asked to start on port: '46623'
-Fri Nov 15 10:32:17 2024: Server is using token UUID: 'a72d9b76-d6fb-45ce-9e1b-071070bd604b'
-Fri Nov 15 10:32:17 2024: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
-Fri Nov 15 10:32:17 2024: Attempting to start server on port '46623'
-Fri Nov 15 10:32:17 2024: XCD main fifo: created main fifo '/tmp/xcdmaina72d9b76-d6fb-45ce-9e1b-071070bd604b', fd read = 13
-Fri Nov 15 10:32:17 2024: Running Dispatch Server
-Fri Nov 15 10:32:17 2024: Version 2.1.0
-Fri Nov 15 10:32:25 2024: Dispatch Server: Accepted socket connection from client
-Fri Nov 15 10:32:25 2024: EXCHANGE_TOKEN received, server token: a72d9b76-d6fb-45ce-9e1b-071070bd604b, passed token: a72d9b76-d6fb-45ce-9e1b-071070bd604b
-Fri Nov 15 10:32:25 2024: SESSION_MGR: creating session with session uuid: '05294bf5-35bd-4c02-b617-dfeb829fe17c' and name 'v++_compile_lzw_hls'
-Fri Nov 15 10:32:25 2024: GUIDANCE_SMGR: creating guidance session with uuid: '05294bf5-35bd-4c02-b617-dfeb829fe17c' and name 'v++_compile_lzw_hls'
+Fri Nov 15 10:42:07 2024: Server was asked to start on port: '44363'
+Fri Nov 15 10:42:07 2024: Server is using token UUID: '1f1fcc48-949e-4d44-ae67-9aac9e08475e'
+Fri Nov 15 10:42:07 2024: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Nov 15 10:42:07 2024: Attempting to start server on port '44363'
+Fri Nov 15 10:42:07 2024: XCD main fifo: created main fifo '/tmp/xcdmain1f1fcc48-949e-4d44-ae67-9aac9e08475e', fd read = 13
+Fri Nov 15 10:42:07 2024: Running Dispatch Server
+Fri Nov 15 10:42:07 2024: Version 2.1.0
