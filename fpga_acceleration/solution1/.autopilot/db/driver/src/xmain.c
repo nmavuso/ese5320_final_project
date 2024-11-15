@@ -83,6 +83,15 @@ void XMain_DisableAutoRestart(XMain *InstancePtr) {
     XMain_WriteReg(InstancePtr->Lzw_fpga_control_BaseAddress, XMAIN_LZW_FPGA_CONTROL_ADDR_AP_CTRL, 0);
 }
 
+u32 XMain_Get_return(XMain *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XMain_ReadReg(InstancePtr->Lzw_fpga_control_BaseAddress, XMAIN_LZW_FPGA_CONTROL_ADDR_AP_RETURN);
+    return Data;
+}
 void XMain_Set_s(XMain *InstancePtr, u64 Data) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
@@ -137,42 +146,6 @@ u64 XMain_Get_output_size(XMain *InstancePtr) {
 
     Data = XMain_ReadReg(InstancePtr->Lzw_fpga_control_BaseAddress, XMAIN_LZW_FPGA_CONTROL_ADDR_OUTPUT_SIZE_DATA);
     Data += (u64)XMain_ReadReg(InstancePtr->Lzw_fpga_control_BaseAddress, XMAIN_LZW_FPGA_CONTROL_ADDR_OUTPUT_SIZE_DATA + 4) << 32;
-    return Data;
-}
-
-void XMain_Set_encoded_data(XMain *InstancePtr, u64 Data) {
-    Xil_AssertVoid(InstancePtr != NULL);
-    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    XMain_WriteReg(InstancePtr->Lzw_fpga_control_BaseAddress, XMAIN_LZW_FPGA_CONTROL_ADDR_ENCODED_DATA_DATA, (u32)(Data));
-    XMain_WriteReg(InstancePtr->Lzw_fpga_control_BaseAddress, XMAIN_LZW_FPGA_CONTROL_ADDR_ENCODED_DATA_DATA + 4, (u32)(Data >> 32));
-}
-
-u64 XMain_Get_encoded_data(XMain *InstancePtr) {
-    u64 Data;
-
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    Data = XMain_ReadReg(InstancePtr->Lzw_fpga_control_BaseAddress, XMAIN_LZW_FPGA_CONTROL_ADDR_ENCODED_DATA_DATA);
-    Data += (u64)XMain_ReadReg(InstancePtr->Lzw_fpga_control_BaseAddress, XMAIN_LZW_FPGA_CONTROL_ADDR_ENCODED_DATA_DATA + 4) << 32;
-    return Data;
-}
-
-void XMain_Set_encoded_size(XMain *InstancePtr, u32 Data) {
-    Xil_AssertVoid(InstancePtr != NULL);
-    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    XMain_WriteReg(InstancePtr->Lzw_fpga_control_BaseAddress, XMAIN_LZW_FPGA_CONTROL_ADDR_ENCODED_SIZE_DATA, Data);
-}
-
-u32 XMain_Get_encoded_size(XMain *InstancePtr) {
-    u32 Data;
-
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    Data = XMain_ReadReg(InstancePtr->Lzw_fpga_control_BaseAddress, XMAIN_LZW_FPGA_CONTROL_ADDR_ENCODED_SIZE_DATA);
     return Data;
 }
 

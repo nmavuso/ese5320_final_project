@@ -10,24 +10,21 @@ set ProfileFlag 0
 set StallSigGenFlag 0
 set isEnableWaveformDebug 1
 set C_modelName {lzw_fpga}
-set C_modelType { void 0 }
+set C_modelType { int 32 }
 set C_modelArgList {
 	{ gmem int 32 regular {axi_master 2}  }
 	{ s int 64 regular {axi_slave 0}  }
 	{ output_code int 64 regular {axi_slave 0}  }
 	{ output_size int 64 regular {axi_slave 0}  }
-	{ encoded_data int 64 regular {axi_slave 0}  }
-	{ encoded_size int 32 regular {axi_slave 0}  }
 	{ output_r int 64 regular {axi_slave 0}  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "gmem", "interface" : "axi_master", "bitwidth" : 32, "direction" : "READWRITE", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "s","cData": "int","bit_use": { "low": 0,"up": 0},"offset": { "type": "dynamic","port_name": "s","bundle": "control"},"direction": "READONLY","cArray": [{"low" : 0,"up" : 0,"step" : 0}]},{"cName": "output_code","cData": "int","bit_use": { "low": 0,"up": 0},"offset": { "type": "dynamic","port_name": "output_code","bundle": "control"},"direction": "WRITEONLY","cArray": [{"low" : 0,"up" : 0,"step" : 0}]},{"cName": "output_size","cData": "int","bit_use": { "low": 0,"up": 0},"offset": { "type": "dynamic","port_name": "output_size","bundle": "control"},"direction": "WRITEONLY","cArray": [{"low" : 0,"up" : 0,"step" : 0}]},{"cName": "encoded_data","cData": "int","bit_use": { "low": 0,"up": 0},"offset": { "type": "dynamic","port_name": "encoded_data","bundle": "control"},"direction": "READONLY","cArray": [{"low" : 0,"up" : 0,"step" : 0}]},{"cName": "output","cData": "int","bit_use": { "low": 0,"up": 0},"offset": { "type": "dynamic","port_name": "output_r","bundle": "control"},"direction": "WRITEONLY","cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
- 	{ "Name" : "s", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 64, "direction" : "READONLY", "offset" : {"in":16}, "offset_end" : {"in":27}} , 
- 	{ "Name" : "output_code", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 64, "direction" : "READONLY", "offset" : {"in":28}, "offset_end" : {"in":39}} , 
- 	{ "Name" : "output_size", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 64, "direction" : "READONLY", "offset" : {"in":40}, "offset_end" : {"in":51}} , 
- 	{ "Name" : "encoded_data", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 64, "direction" : "READONLY", "offset" : {"in":52}, "offset_end" : {"in":63}} , 
- 	{ "Name" : "encoded_size", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "encoded_size","cData": "int","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}], "offset" : {"in":64}, "offset_end" : {"in":71}} , 
- 	{ "Name" : "output_r", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 64, "direction" : "READONLY", "offset" : {"in":72}, "offset_end" : {"in":83}} ]}
+	{ "Name" : "gmem", "interface" : "axi_master", "bitwidth" : 32, "direction" : "READWRITE", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "s","cData": "int","bit_use": { "low": 0,"up": 0},"offset": { "type": "dynamic","port_name": "s","bundle": "control"},"direction": "READONLY","cArray": [{"low" : 0,"up" : 0,"step" : 0}]},{"cName": "output_code","cData": "int","bit_use": { "low": 0,"up": 0},"offset": { "type": "dynamic","port_name": "output_code","bundle": "control"},"direction": "READWRITE","cArray": [{"low" : 0,"up" : 0,"step" : 0}]},{"cName": "output_size","cData": "int","bit_use": { "low": 0,"up": 0},"offset": { "type": "dynamic","port_name": "output_size","bundle": "control"},"direction": "READWRITE","cArray": [{"low" : 0,"up" : 0,"step" : 0}]},{"cName": "output","cData": "int","bit_use": { "low": 0,"up": 0},"offset": { "type": "dynamic","port_name": "output_r","bundle": "control"},"direction": "WRITEONLY","cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
+ 	{ "Name" : "s", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 64, "direction" : "READONLY", "offset" : {"in":24}, "offset_end" : {"in":35}} , 
+ 	{ "Name" : "output_code", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 64, "direction" : "READONLY", "offset" : {"in":36}, "offset_end" : {"in":47}} , 
+ 	{ "Name" : "output_size", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 64, "direction" : "READONLY", "offset" : {"in":48}, "offset_end" : {"in":59}} , 
+ 	{ "Name" : "output_r", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 64, "direction" : "READONLY", "offset" : {"in":60}, "offset_end" : {"in":71}} , 
+ 	{ "Name" : "ap_return", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 32,"bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "return","cData": "int","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 1,"step" : 0}]}]}], "offset" : {"out":16}} ]}
 # RTL Port declarations: 
 set portNum 65
 set portList { 
@@ -98,14 +95,14 @@ set portList {
 	{ interrupt sc_out sc_logic 1 signal -1 } 
 }
 set NewPortList {[ 
-	{ "name": "s_axi_control_AWADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "control", "role": "AWADDR" },"address":[{"name":"lzw_fpga","role":"start","value":"0","valid_bit":"0"},{"name":"lzw_fpga","role":"continue","value":"0","valid_bit":"4"},{"name":"lzw_fpga","role":"auto_start","value":"0","valid_bit":"7"},{"name":"s","role":"data","value":"16"},{"name":"output_code","role":"data","value":"28"},{"name":"output_size","role":"data","value":"40"},{"name":"encoded_data","role":"data","value":"52"},{"name":"encoded_size","role":"data","value":"64"},{"name":"output_r","role":"data","value":"72"}] },
+	{ "name": "s_axi_control_AWADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "control", "role": "AWADDR" },"address":[{"name":"lzw_fpga","role":"start","value":"0","valid_bit":"0"},{"name":"lzw_fpga","role":"continue","value":"0","valid_bit":"4"},{"name":"lzw_fpga","role":"auto_start","value":"0","valid_bit":"7"},{"name":"s","role":"data","value":"24"},{"name":"output_code","role":"data","value":"36"},{"name":"output_size","role":"data","value":"48"},{"name":"output_r","role":"data","value":"60"}] },
 	{ "name": "s_axi_control_AWVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "AWVALID" } },
 	{ "name": "s_axi_control_AWREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "AWREADY" } },
 	{ "name": "s_axi_control_WVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "WVALID" } },
 	{ "name": "s_axi_control_WREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "WREADY" } },
 	{ "name": "s_axi_control_WDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "control", "role": "WDATA" } },
 	{ "name": "s_axi_control_WSTRB", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "control", "role": "WSTRB" } },
-	{ "name": "s_axi_control_ARADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "control", "role": "ARADDR" },"address":[{"name":"lzw_fpga","role":"start","value":"0","valid_bit":"0"},{"name":"lzw_fpga","role":"done","value":"0","valid_bit":"1"},{"name":"lzw_fpga","role":"idle","value":"0","valid_bit":"2"},{"name":"lzw_fpga","role":"ready","value":"0","valid_bit":"3"},{"name":"lzw_fpga","role":"auto_start","value":"0","valid_bit":"7"}] },
+	{ "name": "s_axi_control_ARADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "control", "role": "ARADDR" },"address":[{"name":"lzw_fpga","role":"start","value":"0","valid_bit":"0"},{"name":"lzw_fpga","role":"done","value":"0","valid_bit":"1"},{"name":"lzw_fpga","role":"idle","value":"0","valid_bit":"2"},{"name":"lzw_fpga","role":"ready","value":"0","valid_bit":"3"},{"name":"lzw_fpga","role":"auto_start","value":"0","valid_bit":"7"},{"name":"return","role":"data","value":"16"}] },
 	{ "name": "s_axi_control_ARVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "ARVALID" } },
 	{ "name": "s_axi_control_ARREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "ARREADY" } },
 	{ "name": "s_axi_control_RVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "control", "role": "RVALID" } },
@@ -180,18 +177,19 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"Port" : [
 			{"Name" : "gmem", "Type" : "MAXI", "Direction" : "IO",
+				"BlockSignal" : [
+					{"Name" : "gmem_blk_n_AR", "Type" : "RtlSignal"},
+					{"Name" : "gmem_blk_n_R", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "3", "SubInstance" : "grp_encoding_fu_102", "Port" : "gmem"},
-					{"ID" : "43", "SubInstance" : "grp_decoding_fu_114", "Port" : "gmem"}]},
+					{"ID" : "43", "SubInstance" : "grp_decoding_fu_118", "Port" : "gmem"},
+					{"ID" : "3", "SubInstance" : "grp_encoding_fu_106", "Port" : "gmem"}]},
 			{"Name" : "s", "Type" : "None", "Direction" : "I"},
 			{"Name" : "output_code", "Type" : "None", "Direction" : "I"},
 			{"Name" : "output_size", "Type" : "None", "Direction" : "I"},
-			{"Name" : "encoded_data", "Type" : "None", "Direction" : "I"},
-			{"Name" : "encoded_size", "Type" : "None", "Direction" : "I"},
 			{"Name" : "output_r", "Type" : "None", "Direction" : "I"}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.control_s_axi_U", "Parent" : "0"},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.gmem_m_axi_U", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102", "Parent" : "0", "Child" : ["4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42"],
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106", "Parent" : "0", "Child" : ["4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42"],
 		"CDFG" : "encoding",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -215,46 +213,46 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_r", "Type" : "None", "Direction" : "I"},
 			{"Name" : "output_code", "Type" : "None", "Direction" : "I"},
 			{"Name" : "output_size", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_str_0_U", "Parent" : "3"},
-	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_str_1_U", "Parent" : "3"},
-	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_str_2_U", "Parent" : "3"},
-	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_str_3_U", "Parent" : "3"},
-	{"ID" : "8", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_str_4_U", "Parent" : "3"},
-	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_str_5_U", "Parent" : "3"},
-	{"ID" : "10", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_str_6_U", "Parent" : "3"},
-	{"ID" : "11", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_str_7_U", "Parent" : "3"},
-	{"ID" : "12", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_str_8_U", "Parent" : "3"},
-	{"ID" : "13", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_str_9_U", "Parent" : "3"},
-	{"ID" : "14", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_str_10_U", "Parent" : "3"},
-	{"ID" : "15", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_str_11_U", "Parent" : "3"},
-	{"ID" : "16", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_str_12_U", "Parent" : "3"},
-	{"ID" : "17", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_str_13_U", "Parent" : "3"},
-	{"ID" : "18", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_str_14_U", "Parent" : "3"},
-	{"ID" : "19", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_str_15_U", "Parent" : "3"},
-	{"ID" : "20", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_code_0_U", "Parent" : "3"},
-	{"ID" : "21", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_code_1_U", "Parent" : "3"},
-	{"ID" : "22", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_code_2_U", "Parent" : "3"},
-	{"ID" : "23", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_code_3_U", "Parent" : "3"},
-	{"ID" : "24", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_code_4_U", "Parent" : "3"},
-	{"ID" : "25", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_code_5_U", "Parent" : "3"},
-	{"ID" : "26", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_code_6_U", "Parent" : "3"},
-	{"ID" : "27", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_code_7_U", "Parent" : "3"},
-	{"ID" : "28", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_code_8_U", "Parent" : "3"},
-	{"ID" : "29", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_code_9_U", "Parent" : "3"},
-	{"ID" : "30", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_code_10_U", "Parent" : "3"},
-	{"ID" : "31", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_code_11_U", "Parent" : "3"},
-	{"ID" : "32", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_code_12_U", "Parent" : "3"},
-	{"ID" : "33", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_code_13_U", "Parent" : "3"},
-	{"ID" : "34", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_code_14_U", "Parent" : "3"},
-	{"ID" : "35", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.table_code_15_U", "Parent" : "3"},
-	{"ID" : "36", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.p_U", "Parent" : "3"},
-	{"ID" : "37", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.temp_U", "Parent" : "3"},
-	{"ID" : "38", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.mux_1664_8_1_1_U1", "Parent" : "3"},
-	{"ID" : "39", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.mux_1664_8_1_1_U2", "Parent" : "3"},
-	{"ID" : "40", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.mux_1664_32_1_1_U3", "Parent" : "3"},
-	{"ID" : "41", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.mux_1664_8_1_1_U4", "Parent" : "3"},
-	{"ID" : "42", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_102.mux_1664_32_1_1_U5", "Parent" : "3"},
-	{"ID" : "43", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_114", "Parent" : "0", "Child" : ["44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65"],
+	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_str_0_U", "Parent" : "3"},
+	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_str_1_U", "Parent" : "3"},
+	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_str_2_U", "Parent" : "3"},
+	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_str_3_U", "Parent" : "3"},
+	{"ID" : "8", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_str_4_U", "Parent" : "3"},
+	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_str_5_U", "Parent" : "3"},
+	{"ID" : "10", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_str_6_U", "Parent" : "3"},
+	{"ID" : "11", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_str_7_U", "Parent" : "3"},
+	{"ID" : "12", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_str_8_U", "Parent" : "3"},
+	{"ID" : "13", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_str_9_U", "Parent" : "3"},
+	{"ID" : "14", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_str_10_U", "Parent" : "3"},
+	{"ID" : "15", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_str_11_U", "Parent" : "3"},
+	{"ID" : "16", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_str_12_U", "Parent" : "3"},
+	{"ID" : "17", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_str_13_U", "Parent" : "3"},
+	{"ID" : "18", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_str_14_U", "Parent" : "3"},
+	{"ID" : "19", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_str_15_U", "Parent" : "3"},
+	{"ID" : "20", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_code_0_U", "Parent" : "3"},
+	{"ID" : "21", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_code_1_U", "Parent" : "3"},
+	{"ID" : "22", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_code_2_U", "Parent" : "3"},
+	{"ID" : "23", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_code_3_U", "Parent" : "3"},
+	{"ID" : "24", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_code_4_U", "Parent" : "3"},
+	{"ID" : "25", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_code_5_U", "Parent" : "3"},
+	{"ID" : "26", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_code_6_U", "Parent" : "3"},
+	{"ID" : "27", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_code_7_U", "Parent" : "3"},
+	{"ID" : "28", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_code_8_U", "Parent" : "3"},
+	{"ID" : "29", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_code_9_U", "Parent" : "3"},
+	{"ID" : "30", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_code_10_U", "Parent" : "3"},
+	{"ID" : "31", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_code_11_U", "Parent" : "3"},
+	{"ID" : "32", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_code_12_U", "Parent" : "3"},
+	{"ID" : "33", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_code_13_U", "Parent" : "3"},
+	{"ID" : "34", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_code_14_U", "Parent" : "3"},
+	{"ID" : "35", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.table_code_15_U", "Parent" : "3"},
+	{"ID" : "36", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.p_U", "Parent" : "3"},
+	{"ID" : "37", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.temp_U", "Parent" : "3"},
+	{"ID" : "38", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.mux_1664_8_1_1_U1", "Parent" : "3"},
+	{"ID" : "39", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.mux_1664_8_1_1_U2", "Parent" : "3"},
+	{"ID" : "40", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.mux_1664_32_1_1_U3", "Parent" : "3"},
+	{"ID" : "41", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.mux_1664_8_1_1_U4", "Parent" : "3"},
+	{"ID" : "42", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_encoding_fu_106.mux_1664_32_1_1_U5", "Parent" : "3"},
+	{"ID" : "43", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_118", "Parent" : "0", "Child" : ["44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65"],
 		"CDFG" : "decoding",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -278,46 +276,44 @@ set RtlHierarchyInfo {[
 			{"Name" : "encoded_data", "Type" : "None", "Direction" : "I"},
 			{"Name" : "encoded_size", "Type" : "None", "Direction" : "I"},
 			{"Name" : "output_r", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "44", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_114.table_str_0_U", "Parent" : "43"},
-	{"ID" : "45", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_114.table_str_1_U", "Parent" : "43"},
-	{"ID" : "46", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_114.table_str_2_U", "Parent" : "43"},
-	{"ID" : "47", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_114.table_str_3_U", "Parent" : "43"},
-	{"ID" : "48", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_114.table_str_4_U", "Parent" : "43"},
-	{"ID" : "49", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_114.table_str_5_U", "Parent" : "43"},
-	{"ID" : "50", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_114.table_str_6_U", "Parent" : "43"},
-	{"ID" : "51", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_114.table_str_7_U", "Parent" : "43"},
-	{"ID" : "52", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_114.table_str_8_U", "Parent" : "43"},
-	{"ID" : "53", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_114.table_str_9_U", "Parent" : "43"},
-	{"ID" : "54", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_114.table_str_10_U", "Parent" : "43"},
-	{"ID" : "55", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_114.table_str_11_U", "Parent" : "43"},
-	{"ID" : "56", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_114.table_str_12_U", "Parent" : "43"},
-	{"ID" : "57", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_114.table_str_13_U", "Parent" : "43"},
-	{"ID" : "58", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_114.table_str_14_U", "Parent" : "43"},
-	{"ID" : "59", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_114.table_str_15_U", "Parent" : "43"},
-	{"ID" : "60", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_114.entry_U", "Parent" : "43"},
-	{"ID" : "61", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_114.mux_1632_8_1_1_U15", "Parent" : "43"},
-	{"ID" : "62", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_114.mux_1632_8_1_1_U16", "Parent" : "43"},
-	{"ID" : "63", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_114.mux_1632_8_1_1_U17", "Parent" : "43"},
-	{"ID" : "64", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_114.mux_1632_8_1_1_U18", "Parent" : "43"},
-	{"ID" : "65", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_114.mux_1632_8_1_1_U19", "Parent" : "43"}]}
+	{"ID" : "44", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_118.table_str_0_U", "Parent" : "43"},
+	{"ID" : "45", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_118.table_str_1_U", "Parent" : "43"},
+	{"ID" : "46", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_118.table_str_2_U", "Parent" : "43"},
+	{"ID" : "47", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_118.table_str_3_U", "Parent" : "43"},
+	{"ID" : "48", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_118.table_str_4_U", "Parent" : "43"},
+	{"ID" : "49", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_118.table_str_5_U", "Parent" : "43"},
+	{"ID" : "50", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_118.table_str_6_U", "Parent" : "43"},
+	{"ID" : "51", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_118.table_str_7_U", "Parent" : "43"},
+	{"ID" : "52", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_118.table_str_8_U", "Parent" : "43"},
+	{"ID" : "53", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_118.table_str_9_U", "Parent" : "43"},
+	{"ID" : "54", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_118.table_str_10_U", "Parent" : "43"},
+	{"ID" : "55", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_118.table_str_11_U", "Parent" : "43"},
+	{"ID" : "56", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_118.table_str_12_U", "Parent" : "43"},
+	{"ID" : "57", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_118.table_str_13_U", "Parent" : "43"},
+	{"ID" : "58", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_118.table_str_14_U", "Parent" : "43"},
+	{"ID" : "59", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_118.table_str_15_U", "Parent" : "43"},
+	{"ID" : "60", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_118.entry_U", "Parent" : "43"},
+	{"ID" : "61", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_118.mux_1632_8_1_1_U15", "Parent" : "43"},
+	{"ID" : "62", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_118.mux_1632_8_1_1_U16", "Parent" : "43"},
+	{"ID" : "63", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_118.mux_1632_8_1_1_U17", "Parent" : "43"},
+	{"ID" : "64", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_118.mux_1632_8_1_1_U18", "Parent" : "43"},
+	{"ID" : "65", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_decoding_fu_118.mux_1632_8_1_1_U19", "Parent" : "43"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	main {
-		gmem {Type IO LastRead 226 FirstWrite 75}
+		gmem {Type IO LastRead 224 FirstWrite 75}
 		s {Type I LastRead 0 FirstWrite -1}
 		output_code {Type I LastRead 0 FirstWrite -1}
 		output_size {Type I LastRead 0 FirstWrite -1}
-		encoded_data {Type I LastRead 2 FirstWrite -1}
-		encoded_size {Type I LastRead 2 FirstWrite -1}
-		output_r {Type I LastRead 2 FirstWrite -1}}
+		output_r {Type I LastRead 73 FirstWrite -1}}
 	encoding {
-		gmem {Type IO LastRead 224 FirstWrite 154}
+		gmem {Type IO LastRead 223 FirstWrite 153}
 		input_r {Type I LastRead 0 FirstWrite -1}
 		output_code {Type I LastRead 0 FirstWrite -1}
 		output_size {Type I LastRead 0 FirstWrite -1}}
 	decoding {
-		gmem {Type IO LastRead 226 FirstWrite 75}
+		gmem {Type IO LastRead 224 FirstWrite 75}
 		encoded_data {Type I LastRead 0 FirstWrite -1}
 		encoded_size {Type I LastRead 0 FirstWrite -1}
 		output_r {Type I LastRead 0 FirstWrite -1}}}

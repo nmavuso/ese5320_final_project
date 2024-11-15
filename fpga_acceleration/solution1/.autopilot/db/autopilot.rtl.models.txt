@@ -4,6 +4,7 @@ lzw_fpga_encoding_table_str_0
 lzw_fpga_encoding_table_code_0
 lzw_fpga_encoding_p
 lzw_fpga_mux_1632_8_1_1
+lzw_fpga_decoding_table_str_0
 lzw_fpga_control_s_axi
 lzw_fpga_gmem_m_axi
 encoding

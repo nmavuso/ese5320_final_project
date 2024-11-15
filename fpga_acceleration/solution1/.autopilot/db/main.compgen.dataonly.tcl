@@ -2,59 +2,51 @@
 
 set axilite_register_dict [dict create]
 set port_control {
+ap_start { }
+ap_done { }
+ap_ready { }
+ap_continue { }
+ap_idle { }
+ap_return { 
+	dir o
+	width 32
+	depth 1
+	mode ap_ctrl_chain
+	offset 16
+	offset_end 0
+}
 s { 
 	dir I
 	width 64
 	depth 1
 	mode ap_none
-	offset 16
-	offset_end 27
+	offset 24
+	offset_end 35
 }
 output_code { 
 	dir I
 	width 64
 	depth 1
 	mode ap_none
-	offset 28
-	offset_end 39
+	offset 36
+	offset_end 47
 }
 output_size { 
 	dir I
 	width 64
 	depth 1
 	mode ap_none
-	offset 40
-	offset_end 51
-}
-encoded_data { 
-	dir I
-	width 64
-	depth 1
-	mode ap_none
-	offset 52
-	offset_end 63
-}
-encoded_size { 
-	dir I
-	width 32
-	depth 1
-	mode ap_none
-	offset 64
-	offset_end 71
+	offset 48
+	offset_end 59
 }
 output_r { 
 	dir I
 	width 64
 	depth 1
 	mode ap_none
-	offset 72
-	offset_end 83
+	offset 60
+	offset_end 71
 }
-ap_start { }
-ap_done { }
-ap_ready { }
-ap_continue { }
-ap_idle { }
 }
 dict set axilite_register_dict control $port_control
 

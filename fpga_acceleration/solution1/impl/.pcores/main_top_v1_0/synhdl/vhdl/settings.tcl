@@ -24,6 +24,7 @@ set src_files [list \
     lzw_fpga_encoding_table_code_0.vhd \
     lzw_fpga_encoding_p.vhd \
     lzw_fpga_mux_1632_8_1_1.vhd \
+    lzw_fpga_decoding_table_str_0.vhd \
     lzw_fpga_control_s_axi.vhd \
     lzw_fpga_gmem_m_axi.vhd \
     lzw_fpga_encoding.vhd \

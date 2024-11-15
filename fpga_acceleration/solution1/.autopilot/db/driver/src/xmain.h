@@ -87,6 +87,7 @@ u32 XMain_IsReady(XMain *InstancePtr);
 void XMain_Continue(XMain *InstancePtr);
 void XMain_EnableAutoRestart(XMain *InstancePtr);
 void XMain_DisableAutoRestart(XMain *InstancePtr);
+u32 XMain_Get_return(XMain *InstancePtr);
 
 void XMain_Set_s(XMain *InstancePtr, u64 Data);
 u64 XMain_Get_s(XMain *InstancePtr);
@@ -94,10 +95,6 @@ void XMain_Set_output_code(XMain *InstancePtr, u64 Data);
 u64 XMain_Get_output_code(XMain *InstancePtr);
 void XMain_Set_output_size(XMain *InstancePtr, u64 Data);
 u64 XMain_Get_output_size(XMain *InstancePtr);
-void XMain_Set_encoded_data(XMain *InstancePtr, u64 Data);
-u64 XMain_Get_encoded_data(XMain *InstancePtr);
-void XMain_Set_encoded_size(XMain *InstancePtr, u32 Data);
-u32 XMain_Get_encoded_size(XMain *InstancePtr);
 void XMain_Set_output_r(XMain *InstancePtr, u64 Data);
 u64 XMain_Get_output_r(XMain *InstancePtr);
 

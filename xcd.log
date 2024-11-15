@@ -1,13 +1,12 @@
-Fri Nov 15 10:42:39 2024: Server was asked to start on port: '34843'
-Fri Nov 15 10:42:39 2024: Server is using token UUID: '8bbd5326-f715-4634-acd6-ea8ba2e3cf92'
-Fri Nov 15 10:42:39 2024: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
-Fri Nov 15 10:42:39 2024: Attempting to start server on port '34843'
-Fri Nov 15 10:42:39 2024: XCD main fifo: created main fifo '/tmp/xcdmain8bbd5326-f715-4634-acd6-ea8ba2e3cf92', fd read = 13
-Fri Nov 15 10:42:39 2024: Running Dispatch Server
-Fri Nov 15 10:42:39 2024: Version 2.1.0
-Fri Nov 15 10:42:49 2024: Dispatch Server: Accepted socket connection from client
-Fri Nov 15 10:42:49 2024: EXCHANGE_TOKEN received, server token: 8bbd5326-f715-4634-acd6-ea8ba2e3cf92, passed token: 8bbd5326-f715-4634-acd6-ea8ba2e3cf92
-Fri Nov 15 10:42:49 2024: SESSION_MGR: creating session with session uuid: '1ad8fc0f-2ea0-49ac-be57-d78854aee41e' and name 'v++_compile_lzw_hls'
-Fri Nov 15 10:42:49 2024: GUIDANCE_SMGR: creating guidance session with uuid: '1ad8fc0f-2ea0-49ac-be57-d78854aee41e' and name 'v++_compile_lzw_hls'
-Fri Nov 15 10:42:57 2024: SESSION_MGR: closing session for UUID '1ad8fc0f-2ea0-49ac-be57-d78854aee41e' with name 'v++_compile_lzw_hls'
-Fri Nov 15 10:42:57 2024: GUIDANCE_SMGR: closing session for UUID '1ad8fc0f-2ea0-49ac-be57-d78854aee41e' with name 'v++_compile_lzw_hls'
+Fri Nov 15 12:55:32 2024: Server was asked to start on port: '36079'
+Fri Nov 15 12:55:32 2024: Server is using token UUID: '2755f870-4838-4258-8e03-f6f066a6d7cc'
+Fri Nov 15 12:55:32 2024: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Nov 15 12:55:32 2024: Attempting to start server on port '36079'
+Fri Nov 15 12:55:32 2024: XCD main fifo: created main fifo '/tmp/xcdmain2755f870-4838-4258-8e03-f6f066a6d7cc', fd read = 13
+Fri Nov 15 12:55:32 2024: Running Dispatch Server
+Fri Nov 15 12:55:32 2024: Version 2.1.0
+Fri Nov 15 12:55:40 2024: Dispatch Server: Accepted socket connection from client
+Fri Nov 15 12:55:40 2024: EXCHANGE_TOKEN received, server token: 2755f870-4838-4258-8e03-f6f066a6d7cc, passed token: 2755f870-4838-4258-8e03-f6f066a6d7cc
+Fri Nov 15 12:55:40 2024: SESSION_MGR: creating session with session uuid: '30d0b6d7-128a-4622-88c2-924f50e157e6' and name 'v++_link_lzw_hls'
+Fri Nov 15 12:55:40 2024: GUIDANCE_SMGR: creating guidance session with uuid: '30d0b6d7-128a-4622-88c2-924f50e157e6' and name 'v++_link_lzw_hls'
+Fri Nov 15 12:56:11 2024: Dispatch Server: Accepted socket connection from client

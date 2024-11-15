@@ -3407,9 +3407,9 @@ window.onload = function () { addSorting(); }
 <center><h1>Design Guidance Report</h1></center><center><table class="header" border="0">
 <tr><td><b>Copyright</b></td><td>Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.</td></tr>
 <tr><td><b>Tool Version</b></td><td>xrcserver v.2020.2 (lin64) Build 0 </td></tr>
-<tr><td><b>Date</b></td><td>Fri Nov 15 10:42:57 2024</td></tr>
-<tr><td><b>Host</b></td><td>polaris.seas.upenn.edu running 64-bit openSUSE Leap 15.6</td></tr>
-<tr><td><b>Command</b></td><td>v++  --target hw -k lzw_fpga --compile -Ihls --config fpga_acceleration/design.cfg -olzw_hls.xo hls/lzw_hls.c </td></tr>
+<tr><td><b>Date</b></td><td>Fri Nov 15 12:55:27 2024</td></tr>
+<tr><td><b>Host</b></td><td>big14.seas.upenn.edu running 64-bit openSUSE Leap 15.6</td></tr>
+<tr><td><b>Command</b></td><td>v++  --target hw -k lzw_fpga --compile -Ihls --config fpga_acceleration/design.cfg -olzw_hls.xo hls/lzw_hls.cpp </td></tr>
 </table></center><br>
 <table class="toc" border="1"><tr><td><b>Table of Contents</b></td></tr>
 <tr><td><a href="#REPORT SUMMARY">1 REPORT SUMMARY</a></tr></td>
@@ -3417,9 +3417,9 @@ window.onload = function () { addSorting(); }
 <tr><td><a href="#CONFIG FILE DETAILS">3 CONFIG FILE DETAILS</a></tr></td>
 </table>
 <a name="REPORT SUMMARY"></a><h1>1 REPORT SUMMARY</h1>
-<pre>Violations found: 0
+<pre>Violations found: 38
 </pre>
-<pre>Rule Specs Violated: 0
+<pre>Rule Specs Violated: 3
 </pre>
 <a name="VIOLATION DETAILS"></a><h1>2 VIOLATION DETAILS</h1>
 <table border="1">
@@ -3433,6 +3433,424 @@ window.onload = function () { addSorting(); }
 <th align="left">Categories</th>
 <th align="left" width="350">Details</th>
 <th align="left" width="380">Resolution</th>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">Latency</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Latency Related</td>
+<td align="left">Accelerator.lzw_fpga.Latency</td>
+<td align="left">Cannot flatten loop 'VITIS_LOOP_435_4' (<a href="file:///mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp#line=435">lzw_hls.cpp</a>) in function 'encoding' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">Latency</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Latency Related</td>
+<td align="left">Accelerator.lzw_fpga.Latency</td>
+<td align="left">Cannot flatten loop 'VITIS_LOOP_411_2' (<a href="file:///mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp#line=412">lzw_hls.cpp</a>) in function 'encoding' more than one sub loop.
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">Latency</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Latency Related</td>
+<td align="left">Accelerator.lzw_fpga.Latency</td>
+<td align="left">Cannot flatten loop 'VITIS_LOOP_456_5' (<a href="file:///mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp#line=456">lzw_hls.cpp</a>) in function 'encoding' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">Latency</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Latency Related</td>
+<td align="left">Accelerator.lzw_fpga.Latency</td>
+<td align="left">Cannot flatten loop 'VITIS_LOOP_486_2' (<a href="file:///mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp#line=484">lzw_hls.cpp</a>) in function 'decoding' more than one sub loop.
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'VITIS_LOOP_402_1'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Loop 2'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left">Throughput</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Unable to schedule the loop exit test ('and' operation ('and_ln389', <a href="file:///mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp#line=389">lzw_hls.cpp</a>)) in the first pipeline iteration (II = 1 cycles).
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-878.html">See here for more help on vitis_hls 200-878 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">9</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_389_1'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left">Throughput</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Unable to schedule the loop exit test ('icmp' operation ('icmp_ln368_1', <a href="file:///mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp#line=368">lzw_hls.cpp</a>)) in the first pipeline iteration (II = 1 cycles).
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-878.html">See here for more help on vitis_hls 200-878 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">11</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_368_1'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">12</td>
+<td align="left">Throughput</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Unable to schedule the loop exit test ('and' operation ('and_ln377_1', <a href="file:///mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp#line=377">lzw_hls.cpp</a>)) in the first pipeline iteration (II = 1 cycles).
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-878.html">See here for more help on vitis_hls 200-878 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">13</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_377_1'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">14</td>
+<td align="left">Throughput</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Unable to schedule the loop exit test ('icmp' operation ('icmp_ln368_3', <a href="file:///mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp#line=368">lzw_hls.cpp</a>)) in the first pipeline iteration (II = 1 cycles).
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-878.html">See here for more help on vitis_hls 200-878 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">15</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_368_1'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">16</td>
+<td align="left">Throughput</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Unable to schedule the loop exit test ('and' operation ('and_ln377_2', <a href="file:///mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp#line=377">lzw_hls.cpp</a>)) in the first pipeline iteration (II = 1 cycles).
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-878.html">See here for more help on vitis_hls 200-878 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">17</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_377_1'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">18</td>
+<td align="left">Throughput</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Unable to schedule the loop exit test ('icmp' operation ('icmp_ln368_5', <a href="file:///mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp#line=368">lzw_hls.cpp</a>)) in the first pipeline iteration (II = 1 cycles).
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-878.html">See here for more help on vitis_hls 200-878 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">19</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_368_1'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">20</td>
+<td align="left">Throughput</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Unable to schedule the loop exit test ('and' operation ('and_ln377', <a href="file:///mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp#line=377">lzw_hls.cpp</a>)) in the first pipeline iteration (II = 1 cycles).
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-878.html">See here for more help on vitis_hls 200-878 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">21</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_377_1'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">22</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'VITIS_LOOP_472_1'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">23</td>
+<td align="left">Throughput</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Unable to schedule the loop exit test ('icmp' operation ('icmp_ln368_6', <a href="file:///mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp#line=368">lzw_hls.cpp</a>)) in the first pipeline iteration (II = 1 cycles).
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-878.html">See here for more help on vitis_hls 200-878 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">24</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 2, Depth = 72, loop 'VITIS_LOOP_368_1'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">25</td>
+<td align="left">Throughput</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Unable to schedule the loop exit test ('and' operation ('and_ln389', <a href="file:///mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp#line=389">lzw_hls.cpp</a>)) in the first pipeline iteration (II = 1 cycles).
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-878.html">See here for more help on vitis_hls 200-878 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">26</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_389_1'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">27</td>
+<td align="left">Throughput</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Unable to schedule the loop exit test ('icmp' operation ('icmp_ln493', <a href="file:///mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp#line=493">lzw_hls.cpp</a>)) in the first pipeline iteration (II = 1 cycles).
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-878.html">See here for more help on vitis_hls 200-878 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">28</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_493_3'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">29</td>
+<td align="left">Throughput</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Unable to schedule the loop exit test ('icmp' operation ('icmp_ln368_8', <a href="file:///mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp#line=368">lzw_hls.cpp</a>)) in the first pipeline iteration (II = 1 cycles).
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-878.html">See here for more help on vitis_hls 200-878 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">30</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_368_1'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">31</td>
+<td align="left">Throughput</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Unable to schedule the loop exit test ('icmp' operation ('icmp_ln505', <a href="file:///mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp#line=505">lzw_hls.cpp</a>)) in the first pipeline iteration (II = 1 cycles).
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-878.html">See here for more help on vitis_hls 200-878 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">32</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 2, Depth = 72, loop 'VITIS_LOOP_505_4'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">33</td>
+<td align="left">Throughput</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Unable to schedule the loop exit test ('icmp' operation ('icmp_ln368_10', <a href="file:///mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp#line=368">lzw_hls.cpp</a>)) in the first pipeline iteration (II = 1 cycles).
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-878.html">See here for more help on vitis_hls 200-878 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">34</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_368_1'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">35</td>
+<td align="left">Throughput</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Unable to schedule the loop exit test ('and' operation ('and_ln389_1', <a href="file:///mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp#line=389">lzw_hls.cpp</a>)) in the first pipeline iteration (II = 1 cycles).
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-878.html">See here for more help on vitis_hls 200-878 guidance.</a></td>
+</tr>
+<tr>
+<td align="left">36</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.lzw_fpga.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_389_1'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">37</td>
+<td align="left">Kernel</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.lzw_fpga.Kernel</td>
+<td align="left">**** Loop Constraint Status: All loop constraints were NOT satisfied.
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">38</td>
+<td align="left">Kernel</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.lzw_fpga.Kernel</td>
+<td align="left">**** Estimated Fmax: 205.47 MHz
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">Latency</td>
+<td align="left">warning</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Latency Related</td>
+<td align="left">Accelerator.lzw_fpga.Latency</td>
+<td align="left">Cannot flatten loop 'VITIS_LOOP_423_3' (<a href="file:///mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp#line=423">lzw_hls.cpp</a>) in function 'encoding' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+</td>
+<td align="left"><a href="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-960.html">See here for more help on vitis_hls 200-960 guidance.</a></td>
 </tr>
 </table>
 <br>

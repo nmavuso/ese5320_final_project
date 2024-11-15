@@ -7,6 +7,7 @@ synlib main_top_v1_0 lzw_fpga_decoding vhdl
 synlib main_top_v1_0 lzw_fpga_encoding vhdl
 synlib main_top_v1_0 lzw_fpga_gmem_m_axi vhdl
 synlib main_top_v1_0 lzw_fpga_control_s_axi vhdl
+synlib main_top_v1_0 lzw_fpga_decoding_table_str_0 vhdl
 synlib main_top_v1_0 lzw_fpga_mux_1632_8_1_1 vhdl
 synlib main_top_v1_0 lzw_fpga_encoding_p vhdl
 synlib main_top_v1_0 lzw_fpga_encoding_table_code_0 vhdl
@@ -21,6 +22,7 @@ simlib main_top_v1_0 lzw_fpga_decoding vhdl
 simlib main_top_v1_0 lzw_fpga_encoding vhdl
 simlib main_top_v1_0 lzw_fpga_gmem_m_axi vhdl
 simlib main_top_v1_0 lzw_fpga_control_s_axi vhdl
+simlib main_top_v1_0 lzw_fpga_decoding_table_str_0 vhdl
 simlib main_top_v1_0 lzw_fpga_mux_1632_8_1_1 vhdl
 simlib main_top_v1_0 lzw_fpga_encoding_p vhdl
 simlib main_top_v1_0 lzw_fpga_encoding_table_code_0 vhdl

@@ -20,4 +20,11 @@ PARAMETER RESET_ACTIVE_LOW = 1, DT = integer, RANGE = (0, 1)
 PORT aclk = "", DIR = I, SIGIS = Clk, ASSIGNMENT = REQUIRE
 PORT aresetn = "", DIR = I, SIGIS = Rst, ASSIGNMENT = REQUIRE
 
+
+#####################Direct Connection##################
+## ap_return
+PORT ap_return = "", DIR = O, VEC = [31:0]
+########################################################
+
+
 END

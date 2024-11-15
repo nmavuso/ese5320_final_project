@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/lzw_hls/lzw_fpga'
+HD_PWD='/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/lzw_hls/lzw_fpga'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

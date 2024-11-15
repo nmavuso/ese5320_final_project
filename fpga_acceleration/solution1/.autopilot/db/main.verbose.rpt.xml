@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'main'" level="0">
-<item name = "Date">Tue Nov 12 23:00:31 2024
+<item name = "Date">Fri Nov 15 11:25:20 2024
 </item>
 <item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
 <item name = "Project">fpga_acceleration</item>
@@ -31,8 +31,8 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_encoding_fu_102">encoding, ?, ?, ?, ?, ?, ?, none</column>
-<column name="grp_decoding_fu_114">decoding, ?, ?, ?, ?, ?, ?, none</column>
+<column name="grp_encoding_fu_106">encoding, ?, ?, ?, ?, ?, ?, none</column>
+<column name="grp_decoding_fu_118">decoding, ?, ?, ?, ?, ?, ?, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -51,21 +51,21 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 2, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">4117, -, 5073, 11926, -</column>
+<column name="Instance">4117, -, 5176, 12492, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, -, 483, -</column>
-<column name="Register">-, -, 10, -, -</column>
+<column name="Multiplexer">-, -, -, 903, -</column>
+<column name="Register">-, -, 177, -, -</column>
 <specialColumn name="Available">432, 360, 141120, 70560, 0</specialColumn>
-<specialColumn name="Utilization (%)">953, 0, 3, 17, 0</specialColumn>
+<specialColumn name="Utilization (%)">953, 0, 3, 18, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="control_s_axi_U">control_s_axi, 0, 0, 424, 744, 0</column>
-<column name="grp_decoding_fu_114">decoding, 2049, 0, 2197, 4874, 0</column>
-<column name="grp_encoding_fu_102">encoding, 2066, 0, 1940, 5728, 0</column>
+<column name="control_s_axi_U">control_s_axi, 0, 0, 348, 616, 0</column>
+<column name="grp_decoding_fu_118">decoding, 2049, 0, 2278, 5499, 0</column>
+<column name="grp_encoding_fu_106">encoding, 2066, 0, 2038, 5797, 0</column>
 <column name="gmem_m_axi_U">gmem_m_axi, 2, 0, 512, 580, 0</column>
 </table>
 </item>
@@ -88,20 +88,20 @@
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">26, 5, 1, 5</column>
+<column name="ap_NS_fsm">404, 76, 1, 76</column>
 <column name="ap_done">9, 2, 1, 2</column>
-<column name="gmem_ARADDR">14, 3, 64, 192</column>
+<column name="gmem_ARADDR">20, 4, 64, 256</column>
 <column name="gmem_ARBURST">14, 3, 2, 6</column>
 <column name="gmem_ARCACHE">14, 3, 4, 12</column>
 <column name="gmem_ARID">14, 3, 1, 3</column>
-<column name="gmem_ARLEN">14, 3, 32, 96</column>
+<column name="gmem_ARLEN">20, 4, 32, 128</column>
 <column name="gmem_ARLOCK">14, 3, 2, 6</column>
 <column name="gmem_ARPROT">14, 3, 3, 9</column>
 <column name="gmem_ARQOS">14, 3, 4, 12</column>
 <column name="gmem_ARREGION">14, 3, 4, 12</column>
 <column name="gmem_ARSIZE">14, 3, 3, 9</column>
 <column name="gmem_ARUSER">14, 3, 1, 3</column>
-<column name="gmem_ARVALID">14, 3, 1, 3</column>
+<column name="gmem_ARVALID">20, 4, 1, 4</column>
 <column name="gmem_AWADDR">14, 3, 64, 192</column>
 <column name="gmem_AWBURST">14, 3, 2, 6</column>
 <column name="gmem_AWCACHE">14, 3, 4, 12</column>
@@ -115,24 +115,28 @@
 <column name="gmem_AWUSER">14, 3, 1, 3</column>
 <column name="gmem_AWVALID">14, 3, 1, 3</column>
 <column name="gmem_BREADY">14, 3, 1, 3</column>
-<column name="gmem_RREADY">14, 3, 1, 3</column>
+<column name="gmem_RREADY">20, 4, 1, 4</column>
 <column name="gmem_WDATA">14, 3, 32, 96</column>
 <column name="gmem_WID">14, 3, 1, 3</column>
 <column name="gmem_WLAST">14, 3, 1, 3</column>
 <column name="gmem_WSTRB">14, 3, 4, 12</column>
 <column name="gmem_WUSER">14, 3, 1, 3</column>
 <column name="gmem_WVALID">14, 3, 1, 3</column>
+<column name="gmem_blk_n_AR">9, 2, 1, 2</column>
+<column name="gmem_blk_n_R">9, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="ap_CS_fsm">4, 0, 4, 0</column>
+<column name="ap_CS_fsm">75, 0, 75, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="ap_rst_n_inv">1, 0, 1, 0</column>
 <column name="ap_rst_reg_1">1, 0, 1, 0</column>
 <column name="ap_rst_reg_2">1, 0, 1, 0</column>
-<column name="grp_decoding_fu_114_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_encoding_fu_102_ap_start_reg">1, 0, 1, 0</column>
+<column name="gmem_addr_read_reg_170">32, 0, 32, 0</column>
+<column name="gmem_addr_reg_164">64, 0, 64, 0</column>
+<column name="grp_decoding_fu_118_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_encoding_fu_106_ap_start_reg">1, 0, 1, 0</column>
 </table>
 </item>
 </section>

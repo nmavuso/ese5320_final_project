@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'encoding'" level="0">
-<item name = "Date">Tue Nov 12 23:00:23 2024
+<item name = "Date">Fri Nov 15 11:25:00 2024
 </item>
 <item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
 <item name = "Project">fpga_acceleration</item>
@@ -35,18 +35,18 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_23_1">16, 16, 1, 1, 1, 16, yes</column>
-<column name="- Loop 2">1024, 1024, 1, 1, 1, 1024, yes</column>
-<column name="- VITIS_LOOP_33_2">?, ?, ?, -, -, ?, no</column>
-<column name=" + VITIS_LOOP_40_3">?, ?, 2, -, -, ?, no</column>
-<column name=" + VITIS_LOOP_49_4">?, ?, ?, -, -, ?, no</column>
-<column name="  ++ VITIS_LOOP_52_5">?, ?, 2, -, -, ?, no</column>
-<column name=" + VITIS_LOOP_64_6">?, ?, 2, -, -, ?, no</column>
-<column name=" + VITIS_LOOP_69_7">?, ?, ?, -, -, ?, no</column>
-<column name="  ++ VITIS_LOOP_72_8">?, ?, 2, -, -, ?, no</column>
-<column name=" + VITIS_LOOP_84_9">?, ?, 3, -, -, ?, no</column>
-<column name="- VITIS_LOOP_98_10">?, ?, ?, -, -, ?, no</column>
-<column name=" + VITIS_LOOP_100_11">?, ?, 2, 2, 1, ?, yes</column>
+<column name="- VITIS_LOOP_16_1">49, 49, 3, -, -, 16, no</column>
+<column name="- Loop 2">1024, 1024, 1, -, -, 1024, no</column>
+<column name="- VITIS_LOOP_26_2">?, ?, ?, -, -, ?, no</column>
+<column name=" + VITIS_LOOP_33_3">?, ?, 2, -, -, ?, no</column>
+<column name=" + VITIS_LOOP_42_4">?, ?, ?, -, -, ?, no</column>
+<column name="  ++ VITIS_LOOP_45_5">?, ?, 2, -, -, ?, no</column>
+<column name=" + VITIS_LOOP_57_6">?, ?, 2, -, -, ?, no</column>
+<column name=" + VITIS_LOOP_62_7">?, ?, ?, -, -, ?, no</column>
+<column name="  ++ VITIS_LOOP_65_8">?, ?, 2, -, -, ?, no</column>
+<column name=" + VITIS_LOOP_77_9">?, ?, 3, -, -, ?, no</column>
+<column name="- VITIS_LOOP_91_10">?, ?, ?, -, -, ?, no</column>
+<column name=" + VITIS_LOOP_93_11">?, ?, 2, -, -, ?, no</column>
 </table>
 </item>
 </section>

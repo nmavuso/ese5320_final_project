@@ -22,5 +22,8 @@
     <clockList>
         <clock name="default" period="150.000000MHz" default="false"/>
     </clockList>
+    <ExportDesign askAgain="true" evaluate="false" rtl="verilog" formatName="ip_catalog">
+        <Format formatName="ip_catalog" description="" vendor="" library="" ipname="lzw_fpga" version="" display_name="" taxonomy=""/>
+    </ExportDesign>
 </AutoPilot:solution>
 

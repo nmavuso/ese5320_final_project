@@ -1,0 +1,57 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/reports/lzw_hls
+	Log files: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/logs/lzw_hls
+INFO: [v++ 60-1548] Creating build summary session with primary output /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/lzw_hls.xo.compile_summary, at Fri Nov 15 12:53:44 2024
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Fri Nov 15 12:53:44 2024
+INFO: [v++ 60-1315] Creating rulecheck session with output '/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/reports/lzw_hls/v++_compile_lzw_hls_guidance.html', at Fri Nov 15 12:53:45 2024
+INFO: [v++ 60-895]   Target platform: /home1/e/ese5320/u96v2_sbc_base/u96v2_sbc_base.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/home1/e/ese5320/u96v2_sbc_base/hw/u96v2_sbc_base.xsa'
+INFO: [v++ 60-585] Compiling for hardware target
+INFO: [v++ 60-423]   Target device: u96v2_sbc_base
+INFO: [v++ 60-242] Creating kernel: 'lzw_fpga'
+
+===>The following messages were generated while  performing high-level synthesis for kernel: lzw_fpga Log file: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/lzw_hls/lzw_fpga/vitis_hls.log :
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_402_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'VITIS_LOOP_402_1'
+INFO: [v++ 204-61] Pipelining loop 'Loop 2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Loop 2'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_389_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_389_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_368_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_368_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_377_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_377_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_368_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_368_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_377_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_377_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_368_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_368_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_377_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_377_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_472_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'VITIS_LOOP_472_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_368_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 72, loop 'VITIS_LOOP_368_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_389_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_389_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_493_3'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_493_3'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_368_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_368_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_505_4'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 72, loop 'VITIS_LOOP_505_4'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_368_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_368_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_389_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 2, loop 'VITIS_LOOP_389_1'
+INFO: [v++ 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [v++ 200-789] **** Estimated Fmax: 205.47 MHz
+INFO: [v++ 60-594] Finished kernel compilation
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/reports/lzw_hls/system_estimate_lzw_hls.xtxt
+INFO: [v++ 60-586] Created lzw_hls.xo
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/lzw_hls.xo.compile_summary 
+INFO: [v++ 60-791] Total elapsed time: 0h 1m 53s
+INFO: [v++ 60-1653] Closing dispatch client.

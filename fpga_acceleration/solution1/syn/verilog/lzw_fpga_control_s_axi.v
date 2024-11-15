@@ -29,17 +29,16 @@ module lzw_fpga_control_s_axi
     output wire                          RVALID,
     input  wire                          RREADY,
     output wire                          interrupt,
-    output wire [63:0]                   s,
-    output wire [63:0]                   output_code,
-    output wire [63:0]                   output_size,
-    output wire [63:0]                   encoded_data,
-    output wire [31:0]                   encoded_size,
-    output wire [63:0]                   output_r,
     output wire                          ap_start,
     input  wire                          ap_done,
     input  wire                          ap_ready,
     output wire                          ap_continue,
-    input  wire                          ap_idle
+    input  wire                          ap_idle,
+    input  wire [31:0]                   ap_return,
+    output wire [63:0]                   s,
+    output wire [63:0]                   output_code,
+    output wire [63:0]                   output_size,
+    output wire [63:0]                   output_r
 );
 //------------------------Address Info-------------------
 // 0x00 : Control signals
@@ -61,66 +60,56 @@ module lzw_fpga_control_s_axi
 //        bit 0  - ap_done (COR/TOW)
 //        bit 1  - ap_ready (COR/TOW)
 //        others - reserved
-// 0x10 : Data signal of s
+// 0x10 : Data signal of ap_return
+//        bit 31~0 - ap_return[31:0] (Read)
+// 0x18 : Data signal of s
 //        bit 31~0 - s[31:0] (Read/Write)
-// 0x14 : Data signal of s
+// 0x1c : Data signal of s
 //        bit 31~0 - s[63:32] (Read/Write)
-// 0x18 : reserved
-// 0x1c : Data signal of output_code
+// 0x20 : reserved
+// 0x24 : Data signal of output_code
 //        bit 31~0 - output_code[31:0] (Read/Write)
-// 0x20 : Data signal of output_code
+// 0x28 : Data signal of output_code
 //        bit 31~0 - output_code[63:32] (Read/Write)
-// 0x24 : reserved
-// 0x28 : Data signal of output_size
+// 0x2c : reserved
+// 0x30 : Data signal of output_size
 //        bit 31~0 - output_size[31:0] (Read/Write)
-// 0x2c : Data signal of output_size
+// 0x34 : Data signal of output_size
 //        bit 31~0 - output_size[63:32] (Read/Write)
-// 0x30 : reserved
-// 0x34 : Data signal of encoded_data
-//        bit 31~0 - encoded_data[31:0] (Read/Write)
-// 0x38 : Data signal of encoded_data
-//        bit 31~0 - encoded_data[63:32] (Read/Write)
-// 0x3c : reserved
-// 0x40 : Data signal of encoded_size
-//        bit 31~0 - encoded_size[31:0] (Read/Write)
-// 0x44 : reserved
-// 0x48 : Data signal of output_r
+// 0x38 : reserved
+// 0x3c : Data signal of output_r
 //        bit 31~0 - output_r[31:0] (Read/Write)
-// 0x4c : Data signal of output_r
+// 0x40 : Data signal of output_r
 //        bit 31~0 - output_r[63:32] (Read/Write)
-// 0x50 : reserved
+// 0x44 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
 localparam
-    ADDR_AP_CTRL             = 7'h00,
-    ADDR_GIE                 = 7'h04,
-    ADDR_IER                 = 7'h08,
-    ADDR_ISR                 = 7'h0c,
-    ADDR_S_DATA_0            = 7'h10,
-    ADDR_S_DATA_1            = 7'h14,
-    ADDR_S_CTRL              = 7'h18,
-    ADDR_OUTPUT_CODE_DATA_0  = 7'h1c,
-    ADDR_OUTPUT_CODE_DATA_1  = 7'h20,
-    ADDR_OUTPUT_CODE_CTRL    = 7'h24,
-    ADDR_OUTPUT_SIZE_DATA_0  = 7'h28,
-    ADDR_OUTPUT_SIZE_DATA_1  = 7'h2c,
-    ADDR_OUTPUT_SIZE_CTRL    = 7'h30,
-    ADDR_ENCODED_DATA_DATA_0 = 7'h34,
-    ADDR_ENCODED_DATA_DATA_1 = 7'h38,
-    ADDR_ENCODED_DATA_CTRL   = 7'h3c,
-    ADDR_ENCODED_SIZE_DATA_0 = 7'h40,
-    ADDR_ENCODED_SIZE_CTRL   = 7'h44,
-    ADDR_OUTPUT_R_DATA_0     = 7'h48,
-    ADDR_OUTPUT_R_DATA_1     = 7'h4c,
-    ADDR_OUTPUT_R_CTRL       = 7'h50,
-    WRIDLE                   = 2'd0,
-    WRDATA                   = 2'd1,
-    WRRESP                   = 2'd2,
-    WRRESET                  = 2'd3,
-    RDIDLE                   = 2'd0,
-    RDDATA                   = 2'd1,
-    RDRESET                  = 2'd2,
+    ADDR_AP_CTRL            = 7'h00,
+    ADDR_GIE                = 7'h04,
+    ADDR_IER                = 7'h08,
+    ADDR_ISR                = 7'h0c,
+    ADDR_AP_RETURN_0        = 7'h10,
+    ADDR_S_DATA_0           = 7'h18,
+    ADDR_S_DATA_1           = 7'h1c,
+    ADDR_S_CTRL             = 7'h20,
+    ADDR_OUTPUT_CODE_DATA_0 = 7'h24,
+    ADDR_OUTPUT_CODE_DATA_1 = 7'h28,
+    ADDR_OUTPUT_CODE_CTRL   = 7'h2c,
+    ADDR_OUTPUT_SIZE_DATA_0 = 7'h30,
+    ADDR_OUTPUT_SIZE_DATA_1 = 7'h34,
+    ADDR_OUTPUT_SIZE_CTRL   = 7'h38,
+    ADDR_OUTPUT_R_DATA_0    = 7'h3c,
+    ADDR_OUTPUT_R_DATA_1    = 7'h40,
+    ADDR_OUTPUT_R_CTRL      = 7'h44,
+    WRIDLE                  = 2'd0,
+    WRDATA                  = 2'd1,
+    WRRESP                  = 2'd2,
+    WRRESET                 = 2'd3,
+    RDIDLE                  = 2'd0,
+    RDDATA                  = 2'd1,
+    RDRESET                 = 2'd2,
     ADDR_BITS                = 7;
 
 //------------------------Local signal-------------------
@@ -145,11 +134,10 @@ localparam
     reg                           int_gie = 1'b0;
     reg  [1:0]                    int_ier = 2'b0;
     reg  [1:0]                    int_isr = 2'b0;
+    reg  [31:0]                   int_ap_return;
     reg  [63:0]                   int_s = 'b0;
     reg  [63:0]                   int_output_code = 'b0;
     reg  [63:0]                   int_output_size = 'b0;
-    reg  [63:0]                   int_encoded_data = 'b0;
-    reg  [31:0]                   int_encoded_size = 'b0;
     reg  [63:0]                   int_output_r = 'b0;
 
 //------------------------Instantiation------------------
@@ -260,6 +248,9 @@ always @(posedge ACLK) begin
                 ADDR_ISR: begin
                     rdata <= int_isr;
                 end
+                ADDR_AP_RETURN_0: begin
+                    rdata <= int_ap_return[31:0];
+                end
                 ADDR_S_DATA_0: begin
                     rdata <= int_s[31:0];
                 end
@@ -278,15 +269,6 @@ always @(posedge ACLK) begin
                 ADDR_OUTPUT_SIZE_DATA_1: begin
                     rdata <= int_output_size[63:32];
                 end
-                ADDR_ENCODED_DATA_DATA_0: begin
-                    rdata <= int_encoded_data[31:0];
-                end
-                ADDR_ENCODED_DATA_DATA_1: begin
-                    rdata <= int_encoded_data[63:32];
-                end
-                ADDR_ENCODED_SIZE_DATA_0: begin
-                    rdata <= int_encoded_size[31:0];
-                end
                 ADDR_OUTPUT_R_DATA_0: begin
                     rdata <= int_output_r[31:0];
                 end
@@ -300,16 +282,14 @@ end
 
 
 //------------------------Register logic-----------------
-assign interrupt    = int_gie & (|int_isr);
-assign ap_start     = int_ap_start;
-assign int_ap_done  = ap_done;
-assign ap_continue  = int_ap_continue;
-assign s            = int_s;
-assign output_code  = int_output_code;
-assign output_size  = int_output_size;
-assign encoded_data = int_encoded_data;
-assign encoded_size = int_encoded_size;
-assign output_r     = int_output_r;
+assign interrupt   = int_gie & (|int_isr);
+assign ap_start    = int_ap_start;
+assign int_ap_done = ap_done;
+assign ap_continue = int_ap_continue;
+assign s           = int_s;
+assign output_code = int_output_code;
+assign output_size = int_output_size;
+assign output_r    = int_output_r;
 // int_ap_start
 always @(posedge ACLK) begin
     if (ARESET)
@@ -408,6 +388,16 @@ always @(posedge ACLK) begin
     end
 end
 
+// int_ap_return
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_ap_return <= 0;
+    else if (ACLK_EN) begin
+        if (ap_done)
+            int_ap_return <= ap_return;
+    end
+end
+
 // int_s[31:0]
 always @(posedge ACLK) begin
     if (ARESET)
@@ -465,36 +455,6 @@ always @(posedge ACLK) begin
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_OUTPUT_SIZE_DATA_1)
             int_output_size[63:32] <= (WDATA[31:0] & wmask) | (int_output_size[63:32] & ~wmask);
-    end
-end
-
-// int_encoded_data[31:0]
-always @(posedge ACLK) begin
-    if (ARESET)
-        int_encoded_data[31:0] <= 0;
-    else if (ACLK_EN) begin
-        if (w_hs && waddr == ADDR_ENCODED_DATA_DATA_0)
-            int_encoded_data[31:0] <= (WDATA[31:0] & wmask) | (int_encoded_data[31:0] & ~wmask);
-    end
-end
-
-// int_encoded_data[63:32]
-always @(posedge ACLK) begin
-    if (ARESET)
-        int_encoded_data[63:32] <= 0;
-    else if (ACLK_EN) begin
-        if (w_hs && waddr == ADDR_ENCODED_DATA_DATA_1)
-            int_encoded_data[63:32] <= (WDATA[31:0] & wmask) | (int_encoded_data[63:32] & ~wmask);
-    end
-end
-
-// int_encoded_size[31:0]
-always @(posedge ACLK) begin
-    if (ARESET)
-        int_encoded_size[31:0] <= 0;
-    else if (ACLK_EN) begin
-        if (w_hs && waddr == ADDR_ENCODED_SIZE_DATA_0)
-            int_encoded_size[31:0] <= (WDATA[31:0] & wmask) | (int_encoded_size[31:0] & ~wmask);
     end
 end
 

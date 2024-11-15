@@ -22,50 +22,42 @@
 //        bit 0  - ap_done (COR/TOW)
 //        bit 1  - ap_ready (COR/TOW)
 //        others - reserved
-// 0x10 : Data signal of s
+// 0x10 : Data signal of ap_return
+//        bit 31~0 - ap_return[31:0] (Read)
+// 0x18 : Data signal of s
 //        bit 31~0 - s[31:0] (Read/Write)
-// 0x14 : Data signal of s
+// 0x1c : Data signal of s
 //        bit 31~0 - s[63:32] (Read/Write)
-// 0x18 : reserved
-// 0x1c : Data signal of output_code
+// 0x20 : reserved
+// 0x24 : Data signal of output_code
 //        bit 31~0 - output_code[31:0] (Read/Write)
-// 0x20 : Data signal of output_code
+// 0x28 : Data signal of output_code
 //        bit 31~0 - output_code[63:32] (Read/Write)
-// 0x24 : reserved
-// 0x28 : Data signal of output_size
+// 0x2c : reserved
+// 0x30 : Data signal of output_size
 //        bit 31~0 - output_size[31:0] (Read/Write)
-// 0x2c : Data signal of output_size
+// 0x34 : Data signal of output_size
 //        bit 31~0 - output_size[63:32] (Read/Write)
-// 0x30 : reserved
-// 0x34 : Data signal of encoded_data
-//        bit 31~0 - encoded_data[31:0] (Read/Write)
-// 0x38 : Data signal of encoded_data
-//        bit 31~0 - encoded_data[63:32] (Read/Write)
-// 0x3c : reserved
-// 0x40 : Data signal of encoded_size
-//        bit 31~0 - encoded_size[31:0] (Read/Write)
-// 0x44 : reserved
-// 0x48 : Data signal of output_r
+// 0x38 : reserved
+// 0x3c : Data signal of output_r
 //        bit 31~0 - output_r[31:0] (Read/Write)
-// 0x4c : Data signal of output_r
+// 0x40 : Data signal of output_r
 //        bit 31~0 - output_r[63:32] (Read/Write)
-// 0x50 : reserved
+// 0x44 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
-#define XMAIN_LZW_FPGA_CONTROL_ADDR_AP_CTRL           0x00
-#define XMAIN_LZW_FPGA_CONTROL_ADDR_GIE               0x04
-#define XMAIN_LZW_FPGA_CONTROL_ADDR_IER               0x08
-#define XMAIN_LZW_FPGA_CONTROL_ADDR_ISR               0x0c
-#define XMAIN_LZW_FPGA_CONTROL_ADDR_S_DATA            0x10
-#define XMAIN_LZW_FPGA_CONTROL_BITS_S_DATA            64
-#define XMAIN_LZW_FPGA_CONTROL_ADDR_OUTPUT_CODE_DATA  0x1c
-#define XMAIN_LZW_FPGA_CONTROL_BITS_OUTPUT_CODE_DATA  64
-#define XMAIN_LZW_FPGA_CONTROL_ADDR_OUTPUT_SIZE_DATA  0x28
-#define XMAIN_LZW_FPGA_CONTROL_BITS_OUTPUT_SIZE_DATA  64
-#define XMAIN_LZW_FPGA_CONTROL_ADDR_ENCODED_DATA_DATA 0x34
-#define XMAIN_LZW_FPGA_CONTROL_BITS_ENCODED_DATA_DATA 64
-#define XMAIN_LZW_FPGA_CONTROL_ADDR_ENCODED_SIZE_DATA 0x40
-#define XMAIN_LZW_FPGA_CONTROL_BITS_ENCODED_SIZE_DATA 32
-#define XMAIN_LZW_FPGA_CONTROL_ADDR_OUTPUT_R_DATA     0x48
-#define XMAIN_LZW_FPGA_CONTROL_BITS_OUTPUT_R_DATA     64
+#define XMAIN_LZW_FPGA_CONTROL_ADDR_AP_CTRL          0x00
+#define XMAIN_LZW_FPGA_CONTROL_ADDR_GIE              0x04
+#define XMAIN_LZW_FPGA_CONTROL_ADDR_IER              0x08
+#define XMAIN_LZW_FPGA_CONTROL_ADDR_ISR              0x0c
+#define XMAIN_LZW_FPGA_CONTROL_ADDR_AP_RETURN        0x10
+#define XMAIN_LZW_FPGA_CONTROL_BITS_AP_RETURN        32
+#define XMAIN_LZW_FPGA_CONTROL_ADDR_S_DATA           0x18
+#define XMAIN_LZW_FPGA_CONTROL_BITS_S_DATA           64
+#define XMAIN_LZW_FPGA_CONTROL_ADDR_OUTPUT_CODE_DATA 0x24
+#define XMAIN_LZW_FPGA_CONTROL_BITS_OUTPUT_CODE_DATA 64
+#define XMAIN_LZW_FPGA_CONTROL_ADDR_OUTPUT_SIZE_DATA 0x30
+#define XMAIN_LZW_FPGA_CONTROL_BITS_OUTPUT_SIZE_DATA 64
+#define XMAIN_LZW_FPGA_CONTROL_ADDR_OUTPUT_R_DATA    0x3c
+#define XMAIN_LZW_FPGA_CONTROL_BITS_OUTPUT_R_DATA    64
 

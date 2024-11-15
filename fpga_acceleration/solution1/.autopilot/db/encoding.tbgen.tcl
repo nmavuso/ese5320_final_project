@@ -204,7 +204,7 @@ set RtlHierarchyInfo {[
 
 set ArgLastReadFirstWriteLatency {
 	encoding {
-		gmem {Type IO LastRead 224 FirstWrite 154}
+		gmem {Type IO LastRead 223 FirstWrite 153}
 		input_r {Type I LastRead 0 FirstWrite -1}
 		output_code {Type I LastRead 0 FirstWrite -1}
 		output_size {Type I LastRead 0 FirstWrite -1}}}

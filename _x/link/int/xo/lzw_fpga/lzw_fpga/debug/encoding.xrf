@@ -1,0 +1,333 @@
+Begin Function 'encoding'
+
+RTL state condition: (1'b1 == ap_CS_fsm_state148)
+# ST_148
+local gmem_addr_1_read <read_411> <integer> <> 'read' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:411>
+gmem_addr_1_read /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:411
+reg: gmem_addr_1_read_reg_1472[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state149)
+# ST_149
+local out_index_2 <load_458> <integer> <> 'load' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:458>
+out_index /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:458
+reg: out_index_2_reg_1477[31:0] lv
+
+local c <trunc_411> <integer> <> 'trunc' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:411>
+c /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:411
+reg: c_reg_1485[7:0] lv
+
+local icmp_ln456 <icmp_456> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:456>
+icmp_ln456 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:456
+reg: icmp_ln456_reg_1495[0:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state150)
+# ST_150
+local p_len <phi_390> <integer> <Phi> 'phi' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:390>
+add_ln390 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:390
+reg: p_len_reg_517[63:0] lv
+
+local icmp_ln389_1 <icmp_389> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:389>
+icmp_ln389_1 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:389
+reg: icmp_ln389_1_reg_1504[0:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state153)
+# ST_153
+local i_2 <phi_368> <integer> <Phi> 'phi' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:368>
+add_ln368 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:368
+reg: i_2_reg_531[9:0] lv
+
+local i_2_cast <zext_368> <integer> <> 'zext' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:368>
+i_2_cast /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:368
+reg: i_2_cast_reg_1517[63:0] lv
+
+local icmp_ln368 <icmp_368> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:368>
+icmp_ln368 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:368
+reg: icmp_ln368_reg_1523[0:0] lv
+
+local add_ln368 <add_368> <integer> <Arithmetic> 'add' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:368>
+add_ln368 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:368
+reg: add_ln368_reg_1527[9:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state156)
+# ST_156
+local icmp_ln423 <icmp_423> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:423>
+icmp_ln423 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:423
+reg: icmp_ln423_reg_1540[0:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state157)
+# ST_157
+local j_1 <phi_423> <integer> <Phi> 'phi' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:423>
+add_ln423 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:423
+reg: j_1_reg_542[30:0] lv
+
+local icmp_ln423_1 <icmp_423> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:423>
+icmp_ln423_1 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:423
+reg: icmp_ln423_1_reg_1544[0:0] lv
+
+local add_ln423 <add_423> <integer> <Arithmetic> 'add' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:423>
+add_ln423 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:423
+reg: add_ln423_reg_1548[30:0] lv
+
+local tmp_3_cast <bitconcatenate_423> <integer> <> 'bitconcatenate' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:423>
+tmp_3_cast /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:423
+reg: tmp_3_cast_reg_1553[21:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state158)
+# ST_158
+local i_4 <phi_381> <integer> <Phi> 'phi' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:381>
+add_ln381_1 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:381
+reg: i_4_reg_553[63:0] lv
+
+local add_ln381_1 <add_381> <integer> <Arithmetic> 'add' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:381>
+add_ln381_1 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:381
+reg: add_ln381_1_reg_1568[63:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state159)
+# ST_159
+local temp_load <load_377> <integer> <ArrayAccess><ArrayLoad><MultiCycle> 'load' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:377>
+temp_load /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:377
+reg: temp_load_reg_1573[7:0] lv
+
+local table_str_load_1 <load_423> <integer> <ArrayAccess><ArrayLoad><MultiCycle> 'load' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:423>
+table_str_load_1 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:423
+table_str_load_1 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:381
+reg: reg_721[7:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state161)
+# ST_161
+local i_5 <phi_368> <integer> <Phi> 'phi' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:368>
+add_ln368_1 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:368
+reg: i_5_reg_565[9:0] lv
+
+local i_5_cast <zext_368> <integer> <> 'zext' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:368>
+i_5_cast /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:368
+reg: i_5_cast_reg_1588[63:0] lv
+
+local icmp_ln368_2 <icmp_368> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:368>
+icmp_ln368_2 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:368
+reg: icmp_ln368_2_reg_1594[0:0] lv
+
+local add_ln368_1 <add_368> <integer> <Arithmetic> 'add' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:368>
+add_ln368_1 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:368
+reg: add_ln368_1_reg_1598[9:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state164)
+# ST_164
+local j_2 <phi_435> <integer> <Phi> 'phi' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:435>
+add_ln435 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:435
+reg: j_2_reg_576[30:0] lv
+
+local zext_ln435 <zext_435> <integer> <> 'zext' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:435>
+zext_ln435 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:435
+reg: zext_ln435_reg_1611[63:0] lv
+
+local tmp_4_cast <bitconcatenate_435> <integer> <> 'bitconcatenate' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:435>
+tmp_4_cast /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:435
+reg: tmp_4_cast_reg_1616[21:0] lv
+
+local add_ln435 <add_435> <integer> <Arithmetic> 'add' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:435>
+add_ln435 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:435
+reg: add_ln435_reg_1625[30:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state165)
+# ST_165
+local i_6 <phi_381> <integer> <Phi> 'phi' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:381>
+add_ln381_2 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:381
+reg: i_6_reg_587[63:0] lv
+
+local add_ln381_2 <add_381> <integer> <Arithmetic> 'add' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:381>
+add_ln381_2 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:381
+reg: add_ln381_2_reg_1640[63:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state166)
+# ST_166
+local p_load_3 <load_377> <integer> <ArrayAccess><ArrayLoad><MultiCycle> 'load' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:377>
+p_load_3 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:377
+reg: reg_729[7:0] lv
+
+local table_str_load_2 <load_435> <integer> <ArrayAccess><ArrayLoad><MultiCycle> 'load' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:435>
+table_str_load_2 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:435
+table_str_load_2 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:381
+reg: reg_721[7:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state167)
+# ST_167
+local gmem_addr_4 <getelementptr_437> <integer> <> 'getelementptr' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:437>
+gmem_addr_4 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:437
+reg: gmem_addr_4_reg_1659[63:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state168)
+# ST_168
+local table_code_load_1 <load_437> <integer> <ArrayAccess><ArrayLoad><MultiCycle> 'load' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:437>
+table_code_load_1 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:437
+reg: reg_736[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state2)
+# ST_2
+local i <phi_403> <integer> <Phi> 'phi' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:403>
+add_ln402 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:402
+reg: i_reg_483[8:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state238)
+# ST_238
+local out_index_1 <> <integer> <Phi> 'phi' <>
+reg: out_index_1_reg_599[31:0] lv
+
+local icmp_ln443 <icmp_443> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:443>
+icmp_ln443 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:443
+reg: icmp_ln443_reg_1670[0:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state239)
+# ST_239
+local out_index_1206 <> <integer> <Phi> 'phi' <>
+reg: out_index_1206_reg_609[31:0] lv
+
+local zext_ln444 <zext_444> <integer> <> 'zext' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:444>
+zext_ln444 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:444
+reg: zext_ln444_reg_1674[63:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state240)
+# ST_240
+local i_7 <phi_368> <integer> <Phi> 'phi' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:368>
+add_ln368_2 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:368
+reg: i_7_reg_620[9:0] lv
+
+local table_str_addr_5 <getelementptr_371> <integer> <GetArrayAddress> 'getelementptr' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:371>
+table_str_addr_5 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:371
+reg: table_str_addr_5_reg_1679[21:0] lv
+
+local icmp_ln368_4 <icmp_368> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:368>
+icmp_ln368_4 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:368
+reg: icmp_ln368_4_reg_1685[0:0] lv
+
+local add_ln368_2 <add_368> <integer> <Arithmetic> 'add' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:368>
+add_ln368_2 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:368
+reg: add_ln368_2_reg_1689[9:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state243)
+# ST_243
+local out_index_1205 <> <integer> <Phi> 'phi' <>
+reg: out_index_1205_reg_631[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state244)
+# ST_244
+local j <phi_456> <integer> <Phi> 'phi' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:456>
+add_ln456 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:456
+reg: j_reg_642[30:0] lv
+
+local zext_ln456 <zext_456> <integer> <> 'zext' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:456>
+zext_ln456 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:456
+reg: zext_ln456_reg_1707[63:0] lv
+
+local tmp_2_cast <bitconcatenate_456> <integer> <> 'bitconcatenate' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:456>
+tmp_2_cast /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:456
+reg: tmp_2_cast_reg_1712[21:0] lv
+
+local icmp_ln456_1 <icmp_456> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:456>
+icmp_ln456_1 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:456
+reg: icmp_ln456_1_reg_1717[0:0] lv
+
+local add_ln456 <add_456> <integer> <Arithmetic> 'add' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:456>
+add_ln456 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:456
+reg: add_ln456_reg_1721[30:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state245)
+# ST_245
+local i_3 <phi_381> <integer> <Phi> 'phi' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:381>
+add_ln381 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:381
+reg: i_3_reg_653[63:0] lv
+
+local add_ln381 <add_381> <integer> <Arithmetic> 'add' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:381>
+add_ln381 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:381
+reg: add_ln381_reg_1736[63:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state246)
+# ST_246
+local p_load_1 <load_377> <integer> <ArrayAccess><ArrayLoad><MultiCycle> 'load' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:377>
+p_load_1 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:377
+reg: reg_729[7:0] lv
+
+local table_str_load <load_456> <integer> <ArrayAccess><ArrayLoad><MultiCycle> 'load' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:456>
+table_str_load /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:456
+table_str_load /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:381
+reg: reg_721[7:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state247)
+# ST_247
+local gmem_addr_2 <getelementptr_458> <integer> <> 'getelementptr' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:458>
+gmem_addr_2 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:458
+reg: gmem_addr_2_reg_1755[63:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state248)
+# ST_248
+local table_code_load <load_458> <integer> <ArrayAccess><ArrayLoad><MultiCycle> 'load' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:458>
+table_code_load /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:458
+reg: reg_736[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state318)
+# ST_318
+local out_index_3 <> <integer> <Phi> 'phi' <>
+reg: out_index_3_reg_665[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state4)
+# ST_4
+local empty_32 <> <integer> <Phi> 'phi' <>
+reg: empty_32_reg_494[10:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state75)
+# ST_75
+local trunc_ln408 <trunc_408> <integer> <> 'trunc' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:408>
+trunc_ln408 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:408
+reg: trunc_ln408_reg_1441[7:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state76)
+# ST_76
+local trunc_ln411 <trunc_411> <integer> <> 'trunc' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:411>
+trunc_ln411 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:411
+reg: trunc_ln411_reg_1456[1:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state77)
+# ST_77
+local i_1 <phi_411> <integer> <Phi> 'phi' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:411>
+add_ln411_1 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:411
+reg: i_1_reg_505[63:0] lv
+
+local gmem_addr_1 <getelementptr_411> <integer> <> 'getelementptr' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:411>
+gmem_addr_1 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:411
+reg: gmem_addr_1_reg_1461[63:0] lv
+
+local add_ln411_2 <add_411> <integer> <Arithmetic> 'add' </mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:411>
+add_ln411_2 /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp:411
+reg: add_ln411_2_reg_1467[1:0] lv
+
+
+End Function 'encoding'
+

@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="lzw_fpga_main,hls_ip_2020_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-i,HLS_INPUT_CLOCK=6.700000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=4.891000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=4117,HLS_SYN_DSP=0,HLS_SYN_FF=5083,HLS_SYN_LUT=12411,HLS_VERSION=2020_2}" *)
+(* CORE_GENERATION_INFO="lzw_fpga_main,hls_ip_2020_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-i,HLS_INPUT_CLOCK=6.700000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=4.891000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=4117,HLS_SYN_DSP=0,HLS_SYN_FF=5353,HLS_SYN_LUT=13397,HLS_VERSION=2020_2}" *)
 
 module lzw_fpga_main (
         ap_clk,
@@ -77,10 +77,81 @@ module lzw_fpga_main (
         interrupt
 );
 
-parameter    ap_ST_fsm_state1 = 4'd1;
-parameter    ap_ST_fsm_state2 = 4'd2;
-parameter    ap_ST_fsm_state3 = 4'd4;
-parameter    ap_ST_fsm_state4 = 4'd8;
+parameter    ap_ST_fsm_state1 = 75'd1;
+parameter    ap_ST_fsm_state2 = 75'd2;
+parameter    ap_ST_fsm_state3 = 75'd4;
+parameter    ap_ST_fsm_state4 = 75'd8;
+parameter    ap_ST_fsm_state5 = 75'd16;
+parameter    ap_ST_fsm_state6 = 75'd32;
+parameter    ap_ST_fsm_state7 = 75'd64;
+parameter    ap_ST_fsm_state8 = 75'd128;
+parameter    ap_ST_fsm_state9 = 75'd256;
+parameter    ap_ST_fsm_state10 = 75'd512;
+parameter    ap_ST_fsm_state11 = 75'd1024;
+parameter    ap_ST_fsm_state12 = 75'd2048;
+parameter    ap_ST_fsm_state13 = 75'd4096;
+parameter    ap_ST_fsm_state14 = 75'd8192;
+parameter    ap_ST_fsm_state15 = 75'd16384;
+parameter    ap_ST_fsm_state16 = 75'd32768;
+parameter    ap_ST_fsm_state17 = 75'd65536;
+parameter    ap_ST_fsm_state18 = 75'd131072;
+parameter    ap_ST_fsm_state19 = 75'd262144;
+parameter    ap_ST_fsm_state20 = 75'd524288;
+parameter    ap_ST_fsm_state21 = 75'd1048576;
+parameter    ap_ST_fsm_state22 = 75'd2097152;
+parameter    ap_ST_fsm_state23 = 75'd4194304;
+parameter    ap_ST_fsm_state24 = 75'd8388608;
+parameter    ap_ST_fsm_state25 = 75'd16777216;
+parameter    ap_ST_fsm_state26 = 75'd33554432;
+parameter    ap_ST_fsm_state27 = 75'd67108864;
+parameter    ap_ST_fsm_state28 = 75'd134217728;
+parameter    ap_ST_fsm_state29 = 75'd268435456;
+parameter    ap_ST_fsm_state30 = 75'd536870912;
+parameter    ap_ST_fsm_state31 = 75'd1073741824;
+parameter    ap_ST_fsm_state32 = 75'd2147483648;
+parameter    ap_ST_fsm_state33 = 75'd4294967296;
+parameter    ap_ST_fsm_state34 = 75'd8589934592;
+parameter    ap_ST_fsm_state35 = 75'd17179869184;
+parameter    ap_ST_fsm_state36 = 75'd34359738368;
+parameter    ap_ST_fsm_state37 = 75'd68719476736;
+parameter    ap_ST_fsm_state38 = 75'd137438953472;
+parameter    ap_ST_fsm_state39 = 75'd274877906944;
+parameter    ap_ST_fsm_state40 = 75'd549755813888;
+parameter    ap_ST_fsm_state41 = 75'd1099511627776;
+parameter    ap_ST_fsm_state42 = 75'd2199023255552;
+parameter    ap_ST_fsm_state43 = 75'd4398046511104;
+parameter    ap_ST_fsm_state44 = 75'd8796093022208;
+parameter    ap_ST_fsm_state45 = 75'd17592186044416;
+parameter    ap_ST_fsm_state46 = 75'd35184372088832;
+parameter    ap_ST_fsm_state47 = 75'd70368744177664;
+parameter    ap_ST_fsm_state48 = 75'd140737488355328;
+parameter    ap_ST_fsm_state49 = 75'd281474976710656;
+parameter    ap_ST_fsm_state50 = 75'd562949953421312;
+parameter    ap_ST_fsm_state51 = 75'd1125899906842624;
+parameter    ap_ST_fsm_state52 = 75'd2251799813685248;
+parameter    ap_ST_fsm_state53 = 75'd4503599627370496;
+parameter    ap_ST_fsm_state54 = 75'd9007199254740992;
+parameter    ap_ST_fsm_state55 = 75'd18014398509481984;
+parameter    ap_ST_fsm_state56 = 75'd36028797018963968;
+parameter    ap_ST_fsm_state57 = 75'd72057594037927936;
+parameter    ap_ST_fsm_state58 = 75'd144115188075855872;
+parameter    ap_ST_fsm_state59 = 75'd288230376151711744;
+parameter    ap_ST_fsm_state60 = 75'd576460752303423488;
+parameter    ap_ST_fsm_state61 = 75'd1152921504606846976;
+parameter    ap_ST_fsm_state62 = 75'd2305843009213693952;
+parameter    ap_ST_fsm_state63 = 75'd4611686018427387904;
+parameter    ap_ST_fsm_state64 = 75'd9223372036854775808;
+parameter    ap_ST_fsm_state65 = 75'd18446744073709551616;
+parameter    ap_ST_fsm_state66 = 75'd36893488147419103232;
+parameter    ap_ST_fsm_state67 = 75'd73786976294838206464;
+parameter    ap_ST_fsm_state68 = 75'd147573952589676412928;
+parameter    ap_ST_fsm_state69 = 75'd295147905179352825856;
+parameter    ap_ST_fsm_state70 = 75'd590295810358705651712;
+parameter    ap_ST_fsm_state71 = 75'd1180591620717411303424;
+parameter    ap_ST_fsm_state72 = 75'd2361183241434822606848;
+parameter    ap_ST_fsm_state73 = 75'd4722366482869645213696;
+parameter    ap_ST_fsm_state74 = 75'd9444732965739290427392;
+parameter    ap_ST_fsm_state75 = 75'd18889465931478580854784;
 parameter    C_S_AXI_CONTROL_DATA_WIDTH = 32;
 parameter    C_S_AXI_CONTROL_ADDR_WIDTH = 7;
 parameter    C_S_AXI_DATA_WIDTH = 32;
@@ -176,15 +247,17 @@ reg    ap_done;
 wire    ap_continue;
 reg    ap_done_reg;
 reg    ap_idle;
-(* fsm_encoding = "none" *) reg   [3:0] ap_CS_fsm;
+(* fsm_encoding = "none" *) reg   [74:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
 reg    ap_ready;
 wire   [63:0] s;
 wire   [63:0] output_code;
 wire   [63:0] output_size;
-wire   [63:0] encoded_data;
-wire   [31:0] encoded_size;
 wire   [63:0] output_r;
+reg    gmem_blk_n_AR;
+wire    ap_CS_fsm_state3;
+reg    gmem_blk_n_R;
+wire    ap_CS_fsm_state73;
 reg    gmem_AWVALID;
 wire    gmem_AWREADY;
 reg   [63:0] gmem_AWADDR;
@@ -230,87 +303,92 @@ reg    gmem_BREADY;
 wire   [1:0] gmem_BRESP;
 wire   [0:0] gmem_BID;
 wire   [0:0] gmem_BUSER;
-wire    ap_CS_fsm_state3;
-wire    grp_encoding_fu_102_ap_start;
-wire    grp_encoding_fu_102_ap_done;
-wire    grp_encoding_fu_102_ap_idle;
-wire    grp_encoding_fu_102_ap_ready;
-wire    grp_encoding_fu_102_m_axi_gmem_AWVALID;
-wire   [63:0] grp_encoding_fu_102_m_axi_gmem_AWADDR;
-wire   [0:0] grp_encoding_fu_102_m_axi_gmem_AWID;
-wire   [31:0] grp_encoding_fu_102_m_axi_gmem_AWLEN;
-wire   [2:0] grp_encoding_fu_102_m_axi_gmem_AWSIZE;
-wire   [1:0] grp_encoding_fu_102_m_axi_gmem_AWBURST;
-wire   [1:0] grp_encoding_fu_102_m_axi_gmem_AWLOCK;
-wire   [3:0] grp_encoding_fu_102_m_axi_gmem_AWCACHE;
-wire   [2:0] grp_encoding_fu_102_m_axi_gmem_AWPROT;
-wire   [3:0] grp_encoding_fu_102_m_axi_gmem_AWQOS;
-wire   [3:0] grp_encoding_fu_102_m_axi_gmem_AWREGION;
-wire   [0:0] grp_encoding_fu_102_m_axi_gmem_AWUSER;
-wire    grp_encoding_fu_102_m_axi_gmem_WVALID;
-wire   [31:0] grp_encoding_fu_102_m_axi_gmem_WDATA;
-wire   [3:0] grp_encoding_fu_102_m_axi_gmem_WSTRB;
-wire    grp_encoding_fu_102_m_axi_gmem_WLAST;
-wire   [0:0] grp_encoding_fu_102_m_axi_gmem_WID;
-wire   [0:0] grp_encoding_fu_102_m_axi_gmem_WUSER;
-wire    grp_encoding_fu_102_m_axi_gmem_ARVALID;
-wire   [63:0] grp_encoding_fu_102_m_axi_gmem_ARADDR;
-wire   [0:0] grp_encoding_fu_102_m_axi_gmem_ARID;
-wire   [31:0] grp_encoding_fu_102_m_axi_gmem_ARLEN;
-wire   [2:0] grp_encoding_fu_102_m_axi_gmem_ARSIZE;
-wire   [1:0] grp_encoding_fu_102_m_axi_gmem_ARBURST;
-wire   [1:0] grp_encoding_fu_102_m_axi_gmem_ARLOCK;
-wire   [3:0] grp_encoding_fu_102_m_axi_gmem_ARCACHE;
-wire   [2:0] grp_encoding_fu_102_m_axi_gmem_ARPROT;
-wire   [3:0] grp_encoding_fu_102_m_axi_gmem_ARQOS;
-wire   [3:0] grp_encoding_fu_102_m_axi_gmem_ARREGION;
-wire   [0:0] grp_encoding_fu_102_m_axi_gmem_ARUSER;
-wire    grp_encoding_fu_102_m_axi_gmem_RREADY;
-wire    grp_encoding_fu_102_m_axi_gmem_BREADY;
-wire    grp_decoding_fu_114_ap_start;
-wire    grp_decoding_fu_114_ap_done;
-wire    grp_decoding_fu_114_ap_idle;
-wire    grp_decoding_fu_114_ap_ready;
-wire    grp_decoding_fu_114_m_axi_gmem_AWVALID;
-wire   [63:0] grp_decoding_fu_114_m_axi_gmem_AWADDR;
-wire   [0:0] grp_decoding_fu_114_m_axi_gmem_AWID;
-wire   [31:0] grp_decoding_fu_114_m_axi_gmem_AWLEN;
-wire   [2:0] grp_decoding_fu_114_m_axi_gmem_AWSIZE;
-wire   [1:0] grp_decoding_fu_114_m_axi_gmem_AWBURST;
-wire   [1:0] grp_decoding_fu_114_m_axi_gmem_AWLOCK;
-wire   [3:0] grp_decoding_fu_114_m_axi_gmem_AWCACHE;
-wire   [2:0] grp_decoding_fu_114_m_axi_gmem_AWPROT;
-wire   [3:0] grp_decoding_fu_114_m_axi_gmem_AWQOS;
-wire   [3:0] grp_decoding_fu_114_m_axi_gmem_AWREGION;
-wire   [0:0] grp_decoding_fu_114_m_axi_gmem_AWUSER;
-wire    grp_decoding_fu_114_m_axi_gmem_WVALID;
-wire   [31:0] grp_decoding_fu_114_m_axi_gmem_WDATA;
-wire   [3:0] grp_decoding_fu_114_m_axi_gmem_WSTRB;
-wire    grp_decoding_fu_114_m_axi_gmem_WLAST;
-wire   [0:0] grp_decoding_fu_114_m_axi_gmem_WID;
-wire   [0:0] grp_decoding_fu_114_m_axi_gmem_WUSER;
-wire    grp_decoding_fu_114_m_axi_gmem_ARVALID;
-wire   [63:0] grp_decoding_fu_114_m_axi_gmem_ARADDR;
-wire   [0:0] grp_decoding_fu_114_m_axi_gmem_ARID;
-wire   [31:0] grp_decoding_fu_114_m_axi_gmem_ARLEN;
-wire   [2:0] grp_decoding_fu_114_m_axi_gmem_ARSIZE;
-wire   [1:0] grp_decoding_fu_114_m_axi_gmem_ARBURST;
-wire   [1:0] grp_decoding_fu_114_m_axi_gmem_ARLOCK;
-wire   [3:0] grp_decoding_fu_114_m_axi_gmem_ARCACHE;
-wire   [2:0] grp_decoding_fu_114_m_axi_gmem_ARPROT;
-wire   [3:0] grp_decoding_fu_114_m_axi_gmem_ARQOS;
-wire   [3:0] grp_decoding_fu_114_m_axi_gmem_ARREGION;
-wire   [0:0] grp_decoding_fu_114_m_axi_gmem_ARUSER;
-wire    grp_decoding_fu_114_m_axi_gmem_RREADY;
-wire    grp_decoding_fu_114_m_axi_gmem_BREADY;
-reg    grp_encoding_fu_102_ap_start_reg;
-reg    ap_block_state1_ignore_call24;
+reg   [63:0] gmem_addr_reg_164;
+reg   [31:0] gmem_addr_read_reg_170;
+wire    ap_CS_fsm_state74;
+wire    grp_encoding_fu_106_ap_start;
+wire    grp_encoding_fu_106_ap_done;
+wire    grp_encoding_fu_106_ap_idle;
+wire    grp_encoding_fu_106_ap_ready;
+wire    grp_encoding_fu_106_m_axi_gmem_AWVALID;
+wire   [63:0] grp_encoding_fu_106_m_axi_gmem_AWADDR;
+wire   [0:0] grp_encoding_fu_106_m_axi_gmem_AWID;
+wire   [31:0] grp_encoding_fu_106_m_axi_gmem_AWLEN;
+wire   [2:0] grp_encoding_fu_106_m_axi_gmem_AWSIZE;
+wire   [1:0] grp_encoding_fu_106_m_axi_gmem_AWBURST;
+wire   [1:0] grp_encoding_fu_106_m_axi_gmem_AWLOCK;
+wire   [3:0] grp_encoding_fu_106_m_axi_gmem_AWCACHE;
+wire   [2:0] grp_encoding_fu_106_m_axi_gmem_AWPROT;
+wire   [3:0] grp_encoding_fu_106_m_axi_gmem_AWQOS;
+wire   [3:0] grp_encoding_fu_106_m_axi_gmem_AWREGION;
+wire   [0:0] grp_encoding_fu_106_m_axi_gmem_AWUSER;
+wire    grp_encoding_fu_106_m_axi_gmem_WVALID;
+wire   [31:0] grp_encoding_fu_106_m_axi_gmem_WDATA;
+wire   [3:0] grp_encoding_fu_106_m_axi_gmem_WSTRB;
+wire    grp_encoding_fu_106_m_axi_gmem_WLAST;
+wire   [0:0] grp_encoding_fu_106_m_axi_gmem_WID;
+wire   [0:0] grp_encoding_fu_106_m_axi_gmem_WUSER;
+wire    grp_encoding_fu_106_m_axi_gmem_ARVALID;
+wire   [63:0] grp_encoding_fu_106_m_axi_gmem_ARADDR;
+wire   [0:0] grp_encoding_fu_106_m_axi_gmem_ARID;
+wire   [31:0] grp_encoding_fu_106_m_axi_gmem_ARLEN;
+wire   [2:0] grp_encoding_fu_106_m_axi_gmem_ARSIZE;
+wire   [1:0] grp_encoding_fu_106_m_axi_gmem_ARBURST;
+wire   [1:0] grp_encoding_fu_106_m_axi_gmem_ARLOCK;
+wire   [3:0] grp_encoding_fu_106_m_axi_gmem_ARCACHE;
+wire   [2:0] grp_encoding_fu_106_m_axi_gmem_ARPROT;
+wire   [3:0] grp_encoding_fu_106_m_axi_gmem_ARQOS;
+wire   [3:0] grp_encoding_fu_106_m_axi_gmem_ARREGION;
+wire   [0:0] grp_encoding_fu_106_m_axi_gmem_ARUSER;
+wire    grp_encoding_fu_106_m_axi_gmem_RREADY;
+wire    grp_encoding_fu_106_m_axi_gmem_BREADY;
+wire    grp_decoding_fu_118_ap_start;
+wire    grp_decoding_fu_118_ap_done;
+wire    grp_decoding_fu_118_ap_idle;
+wire    grp_decoding_fu_118_ap_ready;
+wire    grp_decoding_fu_118_m_axi_gmem_AWVALID;
+wire   [63:0] grp_decoding_fu_118_m_axi_gmem_AWADDR;
+wire   [0:0] grp_decoding_fu_118_m_axi_gmem_AWID;
+wire   [31:0] grp_decoding_fu_118_m_axi_gmem_AWLEN;
+wire   [2:0] grp_decoding_fu_118_m_axi_gmem_AWSIZE;
+wire   [1:0] grp_decoding_fu_118_m_axi_gmem_AWBURST;
+wire   [1:0] grp_decoding_fu_118_m_axi_gmem_AWLOCK;
+wire   [3:0] grp_decoding_fu_118_m_axi_gmem_AWCACHE;
+wire   [2:0] grp_decoding_fu_118_m_axi_gmem_AWPROT;
+wire   [3:0] grp_decoding_fu_118_m_axi_gmem_AWQOS;
+wire   [3:0] grp_decoding_fu_118_m_axi_gmem_AWREGION;
+wire   [0:0] grp_decoding_fu_118_m_axi_gmem_AWUSER;
+wire    grp_decoding_fu_118_m_axi_gmem_WVALID;
+wire   [31:0] grp_decoding_fu_118_m_axi_gmem_WDATA;
+wire   [3:0] grp_decoding_fu_118_m_axi_gmem_WSTRB;
+wire    grp_decoding_fu_118_m_axi_gmem_WLAST;
+wire   [0:0] grp_decoding_fu_118_m_axi_gmem_WID;
+wire   [0:0] grp_decoding_fu_118_m_axi_gmem_WUSER;
+wire    grp_decoding_fu_118_m_axi_gmem_ARVALID;
+wire   [63:0] grp_decoding_fu_118_m_axi_gmem_ARADDR;
+wire   [0:0] grp_decoding_fu_118_m_axi_gmem_ARID;
+wire   [31:0] grp_decoding_fu_118_m_axi_gmem_ARLEN;
+wire   [2:0] grp_decoding_fu_118_m_axi_gmem_ARSIZE;
+wire   [1:0] grp_decoding_fu_118_m_axi_gmem_ARBURST;
+wire   [1:0] grp_decoding_fu_118_m_axi_gmem_ARLOCK;
+wire   [3:0] grp_decoding_fu_118_m_axi_gmem_ARCACHE;
+wire   [2:0] grp_decoding_fu_118_m_axi_gmem_ARPROT;
+wire   [3:0] grp_decoding_fu_118_m_axi_gmem_ARQOS;
+wire   [3:0] grp_decoding_fu_118_m_axi_gmem_ARREGION;
+wire   [0:0] grp_decoding_fu_118_m_axi_gmem_ARUSER;
+wire    grp_decoding_fu_118_m_axi_gmem_RREADY;
+wire    grp_decoding_fu_118_m_axi_gmem_BREADY;
+reg    grp_encoding_fu_106_ap_start_reg;
+reg    ap_block_state1_ignore_call18;
 wire    ap_CS_fsm_state2;
-reg    grp_decoding_fu_114_ap_start_reg;
-wire    ap_CS_fsm_state4;
+reg    grp_decoding_fu_118_ap_start_reg;
+wire    ap_CS_fsm_state75;
+wire  signed [63:0] sext_ln180_fu_138_p1;
 reg    ap_block_state1;
-reg   [3:0] ap_NS_fsm;
+wire   [61:0] trunc_ln_fu_128_p4;
+reg   [74:0] ap_NS_fsm;
 wire    ap_ce_reg;
+wire   [31:0] ap_return;
 
 // power-on initialization
 initial begin
@@ -318,9 +396,9 @@ initial begin
 #0 ap_rst_reg_1 = 1'b1;
 #0 ap_rst_n_inv = 1'b1;
 #0 ap_done_reg = 1'b0;
-#0 ap_CS_fsm = 4'd1;
-#0 grp_encoding_fu_102_ap_start_reg = 1'b0;
-#0 grp_decoding_fu_114_ap_start_reg = 1'b0;
+#0 ap_CS_fsm = 75'd1;
+#0 grp_encoding_fu_106_ap_start_reg = 1'b0;
+#0 grp_decoding_fu_118_ap_start_reg = 1'b0;
 end
 
 lzw_fpga_control_s_axi #(
@@ -347,18 +425,17 @@ control_s_axi_U(
     .ACLK(ap_clk),
     .ARESET(ap_rst_n_inv),
     .ACLK_EN(1'b1),
-    .s(s),
-    .output_code(output_code),
-    .output_size(output_size),
-    .encoded_data(encoded_data),
-    .encoded_size(encoded_size),
-    .output_r(output_r),
     .ap_start(ap_start),
     .interrupt(interrupt),
     .ap_ready(ap_ready),
     .ap_done(ap_done),
     .ap_continue(ap_continue),
-    .ap_idle(ap_idle)
+    .ap_idle(ap_idle),
+    .ap_return(32'd0),
+    .s(s),
+    .output_code(output_code),
+    .output_size(output_size),
+    .output_r(output_r)
 );
 
 lzw_fpga_gmem_m_axi #(
@@ -477,55 +554,55 @@ gmem_m_axi_U(
     .I_BUSER(gmem_BUSER)
 );
 
-lzw_fpga_encoding grp_encoding_fu_102(
+lzw_fpga_encoding grp_encoding_fu_106(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_encoding_fu_102_ap_start),
-    .ap_done(grp_encoding_fu_102_ap_done),
-    .ap_idle(grp_encoding_fu_102_ap_idle),
-    .ap_ready(grp_encoding_fu_102_ap_ready),
-    .m_axi_gmem_AWVALID(grp_encoding_fu_102_m_axi_gmem_AWVALID),
+    .ap_start(grp_encoding_fu_106_ap_start),
+    .ap_done(grp_encoding_fu_106_ap_done),
+    .ap_idle(grp_encoding_fu_106_ap_idle),
+    .ap_ready(grp_encoding_fu_106_ap_ready),
+    .m_axi_gmem_AWVALID(grp_encoding_fu_106_m_axi_gmem_AWVALID),
     .m_axi_gmem_AWREADY(gmem_AWREADY),
-    .m_axi_gmem_AWADDR(grp_encoding_fu_102_m_axi_gmem_AWADDR),
-    .m_axi_gmem_AWID(grp_encoding_fu_102_m_axi_gmem_AWID),
-    .m_axi_gmem_AWLEN(grp_encoding_fu_102_m_axi_gmem_AWLEN),
-    .m_axi_gmem_AWSIZE(grp_encoding_fu_102_m_axi_gmem_AWSIZE),
-    .m_axi_gmem_AWBURST(grp_encoding_fu_102_m_axi_gmem_AWBURST),
-    .m_axi_gmem_AWLOCK(grp_encoding_fu_102_m_axi_gmem_AWLOCK),
-    .m_axi_gmem_AWCACHE(grp_encoding_fu_102_m_axi_gmem_AWCACHE),
-    .m_axi_gmem_AWPROT(grp_encoding_fu_102_m_axi_gmem_AWPROT),
-    .m_axi_gmem_AWQOS(grp_encoding_fu_102_m_axi_gmem_AWQOS),
-    .m_axi_gmem_AWREGION(grp_encoding_fu_102_m_axi_gmem_AWREGION),
-    .m_axi_gmem_AWUSER(grp_encoding_fu_102_m_axi_gmem_AWUSER),
-    .m_axi_gmem_WVALID(grp_encoding_fu_102_m_axi_gmem_WVALID),
+    .m_axi_gmem_AWADDR(grp_encoding_fu_106_m_axi_gmem_AWADDR),
+    .m_axi_gmem_AWID(grp_encoding_fu_106_m_axi_gmem_AWID),
+    .m_axi_gmem_AWLEN(grp_encoding_fu_106_m_axi_gmem_AWLEN),
+    .m_axi_gmem_AWSIZE(grp_encoding_fu_106_m_axi_gmem_AWSIZE),
+    .m_axi_gmem_AWBURST(grp_encoding_fu_106_m_axi_gmem_AWBURST),
+    .m_axi_gmem_AWLOCK(grp_encoding_fu_106_m_axi_gmem_AWLOCK),
+    .m_axi_gmem_AWCACHE(grp_encoding_fu_106_m_axi_gmem_AWCACHE),
+    .m_axi_gmem_AWPROT(grp_encoding_fu_106_m_axi_gmem_AWPROT),
+    .m_axi_gmem_AWQOS(grp_encoding_fu_106_m_axi_gmem_AWQOS),
+    .m_axi_gmem_AWREGION(grp_encoding_fu_106_m_axi_gmem_AWREGION),
+    .m_axi_gmem_AWUSER(grp_encoding_fu_106_m_axi_gmem_AWUSER),
+    .m_axi_gmem_WVALID(grp_encoding_fu_106_m_axi_gmem_WVALID),
     .m_axi_gmem_WREADY(gmem_WREADY),
-    .m_axi_gmem_WDATA(grp_encoding_fu_102_m_axi_gmem_WDATA),
-    .m_axi_gmem_WSTRB(grp_encoding_fu_102_m_axi_gmem_WSTRB),
-    .m_axi_gmem_WLAST(grp_encoding_fu_102_m_axi_gmem_WLAST),
-    .m_axi_gmem_WID(grp_encoding_fu_102_m_axi_gmem_WID),
-    .m_axi_gmem_WUSER(grp_encoding_fu_102_m_axi_gmem_WUSER),
-    .m_axi_gmem_ARVALID(grp_encoding_fu_102_m_axi_gmem_ARVALID),
+    .m_axi_gmem_WDATA(grp_encoding_fu_106_m_axi_gmem_WDATA),
+    .m_axi_gmem_WSTRB(grp_encoding_fu_106_m_axi_gmem_WSTRB),
+    .m_axi_gmem_WLAST(grp_encoding_fu_106_m_axi_gmem_WLAST),
+    .m_axi_gmem_WID(grp_encoding_fu_106_m_axi_gmem_WID),
+    .m_axi_gmem_WUSER(grp_encoding_fu_106_m_axi_gmem_WUSER),
+    .m_axi_gmem_ARVALID(grp_encoding_fu_106_m_axi_gmem_ARVALID),
     .m_axi_gmem_ARREADY(gmem_ARREADY),
-    .m_axi_gmem_ARADDR(grp_encoding_fu_102_m_axi_gmem_ARADDR),
-    .m_axi_gmem_ARID(grp_encoding_fu_102_m_axi_gmem_ARID),
-    .m_axi_gmem_ARLEN(grp_encoding_fu_102_m_axi_gmem_ARLEN),
-    .m_axi_gmem_ARSIZE(grp_encoding_fu_102_m_axi_gmem_ARSIZE),
-    .m_axi_gmem_ARBURST(grp_encoding_fu_102_m_axi_gmem_ARBURST),
-    .m_axi_gmem_ARLOCK(grp_encoding_fu_102_m_axi_gmem_ARLOCK),
-    .m_axi_gmem_ARCACHE(grp_encoding_fu_102_m_axi_gmem_ARCACHE),
-    .m_axi_gmem_ARPROT(grp_encoding_fu_102_m_axi_gmem_ARPROT),
-    .m_axi_gmem_ARQOS(grp_encoding_fu_102_m_axi_gmem_ARQOS),
-    .m_axi_gmem_ARREGION(grp_encoding_fu_102_m_axi_gmem_ARREGION),
-    .m_axi_gmem_ARUSER(grp_encoding_fu_102_m_axi_gmem_ARUSER),
+    .m_axi_gmem_ARADDR(grp_encoding_fu_106_m_axi_gmem_ARADDR),
+    .m_axi_gmem_ARID(grp_encoding_fu_106_m_axi_gmem_ARID),
+    .m_axi_gmem_ARLEN(grp_encoding_fu_106_m_axi_gmem_ARLEN),
+    .m_axi_gmem_ARSIZE(grp_encoding_fu_106_m_axi_gmem_ARSIZE),
+    .m_axi_gmem_ARBURST(grp_encoding_fu_106_m_axi_gmem_ARBURST),
+    .m_axi_gmem_ARLOCK(grp_encoding_fu_106_m_axi_gmem_ARLOCK),
+    .m_axi_gmem_ARCACHE(grp_encoding_fu_106_m_axi_gmem_ARCACHE),
+    .m_axi_gmem_ARPROT(grp_encoding_fu_106_m_axi_gmem_ARPROT),
+    .m_axi_gmem_ARQOS(grp_encoding_fu_106_m_axi_gmem_ARQOS),
+    .m_axi_gmem_ARREGION(grp_encoding_fu_106_m_axi_gmem_ARREGION),
+    .m_axi_gmem_ARUSER(grp_encoding_fu_106_m_axi_gmem_ARUSER),
     .m_axi_gmem_RVALID(gmem_RVALID),
-    .m_axi_gmem_RREADY(grp_encoding_fu_102_m_axi_gmem_RREADY),
+    .m_axi_gmem_RREADY(grp_encoding_fu_106_m_axi_gmem_RREADY),
     .m_axi_gmem_RDATA(gmem_RDATA),
     .m_axi_gmem_RLAST(gmem_RLAST),
     .m_axi_gmem_RID(gmem_RID),
     .m_axi_gmem_RUSER(gmem_RUSER),
     .m_axi_gmem_RRESP(gmem_RRESP),
     .m_axi_gmem_BVALID(gmem_BVALID),
-    .m_axi_gmem_BREADY(grp_encoding_fu_102_m_axi_gmem_BREADY),
+    .m_axi_gmem_BREADY(grp_encoding_fu_106_m_axi_gmem_BREADY),
     .m_axi_gmem_BRESP(gmem_BRESP),
     .m_axi_gmem_BID(gmem_BID),
     .m_axi_gmem_BUSER(gmem_BUSER),
@@ -534,60 +611,60 @@ lzw_fpga_encoding grp_encoding_fu_102(
     .output_size(output_size)
 );
 
-lzw_fpga_decoding grp_decoding_fu_114(
+lzw_fpga_decoding grp_decoding_fu_118(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(grp_decoding_fu_114_ap_start),
-    .ap_done(grp_decoding_fu_114_ap_done),
-    .ap_idle(grp_decoding_fu_114_ap_idle),
-    .ap_ready(grp_decoding_fu_114_ap_ready),
-    .m_axi_gmem_AWVALID(grp_decoding_fu_114_m_axi_gmem_AWVALID),
+    .ap_start(grp_decoding_fu_118_ap_start),
+    .ap_done(grp_decoding_fu_118_ap_done),
+    .ap_idle(grp_decoding_fu_118_ap_idle),
+    .ap_ready(grp_decoding_fu_118_ap_ready),
+    .m_axi_gmem_AWVALID(grp_decoding_fu_118_m_axi_gmem_AWVALID),
     .m_axi_gmem_AWREADY(gmem_AWREADY),
-    .m_axi_gmem_AWADDR(grp_decoding_fu_114_m_axi_gmem_AWADDR),
-    .m_axi_gmem_AWID(grp_decoding_fu_114_m_axi_gmem_AWID),
-    .m_axi_gmem_AWLEN(grp_decoding_fu_114_m_axi_gmem_AWLEN),
-    .m_axi_gmem_AWSIZE(grp_decoding_fu_114_m_axi_gmem_AWSIZE),
-    .m_axi_gmem_AWBURST(grp_decoding_fu_114_m_axi_gmem_AWBURST),
-    .m_axi_gmem_AWLOCK(grp_decoding_fu_114_m_axi_gmem_AWLOCK),
-    .m_axi_gmem_AWCACHE(grp_decoding_fu_114_m_axi_gmem_AWCACHE),
-    .m_axi_gmem_AWPROT(grp_decoding_fu_114_m_axi_gmem_AWPROT),
-    .m_axi_gmem_AWQOS(grp_decoding_fu_114_m_axi_gmem_AWQOS),
-    .m_axi_gmem_AWREGION(grp_decoding_fu_114_m_axi_gmem_AWREGION),
-    .m_axi_gmem_AWUSER(grp_decoding_fu_114_m_axi_gmem_AWUSER),
-    .m_axi_gmem_WVALID(grp_decoding_fu_114_m_axi_gmem_WVALID),
+    .m_axi_gmem_AWADDR(grp_decoding_fu_118_m_axi_gmem_AWADDR),
+    .m_axi_gmem_AWID(grp_decoding_fu_118_m_axi_gmem_AWID),
+    .m_axi_gmem_AWLEN(grp_decoding_fu_118_m_axi_gmem_AWLEN),
+    .m_axi_gmem_AWSIZE(grp_decoding_fu_118_m_axi_gmem_AWSIZE),
+    .m_axi_gmem_AWBURST(grp_decoding_fu_118_m_axi_gmem_AWBURST),
+    .m_axi_gmem_AWLOCK(grp_decoding_fu_118_m_axi_gmem_AWLOCK),
+    .m_axi_gmem_AWCACHE(grp_decoding_fu_118_m_axi_gmem_AWCACHE),
+    .m_axi_gmem_AWPROT(grp_decoding_fu_118_m_axi_gmem_AWPROT),
+    .m_axi_gmem_AWQOS(grp_decoding_fu_118_m_axi_gmem_AWQOS),
+    .m_axi_gmem_AWREGION(grp_decoding_fu_118_m_axi_gmem_AWREGION),
+    .m_axi_gmem_AWUSER(grp_decoding_fu_118_m_axi_gmem_AWUSER),
+    .m_axi_gmem_WVALID(grp_decoding_fu_118_m_axi_gmem_WVALID),
     .m_axi_gmem_WREADY(gmem_WREADY),
-    .m_axi_gmem_WDATA(grp_decoding_fu_114_m_axi_gmem_WDATA),
-    .m_axi_gmem_WSTRB(grp_decoding_fu_114_m_axi_gmem_WSTRB),
-    .m_axi_gmem_WLAST(grp_decoding_fu_114_m_axi_gmem_WLAST),
-    .m_axi_gmem_WID(grp_decoding_fu_114_m_axi_gmem_WID),
-    .m_axi_gmem_WUSER(grp_decoding_fu_114_m_axi_gmem_WUSER),
-    .m_axi_gmem_ARVALID(grp_decoding_fu_114_m_axi_gmem_ARVALID),
+    .m_axi_gmem_WDATA(grp_decoding_fu_118_m_axi_gmem_WDATA),
+    .m_axi_gmem_WSTRB(grp_decoding_fu_118_m_axi_gmem_WSTRB),
+    .m_axi_gmem_WLAST(grp_decoding_fu_118_m_axi_gmem_WLAST),
+    .m_axi_gmem_WID(grp_decoding_fu_118_m_axi_gmem_WID),
+    .m_axi_gmem_WUSER(grp_decoding_fu_118_m_axi_gmem_WUSER),
+    .m_axi_gmem_ARVALID(grp_decoding_fu_118_m_axi_gmem_ARVALID),
     .m_axi_gmem_ARREADY(gmem_ARREADY),
-    .m_axi_gmem_ARADDR(grp_decoding_fu_114_m_axi_gmem_ARADDR),
-    .m_axi_gmem_ARID(grp_decoding_fu_114_m_axi_gmem_ARID),
-    .m_axi_gmem_ARLEN(grp_decoding_fu_114_m_axi_gmem_ARLEN),
-    .m_axi_gmem_ARSIZE(grp_decoding_fu_114_m_axi_gmem_ARSIZE),
-    .m_axi_gmem_ARBURST(grp_decoding_fu_114_m_axi_gmem_ARBURST),
-    .m_axi_gmem_ARLOCK(grp_decoding_fu_114_m_axi_gmem_ARLOCK),
-    .m_axi_gmem_ARCACHE(grp_decoding_fu_114_m_axi_gmem_ARCACHE),
-    .m_axi_gmem_ARPROT(grp_decoding_fu_114_m_axi_gmem_ARPROT),
-    .m_axi_gmem_ARQOS(grp_decoding_fu_114_m_axi_gmem_ARQOS),
-    .m_axi_gmem_ARREGION(grp_decoding_fu_114_m_axi_gmem_ARREGION),
-    .m_axi_gmem_ARUSER(grp_decoding_fu_114_m_axi_gmem_ARUSER),
+    .m_axi_gmem_ARADDR(grp_decoding_fu_118_m_axi_gmem_ARADDR),
+    .m_axi_gmem_ARID(grp_decoding_fu_118_m_axi_gmem_ARID),
+    .m_axi_gmem_ARLEN(grp_decoding_fu_118_m_axi_gmem_ARLEN),
+    .m_axi_gmem_ARSIZE(grp_decoding_fu_118_m_axi_gmem_ARSIZE),
+    .m_axi_gmem_ARBURST(grp_decoding_fu_118_m_axi_gmem_ARBURST),
+    .m_axi_gmem_ARLOCK(grp_decoding_fu_118_m_axi_gmem_ARLOCK),
+    .m_axi_gmem_ARCACHE(grp_decoding_fu_118_m_axi_gmem_ARCACHE),
+    .m_axi_gmem_ARPROT(grp_decoding_fu_118_m_axi_gmem_ARPROT),
+    .m_axi_gmem_ARQOS(grp_decoding_fu_118_m_axi_gmem_ARQOS),
+    .m_axi_gmem_ARREGION(grp_decoding_fu_118_m_axi_gmem_ARREGION),
+    .m_axi_gmem_ARUSER(grp_decoding_fu_118_m_axi_gmem_ARUSER),
     .m_axi_gmem_RVALID(gmem_RVALID),
-    .m_axi_gmem_RREADY(grp_decoding_fu_114_m_axi_gmem_RREADY),
+    .m_axi_gmem_RREADY(grp_decoding_fu_118_m_axi_gmem_RREADY),
     .m_axi_gmem_RDATA(gmem_RDATA),
     .m_axi_gmem_RLAST(gmem_RLAST),
     .m_axi_gmem_RID(gmem_RID),
     .m_axi_gmem_RUSER(gmem_RUSER),
     .m_axi_gmem_RRESP(gmem_RRESP),
     .m_axi_gmem_BVALID(gmem_BVALID),
-    .m_axi_gmem_BREADY(grp_decoding_fu_114_m_axi_gmem_BREADY),
+    .m_axi_gmem_BREADY(grp_decoding_fu_118_m_axi_gmem_BREADY),
     .m_axi_gmem_BRESP(gmem_BRESP),
     .m_axi_gmem_BID(gmem_BID),
     .m_axi_gmem_BUSER(gmem_BUSER),
-    .encoded_data(encoded_data),
-    .encoded_size(encoded_size),
+    .encoded_data(output_code),
+    .encoded_size(gmem_addr_read_reg_170),
     .output_r(output_r)
 );
 
@@ -605,7 +682,7 @@ always @ (posedge ap_clk) begin
     end else begin
         if ((ap_continue == 1'b1)) begin
             ap_done_reg <= 1'b0;
-        end else if (((grp_decoding_fu_114_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state4))) begin
+        end else if (((grp_decoding_fu_118_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state75))) begin
             ap_done_reg <= 1'b1;
         end
     end
@@ -613,24 +690,24 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_decoding_fu_114_ap_start_reg <= 1'b0;
+        grp_decoding_fu_118_ap_start_reg <= 1'b0;
     end else begin
-        if ((1'b1 == ap_CS_fsm_state3)) begin
-            grp_decoding_fu_114_ap_start_reg <= 1'b1;
-        end else if ((grp_decoding_fu_114_ap_ready == 1'b1)) begin
-            grp_decoding_fu_114_ap_start_reg <= 1'b0;
+        if ((1'b1 == ap_CS_fsm_state74)) begin
+            grp_decoding_fu_118_ap_start_reg <= 1'b1;
+        end else if ((grp_decoding_fu_118_ap_ready == 1'b1)) begin
+            grp_decoding_fu_118_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        grp_encoding_fu_102_ap_start_reg <= 1'b0;
+        grp_encoding_fu_106_ap_start_reg <= 1'b0;
     end else begin
         if ((~((ap_done_reg == 1'b1) | (ap_start == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
-            grp_encoding_fu_102_ap_start_reg <= 1'b1;
-        end else if ((grp_encoding_fu_102_ap_ready == 1'b1)) begin
-            grp_encoding_fu_102_ap_start_reg <= 1'b0;
+            grp_encoding_fu_106_ap_start_reg <= 1'b1;
+        end else if ((grp_encoding_fu_106_ap_ready == 1'b1)) begin
+            grp_encoding_fu_106_ap_start_reg <= 1'b0;
         end
     end
 end
@@ -647,8 +724,20 @@ always @ (posedge ap_clk) begin
     ap_rst_reg_2 <= ~ap_rst_n;
 end
 
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state73)) begin
+        gmem_addr_read_reg_170 <= gmem_RDATA;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state1)) begin
+        gmem_addr_reg_164 <= sext_ln180_fu_138_p1;
+    end
+end
+
 always @ (*) begin
-    if (((grp_decoding_fu_114_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state4))) begin
+    if (((grp_decoding_fu_118_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state75))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = ap_done_reg;
@@ -656,7 +745,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b0))) begin
+    if (((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1))) begin
         ap_idle = 1'b1;
     end else begin
         ap_idle = 1'b0;
@@ -664,7 +753,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((grp_decoding_fu_114_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state4))) begin
+    if (((grp_decoding_fu_118_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state75))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -672,322 +761,346 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_ARADDR = grp_decoding_fu_114_m_axi_gmem_ARADDR;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_ARADDR = grp_encoding_fu_102_m_axi_gmem_ARADDR;
+    if (((gmem_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state3))) begin
+        gmem_ARADDR = gmem_addr_reg_164;
+    end else if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_ARADDR = grp_decoding_fu_118_m_axi_gmem_ARADDR;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_ARADDR = grp_encoding_fu_106_m_axi_gmem_ARADDR;
     end else begin
         gmem_ARADDR = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_ARBURST = grp_decoding_fu_114_m_axi_gmem_ARBURST;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_ARBURST = grp_encoding_fu_102_m_axi_gmem_ARBURST;
+    if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_ARBURST = grp_decoding_fu_118_m_axi_gmem_ARBURST;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_ARBURST = grp_encoding_fu_106_m_axi_gmem_ARBURST;
     end else begin
-        gmem_ARBURST = 'bx;
+        gmem_ARBURST = 2'd0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_ARCACHE = grp_decoding_fu_114_m_axi_gmem_ARCACHE;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_ARCACHE = grp_encoding_fu_102_m_axi_gmem_ARCACHE;
+    if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_ARCACHE = grp_decoding_fu_118_m_axi_gmem_ARCACHE;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_ARCACHE = grp_encoding_fu_106_m_axi_gmem_ARCACHE;
     end else begin
-        gmem_ARCACHE = 'bx;
+        gmem_ARCACHE = 4'd0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_ARID = grp_decoding_fu_114_m_axi_gmem_ARID;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_ARID = grp_encoding_fu_102_m_axi_gmem_ARID;
+    if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_ARID = grp_decoding_fu_118_m_axi_gmem_ARID;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_ARID = grp_encoding_fu_106_m_axi_gmem_ARID;
     end else begin
-        gmem_ARID = 'bx;
+        gmem_ARID = 1'd0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_ARLEN = grp_decoding_fu_114_m_axi_gmem_ARLEN;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_ARLEN = grp_encoding_fu_102_m_axi_gmem_ARLEN;
+    if (((gmem_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state3))) begin
+        gmem_ARLEN = 32'd1;
+    end else if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_ARLEN = grp_decoding_fu_118_m_axi_gmem_ARLEN;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_ARLEN = grp_encoding_fu_106_m_axi_gmem_ARLEN;
     end else begin
         gmem_ARLEN = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_ARLOCK = grp_decoding_fu_114_m_axi_gmem_ARLOCK;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_ARLOCK = grp_encoding_fu_102_m_axi_gmem_ARLOCK;
+    if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_ARLOCK = grp_decoding_fu_118_m_axi_gmem_ARLOCK;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_ARLOCK = grp_encoding_fu_106_m_axi_gmem_ARLOCK;
     end else begin
-        gmem_ARLOCK = 'bx;
+        gmem_ARLOCK = 2'd0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_ARPROT = grp_decoding_fu_114_m_axi_gmem_ARPROT;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_ARPROT = grp_encoding_fu_102_m_axi_gmem_ARPROT;
+    if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_ARPROT = grp_decoding_fu_118_m_axi_gmem_ARPROT;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_ARPROT = grp_encoding_fu_106_m_axi_gmem_ARPROT;
     end else begin
-        gmem_ARPROT = 'bx;
+        gmem_ARPROT = 3'd0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_ARQOS = grp_decoding_fu_114_m_axi_gmem_ARQOS;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_ARQOS = grp_encoding_fu_102_m_axi_gmem_ARQOS;
+    if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_ARQOS = grp_decoding_fu_118_m_axi_gmem_ARQOS;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_ARQOS = grp_encoding_fu_106_m_axi_gmem_ARQOS;
     end else begin
-        gmem_ARQOS = 'bx;
+        gmem_ARQOS = 4'd0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_ARREGION = grp_decoding_fu_114_m_axi_gmem_ARREGION;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_ARREGION = grp_encoding_fu_102_m_axi_gmem_ARREGION;
+    if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_ARREGION = grp_decoding_fu_118_m_axi_gmem_ARREGION;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_ARREGION = grp_encoding_fu_106_m_axi_gmem_ARREGION;
     end else begin
-        gmem_ARREGION = 'bx;
+        gmem_ARREGION = 4'd0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_ARSIZE = grp_decoding_fu_114_m_axi_gmem_ARSIZE;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_ARSIZE = grp_encoding_fu_102_m_axi_gmem_ARSIZE;
+    if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_ARSIZE = grp_decoding_fu_118_m_axi_gmem_ARSIZE;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_ARSIZE = grp_encoding_fu_106_m_axi_gmem_ARSIZE;
     end else begin
-        gmem_ARSIZE = 'bx;
+        gmem_ARSIZE = 3'd0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_ARUSER = grp_decoding_fu_114_m_axi_gmem_ARUSER;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_ARUSER = grp_encoding_fu_102_m_axi_gmem_ARUSER;
+    if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_ARUSER = grp_decoding_fu_118_m_axi_gmem_ARUSER;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_ARUSER = grp_encoding_fu_106_m_axi_gmem_ARUSER;
     end else begin
-        gmem_ARUSER = 'bx;
+        gmem_ARUSER = 1'd0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_ARVALID = grp_decoding_fu_114_m_axi_gmem_ARVALID;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_ARVALID = grp_encoding_fu_102_m_axi_gmem_ARVALID;
+    if (((gmem_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state3))) begin
+        gmem_ARVALID = 1'b1;
+    end else if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_ARVALID = grp_decoding_fu_118_m_axi_gmem_ARVALID;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_ARVALID = grp_encoding_fu_106_m_axi_gmem_ARVALID;
     end else begin
         gmem_ARVALID = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_AWADDR = grp_decoding_fu_114_m_axi_gmem_AWADDR;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_AWADDR = grp_encoding_fu_102_m_axi_gmem_AWADDR;
+    if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_AWADDR = grp_decoding_fu_118_m_axi_gmem_AWADDR;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_AWADDR = grp_encoding_fu_106_m_axi_gmem_AWADDR;
     end else begin
         gmem_AWADDR = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_AWBURST = grp_decoding_fu_114_m_axi_gmem_AWBURST;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_AWBURST = grp_encoding_fu_102_m_axi_gmem_AWBURST;
+    if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_AWBURST = grp_decoding_fu_118_m_axi_gmem_AWBURST;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_AWBURST = grp_encoding_fu_106_m_axi_gmem_AWBURST;
     end else begin
         gmem_AWBURST = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_AWCACHE = grp_decoding_fu_114_m_axi_gmem_AWCACHE;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_AWCACHE = grp_encoding_fu_102_m_axi_gmem_AWCACHE;
+    if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_AWCACHE = grp_decoding_fu_118_m_axi_gmem_AWCACHE;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_AWCACHE = grp_encoding_fu_106_m_axi_gmem_AWCACHE;
     end else begin
         gmem_AWCACHE = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_AWID = grp_decoding_fu_114_m_axi_gmem_AWID;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_AWID = grp_encoding_fu_102_m_axi_gmem_AWID;
+    if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_AWID = grp_decoding_fu_118_m_axi_gmem_AWID;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_AWID = grp_encoding_fu_106_m_axi_gmem_AWID;
     end else begin
         gmem_AWID = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_AWLEN = grp_decoding_fu_114_m_axi_gmem_AWLEN;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_AWLEN = grp_encoding_fu_102_m_axi_gmem_AWLEN;
+    if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_AWLEN = grp_decoding_fu_118_m_axi_gmem_AWLEN;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_AWLEN = grp_encoding_fu_106_m_axi_gmem_AWLEN;
     end else begin
         gmem_AWLEN = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_AWLOCK = grp_decoding_fu_114_m_axi_gmem_AWLOCK;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_AWLOCK = grp_encoding_fu_102_m_axi_gmem_AWLOCK;
+    if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_AWLOCK = grp_decoding_fu_118_m_axi_gmem_AWLOCK;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_AWLOCK = grp_encoding_fu_106_m_axi_gmem_AWLOCK;
     end else begin
         gmem_AWLOCK = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_AWPROT = grp_decoding_fu_114_m_axi_gmem_AWPROT;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_AWPROT = grp_encoding_fu_102_m_axi_gmem_AWPROT;
+    if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_AWPROT = grp_decoding_fu_118_m_axi_gmem_AWPROT;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_AWPROT = grp_encoding_fu_106_m_axi_gmem_AWPROT;
     end else begin
         gmem_AWPROT = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_AWQOS = grp_decoding_fu_114_m_axi_gmem_AWQOS;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_AWQOS = grp_encoding_fu_102_m_axi_gmem_AWQOS;
+    if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_AWQOS = grp_decoding_fu_118_m_axi_gmem_AWQOS;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_AWQOS = grp_encoding_fu_106_m_axi_gmem_AWQOS;
     end else begin
         gmem_AWQOS = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_AWREGION = grp_decoding_fu_114_m_axi_gmem_AWREGION;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_AWREGION = grp_encoding_fu_102_m_axi_gmem_AWREGION;
+    if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_AWREGION = grp_decoding_fu_118_m_axi_gmem_AWREGION;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_AWREGION = grp_encoding_fu_106_m_axi_gmem_AWREGION;
     end else begin
         gmem_AWREGION = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_AWSIZE = grp_decoding_fu_114_m_axi_gmem_AWSIZE;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_AWSIZE = grp_encoding_fu_102_m_axi_gmem_AWSIZE;
+    if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_AWSIZE = grp_decoding_fu_118_m_axi_gmem_AWSIZE;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_AWSIZE = grp_encoding_fu_106_m_axi_gmem_AWSIZE;
     end else begin
         gmem_AWSIZE = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_AWUSER = grp_decoding_fu_114_m_axi_gmem_AWUSER;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_AWUSER = grp_encoding_fu_102_m_axi_gmem_AWUSER;
+    if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_AWUSER = grp_decoding_fu_118_m_axi_gmem_AWUSER;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_AWUSER = grp_encoding_fu_106_m_axi_gmem_AWUSER;
     end else begin
         gmem_AWUSER = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_AWVALID = grp_decoding_fu_114_m_axi_gmem_AWVALID;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_AWVALID = grp_encoding_fu_102_m_axi_gmem_AWVALID;
+    if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_AWVALID = grp_decoding_fu_118_m_axi_gmem_AWVALID;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_AWVALID = grp_encoding_fu_106_m_axi_gmem_AWVALID;
     end else begin
         gmem_AWVALID = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_BREADY = grp_decoding_fu_114_m_axi_gmem_BREADY;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_BREADY = grp_encoding_fu_102_m_axi_gmem_BREADY;
+    if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_BREADY = grp_decoding_fu_118_m_axi_gmem_BREADY;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_BREADY = grp_encoding_fu_106_m_axi_gmem_BREADY;
     end else begin
         gmem_BREADY = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_RREADY = grp_decoding_fu_114_m_axi_gmem_RREADY;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_RREADY = grp_encoding_fu_102_m_axi_gmem_RREADY;
+    if (((gmem_RVALID == 1'b1) & (1'b1 == ap_CS_fsm_state73))) begin
+        gmem_RREADY = 1'b1;
+    end else if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_RREADY = grp_decoding_fu_118_m_axi_gmem_RREADY;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_RREADY = grp_encoding_fu_106_m_axi_gmem_RREADY;
     end else begin
         gmem_RREADY = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_WDATA = grp_decoding_fu_114_m_axi_gmem_WDATA;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_WDATA = grp_encoding_fu_102_m_axi_gmem_WDATA;
+    if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_WDATA = grp_decoding_fu_118_m_axi_gmem_WDATA;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_WDATA = grp_encoding_fu_106_m_axi_gmem_WDATA;
     end else begin
         gmem_WDATA = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_WID = grp_decoding_fu_114_m_axi_gmem_WID;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_WID = grp_encoding_fu_102_m_axi_gmem_WID;
+    if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_WID = grp_decoding_fu_118_m_axi_gmem_WID;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_WID = grp_encoding_fu_106_m_axi_gmem_WID;
     end else begin
         gmem_WID = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_WLAST = grp_decoding_fu_114_m_axi_gmem_WLAST;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_WLAST = grp_encoding_fu_102_m_axi_gmem_WLAST;
+    if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_WLAST = grp_decoding_fu_118_m_axi_gmem_WLAST;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_WLAST = grp_encoding_fu_106_m_axi_gmem_WLAST;
     end else begin
         gmem_WLAST = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_WSTRB = grp_decoding_fu_114_m_axi_gmem_WSTRB;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_WSTRB = grp_encoding_fu_102_m_axi_gmem_WSTRB;
+    if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_WSTRB = grp_decoding_fu_118_m_axi_gmem_WSTRB;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_WSTRB = grp_encoding_fu_106_m_axi_gmem_WSTRB;
     end else begin
         gmem_WSTRB = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_WUSER = grp_decoding_fu_114_m_axi_gmem_WUSER;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_WUSER = grp_encoding_fu_102_m_axi_gmem_WUSER;
+    if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_WUSER = grp_decoding_fu_118_m_axi_gmem_WUSER;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_WUSER = grp_encoding_fu_106_m_axi_gmem_WUSER;
     end else begin
         gmem_WUSER = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
-        gmem_WVALID = grp_decoding_fu_114_m_axi_gmem_WVALID;
-    end else if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state1))) begin
-        gmem_WVALID = grp_encoding_fu_102_m_axi_gmem_WVALID;
+    if (((1'b1 == ap_CS_fsm_state75) | (1'b1 == ap_CS_fsm_state74))) begin
+        gmem_WVALID = grp_decoding_fu_118_m_axi_gmem_WVALID;
+    end else if (((1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state2))) begin
+        gmem_WVALID = grp_encoding_fu_106_m_axi_gmem_WVALID;
     end else begin
         gmem_WVALID = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state3)) begin
+        gmem_blk_n_AR = m_axi_gmem_ARREADY;
+    end else begin
+        gmem_blk_n_AR = 1'b1;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state73)) begin
+        gmem_blk_n_R = m_axi_gmem_RVALID;
+    end else begin
+        gmem_blk_n_R = 1'b1;
     end
 end
 
@@ -1001,20 +1114,241 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state2 : begin
-            if (((grp_encoding_fu_102_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+            if (((grp_encoding_fu_106_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state2;
             end
         end
         ap_ST_fsm_state3 : begin
-            ap_NS_fsm = ap_ST_fsm_state4;
+            if (((gmem_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state3))) begin
+                ap_NS_fsm = ap_ST_fsm_state4;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state3;
+            end
         end
         ap_ST_fsm_state4 : begin
-            if (((grp_decoding_fu_114_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state4))) begin
+            ap_NS_fsm = ap_ST_fsm_state5;
+        end
+        ap_ST_fsm_state5 : begin
+            ap_NS_fsm = ap_ST_fsm_state6;
+        end
+        ap_ST_fsm_state6 : begin
+            ap_NS_fsm = ap_ST_fsm_state7;
+        end
+        ap_ST_fsm_state7 : begin
+            ap_NS_fsm = ap_ST_fsm_state8;
+        end
+        ap_ST_fsm_state8 : begin
+            ap_NS_fsm = ap_ST_fsm_state9;
+        end
+        ap_ST_fsm_state9 : begin
+            ap_NS_fsm = ap_ST_fsm_state10;
+        end
+        ap_ST_fsm_state10 : begin
+            ap_NS_fsm = ap_ST_fsm_state11;
+        end
+        ap_ST_fsm_state11 : begin
+            ap_NS_fsm = ap_ST_fsm_state12;
+        end
+        ap_ST_fsm_state12 : begin
+            ap_NS_fsm = ap_ST_fsm_state13;
+        end
+        ap_ST_fsm_state13 : begin
+            ap_NS_fsm = ap_ST_fsm_state14;
+        end
+        ap_ST_fsm_state14 : begin
+            ap_NS_fsm = ap_ST_fsm_state15;
+        end
+        ap_ST_fsm_state15 : begin
+            ap_NS_fsm = ap_ST_fsm_state16;
+        end
+        ap_ST_fsm_state16 : begin
+            ap_NS_fsm = ap_ST_fsm_state17;
+        end
+        ap_ST_fsm_state17 : begin
+            ap_NS_fsm = ap_ST_fsm_state18;
+        end
+        ap_ST_fsm_state18 : begin
+            ap_NS_fsm = ap_ST_fsm_state19;
+        end
+        ap_ST_fsm_state19 : begin
+            ap_NS_fsm = ap_ST_fsm_state20;
+        end
+        ap_ST_fsm_state20 : begin
+            ap_NS_fsm = ap_ST_fsm_state21;
+        end
+        ap_ST_fsm_state21 : begin
+            ap_NS_fsm = ap_ST_fsm_state22;
+        end
+        ap_ST_fsm_state22 : begin
+            ap_NS_fsm = ap_ST_fsm_state23;
+        end
+        ap_ST_fsm_state23 : begin
+            ap_NS_fsm = ap_ST_fsm_state24;
+        end
+        ap_ST_fsm_state24 : begin
+            ap_NS_fsm = ap_ST_fsm_state25;
+        end
+        ap_ST_fsm_state25 : begin
+            ap_NS_fsm = ap_ST_fsm_state26;
+        end
+        ap_ST_fsm_state26 : begin
+            ap_NS_fsm = ap_ST_fsm_state27;
+        end
+        ap_ST_fsm_state27 : begin
+            ap_NS_fsm = ap_ST_fsm_state28;
+        end
+        ap_ST_fsm_state28 : begin
+            ap_NS_fsm = ap_ST_fsm_state29;
+        end
+        ap_ST_fsm_state29 : begin
+            ap_NS_fsm = ap_ST_fsm_state30;
+        end
+        ap_ST_fsm_state30 : begin
+            ap_NS_fsm = ap_ST_fsm_state31;
+        end
+        ap_ST_fsm_state31 : begin
+            ap_NS_fsm = ap_ST_fsm_state32;
+        end
+        ap_ST_fsm_state32 : begin
+            ap_NS_fsm = ap_ST_fsm_state33;
+        end
+        ap_ST_fsm_state33 : begin
+            ap_NS_fsm = ap_ST_fsm_state34;
+        end
+        ap_ST_fsm_state34 : begin
+            ap_NS_fsm = ap_ST_fsm_state35;
+        end
+        ap_ST_fsm_state35 : begin
+            ap_NS_fsm = ap_ST_fsm_state36;
+        end
+        ap_ST_fsm_state36 : begin
+            ap_NS_fsm = ap_ST_fsm_state37;
+        end
+        ap_ST_fsm_state37 : begin
+            ap_NS_fsm = ap_ST_fsm_state38;
+        end
+        ap_ST_fsm_state38 : begin
+            ap_NS_fsm = ap_ST_fsm_state39;
+        end
+        ap_ST_fsm_state39 : begin
+            ap_NS_fsm = ap_ST_fsm_state40;
+        end
+        ap_ST_fsm_state40 : begin
+            ap_NS_fsm = ap_ST_fsm_state41;
+        end
+        ap_ST_fsm_state41 : begin
+            ap_NS_fsm = ap_ST_fsm_state42;
+        end
+        ap_ST_fsm_state42 : begin
+            ap_NS_fsm = ap_ST_fsm_state43;
+        end
+        ap_ST_fsm_state43 : begin
+            ap_NS_fsm = ap_ST_fsm_state44;
+        end
+        ap_ST_fsm_state44 : begin
+            ap_NS_fsm = ap_ST_fsm_state45;
+        end
+        ap_ST_fsm_state45 : begin
+            ap_NS_fsm = ap_ST_fsm_state46;
+        end
+        ap_ST_fsm_state46 : begin
+            ap_NS_fsm = ap_ST_fsm_state47;
+        end
+        ap_ST_fsm_state47 : begin
+            ap_NS_fsm = ap_ST_fsm_state48;
+        end
+        ap_ST_fsm_state48 : begin
+            ap_NS_fsm = ap_ST_fsm_state49;
+        end
+        ap_ST_fsm_state49 : begin
+            ap_NS_fsm = ap_ST_fsm_state50;
+        end
+        ap_ST_fsm_state50 : begin
+            ap_NS_fsm = ap_ST_fsm_state51;
+        end
+        ap_ST_fsm_state51 : begin
+            ap_NS_fsm = ap_ST_fsm_state52;
+        end
+        ap_ST_fsm_state52 : begin
+            ap_NS_fsm = ap_ST_fsm_state53;
+        end
+        ap_ST_fsm_state53 : begin
+            ap_NS_fsm = ap_ST_fsm_state54;
+        end
+        ap_ST_fsm_state54 : begin
+            ap_NS_fsm = ap_ST_fsm_state55;
+        end
+        ap_ST_fsm_state55 : begin
+            ap_NS_fsm = ap_ST_fsm_state56;
+        end
+        ap_ST_fsm_state56 : begin
+            ap_NS_fsm = ap_ST_fsm_state57;
+        end
+        ap_ST_fsm_state57 : begin
+            ap_NS_fsm = ap_ST_fsm_state58;
+        end
+        ap_ST_fsm_state58 : begin
+            ap_NS_fsm = ap_ST_fsm_state59;
+        end
+        ap_ST_fsm_state59 : begin
+            ap_NS_fsm = ap_ST_fsm_state60;
+        end
+        ap_ST_fsm_state60 : begin
+            ap_NS_fsm = ap_ST_fsm_state61;
+        end
+        ap_ST_fsm_state61 : begin
+            ap_NS_fsm = ap_ST_fsm_state62;
+        end
+        ap_ST_fsm_state62 : begin
+            ap_NS_fsm = ap_ST_fsm_state63;
+        end
+        ap_ST_fsm_state63 : begin
+            ap_NS_fsm = ap_ST_fsm_state64;
+        end
+        ap_ST_fsm_state64 : begin
+            ap_NS_fsm = ap_ST_fsm_state65;
+        end
+        ap_ST_fsm_state65 : begin
+            ap_NS_fsm = ap_ST_fsm_state66;
+        end
+        ap_ST_fsm_state66 : begin
+            ap_NS_fsm = ap_ST_fsm_state67;
+        end
+        ap_ST_fsm_state67 : begin
+            ap_NS_fsm = ap_ST_fsm_state68;
+        end
+        ap_ST_fsm_state68 : begin
+            ap_NS_fsm = ap_ST_fsm_state69;
+        end
+        ap_ST_fsm_state69 : begin
+            ap_NS_fsm = ap_ST_fsm_state70;
+        end
+        ap_ST_fsm_state70 : begin
+            ap_NS_fsm = ap_ST_fsm_state71;
+        end
+        ap_ST_fsm_state71 : begin
+            ap_NS_fsm = ap_ST_fsm_state72;
+        end
+        ap_ST_fsm_state72 : begin
+            ap_NS_fsm = ap_ST_fsm_state73;
+        end
+        ap_ST_fsm_state73 : begin
+            if (((gmem_RVALID == 1'b1) & (1'b1 == ap_CS_fsm_state73))) begin
+                ap_NS_fsm = ap_ST_fsm_state74;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state73;
+            end
+        end
+        ap_ST_fsm_state74 : begin
+            ap_NS_fsm = ap_ST_fsm_state75;
+        end
+        ap_ST_fsm_state75 : begin
+            if (((grp_decoding_fu_118_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state75))) begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end else begin
-                ap_NS_fsm = ap_ST_fsm_state4;
+                ap_NS_fsm = ap_ST_fsm_state75;
             end
         end
         default : begin
@@ -1029,18 +1363,26 @@ assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
 
 assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
 
-assign ap_CS_fsm_state4 = ap_CS_fsm[32'd3];
+assign ap_CS_fsm_state73 = ap_CS_fsm[32'd72];
+
+assign ap_CS_fsm_state74 = ap_CS_fsm[32'd73];
+
+assign ap_CS_fsm_state75 = ap_CS_fsm[32'd74];
 
 always @ (*) begin
     ap_block_state1 = ((ap_done_reg == 1'b1) | (ap_start == 1'b0));
 end
 
 always @ (*) begin
-    ap_block_state1_ignore_call24 = ((ap_done_reg == 1'b1) | (ap_start == 1'b0));
+    ap_block_state1_ignore_call18 = ((ap_done_reg == 1'b1) | (ap_start == 1'b0));
 end
 
-assign grp_decoding_fu_114_ap_start = grp_decoding_fu_114_ap_start_reg;
+assign grp_decoding_fu_118_ap_start = grp_decoding_fu_118_ap_start_reg;
 
-assign grp_encoding_fu_102_ap_start = grp_encoding_fu_102_ap_start_reg;
+assign grp_encoding_fu_106_ap_start = grp_encoding_fu_106_ap_start_reg;
+
+assign sext_ln180_fu_138_p1 = $signed(trunc_ln_fu_128_p4);
+
+assign trunc_ln_fu_128_p4 = {{output_size[63:2]}};
 
 endmodule //lzw_fpga_main

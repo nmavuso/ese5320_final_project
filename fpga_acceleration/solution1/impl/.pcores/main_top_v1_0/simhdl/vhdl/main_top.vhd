@@ -13,7 +13,8 @@ entity main_top is
     );
     port (
         aresetn : in  std_logic;
-        aclk : in  std_logic
+        aclk : in  std_logic;
+        ap_return : out  std_logic_vector(32 - 1 downto 0)
     );
 
 -- attributes begin
@@ -24,7 +25,8 @@ architecture behav of main_top is
     component main is
         port (
             ap_rst_n : in  std_logic;
-            ap_clk : in  std_logic
+            ap_clk : in  std_logic;
+            ap_return : out  std_logic_vector(32 - 1 downto 0)
         );
     end component;
 
@@ -42,7 +44,8 @@ begin
     main_U  : component main
         port map (
             ap_rst_n => sig_main_ap_rst_n,
-            ap_clk => aclk
+            ap_clk => aclk,
+            ap_return => ap_return
         );
 
     ap_rst_n_if_U : component main_ap_rst_n_if

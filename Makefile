@@ -76,7 +76,7 @@ $(DECODER_EXE): $(DECODER_OBJECTS)
 .PHONY: fpga
 fpga: package/sd_card.img
 
-$(XO): hls/lzw_hls.c
+$(XO): hls/lzw_hls.cpp
 	-@$(RM) $@
 	$(VPP) $(VPP_OPTS) -k lzw_fpga --compile -I"$(<D)" --config fpga_acceleration/design.cfg -o"$@" "$<"
 
@@ -101,7 +101,7 @@ clean:
 	-${RMDIR} _x .ipcache
 
 # Testbench executable
-TESTBENCH_SOURCES = hls/lzw_hls.c hls/Testbench.cpp
+TESTBENCH_SOURCES = hls/lzw_hls.cpp hls/Testbench.cpp
 TESTBENCH_EXE = lzw_hls_testbench
 
 .PHONY: lzw_hls

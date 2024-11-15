@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'main'" level="0">
-<item name = "Date">Tue Nov 12 23:00:28 2024
+<item name = "Date">Fri Nov 15 11:25:12 2024
 </item>
 <item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
 <item name = "Project">fpga_acceleration</item>

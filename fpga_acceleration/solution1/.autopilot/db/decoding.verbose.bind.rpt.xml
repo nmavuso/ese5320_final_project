@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'decoding'" level="0">
-<item name = "Date">Tue Nov 12 23:00:27 2024
+<item name = "Date">Fri Nov 15 11:25:11 2024
 </item>
 <item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
 <item name = "Project">fpga_acceleration</item>
@@ -35,13 +35,13 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_120_1">16, 16, 1, 1, 1, 16, yes</column>
-<column name="- VITIS_LOOP_132_2">?, ?, 71, 2, 1, ?, yes</column>
-<column name="- VITIS_LOOP_137_3">?, ?, ?, -, -, ?, no</column>
-<column name=" + VITIS_LOOP_144_4">?, ?, 2, 2, 1, ?, yes</column>
-<column name=" + VITIS_LOOP_151_5">?, ?, 2, 2, 1, ?, yes</column>
-<column name=" + VITIS_LOOP_158_6">?, ?, 72, 2, 1, ?, yes</column>
-<column name=" + VITIS_LOOP_166_7">?, ?, 2, 2, 1, ?, yes</column>
+<column name="- VITIS_LOOP_113_1">16, 16, 1, -, -, 16, no</column>
+<column name="- VITIS_LOOP_125_2">?, ?, 71, -, -, ?, no</column>
+<column name="- VITIS_LOOP_130_3">?, ?, ?, -, -, ?, no</column>
+<column name=" + VITIS_LOOP_137_4">?, ?, 2, -, -, ?, no</column>
+<column name=" + VITIS_LOOP_144_5">?, ?, 2, -, -, ?, no</column>
+<column name=" + VITIS_LOOP_151_6">?, ?, 72, -, -, ?, no</column>
+<column name=" + VITIS_LOOP_159_7">?, ?, 3, -, -, ?, no</column>
 </table>
 </item>
 </section>

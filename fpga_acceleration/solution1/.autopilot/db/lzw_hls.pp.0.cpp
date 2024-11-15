@@ -1491,6 +1491,83 @@ extern "C++" const char *basename (const char *__filename)
 # 552 "/usr/include/string.h" 3 4
 }
 # 3 "hls/lzw_hls.cpp" 2
+# 1 "hls/lzw_hls.h" 1
+
+
+
+# 1 "/mnt/pollux/software/xilinx/2020.2/Vitis_HLS/2020.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/stdint.h" 1 3
+# 63 "/mnt/pollux/software/xilinx/2020.2/Vitis_HLS/2020.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/stdint.h" 3
+# 1 "/usr/include/stdint.h" 1 3 4
+# 26 "/usr/include/stdint.h" 3 4
+# 1 "/usr/include/bits/libc-header-start.h" 1 3 4
+# 27 "/usr/include/stdint.h" 2 3 4
+
+# 1 "/usr/include/bits/wchar.h" 1 3 4
+# 29 "/usr/include/stdint.h" 2 3 4
+# 1 "/usr/include/bits/wordsize.h" 1 3 4
+# 30 "/usr/include/stdint.h" 2 3 4
+
+
+
+
+# 1 "/usr/include/bits/stdint-intn.h" 1 3 4
+# 24 "/usr/include/bits/stdint-intn.h" 3 4
+typedef __int8_t int8_t;
+typedef __int16_t int16_t;
+typedef __int32_t int32_t;
+typedef __int64_t int64_t;
+# 35 "/usr/include/stdint.h" 2 3 4
+
+
+# 1 "/usr/include/bits/stdint-uintn.h" 1 3 4
+# 24 "/usr/include/bits/stdint-uintn.h" 3 4
+typedef __uint8_t uint8_t;
+typedef __uint16_t uint16_t;
+typedef __uint32_t uint32_t;
+typedef __uint64_t uint64_t;
+# 38 "/usr/include/stdint.h" 2 3 4
+
+
+
+
+
+typedef __int_least8_t int_least8_t;
+typedef __int_least16_t int_least16_t;
+typedef __int_least32_t int_least32_t;
+typedef __int_least64_t int_least64_t;
+
+
+typedef __uint_least8_t uint_least8_t;
+typedef __uint_least16_t uint_least16_t;
+typedef __uint_least32_t uint_least32_t;
+typedef __uint_least64_t uint_least64_t;
+
+
+
+
+
+typedef signed char int_fast8_t;
+
+typedef long int int_fast16_t;
+typedef long int int_fast32_t;
+typedef long int int_fast64_t;
+# 71 "/usr/include/stdint.h" 3 4
+typedef unsigned char uint_fast8_t;
+
+typedef unsigned long int uint_fast16_t;
+typedef unsigned long int uint_fast32_t;
+typedef unsigned long int uint_fast64_t;
+# 87 "/usr/include/stdint.h" 3 4
+typedef long int intptr_t;
+
+
+typedef unsigned long int uintptr_t;
+# 101 "/usr/include/stdint.h" 3 4
+typedef __intmax_t intmax_t;
+typedef __uintmax_t uintmax_t;
+# 64 "/mnt/pollux/software/xilinx/2020.2/Vitis_HLS/2020.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/stdint.h" 2 3
+# 5 "hls/lzw_hls.h" 2
+
 
 
 
@@ -1501,17 +1578,30 @@ typedef struct {
     int code;
 } DictionaryEntry;
 
+typedef struct {
+    int code;
+    char str[1024];
+} DecodeEntry;
+
+void encoding(const char *s, int *output_code, int *output_size);
+
+void decoding(const int *encoded_data, int encoded_size, char *output);
+
+__attribute__((sdx_kernel("main", 0))) int lzw_fpga(const char *s, int *output_code, int *output_size, char *output);
+# 4 "hls/lzw_hls.cpp" 2
+
+
 
 void encoding(const char *input, int *output_code, int *output_size) {
     DictionaryEntry table[4096];
-    int table_size = 255 + 1;
-    int code = 255 + 1;
+    int table_size = 256 + 1;
+    int code = 256 + 1;
 
 
 #pragma HLS array_partition variable=table cyclic factor=16 dim=1
 
 
- VITIS_LOOP_23_1: for (int i = 0; i <= 255; i++) {
+ VITIS_LOOP_16_1: for (int i = 0; i <= 256; i++) {
 #pragma HLS unroll factor=16
  table[i].str[0] = (char)i;
         table[i].str[1] = '\0';
@@ -1521,14 +1611,14 @@ void encoding(const char *input, int *output_code, int *output_size) {
     char p[1024] = {input[0], '\0'};
     int out_index = 0;
 
-    VITIS_LOOP_33_2: for (int i = 1; input[i] != '\0'; i++) {
+    VITIS_LOOP_26_2: for (int i = 1; input[i] != '\0'; i++) {
 #pragma HLS pipeline II=1
  char c = input[i];
         char temp[1024];
         int p_len = 0;
 
 
-        VITIS_LOOP_40_3: while (p[p_len] != '\0') {
+        VITIS_LOOP_33_3: while (p[p_len] != '\0') {
             temp[p_len] = p[p_len];
             p_len++;
         }
@@ -1537,10 +1627,10 @@ void encoding(const char *input, int *output_code, int *output_size) {
 
 
         int found = -1;
-        VITIS_LOOP_49_4: for (int j = 0; j < table_size; j++) {
+        VITIS_LOOP_42_4: for (int j = 0; j < table_size; j++) {
 #pragma HLS pipeline II=1
  int k = 0;
-            VITIS_LOOP_52_5: while (temp[k] != '\0' && table[j].str[k] == temp[k]) {
+            VITIS_LOOP_45_5: while (temp[k] != '\0' && table[j].str[k] == temp[k]) {
                 k++;
             }
             if (temp[k] == '\0' && table[j].str[k] == '\0') {
@@ -1552,15 +1642,15 @@ void encoding(const char *input, int *output_code, int *output_size) {
         if (found != -1) {
 
             int k = 0;
-            VITIS_LOOP_64_6: while ((p[k] = temp[k]) != '\0') {
+            VITIS_LOOP_57_6: while ((p[k] = temp[k]) != '\0') {
                 k++;
             }
         } else {
 
-            VITIS_LOOP_69_7: for (int j = 0; j < table_size; j++) {
+            VITIS_LOOP_62_7: for (int j = 0; j < table_size; j++) {
 #pragma HLS pipeline II=1
  int k = 0;
-                VITIS_LOOP_72_8: while (p[k] != '\0' && table[j].str[k] == p[k]) {
+                VITIS_LOOP_65_8: while (p[k] != '\0' && table[j].str[k] == p[k]) {
                     k++;
                 }
                 if (p[k] == '\0' && table[j].str[k] == '\0') {
@@ -1572,7 +1662,7 @@ void encoding(const char *input, int *output_code, int *output_size) {
 
             if (table_size < 4096) {
                 int k = 0;
-                VITIS_LOOP_84_9: while ((table[table_size].str[k] = temp[k]) != '\0') {
+                VITIS_LOOP_77_9: while ((table[table_size].str[k] = temp[k]) != '\0') {
                     k++;
                 }
                 table[table_size].code = code++;
@@ -1586,9 +1676,9 @@ void encoding(const char *input, int *output_code, int *output_size) {
     }
 
 
-    VITIS_LOOP_98_10: for (int j = 0; j < table_size; j++) {
+    VITIS_LOOP_91_10: for (int j = 0; j < table_size; j++) {
         int k = 0;
-        VITIS_LOOP_100_11: while (p[k] != '\0' && table[j].str[k] == p[k]) {
+        VITIS_LOOP_93_11: while (p[k] != '\0' && table[j].str[k] == p[k]) {
             k++;
         }
         if (p[k] == '\0' && table[j].str[k] == '\0') {
@@ -1603,12 +1693,12 @@ void encoding(const char *input, int *output_code, int *output_size) {
 
 void decoding(const int *encoded_data, int encoded_size, char *output) {
     DictionaryEntry table[4096];
-    int table_size = 255 + 1;
+    int table_size = 256 + 1;
 
 #pragma HLS array_partition variable=table cyclic factor=16 dim=1
 
 
- VITIS_LOOP_120_1: for (int i = 0; i <= 255; i++) {
+ VITIS_LOOP_113_1: for (int i = 0; i <= 256; i++) {
 #pragma HLS unroll factor=16
  table[i].str[0] = (char)i;
         table[i].str[1] = '\0';
@@ -1620,33 +1710,33 @@ void decoding(const int *encoded_data, int encoded_size, char *output) {
 
 
     int k = 0;
-    VITIS_LOOP_132_2: while ((output[output_index++] = table[old_code].str[k++]) != '\0') {
+    VITIS_LOOP_125_2: while ((output[output_index++] = table[old_code].str[k++]) != '\0') {
     }
     output_index--;
     char c = table[old_code].str[0];
 
-    VITIS_LOOP_137_3: for (int i = 1; i < encoded_size; i++) {
+    VITIS_LOOP_130_3: for (int i = 1; i < encoded_size; i++) {
         int new_code = encoded_data[i];
         char entry[1024];
 
 
         if (new_code >= table_size) {
             k = 0;
-            VITIS_LOOP_144_4: while ((entry[k] = table[old_code].str[k]) != '\0') {
+            VITIS_LOOP_137_4: while ((entry[k] = table[old_code].str[k]) != '\0') {
                 k++;
             }
             entry[k++] = c;
             entry[k] = '\0';
         } else {
             k = 0;
-            VITIS_LOOP_151_5: while ((entry[k] = table[new_code].str[k]) != '\0') {
+            VITIS_LOOP_144_5: while ((entry[k] = table[new_code].str[k]) != '\0') {
                 k++;
             }
         }
 
 
         k = 0;
-        VITIS_LOOP_158_6: while (entry[k] != '\0') {
+        VITIS_LOOP_151_6: while (entry[k] != '\0') {
             output[output_index++] = entry[k++];
         }
 
@@ -1654,7 +1744,7 @@ void decoding(const int *encoded_data, int encoded_size, char *output) {
         if (table_size < 4096) {
             k = 0;
             int old_len = 0;
-            VITIS_LOOP_166_7: while ((table[table_size].str[k] = table[old_code].str[k]) != '\0') {
+            VITIS_LOOP_159_7: while ((table[table_size].str[k] = table[old_code].str[k]) != '\0') {
                 k++;
             }
             table[table_size].str[k] = entry[0];
@@ -1672,13 +1762,16 @@ void decoding(const int *encoded_data, int encoded_size, char *output) {
 }
 
 
-__attribute__((sdx_kernel("main", 0))) void lzw_fpga(const char *s, int *output_code, int *output_size, const int *encoded_data, int encoded_size, char *output) {
+__attribute__((sdx_kernel("main", 0))) int lzw_fpga(const char *s, int *output_code, int *output_size, char *output) {
 #pragma HLS TOP name=lzw_fpga
-# 184 "hls/lzw_hls.cpp"
+# 177 "hls/lzw_hls.cpp"
 
 #pragma HLS TOP name=main
-# 184 "hls/lzw_hls.cpp"
+# 177 "hls/lzw_hls.cpp"
 
     encoding(s, output_code, output_size);
-    decoding(encoded_data, encoded_size, output);
+    const int *encoded_data = output_code;
+    decoding(encoded_data, *output_size, output);
+
+    return 0;
 }

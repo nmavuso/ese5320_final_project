@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'main'" level="0">
-<item name = "Date">Tue Nov 12 23:00:28 2024
+<item name = "Date">Fri Nov 15 11:25:13 2024
 </item>
 <item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
 <item name = "Project">fpga_acceleration</item>
@@ -31,8 +31,8 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_encoding_fu_102">encoding, ?, ?, ?, ?, ?, ?, none</column>
-<column name="grp_decoding_fu_114">decoding, ?, ?, ?, ?, ?, ?, none</column>
+<column name="grp_encoding_fu_106">encoding, ?, ?, ?, ?, ?, ?, none</column>
+<column name="grp_decoding_fu_118">decoding, ?, ?, ?, ?, ?, ?, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

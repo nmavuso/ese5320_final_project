@@ -1,20 +1,20 @@
 INFO: Applying HLS Y2K22 patch v1.2 for IP revision
 INFO: [HLS 200-10] Running '/mnt/pollux/software/xilinx/2020.2/Vitis_HLS/2020.2/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'nmavuso' on host 'big15.seas.upenn.edu' (Linux_x86_64 version 6.4.0-150600.23.7-default) on Thu Nov 14 00:08:37 EST 2024
+INFO: [HLS 200-10] For user 'nmavuso' on host 'big14.seas.upenn.edu' (Linux_x86_64 version 6.4.0-150600.23.14-default) on Fri Nov 15 12:44:29 EST 2024
 INFO: [HLS 200-10] On os "openSUSE Leap 15.6"
 INFO: [HLS 200-10] In directory '/mnt/castor/seas_home/n/nmavuso/ese5320_final_project'
-Sourcing Tcl script '/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/fpga_acceleration/solution1/csim.tcl'
-INFO: [HLS 200-1510] Running: open_project fpga_acceleration 
-INFO: [HLS 200-10] Opening project '/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/fpga_acceleration'.
+Sourcing Tcl script '/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/lzw_fpga/solution1/export.tcl'
+INFO: [HLS 200-1510] Running: open_project lzw_fpga 
+INFO: [HLS 200-10] Opening project '/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/lzw_fpga'.
 INFO: [HLS 200-1510] Running: set_top lzw_fpga 
-INFO: [HLS 200-1510] Running: add_files hls/lzw_hls.cpp 
-INFO: [HLS 200-10] Adding design file 'hls/lzw_hls.cpp' to the project
-INFO: [HLS 200-1510] Running: add_files hls/lzw_hls.h 
-INFO: [HLS 200-10] Adding design file 'hls/lzw_hls.h' to the project
-INFO: [HLS 200-1510] Running: add_files -tb hls/Testbench.cpp 
+INFO: [HLS 200-1510] Running: add_files ../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp 
+INFO: [HLS 200-10] Adding design file '../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files ../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.h 
+INFO: [HLS 200-10] Adding design file '../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb hls/Testbench.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
 INFO: [HLS 200-10] Adding test bench file 'hls/Testbench.cpp' to the project
 INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vitis 
-INFO: [HLS 200-10] Opening solution '/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/fpga_acceleration/solution1'.
+INFO: [HLS 200-10] Opening solution '/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/lzw_fpga/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.7ns.
 INFO: [HLS 200-10] Setting target device to 'xczu3eg-sbva484-1-i'
 INFO: [HLS 200-1505] Using flow_target 'vitis'
@@ -29,15 +29,21 @@ INFO: [HLS 200-1510] Running: set_part xczu3eg-sbva484-1-i
 INFO: [HLS 200-1510] Running: create_clock -period 6.7 -name default 
 INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 -m_axi_offset slave 
 INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
-INFO: [HLS 200-1510] Running: set_directive_top -name main lzw_fpga 
 INFO: [HLS 200-1510] Running: set_directive_top -name lzw_fpga lzw_fpga 
-INFO: [HLS 200-1510] Running: csim_design -quiet 
-INFO: [SIM 211-2] *************** CSIM start ***************
-INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
-   Compiling ../../../../hls/Testbench.cpp in debug mode
-   Compiling ../../../../hls/lzw_hls.cpp in debug mode
-   Generating csim.exe
-TEST PASSED
-INFO: [SIM 211-1] CSim done with 0 errors.
-INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0.57 seconds. CPU system time: 0.35 seconds. Elapsed time: 3.87 seconds; current allocated memory: 208.178 MB.
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format xo 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+ipx::create_core: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2239.430 ; gain = 0.000 ; free physical = 401 ; free virtual = 4715
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/mnt/pollux/software/xilinx/2020.2/Vivado/2020.2/data/ip'.
+Running package_xo -xo_path /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/lzw_fpga/solution1/impl/export.xo -kernel_name lzw_fpga -kernel_xml /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/lzw_fpga/solution1/impl/ip/../kernel/kernel.xml -kernel_files /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp -ip_directory /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/lzw_fpga/solution1/impl/ip/ip_unzip_dir -design_xml /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/lzw_fpga/solution1/.autopilot/db/lzw_fpga.design.xml -debug_directory /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/lzw_fpga/solution1/.debug -hls_directory /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/lzw_fpga/solution1/impl/ip/hls_files
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 15 12:45:39 2024...
+INFO: [HLS 200-802] Generated output file lzw_fpga/solution1/impl/export.xo
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 21.68 seconds. CPU system time: 3.23 seconds. Elapsed time: 73.39 seconds; current allocated memory: 217.296 MB.

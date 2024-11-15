@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Nov 15 12:56:29 2024
+# Process ID: 4137
+# Current directory: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl
+# Command line: vivado -log vivado.log -applog -messageDb vivado.pb -mode batch -source vpl.tcl -notrace
+# Log file: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/vivado.log
+# Journal file: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/vivado.jou
+#-----------------------------------------------------------
+source vpl.tcl -notrace
+INFO: Dispatch client connection id - 36079
+WARNING: failed to connect to dispatch server - client already initialized
+[12:56:49] Run vpl: Step create_project: Started
+INFO: [OCL_UTIL] current step: vpl.create_project
+Creating Vivado project.
+INFO: [OCL_UTIL] set ::origin_dir_loc .local/hw_platform/prj
+INFO: [OCL_UTIL] set ::user_project_name prj
+INFO: [OCL_UTIL] internal step: source .local/hw_platform/prj/rebuild.tcl to create prj project
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 2387.539 ; gain = 0.000 ; free physical = 668 ; free virtual = 4870
+WARNING: [Vivado 12-9135] Ignoring repo path (/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/bdf) because it contains no board files
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/.local/ip'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/mnt/pollux/software/xilinx/2020.2/Vivado/2020.2/data/ip'.
+update_ip_catalog: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 2387.539 ; gain = 0.000 ; free physical = 607 ; free virtual = 4834

@@ -6,7 +6,7 @@ catch {::common::set_param -quiet hls.xocc.mode csynth};
 open_project lzw_fpga
 set_top lzw_fpga
 # v++ -g, -D, -I, --advanced.prop kernel.lzw_fpga.kernel_flags
-add_files "/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c" -cflags " -g -I /mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls "
+add_files "/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" -cflags " -g -I /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls "
 open_solution -flow_target vitis solution
 set_part xczu3eg-sbva484-1-i
 create_clock -period 150.000000MHz -name default

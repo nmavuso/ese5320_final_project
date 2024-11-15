@@ -5,13 +5,16 @@
 `timescale 1 ns / 1 ps
 module main_top (
 aresetn,
-aclk
+aclk,
+ap_return
 );
 
 parameter RESET_ACTIVE_LOW = 1;
 input aresetn ;
 
 input aclk ;
+
+output [32 - 1:0] ap_return ;
 
 wire aresetn;
 
@@ -22,7 +25,8 @@ wire sig_main_ap_rst_n;
 
 main main_U(
     .ap_rst_n(sig_main_ap_rst_n),
-    .ap_clk(aclk)
+    .ap_clk(aclk),
+    .ap_return(ap_return)
 );
 
 main_ap_rst_n_if #(

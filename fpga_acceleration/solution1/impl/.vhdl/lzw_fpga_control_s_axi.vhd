@@ -32,17 +32,16 @@ port (
     RVALID                :out  STD_LOGIC;
     RREADY                :in   STD_LOGIC;
     interrupt             :out  STD_LOGIC;
-    s                     :out  STD_LOGIC_VECTOR(63 downto 0);
-    output_code           :out  STD_LOGIC_VECTOR(63 downto 0);
-    output_size           :out  STD_LOGIC_VECTOR(63 downto 0);
-    encoded_data          :out  STD_LOGIC_VECTOR(63 downto 0);
-    encoded_size          :out  STD_LOGIC_VECTOR(31 downto 0);
-    output_r              :out  STD_LOGIC_VECTOR(63 downto 0);
     ap_start              :out  STD_LOGIC;
     ap_done               :in   STD_LOGIC;
     ap_ready              :in   STD_LOGIC;
     ap_continue           :out  STD_LOGIC;
-    ap_idle               :in   STD_LOGIC
+    ap_idle               :in   STD_LOGIC;
+    ap_return             :in   STD_LOGIC_VECTOR(31 downto 0);
+    s                     :out  STD_LOGIC_VECTOR(63 downto 0);
+    output_code           :out  STD_LOGIC_VECTOR(63 downto 0);
+    output_size           :out  STD_LOGIC_VECTOR(63 downto 0);
+    output_r              :out  STD_LOGIC_VECTOR(63 downto 0)
 );
 end entity lzw_fpga_control_s_axi;
 
@@ -66,34 +65,28 @@ end entity lzw_fpga_control_s_axi;
 --        bit 0  - ap_done (COR/TOW)
 --        bit 1  - ap_ready (COR/TOW)
 --        others - reserved
--- 0x10 : Data signal of s
+-- 0x10 : Data signal of ap_return
+--        bit 31~0 - ap_return[31:0] (Read)
+-- 0x18 : Data signal of s
 --        bit 31~0 - s[31:0] (Read/Write)
--- 0x14 : Data signal of s
+-- 0x1c : Data signal of s
 --        bit 31~0 - s[63:32] (Read/Write)
--- 0x18 : reserved
--- 0x1c : Data signal of output_code
+-- 0x20 : reserved
+-- 0x24 : Data signal of output_code
 --        bit 31~0 - output_code[31:0] (Read/Write)
--- 0x20 : Data signal of output_code
+-- 0x28 : Data signal of output_code
 --        bit 31~0 - output_code[63:32] (Read/Write)
--- 0x24 : reserved
--- 0x28 : Data signal of output_size
+-- 0x2c : reserved
+-- 0x30 : Data signal of output_size
 --        bit 31~0 - output_size[31:0] (Read/Write)
--- 0x2c : Data signal of output_size
+-- 0x34 : Data signal of output_size
 --        bit 31~0 - output_size[63:32] (Read/Write)
--- 0x30 : reserved
--- 0x34 : Data signal of encoded_data
---        bit 31~0 - encoded_data[31:0] (Read/Write)
--- 0x38 : Data signal of encoded_data
---        bit 31~0 - encoded_data[63:32] (Read/Write)
--- 0x3c : reserved
--- 0x40 : Data signal of encoded_size
---        bit 31~0 - encoded_size[31:0] (Read/Write)
--- 0x44 : reserved
--- 0x48 : Data signal of output_r
+-- 0x38 : reserved
+-- 0x3c : Data signal of output_r
 --        bit 31~0 - output_r[31:0] (Read/Write)
--- 0x4c : Data signal of output_r
+-- 0x40 : Data signal of output_r
 --        bit 31~0 - output_r[63:32] (Read/Write)
--- 0x50 : reserved
+-- 0x44 : reserved
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 architecture behave of lzw_fpga_control_s_axi is
@@ -101,27 +94,23 @@ architecture behave of lzw_fpga_control_s_axi is
     signal wstate  : states := wrreset;
     signal rstate  : states := rdreset;
     signal wnext, rnext: states;
-    constant ADDR_AP_CTRL             : INTEGER := 16#00#;
-    constant ADDR_GIE                 : INTEGER := 16#04#;
-    constant ADDR_IER                 : INTEGER := 16#08#;
-    constant ADDR_ISR                 : INTEGER := 16#0c#;
-    constant ADDR_S_DATA_0            : INTEGER := 16#10#;
-    constant ADDR_S_DATA_1            : INTEGER := 16#14#;
-    constant ADDR_S_CTRL              : INTEGER := 16#18#;
-    constant ADDR_OUTPUT_CODE_DATA_0  : INTEGER := 16#1c#;
-    constant ADDR_OUTPUT_CODE_DATA_1  : INTEGER := 16#20#;
-    constant ADDR_OUTPUT_CODE_CTRL    : INTEGER := 16#24#;
-    constant ADDR_OUTPUT_SIZE_DATA_0  : INTEGER := 16#28#;
-    constant ADDR_OUTPUT_SIZE_DATA_1  : INTEGER := 16#2c#;
-    constant ADDR_OUTPUT_SIZE_CTRL    : INTEGER := 16#30#;
-    constant ADDR_ENCODED_DATA_DATA_0 : INTEGER := 16#34#;
-    constant ADDR_ENCODED_DATA_DATA_1 : INTEGER := 16#38#;
-    constant ADDR_ENCODED_DATA_CTRL   : INTEGER := 16#3c#;
-    constant ADDR_ENCODED_SIZE_DATA_0 : INTEGER := 16#40#;
-    constant ADDR_ENCODED_SIZE_CTRL   : INTEGER := 16#44#;
-    constant ADDR_OUTPUT_R_DATA_0     : INTEGER := 16#48#;
-    constant ADDR_OUTPUT_R_DATA_1     : INTEGER := 16#4c#;
-    constant ADDR_OUTPUT_R_CTRL       : INTEGER := 16#50#;
+    constant ADDR_AP_CTRL            : INTEGER := 16#00#;
+    constant ADDR_GIE                : INTEGER := 16#04#;
+    constant ADDR_IER                : INTEGER := 16#08#;
+    constant ADDR_ISR                : INTEGER := 16#0c#;
+    constant ADDR_AP_RETURN_0        : INTEGER := 16#10#;
+    constant ADDR_S_DATA_0           : INTEGER := 16#18#;
+    constant ADDR_S_DATA_1           : INTEGER := 16#1c#;
+    constant ADDR_S_CTRL             : INTEGER := 16#20#;
+    constant ADDR_OUTPUT_CODE_DATA_0 : INTEGER := 16#24#;
+    constant ADDR_OUTPUT_CODE_DATA_1 : INTEGER := 16#28#;
+    constant ADDR_OUTPUT_CODE_CTRL   : INTEGER := 16#2c#;
+    constant ADDR_OUTPUT_SIZE_DATA_0 : INTEGER := 16#30#;
+    constant ADDR_OUTPUT_SIZE_DATA_1 : INTEGER := 16#34#;
+    constant ADDR_OUTPUT_SIZE_CTRL   : INTEGER := 16#38#;
+    constant ADDR_OUTPUT_R_DATA_0    : INTEGER := 16#3c#;
+    constant ADDR_OUTPUT_R_DATA_1    : INTEGER := 16#40#;
+    constant ADDR_OUTPUT_R_CTRL      : INTEGER := 16#44#;
     constant ADDR_BITS         : INTEGER := 7;
 
     signal waddr               : UNSIGNED(ADDR_BITS-1 downto 0);
@@ -145,11 +134,10 @@ architecture behave of lzw_fpga_control_s_axi is
     signal int_gie             : STD_LOGIC := '0';
     signal int_ier             : UNSIGNED(1 downto 0) := (others => '0');
     signal int_isr             : UNSIGNED(1 downto 0) := (others => '0');
+    signal int_ap_return       : UNSIGNED(31 downto 0);
     signal int_s               : UNSIGNED(63 downto 0) := (others => '0');
     signal int_output_code     : UNSIGNED(63 downto 0) := (others => '0');
     signal int_output_size     : UNSIGNED(63 downto 0) := (others => '0');
-    signal int_encoded_data    : UNSIGNED(63 downto 0) := (others => '0');
-    signal int_encoded_size    : UNSIGNED(31 downto 0) := (others => '0');
     signal int_output_r        : UNSIGNED(63 downto 0) := (others => '0');
 
 
@@ -279,6 +267,8 @@ begin
                         rdata_data(1 downto 0) <= int_ier;
                     when ADDR_ISR =>
                         rdata_data(1 downto 0) <= int_isr;
+                    when ADDR_AP_RETURN_0 =>
+                        rdata_data <= RESIZE(int_ap_return(31 downto 0), 32);
                     when ADDR_S_DATA_0 =>
                         rdata_data <= RESIZE(int_s(31 downto 0), 32);
                     when ADDR_S_DATA_1 =>
@@ -291,12 +281,6 @@ begin
                         rdata_data <= RESIZE(int_output_size(31 downto 0), 32);
                     when ADDR_OUTPUT_SIZE_DATA_1 =>
                         rdata_data <= RESIZE(int_output_size(63 downto 32), 32);
-                    when ADDR_ENCODED_DATA_DATA_0 =>
-                        rdata_data <= RESIZE(int_encoded_data(31 downto 0), 32);
-                    when ADDR_ENCODED_DATA_DATA_1 =>
-                        rdata_data <= RESIZE(int_encoded_data(63 downto 32), 32);
-                    when ADDR_ENCODED_SIZE_DATA_0 =>
-                        rdata_data <= RESIZE(int_encoded_size(31 downto 0), 32);
                     when ADDR_OUTPUT_R_DATA_0 =>
                         rdata_data <= RESIZE(int_output_r(31 downto 0), 32);
                     when ADDR_OUTPUT_R_DATA_1 =>
@@ -317,8 +301,6 @@ begin
     s                    <= STD_LOGIC_VECTOR(int_s);
     output_code          <= STD_LOGIC_VECTOR(int_output_code);
     output_size          <= STD_LOGIC_VECTOR(int_output_size);
-    encoded_data         <= STD_LOGIC_VECTOR(int_encoded_data);
-    encoded_size         <= STD_LOGIC_VECTOR(int_encoded_size);
     output_r             <= STD_LOGIC_VECTOR(int_output_r);
 
     process (ACLK)
@@ -451,6 +433,19 @@ begin
     process (ACLK)
     begin
         if (ACLK'event and ACLK = '1') then
+            if (ARESET = '1') then
+                int_ap_return <= (others => '0');
+            elsif (ACLK_EN = '1') then
+                if (ap_done = '1') then
+                    int_ap_return <= UNSIGNED(ap_return);
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
             if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_S_DATA_0) then
                     int_s(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_s(31 downto 0));
@@ -509,39 +504,6 @@ begin
             if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_OUTPUT_SIZE_DATA_1) then
                     int_output_size(63 downto 32) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_output_size(63 downto 32));
-                end if;
-            end if;
-        end if;
-    end process;
-
-    process (ACLK)
-    begin
-        if (ACLK'event and ACLK = '1') then
-            if (ACLK_EN = '1') then
-                if (w_hs = '1' and waddr = ADDR_ENCODED_DATA_DATA_0) then
-                    int_encoded_data(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_encoded_data(31 downto 0));
-                end if;
-            end if;
-        end if;
-    end process;
-
-    process (ACLK)
-    begin
-        if (ACLK'event and ACLK = '1') then
-            if (ACLK_EN = '1') then
-                if (w_hs = '1' and waddr = ADDR_ENCODED_DATA_DATA_1) then
-                    int_encoded_data(63 downto 32) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_encoded_data(63 downto 32));
-                end if;
-            end if;
-        end if;
-    end process;
-
-    process (ACLK)
-    begin
-        if (ACLK'event and ACLK = '1') then
-            if (ACLK_EN = '1') then
-                if (w_hs = '1' and waddr = ADDR_ENCODED_SIZE_DATA_0) then
-                    int_encoded_size(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_encoded_size(31 downto 0));
                 end if;
             end if;
         end if;

@@ -187,7 +187,7 @@ set RtlHierarchyInfo {[
 
 set ArgLastReadFirstWriteLatency {
 	decoding {
-		gmem {Type IO LastRead 226 FirstWrite 75}
+		gmem {Type IO LastRead 224 FirstWrite 75}
 		encoded_data {Type I LastRead 0 FirstWrite -1}
 		encoded_size {Type I LastRead 0 FirstWrite -1}
 		output_r {Type I LastRead 0 FirstWrite -1}}}
@@ -200,8 +200,6 @@ set PerformanceInfo {[
 ]}
 
 set PipelineEnableSignalInfo {[
-	{"Pipeline" : "1", "EnableSignal" : "ap_enable_pp1"}
-	{"Pipeline" : "4", "EnableSignal" : "ap_enable_pp4"}
 ]}
 
 set Spec2ImplPortList { 

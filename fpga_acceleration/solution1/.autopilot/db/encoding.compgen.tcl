@@ -319,7 +319,7 @@ set ID 8
 set hasByteEnable 0
 set MemName lzw_fpga_encoding_table_str_0
 set CoreName ap_simcore_mem
-set PortList { 2 2 }
+set PortList { 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 }
 set DataWd 8
 set AddrRange 262144
 set AddrWd 18
@@ -345,7 +345,7 @@ if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
     sync_rst true \
     stage_num ${NumOfStage}  \
     registered_input ${RegisteredInput} \
-    port_num 2 \
+    port_num 17 \
     port_list \{${PortList}\} \
     data_wd ${DataWd} \
     addr_wd ${AddrWd} \
@@ -368,7 +368,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set CoreName RAM
+set CoreName RAM_1WnR
 if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
 if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RAM"} {
     eval "::AESL_LIB_VIRTEX::xil_gen_RAM { \
@@ -381,7 +381,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
     sync_rst true \
     stage_num ${NumOfStage}  \
     registered_input ${RegisteredInput} \
-    port_num 2 \
+    port_num 17 \
     port_list \{${PortList}\} \
     data_wd ${DataWd} \
     addr_wd ${AddrWd} \
