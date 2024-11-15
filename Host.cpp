@@ -22,31 +22,52 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 **********/
 
-#include "Utilities.h"
+// Function to check results
+static int result_check(const int *Output_HW, int output_size_hw, const int *Output_SW, int output_size_sw) {
+    // Check if the output sizes are equal
+    if (output_size_hw != output_size_sw) {
+        std::cout << "Mismatch in output size: HW=" << output_size_hw
+                  << " SW=" << output_size_sw << std::endl;
+        return 1;
+    }
 
+    // Check if the content matches
+    for (int i = 0; i < output_size_hw; ++i) {
+        if (Output_HW[i] != Output_SW[i]) {
+            std::cout << "Mismatch in test at index " << i
+                      << " expected=" << Output_SW[i]
+                      << " , got=" << Output_HW[i] << std::endl;
+            return 1;
+        }
+    }
+
+    return 0; // Pass
+}
+
+#include "Utilities.h"
 // ------------------------------------------------------------------------------------
 // Main program
 // ------------------------------------------------------------------------------------
-int main(int argc, char** argv)
-{
-// Initialize an event timer we'll use for monitoring the application
+int main(int argc, char **argv) {
+    // Initialize an event timer for monitoring the application
     EventTimer timer;
-// ------------------------------------------------------------------------------------
-// Step 1: Initialize the OpenCL environment 
-// ------------------------------------------------------------------------------------ 
+
+    // ------------------------------------------------------------------------------------
+    // Step 1: Initialize the OpenCL environment
+    // ------------------------------------------------------------------------------------
     timer.add("OpenCL Initialization");
     cl_int err;
     std::string binaryFile = argv[1];
-    unsigned fileBufSize;    
+    unsigned fileBufSize;
     std::vector<cl::Device> devices = get_xilinx_devices();
     devices.resize(1);
     cl::Device device = devices[0];
     cl::Context context(device, NULL, NULL, NULL, &err);
-    char* fileBuf = read_binary_file(binaryFile, fileBufSize);
+    char *fileBuf = read_binary_file(binaryFile, fileBufSize);
     cl::Program::Binaries bins{{fileBuf, fileBufSize}};
     cl::Program program(context, devices, bins, NULL, &err);
     cl::CommandQueue q(context, device, CL_QUEUE_PROFILING_ENABLE, &err);
-    cl::Kernel krnl_lzw(program,"lzw_fpga", &err);
+    cl::Kernel krnl_lzw(program, "encoding", &err);
 
     // ------------------------------------------------------------------------------------
     // Step 2: Create buffers and initialize test values
@@ -97,23 +118,38 @@ int main(int argc, char** argv)
     timer.finish();
 
     // ------------------------------------------------------------------------------------
-    // Step 4: Check Results and Release Allocated Resources
+    // Step 4: Testbench validation
     // ------------------------------------------------------------------------------------
-    std::cout << "Encoded Output Size: " << *output_size_hw << std::endl;
-    std::cout << "Encoded Data: ";
-    for (int i = 0; i < *output_size_hw; ++i) {
-        std::cout << output_hw[i] << " ";
-    }
-    std::cout << std::endl;
+    const int MAX_OUTPUT_SIZE_SW = 1024;
 
+    int output_sw[MAX_OUTPUT_SIZE_SW] = {0};
+    int output_size_sw = 0;
+    char decoded_fpga[MAX_OUTPUT_SIZE] = {0};
+    char decoded_sw[MAX_OUTPUT_SIZE_SW] = {0};
+
+    // Call software LZW function
+    int encoding_success = encoding(test_input, output_sw, &output_size_sw);
+    if (encoding_success != 0) {
+        std::cerr << "Error: Software encoding failed!" << std::endl;
+        return 1;
+    }
+
+    // Validate FPGA output against software output
+    int failed = result_check(output_hw, *output_size_hw, output_sw, output_size_sw);
+
+    std::cout << "--------------- Key execution times ---------------" << std::endl;
+    timer.print();
+
+    std::cout << "TEST " << (!failed ? "PASSED" : "FAILED") << std::endl;
+
+    // ------------------------------------------------------------------------------------
+    // Cleanup
+    // ------------------------------------------------------------------------------------
     delete[] fileBuf;
     q.enqueueUnmapMemObject(input_buf, input);
     q.enqueueUnmapMemObject(output_buf, output_hw);
     q.enqueueUnmapMemObject(output_size_buf, output_size_hw);
     q.finish();
 
-    std::cout << "--------------- Key execution times ---------------" << std::endl;
-    timer.print();
-
-    return EXIT_SUCCESS;
+    return failed ? EXIT_FAILURE : EXIT_SUCCESS;
 }
