@@ -1,0 +1,4 @@
+*.adb linguist-vendored
+*.ads linguist-vendored
+*.v linguist-vendored
+*.vhdl linguist-vendored
