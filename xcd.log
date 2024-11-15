@@ -10,3 +10,8 @@ Fri Nov 15 12:55:40 2024: EXCHANGE_TOKEN received, server token: 2755f870-4838-4
 Fri Nov 15 12:55:40 2024: SESSION_MGR: creating session with session uuid: '30d0b6d7-128a-4622-88c2-924f50e157e6' and name 'v++_link_lzw_hls'
 Fri Nov 15 12:55:40 2024: GUIDANCE_SMGR: creating guidance session with uuid: '30d0b6d7-128a-4622-88c2-924f50e157e6' and name 'v++_link_lzw_hls'
 Fri Nov 15 12:56:11 2024: Dispatch Server: Accepted socket connection from client
+Fri Nov 15 12:56:49 2024: Dispatch Server: Accepted socket connection from client
+Fri Nov 15 13:00:37 2024: Dispatch Server: Accepted socket connection from client
+Fri Nov 15 13:00:37 2024: Dispatch Server: Accepted socket connection from client
+Fri Nov 15 13:00:37 2024: Dispatch Server: Accepted socket connection from client
+Fri Nov 15 13:00:37 2024: Dispatch Server: Accepted socket connection from client

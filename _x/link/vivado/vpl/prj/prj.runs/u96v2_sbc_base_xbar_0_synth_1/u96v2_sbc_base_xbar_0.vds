@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Nov 15 13:00:05 2024
+# Process ID: 5596
+# Current directory: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/prj/prj.runs/u96v2_sbc_base_xbar_0_synth_1
+# Command line: vivado -log u96v2_sbc_base_xbar_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source u96v2_sbc_base_xbar_0.tcl
+# Log file: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/prj/prj.runs/u96v2_sbc_base_xbar_0_synth_1/u96v2_sbc_base_xbar_0.vds
+# Journal file: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/prj/prj.runs/u96v2_sbc_base_xbar_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source u96v2_sbc_base_xbar_0.tcl -notrace
+INFO: Dispatch client connection id - 36079
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 2373.910 ; gain = 0.020 ; free physical = 726 ; free virtual = 2672
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/int/xo/ip_repo/xilinx_com_hls_lzw_fpga_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/.local/hw_platform/iprepo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/data/cache/xilinx'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/.local/hw_platform/ipcache'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/mnt/pollux/software/xilinx/2020.2/Vivado/2020.2/data/ip'.
+update_ip_catalog: Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 2373.910 ; gain = 0.000 ; free physical = 414 ; free virtual = 2377
+Command: synth_design -top u96v2_sbc_base_xbar_0 -part xczu3eg-sbva484-1-i -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Device 21-403] Loading part xczu3eg-sbva484-1-i

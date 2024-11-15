@@ -61,3 +61,17 @@ INFO: [VPL 60-839] Read in kernel information from file '/mnt/castor/seas_home/n
 INFO: [VPL 60-423]   Target device: u96v2_sbc_base
 INFO: [VPL 60-1032] Extracting hardware platform to /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/.local/hw_platform
 WARNING: /mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/tps/lnx64/jre9.0.4 does not exist.
+[12:56:49] Run vpl: Step create_project: Started
+Creating Vivado project.
+[12:57:40] Run vpl: Step create_project: Completed
+[12:57:40] Run vpl: Step create_bd: Started
+[12:58:15] Run vpl: Step create_bd: Completed
+[12:58:15] Run vpl: Step update_bd: Started
+[12:58:15] Run vpl: Step update_bd: Completed
+[12:58:15] Run vpl: Step generate_target: Started
+[12:59:34] Run vpl: Step generate_target: RUNNING...
+[12:59:46] Run vpl: Step generate_target: Completed
+[12:59:46] Run vpl: Step config_hw_runs: Started
+[12:59:56] Run vpl: Step config_hw_runs: Completed
+[12:59:56] Run vpl: Step synth: Started
+[13:01:01] Block-level synthesis in progress, 0 of 25 jobs complete, 4 jobs running.

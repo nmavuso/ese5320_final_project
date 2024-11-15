@@ -1,6 +1,6 @@
 {
-"completedTask": "vpl",
-"activeTask": "vpl.create_project",
+"completedTask": "vpl.config_hw_runs",
+"activeTask": "vpl.synth",
     "runComplete": "false",
     "taskList": [
         "system_link",

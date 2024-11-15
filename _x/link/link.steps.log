@@ -294,3 +294,101 @@ vivado.prop run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sd
    VPL internal step: source .local/hw_platform/prj/rebuild.tcl to create prj project
    File: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/.local/ocl_util.tcl:386
    timestamp: 15 November 2024 12:56:49
+   -----------------------
+  current step: vpl.create_bd
+   -----------------------
+   VPL internal step: update_ip_catalog
+   File: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/.local/ocl_util.tcl:1872
+   timestamp: 15 November 2024 12:57:41
+   -----------------------
+   VPL internal step: config_ip_cache -use_cache_location /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/.ipcache
+   File: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/.local/ocl_util.tcl:1882
+   timestamp: 15 November 2024 12:57:47
+   -----------------------
+   VPL internal step: open_bd_design -auto_upgrade [get_files u96v2_sbc_base.bd]
+   File: vpl.tcl:192
+   timestamp: 15 November 2024 12:57:47
+   -----------------------
+   VPL internal step: report locked IPs
+   File: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/.local/ocl_util.tcl:2574
+   timestamp: 15 November 2024 12:58:02
+   -----------------------
+   VPL internal step: source .local/dr.bd.tcl
+   File: vpl.tcl:220
+   timestamp: 15 November 2024 12:58:02
+   -----------------------
+   VPL internal step: save_bd_design
+   File: vpl.tcl:237
+   timestamp: 15 November 2024 12:58:14
+   -----------------------
+  current step: vpl.update_bd
+   -----------------------
+   VPL internal step: inserting profiling and debug cores
+   File: vpl.tcl:288
+   timestamp: 15 November 2024 12:58:15
+   -----------------------
+   VPL internal step: assign_bd_address
+   File: vpl.tcl:300
+   timestamp: 15 November 2024 12:58:15
+   -----------------------
+   VPL internal step: save_bd_design
+   File: vpl.tcl:310
+   timestamp: 15 November 2024 12:58:15
+   -----------------------
+   VPL internal step: writing address_map.xml
+   File: vpl.tcl:314
+   timestamp: 15 November 2024 12:58:15
+   -----------------------
+  current step: vpl.generate_target
+   -----------------------
+   VPL internal step: generate_target all [get_files u96v2_sbc_base.bd]
+   File: vpl.tcl:340
+   timestamp: 15 November 2024 12:58:15
+   -----------------------
+   VPL internal step: config_ip_cache -export [get_ips -all -of_object [get_files u96v2_sbc_base.bd]]
+   File: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/.local/ocl_util.tcl:1720
+   timestamp: 15 November 2024 12:59:25
+   -----------------------
+   VPL internal step: write_hwdef -force -file /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/int/system.hdf
+   File: vpl.tcl:343
+   timestamp: 15 November 2024 12:59:40
+   -----------------------
+   VPL internal step: writing user synth clock constraints in output/u96v2_sbc_base_ooc_copy.xdc
+   File: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/.local/ocl_util.tcl:1948
+   timestamp: 15 November 2024 12:59:46
+   -----------------------
+   VPL internal step: add_files output/u96v2_sbc_base_ooc_copy.xdc -fileset [current_fileset -constrset]
+   File: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/.local/ocl_util.tcl:1952
+   timestamp: 15 November 2024 12:59:46
+   -----------------------
+  current step: vpl.config_hw_runs
+   -----------------------
+   VPL internal step: creating vpl tcl hooks for implementation run
+   File: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/.local/ocl_util.tcl:3140
+   timestamp: 15 November 2024 12:59:46
+   -----------------------
+   VPL internal step: source scripts/_vivado_report_commands.tcl
+   File: vpl.tcl:377
+   timestamp: 15 November 2024 12:59:46
+   -----------------------
+   VPL internal step: create_report_config -report_name impl_report_timing_summary_route_design_summary -report_type report_timing_summary -steps {route_design} -runs {impl_1} -options {-max_paths 10}
+   File: scripts/_vivado_report_commands.tcl:83
+   timestamp: 15 November 2024 12:59:47
+   -----------------------
+   VPL internal step: create_report_config -report_name impl_report_timing_summary_post_route_phys_opt_design_summary -report_type report_timing_summary -steps {post_route_phys_opt_design} -runs {impl_1} -options {-max_paths 10}
+   File: scripts/_vivado_report_commands.tcl:83
+   timestamp: 15 November 2024 12:59:47
+   -----------------------
+   VPL internal step: source scripts/_vivado_synth_props.tcl
+   File: vpl.tcl:389
+   timestamp: 15 November 2024 12:59:47
+   -----------------------
+   VPL internal step: source scripts/_vivado_impl_props.tcl
+   File: vpl.tcl:439
+   timestamp: 15 November 2024 12:59:56
+   -----------------------
+  current step: vpl.synth
+   -----------------------
+   VPL internal step: launch_runs synth_1 -jobs 4  
+   File: vpl.tcl:492
+   timestamp: 15 November 2024 12:59:56
