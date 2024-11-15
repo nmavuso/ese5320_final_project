@@ -2,3 +2,4 @@
 *.ads linguist-vendored
 *.v linguist-vendored
 *.vhd linguist-vendored
+*.tcl linguist-vendored
