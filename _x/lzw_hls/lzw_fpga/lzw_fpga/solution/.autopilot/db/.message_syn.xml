@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 206.196 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c&apos; ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Source Code Analysis and Preprocessing: CPU user time: 0.14 seconds. CPU system time: 0.12 seconds. Elapsed time: 0.39 seconds; current allocated memory: 207.906 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-777]" key="HLS 200-777" tag="" content="Using interface defaults for &apos;Vitis&apos; flow target." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-178]" key="HLS 214-178" tag="" content="Inlining function &apos;decoding&apos; into &apos;lzw_fpga&apos; (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:122:0)" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 214-194]" key="HLS 214-194" tag="" content="in function &apos;encoding&apos;: Undefined function snprintf (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:39:9)" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 214-194]" key="HLS 214-194" tag="" content="in function &apos;encoding&apos;: Undefined function strcmp (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:43:17)" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 214-194]" key="HLS 214-194" tag="" content="in function &apos;encoding&apos;: Undefined function strcpy (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:50:13)" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 214-194]" key="HLS 214-194" tag="" content="in function &apos;encoding&apos;: Undefined function strcmp (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:54:21)" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 214-194]" key="HLS 214-194" tag="" content="in function &apos;encoding&apos;: Undefined function strcpy (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:61:17)" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 214-194]" key="HLS 214-194" tag="" content="in function &apos;encoding&apos;: Undefined function strcpy (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:66:13)" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 214-194]" key="HLS 214-194" tag="" content="in function &apos;encoding&apos;: Undefined function strcmp (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:72:13)" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 214-194]" key="HLS 214-194" tag="" content="in function &apos;lzw_fpga&apos;: Undefined function snprintf (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:103:13)" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 214-194]" key="HLS 214-194" tag="" content="in function &apos;lzw_fpga&apos;: Undefined function strcpy (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:105:13)" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 214-194]" key="HLS 214-194" tag="" content="in function &apos;lzw_fpga&apos;: Undefined function snprintf (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:112:13)" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 214-135]" key="HLS 214-135" tag="" content="Syn check fail!" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command csynth_design CPU user time: 1.72 seconds. CPU system time: 0.36 seconds. Elapsed time: 2.64 seconds; current allocated memory: 208.349 MB." resolution=""/>
+</Messages>

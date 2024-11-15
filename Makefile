@@ -100,7 +100,15 @@ clean:
 	-${RMDIR} package package.build .Xil fpga/hls/proj_kernel
 	-${RMDIR} _x .ipcache
 
+# Testbench executable
+TESTBENCH_SOURCES = hls/lzw_hls.c hls/Testbench.cpp
+TESTBENCH_EXE = lzw_hls_testbench
 
+.PHONY: lzw_hls
+lzw_hls: $(TESTBENCH_EXE)
+
+$(TESTBENCH_EXE): $(TESTBENCH_SOURCES)
+	g++ -O3 -std=c++11 -I./hls -o "$@" $(TESTBENCH_SOURCES)
 
 
 # $(XO): fpga/hls/MMult.cpp

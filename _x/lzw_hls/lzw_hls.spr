@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="lzw_hls" dir="">
+  <FileSets>
+    <FileSet Name="kernel_lzw_fpga" Type="DesignSrcs">
+      <File Path="/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c"/>
+      <Config/>
+    </FileSet>
+  </FileSets>
+  <Runs/>
+</project>

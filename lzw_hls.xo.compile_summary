@@ -9,18 +9,18 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "Fri Nov 15 10:33:20 2024",
- "timestampMillis": "1731684800646",
+ "dateTimestamp": "Fri Nov 15 10:42:49 2024",
+ "timestampMillis": "1731685369361",
  "buildStep": {
-  "cmdId": "74063a90-9897-4dd7-a142-273e0fe8444d",
+  "cmdId": "8b9ea557-0ecf-404d-8ae3-00b948124bdb",
   "name": "v++",
   "logFile": "/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/lzw_hls/lzw_hls.steps.log",
-  "commandLine": "/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/bin/unwrapped/lnx64.o/v++  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --target hw -k krnl_lzw --compile -Ihls --config fpga_acceleration/design.cfg -olzw_hls.xo hls/lzw_hls.c ",
+  "commandLine": "/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/bin/unwrapped/lnx64.o/v++  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --target hw -k lzw_fpga --compile -Ihls --config fpga_acceleration/design.cfg -olzw_hls.xo hls/lzw_hls.c ",
   "args": [
    "--target",
    "hw",
    "-k",
-   "krnl_lzw",
+   "lzw_fpga",
    "--compile",
    "-Ihls",
    "--config",
@@ -31,7 +31,7 @@
   "iniFiles": [
    {
     "path": "/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/fpga_acceleration/design.cfg",
-    "content": "platform=u96v2_sbc_base\ndebug=1\nsave-temps=1\n\n[connectivity]\nnk=krnl_lzw:1:krnl_lzw_1\n"
+    "content": "platform=u96v2_sbc_base\ndebug=1\nsave-temps=1\n\n[connectivity]\nnk=lzw_fpga:1:lzw_fpga_1\n"
    }
   ],
   "cwd": "/mnt/castor/seas_home/j/joaquinr/ese5320_final_project"
@@ -41,10 +41,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Fri Nov 15 10:33:20 2024",
- "timestampMillis": "1731684800648",
+ "dateTimestamp": "Fri Nov 15 10:42:49 2024",
+ "timestampMillis": "1731685369363",
  "status": {
-  "cmdId": "74063a90-9897-4dd7-a142-273e0fe8444d",
+  "cmdId": "8b9ea557-0ecf-404d-8ae3-00b948124bdb",
   "state": "CS_RUNNING"
  }
 }
@@ -52,8 +52,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "Fri Nov 15 10:33:21 2024",
- "timestampMillis": "1731684801814",
+ "dateTimestamp": "Fri Nov 15 10:42:50 2024",
+ "timestampMillis": "1731685370522",
  "buildSummary": {
   "hardwarePlatform": "u96v2_sbc_base.xpfm",
   "hardwareDsa": "u96v2_sbc_base.xsa",
@@ -66,7 +66,7 @@
    {
     "base": {
      "type": "KERNEL",
-     "name": "krnl_lzw",
+     "name": "lzw_fpga",
      "file": "/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/lzw_hls.xo",
      "reports": [],
      "uuid": ""
@@ -88,17 +88,17 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "Fri Nov 15 10:33:21 2024",
- "timestampMillis": "1731684801823",
+ "dateTimestamp": "Fri Nov 15 10:42:50 2024",
+ "timestampMillis": "1731685370531",
  "buildStep": {
-  "cmdId": "a131ca99-f953-47ee-bd56-9d5ac78a8351",
+  "cmdId": "898c8b52-4701-419a-902f-fcb95e02e4c6",
   "name": "vitis_hls",
-  "logFile": "/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/lzw_hls/krnl_lzw/vitis_hls.log",
-  "commandLine": "vitis_hls -f /mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/lzw_hls/krnl_lzw/krnl_lzw.tcl -messageDb vitis_hls.pb",
+  "logFile": "/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/lzw_hls/lzw_fpga/vitis_hls.log",
+  "commandLine": "vitis_hls -f /mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/lzw_hls/lzw_fpga/lzw_fpga.tcl -messageDb vitis_hls.pb",
   "args": [
    "vitis_hls",
    "-f",
-   "/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/lzw_hls/krnl_lzw/krnl_lzw.tcl",
+   "/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/lzw_hls/lzw_fpga/lzw_fpga.tcl",
    "-messageDb",
    "vitis_hls.pb"
   ],
@@ -110,10 +110,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Fri Nov 15 10:33:21 2024",
- "timestampMillis": "1731684801824",
+ "dateTimestamp": "Fri Nov 15 10:42:50 2024",
+ "timestampMillis": "1731685370532",
  "status": {
-  "cmdId": "a131ca99-f953-47ee-bd56-9d5ac78a8351",
+  "cmdId": "898c8b52-4701-419a-902f-fcb95e02e4c6",
   "state": "CS_RUNNING"
  }
 }
@@ -121,10 +121,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Fri Nov 15 10:33:45 2024",
- "timestampMillis": "1731684825763",
+ "dateTimestamp": "Fri Nov 15 10:42:57 2024",
+ "timestampMillis": "1731685377093",
  "status": {
-  "cmdId": "a131ca99-f953-47ee-bd56-9d5ac78a8351",
+  "cmdId": "898c8b52-4701-419a-902f-fcb95e02e4c6",
   "state": "CS_FAILED"
  }
 }
@@ -132,8 +132,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Nov 15 10:33:45 2024",
- "timestampMillis": "1731684825811",
+ "dateTimestamp": "Fri Nov 15 10:42:57 2024",
+ "timestampMillis": "1731685377136",
  "report": {
   "path": "/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/reports/lzw_hls/v++_compile_lzw_hls_guidance.html",
   "name": "",
@@ -145,8 +145,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Nov 15 10:33:45 2024",
- "timestampMillis": "1731684825811",
+ "dateTimestamp": "Fri Nov 15 10:42:57 2024",
+ "timestampMillis": "1731685377136",
  "report": {
   "path": "/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/v++_compile_lzw_hls_guidance.pb",
   "name": "",
@@ -158,10 +158,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Fri Nov 15 10:33:45 2024",
- "timestampMillis": "1731684825817",
+ "dateTimestamp": "Fri Nov 15 10:42:57 2024",
+ "timestampMillis": "1731685377142",
  "status": {
-  "cmdId": "74063a90-9897-4dd7-a142-273e0fe8444d",
+  "cmdId": "8b9ea557-0ecf-404d-8ae3-00b948124bdb",
   "state": "CS_FAILED"
  }
 }

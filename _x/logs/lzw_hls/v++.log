@@ -1,0 +1,38 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/reports/lzw_hls
+	Log files: /mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/logs/lzw_hls
+INFO: [v++ 60-1548] Creating build summary session with primary output /mnt/castor/seas_home/j/joaquinr/ese5320_final_project/lzw_hls.xo.compile_summary, at Fri Nov 15 10:42:49 2024
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Fri Nov 15 10:42:49 2024
+INFO: [v++ 60-1315] Creating rulecheck session with output '/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/reports/lzw_hls/v++_compile_lzw_hls_guidance.html', at Fri Nov 15 10:42:49 2024
+INFO: [v++ 60-895]   Target platform: /home1/e/ese5320/u96v2_sbc_base/u96v2_sbc_base.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/home1/e/ese5320/u96v2_sbc_base/hw/u96v2_sbc_base.xsa'
+INFO: [v++ 60-585] Compiling for hardware target
+INFO: [v++ 60-423]   Target device: u96v2_sbc_base
+INFO: [v++ 60-242] Creating kernel: 'lzw_fpga'
+
+===>The following messages were generated while  performing high-level synthesis for kernel: lzw_fpga Log file: /mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/lzw_hls/lzw_fpga/vitis_hls.log :
+ERROR: [v++ 214-194] in function 'encoding': Undefined function snprintf (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:39:9)
+ERROR: [v++ 214-194] in function 'encoding': Undefined function strcmp (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:43:17)
+ERROR: [v++ 214-194] in function 'encoding': Undefined function strcpy (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:50:13)
+ERROR: [v++ 214-194] in function 'encoding': Undefined function strcmp (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:54:21)
+ERROR: [v++ 214-194] in function 'encoding': Undefined function strcpy (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:61:17)
+ERROR: [v++ 214-194] in function 'encoding': Undefined function strcpy (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:66:13)
+ERROR: [v++ 214-194] in function 'encoding': Undefined function strcmp (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:72:13)
+ERROR: [v++ 214-194] in function 'lzw_fpga': Undefined function snprintf (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:103:13)
+ERROR: [v++ 214-194] in function 'lzw_fpga': Undefined function strcpy (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:105:13)
+ERROR: [v++ 214-194] in function 'lzw_fpga': Undefined function snprintf (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:112:13)
+ERROR: [v++ 214-135] Syn check fail!
+ERROR: [v++ 60-300] Failed to build kernel(ip) lzw_fpga, see log for details: /mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/lzw_hls/lzw_fpga/vitis_hls.log
+ERROR: [v++ 60-773] In '/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/lzw_hls/lzw_fpga/vitis_hls.log', caught Tcl error: ERROR: [HLS 214-194] in function 'encoding': Undefined function snprintf (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:39:9)
+ERROR: [v++ 60-773] In '/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/lzw_hls/lzw_fpga/vitis_hls.log', caught Tcl error: ERROR: [HLS 214-194] in function 'encoding': Undefined function strcmp (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:43:17)
+ERROR: [v++ 60-773] In '/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/lzw_hls/lzw_fpga/vitis_hls.log', caught Tcl error: ERROR: [HLS 214-194] in function 'encoding': Undefined function strcpy (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:50:13)
+ERROR: [v++ 60-773] In '/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/lzw_hls/lzw_fpga/vitis_hls.log', caught Tcl error: ERROR: [HLS 214-194] in function 'encoding': Undefined function strcmp (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:54:21)
+ERROR: [v++ 60-773] In '/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/lzw_hls/lzw_fpga/vitis_hls.log', caught Tcl error: ERROR: [HLS 214-194] in function 'encoding': Undefined function strcpy (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:61:17)
+ERROR: [v++ 60-773] In '/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/lzw_hls/lzw_fpga/vitis_hls.log', caught Tcl error: ERROR: [HLS 214-194] in function 'encoding': Undefined function strcpy (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:66:13)
+ERROR: [v++ 60-773] In '/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/lzw_hls/lzw_fpga/vitis_hls.log', caught Tcl error: ERROR: [HLS 214-194] in function 'encoding': Undefined function strcmp (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:72:13)
+ERROR: [v++ 60-773] In '/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/lzw_hls/lzw_fpga/vitis_hls.log', caught Tcl error: ERROR: [HLS 214-194] in function 'lzw_fpga': Undefined function snprintf (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:103:13)
+ERROR: [v++ 60-773] In '/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/lzw_hls/lzw_fpga/vitis_hls.log', caught Tcl error: ERROR: [HLS 214-194] in function 'lzw_fpga': Undefined function strcpy (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:105:13)
+ERROR: [v++ 60-773] In '/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/lzw_hls/lzw_fpga/vitis_hls.log', caught Tcl error: ERROR: [HLS 214-194] in function 'lzw_fpga': Undefined function snprintf (/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c:112:13)
+ERROR: [v++ 60-773] In '/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/lzw_hls/lzw_fpga/vitis_hls.log', caught Tcl error: ERROR: [HLS 214-135] Syn check fail!
+ERROR: [v++ 60-599] Kernel compilation failed to complete
+ERROR: [v++ 60-592] Failed to finish compilation

@@ -1,8 +1,8 @@
 {
  "session": {
   "name": "v++_compile_lzw_hls",
-  "uuid": "4b6f1bf0-0150-4a86-b1d5-66f2ac44e5d6",
-  "description": "v++  --target hw -k krnl_lzw --compile -Ihls --config fpga_acceleration/design.cfg -olzw_hls.xo hls/lzw_hls.c ",
+  "uuid": "a4e8a889-c868-4af5-982a-2ae9a7c17e15",
+  "description": "v++  --target hw -k lzw_fpga --compile -Ihls --config fpga_acceleration/design.cfg -olzw_hls.xo hls/lzw_hls.c ",
   "timestamp": "0",
   "report_file": {
    "scheme": "FILE",
@@ -30,7 +30,7 @@
   "config_files": [
    {
     "fileName": "fpga_acceleration/design.cfg",
-    "contents": "platform=u96v2_sbc_base\ndebug=1\nsave-temps=1\n\n[connectivity]\nnk=krnl_lzw:1:krnl_lzw_1\n"
+    "contents": "platform=u96v2_sbc_base\ndebug=1\nsave-temps=1\n\n[connectivity]\nnk=lzw_fpga:1:lzw_fpga_1\n"
    }
   ]
  },
