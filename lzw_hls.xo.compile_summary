@@ -1,0 +1,120 @@
+<ENTRY>
+{
+ "thisFile": "/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/lzw_hls.xo.compile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Nov 15 10:32:25 2024",
+ "timestampMillis": "1731684745487",
+ "buildStep": {
+  "cmdId": "941be42e-897b-4e55-b82c-60beaa6daa32",
+  "name": "v++",
+  "logFile": "/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/lzw_hls/lzw_hls.steps.log",
+  "commandLine": "/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/bin/unwrapped/lnx64.o/v++  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --target hw -k krnl_lzw --compile -Ihls --config fpga_acceleration/design.cfg -olzw_hls.xo hls/lzw_hls.c ",
+  "args": [
+   "--target",
+   "hw",
+   "-k",
+   "krnl_lzw",
+   "--compile",
+   "-Ihls",
+   "--config",
+   "fpga_acceleration/design.cfg",
+   "-olzw_hls.xo",
+   "hls/lzw_hls.c"
+  ],
+  "iniFiles": [
+   {
+    "path": "/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/fpga_acceleration/design.cfg",
+    "content": "platform=u96v2_sbc_base\ndebug=1\nsave-temps=1\n\n[connectivity]\nnk=krnl_lzw:1:krnl_lzw_1\n"
+   }
+  ],
+  "cwd": "/mnt/castor/seas_home/j/joaquinr/ese5320_final_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Nov 15 10:32:25 2024",
+ "timestampMillis": "1731684745489",
+ "status": {
+  "cmdId": "941be42e-897b-4e55-b82c-60beaa6daa32",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Fri Nov 15 10:32:27 2024",
+ "timestampMillis": "1731684747916",
+ "buildSummary": {
+  "hardwarePlatform": "u96v2_sbc_base.xpfm",
+  "hardwareDsa": "u96v2_sbc_base.xsa",
+  "platformDirectory": "/home1/e/ese5320/u96v2_sbc_base",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "krnl_lzw",
+     "file": "/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/lzw_hls.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/hls/lzw_hls.c"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2020.2. SW Build (by xbuild) on 2020-11-18-05:13:29"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Nov 15 10:32:28 2024",
+ "timestampMillis": "1731684748007",
+ "buildStep": {
+  "cmdId": "e7fc3677-36c1-408a-9110-c345f3fa93d6",
+  "name": "vitis_hls",
+  "logFile": "/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/lzw_hls/krnl_lzw/vitis_hls.log",
+  "commandLine": "vitis_hls -f /mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/lzw_hls/krnl_lzw/krnl_lzw.tcl -messageDb vitis_hls.pb",
+  "args": [
+   "vitis_hls",
+   "-f",
+   "/mnt/castor/seas_home/j/joaquinr/ese5320_final_project/_x/lzw_hls/krnl_lzw/krnl_lzw.tcl",
+   "-messageDb",
+   "vitis_hls.pb"
+  ],
+  "iniFiles": [],
+  "cwd": "/mnt/castor/seas_home/j/joaquinr/ese5320_final_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Nov 15 10:32:28 2024",
+ "timestampMillis": "1731684748009",
+ "status": {
+  "cmdId": "e7fc3677-36c1-408a-9110-c345f3fa93d6",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>

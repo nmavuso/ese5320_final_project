@@ -1,0 +1,9 @@
+Fri Nov 15 10:32:26 2024: Server was asked to start on port: '35553'
+Fri Nov 15 10:32:26 2024: Server is using token UUID: 'dae9bfcd-09c2-4223-8144-d954d66de408'
+Fri Nov 15 10:32:26 2024: Attempting to start server on port '35553'
+Fri Nov 15 10:32:26 2024: XRC main fifo: created main fifo '/tmp/xrcmaindae9bfcd-09c2-4223-8144-d954d66de408', fd read = 13
+Fri Nov 15 10:32:26 2024: Running Rule Check Server
+Fri Nov 15 10:32:26 2024: Version 1.6.1
+Fri Nov 15 10:32:27 2024: Rule Check Server: Accepted socket connection from client
+Fri Nov 15 10:32:27 2024: EXCHANGE_TOKEN received, server token: dae9bfcd-09c2-4223-8144-d954d66de408, passed token: dae9bfcd-09c2-4223-8144-d954d66de408
+Fri Nov 15 10:32:27 2024: SESSION_MGR: creating session with session uuid: '8489f931-6438-4848-862a-2d2b096b3ea3' and name 'v++_compile_lzw_hls'
