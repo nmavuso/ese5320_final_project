@@ -175,7 +175,7 @@ int main(int argc, char* argv[]) {
         length = buffer[0] | (buffer[1] << 8);
         length &= ~DONE_BIT_H;
 
-        appHost(buffer, length, outfc);
+       // appHost(buffer, length, outfc);
         memcpy(&file[offset], &buffer[HEADER], length);
 
         offset += length;

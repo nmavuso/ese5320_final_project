@@ -9,10 +9,10 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "Fri Nov 15 12:53:44 2024",
- "timestampMillis": "1731693224136",
+ "dateTimestamp": "Fri Nov 15 13:27:55 2024",
+ "timestampMillis": "1731695275009",
  "buildStep": {
-  "cmdId": "d8c17740-77f5-4db2-a664-f2ed44aa61b9",
+  "cmdId": "79159ca6-0735-477a-b913-c8a69241694b",
   "name": "v++",
   "logFile": "/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/lzw_hls/lzw_hls.steps.log",
   "commandLine": "/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/bin/unwrapped/lnx64.o/v++  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --target hw -k lzw_fpga --compile -Ihls --config fpga_acceleration/design.cfg -olzw_hls.xo hls/lzw_hls.cpp ",
@@ -41,10 +41,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Fri Nov 15 12:53:44 2024",
- "timestampMillis": "1731693224140",
+ "dateTimestamp": "Fri Nov 15 13:27:55 2024",
+ "timestampMillis": "1731695275015",
  "status": {
-  "cmdId": "d8c17740-77f5-4db2-a664-f2ed44aa61b9",
+  "cmdId": "79159ca6-0735-477a-b913-c8a69241694b",
   "state": "CS_RUNNING"
  }
 }
@@ -52,8 +52,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "Fri Nov 15 12:53:47 2024",
- "timestampMillis": "1731693227558",
+ "dateTimestamp": "Fri Nov 15 13:27:59 2024",
+ "timestampMillis": "1731695279026",
  "buildSummary": {
   "hardwarePlatform": "u96v2_sbc_base.xpfm",
   "hardwareDsa": "u96v2_sbc_base.xsa",
@@ -88,10 +88,10 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "Fri Nov 15 12:53:47 2024",
- "timestampMillis": "1731693227572",
+ "dateTimestamp": "Fri Nov 15 13:27:59 2024",
+ "timestampMillis": "1731695279097",
  "buildStep": {
-  "cmdId": "719720d0-f7eb-469f-8f06-4d8347e9f666",
+  "cmdId": "8d59f5a5-efcc-485d-a66a-ae9de8326caa",
   "name": "vitis_hls",
   "logFile": "/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/lzw_hls/lzw_fpga/vitis_hls.log",
   "commandLine": "vitis_hls -f /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/lzw_hls/lzw_fpga/lzw_fpga.tcl -messageDb vitis_hls.pb",
@@ -110,10 +110,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Fri Nov 15 12:53:47 2024",
- "timestampMillis": "1731693227574",
+ "dateTimestamp": "Fri Nov 15 13:27:59 2024",
+ "timestampMillis": "1731695279098",
  "status": {
-  "cmdId": "719720d0-f7eb-469f-8f06-4d8347e9f666",
+  "cmdId": "8d59f5a5-efcc-485d-a66a-ae9de8326caa",
   "state": "CS_RUNNING"
  }
 }
@@ -121,10 +121,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Fri Nov 15 12:55:26 2024",
- "timestampMillis": "1731693326211",
+ "dateTimestamp": "Fri Nov 15 13:29:43 2024",
+ "timestampMillis": "1731695383010",
  "status": {
-  "cmdId": "719720d0-f7eb-469f-8f06-4d8347e9f666",
+  "cmdId": "8d59f5a5-efcc-485d-a66a-ae9de8326caa",
   "state": "CS_PASSED"
  }
 }
@@ -132,8 +132,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Nov 15 12:55:26 2024",
- "timestampMillis": "1731693326515",
+ "dateTimestamp": "Fri Nov 15 13:29:44 2024",
+ "timestampMillis": "1731695384463",
  "report": {
   "path": "/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/lzw_hls/lzw_fpga/lzw_fpga/solution/.autopilot/db/lzw_fpga.design.xml",
   "name": "lzw_fpga",
@@ -145,8 +145,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Nov 15 12:55:26 2024",
- "timestampMillis": "1731693326516",
+ "dateTimestamp": "Fri Nov 15 13:29:44 2024",
+ "timestampMillis": "1731695384468",
  "report": {
   "path": "/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/lzw_hls/lzw_fpga/lzw_fpga/solution/.autopilot/db/.message_syn.xml",
   "name": "lzw_fpga",
@@ -158,8 +158,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Nov 15 12:55:26 2024",
- "timestampMillis": "1731693326535",
+ "dateTimestamp": "Fri Nov 15 13:29:44 2024",
+ "timestampMillis": "1731695384566",
  "report": {
   "path": "/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/reports/lzw_hls/hls_reports/lzw_fpga_csynth.rpt",
   "name": "lzw_fpga",
@@ -171,8 +171,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Nov 15 12:55:26 2024",
- "timestampMillis": "1731693326536",
+ "dateTimestamp": "Fri Nov 15 13:29:44 2024",
+ "timestampMillis": "1731695384569",
  "report": {
   "path": "/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/lzw_hls/lzw_fpga/lzw_fpga/solution/syn/report/lzw_fpga_csynth.xml",
   "name": "lzw_fpga",
@@ -184,8 +184,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Nov 15 12:55:26 2024",
- "timestampMillis": "1731693326552",
+ "dateTimestamp": "Fri Nov 15 13:29:44 2024",
+ "timestampMillis": "1731695384644",
  "report": {
   "path": "/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/reports/lzw_hls/system_estimate_lzw_hls.xtxt",
   "name": "",
@@ -197,8 +197,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Nov 15 12:55:27 2024",
- "timestampMillis": "1731693327330",
+ "dateTimestamp": "Fri Nov 15 13:29:45 2024",
+ "timestampMillis": "1731695385408",
  "report": {
   "path": "/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/reports/lzw_hls/v++_compile_lzw_hls_guidance.html",
   "name": "",
@@ -210,8 +210,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Nov 15 12:55:27 2024",
- "timestampMillis": "1731693327330",
+ "dateTimestamp": "Fri Nov 15 13:29:45 2024",
+ "timestampMillis": "1731695385408",
  "report": {
   "path": "/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/v++_compile_lzw_hls_guidance.pb",
   "name": "",
@@ -223,10 +223,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Fri Nov 15 12:55:27 2024",
- "timestampMillis": "1731693327374",
+ "dateTimestamp": "Fri Nov 15 13:29:45 2024",
+ "timestampMillis": "1731695385436",
  "status": {
-  "cmdId": "d8c17740-77f5-4db2-a664-f2ed44aa61b9",
+  "cmdId": "79159ca6-0735-477a-b913-c8a69241694b",
   "state": "CS_PASSED"
  }
 }

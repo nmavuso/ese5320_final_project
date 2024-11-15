@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1731692409020">
-  <ports id="1" name="gmem" type="PortType" coreId="738197648" bitwidth="32" direction="DirInOut" iftype="IfTypeFifo">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1731695615872">
+  <ports id="1" name="gmem" type="PortType" coreId="0" bitwidth="32" direction="DirInOut" iftype="IfTypeFifo">
     <dataInputObjs>getelementptr</dataInputObjs>
     <dataInputObjs>getelementptr</dataInputObjs>
     <dataInputObjs>getelementptr</dataInputObjs>
@@ -15,7 +15,7 @@
   <ports id="2" name="input_r" type="PortType" originalName="input" coreId="10552" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="3" name="output_code" type="PortType" originalName="output_code" coreId="68" bitwidth="64">
+  <ports id="3" name="output_code" type="PortType" originalName="output_code" coreId="1405915040" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <ports id="4" name="output_size" type="PortType" originalName="output_size" coreId="68" bitwidth="64">
@@ -664,7 +664,7 @@
       <dataOutputObjs>getelementptr</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="br_ln402" lineNumber="402" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="876245104" contextFuncName="encoding" opcode="br" m_display="0" m_delay="0.48" m_topoIndex="8" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="br_ln402" lineNumber="402" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="49" contextFuncName="encoding" opcode="br" m_display="0" m_delay="0.48" m_topoIndex="8" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="402" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <controlInputObjs>block_21</controlInputObjs>
     </node_objs>
@@ -680,7 +680,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>memset.loop</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="br_ln0" coreId="49" opcode="br" nodeLabel="2.0" m_display="0" m_delay="0.48" m_topoIndex="27" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="br_ln0" coreId="337" opcode="br" nodeLabel="2.0" m_display="0" m_delay="0.48" m_topoIndex="27" m_clusterGroupNumber="-1">
       <controlInputObjs>memset.loop</controlInputObjs>
     </node_objs>
   </blocks>
@@ -689,13 +689,13 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>block_86</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="out_index" originalName="out_index" coreId="132" bitwidth="32" opcode="alloca" nodeLabel="4.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="out_index" originalName="out_index" coreId="305" bitwidth="32" opcode="alloca" nodeLabel="4.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="table_size" originalName="table_size" coreId="0" bitwidth="32" opcode="alloca" nodeLabel="4.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="table_size" originalName="table_size" coreId="49" bitwidth="32" opcode="alloca" nodeLabel="4.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
@@ -715,25 +715,25 @@
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="p_addr" lineNumber="408" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="305" contextFuncName="encoding" bitwidth="10" opcode="getelementptr" nodeLabel="75.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="p_addr" lineNumber="408" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="465" contextFuncName="encoding" bitwidth="10" opcode="getelementptr" nodeLabel="75.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="408" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="trunc_ln408_1" lineNumber="408" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="trunc_ln408_1_fu_814_p4" coreId="4" contextFuncName="encoding" bitwidth="62" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="trunc_ln408_1" lineNumber="408" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="trunc_ln408_1_fu_814_p4" coreId="609" contextFuncName="encoding" bitwidth="62" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="408" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="sext_ln408" lineNumber="408" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="sext_ln408_fu_823_p1" coreId="1089" contextFuncName="encoding" bitwidth="64" opcode="sext" nodeLabel="4.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="sext_ln408" lineNumber="408" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="sext_ln408_fu_823_p1" coreId="1406645808" contextFuncName="encoding" bitwidth="64" opcode="sext" nodeLabel="4.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="408" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="gmem_addr" lineNumber="408" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1297" contextFuncName="encoding" bitwidth="32" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="gmem_addr" lineNumber="408" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="209" contextFuncName="encoding" bitwidth="32" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="408" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>gmem</dataInputObjs>
       <dataInputObjs>sext</dataInputObjs>
@@ -751,7 +751,7 @@
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="trunc_ln408" lineNumber="408" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="trunc_ln408_fu_849_p1" coreId="0" contextFuncName="encoding" bitwidth="8" opcode="trunc" nodeLabel="74.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="trunc_ln408" lineNumber="408" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="trunc_ln408_fu_849_p1" coreId="132" contextFuncName="encoding" bitwidth="8" opcode="trunc" nodeLabel="74.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="408" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
@@ -761,32 +761,32 @@
       <dataInputObjs>trunc</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="p_addr_1" coreId="185" bitwidth="10" opcode="getelementptr" nodeLabel="75.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="p_addr_1" coreId="3087007888" bitwidth="10" opcode="getelementptr" nodeLabel="75.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="trunc_ln411" lineNumber="411" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="trunc_ln411_fu_853_p1" coreId="3486908840" contextFuncName="encoding" bitwidth="2" opcode="trunc" nodeLabel="75.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="trunc_ln411" lineNumber="411" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="trunc_ln411_fu_853_p1" coreId="1406616064" contextFuncName="encoding" bitwidth="2" opcode="trunc" nodeLabel="75.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="411" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="code_write_ln411" lineNumber="411" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="49" contextFuncName="encoding" opcode="store" nodeLabel="4.0" m_display="0" m_delay="0.48" m_topoIndex="43" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="code_write_ln411" lineNumber="411" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="2929" contextFuncName="encoding" opcode="store" nodeLabel="4.0" m_display="0" m_delay="0.48" m_topoIndex="43" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="411" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="table_size_write_ln411" lineNumber="411" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="0" contextFuncName="encoding" opcode="store" nodeLabel="4.0" m_display="0" m_delay="0.48" m_topoIndex="44" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="table_size_write_ln411" lineNumber="411" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1406180448" contextFuncName="encoding" opcode="store" nodeLabel="4.0" m_display="0" m_delay="0.48" m_topoIndex="44" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="411" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="out_index_write_ln411" lineNumber="411" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="3486882792" contextFuncName="encoding" opcode="store" nodeLabel="4.0" m_display="0" m_delay="0.48" m_topoIndex="45" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="out_index_write_ln411" lineNumber="411" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="753" contextFuncName="encoding" opcode="store" nodeLabel="4.0" m_display="0" m_delay="0.48" m_topoIndex="45" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="411" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="br_ln411" lineNumber="411" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="49" contextFuncName="encoding" opcode="br" nodeLabel="75.0" m_display="0" m_delay="0.48" m_topoIndex="52" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="br_ln411" lineNumber="411" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1406645768" contextFuncName="encoding" opcode="br" nodeLabel="75.0" m_display="0" m_delay="0.48" m_topoIndex="52" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="411" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <controlInputObjs>block_86</controlInputObjs>
     </node_objs>
@@ -802,7 +802,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>block_313</controlOutputObjs>
     <controlOutputObjs>block_89</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="i_1" lineNumber="411" originalName="i" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="0" contextFuncName="encoding" bitwidth="64" opcode="phi" nodeLabel="76.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="i_1" lineNumber="411" originalName="i" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="11" contextFuncName="encoding" bitwidth="64" opcode="phi" nodeLabel="76.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="411" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
@@ -812,7 +812,7 @@
       <controlInputObjs>split</controlInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="out_index_2" lineNumber="458" originalName="out_index" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="3486893584" contextFuncName="encoding" bitwidth="32" opcode="load" nodeLabel="148.0" m_display="0" m_topoIndex="62" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="out_index_2" lineNumber="458" originalName="out_index" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="49" contextFuncName="encoding" bitwidth="32" opcode="load" nodeLabel="148.0" m_display="0" m_topoIndex="62" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="458" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
@@ -824,7 +824,7 @@
       <dataOutputObjs>phi</dataOutputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="trunc_ln411_1" lineNumber="411" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="trunc_ln411_1_fu_856_p1" coreId="738197648" contextFuncName="encoding" bitwidth="2" opcode="trunc" nodeLabel="76.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="trunc_ln411_1" lineNumber="411" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="trunc_ln411_1_fu_856_p1" coreId="1406638969" contextFuncName="encoding" bitwidth="2" opcode="trunc" nodeLabel="76.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="411" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
@@ -835,18 +835,18 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="trunc_ln411_2" lineNumber="411" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="trunc_ln411_2_fu_865_p4" coreId="0" contextFuncName="encoding" bitwidth="62" opcode="partselect" nodeLabel="76.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="trunc_ln411_2" lineNumber="411" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="trunc_ln411_2_fu_865_p4" coreId="49" contextFuncName="encoding" bitwidth="62" opcode="partselect" nodeLabel="76.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="411" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="sext_ln411" lineNumber="411" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="sext_ln411_fu_875_p1" coreId="3486898216" contextFuncName="encoding" bitwidth="64" opcode="sext" nodeLabel="76.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="sext_ln411" lineNumber="411" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="sext_ln411_fu_875_p1" coreId="132" contextFuncName="encoding" bitwidth="64" opcode="sext" nodeLabel="76.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="411" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="gmem_addr_1" lineNumber="411" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="3486893904" contextFuncName="encoding" bitwidth="32" opcode="getelementptr" nodeLabel="76.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="gmem_addr_1" lineNumber="411" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1406680472" contextFuncName="encoding" bitwidth="32" opcode="getelementptr" nodeLabel="76.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="411" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>gmem</dataInputObjs>
       <dataInputObjs>sext</dataInputObjs>
@@ -870,13 +870,13 @@
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="shl_ln" lineNumber="411" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="shl_ln_fu_893_p3" coreId="0" contextFuncName="encoding" bitwidth="5" opcode="bitconcatenate" nodeLabel="148.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="shl_ln" lineNumber="411" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="shl_ln_fu_893_p3" coreId="1406685632" contextFuncName="encoding" bitwidth="5" opcode="bitconcatenate" nodeLabel="148.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="411" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="zext_ln411" lineNumber="411" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="zext_ln411_fu_900_p1" coreId="0" contextFuncName="encoding" bitwidth="32" opcode="zext" nodeLabel="148.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="zext_ln411" lineNumber="411" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="zext_ln411_fu_900_p1" coreId="1406686464" contextFuncName="encoding" bitwidth="32" opcode="zext" nodeLabel="148.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="411" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <dataOutputObjs>lshr</dataOutputObjs>
@@ -887,7 +887,7 @@
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="c" lineNumber="411" originalName="c" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="c_fu_909_p1" coreId="49" contextFuncName="encoding" bitwidth="8" opcode="trunc" nodeLabel="148.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="c" lineNumber="411" originalName="c" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="c_fu_909_p1" coreId="1406687072" contextFuncName="encoding" bitwidth="8" opcode="trunc" nodeLabel="148.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="411" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>lshr</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
@@ -900,7 +900,7 @@
       <dataOutputObjs>br</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="br_ln411" lineNumber="411" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="3486925936" contextFuncName="encoding" opcode="br" nodeLabel="148.0" m_display="0" m_topoIndex="68" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="br_ln411" lineNumber="411" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="0" contextFuncName="encoding" opcode="br" nodeLabel="148.0" m_display="0" m_topoIndex="68" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="411" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>block_89</controlInputObjs>
@@ -916,7 +916,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>block_100</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="88" name="br_ln389" lineNumber="389" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="0" contextFuncName="string_length" opcode="br" nodeLabel="148.0" m_display="0" m_delay="0.48" m_topoIndex="69" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="88" name="br_ln389" lineNumber="389" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1869635878" contextFuncName="string_length" opcode="br" nodeLabel="148.0" m_display="0" m_delay="0.48" m_topoIndex="69" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="389" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="string_length"/>
       <controlInputObjs>block_100</controlInputObjs>
     </node_objs>
@@ -941,19 +941,19 @@
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>.lr.ph26.preheader</controlOutputObjs>
     <controlOutputObjs>.loopexit17.thread</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="124" name="table_size_load_3" lineNumber="423" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1634301042" contextFuncName="encoding" bitwidth="32" opcode="load" nodeLabel="155.0" m_display="0" m_topoIndex="99" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="124" name="table_size_load_3" lineNumber="423" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1629909051" contextFuncName="encoding" bitwidth="32" opcode="load" nodeLabel="155.0" m_display="0" m_topoIndex="99" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="423" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="125" name="temp_addr_1" lineNumber="414" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1596994099" contextFuncName="encoding" bitwidth="10" opcode="getelementptr" nodeLabel="154.0" m_display="0" m_topoIndex="97" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="125" name="temp_addr_1" lineNumber="414" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="7955819" contextFuncName="encoding" bitwidth="10" opcode="getelementptr" nodeLabel="154.0" m_display="0" m_topoIndex="97" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="414" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="126" name="trunc_ln414" lineNumber="414" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="trunc_ln414_fu_969_p1" coreId="1699560457" contextFuncName="encoding" bitwidth="10" opcode="trunc" nodeLabel="155.0" m_display="0" m_topoIndex="100" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="126" name="trunc_ln414" lineNumber="414" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="trunc_ln414_fu_969_p1" coreId="1835365415" contextFuncName="encoding" bitwidth="10" opcode="trunc" nodeLabel="155.0" m_display="0" m_topoIndex="100" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="414" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
@@ -963,7 +963,7 @@
       <dataInputObjs>getelementptr</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="128" name="temp_addr_2" lineNumber="418" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="536882477" contextFuncName="encoding" bitwidth="10" opcode="getelementptr" nodeLabel="155.0" m_display="0" m_topoIndex="101" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="128" name="temp_addr_2" lineNumber="418" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1601665644" contextFuncName="encoding" bitwidth="10" opcode="getelementptr" nodeLabel="155.0" m_display="0" m_topoIndex="101" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="418" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>phi</dataInputObjs>
@@ -981,12 +981,12 @@
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="131" name="zext_ln419" lineNumber="419" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="zext_ln419_fu_979_p1" coreId="539767072" contextFuncName="encoding" bitwidth="64" opcode="zext" nodeLabel="155.0" m_display="0" m_topoIndex="104" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="131" name="zext_ln419" lineNumber="419" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="zext_ln419_fu_979_p1" coreId="997420912" contextFuncName="encoding" bitwidth="64" opcode="zext" nodeLabel="155.0" m_display="0" m_topoIndex="104" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="419" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="132" name="temp_addr_3" lineNumber="419" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="824196384" contextFuncName="encoding" bitwidth="10" opcode="getelementptr" nodeLabel="155.0" m_display="0" m_topoIndex="105" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="132" name="temp_addr_3" lineNumber="419" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1431324743" contextFuncName="encoding" bitwidth="10" opcode="getelementptr" nodeLabel="155.0" m_display="0" m_topoIndex="105" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="419" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
@@ -998,13 +998,13 @@
       <dataInputObjs>getelementptr</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="134" name="icmp_ln423" lineNumber="423" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="grp_fu_680_p2" opType="icmp" coreId="543973742" contextFuncName="encoding" bitwidth="1" opcode="icmp" nodeLabel="155.0" m_display="0" m_delay="1.11" m_topoIndex="107" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="134" name="icmp_ln423" lineNumber="423" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="grp_fu_680_p2" opType="icmp" coreId="1406724120" contextFuncName="encoding" bitwidth="1" opcode="icmp" nodeLabel="155.0" m_display="0" m_delay="1.11" m_topoIndex="107" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="423" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="135" name="br_ln423" lineNumber="423" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1701602169" contextFuncName="encoding" opcode="br" nodeLabel="155.0" m_display="0" m_delay="0.48" m_topoIndex="108" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="135" name="br_ln423" lineNumber="423" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1852793632" contextFuncName="encoding" opcode="br" nodeLabel="155.0" m_display="0" m_delay="0.48" m_topoIndex="108" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="423" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>.loopexit17.thread</controlInputObjs>
@@ -1023,7 +1023,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>.lr.ph26</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="137" name="br_ln423" lineNumber="423" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1212371746" contextFuncName="encoding" opcode="br" nodeLabel="155.0" m_display="0" m_delay="0.48" m_topoIndex="109" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="137" name="br_ln423" lineNumber="423" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1431585108" contextFuncName="encoding" opcode="br" nodeLabel="155.0" m_display="0" m_delay="0.48" m_topoIndex="109" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="423" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <controlInputObjs>.lr.ph26</controlInputObjs>
     </node_objs>
@@ -1038,7 +1038,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>.split11</controlOutputObjs>
     <controlOutputObjs>.loopexit18.thread.preheader</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="139" name="j_1" lineNumber="423" originalName="j" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="536894769" contextFuncName="encoding" bitwidth="31" opcode="phi" nodeLabel="156.0" m_display="0" m_topoIndex="110" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="139" name="j_1" lineNumber="423" originalName="j" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1953394531" contextFuncName="encoding" bitwidth="31" opcode="phi" nodeLabel="156.0" m_display="0" m_topoIndex="110" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="423" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
@@ -1048,12 +1048,12 @@
       <controlInputObjs>.lr.ph26.preheader</controlInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="140" name="table_size_load_4" lineNumber="423" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1936018748" contextFuncName="encoding" bitwidth="32" opcode="load" nodeLabel="156.0" m_display="0" m_topoIndex="111" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="140" name="table_size_load_4" lineNumber="423" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1295780106" contextFuncName="encoding" bitwidth="32" opcode="load" nodeLabel="156.0" m_display="0" m_topoIndex="111" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="423" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="141" name="zext_ln423" lineNumber="423" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="zext_ln423_fu_984_p1" coreId="0" contextFuncName="encoding" bitwidth="32" opcode="zext" nodeLabel="156.0" m_display="0" m_topoIndex="112" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="141" name="zext_ln423" lineNumber="423" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="zext_ln423_fu_984_p1" coreId="1063481188" contextFuncName="encoding" bitwidth="32" opcode="zext" nodeLabel="156.0" m_display="0" m_topoIndex="112" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="423" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
@@ -1112,13 +1112,13 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>.preheader.preheader</controlOutputObjs>
     <controlOutputObjs>block_176</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="172" name="icmp_ln424" lineNumber="424" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="grp_fu_698_p2" opType="icmp" coreId="1793825" contextFuncName="encoding" bitwidth="1" opcode="icmp" nodeLabel="159.0" m_display="0" m_delay="0.85" m_topoIndex="136" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="172" name="icmp_ln424" lineNumber="424" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="grp_fu_698_p2" opType="icmp" coreId="0" contextFuncName="encoding" bitwidth="1" opcode="icmp" nodeLabel="159.0" m_display="0" m_delay="0.85" m_topoIndex="136" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="424" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>load</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="173" name="br_ln424" lineNumber="424" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="0" contextFuncName="encoding" opcode="br" nodeLabel="159.0" m_display="0" m_topoIndex="137" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="173" name="br_ln424" lineNumber="424" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1406749688" contextFuncName="encoding" opcode="br" nodeLabel="159.0" m_display="0" m_topoIndex="137" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="424" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>block_176</controlInputObjs>
@@ -1133,7 +1133,7 @@
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>.lr.ph26</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="175" name="br_ln0" coreId="9" opcode="br" nodeLabel="159.0" m_display="0" m_topoIndex="138" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="175" name="br_ln0" coreId="0" opcode="br" nodeLabel="159.0" m_display="0" m_topoIndex="138" m_clusterGroupNumber="-1">
       <controlInputObjs>.lr.ph26</controlInputObjs>
     </node_objs>
   </blocks>
@@ -1142,7 +1142,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>.preheader</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="177" name="br_ln0" coreId="1791265" opcode="br" nodeLabel="159.0" m_display="0" m_delay="0.48" m_topoIndex="139" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="177" name="br_ln0" coreId="0" opcode="br" nodeLabel="159.0" m_display="0" m_delay="0.48" m_topoIndex="139" m_clusterGroupNumber="-1">
       <controlInputObjs>.preheader</controlInputObjs>
     </node_objs>
   </blocks>
@@ -1152,7 +1152,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>block_309</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="197" name="p_addr_8" lineNumber="371" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="3487006200" contextFuncName="string_copy" bitwidth="10" opcode="getelementptr" nodeLabel="162.0" m_display="0" m_topoIndex="152" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="197" name="p_addr_8" lineNumber="371" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="0" contextFuncName="string_copy" bitwidth="10" opcode="getelementptr" nodeLabel="162.0" m_display="0" m_topoIndex="152" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="371" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="string_copy"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
@@ -1348,7 +1348,7 @@
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="250" name="gmem_addr_4" lineNumber="437" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="2148500751" contextFuncName="encoding" bitwidth="32" opcode="getelementptr" nodeLabel="166.0" m_display="0" m_topoIndex="192" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="250" name="gmem_addr_4" lineNumber="437" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="0" contextFuncName="encoding" bitwidth="32" opcode="getelementptr" nodeLabel="166.0" m_display="0" m_topoIndex="192" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="437" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
       <dataInputObjs>gmem</dataInputObjs>
       <dataInputObjs>sext</dataInputObjs>
@@ -1458,7 +1458,7 @@
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="267" name="br_ln368" lineNumber="368" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="0" contextFuncName="string_copy" opcode="br" nodeLabel="238.0" m_display="0" m_delay="0.48" m_topoIndex="206" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="267" name="br_ln368" lineNumber="368" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="33686656" contextFuncName="string_copy" opcode="br" nodeLabel="238.0" m_display="0" m_delay="0.48" m_topoIndex="206" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="368" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="string_copy"/>
       <controlInputObjs>block_280</controlInputObjs>
     </node_objs>
@@ -1904,7 +1904,7 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>memset.loop.preheader</controlOutputObjs>
       <controlOutputObjs>.split17</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="i" lineNumber="403" originalName="i" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="3486864960" contextFuncName="encoding" bitwidth="9" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="i" lineNumber="403" originalName="i" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="113" contextFuncName="encoding" bitwidth="9" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="403" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
@@ -1923,13 +1923,13 @@
         <dataOutputObjs>phi</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="icmp_ln402" lineNumber="402" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="icmp_ln402_fu_748_p2" opType="icmp" coreId="49" contextFuncName="encoding" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.85" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="icmp_ln402" lineNumber="402" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="icmp_ln402_fu_748_p2" opType="icmp" coreId="113" contextFuncName="encoding" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.85" m_topoIndex="11" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="402" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>br</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="br_ln402" lineNumber="402" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="49" contextFuncName="encoding" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="br_ln402" lineNumber="402" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="129" contextFuncName="encoding" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="402" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>.split17</controlInputObjs>
@@ -1945,43 +1945,43 @@
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>block_21</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="trunc_ln403_cast" lineNumber="403" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="trunc_ln403_cast_fu_754_p1" coreId="113" contextFuncName="encoding" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="trunc_ln403_cast" lineNumber="403" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="trunc_ln403_cast_fu_754_p1" coreId="129" contextFuncName="encoding" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="403" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="tmp" lineNumber="403" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="tmp_fu_759_p3" coreId="113" contextFuncName="encoding" bitwidth="19" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="tmp" lineNumber="403" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="tmp_fu_759_p3" coreId="132" contextFuncName="encoding" bitwidth="19" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="403" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
         <dataOutputObjs>or</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="zext_ln403_1" lineNumber="403" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="zext_ln403_1_fu_767_p1" coreId="132" contextFuncName="encoding" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="zext_ln403_1" lineNumber="403" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="zext_ln403_1_fu_767_p1" coreId="129" contextFuncName="encoding" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="403" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
         <dataInputObjs>bitconcatenate</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="table_str_addr" lineNumber="403" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="0" contextFuncName="encoding" bitwidth="22" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="table_str_addr" lineNumber="403" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="876245104" contextFuncName="encoding" bitwidth="22" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="403" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="or_ln404" lineNumber="404" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="or_ln404_fu_772_p2" coreId="129" contextFuncName="encoding" bitwidth="19" opcode="or" nodeLabel="1.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="or_ln404" lineNumber="404" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="or_ln404_fu_772_p2" coreId="145" contextFuncName="encoding" bitwidth="19" opcode="or" nodeLabel="1.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="404" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
         <dataInputObjs>bitconcatenate</dataInputObjs>
         <dataOutputObjs>bitconcatenate</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="tmp_1" lineNumber="404" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="tmp_1_fu_778_p3" coreId="132" contextFuncName="encoding" bitwidth="64" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="tmp_1" lineNumber="404" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="tmp_1_fu_778_p3" coreId="0" contextFuncName="encoding" bitwidth="64" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="404" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
         <dataInputObjs>or</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="table_str_addr_1" lineNumber="404" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="129" contextFuncName="encoding" bitwidth="22" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="table_str_addr_1" lineNumber="404" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="145" contextFuncName="encoding" bitwidth="22" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="404" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>bitconcatenate</dataInputObjs>
@@ -1993,7 +1993,7 @@
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="trunc_ln403" lineNumber="403" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="trunc_ln403_fu_792_p1" coreId="145" contextFuncName="encoding" bitwidth="8" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="trunc_ln403" lineNumber="403" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="trunc_ln403_fu_792_p1" coreId="161" contextFuncName="encoding" bitwidth="8" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="403" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
@@ -2008,7 +2008,7 @@
         <dataInputObjs>getelementptr</dataInputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="table_code_addr" lineNumber="405" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="0" contextFuncName="encoding" bitwidth="12" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="table_code_addr" lineNumber="405" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="49" contextFuncName="encoding" bitwidth="12" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="405" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="encoding"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
@@ -2020,7 +2020,7 @@
         <dataInputObjs>zext</dataInputObjs>
         <dataInputObjs>getelementptr</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="br_ln0" coreId="161" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="br_ln0" coreId="49" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
         <controlInputObjs>block_21</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp">
@@ -2038,7 +2038,7 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>split</controlOutputObjs>
       <controlOutputObjs>memset.loop.split</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="empty_32" coreId="49" bitwidth="11" opcode="phi" nodeLabel="3.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="empty_32" coreId="893022320" bitwidth="11" opcode="phi" nodeLabel="3.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
@@ -2052,12 +2052,12 @@
         <dataOutputObjs>phi</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="exitcond16" rtlName="exitcond16_fu_803_p2" opType="icmp" coreId="337" bitwidth="1" opcode="icmp" nodeLabel="3.0" m_display="0" m_delay="0.85" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="exitcond16" rtlName="exitcond16_fu_803_p2" opType="icmp" coreId="49" bitwidth="1" opcode="icmp" nodeLabel="3.0" m_display="0" m_delay="0.85" m_topoIndex="30" m_clusterGroupNumber="-1">
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>br</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="br_ln0" coreId="842676281" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="br_ln0" coreId="1406033056" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>memset.loop.split</controlInputObjs>
         <controlInputObjs>split</controlInputObjs>
@@ -2082,7 +2082,7 @@
         <dataInputObjs>getelementptr</dataInputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="br_ln0" coreId="337" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="br_ln0" coreId="273" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
         <controlInputObjs>memset.loop</controlInputObjs>
       </node_objs>
     </basic_blocks>
@@ -2095,7 +2095,7 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>block_103</controlOutputObjs>
       <controlOutputObjs>_Z13string_lengthPKc.exit.preheader</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="90" name="p_len" lineNumber="390" originalName="p_len" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="3486929128" contextFuncName="string_length" bitwidth="64" opcode="phi" nodeLabel="149.0" m_display="1" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="74" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="90" name="p_len" lineNumber="390" originalName="p_len" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1918989395" contextFuncName="string_length" bitwidth="64" opcode="phi" nodeLabel="149.0" m_display="1" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="74" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="390" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="string_length"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>and</dataInputObjs>
@@ -2114,7 +2114,7 @@
         <dataOutputObjs>phi</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="93" name="p_addr_3" lineNumber="389" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1819042080" contextFuncName="string_length" bitwidth="10" opcode="getelementptr" nodeLabel="149.0" m_display="1" m_isLCDNode="true" m_topoIndex="75" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="93" name="p_addr_3" lineNumber="389" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="0" contextFuncName="string_length" bitwidth="10" opcode="getelementptr" nodeLabel="149.0" m_display="1" m_isLCDNode="true" m_topoIndex="75" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="389" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="string_length"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>phi</dataInputObjs>
@@ -2126,25 +2126,25 @@
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="95" name="icmp_ln389" lineNumber="389" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="grp_fu_686_p2" opType="icmp" coreId="738197648" contextFuncName="string_length" bitwidth="1" opcode="icmp" nodeLabel="150.0" m_display="1" m_delay="0.85" m_isLCDNode="true" m_topoIndex="80" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="95" name="icmp_ln389" lineNumber="389" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="grp_fu_686_p2" opType="icmp" coreId="1295780106" contextFuncName="string_length" bitwidth="1" opcode="icmp" nodeLabel="150.0" m_display="1" m_delay="0.85" m_isLCDNode="true" m_topoIndex="80" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="389" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="string_length"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>and</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="96" name="tmp_2" lineNumber="389" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="tmp_2_fu_919_p4" coreId="1914708526" contextFuncName="string_length" bitwidth="54" opcode="partselect" nodeLabel="149.0" m_display="0" m_topoIndex="77" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="96" name="tmp_2" lineNumber="389" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="tmp_2_fu_919_p4" coreId="1406663856" contextFuncName="string_length" bitwidth="54" opcode="partselect" nodeLabel="149.0" m_display="0" m_topoIndex="77" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="389" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="string_length"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="97" name="icmp_ln389_1" lineNumber="389" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="icmp_ln389_1_fu_929_p2" opType="icmp" coreId="1031301478" contextFuncName="string_length" bitwidth="1" opcode="icmp" nodeLabel="149.0" m_display="0" m_delay="1.36" m_topoIndex="78" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="97" name="icmp_ln389_1" lineNumber="389" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="icmp_ln389_1_fu_929_p2" opType="icmp" coreId="1406665072" contextFuncName="string_length" bitwidth="1" opcode="icmp" nodeLabel="149.0" m_display="0" m_delay="1.36" m_topoIndex="78" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="389" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="string_length"/>
         <dataInputObjs>partselect</dataInputObjs>
         <dataOutputObjs>and</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="98" name="and_ln389" lineNumber="389" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="and_ln389_fu_941_p2" opType="and" coreId="49" contextFuncName="string_length" bitwidth="1" opcode="and" nodeLabel="150.0" m_display="1" m_delay="0.33" m_isLCDNode="true" m_topoIndex="81" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="98" name="and_ln389" lineNumber="389" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="and_ln389_fu_941_p2" opType="and" coreId="132" contextFuncName="string_length" bitwidth="1" opcode="and" nodeLabel="150.0" m_display="1" m_delay="0.33" m_isLCDNode="true" m_topoIndex="81" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="389" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="string_length"/>
         <dataInputObjs>icmp</dataInputObjs>
         <dataInputObjs>icmp</dataInputObjs>
@@ -2167,7 +2167,7 @@
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>block_100</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="102" name="br_ln389" lineNumber="389" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="0" contextFuncName="string_length" opcode="br" nodeLabel="150.0" m_display="0" m_topoIndex="83" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="102" name="br_ln389" lineNumber="389" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1406666864" contextFuncName="string_length" opcode="br" nodeLabel="150.0" m_display="0" m_topoIndex="83" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="389" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="string_length"/>
         <controlInputObjs>block_100</controlInputObjs>
       </node_objs>
@@ -2184,7 +2184,7 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>_Z11string_copyPcPKci.exit</controlOutputObjs>
       <controlOutputObjs>block_120</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="106" name="i_2" lineNumber="368" originalName="i" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="3486943360" contextFuncName="string_copy" bitwidth="10" opcode="phi" nodeLabel="152.0" m_display="1" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="85" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="106" name="i_2" lineNumber="368" originalName="i" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1406672112" contextFuncName="string_copy" bitwidth="10" opcode="phi" nodeLabel="152.0" m_display="1" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="85" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="368" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="string_copy"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>icmp</dataInputObjs>
@@ -2195,14 +2195,14 @@
         <controlInputObjs>_Z13string_lengthPKc.exit.preheader</controlInputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="107" name="i_2_cast" lineNumber="368" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="i_2_cast_fu_946_p1" coreId="3486944560" contextFuncName="string_copy" bitwidth="64" opcode="zext" nodeLabel="152.0" m_display="1" m_isLCDNode="true" m_topoIndex="86" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="107" name="i_2_cast" lineNumber="368" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="i_2_cast_fu_946_p1" coreId="0" contextFuncName="string_copy" bitwidth="64" opcode="zext" nodeLabel="152.0" m_display="1" m_isLCDNode="true" m_topoIndex="86" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="368" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="string_copy"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="109" name="icmp_ln368" lineNumber="368" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="icmp_ln368_fu_951_p2" opType="icmp" coreId="3486945392" contextFuncName="string_copy" bitwidth="1" opcode="icmp" nodeLabel="152.0" m_display="0" m_delay="0.85" m_topoIndex="87" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="109" name="icmp_ln368" lineNumber="368" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="icmp_ln368_fu_951_p2" opType="icmp" coreId="0" contextFuncName="string_copy" bitwidth="1" opcode="icmp" nodeLabel="152.0" m_display="0" m_delay="0.85" m_topoIndex="87" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="368" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="string_copy"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>br</dataOutputObjs>
@@ -2214,7 +2214,7 @@
         <dataOutputObjs>phi</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="112" name="br_ln368" lineNumber="368" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="132" contextFuncName="string_copy" opcode="br" nodeLabel="152.0" m_display="0" m_topoIndex="89" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="112" name="br_ln368" lineNumber="368" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1699560457" contextFuncName="string_copy" opcode="br" nodeLabel="152.0" m_display="0" m_topoIndex="89" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="368" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="string_copy"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>block_120</controlInputObjs>
@@ -2229,7 +2229,7 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>_Z11string_copyPcPKci.exit</controlOutputObjs>
       <controlOutputObjs>block_123</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="115" name="p_addr_5" lineNumber="368" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1195723852" contextFuncName="string_copy" bitwidth="10" opcode="getelementptr" nodeLabel="152.0" m_display="1" m_isLCDNode="true" m_topoIndex="90" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="115" name="p_addr_5" lineNumber="368" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1936028192" contextFuncName="string_copy" bitwidth="10" opcode="getelementptr" nodeLabel="152.0" m_display="1" m_isLCDNode="true" m_topoIndex="90" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="368" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="string_copy"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
@@ -2242,21 +2242,21 @@
         <dataOutputObjs>icmp</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="117" name="icmp_ln368_1" lineNumber="368" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="icmp_ln368_1_fu_963_p2" opType="icmp" coreId="543450484" contextFuncName="string_copy" bitwidth="1" opcode="icmp" nodeLabel="153.0" m_display="1" m_delay="0.85" m_isLCDNode="true" m_topoIndex="92" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="117" name="icmp_ln368_1" lineNumber="368" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="icmp_ln368_1_fu_963_p2" opType="icmp" coreId="544434464" contextFuncName="string_copy" bitwidth="1" opcode="icmp" nodeLabel="153.0" m_display="1" m_delay="0.85" m_isLCDNode="true" m_topoIndex="92" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="368" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="string_copy"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>br</dataOutputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="118" name="temp_addr" lineNumber="371" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="542329928" contextFuncName="string_copy" bitwidth="10" opcode="getelementptr" nodeLabel="153.0" m_display="0" m_topoIndex="93" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="118" name="temp_addr" lineNumber="371" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1869182069" contextFuncName="string_copy" bitwidth="10" opcode="getelementptr" nodeLabel="153.0" m_display="0" m_topoIndex="93" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="371" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="string_copy"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="119" name="br_ln368" lineNumber="368" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1869357166" contextFuncName="string_copy" opcode="br" nodeLabel="153.0" m_display="0" m_topoIndex="94" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="119" name="br_ln368" lineNumber="368" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1734439968" contextFuncName="string_copy" opcode="br" nodeLabel="153.0" m_display="0" m_topoIndex="94" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="368" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="string_copy"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>block_123</controlInputObjs>
@@ -2277,7 +2277,7 @@
         <dataInputObjs>load</dataInputObjs>
         <dataInputObjs>getelementptr</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="122" name="br_ln368" lineNumber="368" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1815049068" contextFuncName="string_copy" opcode="br" nodeLabel="153.0" m_display="0" m_topoIndex="96" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="122" name="br_ln368" lineNumber="368" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1635000320" contextFuncName="string_copy" opcode="br" nodeLabel="153.0" m_display="0" m_topoIndex="96" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="368" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="string_copy"/>
         <controlInputObjs>_Z13string_lengthPKc.exit</controlInputObjs>
       </node_objs>
@@ -2362,7 +2362,7 @@
         <dataOutputObjs>and</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="162" name="and_ln377_1" lineNumber="377" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="and_ln377_1_fu_1038_p2" opType="and" coreId="0" contextFuncName="string_compare" bitwidth="1" opcode="and" nodeLabel="158.0" m_display="1" m_delay="0.33" m_isLCDNode="true" m_topoIndex="131" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="162" name="and_ln377_1" lineNumber="377" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="and_ln377_1_fu_1038_p2" opType="and" coreId="1406742288" contextFuncName="string_compare" bitwidth="1" opcode="and" nodeLabel="158.0" m_display="1" m_delay="0.33" m_isLCDNode="true" m_topoIndex="131" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="377" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="string_compare"/>
         <dataInputObjs>icmp</dataInputObjs>
         <dataInputObjs>icmp</dataInputObjs>
@@ -2375,7 +2375,7 @@
         <dataOutputObjs>phi</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="164" name="br_ln377" lineNumber="377" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1799457" contextFuncName="string_compare" opcode="br" nodeLabel="158.0" m_display="0" m_topoIndex="132" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="164" name="br_ln377" lineNumber="377" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="0" contextFuncName="string_compare" opcode="br" nodeLabel="158.0" m_display="0" m_topoIndex="132" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="377" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="string_compare"/>
         <dataInputObjs>and</dataInputObjs>
         <controlInputObjs>_Z14string_comparePKcS0_.exit</controlInputObjs>
@@ -2392,13 +2392,13 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>block_171</controlOutputObjs>
       <controlOutputObjs>_Z14string_comparePKcS0_.exit</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="167" name="icmp_ln378_1" lineNumber="378" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="grp_fu_698_p2" opType="icmp" coreId="3486990160" contextFuncName="string_compare" bitwidth="1" opcode="icmp" nodeLabel="158.0" m_display="0" m_delay="0.85" m_topoIndex="133" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="167" name="icmp_ln378_1" lineNumber="378" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="grp_fu_698_p2" opType="icmp" coreId="0" contextFuncName="string_compare" bitwidth="1" opcode="icmp" nodeLabel="158.0" m_display="0" m_delay="0.85" m_topoIndex="133" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="378" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="string_compare"/>
         <dataInputObjs>load</dataInputObjs>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>br</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="168" name="br_ln378" lineNumber="378" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="738197648" contextFuncName="string_compare" opcode="br" nodeLabel="158.0" m_display="0" m_topoIndex="134" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="168" name="br_ln378" lineNumber="378" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="0" contextFuncName="string_compare" opcode="br" nodeLabel="158.0" m_display="0" m_topoIndex="134" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="378" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="string_compare"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>_Z14string_comparePKcS0_.exit</controlInputObjs>
@@ -2413,7 +2413,7 @@
       <controlOutputObjs>phi</controlOutputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>block_165</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="170" name="br_ln377" lineNumber="377" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="738197648" contextFuncName="string_compare" opcode="br" nodeLabel="158.0" m_display="0" m_topoIndex="135" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="170" name="br_ln377" lineNumber="377" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1406743656" contextFuncName="string_compare" opcode="br" nodeLabel="158.0" m_display="0" m_topoIndex="135" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="377" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="string_compare"/>
         <controlInputObjs>block_165</controlInputObjs>
       </node_objs>
@@ -2717,7 +2717,7 @@
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="276" name="icmp_ln368_4" lineNumber="368" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="icmp_ln368_4_fu_1205_p2" opType="icmp" coreId="3487048064" contextFuncName="string_copy" bitwidth="1" opcode="icmp" nodeLabel="239.0" m_display="0" m_delay="0.85" m_topoIndex="213" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="276" name="icmp_ln368_4" lineNumber="368" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="icmp_ln368_4_fu_1205_p2" opType="icmp" coreId="0" contextFuncName="string_copy" bitwidth="1" opcode="icmp" nodeLabel="239.0" m_display="0" m_delay="0.85" m_topoIndex="213" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="368" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="string_copy"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>br</dataOutputObjs>
@@ -2864,13 +2864,13 @@
         <dataOutputObjs>icmp</dataOutputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="339" name="icmp_ln377_1" lineNumber="377" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="grp_fu_692_p2" opType="icmp" coreId="3486893168" contextFuncName="string_compare" bitwidth="1" opcode="icmp" nodeLabel="245.0" m_display="0" m_delay="0.85" m_topoIndex="260" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="339" name="icmp_ln377_1" lineNumber="377" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="grp_fu_692_p2" opType="icmp" coreId="1406637680" contextFuncName="string_compare" bitwidth="1" opcode="icmp" nodeLabel="245.0" m_display="0" m_delay="0.85" m_topoIndex="260" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="377" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="string_compare"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>and</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="340" name="and_ln377" lineNumber="377" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="and_ln377_fu_1318_p2" opType="and" coreId="3487034384" contextFuncName="string_compare" bitwidth="1" opcode="and" nodeLabel="245.0" m_display="1" m_delay="0.33" m_isLCDNode="true" m_topoIndex="261" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="340" name="and_ln377" lineNumber="377" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="and_ln377_fu_1318_p2" opType="and" coreId="1406785216" contextFuncName="string_compare" bitwidth="1" opcode="and" nodeLabel="245.0" m_display="1" m_delay="0.33" m_isLCDNode="true" m_topoIndex="261" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="377" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="string_compare"/>
         <dataInputObjs>icmp</dataInputObjs>
         <dataInputObjs>icmp</dataInputObjs>

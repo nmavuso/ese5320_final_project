@@ -140,7 +140,9 @@
       "config_interface -m_axi_latency=64",
       "config_interface -m_axi_max_widen_bitwidth=512",
       "config_interface -m_axi_offset=slave",
-      "config_rtl -register_reset_num=3"
+      "config_rtl -register_reset_num=3",
+      "config_export -format=xo",
+      "config_export -rtl=verilog"
     ],
     "DirectiveTcl": [
       "set_directive_top lzw_fpga -name lzw_fpga",
@@ -1252,7 +1254,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2024-11-15 12:40:19 EST",
+    "Time": "2024-11-15 13:33:46 EST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2020.2"
   }

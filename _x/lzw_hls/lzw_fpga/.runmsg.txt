@@ -1,2 +1,0 @@
-performing high-level synthesis for kernel: lzw_fpga
-Log file: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/lzw_hls/lzw_fpga/vitis_hls.log

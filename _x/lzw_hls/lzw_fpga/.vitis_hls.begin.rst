@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vitis_hls" Owner="nmavuso" Host="big14.seas.upenn.edu" Pid="2810" HostCore="8" HostMemory="16308948">
-    </Process>
-</ProcessHandle>

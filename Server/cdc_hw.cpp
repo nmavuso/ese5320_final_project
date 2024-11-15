@@ -40,7 +40,7 @@ void cdc(const unsigned char* buff, unsigned int buff_size, Chunk chunks[], int 
 
     for (unsigned int i = 0; i < buff_size; ++i) {
         current_chunk.data[current_chunk.size++] = buff[i];
-        std::cout <<"Current Chunk Data: " << buff[i] <<"||->  current_chunk.size = " << current_chunk.size <<std::endl;
+        //std::cout <<"Current Chunk Data: " << buff[i] <<"||->  current_chunk.size = " << current_chunk.size <<std::endl;
         if (i >= WINDOW_SIZE) {
             unsigned char outgoing = buff[i - WINDOW_SIZE];
             rolling_hash = update_hash(rolling_hash, outgoing, buff[i]);

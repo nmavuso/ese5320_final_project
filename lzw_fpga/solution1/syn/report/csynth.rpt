@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'lzw_fpga'
 ================================================================
 + General Information: 
-    * Date:           Fri Nov 15 12:40:14 2024
+    * Date:           Fri Nov 15 13:33:39 2024
     * Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
     * Project:        lzw_fpga
     * Solution:       solution1 (Vitis Kernel Flow Target)
