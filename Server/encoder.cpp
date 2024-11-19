@@ -19,10 +19,10 @@
 #define PIPE_DEPTH 4
 #define DONE_BIT_L (1 << 7)
 #define DONE_BIT_H (1 << 15)
-#define BLOCKSIZE 2048
-#define NUM_ELEMENTS 1024
-#define HEADER 16
-#define INPUT_SIZE 1024
+//#define BLOCKSIZE 2048
+//#define NUM_ELEMENTS 1024
+//#define HEADER 16
+//#define INPUT_SIZE 1024
 
 int offset = 0;
 unsigned char* file;
@@ -30,22 +30,31 @@ unsigned char* file;
 int appHost(unsigned char* buffer, unsigned int length, FILE* outfc) {
     HashTable hash_table;
     initialize_hash_table(&hash_table);
-
+    stopwatch cdc_timer;
+    stopwatch deduplicate_chunks_timer;
+    stopwatch encoding_timer;
     unsigned int buffer_size = length;
     Chunk chunks[NUM_PACKETS];
     int num_chunks = 0;
-
+    cdc_timer.start();
     cdc(buffer, buffer_size, chunks, &num_chunks);
+    cdc_timer.stop(); 
+    std::cout <<"Delay for CDC: " <<cdc_timer.latency() <<std::endl;
     for (int i = 0; i < num_chunks; ++i) {
         unsigned char* chunk_data = chunks[i].data;
         int chunk_size = chunks[i].size;
-
+        deduplicate_chunks_timer.start();
         int is_new_chunk = deduplicate_chunks(chunk_data, chunk_size, &hash_table);
+        deduplicate_chunks_timer.stop();
         if (is_new_chunk == 1) {
             int encoded_data[INPUT_SIZE];
             int encoded_size;
+            encoding_timer.start();
             int encode_success = encoding((const char*)chunk_data, encoded_data, &encoded_size);
+            encoding_timer.stop();
 
+            //Print statement hurts latency
+            //Remove them 
             if (encode_success == 0) {
                 fwrite(encoded_data, sizeof(int), encoded_size, outfc);
                 std::cout << "Encoded Chunk " << i + 1 << " successfully." << std::endl;
@@ -56,7 +65,7 @@ int appHost(unsigned char* buffer, unsigned int length, FILE* outfc) {
             std::cout << "Chunk " << i + 1 << " is a duplicate." << std::endl;
         }
     }
-
+    std::cout <<"Deduplicate chunks latency: " << deduplicate_chunks_timer.latency() << std::endl;
     std::cout << "Encoding Complete" << std::endl;
     return 0;
 }

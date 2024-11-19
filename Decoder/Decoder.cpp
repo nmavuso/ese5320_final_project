@@ -101,7 +101,7 @@ int main(int Parameter_count, char * Parameters[])
     else
     {
      int Location = Header >> 1;
-      if (Location<Chunks.size()) {  // defensive programming to avoid out-of-bounds reference
+      if (Location < (int)Chunks.size()) {  // defensive programming to avoid out-of-bounds reference
           const std::string & Chunk = Chunks[Location];
           std::cout << "Found chunk of size " << Chunk.length() << " in database.\n";
           Output.write(&Chunk[0], Chunk.length());

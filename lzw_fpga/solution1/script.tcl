@@ -5,8 +5,8 @@
 ############################################################
 open_project lzw_fpga
 set_top lzw_fpga
-add_files ../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.h
 add_files ../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp
+add_files ../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.h
 add_files -tb hls/Testbench.cpp -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 open_solution "solution1" -flow_target vitis
 set_part {xczu3eg-sbva484-1-i}

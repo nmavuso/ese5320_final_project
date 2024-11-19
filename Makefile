@@ -99,6 +99,7 @@ clean:
 	-$(RM) $(XCLBIN) $(XO) $(ALL_MESSAGE_FILES)
 	-${RMDIR} package package.build .Xil fpga/hls/proj_kernel
 	-${RMDIR} _x .ipcache
+	-$(RM) *.log *.tmp
 
 # Testbench executable
 TESTBENCH_SOURCES = hls/lzw_hls.cpp hls/Testbench.cpp

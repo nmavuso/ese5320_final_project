@@ -116,12 +116,14 @@ int main(int argc, char **argv) {
     q.enqueueMigrateMemObjects({output_buf, output_size_buf}, CL_MIGRATE_MEM_OBJECT_HOST);
     q.finish();
     timer.finish();
+     
 
+     //What is the purpose of this Host code??
+      
     // ------------------------------------------------------------------------------------
     // Step 4: Testbench validation
     // ------------------------------------------------------------------------------------
     const int MAX_OUTPUT_SIZE_SW = 1024;
-
     int output_sw[MAX_OUTPUT_SIZE_SW] = {0};
     int output_size_sw = 0;
     char decoded_fpga[MAX_OUTPUT_SIZE] = {0};

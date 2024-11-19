@@ -5,11 +5,6 @@
 #include "cmd_hw.h"
 #include "sha3.h"
 
-#define NUM_CHUNKS 3
-#define MAX_CHUNK_SIZE 8192
-#define HASH_TABLE_SIZE 1024
-#define INPUT_SIZE 256
-
 HashEntry hash_table_entries[HASH_TABLE_SIZE];
 HashEntry *hash_table_array[HASH_TABLE_SIZE];
 

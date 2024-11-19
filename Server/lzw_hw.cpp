@@ -3,7 +3,7 @@
 
 #define TABLE_SIZE 4096 // Size of the dictionary
 #define CHAR_MAX 256    // Initial characters in ASCII
-#define INPUT_SIZE 256  // Maximum input string size
+#define INPUT_SIZE 2048  // Maximum input string size
 
 // Dictionary for encoding
 typedef struct {
@@ -36,7 +36,12 @@ int encoding(const char *s, int *output_code, int *output_size) {
         char c[2] = {s[i], '\0'};
         char temp[INPUT_SIZE];
 
-        snprintf(temp, sizeof(temp), "%s%s", p, c);
+    int ret = snprintf(temp, sizeof(temp), "%s%s", p, c);
+if ( (int long unsigned) ret >= sizeof(temp)) {
+    fprintf(stderr, "Warning: Output truncated. Needed size: %d\n", ret + 1);
+    return -1; // Handle truncation error appropriately
+}
+//    snprintf(temp, sizeof(temp), "%s%s", p, c);
 
         int found = -1;
         for (int j = 0; j < table_size; j++) {
