@@ -22,6 +22,11 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 **********/
 
+#include <iostream>
+#include <ostream>
+#include "Utilities.h"
+#include "lzw_hls.h"
+
 // Function to check results
 static int result_check(const int *Output_HW, int output_size_hw, const int *Output_SW, int output_size_sw) {
     // Check if the output sizes are equal
@@ -44,12 +49,14 @@ static int result_check(const int *Output_HW, int output_size_hw, const int *Out
     return 0; // Pass
 }
 
-#include "Utilities.h"
 // ------------------------------------------------------------------------------------
 // Main program
 // ------------------------------------------------------------------------------------
 int main(int argc, char **argv) {
     // Initialize an event timer for monitoring the application
+    printf("Sanity Check inside Host.cpp");
+    printf("Extra space check");
+
     EventTimer timer;
 
     // ------------------------------------------------------------------------------------
@@ -130,11 +137,12 @@ int main(int argc, char **argv) {
     char decoded_sw[MAX_OUTPUT_SIZE_SW] = {0};
 
     // Call software LZW function
-    int encoding_success = encoding(test_input, output_sw, &output_size_sw);
-    if (encoding_success != 0) {
-        std::cerr << "Error: Software encoding failed!" << std::endl;
-        return 1;
-    }
+	char *encoding_success;
+	lzw_fpga(test_input, output_sw, &output_size_sw, encoding_success);
+	if (encoding_success != 0) {
+    	std::cerr << "Error: Software encoding failed!" << std::endl;
+    	return 1;
+	}
 
     // Validate FPGA output against software output
     int failed = result_check(output_hw, *output_size_hw, output_sw, output_size_sw);
