@@ -226,8 +226,8 @@ int main(int argc, char* argv[]) {
 
     std::cout << "--------------- Compression Ratio ---------------" << std::endl;
     if (bytes_written > 0) {
-       // float compressionRatio = (float)bytes_written / (float)outputFileLength;
-        std::cout << "Original File size: " << outputFileLength << std::endl;
+       float compressionRatio = (float)bytes_written / (float)outputFileLength;
+        std::cout << "Compression Ratio: " << compressionRatio << std::endl;
     } else {
         std::cerr << "No bytes written to compressed file; compression ratio cannot be calculated." << std::endl;
     }

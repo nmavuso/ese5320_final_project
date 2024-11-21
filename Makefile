@@ -18,6 +18,9 @@ help:
 	@echo "  make fpga"
 	@echo "  	Command to build the FPGA binary (kernel.xclbin)."
 	@echo ""
+	@echo "  make host"
+	@echo "  	Command to build Host.cpp with lzw_hls.xclbin"
+	@echo ""
 	@echo "  make clean"
 	@echo "  	Command to remove the generated files."
 	@echo ""
@@ -59,7 +62,7 @@ DECODER_EXE = decoder
 
 # Host files
 # Host files
-HOST_SOURCES = Host.cpp ./common/Utilities.cpp ./common/EventTimer.cpp hls/lzw_hls.cpp
+HOST_SOURCES = ./package/sd_card/Host.cpp ./common/Utilities.cpp ./common/EventTimer.cpp hls/lzw_hls.cpp
 HOST_OBJECTS = $(HOST_SOURCES:.cpp=.o)
 HOST_EXE = host
 
