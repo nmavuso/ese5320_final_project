@@ -14,6 +14,7 @@
 #include "lzw_hls.h"
 #include "cdc_hw.h"
 #include "cmd_hw.h"
+#include "Utilities.h"
 
 #define NUM_PACKETS 8
 #define PIPE_DEPTH 4
@@ -27,7 +28,10 @@
 int offset = 0;
 unsigned char* file;
 
-int appHost(unsigned char* buffer, unsigned int length, FILE* outfc) {
+int appHost(unsigned char* buffer, unsigned int length, FILE* outfc,
+            cl::Kernel &krnl_lzw, cl::CommandQueue &q,
+            cl::Buffer &input_buf, cl::Buffer &output_buf, cl::Buffer &output_size_buf,
+            char *input, int *output_hw, int *output_size_hw) {
     std::cout << "Encoding Working Started" << std::endl;
 
     /*************************************/
@@ -63,22 +67,33 @@ int appHost(unsigned char* buffer, unsigned int length, FILE* outfc) {
         std::cout << "Deduplication result for chunk " << i + 1 << ": " << is_new_chunk << std::endl;
 
         if (is_new_chunk == 1) {
-            std::cout << "Encoding chunk " << i + 1 << "..." << std::endl;
-            int encoded_data[INPUT_SIZE];
-            int encoded_size = 0;
-            encoding((const char*)chunk_data, encoded_data, &encoded_size);
+            std::cout << "Processing chunk " << i + 1 << "..." << std::endl;
 
-            // If not zero, it was successfully update
-            if (encoded_size != 0) {
-                std::cout << "Encoding success" << std::endl;
-                std::cout << "Encoded Chunk " << i + 1 << " successfully as: ";
-                for (int j = 0; j < encoded_size; ++j) {
-                    std::cout << encoded_data[j] << " ";
-                }
-                std::cout << std::endl;
-            } else {
-                std::cerr << "Encoding failed for chunk " << i + 1 << std::endl;
+            // Load the current chunk into the input buffer
+            strncpy(input, (const char *)chunks[i].data, MAX_INPUT_SIZE);
+
+            // Migrate input buffer to FPGA
+            q.enqueueMigrateMemObjects({input_buf}, 0 /* Host to device */, NULL, NULL);
+            q.finish();
+
+            // Launch the FPGA kernel
+            q.enqueueTask(krnl_lzw, NULL, NULL);
+            q.finish();
+
+            // Migrate output buffer back to host
+            q.enqueueMigrateMemObjects({output_buf, output_size_buf}, CL_MIGRATE_MEM_OBJECT_HOST);
+            q.finish();
+
+            // Write encoded data to the output file
+            fwrite(&encoded_size, sizeof(int), 1, outfc);  // Write encoded size
+            fwrite(output_hw, sizeof(int), encoded_size, outfc);  // Write encoded data
+
+            // Print encoded data for debugging
+            std::cout << "Encoded Chunk FPGA: ";
+            for (int j = 0; j < encoded_size; ++j) {
+                std::cout << output_hw[j] << " ";
             }
+            std::cout << std::endl;
         } else {
             std::cout << "Chunk " << i + 1 << " is a duplicate and was not re-encoded." << std::endl;
         }
@@ -109,6 +124,78 @@ void handle_input(int argc, char* argv[], int* blocksize) {
 }
 
 int main(int argc, char* argv[]) {
+    // Check if the output file name is provided
+    if (argc <= 1) {
+        std::cerr << "Error: No output file name provided. Please specify the output file name." << std::endl;
+        return 1; // Exit with an error code
+    }
+
+    // File name for storing compressed data
+    std::string outputFileName = argv[1];
+
+    // Assume the binary file "lzw_hls.xclbin" is in the same directory as the executable
+    std::string binaryFile = "lzw_hls.xclbin";
+
+    // Initialize an event timer for monitoring the application
+    printf("Sanity Check inside Encoder combined Host.cpp\n");
+    EventTimer timer;
+
+    // ------------------------------------------------------------------------------------
+    // Step 1 FPGA: Initialize the OpenCL environment
+    // ------------------------------------------------------------------------------------
+    timer.add("OpenCL Initialization");
+    cl_int err;
+
+    // Get the Xilinx devices and create a context
+    std::vector<cl::Device> devices = get_xilinx_devices();
+    if (devices.empty()) {
+        std::cerr << "Error: No Xilinx devices found." << std::endl;
+        return 1;
+    }
+    devices.resize(1); // Use only the first device
+    cl::Device device = devices[0];
+    cl::Context context(device, NULL, NULL, NULL, &err);
+
+    // Read the binary file and create a program
+    unsigned fileBufSize;
+    char *fileBuf = read_binary_file(binaryFile, fileBufSize);
+    if (!fileBuf) {
+        std::cerr << "Error: Unable to read binary file: " << binaryFile << std::endl;
+        return 1;
+    }
+    cl::Program::Binaries bins{{fileBuf, fileBufSize}};
+    cl::Program program(context, devices, bins, NULL, &err);
+
+    // Create a command queue and kernel
+    cl::CommandQueue q(context, device, CL_QUEUE_PROFILING_ENABLE, &err);
+    cl::Kernel krnl_lzw(program, "lzw_fpga", &err);
+
+    // ------------------------------------------------------------------------------------
+    // Step 2: Create FPGA Buffers
+    // ------------------------------------------------------------------------------------
+    const int MAX_INPUT_SIZE = 1024;
+    const int MAX_OUTPUT_SIZE = 1024;
+
+    // Create buffers for input and output
+    cl::Buffer input_buf(context, CL_MEM_ALLOC_HOST_PTR | CL_MEM_READ_ONLY, sizeof(char) * MAX_INPUT_SIZE, NULL, &err);
+    cl::Buffer output_buf(context, CL_MEM_ALLOC_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(int) * MAX_OUTPUT_SIZE, NULL, &err);
+    cl::Buffer output_size_buf(context, CL_MEM_ALLOC_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(int), NULL, &err);
+
+    // Map buffers to host pointers
+    char *input = (char *)q.enqueueMapBuffer(input_buf, CL_TRUE, CL_MAP_WRITE, 0, sizeof(char) * MAX_INPUT_SIZE);
+    int *output_hw = (int *)q.enqueueMapBuffer(output_buf, CL_TRUE, CL_MAP_READ, 0, sizeof(int) * MAX_OUTPUT_SIZE);
+    int *output_size_hw = (int *)q.enqueueMapBuffer(output_size_buf, CL_TRUE, CL_MAP_READ, 0, sizeof(int));
+
+    // ------------------------------------------------------------------------------------
+    // Step 3: Set Kernel Arguments
+    // ------------------------------------------------------------------------------------
+    krnl_lzw.setArg(0, input_buf);
+    krnl_lzw.setArg(1, output_buf);
+    krnl_lzw.setArg(2, output_size_buf);
+
+    // ------------------------------------------------------------------------------------
+    // Ethernet Setup
+    // ------------------------------------------------------------------------------------
     stopwatch ethernet_timer;
     unsigned char* input[NUM_PACKETS];
     int writer = 0;
@@ -155,6 +242,9 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
+    // ------------------------------------------------------------------------------------
+    // Process Ethernet Packets Using FPGA
+    // ------------------------------------------------------------------------------------
     writer = PIPE_DEPTH;
     server.get_packet(input[writer]);
     packet_count++;
@@ -164,7 +254,7 @@ int main(int argc, char* argv[]) {
     length = buffer[0] | (buffer[1] << 8);
     length &= ~DONE_BIT_H;
 
-    appHost(buffer, length, outfc);
+    appHost(buffer, length, outfc, krnl_lzw, q, input_buf, output_buf, output_size_buf, input, output_hw, output_size_hw);
     memcpy(&file[offset], &buffer[HEADER], length);
 
     offset += length;
@@ -198,7 +288,10 @@ int main(int argc, char* argv[]) {
         writer++;
     }
 
-     fseek(outfc, 0, SEEK_END);
+    // ------------------------------------------------------------------------------------
+    // Clean-Up
+    // ------------------------------------------------------------------------------------
+    fseek(outfc, 0, SEEK_END);
     long compressed_outputFileLength = ftell(outfc);
     fclose(outfc);
 
@@ -232,20 +325,18 @@ int main(int argc, char* argv[]) {
         std::cerr << "No bytes written to compressed file; compression ratio cannot be calculated." << std::endl;
     }
 
-
-   std::cout << "Original File size: " << outputFileLength << std::endl;
-   std::cout << "Compressed File size: " << compressed_outputFileLength << std::endl;  
+    std::cout << "Original File size: " << outputFileLength << std::endl;
+    std::cout << "Compressed File size: " << compressed_outputFileLength << std::endl;  
     std::cout << "--------------- Key Throughputs ---------------" << std::endl;
     float ethernet_latency = ethernet_timer.latency() / 1000.0;
     float input_throughput = (bytes_written / 1000000.0) / ethernet_latency; // Mb/s
     std::cout << "Input Throughput to Encoder: " << input_throughput << " Mb/s."
               << " (Latency: " << ethernet_latency << " s)." << std::endl;
 
-   for (int i = 0; i < NUM_PACKETS; i++) {
+    for (int i = 0; i < NUM_PACKETS; i++) {
         free(input[i]);
     }
 
     free(file);
- 
-   return 0;
+    return 0;
 }
