@@ -3,11 +3,11 @@
 
 #include <stdint.h>
 #include <stdbool.h>
-#include "lzw_hw.h"
+#include "lzw_hls.h"
 #define NUM_CHUNKS 3
 #define MAX_CHUNK_SIZE 8192
 #define HASH_TABLE_SIZE 1024
-#define INPUT_SIZE 256
+// #define INPUT_SIZE 256
 
 typedef struct HashEntry {
     uint64_t key;

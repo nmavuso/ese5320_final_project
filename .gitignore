@@ -1,3 +1,7 @@
 *.v
 *.vhdl
 *.adb
+*.img
+*.tar.gz
+*.zip
+*.o

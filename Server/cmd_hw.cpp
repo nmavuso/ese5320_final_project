@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
-#include "lzw_hw.h"
+#include "lzw_hls.h"
 #include "cmd_hw.h"
 #include "sha3.h"
 
@@ -68,29 +68,59 @@ int deduplicate_chunks(const unsigned char *chunk, int chunk_size, HashTable *ha
         return -1;
     }
 
+    printf("Computing hash for chunk of size %d\n", chunk_size);
     uint64_t chunk_hash = compute_hash(chunk, chunk_size);
+    printf("Computed hash: %lu\n", chunk_hash);
+
     int existing_size;
     int *existing = lookup_hash_table(hash_table, chunk_hash, &existing_size);
+    printf("Lookup result: %p, existing size: %d\n", (void *)existing, existing_size);
 
     if (existing != NULL && existing_size == chunk_size &&
         memcmp(existing, chunk, chunk_size) == 0) {
         printf("Chunk is a duplicate\n");
         return 0;
     } else {
+        printf("Encoding unique chunk...\n");
         int encoded_data[INPUT_SIZE];
-        int encoded_size;
-        int result = encoding((const char *)chunk, encoded_data, &encoded_size);
+        int encoded_size = 0;
 
-        if (result != 0) {
+        encoding((const char *)chunk, encoded_data, &encoded_size);
+        printf("encoded size: %d\n", encoded_size);
+
+        if (encoded_size == 0) {
             fprintf(stderr, "Failed to encode chunk\n");
             return -1;
         }
 
-        static int encoding_storage[HASH_TABLE_SIZE][INPUT_SIZE];
-        memcpy(encoding_storage[chunk_hash], encoded_data, encoded_size * sizeof(int));
+        // Ensure chunk_hash is within bounds
+        if (chunk_hash >= HASH_TABLE_SIZE) {
+            fprintf(stderr, "Error: chunk_hash (%lu) out of bounds\n", chunk_hash);
+            return -1;
+        }
 
+        static int encoding_storage[HASH_TABLE_SIZE][INPUT_SIZE];
+
+        // Check chunk_hash bounds
+        if (chunk_hash >= HASH_TABLE_SIZE) {
+            fprintf(stderr, "Error: chunk_hash (%lu) out of bounds (HASH_TABLE_SIZE=%d)\n", chunk_hash, HASH_TABLE_SIZE);
+            return -1;
+        }
+
+        // Check encoded_size bounds
+        if (encoded_size > INPUT_SIZE) {
+            fprintf(stderr, "Error: encoded_size (%d) exceeds INPUT_SIZE (%d)\n", encoded_size, INPUT_SIZE);
+            return -1;
+        }
+
+        // Copy encoded data to storage
+        memcpy(encoding_storage[chunk_hash], encoded_data, encoded_size * sizeof(int));
+        printf("Storing encoded data for hash: %lu\n", chunk_hash);
+
+        // Insert into hash table
         insert_hash_table(hash_table, chunk_hash, encoding_storage[chunk_hash], encoded_size);
         printf("Chunk is unique\n");
+
         return 1;
     }
 }

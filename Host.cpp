@@ -169,6 +169,17 @@ int main(int argc, char **argv) {
         std::cout << "output_sw: " << output_sw << std::endl;
     }
 
+
+    bool is_same_hw = (strcmp(test_input, output_r) == 0);
+
+    if (is_same_hw) {
+        std::cout << "The output_hw string matches the test_input string." << std::endl;
+    } else {
+        std::cout << "Mismatch detected between output_hw and test_input." << std::endl;
+        std::cout << "test_input: " << test_input << std::endl;
+        std::cout << "output_hw: " << output_r << std::endl;
+    }
+
     // For debugging purposes to see where we are at
     printf("12\n");
 
