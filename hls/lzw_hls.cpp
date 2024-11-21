@@ -526,6 +526,7 @@ void decoding(const int *encoded_data, int encoded_size, char *output) {
 
 // Unified LZW Function
 void lzw_fpga(const char *s, int *output_code, int *output_size, char *output) {
+    printf("Inside Software LZW\n");
     encoding(s, output_code, output_size);
     decoding(output_code, *output_size, output);
 }

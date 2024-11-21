@@ -146,7 +146,9 @@ int decoding(const int *encoded_data, int encoded_size) {
 }
 
 void lzw_fpga (const char *s, int *output_code, int *output_size, const int *encoded_data, int encoded_size) {
-	int encoding_success;
+    printf("Inside FPGA Hardware 2\n");
+
+    int encoding_success;
 	int decoding_success;
 	encoding_success = encoding(s, output_code, output_size);
 	decoding_success = decoding(encoded_data, encoded_size);

@@ -66,6 +66,8 @@ HOST_EXE = host
 # Host executable target
 $(HOST_EXE): $(HOST_OBJECTS)
 	$(HOST_CXX) -o "$@" $(HOST_OBJECTS) $(LDFLAGS)
+	@mkdir -p package/sd_card
+	@cp $(HOST_EXE) package/sd_card/
 
 %.o: %.cpp
 	$(HOST_CXX) $(CXXFLAGS) -c -I./common -I./hls -o"$@" "$<"
