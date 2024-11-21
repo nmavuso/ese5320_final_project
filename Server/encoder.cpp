@@ -24,6 +24,8 @@
 // #define NUM_ELEMENTS 1024
 // #define HEADER 16
 // #define INPUT_SIZE 1024
+const int MAX_INPUT_SIZE = 1024;
+const int MAX_OUTPUT_SIZE = 1024;
 
 int offset = 0;
 unsigned char* file;
@@ -84,7 +86,9 @@ int appHost(unsigned char* buffer, unsigned int length, FILE* outfc,
             q.enqueueMigrateMemObjects({output_buf, output_size_buf}, CL_MIGRATE_MEM_OBJECT_HOST);
             q.finish();
 
+
             // Write encoded data to the output file
+            int encoded_size = *output_size_hw;
             fwrite(&encoded_size, sizeof(int), 1, outfc);  // Write encoded size
             fwrite(output_hw, sizeof(int), encoded_size, outfc);  // Write encoded data
 
@@ -173,16 +177,13 @@ int main(int argc, char* argv[]) {
     // ------------------------------------------------------------------------------------
     // Step 2: Create FPGA Buffers
     // ------------------------------------------------------------------------------------
-    const int MAX_INPUT_SIZE = 1024;
-    const int MAX_OUTPUT_SIZE = 1024;
-
     // Create buffers for input and output
     cl::Buffer input_buf(context, CL_MEM_ALLOC_HOST_PTR | CL_MEM_READ_ONLY, sizeof(char) * MAX_INPUT_SIZE, NULL, &err);
     cl::Buffer output_buf(context, CL_MEM_ALLOC_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(int) * MAX_OUTPUT_SIZE, NULL, &err);
     cl::Buffer output_size_buf(context, CL_MEM_ALLOC_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(int), NULL, &err);
 
     // Map buffers to host pointers
-    char *input = (char *)q.enqueueMapBuffer(input_buf, CL_TRUE, CL_MAP_WRITE, 0, sizeof(char) * MAX_INPUT_SIZE);
+    char *input_hw = (char *)q.enqueueMapBuffer(input_buf, CL_TRUE, CL_MAP_WRITE, 0, sizeof(char) * MAX_INPUT_SIZE);
     int *output_hw = (int *)q.enqueueMapBuffer(output_buf, CL_TRUE, CL_MAP_READ, 0, sizeof(int) * MAX_OUTPUT_SIZE);
     int *output_size_hw = (int *)q.enqueueMapBuffer(output_size_buf, CL_TRUE, CL_MAP_READ, 0, sizeof(int));
 
@@ -254,7 +255,7 @@ int main(int argc, char* argv[]) {
     length = buffer[0] | (buffer[1] << 8);
     length &= ~DONE_BIT_H;
 
-    appHost(buffer, length, outfc, krnl_lzw, q, input_buf, output_buf, output_size_buf, input, output_hw, output_size_hw);
+    appHost(buffer, length, outfc, krnl_lzw, q, input_buf, output_buf, output_size_buf, input_hw, output_hw, output_size_hw);
     memcpy(&file[offset], &buffer[HEADER], length);
 
     offset += length;
@@ -336,6 +337,12 @@ int main(int argc, char* argv[]) {
     for (int i = 0; i < NUM_PACKETS; i++) {
         free(input[i]);
     }
+
+    delete[] fileBuf; // Free the binary file buffer
+    q.enqueueUnmapMemObject(input_buf, input_hw);
+    q.enqueueUnmapMemObject(output_buf, output_hw);
+    q.enqueueUnmapMemObject(output_size_buf, output_size_hw);
+    q.finish();
 
     free(file);
     return 0;
