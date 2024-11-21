@@ -66,6 +66,17 @@ HOST_SOURCES = ./package/sd_card/Host.cpp ./common/Utilities.cpp ./common/EventT
 HOST_OBJECTS = $(HOST_SOURCES:.cpp=.o)
 HOST_EXE = host
 
+# Sha files
+SHA_SOURCES = ./sha_accelerator/online_driver.cpp ./sha_accelerator/cmd_acc.cpp
+SHA_OBJECTS = $(SHA_SOURCES:.cpp=.o)
+SHA_EXE = sha
+
+# Sha executable target
+$(SHA_EXE): $(SHA_OBJECTS)
+	$(HOST_CXX) -o "$@" $(SHA_OBJECTS) $(LDFLAGS)
+	@mkdir -p package/sd_card
+	@cp $(SHA_EXE) package/sd_card/
+
 # Host executable target
 $(HOST_EXE): $(HOST_OBJECTS)
 	$(HOST_CXX) -o "$@" $(HOST_OBJECTS) $(LDFLAGS)
@@ -76,6 +87,8 @@ $(HOST_EXE): $(HOST_OBJECTS)
 	$(HOST_CXX) $(CXXFLAGS) -c -I./common -I./hls -o"$@" "$<"
 
 host: $(HOST_EXE)
+
+sha: $(SHA_EXE)
 
 # Build all executables
 all: $(CLIENT_EXE) $(SERVER_EXE) $(DECODER_EXE)
