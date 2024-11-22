@@ -36,8 +36,18 @@ int appHost(unsigned char* buffer, unsigned int length, FILE* outfc) {
     unsigned int buffer_size = length;
     Chunk chunks[NUM_PACKETS];
     int num_chunks = 0;
+    
+    for (int i = 0; i < length; ++i) {
+     std::cout << "Buffer[" << i<< "].data = "<< buffer[i] <<std::endl;
+   }
+
     cdc_timer.start();
     cdc(buffer, buffer_size, chunks, &num_chunks);
+    //Question, are we getting the chunks?
+    std::cout << "num_chunks: " << num_chunks <<std::endl;
+   for (int i = 0; i < num_chunks; ++i) {
+     std::cout << "Chunk[" << i<< "].data = "<< chunks[i].data <<std::endl;
+   }
     cdc_timer.stop(); 
     std::cout <<"Delay for CDC: " <<cdc_timer.latency() <<std::endl;
     for (int i = 0; i < num_chunks; ++i) {
@@ -46,6 +56,7 @@ int appHost(unsigned char* buffer, unsigned int length, FILE* outfc) {
         deduplicate_chunks_timer.start();
         int is_new_chunk = deduplicate_chunks(chunk_data, chunk_size, &hash_table);
         deduplicate_chunks_timer.stop();
+        //std::cout << " << <<std::endl;
         if (is_new_chunk == 1) {
             int encoded_data[INPUT_SIZE];
             int encoded_size;
@@ -94,22 +105,23 @@ int main(int argc, char* argv[]) {
     stopwatch ethernet_timer;
     unsigned char* input[NUM_PACKETS];
     int writer = 0;
-    int is_done = 0;
-    unsigned int length = 0;
-    int packet_count = 0;
+    int done = 0;
+    int length = 0;
+    int count = 0;
     ESE532_Server server;
+//   int buff_size;
 
     int blocksize = BLOCKSIZE;
     handle_input(argc, argv, &blocksize);
 
-    file = (unsigned char*)calloc(70000000, sizeof(unsigned char));
+    file = (unsigned char*)malloc(70000000 * sizeof(unsigned char));
     if (!file) {
         std::cerr << "Error: Memory allocation for file buffer failed." << std::endl;
         return EXIT_FAILURE;
     }
 
     for (int i = 0; i < NUM_PACKETS; i++) {
-        input[i] = (unsigned char*)calloc(NUM_ELEMENTS + HEADER, sizeof(unsigned char));
+        input[i] = (unsigned char*)malloc(sizeof(unsigned char) * (NUM_ELEMENTS + HEADER));
         if (!input[i]) {
             std::cerr << "Error: Memory allocation failed for input buffer at packet " << i << "." << std::endl;
             for (int j = 0; j < i; j++) free(input[j]);
@@ -129,51 +141,66 @@ int main(int argc, char* argv[]) {
     }
 
     writer = PIPE_DEPTH;
+   
+   
+   server.get_packet(input[writer]);
 
-    while (!is_done) {
-        ethernet_timer.start();
-        int packet_status = server.get_packet(input[writer]);
-        ethernet_timer.stop();
+   count++;
+  
+  //get packet 
+   unsigned char* buffer = input[writer];
+ 
+  //decode 
+  done = buffer[1] & DONE_BIT_L;
+  length = buffer[0] | (buffer[1] << 8);
+  length &= ~DONE_BIT_H;
+ //My function here 
+  // buff_size = buffer.size();
+    
+   std::cout << "Printing the Length: " << length << std::endl;
+   appHost(buffer, length, outfc);
+   memcpy(&file[offset], &buffer[HEADER], length);
+   offset += length;
+   writer++; 
+   
+  //last message 
+  while (!done) {
+    //reset ring bufffer 
+    if (writer == NUM_PACKETS) {
+      writer = 0;
+   } 
+    
+  ethernet_timer.start(); 
+  server.get_packet(input[writer]);
+  ethernet_timer.stop();
 
-        if (packet_status < 0) {
-            std::cerr << "Error: Failed to retrieve packet." << std::endl;
-            break;
-        }
+ count++;
 
-        packet_count++;
-        unsigned char* buffer = input[writer];
-        is_done = buffer[1] & DONE_BIT_L;
-        length = buffer[0] | (buffer[1] << 8);
-        length &= ~DONE_BIT_H;
+ //get packet 
+   unsigned char* buffer = input[writer];
+ 
+  //decode 
+  done = buffer[1] & DONE_BIT_L;
+  length = buffer[0] | (buffer[1] << 8);
+  length &= ~DONE_BIT_H;
+ //My function here
+   std::cout << "Printing the Length: " << length << std::endl;
+   appHost(buffer, length, outfc);
+   memcpy(&file[offset], &buffer[HEADER], length);
+   offset += length;
+   writer++; 
+}
 
-        appHost(buffer, length, outfc);
-        memcpy(&file[offset], &buffer[HEADER], length);
 
-        offset += length;
-        writer = (writer + 1) % NUM_PACKETS;
-    }
 
     fseek(outfc, 0, SEEK_END);
     long compressed_outputFileLength = ftell(outfc);
     fclose(outfc);
 
     FILE* outfd = fopen("output_cpu.bin", "wb");
-    if (!outfd) {
-        perror("Error opening output_cpu.bin");
-        for (int i = 0; i < NUM_PACKETS; i++) free(input[i]);
-        free(file);
-        return EXIT_FAILURE;
-    }
-
-    int bytes_written = fwrite(file, 1, offset, outfd);
+    int bytes_written = fwrite(&file[0], 1, offset, outfd);
     fclose(outfd);
-
-    if (bytes_written < offset) {
-        std::cerr << "Error: Could not write all data to output_cpu.bin." << std::endl;
-    } else {
-        std::cout << "Written " << bytes_written << " bytes to output_cpu.bin." << std::endl;
-    }
-
+    
     std::cout << "Original File Size: " << offset << " bytes" << std::endl;
     std::cout << "Compressed File Size: " << compressed_outputFileLength << " bytes" << std::endl;
     std::cout << "Compression Ratio: "

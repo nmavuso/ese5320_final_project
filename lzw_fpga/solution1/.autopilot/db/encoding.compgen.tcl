@@ -7,8 +7,8 @@ set MemName lzw_fpga_encoding_table_str
 set CoreName ap_simcore_mem
 set PortList { 2 2 }
 set DataWd 8
-set AddrRange 4194304
-set AddrWd 22
+set AddrRange 131072
+set AddrWd 17
 set impl_style auto
 set TrueReset 0
 set HasInitializer 0
@@ -92,8 +92,8 @@ set MemName lzw_fpga_encoding_table_code
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
 set DataWd 32
-set AddrRange 4096
-set AddrWd 12
+set AddrRange 512
+set AddrWd 9
 set impl_style auto
 set TrueReset 0
 set HasInitializer 0
@@ -177,8 +177,8 @@ set MemName lzw_fpga_encoding_p
 set CoreName ap_simcore_mem
 set PortList { 2 2 }
 set DataWd 8
-set AddrRange 1024
-set AddrWd 10
+set AddrRange 256
+set AddrWd 8
 set impl_style auto
 set TrueReset 0
 set HasInitializer 0

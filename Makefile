@@ -4,22 +4,25 @@ help:
 	@echo "Makefile Usage:"
 	@echo ""
 	@echo "  make all"
-	@echo "      Command to build client, encoder, and decoder."
+	@echo "  	Command to build client, encoder, and decoder."
 	@echo ""
 	@echo "  make client"
-	@echo "      Command to build client."
+	@echo "  	Command to build client."
 	@echo ""
 	@echo "  make encoder"
-	@echo "      Command to build encoder."
+	@echo "  	Command to build encoder."
 	@echo ""
 	@echo "  make decoder"
-	@echo "      Command to build decoder."
+	@echo "  	Command to build decoder."
 	@echo ""
 	@echo "  make fpga"
-	@echo "      Command to build the FPGA binary (kernel.xclbin)."
+	@echo "  	Command to build the FPGA binary (kernel.xclbin)."
+	@echo ""
+	@echo "  make host"
+	@echo "  	Command to build Host.cpp with lzw_hls.xclbin"
 	@echo ""
 	@echo "  make clean"
-	@echo "      Command to remove the generated files."
+	@echo "  	Command to remove the generated files."
 	@echo ""
 #######################################################################################
 
@@ -49,13 +52,43 @@ ALL_MESSAGE_FILES = $(subst .xo,.mdb,$(XO)) $(subst .xclbin,.mdb,$(XCLBIN))
 CLIENT_SOURCES = Client/client.cpp
 CLIENT_EXE = client
 
-SERVER_SOURCES = Server/encoder.cpp Server/server.cpp Server/cdc_hw.cpp Server/cmd_hw.cpp Server/lzw_hw.cpp Server/sha3.cpp
+SERVER_SOURCES = Server/encoder.cpp Server/server.cpp Server/cdc_hw.cpp Server/cmd_hw.cpp hls/lzw_hls.cpp Server/sha3.cpp ./common/Utilities.cpp ./common/EventTimer.cpp
 SERVER_OBJECTS = $(SERVER_SOURCES:.cpp=.o)
 SERVER_EXE = encoder
 
 DECODER_SOURCES = Decoder/Decoder.cpp
 DECODER_OBJECTS = $(DECODER_SOURCES:.cpp=.o)
 DECODER_EXE = decoder
+
+# Host files
+# Host files
+HOST_SOURCES = ./package/sd_card/Host.cpp ./common/Utilities.cpp ./common/EventTimer.cpp hls/lzw_hls.cpp
+HOST_OBJECTS = $(HOST_SOURCES:.cpp=.o)
+HOST_EXE = host
+
+# Sha files
+SHA_SOURCES = ./sha_accelerator/online_driver.cpp ./sha_accelerator/cmd_acc.cpp
+SHA_OBJECTS = $(SHA_SOURCES:.cpp=.o)
+SHA_EXE = sha
+
+# Sha executable target
+$(SHA_EXE): $(SHA_OBJECTS)
+	$(HOST_CXX) -o "$@" $(SHA_OBJECTS) $(LDFLAGS)
+	@mkdir -p package/sd_card
+	@cp $(SHA_EXE) package/sd_card/
+
+# Host executable target
+$(HOST_EXE): $(HOST_OBJECTS)
+	$(HOST_CXX) -o "$@" $(HOST_OBJECTS) $(LDFLAGS)
+	@mkdir -p package/sd_card
+	@cp $(HOST_EXE) package/sd_card/
+
+%.o: %.cpp
+	$(HOST_CXX) $(CXXFLAGS) -c -I./common -I./hls -o"$@" "$<"
+
+host: $(HOST_EXE)
+
+sha: $(SHA_EXE)
 
 # Build all executables
 all: $(CLIENT_EXE) $(SERVER_EXE) $(DECODER_EXE)
@@ -85,21 +118,20 @@ $(XCLBIN): $(XO)
 
 package/sd_card.img: $(SERVER_EXE) $(XCLBIN) ./fpga_acceleration/xrt.ini
 	$(VPP) --package $(VPP_OPTS) --config fpga_acceleration/package.cfg $(XCLBIN) \
-		--package.out_dir package \
-		--package.sd_file $(SERVER_EXE) \
-		--package.kernel_image $(PLATFORM_REPO_PATHS)/sw/$(VITIS_PLATFORM)/PetaLinux/image/image.ub \
-		--package.rootfs $(PLATFORM_REPO_PATHS)/sw/$(VITIS_PLATFORM)/PetaLinux/rootfs/rootfs.ext4 \
-		--package.sd_file $(XCLBIN) \
-		--package.sd_file ./fpga_acceleration/xrt.ini
+    	--package.out_dir package \
+    	--package.sd_file $(SERVER_EXE) \
+    	--package.kernel_image $(PLATFORM_REPO_PATHS)/sw/$(VITIS_PLATFORM)/PetaLinux/image/image.ub \
+    	--package.rootfs $(PLATFORM_REPO_PATHS)/sw/$(VITIS_PLATFORM)/PetaLinux/rootfs/rootfs.ext4 \
+    	--package.sd_file $(XCLBIN) \
+    	--package.sd_file ./fpga_acceleration/xrt.ini
 
 # Clean commands
 .NOTPARALLEL: clean
 clean:
-	-$(RM) $(SERVER_EXE) $(SERVER_OBJECTS) $(DECODER_EXE) $(DECODER_OBJECTS) $(CLIENT_EXE) 
+	-$(RM) $(SERVER_EXE) $(SERVER_OBJECTS) $(DECODER_EXE) $(DECODER_OBJECTS) $(CLIENT_EXE)
 	-$(RM) $(XCLBIN) $(XO) $(ALL_MESSAGE_FILES)
 	-${RMDIR} package package.build .Xil fpga/hls/proj_kernel
 	-${RMDIR} _x .ipcache
-	-$(RM) *.log *.tmp
 
 # Testbench executable
 TESTBENCH_SOURCES = hls/lzw_hls.cpp hls/Testbench.cpp
@@ -121,9 +153,10 @@ $(TESTBENCH_EXE): $(TESTBENCH_SOURCES)
 
 # package/sd_card.img: $(HOST_EXE) $(XCLBIN) ./fpga/xrt.ini
 # 	$(VPP) --package $(VPP_OPTS) --config fpga/package.cfg $(XCLBIN) \
-# 		--package.out_dir package \
-# 		--package.sd_file $(HOST_EXE) \
-# 		--package.kernel_image $(PLATFORM_REPO_PATHS)/sw/$(VITIS_PLATFORM)/PetaLinux/image/image.ub \
-# 		--package.rootfs $(PLATFORM_REPO_PATHS)/sw/$(VITIS_PLATFORM)/PetaLinux/rootfs/rootfs.ext4 \
-# 		--package.sd_file $(XCLBIN) \
-# 		--package.sd_file ./fpga/xrt.ini
+#     	--package.out_dir package \
+#     	--package.sd_file $(HOST_EXE) \
+#     	--package.kernel_image $(PLATFORM_REPO_PATHS)/sw/$(VITIS_PLATFORM)/PetaLinux/image/image.ub \
+#     	--package.rootfs $(PLATFORM_REPO_PATHS)/sw/$(VITIS_PLATFORM)/PetaLinux/rootfs/rootfs.ext4 \
+#     	--package.sd_file $(XCLBIN) \
+#     	--package.sd_file ./fpga/xrt.ini
+

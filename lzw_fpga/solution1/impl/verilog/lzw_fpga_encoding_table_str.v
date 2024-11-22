@@ -6,8 +6,8 @@
 module lzw_fpga_encoding_table_str_ram (addr0, ce0, d0, we0, q0, addr1, ce1, d1, we1, q1,  clk);
 
 parameter DWIDTH = 8;
-parameter AWIDTH = 22;
-parameter MEM_SIZE = 4194304;
+parameter AWIDTH = 17;
+parameter MEM_SIZE = 131072;
 
 input[AWIDTH-1:0] addr0;
 input ce0;
@@ -64,8 +64,8 @@ module lzw_fpga_encoding_table_str(
     q1);
 
 parameter DataWidth = 32'd8;
-parameter AddressRange = 32'd4194304;
-parameter AddressWidth = 32'd22;
+parameter AddressRange = 32'd131072;
+parameter AddressWidth = 32'd17;
 input reset;
 input clk;
 input[AddressWidth - 1:0] address0;

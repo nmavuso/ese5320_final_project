@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 
-#define TABLE_SIZE 4096 // Size of the dictionary
-#define CHAR_MAX 256    // Initial characters in ASCII
-#define INPUT_SIZE 2048  // Maximum input string size
+#define TABLE_SIZE 4096 // Maximum dictionary size
+#define CHAR_MAX 256    // Initial number of ASCII characters
+#define INPUT_SIZE 2048 // Maximum input string size
 
 // Dictionary for encoding
 typedef struct {
@@ -17,9 +17,15 @@ typedef struct {
     char str[INPUT_SIZE];
 } DecodeEntry;
 
+// Function for encoding a string using LZW
 int encoding(const char *s, int *output_code, int *output_size) {
+    if (!s || !output_code || !output_size) {
+        fprintf(stderr, "Invalid input to encoding function\n");
+        return -1;
+    }
+
     DictionaryEntry table[TABLE_SIZE];
-    int code = CHAR_MAX; // Start from 256 for new codes
+    int code = CHAR_MAX;  // Start from 256 for new codes
     int table_size = CHAR_MAX;
 
     // Initialize the dictionary with single characters
@@ -36,13 +42,14 @@ int encoding(const char *s, int *output_code, int *output_size) {
         char c[2] = {s[i], '\0'};
         char temp[INPUT_SIZE];
 
-    int ret = snprintf(temp, sizeof(temp), "%s%s", p, c);
-if ( (int long unsigned) ret >= sizeof(temp)) {
-    fprintf(stderr, "Warning: Output truncated. Needed size: %d\n", ret + 1);
-    return -1; // Handle truncation error appropriately
-}
-//    snprintf(temp, sizeof(temp), "%s%s", p, c);
+        // Concatenate p and c into temp
+        int ret = snprintf(temp, sizeof(temp), "%s%s", p, c);
+        if (ret >= (int)sizeof(temp)) {
+            fprintf(stderr, "Error: Output truncated during encoding\n");
+            return -1; // Handle truncation error
+        }
 
+        // Check if temp exists in the dictionary
         int found = -1;
         for (int j = 0; j < table_size; j++) {
             if (strcmp(table[j].str, temp) == 0) {
@@ -52,22 +59,24 @@ if ( (int long unsigned) ret >= sizeof(temp)) {
         }
 
         if (found != -1) {
+            // If temp exists, set p to temp
             strcpy(p, temp);
         } else {
-            // Output the code for p directly without searching
+            // Output the code for p
             for (int j = 0; j < table_size; j++) {
                 if (strcmp(table[j].str, p) == 0) {
                     output_code[out_index++] = table[j].code;
                     break;
                 }
             }
-            // Add p + c to the table
+            // Add temp (p + c) to the dictionary
             if (table_size < TABLE_SIZE) {
-                strcpy(table[table_size].str, temp);
+                strncpy(table[table_size].str, temp, sizeof(table[table_size].str) - 1);
+                table[table_size].str[sizeof(table[table_size].str) - 1] = '\0'; // Null-terminate
                 table[table_size].code = code++;
                 table_size++;
             }
-            // Set p to the new character
+            // Reset p to the current character c
             strcpy(p, c);
         }
     }
@@ -84,7 +93,13 @@ if ( (int long unsigned) ret >= sizeof(temp)) {
     return 0;
 }
 
+// Function for decoding an LZW encoded sequence
 int decoding(const int *encoded_data, int encoded_size) {
+    if (!encoded_data || encoded_size <= 0) {
+        fprintf(stderr, "Invalid input to decoding function\n");
+        return -1;
+    }
+
     DecodeEntry table[TABLE_SIZE];
     int table_size = CHAR_MAX;
 
@@ -96,7 +111,7 @@ int decoding(const int *encoded_data, int encoded_size) {
     }
 
     int old_code = encoded_data[0];
-    printf("%s", table[old_code].str);
+    printf("%s", table[old_code].str); // Print the first decoded string
     char c = table[old_code].str[0];
     int count = CHAR_MAX;
 
@@ -104,15 +119,18 @@ int decoding(const int *encoded_data, int encoded_size) {
         int new_code = encoded_data[i];
         char entry[INPUT_SIZE];
 
+        // Check if the new code exists in the dictionary
         if (new_code >= table_size) {
             snprintf(entry, sizeof(entry), "%s%c", table[old_code].str, c);
         } else {
-            strcpy(entry, table[new_code].str);
+            strncpy(entry, table[new_code].str, sizeof(entry) - 1);
+            entry[sizeof(entry) - 1] = '\0'; // Null-terminate
         }
 
-        printf("%s", entry);
+        printf("%s", entry); // Print the decoded string
         c = entry[0];
 
+        // Add a new entry to the dictionary
         if (table_size < TABLE_SIZE) {
             snprintf(table[table_size].str, sizeof(table[table_size].str), "%s%c", table[old_code].str, c);
             table[table_size].code = count++;
@@ -123,4 +141,3 @@ int decoding(const int *encoded_data, int encoded_size) {
     }
     return 0;
 }
-

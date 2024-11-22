@@ -31,7 +31,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>4294967295</coreId>
             </Obj>
             <bitwidth>32</bitwidth>
           </Value>
@@ -130,7 +130,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>68</coreId>
+              <coreId>81</coreId>
             </Obj>
             <bitwidth>64</bitwidth>
           </Value>
@@ -163,7 +163,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>68</coreId>
+              <coreId>81</coreId>
             </Obj>
             <bitwidth>64</bitwidth>
           </Value>
@@ -187,14 +187,14 @@
               <name>output_read</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>528</lineNumber>
+              <lineNumber>169</lineNumber>
               <contextFuncName>lzw_fpga</contextFuncName>
               <contextNormFuncName>lzw_fpga</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item class_id="10" tracking_level="0" version="0">
-                  <first>/home1/n/nmavuso/ese5320_final_project</first>
+                  <first>/mnt/castor/seas_home/n/nmavuso/ese5320_final_project</first>
                   <second class_id="11" tracking_level="0" version="0">
                     <count>1</count>
                     <item_version>0</item_version>
@@ -203,7 +203,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>lzw_fpga</second>
                       </first>
-                      <second>528</second>
+                      <second>169</second>
                     </item>
                   </second>
                 </item>
@@ -241,14 +241,14 @@
               <name>output_size_read</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>528</lineNumber>
+              <lineNumber>169</lineNumber>
               <contextFuncName>lzw_fpga</contextFuncName>
               <contextNormFuncName>lzw_fpga</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home1/n/nmavuso/ese5320_final_project</first>
+                  <first>/mnt/castor/seas_home/n/nmavuso/ese5320_final_project</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -257,7 +257,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>lzw_fpga</second>
                       </first>
-                      <second>528</second>
+                      <second>169</second>
                     </item>
                   </second>
                 </item>
@@ -295,14 +295,14 @@
               <name>output_code_read</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>528</lineNumber>
+              <lineNumber>169</lineNumber>
               <contextFuncName>lzw_fpga</contextFuncName>
               <contextNormFuncName>lzw_fpga</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home1/n/nmavuso/ese5320_final_project</first>
+                  <first>/mnt/castor/seas_home/n/nmavuso/ese5320_final_project</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -311,7 +311,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>lzw_fpga</second>
                       </first>
-                      <second>528</second>
+                      <second>169</second>
                     </item>
                   </second>
                 </item>
@@ -349,14 +349,14 @@
               <name>s_read</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>528</lineNumber>
+              <lineNumber>169</lineNumber>
               <contextFuncName>lzw_fpga</contextFuncName>
               <contextNormFuncName>lzw_fpga</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home1/n/nmavuso/ese5320_final_project</first>
+                  <first>/mnt/castor/seas_home/n/nmavuso/ese5320_final_project</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -365,7 +365,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>lzw_fpga</second>
                       </first>
-                      <second>528</second>
+                      <second>169</second>
                     </item>
                   </second>
                 </item>
@@ -400,17 +400,17 @@
             <Obj>
               <type>0</type>
               <id>23</id>
-              <name>_ln529</name>
+              <name>_ln170</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>529</lineNumber>
+              <lineNumber>170</lineNumber>
               <contextFuncName>lzw_fpga</contextFuncName>
               <contextNormFuncName>lzw_fpga</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home1/n/nmavuso/ese5320_final_project</first>
+                  <first>/mnt/castor/seas_home/n/nmavuso/ese5320_final_project</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -419,7 +419,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>lzw_fpga</second>
                       </first>
-                      <second>529</second>
+                      <second>170</second>
                     </item>
                   </second>
                 </item>
@@ -460,14 +460,14 @@
               <name>trunc_ln</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>530</lineNumber>
+              <lineNumber>171</lineNumber>
               <contextFuncName>lzw_fpga</contextFuncName>
               <contextNormFuncName>lzw_fpga</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home1/n/nmavuso/ese5320_final_project</first>
+                  <first>/mnt/castor/seas_home/n/nmavuso/ese5320_final_project</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -476,7 +476,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>lzw_fpga</second>
                       </first>
-                      <second>530</second>
+                      <second>171</second>
                     </item>
                   </second>
                 </item>
@@ -487,7 +487,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>113</coreId>
+              <coreId>145</coreId>
             </Obj>
             <bitwidth>62</bitwidth>
           </Value>
@@ -513,17 +513,17 @@
             <Obj>
               <type>0</type>
               <id>25</id>
-              <name>sext_ln530</name>
+              <name>sext_ln171</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>530</lineNumber>
+              <lineNumber>171</lineNumber>
               <contextFuncName>lzw_fpga</contextFuncName>
               <contextNormFuncName>lzw_fpga</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home1/n/nmavuso/ese5320_final_project</first>
+                  <first>/mnt/castor/seas_home/n/nmavuso/ese5320_final_project</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -532,18 +532,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>lzw_fpga</second>
                       </first>
-                      <second>530</second>
+                      <second>171</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>sext_ln530_fu_136_p1</rtlName>
+              <rtlName>sext_ln171_fu_136_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>113</coreId>
+              <coreId>145</coreId>
             </Obj>
             <bitwidth>64</bitwidth>
           </Value>
@@ -569,14 +569,14 @@
               <name>gmem_addr</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>530</lineNumber>
+              <lineNumber>171</lineNumber>
               <contextFuncName>lzw_fpga</contextFuncName>
               <contextNormFuncName>lzw_fpga</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home1/n/nmavuso/ese5320_final_project</first>
+                  <first>/mnt/castor/seas_home/n/nmavuso/ese5320_final_project</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -585,7 +585,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>lzw_fpga</second>
                       </first>
-                      <second>530</second>
+                      <second>171</second>
                     </item>
                   </second>
                 </item>
@@ -596,7 +596,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>791555616</coreId>
+              <coreId>145</coreId>
             </Obj>
             <bitwidth>32</bitwidth>
           </Value>
@@ -623,14 +623,14 @@
               <name>gmem_load_req</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>530</lineNumber>
+              <lineNumber>171</lineNumber>
               <contextFuncName>lzw_fpga</contextFuncName>
               <contextNormFuncName>lzw_fpga</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home1/n/nmavuso/ese5320_final_project</first>
+                  <first>/mnt/castor/seas_home/n/nmavuso/ese5320_final_project</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -639,7 +639,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>lzw_fpga</second>
                       </first>
-                      <second>530</second>
+                      <second>171</second>
                     </item>
                   </second>
                 </item>
@@ -679,14 +679,14 @@
               <name>gmem_addr_read</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>530</lineNumber>
+              <lineNumber>171</lineNumber>
               <contextFuncName>lzw_fpga</contextFuncName>
               <contextNormFuncName>lzw_fpga</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home1/n/nmavuso/ese5320_final_project</first>
+                  <first>/mnt/castor/seas_home/n/nmavuso/ese5320_final_project</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -695,7 +695,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>lzw_fpga</second>
                       </first>
-                      <second>530</second>
+                      <second>171</second>
                     </item>
                   </second>
                 </item>
@@ -731,17 +731,17 @@
             <Obj>
               <type>0</type>
               <id>29</id>
-              <name>_ln530</name>
+              <name>_ln171</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>530</lineNumber>
+              <lineNumber>171</lineNumber>
               <contextFuncName>lzw_fpga</contextFuncName>
               <contextNormFuncName>lzw_fpga</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home1/n/nmavuso/ese5320_final_project</first>
+                  <first>/mnt/castor/seas_home/n/nmavuso/ese5320_final_project</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -750,7 +750,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>lzw_fpga</second>
                       </first>
-                      <second>530</second>
+                      <second>171</second>
                     </item>
                   </second>
                 </item>
@@ -761,7 +761,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>49</coreId>
+              <coreId>0</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -790,17 +790,17 @@
             <Obj>
               <type>0</type>
               <id>30</id>
-              <name>_ln531</name>
+              <name>_ln172</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>531</lineNumber>
+              <lineNumber>172</lineNumber>
               <contextFuncName>lzw_fpga</contextFuncName>
               <contextNormFuncName>lzw_fpga</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home1/n/nmavuso/ese5320_final_project</first>
+                  <first>/mnt/castor/seas_home/n/nmavuso/ese5320_final_project</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -809,7 +809,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>lzw_fpga</second>
                       </first>
-                      <second>531</second>
+                      <second>172</second>
                     </item>
                   </second>
                 </item>
@@ -820,7 +820,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1412484992</coreId>
+              <coreId>145</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -862,7 +862,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>145</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -890,7 +890,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1412106680</coreId>
+              <coreId>145</coreId>
             </Obj>
             <bitwidth>32</bitwidth>
           </Value>
@@ -918,7 +918,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>433</coreId>
+              <coreId>145</coreId>
             </Obj>
             <bitwidth>32</bitwidth>
           </Value>
@@ -946,7 +946,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>132</coreId>
+              <coreId>145</coreId>
             </Obj>
             <bitwidth>32</bitwidth>
           </Value>
@@ -974,7 +974,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>145</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -1005,7 +1005,7 @@
             <opType/>
             <implIndex/>
             <coreName/>
-            <coreId>33</coreId>
+            <coreId>0</coreId>
           </Obj>
           <node_objs>
             <count>12</count>
@@ -3420,15 +3420,15 @@
             <item_version>0</item_version>
             <item>
               <first>BRAM</first>
-              <second>2049</second>
+              <second>66</second>
             </item>
             <item>
               <first>FF</first>
-              <second>1830</second>
+              <second>1834</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>3741</second>
+              <second>4378</second>
             </item>
           </second>
         </item>
@@ -3439,15 +3439,15 @@
             <item_version>0</item_version>
             <item>
               <first>BRAM</first>
-              <second>2058</second>
+              <second>67</second>
             </item>
             <item>
               <first>FF</first>
-              <second>1901</second>
+              <second>1869</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>4129</second>
+              <second>4104</second>
             </item>
           </second>
         </item>
@@ -4837,7 +4837,7 @@
         </second>
       </item>
       <item>
-        <first>sext_ln530_fu_136</first>
+        <first>sext_ln171_fu_136</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

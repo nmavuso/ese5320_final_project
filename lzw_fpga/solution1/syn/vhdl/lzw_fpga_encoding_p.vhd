@@ -10,8 +10,8 @@ use ieee.std_logic_unsigned.all;
 entity lzw_fpga_encoding_p_ram is 
     generic(
             DWIDTH     : integer := 8; 
-            AWIDTH     : integer := 10; 
-            MEM_SIZE    : integer := 1024
+            AWIDTH     : integer := 8; 
+            MEM_SIZE    : integer := 256
     ); 
     port (
           addr0     : in std_logic_vector(AWIDTH-1 downto 0); 
@@ -97,8 +97,8 @@ use IEEE.std_logic_1164.all;
 entity lzw_fpga_encoding_p is
     generic (
         DataWidth : INTEGER := 8;
-        AddressRange : INTEGER := 1024;
-        AddressWidth : INTEGER := 10);
+        AddressRange : INTEGER := 256;
+        AddressWidth : INTEGER := 8);
     port (
         reset : IN STD_LOGIC;
         clk : IN STD_LOGIC;

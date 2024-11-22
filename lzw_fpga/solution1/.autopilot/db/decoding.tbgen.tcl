@@ -137,7 +137,7 @@ set NewPortList {[
  	{ "name": "output_r", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "output_r", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6"],
 		"CDFG" : "decoding",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -157,20 +157,90 @@ set RtlHierarchyInfo {[
 					{"Name" : "gmem_blk_n_R", "Type" : "RtlSignal"},
 					{"Name" : "gmem_blk_n_AW", "Type" : "RtlSignal"},
 					{"Name" : "gmem_blk_n_W", "Type" : "RtlSignal"},
-					{"Name" : "gmem_blk_n_B", "Type" : "RtlSignal"}]},
+					{"Name" : "gmem_blk_n_B", "Type" : "RtlSignal"}],
+				"SubConnect" : [
+					{"ID" : "4", "SubInstance" : "grp_string_copy_1_fu_478", "Port" : "gmem"}]},
 			{"Name" : "encoded_data", "Type" : "None", "Direction" : "I"},
 			{"Name" : "encoded_size", "Type" : "None", "Direction" : "I"},
 			{"Name" : "output_r", "Type" : "None", "Direction" : "I"}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.table_str_U", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.entry_U", "Parent" : "0"}]}
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.temp_U", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.new_str_U", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_string_copy_1_fu_478", "Parent" : "0",
+		"CDFG" : "string_copy_1",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "-1", "EstimateLatencyMax" : "-1",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"Port" : [
+			{"Name" : "gmem", "Type" : "MAXI", "Direction" : "O",
+				"BlockSignal" : [
+					{"Name" : "gmem_blk_n_AW", "Type" : "RtlSignal"},
+					{"Name" : "gmem_blk_n_W", "Type" : "RtlSignal"},
+					{"Name" : "gmem_blk_n_B", "Type" : "RtlSignal"}]},
+			{"Name" : "dest", "Type" : "None", "Direction" : "I"},
+			{"Name" : "src", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "max_len", "Type" : "None", "Direction" : "I"}]},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_string_copy_16_fu_488", "Parent" : "0",
+		"CDFG" : "string_copy_16",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "5", "EstimateLatencyMax" : "513",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"Port" : [
+			{"Name" : "dest", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "src", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "src_offset", "Type" : "None", "Direction" : "I"}]},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_string_copy_fu_495", "Parent" : "0",
+		"CDFG" : "string_copy",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "5", "EstimateLatencyMax" : "513",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"Port" : [
+			{"Name" : "dest", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "src", "Type" : "Memory", "Direction" : "I"}]}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	decoding {
-		gmem {Type IO LastRead 230 FirstWrite 76}
+		gmem {Type IO LastRead 155 FirstWrite 4}
 		encoded_data {Type I LastRead 0 FirstWrite -1}
 		encoded_size {Type I LastRead 0 FirstWrite -1}
-		output_r {Type I LastRead 0 FirstWrite -1}}}
+		output_r {Type I LastRead 0 FirstWrite -1}}
+	string_copy_1 {
+		gmem {Type O LastRead 6 FirstWrite 4}
+		dest {Type I LastRead 0 FirstWrite -1}
+		src {Type I LastRead 1 FirstWrite -1}
+		max_len {Type I LastRead 0 FirstWrite -1}}
+	string_copy_16 {
+		dest {Type O LastRead -1 FirstWrite 2}
+		src {Type I LastRead 1 FirstWrite -1}
+		src_offset {Type I LastRead 0 FirstWrite -1}}
+	string_copy {
+		dest {Type O LastRead -1 FirstWrite 2}
+		src {Type I LastRead 1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
@@ -180,8 +250,6 @@ set PerformanceInfo {[
 ]}
 
 set PipelineEnableSignalInfo {[
-	{"Pipeline" : "1", "EnableSignal" : "ap_enable_pp1"}
-	{"Pipeline" : "5", "EnableSignal" : "ap_enable_pp5"}
 ]}
 
 set Spec2ImplPortList { 
