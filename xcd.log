@@ -1,0 +1,14 @@
+Fri Nov 22 13:15:08 2024: Server was asked to start on port: '38537'
+Fri Nov 22 13:15:08 2024: Server is using token UUID: '5cce45e8-a68c-44de-bab8-ab3f02490e11'
+Fri Nov 22 13:15:08 2024: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Fri Nov 22 13:15:08 2024: Attempting to start server on port '38537'
+Fri Nov 22 13:15:08 2024: XCD main fifo: created main fifo '/tmp/xcdmain5cce45e8-a68c-44de-bab8-ab3f02490e11', fd read = 13
+Fri Nov 22 13:15:08 2024: Running Dispatch Server
+Fri Nov 22 13:15:08 2024: Version 2.1.0
+Fri Nov 22 13:15:16 2024: Dispatch Server: Accepted socket connection from client
+Fri Nov 22 13:15:16 2024: EXCHANGE_TOKEN received, server token: 5cce45e8-a68c-44de-bab8-ab3f02490e11, passed token: 5cce45e8-a68c-44de-bab8-ab3f02490e11
+Fri Nov 22 13:15:16 2024: SESSION_MGR: creating session with session uuid: 'eae39fec-29b3-4af4-a4e6-02f3a1000732' and name 'v++_link_lzw_hls'
+Fri Nov 22 13:15:16 2024: GUIDANCE_SMGR: creating guidance session with uuid: 'eae39fec-29b3-4af4-a4e6-02f3a1000732' and name 'v++_link_lzw_hls'
+Fri Nov 22 13:15:35 2024: Dispatch Server: Accepted socket connection from client
+Fri Nov 22 13:15:42 2024: SESSION_MGR: closing session for UUID 'eae39fec-29b3-4af4-a4e6-02f3a1000732' with name 'v++_link_lzw_hls'
+Fri Nov 22 13:15:42 2024: GUIDANCE_SMGR: closing session for UUID 'eae39fec-29b3-4af4-a4e6-02f3a1000732' with name 'v++_link_lzw_hls'
