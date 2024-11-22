@@ -13,9 +13,9 @@ set_part {xczu3eg-sbva484-1-i}
 create_clock -period 6.7 -name default
 config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 -m_axi_offset slave
 config_rtl -register_reset_num 3
-config_export -format xo -rtl verilog
+config_export -format xo -output /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/lzw_fpga.xo -rtl verilog
 source "./lzw_fpga/solution1/directives.tcl"
 csim_design
 csynth_design
 cosim_design
-export_design -rtl verilog -format xo
+export_design -rtl verilog -format xo -output /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/lzw_fpga.xo

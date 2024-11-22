@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1731695619395">
-  <ports id="1" name="gmem" type="PortType" coreId="0" bitwidth="32" direction="DirInOut" iftype="IfTypeFifo">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1732298275059">
+  <ports id="1" name="gmem" type="PortType" coreId="4294967295" bitwidth="32" direction="DirInOut" iftype="IfTypeFifo">
     <dataInputObjs>call</dataInputObjs>
     <dataInputObjs>getelementptr</dataInputObjs>
     <dataInputObjs>call</dataInputObjs>
@@ -8,16 +8,16 @@
     <dataOutputObjs>getelementptr</dataOutputObjs>
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="2" name="s" type="PortType" originalName="s" coreId="68" bitwidth="64">
+  <ports id="2" name="s" type="PortType" originalName="s" coreId="980447331" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="3" name="output_code" type="PortType" originalName="output_code" coreId="68" bitwidth="64">
+  <ports id="3" name="output_code" type="PortType" originalName="output_code" coreId="49" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="4" name="output_size" type="PortType" originalName="output_size" coreId="68" bitwidth="64">
+  <ports id="4" name="output_size" type="PortType" originalName="output_size" coreId="1648863704" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="5" name="output_r" type="PortType" originalName="output" coreId="68" bitwidth="64">
+  <ports id="5" name="output_r" type="PortType" originalName="output" coreId="81" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <edges id="34" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.0"/>
@@ -46,30 +46,30 @@
   <edges id="-55" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@ports.0"/>
   <edges id="-67" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@ports.0"/>
   <blocks id="31" name="lzw_fpga" type="BlockType">
-    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="output_read" lineNumber="528" originalName="output" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="auto" coreId="122" contextFuncName="lzw_fpga" bitwidth="64" opcode="read" nodeLabel="73.0" m_display="0" m_delay="1.0" m_topoIndex="10" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="528" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="lzw_fpga"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="output_read" lineNumber="169" originalName="output" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="auto" coreId="122" contextFuncName="lzw_fpga" bitwidth="64" opcode="read" nodeLabel="73.0" m_display="0" m_delay="1.0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="169" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="lzw_fpga"/>
       <dataInputObjs>output_r</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="output_size_read" lineNumber="528" originalName="output_size" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="auto" coreId="122" contextFuncName="lzw_fpga" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="1" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="528" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="lzw_fpga"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="output_size_read" lineNumber="169" originalName="output_size" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="auto" coreId="122" contextFuncName="lzw_fpga" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="169" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="lzw_fpga"/>
       <dataInputObjs>output_size</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="output_code_read" lineNumber="528" originalName="output_code" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="auto" coreId="122" contextFuncName="lzw_fpga" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="2" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="528" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="lzw_fpga"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="output_code_read" lineNumber="169" originalName="output_code" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="auto" coreId="122" contextFuncName="lzw_fpga" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="169" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="lzw_fpga"/>
       <dataInputObjs>output_code</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="s_read" lineNumber="528" originalName="s" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="auto" coreId="122" contextFuncName="lzw_fpga" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="3" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="528" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="lzw_fpga"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="s_read" lineNumber="169" originalName="s" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="auto" coreId="122" contextFuncName="lzw_fpga" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="169" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="lzw_fpga"/>
       <dataInputObjs>s</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="_ln529" lineNumber="529" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="grp_encoding_fu_104" coreId="113" contextFuncName="lzw_fpga" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="529" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="lzw_fpga"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="_ln170" lineNumber="170" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="grp_encoding_fu_104" coreId="145" contextFuncName="lzw_fpga" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="170" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="lzw_fpga"/>
       <dataInputObjs>gmem</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
@@ -77,37 +77,37 @@
       <dataOutputObjs>gmem</dataOutputObjs>
       <constName>encoding</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="trunc_ln" lineNumber="530" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="trunc_ln_fu_126_p4" coreId="113" contextFuncName="lzw_fpga" bitwidth="62" opcode="partselect" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="530" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="lzw_fpga"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="trunc_ln" lineNumber="171" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="trunc_ln_fu_126_p4" coreId="145" contextFuncName="lzw_fpga" bitwidth="62" opcode="partselect" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="171" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="lzw_fpga"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="sext_ln530" lineNumber="530" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="sext_ln530_fu_136_p1" coreId="113" contextFuncName="lzw_fpga" bitwidth="64" opcode="sext" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="530" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="lzw_fpga"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="sext_ln171" lineNumber="171" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="sext_ln171_fu_136_p1" coreId="145" contextFuncName="lzw_fpga" bitwidth="64" opcode="sext" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="171" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="lzw_fpga"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="gmem_addr" lineNumber="530" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="791555616" contextFuncName="lzw_fpga" bitwidth="32" opcode="getelementptr" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="530" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="lzw_fpga"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="gmem_addr" lineNumber="171" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="145" contextFuncName="lzw_fpga" bitwidth="32" opcode="getelementptr" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="171" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="lzw_fpga"/>
       <dataInputObjs>gmem</dataInputObjs>
       <dataInputObjs>sext</dataInputObjs>
       <dataOutputObjs>readreq</dataOutputObjs>
       <dataOutputObjs>read</dataOutputObjs>
       <dataOutputObjs>gmem</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="gmem_load_req" lineNumber="530" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="auto" opType="readreq" coreId="121" contextFuncName="lzw_fpga" bitwidth="1" opcode="readreq" nodeLabel="2.0" nodeLatency="69" m_display="0" m_delay="4.89" m_topoIndex="8" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="530" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="lzw_fpga"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="gmem_load_req" lineNumber="171" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="auto" opType="readreq" coreId="121" contextFuncName="lzw_fpga" bitwidth="1" opcode="readreq" nodeLabel="2.0" nodeLatency="69" m_display="0" m_delay="4.89" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="171" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="lzw_fpga"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="gmem_addr_read" lineNumber="530" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreName="m_axi" implIndex="UNSUPPORTED" control="auto" coreId="121" contextFuncName="lzw_fpga" bitwidth="32" opcode="read" nodeLabel="72.0" m_display="0" m_delay="4.89" m_topoIndex="9" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="530" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="lzw_fpga"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="gmem_addr_read" lineNumber="171" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreName="m_axi" implIndex="UNSUPPORTED" control="auto" coreId="121" contextFuncName="lzw_fpga" bitwidth="32" opcode="read" nodeLabel="72.0" m_display="0" m_delay="4.89" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="171" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="lzw_fpga"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="_ln530" lineNumber="530" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="grp_decoding_fu_116" coreId="49" contextFuncName="lzw_fpga" opcode="call" nodeLabel="73.0" nodeLatency="1" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="530" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="lzw_fpga"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="_ln171" lineNumber="171" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." rtlName="grp_decoding_fu_116" coreId="145" contextFuncName="lzw_fpga" opcode="call" nodeLabel="73.0" nodeLatency="1" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="171" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="lzw_fpga"/>
       <dataInputObjs>gmem</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
       <dataInputObjs>read</dataInputObjs>
@@ -115,14 +115,14 @@
       <dataOutputObjs>gmem</dataOutputObjs>
       <constName>decoding</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="_ln531" lineNumber="531" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="1412484992" contextFuncName="lzw_fpga" opcode="ret" nodeLabel="74.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="531" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="lzw_fpga"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="_ln172" lineNumber="172" fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" fileDirectory=".." coreId="145" contextFuncName="lzw_fpga" opcode="ret" nodeLabel="74.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp" linenumber="172" fileDirectory="/home1/n/nmavuso/ese5320_final_project" functionName="lzw_fpga"/>
     </node_objs>
     <fileValidLineNumbers fileName="../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp">
-      <validLinenumbers>528</validLinenumbers>
-      <validLinenumbers>529</validLinenumbers>
-      <validLinenumbers>530</validLinenumbers>
-      <validLinenumbers>531</validLinenumbers>
+      <validLinenumbers>169</validLinenumbers>
+      <validLinenumbers>170</validLinenumbers>
+      <validLinenumbers>171</validLinenumbers>
+      <validLinenumbers>172</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <ScheduleInfo time="0"/>
@@ -218,7 +218,7 @@
   <regnodes realName="gmem_addr_read_reg_168">
     <nodeIds>28</nodeIds>
   </regnodes>
-  <expressionNodes realName="sext_ln530_fu_136">
+  <expressionNodes realName="sext_ln171_fu_136">
     <nodeIds>25</nodeIds>
   </expressionNodes>
   <expressionNodes realName="trunc_ln_fu_126">

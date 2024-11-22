@@ -64,7 +64,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>10552</coreId>
+              <coreId>68</coreId>
             </Obj>
             <bitwidth>64</bitwidth>
           </Value>
@@ -97,7 +97,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1405915040</coreId>
+              <coreId>68</coreId>
             </Obj>
             <bitwidth>64</bitwidth>
           </Value>
@@ -167,7 +167,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>925</coreId>
+              <coreId>924</coreId>
             </Obj>
             <bitwidth>64</bitwidth>
           </Value>
@@ -274,7 +274,7 @@
               <name>table_str</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>397</lineNumber>
+              <lineNumber>35</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -290,7 +290,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>397</second>
+                      <second>35</second>
                     </item>
                   </second>
                 </item>
@@ -327,7 +327,7 @@
               <name>table_code</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>397</lineNumber>
+              <lineNumber>35</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -343,7 +343,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>397</second>
+                      <second>35</second>
                     </item>
                   </second>
                 </item>
@@ -380,7 +380,7 @@
               <name>p</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>408</lineNumber>
+              <lineNumber>46</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -396,7 +396,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>408</second>
+                      <second>46</second>
                     </item>
                   </second>
                 </item>
@@ -433,7 +433,7 @@
               <name>temp</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>413</lineNumber>
+              <lineNumber>51</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -449,7 +449,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>413</second>
+                      <second>51</second>
                     </item>
                   </second>
                 </item>
@@ -483,10 +483,10 @@
             <Obj>
               <type>0</type>
               <id>13</id>
-              <name>br_ln402</name>
+              <name>br_ln40</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>402</lineNumber>
+              <lineNumber>40</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -502,7 +502,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>402</second>
+                      <second>40</second>
                     </item>
                   </second>
                 </item>
@@ -513,7 +513,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>49</coreId>
+              <coreId>2701105</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -537,28 +537,14 @@
               <type>0</type>
               <id>15</id>
               <name>i</name>
-              <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>403</lineNumber>
-              <contextFuncName>encoding</contextFuncName>
-              <contextNormFuncName>encoding</contextNormFuncName>
+              <fileName/>
+              <fileDirectory/>
+              <lineNumber>0</lineNumber>
+              <contextFuncName/>
+              <contextNormFuncName/>
               <inlineStackInfo>
-                <count>1</count>
+                <count>0</count>
                 <item_version>0</item_version>
-                <item>
-                  <first>/home1/n/nmavuso/ese5320_final_project</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
-                        <second>encoding</second>
-                      </first>
-                      <second>403</second>
-                    </item>
-                  </second>
-                </item>
               </inlineStackInfo>
               <originalName>i</originalName>
               <rtlName/>
@@ -566,7 +552,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>113</coreId>
+              <coreId>129</coreId>
             </Obj>
             <bitwidth>9</bitwidth>
           </Value>
@@ -592,10 +578,10 @@
             <Obj>
               <type>0</type>
               <id>16</id>
-              <name>add_ln402</name>
+              <name>i_1</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>402</lineNumber>
+              <lineNumber>40</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -611,13 +597,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>402</second>
+                      <second>40</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
-              <originalName/>
-              <rtlName>add_ln402_fu_742_p2</rtlName>
+              <originalName>i</originalName>
+              <rtlName>i_1_fu_742_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -646,10 +632,10 @@
             <Obj>
               <type>0</type>
               <id>18</id>
-              <name>icmp_ln402</name>
+              <name>icmp_ln40</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>402</lineNumber>
+              <lineNumber>40</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -665,18 +651,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>402</second>
+                      <second>40</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln402_fu_748_p2</rtlName>
+              <rtlName>icmp_ln40_fu_748_p2</rtlName>
               <control/>
               <opType>icmp</opType>
               <implIndex/>
               <coreName/>
-              <coreId>113</coreId>
+              <coreId>129</coreId>
             </Obj>
             <bitwidth>1</bitwidth>
           </Value>
@@ -700,10 +686,10 @@
             <Obj>
               <type>0</type>
               <id>20</id>
-              <name>br_ln402</name>
+              <name>br_ln40</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>402</lineNumber>
+              <lineNumber>40</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -719,7 +705,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>402</second>
+                      <second>40</second>
                     </item>
                   </second>
                 </item>
@@ -730,7 +716,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>129</coreId>
+              <coreId>145</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -755,10 +741,10 @@
             <Obj>
               <type>0</type>
               <id>22</id>
-              <name>trunc_ln403_cast</name>
+              <name>i_cast</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>403</lineNumber>
+              <lineNumber>40</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -774,18 +760,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>403</second>
+                      <second>40</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>trunc_ln403_cast_fu_754_p1</rtlName>
+              <rtlName>i_cast_fu_754_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>129</coreId>
+              <coreId>145</coreId>
             </Obj>
             <bitwidth>64</bitwidth>
           </Value>
@@ -811,7 +797,7 @@
               <name>tmp</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>403</lineNumber>
+              <lineNumber>41</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -827,7 +813,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>403</second>
+                      <second>41</second>
                     </item>
                   </second>
                 </item>
@@ -838,7 +824,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>132</coreId>
+              <coreId>145</coreId>
             </Obj>
             <bitwidth>19</bitwidth>
           </Value>
@@ -863,10 +849,10 @@
             <Obj>
               <type>0</type>
               <id>24</id>
-              <name>zext_ln403_1</name>
+              <name>zext_ln41</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>403</lineNumber>
+              <lineNumber>41</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -882,18 +868,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>403</second>
+                      <second>41</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln403_1_fu_767_p1</rtlName>
+              <rtlName>zext_ln41_fu_767_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>129</coreId>
+              <coreId>1642603344</coreId>
             </Obj>
             <bitwidth>64</bitwidth>
           </Value>
@@ -919,7 +905,7 @@
               <name>table_str_addr</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>403</lineNumber>
+              <lineNumber>41</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -935,7 +921,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>403</second>
+                      <second>41</second>
                     </item>
                   </second>
                 </item>
@@ -946,7 +932,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>876245104</coreId>
+              <coreId>1</coreId>
             </Obj>
             <bitwidth>22</bitwidth>
           </Value>
@@ -971,10 +957,10 @@
             <Obj>
               <type>0</type>
               <id>26</id>
-              <name>or_ln404</name>
+              <name>or_ln42</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>404</lineNumber>
+              <lineNumber>42</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -990,18 +976,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>404</second>
+                      <second>42</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>or_ln404_fu_772_p2</rtlName>
+              <rtlName>or_ln42_fu_772_p2</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>145</coreId>
+              <coreId>0</coreId>
             </Obj>
             <bitwidth>19</bitwidth>
           </Value>
@@ -1028,7 +1014,7 @@
               <name>tmp_1</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>404</lineNumber>
+              <lineNumber>42</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -1044,7 +1030,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>404</second>
+                      <second>42</second>
                     </item>
                   </second>
                 </item>
@@ -1055,7 +1041,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>49</coreId>
             </Obj>
             <bitwidth>64</bitwidth>
           </Value>
@@ -1083,7 +1069,7 @@
               <name>table_str_addr_1</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>404</lineNumber>
+              <lineNumber>42</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -1099,7 +1085,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>404</second>
+                      <second>42</second>
                     </item>
                   </second>
                 </item>
@@ -1110,7 +1096,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>145</coreId>
+              <coreId>49</coreId>
             </Obj>
             <bitwidth>22</bitwidth>
           </Value>
@@ -1135,10 +1121,10 @@
             <Obj>
               <type>0</type>
               <id>30</id>
-              <name>zext_ln403</name>
+              <name>trunc_ln41</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>403</lineNumber>
+              <lineNumber>41</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -1154,27 +1140,27 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>403</second>
+                      <second>41</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln403_fu_787_p1</rtlName>
+              <rtlName>trunc_ln41_fu_787_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>145</coreId>
+              <coreId>1642945760</coreId>
             </Obj>
-            <bitwidth>32</bitwidth>
+            <bitwidth>8</bitwidth>
           </Value>
           <oprand_edges>
             <count>1</count>
             <item_version>0</item_version>
             <item>430</item>
           </oprand_edges>
-          <opcode>zext</opcode>
+          <opcode>trunc</opcode>
           <m_Display>0</m_Display>
           <m_isOnCriticalPath>0</m_isOnCriticalPath>
           <m_isLCDNode>0</m_isLCDNode>
@@ -1188,10 +1174,10 @@
             <Obj>
               <type>0</type>
               <id>31</id>
-              <name>trunc_ln403</name>
+              <name>table_str_addr_write_ln41</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>403</lineNumber>
+              <lineNumber>41</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -1207,60 +1193,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>403</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>trunc_ln403_fu_792_p1</rtlName>
-              <control/>
-              <opType/>
-              <implIndex/>
-              <coreName/>
-              <coreId>161</coreId>
-            </Obj>
-            <bitwidth>8</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>431</item>
-          </oprand_edges>
-          <opcode>trunc</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>0.00</m_delay>
-          <m_topoIndex>21</m_topoIndex>
-          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
-        </item>
-        <item class_id_reference="9" object_id="_26">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>32</id>
-              <name>table_str_addr_write_ln403</name>
-              <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>403</lineNumber>
-              <contextFuncName>encoding</contextFuncName>
-              <contextNormFuncName>encoding</contextNormFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/home1/n/nmavuso/ese5320_final_project</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
-                        <second>encoding</second>
-                      </first>
-                      <second>403</second>
+                      <second>41</second>
                     </item>
                   </second>
                 </item>
@@ -1278,8 +1211,62 @@
           <oprand_edges>
             <count>2</count>
             <item_version>0</item_version>
+            <item>431</item>
             <item>432</item>
-            <item>433</item>
+          </oprand_edges>
+          <opcode>store</opcode>
+          <m_Display>0</m_Display>
+          <m_isOnCriticalPath>0</m_isOnCriticalPath>
+          <m_isLCDNode>0</m_isLCDNode>
+          <m_isStartOfPath>0</m_isStartOfPath>
+          <m_delay>1.35</m_delay>
+          <m_topoIndex>21</m_topoIndex>
+          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
+        </item>
+        <item class_id_reference="9" object_id="_26">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>32</id>
+              <name>table_str_addr_1_write_ln42</name>
+              <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>42</lineNumber>
+              <contextFuncName>encoding</contextFuncName>
+              <contextNormFuncName>encoding</contextNormFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/home1/n/nmavuso/ese5320_final_project</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
+                        <second>encoding</second>
+                      </first>
+                      <second>42</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName/>
+              <rtlName/>
+              <control>auto</control>
+              <opType>ram</opType>
+              <implIndex>auto</implIndex>
+              <coreName>RAM</coreName>
+              <coreId>83</coreId>
+            </Obj>
+            <bitwidth>0</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>2</count>
+            <item_version>0</item_version>
+            <item>434</item>
+            <item>435</item>
           </oprand_edges>
           <opcode>store</opcode>
           <m_Display>0</m_Display>
@@ -1295,64 +1282,10 @@
             <Obj>
               <type>0</type>
               <id>33</id>
-              <name>table_str_addr_1_write_ln404</name>
-              <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>404</lineNumber>
-              <contextFuncName>encoding</contextFuncName>
-              <contextNormFuncName>encoding</contextNormFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/home1/n/nmavuso/ese5320_final_project</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
-                        <second>encoding</second>
-                      </first>
-                      <second>404</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName/>
-              <control>auto</control>
-              <opType>ram</opType>
-              <implIndex>auto</implIndex>
-              <coreName>RAM</coreName>
-              <coreId>83</coreId>
-            </Obj>
-            <bitwidth>0</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>2</count>
-            <item_version>0</item_version>
-            <item>435</item>
-            <item>436</item>
-          </oprand_edges>
-          <opcode>store</opcode>
-          <m_Display>0</m_Display>
-          <m_isOnCriticalPath>0</m_isOnCriticalPath>
-          <m_isLCDNode>0</m_isLCDNode>
-          <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>1.35</m_delay>
-          <m_topoIndex>23</m_topoIndex>
-          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
-        </item>
-        <item class_id_reference="9" object_id="_28">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>34</id>
               <name>table_code_addr</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>405</lineNumber>
+              <lineNumber>43</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -1368,7 +1301,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>405</second>
+                      <second>43</second>
                     </item>
                   </second>
                 </item>
@@ -1386,9 +1319,9 @@
           <oprand_edges>
             <count>3</count>
             <item_version>0</item_version>
+            <item>436</item>
             <item>437</item>
             <item>438</item>
-            <item>439</item>
           </oprand_edges>
           <opcode>getelementptr</opcode>
           <m_Display>0</m_Display>
@@ -1396,18 +1329,18 @@
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
           <m_delay>0.00</m_delay>
-          <m_topoIndex>24</m_topoIndex>
+          <m_topoIndex>23</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
-        <item class_id_reference="9" object_id="_29">
+        <item class_id_reference="9" object_id="_28">
           <Value>
             <Obj>
               <type>0</type>
-              <id>35</id>
-              <name>table_code_addr_write_ln405</name>
+              <id>34</id>
+              <name>zext_ln43</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>405</lineNumber>
+              <lineNumber>43</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -1423,7 +1356,60 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>405</second>
+                      <second>43</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName/>
+              <rtlName>zext_ln43_fu_792_p1</rtlName>
+              <control/>
+              <opType/>
+              <implIndex/>
+              <coreName/>
+              <coreId>132</coreId>
+            </Obj>
+            <bitwidth>32</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>439</item>
+          </oprand_edges>
+          <opcode>zext</opcode>
+          <m_Display>0</m_Display>
+          <m_isOnCriticalPath>0</m_isOnCriticalPath>
+          <m_isLCDNode>0</m_isLCDNode>
+          <m_isStartOfPath>0</m_isStartOfPath>
+          <m_delay>0.00</m_delay>
+          <m_topoIndex>24</m_topoIndex>
+          <m_clusterGroupNumber>-1</m_clusterGroupNumber>
+        </item>
+        <item class_id_reference="9" object_id="_29">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>35</id>
+              <name>table_code_addr_write_ln43</name>
+              <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>43</lineNumber>
+              <contextFuncName>encoding</contextFuncName>
+              <contextNormFuncName>encoding</contextNormFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/home1/n/nmavuso/ese5320_final_project</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
+                        <second>encoding</second>
+                      </first>
+                      <second>43</second>
                     </item>
                   </second>
                 </item>
@@ -1474,7 +1460,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>49</coreId>
+              <coreId>273</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -1513,7 +1499,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>337</coreId>
+              <coreId>0</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -1536,7 +1522,7 @@
             <Obj>
               <type>0</type>
               <id>40</id>
-              <name>empty_32</name>
+              <name>empty_33</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -1552,7 +1538,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>893022320</coreId>
+              <coreId>1642922025</coreId>
             </Obj>
             <bitwidth>11</bitwidth>
           </Value>
@@ -1578,7 +1564,7 @@
             <Obj>
               <type>0</type>
               <id>41</id>
-              <name>empty_33</name>
+              <name>empty_34</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -1589,7 +1575,7 @@
                 <item_version>0</item_version>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>empty_33_fu_797_p2</rtlName>
+              <rtlName>empty_34_fu_797_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -1674,7 +1660,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1406033056</coreId>
+              <coreId>1642602408</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -1715,7 +1701,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>337</coreId>
+              <coreId>2281701984</coreId>
             </Obj>
             <bitwidth>64</bitwidth>
           </Value>
@@ -1754,7 +1740,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>49</coreId>
+              <coreId>132</coreId>
             </Obj>
             <bitwidth>10</bitwidth>
           </Value>
@@ -1835,7 +1821,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>273</coreId>
+              <coreId>1643150080</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -1874,7 +1860,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>305</coreId>
+              <coreId>209</coreId>
             </Obj>
             <bitwidth>32</bitwidth>
           </Value>
@@ -1913,7 +1899,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>49</coreId>
+              <coreId>45</coreId>
             </Obj>
             <bitwidth>32</bitwidth>
           </Value>
@@ -1952,7 +1938,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>49</coreId>
+              <coreId>2147483647</coreId>
             </Obj>
             <bitwidth>32</bitwidth>
           </Value>
@@ -1978,7 +1964,7 @@
               <name>p_addr</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>408</lineNumber>
+              <lineNumber>46</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -1994,7 +1980,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>408</second>
+                      <second>46</second>
                     </item>
                   </second>
                 </item>
@@ -2005,7 +1991,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>465</coreId>
+              <coreId>2281701520</coreId>
             </Obj>
             <bitwidth>10</bitwidth>
           </Value>
@@ -2030,10 +2016,10 @@
             <Obj>
               <type>0</type>
               <id>56</id>
-              <name>trunc_ln408_1</name>
+              <name>trunc_ln46_1</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>408</lineNumber>
+              <lineNumber>46</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -2049,18 +2035,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>408</second>
+                      <second>46</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>trunc_ln408_1_fu_814_p4</rtlName>
+              <rtlName>trunc_ln46_1_fu_814_p4</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>609</coreId>
+              <coreId>132</coreId>
             </Obj>
             <bitwidth>62</bitwidth>
           </Value>
@@ -2086,10 +2072,10 @@
             <Obj>
               <type>0</type>
               <id>57</id>
-              <name>sext_ln408</name>
+              <name>sext_ln46</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>408</lineNumber>
+              <lineNumber>46</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -2105,18 +2091,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>408</second>
+                      <second>46</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>sext_ln408_fu_823_p1</rtlName>
+              <rtlName>sext_ln46_fu_823_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1406645808</coreId>
+              <coreId>49</coreId>
             </Obj>
             <bitwidth>64</bitwidth>
           </Value>
@@ -2142,7 +2128,7 @@
               <name>gmem_addr</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>408</lineNumber>
+              <lineNumber>46</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -2158,7 +2144,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>408</second>
+                      <second>46</second>
                     </item>
                   </second>
                 </item>
@@ -2169,7 +2155,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>209</coreId>
+              <coreId>1643586832</coreId>
             </Obj>
             <bitwidth>32</bitwidth>
           </Value>
@@ -2196,7 +2182,7 @@
               <name>gmem_load_req</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>408</lineNumber>
+              <lineNumber>46</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -2212,7 +2198,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>408</second>
+                      <second>46</second>
                     </item>
                   </second>
                 </item>
@@ -2251,7 +2237,7 @@
               <name>gmem_addr_read</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>408</lineNumber>
+              <lineNumber>46</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -2267,7 +2253,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>408</second>
+                      <second>46</second>
                     </item>
                   </second>
                 </item>
@@ -2303,10 +2289,10 @@
             <Obj>
               <type>0</type>
               <id>61</id>
-              <name>trunc_ln408</name>
+              <name>trunc_ln46</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>408</lineNumber>
+              <lineNumber>46</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -2322,18 +2308,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>408</second>
+                      <second>46</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>trunc_ln408_fu_849_p1</rtlName>
+              <rtlName>trunc_ln46_fu_849_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>132</coreId>
+              <coreId>1633905012</coreId>
             </Obj>
             <bitwidth>8</bitwidth>
           </Value>
@@ -2356,10 +2342,10 @@
             <Obj>
               <type>0</type>
               <id>62</id>
-              <name>p_addr_write_ln408</name>
+              <name>p_addr_write_ln46</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>408</lineNumber>
+              <lineNumber>46</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -2375,7 +2361,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>408</second>
+                      <second>46</second>
                     </item>
                   </second>
                 </item>
@@ -2426,7 +2412,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>3087007888</coreId>
+              <coreId>0</coreId>
             </Obj>
             <bitwidth>10</bitwidth>
           </Value>
@@ -2451,10 +2437,10 @@
             <Obj>
               <type>0</type>
               <id>64</id>
-              <name>trunc_ln411</name>
+              <name>trunc_ln49</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>411</lineNumber>
+              <lineNumber>49</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -2470,18 +2456,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>411</second>
+                      <second>49</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>trunc_ln411_fu_853_p1</rtlName>
+              <rtlName>trunc_ln49_fu_853_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1406616064</coreId>
+              <coreId>1643598569</coreId>
             </Obj>
             <bitwidth>2</bitwidth>
           </Value>
@@ -2504,10 +2490,10 @@
             <Obj>
               <type>0</type>
               <id>65</id>
-              <name>code_write_ln411</name>
+              <name>code_write_ln49</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>411</lineNumber>
+              <lineNumber>49</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -2523,7 +2509,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>411</second>
+                      <second>49</second>
                     </item>
                   </second>
                 </item>
@@ -2534,7 +2520,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>2929</coreId>
+              <coreId>132</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -2558,10 +2544,10 @@
             <Obj>
               <type>0</type>
               <id>66</id>
-              <name>table_size_write_ln411</name>
+              <name>table_size_write_ln49</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>411</lineNumber>
+              <lineNumber>49</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -2577,7 +2563,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>411</second>
+                      <second>49</second>
                     </item>
                   </second>
                 </item>
@@ -2588,7 +2574,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1406180448</coreId>
+              <coreId>0</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -2612,10 +2598,10 @@
             <Obj>
               <type>0</type>
               <id>67</id>
-              <name>out_index_write_ln411</name>
+              <name>out_index_write_ln49</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>411</lineNumber>
+              <lineNumber>49</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -2631,7 +2617,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>411</second>
+                      <second>49</second>
                     </item>
                   </second>
                 </item>
@@ -2642,7 +2628,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>753</coreId>
+              <coreId>4</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -2666,10 +2652,10 @@
             <Obj>
               <type>0</type>
               <id>68</id>
-              <name>br_ln411</name>
+              <name>br_ln49</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>411</lineNumber>
+              <lineNumber>49</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -2685,7 +2671,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>411</second>
+                      <second>49</second>
                     </item>
                   </second>
                 </item>
@@ -2696,7 +2682,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1406645768</coreId>
+              <coreId>18641</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -2719,10 +2705,10 @@
             <Obj>
               <type>0</type>
               <id>70</id>
-              <name>i_1</name>
+              <name>i_2</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>411</lineNumber>
+              <lineNumber>49</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -2738,7 +2724,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>411</second>
+                      <second>49</second>
                     </item>
                   </second>
                 </item>
@@ -2749,7 +2735,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>11</coreId>
+              <coreId>1643598768</coreId>
             </Obj>
             <bitwidth>64</bitwidth>
           </Value>
@@ -2778,7 +2764,7 @@
               <name>out_index_2</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>458</lineNumber>
+              <lineNumber>96</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -2794,7 +2780,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>458</second>
+                      <second>96</second>
                     </item>
                   </second>
                 </item>
@@ -2805,7 +2791,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>49</coreId>
+              <coreId>543450483</coreId>
             </Obj>
             <bitwidth>32</bitwidth>
           </Value>
@@ -2829,10 +2815,10 @@
             <Obj>
               <type>0</type>
               <id>72</id>
-              <name>trunc_ln411_1</name>
+              <name>trunc_ln49_1</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>411</lineNumber>
+              <lineNumber>49</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -2848,18 +2834,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>411</second>
+                      <second>49</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>trunc_ln411_1_fu_856_p1</rtlName>
+              <rtlName>trunc_ln49_1_fu_856_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1406638969</coreId>
+              <coreId>0</coreId>
             </Obj>
             <bitwidth>2</bitwidth>
           </Value>
@@ -2882,10 +2868,10 @@
             <Obj>
               <type>0</type>
               <id>73</id>
-              <name>add_ln411</name>
+              <name>add_ln49</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>411</lineNumber>
+              <lineNumber>49</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -2901,13 +2887,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>411</second>
+                      <second>49</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>add_ln411_fu_860_p2</rtlName>
+              <rtlName>add_ln49_fu_860_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -2936,10 +2922,10 @@
             <Obj>
               <type>0</type>
               <id>74</id>
-              <name>trunc_ln411_2</name>
+              <name>trunc_ln49_2</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>411</lineNumber>
+              <lineNumber>49</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -2955,18 +2941,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>411</second>
+                      <second>49</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>trunc_ln411_2_fu_865_p4</rtlName>
+              <rtlName>trunc_ln49_2_fu_865_p4</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>49</coreId>
+              <coreId>12881</coreId>
             </Obj>
             <bitwidth>62</bitwidth>
           </Value>
@@ -2992,10 +2978,10 @@
             <Obj>
               <type>0</type>
               <id>75</id>
-              <name>sext_ln411</name>
+              <name>sext_ln49</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>411</lineNumber>
+              <lineNumber>49</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -3011,18 +2997,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>411</second>
+                      <second>49</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>sext_ln411_fu_875_p1</rtlName>
+              <rtlName>sext_ln49_fu_875_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>132</coreId>
+              <coreId>639659631</coreId>
             </Obj>
             <bitwidth>64</bitwidth>
           </Value>
@@ -3045,10 +3031,10 @@
             <Obj>
               <type>0</type>
               <id>76</id>
-              <name>gmem_addr_1</name>
+              <name>gmem_addr_2</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>411</lineNumber>
+              <lineNumber>49</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -3064,7 +3050,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>411</second>
+                      <second>49</second>
                     </item>
                   </second>
                 </item>
@@ -3075,7 +3061,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1406680472</coreId>
+              <coreId>980447331</coreId>
             </Obj>
             <bitwidth>32</bitwidth>
           </Value>
@@ -3102,7 +3088,7 @@
               <name>gmem_load_1_req</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>411</lineNumber>
+              <lineNumber>49</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -3118,7 +3104,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>411</second>
+                      <second>49</second>
                     </item>
                   </second>
                 </item>
@@ -3155,10 +3141,10 @@
             <Obj>
               <type>0</type>
               <id>78</id>
-              <name>gmem_addr_1_read</name>
+              <name>gmem_addr_2_read</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>411</lineNumber>
+              <lineNumber>49</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -3174,7 +3160,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>411</second>
+                      <second>49</second>
                     </item>
                   </second>
                 </item>
@@ -3212,10 +3198,10 @@
             <Obj>
               <type>0</type>
               <id>79</id>
-              <name>add_ln411_2</name>
+              <name>add_ln49_2</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>411</lineNumber>
+              <lineNumber>49</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -3231,13 +3217,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>411</second>
+                      <second>49</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>add_ln411_2_fu_885_p2</rtlName>
+              <rtlName>add_ln49_2_fu_885_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -3269,7 +3255,7 @@
               <name>shl_ln</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>411</lineNumber>
+              <lineNumber>49</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -3285,7 +3271,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>411</second>
+                      <second>49</second>
                     </item>
                   </second>
                 </item>
@@ -3296,7 +3282,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1406685632</coreId>
+              <coreId>0</coreId>
             </Obj>
             <bitwidth>5</bitwidth>
           </Value>
@@ -3321,10 +3307,10 @@
             <Obj>
               <type>0</type>
               <id>81</id>
-              <name>zext_ln411</name>
+              <name>zext_ln49</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>411</lineNumber>
+              <lineNumber>49</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -3340,18 +3326,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>411</second>
+                      <second>49</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln411_fu_900_p1</rtlName>
+              <rtlName>zext_ln49_fu_900_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1406686464</coreId>
+              <coreId>49</coreId>
             </Obj>
             <bitwidth>32</bitwidth>
           </Value>
@@ -3374,10 +3360,10 @@
             <Obj>
               <type>0</type>
               <id>82</id>
-              <name>lshr_ln411</name>
+              <name>lshr_ln49</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>411</lineNumber>
+              <lineNumber>49</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -3393,13 +3379,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>411</second>
+                      <second>49</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>lshr_ln411_fu_904_p2</rtlName>
+              <rtlName>lshr_ln49_fu_904_p2</rtlName>
               <control>auto</control>
               <opType>lshr</opType>
               <implIndex>auto_pipe</implIndex>
@@ -3431,7 +3417,7 @@
               <name>c</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>411</lineNumber>
+              <lineNumber>49</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -3447,7 +3433,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>411</second>
+                      <second>49</second>
                     </item>
                   </second>
                 </item>
@@ -3458,7 +3444,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1406687072</coreId>
+              <coreId>0</coreId>
             </Obj>
             <bitwidth>8</bitwidth>
           </Value>
@@ -3481,10 +3467,10 @@
             <Obj>
               <type>0</type>
               <id>84</id>
-              <name>icmp_ln411</name>
+              <name>icmp_ln49</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>411</lineNumber>
+              <lineNumber>49</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -3500,18 +3486,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>411</second>
+                      <second>49</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln411_fu_913_p2</rtlName>
+              <rtlName>icmp_ln49_fu_913_p2</rtlName>
               <control/>
               <opType>icmp</opType>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>132</coreId>
             </Obj>
             <bitwidth>1</bitwidth>
           </Value>
@@ -3535,10 +3521,10 @@
             <Obj>
               <type>0</type>
               <id>85</id>
-              <name>br_ln411</name>
+              <name>br_ln49</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>411</lineNumber>
+              <lineNumber>49</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -3554,7 +3540,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>411</second>
+                      <second>49</second>
                     </item>
                   </second>
                 </item>
@@ -3565,7 +3551,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>1919248500</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -3590,10 +3576,10 @@
             <Obj>
               <type>0</type>
               <id>88</id>
-              <name>br_ln389</name>
+              <name>br_ln27</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>389</lineNumber>
+              <lineNumber>27</lineNumber>
               <contextFuncName>string_length</contextFuncName>
               <contextNormFuncName>string_length</contextNormFuncName>
               <inlineStackInfo>
@@ -3609,7 +3595,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_length</second>
                       </first>
-                      <second>389</second>
+                      <second>27</second>
                     </item>
                   </second>
                 </item>
@@ -3620,7 +3606,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1869635878</coreId>
+              <coreId>132</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -3646,7 +3632,7 @@
               <name>p_len</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>390</lineNumber>
+              <lineNumber>28</lineNumber>
               <contextFuncName>string_length</contextFuncName>
               <contextNormFuncName>string_length</contextNormFuncName>
               <inlineStackInfo>
@@ -3662,7 +3648,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_length</second>
                       </first>
-                      <second>390</second>
+                      <second>28</second>
                     </item>
                   </second>
                 </item>
@@ -3673,7 +3659,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1918989395</coreId>
+              <coreId>1643258656</coreId>
             </Obj>
             <bitwidth>64</bitwidth>
           </Value>
@@ -3699,10 +3685,10 @@
             <Obj>
               <type>0</type>
               <id>91</id>
-              <name>add_ln390</name>
+              <name>add_ln28</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>390</lineNumber>
+              <lineNumber>28</lineNumber>
               <contextFuncName>string_length</contextFuncName>
               <contextNormFuncName>string_length</contextNormFuncName>
               <inlineStackInfo>
@@ -3718,13 +3704,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_length</second>
                       </first>
-                      <second>390</second>
+                      <second>28</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>add_ln390_fu_935_p2</rtlName>
+              <rtlName>add_ln28_fu_935_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -3756,7 +3742,7 @@
               <name>p_addr_3</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>389</lineNumber>
+              <lineNumber>27</lineNumber>
               <contextFuncName>string_length</contextFuncName>
               <contextNormFuncName>string_length</contextNormFuncName>
               <inlineStackInfo>
@@ -3772,7 +3758,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_length</second>
                       </first>
-                      <second>389</second>
+                      <second>27</second>
                     </item>
                   </second>
                 </item>
@@ -3783,7 +3769,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>2281701520</coreId>
             </Obj>
             <bitwidth>10</bitwidth>
           </Value>
@@ -3811,7 +3797,7 @@
               <name>p_load</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>389</lineNumber>
+              <lineNumber>27</lineNumber>
               <contextFuncName>string_length</contextFuncName>
               <contextNormFuncName>string_length</contextNormFuncName>
               <inlineStackInfo>
@@ -3827,7 +3813,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_length</second>
                       </first>
-                      <second>389</second>
+                      <second>27</second>
                     </item>
                   </second>
                 </item>
@@ -3861,10 +3847,10 @@
             <Obj>
               <type>0</type>
               <id>95</id>
-              <name>icmp_ln389</name>
+              <name>icmp_ln27</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>389</lineNumber>
+              <lineNumber>27</lineNumber>
               <contextFuncName>string_length</contextFuncName>
               <contextNormFuncName>string_length</contextNormFuncName>
               <inlineStackInfo>
@@ -3880,7 +3866,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_length</second>
                       </first>
-                      <second>389</second>
+                      <second>27</second>
                     </item>
                   </second>
                 </item>
@@ -3891,7 +3877,7 @@
               <opType>icmp</opType>
               <implIndex/>
               <coreName/>
-              <coreId>1295780106</coreId>
+              <coreId>2281701520</coreId>
             </Obj>
             <bitwidth>1</bitwidth>
           </Value>
@@ -3918,7 +3904,7 @@
               <name>tmp_2</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>389</lineNumber>
+              <lineNumber>27</lineNumber>
               <contextFuncName>string_length</contextFuncName>
               <contextNormFuncName>string_length</contextNormFuncName>
               <inlineStackInfo>
@@ -3934,7 +3920,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_length</second>
                       </first>
-                      <second>389</second>
+                      <second>27</second>
                     </item>
                   </second>
                 </item>
@@ -3945,7 +3931,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1406663856</coreId>
+              <coreId>1643627000</coreId>
             </Obj>
             <bitwidth>54</bitwidth>
           </Value>
@@ -3971,10 +3957,10 @@
             <Obj>
               <type>0</type>
               <id>97</id>
-              <name>icmp_ln389_1</name>
+              <name>icmp_ln27_1</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>389</lineNumber>
+              <lineNumber>27</lineNumber>
               <contextFuncName>string_length</contextFuncName>
               <contextNormFuncName>string_length</contextNormFuncName>
               <inlineStackInfo>
@@ -3990,18 +3976,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_length</second>
                       </first>
-                      <second>389</second>
+                      <second>27</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln389_1_fu_929_p2</rtlName>
+              <rtlName>icmp_ln27_1_fu_929_p2</rtlName>
               <control/>
               <opType>icmp</opType>
               <implIndex/>
               <coreName/>
-              <coreId>1406665072</coreId>
+              <coreId>1643627176</coreId>
             </Obj>
             <bitwidth>1</bitwidth>
           </Value>
@@ -4025,10 +4011,10 @@
             <Obj>
               <type>0</type>
               <id>98</id>
-              <name>and_ln389</name>
+              <name>and_ln27</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>389</lineNumber>
+              <lineNumber>27</lineNumber>
               <contextFuncName>string_length</contextFuncName>
               <contextNormFuncName>string_length</contextNormFuncName>
               <inlineStackInfo>
@@ -4044,18 +4030,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_length</second>
                       </first>
-                      <second>389</second>
+                      <second>27</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>and_ln389_fu_941_p2</rtlName>
+              <rtlName>and_ln27_fu_941_p2</rtlName>
               <control/>
               <opType>and</opType>
               <implIndex/>
               <coreName/>
-              <coreId>132</coreId>
+              <coreId>4294967295</coreId>
             </Obj>
             <bitwidth>1</bitwidth>
           </Value>
@@ -4080,10 +4066,10 @@
             <Obj>
               <type>0</type>
               <id>99</id>
-              <name>br_ln389</name>
+              <name>br_ln27</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>389</lineNumber>
+              <lineNumber>27</lineNumber>
               <contextFuncName>string_length</contextFuncName>
               <contextNormFuncName>string_length</contextNormFuncName>
               <inlineStackInfo>
@@ -4099,7 +4085,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_length</second>
                       </first>
-                      <second>389</second>
+                      <second>27</second>
                     </item>
                   </second>
                 </item>
@@ -4110,7 +4096,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>49</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -4135,10 +4121,10 @@
             <Obj>
               <type>0</type>
               <id>102</id>
-              <name>br_ln389</name>
+              <name>br_ln27</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>389</lineNumber>
+              <lineNumber>27</lineNumber>
               <contextFuncName>string_length</contextFuncName>
               <contextNormFuncName>string_length</contextNormFuncName>
               <inlineStackInfo>
@@ -4154,7 +4140,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_length</second>
                       </first>
-                      <second>389</second>
+                      <second>27</second>
                     </item>
                   </second>
                 </item>
@@ -4165,7 +4151,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1406666864</coreId>
+              <coreId>2281701520</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -4204,7 +4190,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>1643635449</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -4227,10 +4213,10 @@
             <Obj>
               <type>0</type>
               <id>106</id>
-              <name>i_2</name>
+              <name>i_3</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -4246,7 +4232,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
@@ -4257,7 +4243,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1406672112</coreId>
+              <coreId>1643634032</coreId>
             </Obj>
             <bitwidth>10</bitwidth>
           </Value>
@@ -4283,10 +4269,10 @@
             <Obj>
               <type>0</type>
               <id>107</id>
-              <name>i_2_cast</name>
+              <name>i_3_cast</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -4302,13 +4288,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>i_2_cast_fu_946_p1</rtlName>
+              <rtlName>i_3_cast_fu_946_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
@@ -4336,10 +4322,10 @@
             <Obj>
               <type>0</type>
               <id>109</id>
-              <name>icmp_ln368</name>
+              <name>icmp_ln8</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -4355,18 +4341,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln368_fu_951_p2</rtlName>
+              <rtlName>icmp_ln8_fu_951_p2</rtlName>
               <control/>
               <opType>icmp</opType>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>1643635929</coreId>
             </Obj>
             <bitwidth>1</bitwidth>
           </Value>
@@ -4390,10 +4376,10 @@
             <Obj>
               <type>0</type>
               <id>111</id>
-              <name>add_ln368</name>
+              <name>add_ln8</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -4409,13 +4395,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>add_ln368_fu_957_p2</rtlName>
+              <rtlName>add_ln8_fu_957_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -4444,10 +4430,10 @@
             <Obj>
               <type>0</type>
               <id>112</id>
-              <name>br_ln368</name>
+              <name>br_ln8</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -4463,7 +4449,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
@@ -4474,7 +4460,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1699560457</coreId>
+              <coreId>1643638712</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -4502,7 +4488,7 @@
               <name>p_addr_5</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -4518,7 +4504,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
@@ -4529,7 +4515,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1936028192</coreId>
+              <coreId>0</coreId>
             </Obj>
             <bitwidth>10</bitwidth>
           </Value>
@@ -4557,7 +4543,7 @@
               <name>p_load_2</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -4573,7 +4559,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
@@ -4607,10 +4593,10 @@
             <Obj>
               <type>0</type>
               <id>117</id>
-              <name>icmp_ln368_1</name>
+              <name>icmp_ln8_3</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -4626,18 +4612,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln368_1_fu_963_p2</rtlName>
+              <rtlName>icmp_ln8_3_fu_963_p2</rtlName>
               <control/>
               <opType>icmp</opType>
               <implIndex/>
               <coreName/>
-              <coreId>544434464</coreId>
+              <coreId>0</coreId>
             </Obj>
             <bitwidth>1</bitwidth>
           </Value>
@@ -4665,7 +4651,7 @@
               <name>temp_addr</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>371</lineNumber>
+              <lineNumber>11</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -4681,7 +4667,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>371</second>
+                      <second>11</second>
                     </item>
                   </second>
                 </item>
@@ -4692,7 +4678,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1869182069</coreId>
+              <coreId>1643643584</coreId>
             </Obj>
             <bitwidth>10</bitwidth>
           </Value>
@@ -4717,10 +4703,10 @@
             <Obj>
               <type>0</type>
               <id>119</id>
-              <name>br_ln368</name>
+              <name>br_ln8</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -4736,7 +4722,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
@@ -4747,7 +4733,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1734439968</coreId>
+              <coreId>0</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -4772,10 +4758,10 @@
             <Obj>
               <type>0</type>
               <id>121</id>
-              <name>temp_addr_write_ln369</name>
+              <name>temp_addr_write_ln9</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>369</lineNumber>
+              <lineNumber>9</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -4791,7 +4777,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>369</second>
+                      <second>9</second>
                     </item>
                   </second>
                 </item>
@@ -4826,10 +4812,10 @@
             <Obj>
               <type>0</type>
               <id>122</id>
-              <name>br_ln368</name>
+              <name>br_ln8</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -4845,7 +4831,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
@@ -4856,7 +4842,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1635000320</coreId>
+              <coreId>791555631</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -4882,7 +4868,7 @@
               <name>table_size_load_3</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>423</lineNumber>
+              <lineNumber>61</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -4898,7 +4884,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>423</second>
+                      <second>61</second>
                     </item>
                   </second>
                 </item>
@@ -4909,7 +4895,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1629909051</coreId>
+              <coreId>1852795252</coreId>
             </Obj>
             <bitwidth>32</bitwidth>
           </Value>
@@ -4936,7 +4922,7 @@
               <name>temp_addr_1</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>414</lineNumber>
+              <lineNumber>52</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -4952,7 +4938,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>414</second>
+                      <second>52</second>
                     </item>
                   </second>
                 </item>
@@ -4963,7 +4949,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>7955819</coreId>
+              <coreId>1819042147</coreId>
             </Obj>
             <bitwidth>10</bitwidth>
           </Value>
@@ -4988,10 +4974,10 @@
             <Obj>
               <type>0</type>
               <id>126</id>
-              <name>trunc_ln414</name>
+              <name>trunc_ln52</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>414</lineNumber>
+              <lineNumber>52</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -5007,18 +4993,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>414</second>
+                      <second>52</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>trunc_ln414_fu_969_p1</rtlName>
+              <rtlName>trunc_ln52_fu_969_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1835365415</coreId>
+              <coreId>1763715383</coreId>
             </Obj>
             <bitwidth>10</bitwidth>
           </Value>
@@ -5041,10 +5027,10 @@
             <Obj>
               <type>0</type>
               <id>127</id>
-              <name>temp_addr_1_write_ln371</name>
+              <name>temp_addr_1_write_ln11</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>371</lineNumber>
+              <lineNumber>11</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -5060,7 +5046,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>371</second>
+                      <second>11</second>
                     </item>
                   </second>
                 </item>
@@ -5098,7 +5084,7 @@
               <name>temp_addr_2</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>418</lineNumber>
+              <lineNumber>56</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -5114,7 +5100,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>418</second>
+                      <second>56</second>
                     </item>
                   </second>
                 </item>
@@ -5125,7 +5111,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1601665644</coreId>
+              <coreId>544370534</coreId>
             </Obj>
             <bitwidth>10</bitwidth>
           </Value>
@@ -5150,10 +5136,10 @@
             <Obj>
               <type>0</type>
               <id>129</id>
-              <name>temp_addr_2_write_ln418</name>
+              <name>temp_addr_2_write_ln56</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>418</lineNumber>
+              <lineNumber>56</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -5169,7 +5155,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>418</second>
+                      <second>56</second>
                     </item>
                   </second>
                 </item>
@@ -5205,10 +5191,10 @@
             <Obj>
               <type>0</type>
               <id>130</id>
-              <name>add_ln419</name>
+              <name>add_ln57</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>419</lineNumber>
+              <lineNumber>57</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -5224,13 +5210,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>419</second>
+                      <second>57</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>add_ln419_fu_973_p2</rtlName>
+              <rtlName>add_ln57_fu_973_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -5259,10 +5245,10 @@
             <Obj>
               <type>0</type>
               <id>131</id>
-              <name>zext_ln419</name>
+              <name>zext_ln57</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>419</lineNumber>
+              <lineNumber>57</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -5278,18 +5264,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>419</second>
+                      <second>57</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln419_fu_979_p1</rtlName>
+              <rtlName>zext_ln57_fu_979_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>997420912</coreId>
+              <coreId>1919967084</coreId>
             </Obj>
             <bitwidth>64</bitwidth>
           </Value>
@@ -5315,7 +5301,7 @@
               <name>temp_addr_3</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>419</lineNumber>
+              <lineNumber>57</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -5331,7 +5317,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>419</second>
+                      <second>57</second>
                     </item>
                   </second>
                 </item>
@@ -5342,7 +5328,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1431324743</coreId>
+              <coreId>2037672306</coreId>
             </Obj>
             <bitwidth>10</bitwidth>
           </Value>
@@ -5367,10 +5353,10 @@
             <Obj>
               <type>0</type>
               <id>133</id>
-              <name>temp_addr_3_write_ln419</name>
+              <name>temp_addr_3_write_ln57</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>419</lineNumber>
+              <lineNumber>57</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -5386,7 +5372,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>419</second>
+                      <second>57</second>
                     </item>
                   </second>
                 </item>
@@ -5422,10 +5408,10 @@
             <Obj>
               <type>0</type>
               <id>134</id>
-              <name>icmp_ln423</name>
+              <name>icmp_ln61</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>423</lineNumber>
+              <lineNumber>61</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -5441,7 +5427,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>423</second>
+                      <second>61</second>
                     </item>
                   </second>
                 </item>
@@ -5452,7 +5438,7 @@
               <opType>icmp</opType>
               <implIndex/>
               <coreName/>
-              <coreId>1406724120</coreId>
+              <coreId>795750193</coreId>
             </Obj>
             <bitwidth>1</bitwidth>
           </Value>
@@ -5476,10 +5462,10 @@
             <Obj>
               <type>0</type>
               <id>135</id>
-              <name>br_ln423</name>
+              <name>br_ln61</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>423</lineNumber>
+              <lineNumber>61</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -5495,7 +5481,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>423</second>
+                      <second>61</second>
                     </item>
                   </second>
                 </item>
@@ -5506,7 +5492,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1852793632</coreId>
+              <coreId>791555631</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -5531,10 +5517,10 @@
             <Obj>
               <type>0</type>
               <id>137</id>
-              <name>br_ln423</name>
+              <name>br_ln61</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>423</lineNumber>
+              <lineNumber>61</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -5550,7 +5536,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>423</second>
+                      <second>61</second>
                     </item>
                   </second>
                 </item>
@@ -5561,7 +5547,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1431585108</coreId>
+              <coreId>1936484447</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -5587,7 +5573,7 @@
               <name>j_1</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>423</lineNumber>
+              <lineNumber>61</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -5603,7 +5589,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>423</second>
+                      <second>61</second>
                     </item>
                   </second>
                 </item>
@@ -5614,7 +5600,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1953394531</coreId>
+              <coreId>1769239916</coreId>
             </Obj>
             <bitwidth>31</bitwidth>
           </Value>
@@ -5643,7 +5629,7 @@
               <name>table_size_load_4</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>423</lineNumber>
+              <lineNumber>61</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -5659,7 +5645,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>423</second>
+                      <second>61</second>
                     </item>
                   </second>
                 </item>
@@ -5670,7 +5656,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1295780106</coreId>
+              <coreId>1852793632</coreId>
             </Obj>
             <bitwidth>32</bitwidth>
           </Value>
@@ -5694,10 +5680,10 @@
             <Obj>
               <type>0</type>
               <id>141</id>
-              <name>zext_ln423</name>
+              <name>zext_ln61</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>423</lineNumber>
+              <lineNumber>61</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -5713,18 +5699,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>423</second>
+                      <second>61</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln423_fu_984_p1</rtlName>
+              <rtlName>zext_ln61_fu_984_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1063481188</coreId>
+              <coreId>1986360064</coreId>
             </Obj>
             <bitwidth>32</bitwidth>
           </Value>
@@ -5747,10 +5733,10 @@
             <Obj>
               <type>0</type>
               <id>142</id>
-              <name>icmp_ln423_1</name>
+              <name>icmp_ln61_1</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>423</lineNumber>
+              <lineNumber>61</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -5766,18 +5752,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>423</second>
+                      <second>61</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln423_1_fu_988_p2</rtlName>
+              <rtlName>icmp_ln61_1_fu_988_p2</rtlName>
               <control/>
               <opType>icmp</opType>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>1330007625</coreId>
             </Obj>
             <bitwidth>1</bitwidth>
           </Value>
@@ -5801,10 +5787,10 @@
             <Obj>
               <type>0</type>
               <id>143</id>
-              <name>add_ln423</name>
+              <name>add_ln61</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>423</lineNumber>
+              <lineNumber>61</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -5820,13 +5806,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>423</second>
+                      <second>61</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>add_ln423_fu_994_p2</rtlName>
+              <rtlName>add_ln61_fu_994_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -5855,10 +5841,10 @@
             <Obj>
               <type>0</type>
               <id>144</id>
-              <name>br_ln423</name>
+              <name>br_ln61</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>423</lineNumber>
+              <lineNumber>61</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -5874,7 +5860,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>423</second>
+                      <second>61</second>
                     </item>
                   </second>
                 </item>
@@ -5885,7 +5871,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>1702129263</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -5910,10 +5896,10 @@
             <Obj>
               <type>0</type>
               <id>146</id>
-              <name>empty_36</name>
+              <name>empty_37</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>423</lineNumber>
+              <lineNumber>61</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -5929,18 +5915,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>423</second>
+                      <second>61</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>empty_36_fu_1000_p1</rtlName>
+              <rtlName>empty_37_fu_1000_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>1948280172</coreId>
             </Obj>
             <bitwidth>12</bitwidth>
           </Value>
@@ -5966,7 +5952,7 @@
               <name>tmp_3_cast</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>423</lineNumber>
+              <lineNumber>61</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -5982,7 +5968,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>423</second>
+                      <second>61</second>
                     </item>
                   </second>
                 </item>
@@ -5993,7 +5979,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>7891302</coreId>
             </Obj>
             <bitwidth>22</bitwidth>
           </Value>
@@ -6018,10 +6004,10 @@
             <Obj>
               <type>0</type>
               <id>149</id>
-              <name>br_ln377</name>
+              <name>br_ln16</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>377</lineNumber>
+              <lineNumber>16</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -6037,7 +6023,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>377</second>
+                      <second>16</second>
                     </item>
                   </second>
                 </item>
@@ -6048,7 +6034,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>926428464</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -6071,10 +6057,10 @@
             <Obj>
               <type>0</type>
               <id>151</id>
-              <name>i_4</name>
+              <name>i_5</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>381</lineNumber>
+              <lineNumber>20</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -6090,7 +6076,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>381</second>
+                      <second>20</second>
                     </item>
                   </second>
                 </item>
@@ -6101,7 +6087,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>828323377</coreId>
             </Obj>
             <bitwidth>64</bitwidth>
           </Value>
@@ -6127,10 +6113,10 @@
             <Obj>
               <type>0</type>
               <id>152</id>
-              <name>empty_37</name>
+              <name>empty_38</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>381</lineNumber>
+              <lineNumber>20</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -6146,18 +6132,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>381</second>
+                      <second>20</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>empty_37_fu_1012_p1</rtlName>
+              <rtlName>empty_38_fu_1012_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>2004317999</coreId>
             </Obj>
             <bitwidth>22</bitwidth>
           </Value>
@@ -6180,10 +6166,10 @@
             <Obj>
               <type>0</type>
               <id>153</id>
-              <name>empty_38</name>
+              <name>empty_39</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>423</lineNumber>
+              <lineNumber>61</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -6199,13 +6185,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>423</second>
+                      <second>61</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>empty_38_fu_1016_p2</rtlName>
+              <rtlName>empty_39_fu_1016_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -6234,10 +6220,10 @@
             <Obj>
               <type>0</type>
               <id>154</id>
-              <name>p_cast185</name>
+              <name>p_cast186</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>423</lineNumber>
+              <lineNumber>61</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -6253,18 +6239,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>423</second>
+                      <second>61</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>p_cast185_fu_1021_p1</rtlName>
+              <rtlName>p_cast186_fu_1021_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>1953852527</coreId>
             </Obj>
             <bitwidth>64</bitwidth>
           </Value>
@@ -6290,7 +6276,7 @@
               <name>table_str_addr_3</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>423</lineNumber>
+              <lineNumber>61</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -6306,7 +6292,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>423</second>
+                      <second>61</second>
                     </item>
                   </second>
                 </item>
@@ -6345,7 +6331,7 @@
               <name>temp_addr_4</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>377</lineNumber>
+              <lineNumber>16</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -6361,7 +6347,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>377</second>
+                      <second>16</second>
                     </item>
                   </second>
                 </item>
@@ -6400,7 +6386,7 @@
               <name>temp_load</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>377</lineNumber>
+              <lineNumber>16</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -6416,7 +6402,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>377</second>
+                      <second>16</second>
                     </item>
                   </second>
                 </item>
@@ -6450,10 +6436,10 @@
             <Obj>
               <type>0</type>
               <id>159</id>
-              <name>icmp_ln377_2</name>
+              <name>icmp_ln16_2</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>377</lineNumber>
+              <lineNumber>16</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -6469,13 +6455,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>377</second>
+                      <second>16</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln377_2_fu_1032_p2</rtlName>
+              <rtlName>icmp_ln16_2_fu_1032_p2</rtlName>
               <control/>
               <opType>icmp</opType>
               <implIndex/>
@@ -6507,7 +6493,7 @@
               <name>table_str_load_1</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>423</lineNumber>
+              <lineNumber>61</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -6523,7 +6509,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>423</second>
+                      <second>61</second>
                     </item>
                   </second>
                 </item>
@@ -6557,10 +6543,10 @@
             <Obj>
               <type>0</type>
               <id>161</id>
-              <name>icmp_ln377_3</name>
+              <name>icmp_ln16_3</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>377</lineNumber>
+              <lineNumber>16</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -6576,7 +6562,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>377</second>
+                      <second>16</second>
                     </item>
                   </second>
                 </item>
@@ -6611,10 +6597,10 @@
             <Obj>
               <type>0</type>
               <id>162</id>
-              <name>and_ln377_1</name>
+              <name>and_ln16_1</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>377</lineNumber>
+              <lineNumber>16</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -6630,18 +6616,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>377</second>
+                      <second>16</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>and_ln377_1_fu_1038_p2</rtlName>
+              <rtlName>and_ln16_1_fu_1038_p2</rtlName>
               <control/>
               <opType>and</opType>
               <implIndex/>
               <coreName/>
-              <coreId>1406742288</coreId>
+              <coreId>0</coreId>
             </Obj>
             <bitwidth>1</bitwidth>
           </Value>
@@ -6666,10 +6652,10 @@
             <Obj>
               <type>0</type>
               <id>163</id>
-              <name>add_ln381_1</name>
+              <name>add_ln20_1</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>381</lineNumber>
+              <lineNumber>20</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -6685,13 +6671,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>381</second>
+                      <second>20</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>add_ln381_1_fu_1026_p2</rtlName>
+              <rtlName>add_ln20_1_fu_1026_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -6720,10 +6706,10 @@
             <Obj>
               <type>0</type>
               <id>164</id>
-              <name>br_ln377</name>
+              <name>br_ln16</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>377</lineNumber>
+              <lineNumber>16</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -6739,7 +6725,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>377</second>
+                      <second>16</second>
                     </item>
                   </second>
                 </item>
@@ -6775,10 +6761,10 @@
             <Obj>
               <type>0</type>
               <id>167</id>
-              <name>icmp_ln378_1</name>
+              <name>icmp_ln17_1</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>378</lineNumber>
+              <lineNumber>17</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -6794,7 +6780,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>378</second>
+                      <second>17</second>
                     </item>
                   </second>
                 </item>
@@ -6829,10 +6815,10 @@
             <Obj>
               <type>0</type>
               <id>168</id>
-              <name>br_ln378</name>
+              <name>br_ln17</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>378</lineNumber>
+              <lineNumber>17</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -6848,7 +6834,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>378</second>
+                      <second>17</second>
                     </item>
                   </second>
                 </item>
@@ -6884,10 +6870,10 @@
             <Obj>
               <type>0</type>
               <id>170</id>
-              <name>br_ln377</name>
+              <name>br_ln16</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>377</lineNumber>
+              <lineNumber>16</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -6903,7 +6889,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>377</second>
+                      <second>16</second>
                     </item>
                   </second>
                 </item>
@@ -6914,7 +6900,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1406743656</coreId>
+              <coreId>0</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -6937,10 +6923,10 @@
             <Obj>
               <type>0</type>
               <id>172</id>
-              <name>icmp_ln424</name>
+              <name>icmp_ln62</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>424</lineNumber>
+              <lineNumber>62</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -6956,7 +6942,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>424</second>
+                      <second>62</second>
                     </item>
                   </second>
                 </item>
@@ -6991,10 +6977,10 @@
             <Obj>
               <type>0</type>
               <id>173</id>
-              <name>br_ln424</name>
+              <name>br_ln62</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>424</lineNumber>
+              <lineNumber>62</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -7010,7 +6996,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>424</second>
+                      <second>62</second>
                     </item>
                   </second>
                 </item>
@@ -7021,7 +7007,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1406749688</coreId>
+              <coreId>0</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -7124,10 +7110,10 @@
             <Obj>
               <type>0</type>
               <id>179</id>
-              <name>i_5</name>
+              <name>i_6</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -7143,7 +7129,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
@@ -7180,10 +7166,10 @@
             <Obj>
               <type>0</type>
               <id>180</id>
-              <name>i_5_cast</name>
+              <name>i_6_cast</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -7199,13 +7185,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>i_5_cast_fu_1044_p1</rtlName>
+              <rtlName>i_6_cast_fu_1044_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
@@ -7233,10 +7219,10 @@
             <Obj>
               <type>0</type>
               <id>182</id>
-              <name>icmp_ln368_2</name>
+              <name>icmp_ln8_4</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -7252,13 +7238,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln368_2_fu_1049_p2</rtlName>
+              <rtlName>icmp_ln8_4_fu_1049_p2</rtlName>
               <control/>
               <opType>icmp</opType>
               <implIndex/>
@@ -7287,10 +7273,10 @@
             <Obj>
               <type>0</type>
               <id>184</id>
-              <name>add_ln368_1</name>
+              <name>add_ln8_1</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -7306,13 +7292,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>add_ln368_1_fu_1055_p2</rtlName>
+              <rtlName>add_ln8_1_fu_1055_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -7341,10 +7327,10 @@
             <Obj>
               <type>0</type>
               <id>185</id>
-              <name>br_ln368</name>
+              <name>br_ln8</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -7360,7 +7346,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
@@ -7371,7 +7357,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>9</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -7399,7 +7385,7 @@
               <name>temp_addr_5</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -7415,7 +7401,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
@@ -7426,7 +7412,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>1757985</coreId>
             </Obj>
             <bitwidth>10</bitwidth>
           </Value>
@@ -7454,7 +7440,7 @@
               <name>temp_load_1</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -7470,7 +7456,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
@@ -7504,10 +7490,10 @@
             <Obj>
               <type>0</type>
               <id>190</id>
-              <name>icmp_ln368_3</name>
+              <name>icmp_ln8_5</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -7523,13 +7509,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln368_3_fu_1061_p2</rtlName>
+              <rtlName>icmp_ln8_5_fu_1061_p2</rtlName>
               <control/>
               <opType>icmp</opType>
               <implIndex/>
@@ -7562,7 +7548,7 @@
               <name>p_addr_6</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>371</lineNumber>
+              <lineNumber>11</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -7578,7 +7564,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>371</second>
+                      <second>11</second>
                     </item>
                   </second>
                 </item>
@@ -7589,7 +7575,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>1643696696</coreId>
             </Obj>
             <bitwidth>10</bitwidth>
           </Value>
@@ -7614,10 +7600,10 @@
             <Obj>
               <type>0</type>
               <id>192</id>
-              <name>br_ln368</name>
+              <name>br_ln8</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -7633,7 +7619,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
@@ -7644,7 +7630,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>132</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -7669,10 +7655,10 @@
             <Obj>
               <type>0</type>
               <id>194</id>
-              <name>p_addr_6_write_ln369</name>
+              <name>p_addr_6_write_ln9</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>369</lineNumber>
+              <lineNumber>9</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -7688,7 +7674,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>369</second>
+                      <second>9</second>
                     </item>
                   </second>
                 </item>
@@ -7723,10 +7709,10 @@
             <Obj>
               <type>0</type>
               <id>195</id>
-              <name>br_ln368</name>
+              <name>br_ln8</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -7742,7 +7728,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
@@ -7779,7 +7765,7 @@
               <name>p_addr_8</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>371</lineNumber>
+              <lineNumber>11</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -7795,7 +7781,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>371</second>
+                      <second>11</second>
                     </item>
                   </second>
                 </item>
@@ -7806,7 +7792,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>132</coreId>
             </Obj>
             <bitwidth>10</bitwidth>
           </Value>
@@ -7831,10 +7817,10 @@
             <Obj>
               <type>0</type>
               <id>198</id>
-              <name>p_addr_8_write_ln371</name>
+              <name>p_addr_8_write_ln11</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>371</lineNumber>
+              <lineNumber>11</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -7850,7 +7836,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>371</second>
+                      <second>11</second>
                     </item>
                   </second>
                 </item>
@@ -7885,10 +7871,10 @@
             <Obj>
               <type>0</type>
               <id>199</id>
-              <name>br_ln433</name>
+              <name>br_ln71</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>433</lineNumber>
+              <lineNumber>71</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -7904,7 +7890,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>433</second>
+                      <second>71</second>
                     </item>
                   </second>
                 </item>
@@ -7938,10 +7924,10 @@
             <Obj>
               <type>0</type>
               <id>201</id>
-              <name>br_ln435</name>
+              <name>br_ln73</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>435</lineNumber>
+              <lineNumber>73</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -7957,7 +7943,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>435</second>
+                      <second>73</second>
                     </item>
                   </second>
                 </item>
@@ -7994,7 +7980,7 @@
               <name>j_2</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>435</lineNumber>
+              <lineNumber>73</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -8010,7 +7996,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>435</second>
+                      <second>73</second>
                     </item>
                   </second>
                 </item>
@@ -8050,7 +8036,7 @@
               <name>table_size_load_5</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>435</lineNumber>
+              <lineNumber>73</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -8066,7 +8052,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>435</second>
+                      <second>73</second>
                     </item>
                   </second>
                 </item>
@@ -8101,10 +8087,10 @@
             <Obj>
               <type>0</type>
               <id>205</id>
-              <name>zext_ln435</name>
+              <name>zext_ln73</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>435</lineNumber>
+              <lineNumber>73</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -8120,18 +8106,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>435</second>
+                      <second>73</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln435_fu_1067_p1</rtlName>
+              <rtlName>zext_ln73_fu_1067_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>1643704248</coreId>
             </Obj>
             <bitwidth>64</bitwidth>
           </Value>
@@ -8154,10 +8140,10 @@
             <Obj>
               <type>0</type>
               <id>206</id>
-              <name>empty_40</name>
+              <name>empty_41</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>435</lineNumber>
+              <lineNumber>73</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -8173,18 +8159,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>435</second>
+                      <second>73</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>empty_40_fu_1071_p1</rtlName>
+              <rtlName>empty_41_fu_1071_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>132</coreId>
             </Obj>
             <bitwidth>12</bitwidth>
           </Value>
@@ -8210,7 +8196,7 @@
               <name>tmp_4_cast</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>435</lineNumber>
+              <lineNumber>73</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -8226,7 +8212,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>435</second>
+                      <second>73</second>
                     </item>
                   </second>
                 </item>
@@ -8262,10 +8248,10 @@
             <Obj>
               <type>0</type>
               <id>208</id>
-              <name>zext_ln435_1</name>
+              <name>zext_ln73_1</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>435</lineNumber>
+              <lineNumber>73</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -8281,13 +8267,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>435</second>
+                      <second>73</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln435_1_fu_1083_p1</rtlName>
+              <rtlName>zext_ln73_1_fu_1083_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
@@ -8315,10 +8301,10 @@
             <Obj>
               <type>0</type>
               <id>209</id>
-              <name>icmp_ln435</name>
+              <name>icmp_ln73</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>435</lineNumber>
+              <lineNumber>73</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -8334,13 +8320,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>435</second>
+                      <second>73</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln435_fu_1087_p2</rtlName>
+              <rtlName>icmp_ln73_fu_1087_p2</rtlName>
               <control/>
               <opType>icmp</opType>
               <implIndex/>
@@ -8369,10 +8355,10 @@
             <Obj>
               <type>0</type>
               <id>210</id>
-              <name>add_ln435</name>
+              <name>add_ln73</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>435</lineNumber>
+              <lineNumber>73</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -8388,13 +8374,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>435</second>
+                      <second>73</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>add_ln435_fu_1093_p2</rtlName>
+              <rtlName>add_ln73_fu_1093_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -8423,10 +8409,10 @@
             <Obj>
               <type>0</type>
               <id>211</id>
-              <name>br_ln435</name>
+              <name>br_ln73</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>435</lineNumber>
+              <lineNumber>73</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -8442,7 +8428,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>435</second>
+                      <second>73</second>
                     </item>
                   </second>
                 </item>
@@ -8478,10 +8464,10 @@
             <Obj>
               <type>0</type>
               <id>214</id>
-              <name>br_ln377</name>
+              <name>br_ln16</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>377</lineNumber>
+              <lineNumber>16</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -8497,7 +8483,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>377</second>
+                      <second>16</second>
                     </item>
                   </second>
                 </item>
@@ -8531,10 +8517,10 @@
             <Obj>
               <type>0</type>
               <id>216</id>
-              <name>i_6</name>
+              <name>i_7</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>381</lineNumber>
+              <lineNumber>20</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -8550,7 +8536,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>381</second>
+                      <second>20</second>
                     </item>
                   </second>
                 </item>
@@ -8561,7 +8547,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>132</coreId>
             </Obj>
             <bitwidth>64</bitwidth>
           </Value>
@@ -8587,10 +8573,10 @@
             <Obj>
               <type>0</type>
               <id>217</id>
-              <name>empty_41</name>
+              <name>empty_42</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>381</lineNumber>
+              <lineNumber>20</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -8606,13 +8592,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>381</second>
+                      <second>20</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>empty_41_fu_1099_p1</rtlName>
+              <rtlName>empty_42_fu_1099_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
@@ -8640,10 +8626,10 @@
             <Obj>
               <type>0</type>
               <id>218</id>
-              <name>empty_42</name>
+              <name>empty_43</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>435</lineNumber>
+              <lineNumber>73</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -8659,13 +8645,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>435</second>
+                      <second>73</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>empty_42_fu_1103_p2</rtlName>
+              <rtlName>empty_43_fu_1103_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -8694,10 +8680,10 @@
             <Obj>
               <type>0</type>
               <id>219</id>
-              <name>p_cast186</name>
+              <name>p_cast187</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>435</lineNumber>
+              <lineNumber>73</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -8713,18 +8699,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>435</second>
+                      <second>73</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>p_cast186_fu_1108_p1</rtlName>
+              <rtlName>p_cast187_fu_1108_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>1643711160</coreId>
             </Obj>
             <bitwidth>64</bitwidth>
           </Value>
@@ -8750,7 +8736,7 @@
               <name>table_str_addr_4</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>435</lineNumber>
+              <lineNumber>73</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -8766,7 +8752,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>435</second>
+                      <second>73</second>
                     </item>
                   </second>
                 </item>
@@ -8777,7 +8763,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>1741601</coreId>
             </Obj>
             <bitwidth>22</bitwidth>
           </Value>
@@ -8805,7 +8791,7 @@
               <name>p_addr_7</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>377</lineNumber>
+              <lineNumber>16</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -8821,7 +8807,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>377</second>
+                      <second>16</second>
                     </item>
                   </second>
                 </item>
@@ -8832,7 +8818,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>28271</coreId>
             </Obj>
             <bitwidth>10</bitwidth>
           </Value>
@@ -8860,7 +8846,7 @@
               <name>p_load_3</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>377</lineNumber>
+              <lineNumber>16</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -8876,7 +8862,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>377</second>
+                      <second>16</second>
                     </item>
                   </second>
                 </item>
@@ -8910,10 +8896,10 @@
             <Obj>
               <type>0</type>
               <id>224</id>
-              <name>icmp_ln377_4</name>
+              <name>icmp_ln16_4</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>377</lineNumber>
+              <lineNumber>16</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -8929,7 +8915,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>377</second>
+                      <second>16</second>
                     </item>
                   </second>
                 </item>
@@ -8940,7 +8926,7 @@
               <opType>icmp</opType>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>1643713080</coreId>
             </Obj>
             <bitwidth>1</bitwidth>
           </Value>
@@ -8967,7 +8953,7 @@
               <name>table_str_load_2</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>435</lineNumber>
+              <lineNumber>73</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -8983,7 +8969,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>435</second>
+                      <second>73</second>
                     </item>
                   </second>
                 </item>
@@ -9017,10 +9003,10 @@
             <Obj>
               <type>0</type>
               <id>226</id>
-              <name>icmp_ln377_5</name>
+              <name>icmp_ln16_5</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>377</lineNumber>
+              <lineNumber>16</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -9036,13 +9022,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>377</second>
+                      <second>16</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln377_5_fu_1119_p2</rtlName>
+              <rtlName>icmp_ln16_5_fu_1119_p2</rtlName>
               <control/>
               <opType>icmp</opType>
               <implIndex/>
@@ -9071,10 +9057,10 @@
             <Obj>
               <type>0</type>
               <id>227</id>
-              <name>and_ln377_2</name>
+              <name>and_ln16_2</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>377</lineNumber>
+              <lineNumber>16</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -9090,18 +9076,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>377</second>
+                      <second>16</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>and_ln377_2_fu_1125_p2</rtlName>
+              <rtlName>and_ln16_2_fu_1125_p2</rtlName>
               <control/>
               <opType>and</opType>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>1643710888</coreId>
             </Obj>
             <bitwidth>1</bitwidth>
           </Value>
@@ -9126,10 +9112,10 @@
             <Obj>
               <type>0</type>
               <id>228</id>
-              <name>add_ln381_2</name>
+              <name>add_ln20_2</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>381</lineNumber>
+              <lineNumber>20</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -9145,13 +9131,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>381</second>
+                      <second>20</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>add_ln381_2_fu_1113_p2</rtlName>
+              <rtlName>add_ln20_2_fu_1113_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -9180,10 +9166,10 @@
             <Obj>
               <type>0</type>
               <id>229</id>
-              <name>br_ln377</name>
+              <name>br_ln16</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>377</lineNumber>
+              <lineNumber>16</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -9199,7 +9185,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>377</second>
+                      <second>16</second>
                     </item>
                   </second>
                 </item>
@@ -9210,7 +9196,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>1737249</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -9235,10 +9221,10 @@
             <Obj>
               <type>0</type>
               <id>232</id>
-              <name>icmp_ln378_2</name>
+              <name>icmp_ln17_2</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>378</lineNumber>
+              <lineNumber>17</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -9254,7 +9240,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>378</second>
+                      <second>17</second>
                     </item>
                   </second>
                 </item>
@@ -9265,7 +9251,7 @@
               <opType>icmp</opType>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>1643717200</coreId>
             </Obj>
             <bitwidth>1</bitwidth>
           </Value>
@@ -9289,10 +9275,10 @@
             <Obj>
               <type>0</type>
               <id>233</id>
-              <name>br_ln378</name>
+              <name>br_ln17</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>378</lineNumber>
+              <lineNumber>17</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -9308,7 +9294,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>378</second>
+                      <second>17</second>
                     </item>
                   </second>
                 </item>
@@ -9319,7 +9305,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>2281701520</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -9344,10 +9330,10 @@
             <Obj>
               <type>0</type>
               <id>235</id>
-              <name>br_ln377</name>
+              <name>br_ln16</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>377</lineNumber>
+              <lineNumber>16</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -9363,7 +9349,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>377</second>
+                      <second>16</second>
                     </item>
                   </second>
                 </item>
@@ -9374,7 +9360,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>1734689</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -9397,10 +9383,10 @@
             <Obj>
               <type>0</type>
               <id>237</id>
-              <name>icmp_ln436</name>
+              <name>icmp_ln74</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>436</lineNumber>
+              <lineNumber>74</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -9416,7 +9402,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>436</second>
+                      <second>74</second>
                     </item>
                   </second>
                 </item>
@@ -9427,7 +9413,7 @@
               <opType>icmp</opType>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>1643719632</coreId>
             </Obj>
             <bitwidth>1</bitwidth>
           </Value>
@@ -9451,10 +9437,10 @@
             <Obj>
               <type>0</type>
               <id>238</id>
-              <name>br_ln436</name>
+              <name>br_ln74</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>436</lineNumber>
+              <lineNumber>74</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -9470,7 +9456,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>436</second>
+                      <second>74</second>
                     </item>
                   </second>
                 </item>
@@ -9481,7 +9467,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>2281701520</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -9548,7 +9534,7 @@
               <name>table_code_addr_2</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>437</lineNumber>
+              <lineNumber>75</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -9564,7 +9550,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>437</second>
+                      <second>75</second>
                     </item>
                   </second>
                 </item>
@@ -9603,7 +9589,7 @@
               <name>table_code_load_1</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>437</lineNumber>
+              <lineNumber>75</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -9619,7 +9605,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>437</second>
+                      <second>75</second>
                     </item>
                   </second>
                 </item>
@@ -9656,7 +9642,7 @@
               <name>out_index_5</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>437</lineNumber>
+              <lineNumber>75</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -9672,7 +9658,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>437</second>
+                      <second>75</second>
                     </item>
                   </second>
                 </item>
@@ -9710,7 +9696,7 @@
               <name>shl_ln2</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>437</lineNumber>
+              <lineNumber>75</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -9726,7 +9712,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>437</second>
+                      <second>75</second>
                     </item>
                   </second>
                 </item>
@@ -9762,10 +9748,10 @@
             <Obj>
               <type>0</type>
               <id>246</id>
-              <name>sext_ln437</name>
+              <name>sext_ln75</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>437</lineNumber>
+              <lineNumber>75</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -9781,13 +9767,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>437</second>
+                      <second>75</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>sext_ln437_fu_1138_p1</rtlName>
+              <rtlName>sext_ln75_fu_1138_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
@@ -9815,10 +9801,10 @@
             <Obj>
               <type>0</type>
               <id>247</id>
-              <name>add_ln437</name>
+              <name>add_ln75</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>437</lineNumber>
+              <lineNumber>75</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -9834,13 +9820,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>437</second>
+                      <second>75</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>add_ln437_fu_1142_p2</rtlName>
+              <rtlName>add_ln75_fu_1142_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -9872,7 +9858,7 @@
               <name>trunc_ln6</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>437</lineNumber>
+              <lineNumber>75</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -9888,7 +9874,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>437</second>
+                      <second>75</second>
                     </item>
                   </second>
                 </item>
@@ -9925,10 +9911,10 @@
             <Obj>
               <type>0</type>
               <id>249</id>
-              <name>sext_ln437_1</name>
+              <name>sext_ln75_1</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>437</lineNumber>
+              <lineNumber>75</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -9944,13 +9930,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>437</second>
+                      <second>75</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>sext_ln437_1_fu_1157_p1</rtlName>
+              <rtlName>sext_ln75_1_fu_1157_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
@@ -9978,10 +9964,10 @@
             <Obj>
               <type>0</type>
               <id>250</id>
-              <name>gmem_addr_4</name>
+              <name>gmem_addr_5</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>437</lineNumber>
+              <lineNumber>75</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -9997,7 +9983,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>437</second>
+                      <second>75</second>
                     </item>
                   </second>
                 </item>
@@ -10032,10 +10018,10 @@
             <Obj>
               <type>0</type>
               <id>251</id>
-              <name>gmem_addr_4_req</name>
+              <name>gmem_addr_5_req</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>437</lineNumber>
+              <lineNumber>75</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -10051,7 +10037,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>437</second>
+                      <second>75</second>
                     </item>
                   </second>
                 </item>
@@ -10087,10 +10073,10 @@
             <Obj>
               <type>0</type>
               <id>252</id>
-              <name>gmem_addr_4_write_ln437</name>
+              <name>gmem_addr_5_write_ln75</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>437</lineNumber>
+              <lineNumber>75</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -10106,7 +10092,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>437</second>
+                      <second>75</second>
                     </item>
                   </second>
                 </item>
@@ -10146,10 +10132,10 @@
             <Obj>
               <type>0</type>
               <id>253</id>
-              <name>gmem_addr_4_resp</name>
+              <name>gmem_addr_5_resp</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>437</lineNumber>
+              <lineNumber>75</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -10165,7 +10151,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>437</second>
+                      <second>75</second>
                     </item>
                   </second>
                 </item>
@@ -10201,10 +10187,10 @@
             <Obj>
               <type>0</type>
               <id>254</id>
-              <name>br_ln438</name>
+              <name>br_ln76</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>438</lineNumber>
+              <lineNumber>76</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -10220,7 +10206,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>438</second>
+                      <second>76</second>
                     </item>
                   </second>
                 </item>
@@ -10338,7 +10324,7 @@
               <name>table_size_load</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>443</lineNumber>
+              <lineNumber>81</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -10354,7 +10340,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>443</second>
+                      <second>81</second>
                     </item>
                   </second>
                 </item>
@@ -10392,7 +10378,7 @@
               <name>tmp_3</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>443</lineNumber>
+              <lineNumber>81</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -10408,7 +10394,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>443</second>
+                      <second>81</second>
                     </item>
                   </second>
                 </item>
@@ -10445,10 +10431,10 @@
             <Obj>
               <type>0</type>
               <id>261</id>
-              <name>icmp_ln443</name>
+              <name>icmp_ln81</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>443</lineNumber>
+              <lineNumber>81</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -10464,18 +10450,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>443</second>
+                      <second>81</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln443_fu_1177_p2</rtlName>
+              <rtlName>icmp_ln81_fu_1177_p2</rtlName>
               <control/>
               <opType>icmp</opType>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>335610371</coreId>
             </Obj>
             <bitwidth>1</bitwidth>
           </Value>
@@ -10499,10 +10485,10 @@
             <Obj>
               <type>0</type>
               <id>262</id>
-              <name>br_ln443</name>
+              <name>br_ln81</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>443</lineNumber>
+              <lineNumber>81</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -10518,7 +10504,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>443</second>
+                      <second>81</second>
                     </item>
                   </second>
                 </item>
@@ -10599,7 +10585,7 @@
               <name>table_size_load_6</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>444</lineNumber>
+              <lineNumber>82</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -10615,7 +10601,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>444</second>
+                      <second>82</second>
                     </item>
                   </second>
                 </item>
@@ -10650,10 +10636,10 @@
             <Obj>
               <type>0</type>
               <id>266</id>
-              <name>zext_ln444</name>
+              <name>zext_ln82</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>444</lineNumber>
+              <lineNumber>82</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -10669,18 +10655,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>444</second>
+                      <second>82</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln444_fu_1183_p1</rtlName>
+              <rtlName>zext_ln82_fu_1183_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>2148500751</coreId>
             </Obj>
             <bitwidth>64</bitwidth>
           </Value>
@@ -10703,10 +10689,10 @@
             <Obj>
               <type>0</type>
               <id>267</id>
-              <name>br_ln368</name>
+              <name>br_ln8</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -10722,7 +10708,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
@@ -10733,7 +10719,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>33686656</coreId>
+              <coreId>0</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -10756,10 +10742,10 @@
             <Obj>
               <type>0</type>
               <id>269</id>
-              <name>i_7</name>
+              <name>i_8</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -10775,7 +10761,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
@@ -10815,7 +10801,7 @@
               <name>table_size_load_7</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>371</lineNumber>
+              <lineNumber>11</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -10831,7 +10817,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>371</second>
+                      <second>11</second>
                     </item>
                   </second>
                 </item>
@@ -10866,10 +10852,10 @@
             <Obj>
               <type>0</type>
               <id>271</id>
-              <name>i_7_cast</name>
+              <name>i_8_cast</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -10885,13 +10871,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>i_7_cast_fu_1187_p1</rtlName>
+              <rtlName>i_8_cast_fu_1187_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
@@ -10922,7 +10908,7 @@
               <name>tmp_5</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>371</lineNumber>
+              <lineNumber>11</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -10938,7 +10924,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>371</second>
+                      <second>11</second>
                     </item>
                   </second>
                 </item>
@@ -10974,10 +10960,10 @@
             <Obj>
               <type>0</type>
               <id>273</id>
-              <name>zext_ln371</name>
+              <name>zext_ln11</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>371</lineNumber>
+              <lineNumber>11</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -10993,13 +10979,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>371</second>
+                      <second>11</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln371_fu_1200_p1</rtlName>
+              <rtlName>zext_ln11_fu_1200_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
@@ -11030,7 +11016,7 @@
               <name>table_str_addr_5</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>371</lineNumber>
+              <lineNumber>11</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -11046,7 +11032,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>371</second>
+                      <second>11</second>
                     </item>
                   </second>
                 </item>
@@ -11057,7 +11043,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>1643741200</coreId>
             </Obj>
             <bitwidth>22</bitwidth>
           </Value>
@@ -11082,10 +11068,10 @@
             <Obj>
               <type>0</type>
               <id>276</id>
-              <name>icmp_ln368_4</name>
+              <name>icmp_ln8_6</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -11101,13 +11087,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln368_4_fu_1205_p2</rtlName>
+              <rtlName>icmp_ln8_6_fu_1205_p2</rtlName>
               <control/>
               <opType>icmp</opType>
               <implIndex/>
@@ -11136,10 +11122,10 @@
             <Obj>
               <type>0</type>
               <id>278</id>
-              <name>add_ln368_2</name>
+              <name>add_ln8_2</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -11155,13 +11141,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>add_ln368_2_fu_1211_p2</rtlName>
+              <rtlName>add_ln8_2_fu_1211_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -11190,10 +11176,10 @@
             <Obj>
               <type>0</type>
               <id>279</id>
-              <name>br_ln368</name>
+              <name>br_ln8</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -11209,7 +11195,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
@@ -11248,7 +11234,7 @@
               <name>temp_addr_6</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -11264,7 +11250,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
@@ -11303,7 +11289,7 @@
               <name>temp_load_2</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -11319,7 +11305,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
@@ -11353,10 +11339,10 @@
             <Obj>
               <type>0</type>
               <id>284</id>
-              <name>icmp_ln368_5</name>
+              <name>icmp_ln8_7</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -11372,13 +11358,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln368_5_fu_1217_p2</rtlName>
+              <rtlName>icmp_ln8_7_fu_1217_p2</rtlName>
               <control/>
               <opType>icmp</opType>
               <implIndex/>
@@ -11408,10 +11394,10 @@
             <Obj>
               <type>0</type>
               <id>285</id>
-              <name>br_ln368</name>
+              <name>br_ln8</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -11427,7 +11413,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
@@ -11438,7 +11424,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>0</coreId>
+              <coreId>268369920</coreId>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -11463,10 +11449,10 @@
             <Obj>
               <type>0</type>
               <id>287</id>
-              <name>table_str_addr_5_write_ln369</name>
+              <name>table_str_addr_5_write_ln9</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>369</lineNumber>
+              <lineNumber>9</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -11482,7 +11468,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>369</second>
+                      <second>9</second>
                     </item>
                   </second>
                 </item>
@@ -11517,10 +11503,10 @@
             <Obj>
               <type>0</type>
               <id>288</id>
-              <name>br_ln368</name>
+              <name>br_ln8</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>368</lineNumber>
+              <lineNumber>8</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -11536,7 +11522,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>368</second>
+                      <second>8</second>
                     </item>
                   </second>
                 </item>
@@ -11570,10 +11556,10 @@
             <Obj>
               <type>0</type>
               <id>290</id>
-              <name>table_size_load207</name>
+              <name>table_size_load_8</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>446</lineNumber>
+              <lineNumber>84</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -11589,7 +11575,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>446</second>
+                      <second>84</second>
                     </item>
                   </second>
                 </item>
@@ -11627,7 +11613,7 @@
               <name>code_load</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>445</lineNumber>
+              <lineNumber>83</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -11643,7 +11629,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>445</second>
+                      <second>83</second>
                     </item>
                   </second>
                 </item>
@@ -11678,10 +11664,10 @@
             <Obj>
               <type>0</type>
               <id>292</id>
-              <name>table_str_addr_5_write_ln371</name>
+              <name>table_str_addr_5_write_ln11</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>371</lineNumber>
+              <lineNumber>11</lineNumber>
               <contextFuncName>string_copy</contextFuncName>
               <contextNormFuncName>string_copy</contextNormFuncName>
               <inlineStackInfo>
@@ -11697,7 +11683,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_copy</second>
                       </first>
-                      <second>371</second>
+                      <second>11</second>
                     </item>
                   </second>
                 </item>
@@ -11735,7 +11721,7 @@
               <name>code_1</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>445</lineNumber>
+              <lineNumber>83</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -11751,7 +11737,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>445</second>
+                      <second>83</second>
                     </item>
                   </second>
                 </item>
@@ -11789,7 +11775,7 @@
               <name>table_code_addr_3</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>445</lineNumber>
+              <lineNumber>83</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -11805,7 +11791,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>445</second>
+                      <second>83</second>
                     </item>
                   </second>
                 </item>
@@ -11841,10 +11827,10 @@
             <Obj>
               <type>0</type>
               <id>295</id>
-              <name>table_code_addr_3_write_ln445</name>
+              <name>table_code_addr_3_write_ln83</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>445</lineNumber>
+              <lineNumber>83</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -11860,7 +11846,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>445</second>
+                      <second>83</second>
                     </item>
                   </second>
                 </item>
@@ -11898,7 +11884,7 @@
               <name>table_size_1</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>446</lineNumber>
+              <lineNumber>84</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -11914,7 +11900,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>446</second>
+                      <second>84</second>
                     </item>
                   </second>
                 </item>
@@ -11949,10 +11935,10 @@
             <Obj>
               <type>0</type>
               <id>297</id>
-              <name>code_write_ln447</name>
+              <name>code_write_ln85</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>447</lineNumber>
+              <lineNumber>85</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -11968,7 +11954,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>447</second>
+                      <second>85</second>
                     </item>
                   </second>
                 </item>
@@ -12005,10 +11991,10 @@
             <Obj>
               <type>0</type>
               <id>298</id>
-              <name>table_size_write_ln447</name>
+              <name>table_size_write_ln85</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>447</lineNumber>
+              <lineNumber>85</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -12024,7 +12010,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>447</second>
+                      <second>85</second>
                     </item>
                   </second>
                 </item>
@@ -12067,10 +12053,10 @@
             <Obj>
               <type>0</type>
               <id>299</id>
-              <name>br_ln447</name>
+              <name>br_ln85</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>447</lineNumber>
+              <lineNumber>85</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -12086,7 +12072,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>447</second>
+                      <second>85</second>
                     </item>
                   </second>
                 </item>
@@ -12162,10 +12148,10 @@
             <Obj>
               <type>0</type>
               <id>302</id>
-              <name>p_addr_write_ln450</name>
+              <name>p_addr_write_ln88</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>450</lineNumber>
+              <lineNumber>88</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -12181,7 +12167,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>450</second>
+                      <second>88</second>
                     </item>
                   </second>
                 </item>
@@ -12218,10 +12204,10 @@
             <Obj>
               <type>0</type>
               <id>303</id>
-              <name>p_addr_1_write_ln451</name>
+              <name>p_addr_1_write_ln89</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>451</lineNumber>
+              <lineNumber>89</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -12237,7 +12223,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>451</second>
+                      <second>89</second>
                     </item>
                   </second>
                 </item>
@@ -12274,10 +12260,10 @@
             <Obj>
               <type>0</type>
               <id>304</id>
-              <name>out_index_write_ln458</name>
+              <name>out_index_write_ln96</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>458</lineNumber>
+              <lineNumber>96</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -12293,7 +12279,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>458</second>
+                      <second>96</second>
                     </item>
                   </second>
                 </item>
@@ -12369,10 +12355,10 @@
             <Obj>
               <type>0</type>
               <id>307</id>
-              <name>add_ln411_1</name>
+              <name>add_ln49_1</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>411</lineNumber>
+              <lineNumber>49</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -12388,13 +12374,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>411</second>
+                      <second>49</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>add_ln411_1_fu_1254_p2</rtlName>
+              <rtlName>add_ln49_1_fu_1254_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -12423,10 +12409,10 @@
             <Obj>
               <type>0</type>
               <id>308</id>
-              <name>br_ln411</name>
+              <name>br_ln49</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>411</lineNumber>
+              <lineNumber>49</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -12442,7 +12428,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>411</second>
+                      <second>49</second>
                     </item>
                   </second>
                 </item>
@@ -12479,7 +12465,7 @@
               <name>table_size_load_1</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>456</lineNumber>
+              <lineNumber>94</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -12495,7 +12481,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>456</second>
+                      <second>94</second>
                     </item>
                   </second>
                 </item>
@@ -12530,10 +12516,10 @@
             <Obj>
               <type>0</type>
               <id>311</id>
-              <name>icmp_ln456</name>
+              <name>icmp_ln94</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>456</lineNumber>
+              <lineNumber>94</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -12549,7 +12535,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>456</second>
+                      <second>94</second>
                     </item>
                   </second>
                 </item>
@@ -12584,10 +12570,10 @@
             <Obj>
               <type>0</type>
               <id>312</id>
-              <name>br_ln456</name>
+              <name>br_ln94</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>456</lineNumber>
+              <lineNumber>94</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -12603,7 +12589,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>456</second>
+                      <second>94</second>
                     </item>
                   </second>
                 </item>
@@ -12639,10 +12625,10 @@
             <Obj>
               <type>0</type>
               <id>314</id>
-              <name>br_ln456</name>
+              <name>br_ln94</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>456</lineNumber>
+              <lineNumber>94</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -12658,7 +12644,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>456</second>
+                      <second>94</second>
                     </item>
                   </second>
                 </item>
@@ -12695,7 +12681,7 @@
               <name>j</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>456</lineNumber>
+              <lineNumber>94</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -12711,7 +12697,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>456</second>
+                      <second>94</second>
                     </item>
                   </second>
                 </item>
@@ -12751,7 +12737,7 @@
               <name>table_size_load_2</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>456</lineNumber>
+              <lineNumber>94</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -12767,7 +12753,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>456</second>
+                      <second>94</second>
                     </item>
                   </second>
                 </item>
@@ -12802,10 +12788,10 @@
             <Obj>
               <type>0</type>
               <id>318</id>
-              <name>zext_ln456</name>
+              <name>zext_ln94</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>456</lineNumber>
+              <lineNumber>94</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -12821,13 +12807,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>456</second>
+                      <second>94</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln456_fu_1260_p1</rtlName>
+              <rtlName>zext_ln94_fu_1260_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
@@ -12855,10 +12841,10 @@
             <Obj>
               <type>0</type>
               <id>319</id>
-              <name>empty_44</name>
+              <name>empty_45</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>456</lineNumber>
+              <lineNumber>94</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -12874,13 +12860,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>456</second>
+                      <second>94</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>empty_44_fu_1264_p1</rtlName>
+              <rtlName>empty_45_fu_1264_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
@@ -12911,7 +12897,7 @@
               <name>tmp_2_cast</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>456</lineNumber>
+              <lineNumber>94</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -12927,7 +12913,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>456</second>
+                      <second>94</second>
                     </item>
                   </second>
                 </item>
@@ -12963,10 +12949,10 @@
             <Obj>
               <type>0</type>
               <id>321</id>
-              <name>zext_ln456_1</name>
+              <name>zext_ln94_1</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>456</lineNumber>
+              <lineNumber>94</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -12982,13 +12968,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>456</second>
+                      <second>94</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln456_1_fu_1276_p1</rtlName>
+              <rtlName>zext_ln94_1_fu_1276_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
@@ -13016,10 +13002,10 @@
             <Obj>
               <type>0</type>
               <id>322</id>
-              <name>icmp_ln456_1</name>
+              <name>icmp_ln94_1</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>456</lineNumber>
+              <lineNumber>94</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -13035,13 +13021,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>456</second>
+                      <second>94</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln456_1_fu_1280_p2</rtlName>
+              <rtlName>icmp_ln94_1_fu_1280_p2</rtlName>
               <control/>
               <opType>icmp</opType>
               <implIndex/>
@@ -13070,10 +13056,10 @@
             <Obj>
               <type>0</type>
               <id>323</id>
-              <name>add_ln456</name>
+              <name>add_ln94</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>456</lineNumber>
+              <lineNumber>94</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -13089,13 +13075,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>456</second>
+                      <second>94</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>add_ln456_fu_1286_p2</rtlName>
+              <rtlName>add_ln94_fu_1286_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -13124,10 +13110,10 @@
             <Obj>
               <type>0</type>
               <id>324</id>
-              <name>br_ln456</name>
+              <name>br_ln94</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>456</lineNumber>
+              <lineNumber>94</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -13143,7 +13129,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>456</second>
+                      <second>94</second>
                     </item>
                   </second>
                 </item>
@@ -13179,10 +13165,10 @@
             <Obj>
               <type>0</type>
               <id>327</id>
-              <name>br_ln377</name>
+              <name>br_ln16</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>377</lineNumber>
+              <lineNumber>16</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -13198,7 +13184,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>377</second>
+                      <second>16</second>
                     </item>
                   </second>
                 </item>
@@ -13232,10 +13218,10 @@
             <Obj>
               <type>0</type>
               <id>329</id>
-              <name>i_3</name>
+              <name>i_4</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>381</lineNumber>
+              <lineNumber>20</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -13251,7 +13237,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>381</second>
+                      <second>20</second>
                     </item>
                   </second>
                 </item>
@@ -13288,10 +13274,10 @@
             <Obj>
               <type>0</type>
               <id>330</id>
-              <name>empty_45</name>
+              <name>empty_46</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>381</lineNumber>
+              <lineNumber>20</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -13307,13 +13293,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>381</second>
+                      <second>20</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>empty_45_fu_1292_p1</rtlName>
+              <rtlName>empty_46_fu_1292_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
@@ -13341,10 +13327,10 @@
             <Obj>
               <type>0</type>
               <id>331</id>
-              <name>empty_46</name>
+              <name>empty_47</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>456</lineNumber>
+              <lineNumber>94</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -13360,13 +13346,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>456</second>
+                      <second>94</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>empty_46_fu_1296_p2</rtlName>
+              <rtlName>empty_47_fu_1296_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -13395,10 +13381,10 @@
             <Obj>
               <type>0</type>
               <id>332</id>
-              <name>p_cast183</name>
+              <name>p_cast184</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>456</lineNumber>
+              <lineNumber>94</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -13414,13 +13400,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>456</second>
+                      <second>94</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>p_cast183_fu_1301_p1</rtlName>
+              <rtlName>p_cast184_fu_1301_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
@@ -13451,7 +13437,7 @@
               <name>table_str_addr_2</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>456</lineNumber>
+              <lineNumber>94</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -13467,7 +13453,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>456</second>
+                      <second>94</second>
                     </item>
                   </second>
                 </item>
@@ -13506,7 +13492,7 @@
               <name>p_addr_4</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>377</lineNumber>
+              <lineNumber>16</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -13522,7 +13508,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>377</second>
+                      <second>16</second>
                     </item>
                   </second>
                 </item>
@@ -13561,7 +13547,7 @@
               <name>p_load_1</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>377</lineNumber>
+              <lineNumber>16</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -13577,7 +13563,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>377</second>
+                      <second>16</second>
                     </item>
                   </second>
                 </item>
@@ -13611,10 +13597,10 @@
             <Obj>
               <type>0</type>
               <id>337</id>
-              <name>icmp_ln377</name>
+              <name>icmp_ln16</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>377</lineNumber>
+              <lineNumber>16</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -13630,13 +13616,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>377</second>
+                      <second>16</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln377_fu_1312_p2</rtlName>
+              <rtlName>icmp_ln16_fu_1312_p2</rtlName>
               <control/>
               <opType>icmp</opType>
               <implIndex/>
@@ -13668,7 +13654,7 @@
               <name>table_str_load</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>456</lineNumber>
+              <lineNumber>94</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -13684,7 +13670,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>456</second>
+                      <second>94</second>
                     </item>
                   </second>
                 </item>
@@ -13718,10 +13704,10 @@
             <Obj>
               <type>0</type>
               <id>339</id>
-              <name>icmp_ln377_1</name>
+              <name>icmp_ln16_1</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>377</lineNumber>
+              <lineNumber>16</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -13737,7 +13723,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>377</second>
+                      <second>16</second>
                     </item>
                   </second>
                 </item>
@@ -13748,7 +13734,7 @@
               <opType>icmp</opType>
               <implIndex/>
               <coreName/>
-              <coreId>1406637680</coreId>
+              <coreId>1643599648</coreId>
             </Obj>
             <bitwidth>1</bitwidth>
           </Value>
@@ -13772,10 +13758,10 @@
             <Obj>
               <type>0</type>
               <id>340</id>
-              <name>and_ln377</name>
+              <name>and_ln16</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>377</lineNumber>
+              <lineNumber>16</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -13791,18 +13777,18 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>377</second>
+                      <second>16</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>and_ln377_fu_1318_p2</rtlName>
+              <rtlName>and_ln16_fu_1318_p2</rtlName>
               <control/>
               <opType>and</opType>
               <implIndex/>
               <coreName/>
-              <coreId>1406785216</coreId>
+              <coreId>1643728304</coreId>
             </Obj>
             <bitwidth>1</bitwidth>
           </Value>
@@ -13827,10 +13813,10 @@
             <Obj>
               <type>0</type>
               <id>341</id>
-              <name>add_ln381</name>
+              <name>add_ln20</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>381</lineNumber>
+              <lineNumber>20</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -13846,13 +13832,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>381</second>
+                      <second>20</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>add_ln381_fu_1306_p2</rtlName>
+              <rtlName>add_ln20_fu_1306_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -13881,10 +13867,10 @@
             <Obj>
               <type>0</type>
               <id>342</id>
-              <name>br_ln377</name>
+              <name>br_ln16</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>377</lineNumber>
+              <lineNumber>16</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -13900,7 +13886,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>377</second>
+                      <second>16</second>
                     </item>
                   </second>
                 </item>
@@ -13936,10 +13922,10 @@
             <Obj>
               <type>0</type>
               <id>345</id>
-              <name>icmp_ln378</name>
+              <name>icmp_ln17</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>378</lineNumber>
+              <lineNumber>17</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -13955,7 +13941,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>378</second>
+                      <second>17</second>
                     </item>
                   </second>
                 </item>
@@ -13990,10 +13976,10 @@
             <Obj>
               <type>0</type>
               <id>346</id>
-              <name>br_ln378</name>
+              <name>br_ln17</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>378</lineNumber>
+              <lineNumber>17</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -14009,7 +13995,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>378</second>
+                      <second>17</second>
                     </item>
                   </second>
                 </item>
@@ -14045,10 +14031,10 @@
             <Obj>
               <type>0</type>
               <id>348</id>
-              <name>br_ln377</name>
+              <name>br_ln16</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>377</lineNumber>
+              <lineNumber>16</lineNumber>
               <contextFuncName>string_compare</contextFuncName>
               <contextNormFuncName>string_compare</contextNormFuncName>
               <inlineStackInfo>
@@ -14064,7 +14050,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>string_compare</second>
                       </first>
-                      <second>377</second>
+                      <second>16</second>
                     </item>
                   </second>
                 </item>
@@ -14098,10 +14084,10 @@
             <Obj>
               <type>0</type>
               <id>350</id>
-              <name>icmp_ln457</name>
+              <name>icmp_ln95</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>457</lineNumber>
+              <lineNumber>95</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -14117,7 +14103,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>457</second>
+                      <second>95</second>
                     </item>
                   </second>
                 </item>
@@ -14152,10 +14138,10 @@
             <Obj>
               <type>0</type>
               <id>351</id>
-              <name>br_ln457</name>
+              <name>br_ln95</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>457</lineNumber>
+              <lineNumber>95</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -14171,7 +14157,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>457</second>
+                      <second>95</second>
                     </item>
                   </second>
                 </item>
@@ -14249,7 +14235,7 @@
               <name>table_code_addr_1</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>458</lineNumber>
+              <lineNumber>96</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -14265,7 +14251,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>458</second>
+                      <second>96</second>
                     </item>
                   </second>
                 </item>
@@ -14304,7 +14290,7 @@
               <name>table_code_load</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>458</lineNumber>
+              <lineNumber>96</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -14320,7 +14306,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>458</second>
+                      <second>96</second>
                     </item>
                   </second>
                 </item>
@@ -14357,7 +14343,7 @@
               <name>out_index_4</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>458</lineNumber>
+              <lineNumber>96</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -14373,7 +14359,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>458</second>
+                      <second>96</second>
                     </item>
                   </second>
                 </item>
@@ -14411,7 +14397,7 @@
               <name>shl_ln1</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>458</lineNumber>
+              <lineNumber>96</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -14427,7 +14413,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>458</second>
+                      <second>96</second>
                     </item>
                   </second>
                 </item>
@@ -14463,10 +14449,10 @@
             <Obj>
               <type>0</type>
               <id>359</id>
-              <name>sext_ln458</name>
+              <name>sext_ln96</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>458</lineNumber>
+              <lineNumber>96</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -14482,13 +14468,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>458</second>
+                      <second>96</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>sext_ln458_fu_1331_p1</rtlName>
+              <rtlName>sext_ln96_fu_1331_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
@@ -14516,10 +14502,10 @@
             <Obj>
               <type>0</type>
               <id>360</id>
-              <name>add_ln458</name>
+              <name>add_ln96</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>458</lineNumber>
+              <lineNumber>96</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -14535,13 +14521,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>458</second>
+                      <second>96</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>add_ln458_fu_1335_p2</rtlName>
+              <rtlName>add_ln96_fu_1335_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -14573,7 +14559,7 @@
               <name>trunc_ln4</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>458</lineNumber>
+              <lineNumber>96</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -14589,7 +14575,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>458</second>
+                      <second>96</second>
                     </item>
                   </second>
                 </item>
@@ -14626,10 +14612,10 @@
             <Obj>
               <type>0</type>
               <id>362</id>
-              <name>sext_ln458_1</name>
+              <name>sext_ln96_1</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>458</lineNumber>
+              <lineNumber>96</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -14645,13 +14631,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>458</second>
+                      <second>96</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>sext_ln458_1_fu_1350_p1</rtlName>
+              <rtlName>sext_ln96_1_fu_1350_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
@@ -14679,10 +14665,10 @@
             <Obj>
               <type>0</type>
               <id>363</id>
-              <name>gmem_addr_2</name>
+              <name>gmem_addr_3</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>458</lineNumber>
+              <lineNumber>96</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -14698,7 +14684,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>458</second>
+                      <second>96</second>
                     </item>
                   </second>
                 </item>
@@ -14733,10 +14719,10 @@
             <Obj>
               <type>0</type>
               <id>364</id>
-              <name>gmem_addr_2_req</name>
+              <name>gmem_addr_3_req</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>458</lineNumber>
+              <lineNumber>96</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -14752,7 +14738,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>458</second>
+                      <second>96</second>
                     </item>
                   </second>
                 </item>
@@ -14788,10 +14774,10 @@
             <Obj>
               <type>0</type>
               <id>365</id>
-              <name>gmem_addr_2_write_ln458</name>
+              <name>gmem_addr_3_write_ln96</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>458</lineNumber>
+              <lineNumber>96</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -14807,7 +14793,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>458</second>
+                      <second>96</second>
                     </item>
                   </second>
                 </item>
@@ -14847,10 +14833,10 @@
             <Obj>
               <type>0</type>
               <id>366</id>
-              <name>gmem_addr_2_resp</name>
+              <name>gmem_addr_3_resp</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>458</lineNumber>
+              <lineNumber>96</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -14866,7 +14852,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>458</second>
+                      <second>96</second>
                     </item>
                   </second>
                 </item>
@@ -14902,10 +14888,10 @@
             <Obj>
               <type>0</type>
               <id>367</id>
-              <name>br_ln459</name>
+              <name>br_ln97</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>459</lineNumber>
+              <lineNumber>97</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -14921,7 +14907,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>459</second>
+                      <second>97</second>
                     </item>
                   </second>
                 </item>
@@ -15041,7 +15027,7 @@
               <name>trunc_ln5</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>463</lineNumber>
+              <lineNumber>101</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -15057,7 +15043,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>463</second>
+                      <second>101</second>
                     </item>
                   </second>
                 </item>
@@ -15094,10 +15080,10 @@
             <Obj>
               <type>0</type>
               <id>373</id>
-              <name>sext_ln463</name>
+              <name>sext_ln101</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>463</lineNumber>
+              <lineNumber>101</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -15113,13 +15099,13 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>463</second>
+                      <second>101</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>sext_ln463_fu_1369_p1</rtlName>
+              <rtlName>sext_ln101_fu_1369_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
@@ -15147,10 +15133,10 @@
             <Obj>
               <type>0</type>
               <id>374</id>
-              <name>gmem_addr_3</name>
+              <name>gmem_addr_4</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>463</lineNumber>
+              <lineNumber>101</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -15166,7 +15152,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>463</second>
+                      <second>101</second>
                     </item>
                   </second>
                 </item>
@@ -15201,10 +15187,10 @@
             <Obj>
               <type>0</type>
               <id>375</id>
-              <name>gmem_addr_3_req</name>
+              <name>gmem_addr_4_req</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>463</lineNumber>
+              <lineNumber>101</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -15220,7 +15206,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>463</second>
+                      <second>101</second>
                     </item>
                   </second>
                 </item>
@@ -15257,10 +15243,10 @@
             <Obj>
               <type>0</type>
               <id>376</id>
-              <name>gmem_addr_3_write_ln463</name>
+              <name>gmem_addr_4_write_ln101</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>463</lineNumber>
+              <lineNumber>101</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -15276,7 +15262,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>463</second>
+                      <second>101</second>
                     </item>
                   </second>
                 </item>
@@ -15318,10 +15304,10 @@
             <Obj>
               <type>0</type>
               <id>377</id>
-              <name>gmem_addr_3_resp</name>
+              <name>gmem_addr_4_resp</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>463</lineNumber>
+              <lineNumber>101</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -15337,7 +15323,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>463</second>
+                      <second>101</second>
                     </item>
                   </second>
                 </item>
@@ -15375,10 +15361,10 @@
             <Obj>
               <type>0</type>
               <id>378</id>
-              <name>_ln464</name>
+              <name>_ln102</name>
               <fileName>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>464</lineNumber>
+              <lineNumber>102</lineNumber>
               <contextFuncName>encoding</contextFuncName>
               <contextNormFuncName>encoding</contextNormFuncName>
               <inlineStackInfo>
@@ -15394,7 +15380,7 @@
                         <first>../../../../../../home1/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp</first>
                         <second>encoding</second>
                       </first>
-                      <second>464</second>
+                      <second>102</second>
                     </item>
                   </second>
                 </item>
@@ -15536,7 +15522,7 @@
             <bitwidth>9</bitwidth>
           </Value>
           <const_type>0</const_type>
-          <content>257</content>
+          <content>256</content>
         </item>
         <item class_id_reference="16" object_id="_298">
           <Value>
@@ -15654,7 +15640,7 @@
           <Value>
             <Obj>
               <type>2</type>
-              <id>434</id>
+              <id>433</id>
               <name>empty</name>
               <fileName/>
               <fileDirectory/>
@@ -15872,7 +15858,7 @@
             <bitwidth>32</bitwidth>
           </Value>
           <const_type>0</const_type>
-          <content>257</content>
+          <content>256</content>
         </item>
         <item class_id_reference="16" object_id="_310">
           <Value>
@@ -16119,7 +16105,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1404946592</coreId>
+              <coreId>1642792832</coreId>
             </Obj>
             <bitwidth>2</bitwidth>
           </Value>
@@ -16147,7 +16133,7 @@
               <opType/>
               <implIndex/>
               <coreName/>
-              <coreId>1405365248</coreId>
+              <coreId>1642147248</coreId>
             </Obj>
             <bitwidth>4</bitwidth>
           </Value>
@@ -16297,7 +16283,7 @@
             <opType/>
             <implIndex/>
             <coreName/>
-            <coreId>68</coreId>
+            <coreId>33</coreId>
           </Obj>
           <node_objs>
             <count>4</count>
@@ -16459,7 +16445,7 @@
             <opType/>
             <implIndex/>
             <coreName/>
-            <coreId>0</coreId>
+            <coreId>97</coreId>
           </Obj>
           <node_objs>
             <count>17</count>
@@ -16503,7 +16489,7 @@
             <opType/>
             <implIndex/>
             <coreName/>
-            <coreId>3087007888</coreId>
+            <coreId>0</coreId>
           </Obj>
           <node_objs>
             <count>16</count>
@@ -16546,7 +16532,7 @@
             <opType/>
             <implIndex/>
             <coreName/>
-            <coreId>1406691096</coreId>
+            <coreId>97</coreId>
           </Obj>
           <node_objs>
             <count>1</count>
@@ -16574,7 +16560,7 @@
             <opType/>
             <implIndex/>
             <coreName/>
-            <coreId>1406657417</coreId>
+            <coreId>4294967295</coreId>
           </Obj>
           <node_objs>
             <count>9</count>
@@ -16610,7 +16596,7 @@
             <opType/>
             <implIndex/>
             <coreName/>
-            <coreId>0</coreId>
+            <coreId>62</coreId>
           </Obj>
           <node_objs>
             <count>1</count>
@@ -16638,7 +16624,7 @@
             <opType/>
             <implIndex/>
             <coreName/>
-            <coreId>5089</coreId>
+            <coreId>49</coreId>
           </Obj>
           <node_objs>
             <count>1</count>
@@ -16666,7 +16652,7 @@
             <opType/>
             <implIndex/>
             <coreName/>
-            <coreId>0</coreId>
+            <coreId>1643633833</coreId>
           </Obj>
           <node_objs>
             <count>5</count>
@@ -16698,7 +16684,7 @@
             <opType/>
             <implIndex/>
             <coreName/>
-            <coreId>97</coreId>
+            <coreId>1643639536</coreId>
           </Obj>
           <node_objs>
             <count>5</count>
@@ -16730,7 +16716,7 @@
             <opType/>
             <implIndex/>
             <coreName/>
-            <coreId>0</coreId>
+            <coreId>1643646200</coreId>
           </Obj>
           <node_objs>
             <count>2</count>
@@ -16759,7 +16745,7 @@
             <opType/>
             <implIndex/>
             <coreName/>
-            <coreId>97</coreId>
+            <coreId>544239471</coreId>
           </Obj>
           <node_objs>
             <count>12</count>
@@ -16798,7 +16784,7 @@
             <opType/>
             <implIndex/>
             <coreName/>
-            <coreId>691549747</coreId>
+            <coreId>980447331</coreId>
           </Obj>
           <node_objs>
             <count>1</count>
@@ -16826,7 +16812,7 @@
             <opType/>
             <implIndex/>
             <coreName/>
-            <coreId>1717924464</coreId>
+            <coreId>788537856</coreId>
           </Obj>
           <node_objs>
             <count>6</count>
@@ -16859,7 +16845,7 @@
             <opType/>
             <implIndex/>
             <coreName/>
-            <coreId>0</coreId>
+            <coreId>1701519360</coreId>
           </Obj>
           <node_objs>
             <count>3</count>
@@ -16889,7 +16875,7 @@
             <opType/>
             <implIndex/>
             <coreName/>
-            <coreId>0</coreId>
+            <coreId>544502629</coreId>
           </Obj>
           <node_objs>
             <count>13</count>
@@ -16958,7 +16944,7 @@
             <opType/>
             <implIndex/>
             <coreName/>
-            <coreId>1406747408</coreId>
+            <coreId>1643687096</coreId>
           </Obj>
           <node_objs>
             <count>1</count>
@@ -16986,7 +16972,7 @@
             <opType/>
             <implIndex/>
             <coreName/>
-            <coreId>1406748280</coreId>
+            <coreId>1643688248</coreId>
           </Obj>
           <node_objs>
             <count>2</count>
@@ -17015,7 +17001,7 @@
             <opType/>
             <implIndex/>
             <coreName/>
-            <coreId>1406749840</coreId>
+            <coreId>1643689656</coreId>
           </Obj>
           <node_objs>
             <count>1</count>
@@ -17043,7 +17029,7 @@
             <opType/>
             <implIndex/>
             <coreName/>
-            <coreId>1406750840</coreId>
+            <coreId>0</coreId>
           </Obj>
           <node_objs>
             <count>1</count>
@@ -17103,7 +17089,7 @@
             <opType/>
             <implIndex/>
             <coreName/>
-            <coreId>0</coreId>
+            <coreId>14</coreId>
           </Obj>
           <node_objs>
             <count>5</count>
@@ -17194,7 +17180,7 @@
             <opType/>
             <implIndex/>
             <coreName/>
-            <coreId>0</coreId>
+            <coreId>1643701688</coreId>
           </Obj>
           <node_objs>
             <count>1</count>
@@ -17222,7 +17208,7 @@
             <opType/>
             <implIndex/>
             <coreName/>
-            <coreId>0</coreId>
+            <coreId>1643703096</coreId>
           </Obj>
           <node_objs>
             <count>9</count>
@@ -17355,7 +17341,7 @@
             <opType/>
             <implIndex/>
             <coreName/>
-            <coreId>0</coreId>
+            <coreId>193</coreId>
           </Obj>
           <node_objs>
             <count>1</count>
@@ -18376,70 +18362,70 @@
         <item class_id_reference="20" object_id="_417">
           <id>431</id>
           <edge_type>1</edge_type>
-          <source_obj>15</source_obj>
+          <source_obj>30</source_obj>
           <sink_obj>31</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_418">
           <id>432</id>
           <edge_type>1</edge_type>
-          <source_obj>31</source_obj>
-          <sink_obj>32</sink_obj>
+          <source_obj>25</source_obj>
+          <sink_obj>31</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_419">
-          <id>433</id>
+          <id>434</id>
           <edge_type>1</edge_type>
-          <source_obj>25</source_obj>
+          <source_obj>433</source_obj>
           <sink_obj>32</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_420">
           <id>435</id>
           <edge_type>1</edge_type>
-          <source_obj>434</source_obj>
-          <sink_obj>33</sink_obj>
+          <source_obj>28</source_obj>
+          <sink_obj>32</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_421">
           <id>436</id>
           <edge_type>1</edge_type>
-          <source_obj>28</source_obj>
+          <source_obj>10</source_obj>
           <sink_obj>33</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_422">
           <id>437</id>
           <edge_type>1</edge_type>
-          <source_obj>10</source_obj>
-          <sink_obj>34</sink_obj>
+          <source_obj>416</source_obj>
+          <sink_obj>33</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_423">
           <id>438</id>
           <edge_type>1</edge_type>
-          <source_obj>416</source_obj>
-          <sink_obj>34</sink_obj>
+          <source_obj>22</source_obj>
+          <sink_obj>33</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_424">
           <id>439</id>
           <edge_type>1</edge_type>
-          <source_obj>22</source_obj>
+          <source_obj>30</source_obj>
           <sink_obj>34</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_425">
           <id>440</id>
           <edge_type>1</edge_type>
-          <source_obj>30</source_obj>
+          <source_obj>34</source_obj>
           <sink_obj>35</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_426">
           <id>441</id>
           <edge_type>1</edge_type>
-          <source_obj>34</source_obj>
+          <source_obj>33</source_obj>
           <sink_obj>35</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -18558,7 +18544,7 @@
         <item class_id_reference="20" object_id="_443">
           <id>461</id>
           <edge_type>1</edge_type>
-          <source_obj>434</source_obj>
+          <source_obj>433</source_obj>
           <sink_obj>49</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -18964,7 +18950,7 @@
         <item class_id_reference="20" object_id="_501">
           <id>536</id>
           <edge_type>1</edge_type>
-          <source_obj>434</source_obj>
+          <source_obj>433</source_obj>
           <sink_obj>84</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -19076,7 +19062,7 @@
         <item class_id_reference="20" object_id="_517">
           <id>552</id>
           <edge_type>1</edge_type>
-          <source_obj>434</source_obj>
+          <source_obj>433</source_obj>
           <sink_obj>95</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -19286,7 +19272,7 @@
         <item class_id_reference="20" object_id="_547">
           <id>588</id>
           <edge_type>1</edge_type>
-          <source_obj>434</source_obj>
+          <source_obj>433</source_obj>
           <sink_obj>117</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -19391,7 +19377,7 @@
         <item class_id_reference="20" object_id="_562">
           <id>603</id>
           <edge_type>1</edge_type>
-          <source_obj>434</source_obj>
+          <source_obj>433</source_obj>
           <sink_obj>127</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -19482,7 +19468,7 @@
         <item class_id_reference="20" object_id="_575">
           <id>616</id>
           <edge_type>1</edge_type>
-          <source_obj>434</source_obj>
+          <source_obj>433</source_obj>
           <sink_obj>133</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -19776,7 +19762,7 @@
         <item class_id_reference="20" object_id="_617">
           <id>662</id>
           <edge_type>1</edge_type>
-          <source_obj>434</source_obj>
+          <source_obj>433</source_obj>
           <sink_obj>159</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -19797,7 +19783,7 @@
         <item class_id_reference="20" object_id="_620">
           <id>665</id>
           <edge_type>1</edge_type>
-          <source_obj>434</source_obj>
+          <source_obj>433</source_obj>
           <sink_obj>161</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -20063,7 +20049,7 @@
         <item class_id_reference="20" object_id="_658">
           <id>703</id>
           <edge_type>1</edge_type>
-          <source_obj>434</source_obj>
+          <source_obj>433</source_obj>
           <sink_obj>190</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -20154,7 +20140,7 @@
         <item class_id_reference="20" object_id="_671">
           <id>716</id>
           <edge_type>1</edge_type>
-          <source_obj>434</source_obj>
+          <source_obj>433</source_obj>
           <sink_obj>198</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -20413,7 +20399,7 @@
         <item class_id_reference="20" object_id="_708">
           <id>754</id>
           <edge_type>1</edge_type>
-          <source_obj>434</source_obj>
+          <source_obj>433</source_obj>
           <sink_obj>224</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -20434,7 +20420,7 @@
         <item class_id_reference="20" object_id="_711">
           <id>757</id>
           <edge_type>1</edge_type>
-          <source_obj>434</source_obj>
+          <source_obj>433</source_obj>
           <sink_obj>226</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -21057,7 +21043,7 @@
         <item class_id_reference="20" object_id="_800">
           <id>864</id>
           <edge_type>1</edge_type>
-          <source_obj>434</source_obj>
+          <source_obj>433</source_obj>
           <sink_obj>284</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -21120,7 +21106,7 @@
         <item class_id_reference="20" object_id="_809">
           <id>873</id>
           <edge_type>1</edge_type>
-          <source_obj>434</source_obj>
+          <source_obj>433</source_obj>
           <sink_obj>292</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -21274,7 +21260,7 @@
         <item class_id_reference="20" object_id="_831">
           <id>895</id>
           <edge_type>1</edge_type>
-          <source_obj>434</source_obj>
+          <source_obj>433</source_obj>
           <sink_obj>303</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -21617,7 +21603,7 @@
         <item class_id_reference="20" object_id="_880">
           <id>945</id>
           <edge_type>1</edge_type>
-          <source_obj>434</source_obj>
+          <source_obj>433</source_obj>
           <sink_obj>337</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -21638,7 +21624,7 @@
         <item class_id_reference="20" object_id="_883">
           <id>948</id>
           <edge_type>1</edge_type>
-          <source_obj>434</source_obj>
+          <source_obj>433</source_obj>
           <sink_obj>339</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -23126,8 +23112,8 @@
       </item>
       <item class_id_reference="22" object_id="_1089">
         <mId>3</mId>
-        <mTag>VITIS_LOOP_402_1</mTag>
-        <mNormTag>VITIS_LOOP_402_1</mNormTag>
+        <mTag>VITIS_LOOP_40_1</mTag>
+        <mNormTag>VITIS_LOOP_40_1</mNormTag>
         <mType>1</mType>
         <sub_regions>
           <count>0</count>
@@ -23141,10 +23127,10 @@
         </basic_blocks>
         <mII>1</mII>
         <mDepth>1</mDepth>
-        <mMinTripCount>257</mMinTripCount>
-        <mMaxTripCount>257</mMaxTripCount>
-        <mMinLatency>257</mMinLatency>
-        <mMaxLatency>257</mMaxLatency>
+        <mMinTripCount>256</mMinTripCount>
+        <mMaxTripCount>256</mMaxTripCount>
+        <mMinLatency>256</mMinLatency>
+        <mMaxLatency>256</mMaxLatency>
         <mIsDfPipe>0</mIsDfPipe>
         <mDfPipe class_id="-1"/>
       </item>
@@ -23220,8 +23206,8 @@
       </item>
       <item class_id_reference="22" object_id="_1093">
         <mId>7</mId>
-        <mTag>VITIS_LOOP_411_2</mTag>
-        <mNormTag>VITIS_LOOP_411_2</mNormTag>
+        <mTag>VITIS_LOOP_49_2</mTag>
+        <mNormTag>VITIS_LOOP_49_2</mNormTag>
         <mType>1</mType>
         <sub_regions>
           <count>19</count>
@@ -23285,8 +23271,8 @@
       </item>
       <item class_id_reference="22" object_id="_1095">
         <mId>9</mId>
-        <mTag>VITIS_LOOP_389_1</mTag>
-        <mNormTag>VITIS_LOOP_389_1</mNormTag>
+        <mTag>VITIS_LOOP_27_1</mTag>
+        <mNormTag>VITIS_LOOP_27_1</mNormTag>
         <mType>1</mType>
         <sub_regions>
           <count>0</count>
@@ -23332,8 +23318,8 @@
       </item>
       <item class_id_reference="22" object_id="_1097">
         <mId>11</mId>
-        <mTag>VITIS_LOOP_368_1</mTag>
-        <mNormTag>VITIS_LOOP_368_1</mNormTag>
+        <mTag>VITIS_LOOP_8_1</mTag>
+        <mNormTag>VITIS_LOOP_8_1</mNormTag>
         <mType>1</mType>
         <sub_regions>
           <count>0</count>
@@ -23381,8 +23367,8 @@
       </item>
       <item class_id_reference="22" object_id="_1099">
         <mId>13</mId>
-        <mTag>VITIS_LOOP_423_3</mTag>
-        <mNormTag>VITIS_LOOP_423_3</mNormTag>
+        <mTag>VITIS_LOOP_61_3</mTag>
+        <mNormTag>VITIS_LOOP_61_3</mNormTag>
         <mType>1</mType>
         <sub_regions>
           <count>3</count>
@@ -23430,8 +23416,8 @@
       </item>
       <item class_id_reference="22" object_id="_1101">
         <mId>15</mId>
-        <mTag>VITIS_LOOP_377_1</mTag>
-        <mNormTag>VITIS_LOOP_377_1</mNormTag>
+        <mTag>VITIS_LOOP_16_1</mTag>
+        <mNormTag>VITIS_LOOP_16_1</mNormTag>
         <mType>1</mType>
         <sub_regions>
           <count>0</count>
@@ -23502,8 +23488,8 @@
       </item>
       <item class_id_reference="22" object_id="_1104">
         <mId>18</mId>
-        <mTag>VITIS_LOOP_368_1</mTag>
-        <mNormTag>VITIS_LOOP_368_1</mNormTag>
+        <mTag>VITIS_LOOP_8_1</mTag>
+        <mNormTag>VITIS_LOOP_8_1</mNormTag>
         <mType>1</mType>
         <sub_regions>
           <count>0</count>
@@ -23573,8 +23559,8 @@
       </item>
       <item class_id_reference="22" object_id="_1107">
         <mId>21</mId>
-        <mTag>VITIS_LOOP_435_4</mTag>
-        <mNormTag>VITIS_LOOP_435_4</mNormTag>
+        <mTag>VITIS_LOOP_73_4</mTag>
+        <mNormTag>VITIS_LOOP_73_4</mNormTag>
         <mType>1</mType>
         <sub_regions>
           <count>3</count>
@@ -23622,8 +23608,8 @@
       </item>
       <item class_id_reference="22" object_id="_1109">
         <mId>23</mId>
-        <mTag>VITIS_LOOP_377_1</mTag>
-        <mNormTag>VITIS_LOOP_377_1</mNormTag>
+        <mTag>VITIS_LOOP_16_1</mTag>
+        <mNormTag>VITIS_LOOP_16_1</mNormTag>
         <mType>1</mType>
         <sub_regions>
           <count>0</count>
@@ -23763,8 +23749,8 @@
       </item>
       <item class_id_reference="22" object_id="_1115">
         <mId>29</mId>
-        <mTag>VITIS_LOOP_368_1</mTag>
-        <mNormTag>VITIS_LOOP_368_1</mNormTag>
+        <mTag>VITIS_LOOP_8_1</mTag>
+        <mNormTag>VITIS_LOOP_8_1</mNormTag>
         <mType>1</mType>
         <sub_regions>
           <count>0</count>
@@ -23881,8 +23867,8 @@
       </item>
       <item class_id_reference="22" object_id="_1120">
         <mId>34</mId>
-        <mTag>VITIS_LOOP_456_5</mTag>
-        <mNormTag>VITIS_LOOP_456_5</mNormTag>
+        <mTag>VITIS_LOOP_94_5</mTag>
+        <mNormTag>VITIS_LOOP_94_5</mNormTag>
         <mType>1</mType>
         <sub_regions>
           <count>3</count>
@@ -23930,8 +23916,8 @@
       </item>
       <item class_id_reference="22" object_id="_1122">
         <mId>36</mId>
-        <mTag>VITIS_LOOP_377_1</mTag>
-        <mNormTag>VITIS_LOOP_377_1</mNormTag>
+        <mTag>VITIS_LOOP_16_1</mTag>
+        <mNormTag>VITIS_LOOP_16_1</mNormTag>
         <mType>1</mType>
         <sub_regions>
           <count>0</count>
@@ -36544,13 +36530,13 @@
         <count>55</count>
         <item_version>0</item_version>
         <item class_id="38" tracking_level="0" version="0">
-          <first>add_ln368_1_fu_1055_p2 ( + ) </first>
+          <first>add_ln20_1_fu_1026_p2 ( + ) </first>
           <second class_id="39" tracking_level="0" version="0">
             <count>4</count>
             <item_version>0</item_version>
             <item class_id="40" tracking_level="0" version="0">
               <first>(0P0)</first>
-              <second>10</second>
+              <second>64</second>
             </item>
             <item>
               <first>(1P1)</first>
@@ -36562,58 +36548,12 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>17</second>
+              <second>71</second>
             </item>
           </second>
         </item>
         <item>
-          <first>add_ln368_2_fu_1211_p2 ( + ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>10</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>17</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>add_ln368_fu_957_p2 ( + ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>10</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>17</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>add_ln381_1_fu_1026_p2 ( + ) </first>
+          <first>add_ln20_2_fu_1113_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -36636,7 +36576,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln381_2_fu_1113_p2 ( + ) </first>
+          <first>add_ln20_fu_1306_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -36659,7 +36599,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln381_fu_1306_p2 ( + ) </first>
+          <first>add_ln28_fu_935_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -36682,7 +36622,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln390_fu_935_p2 ( + ) </first>
+          <first>add_ln49_1_fu_1254_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -36705,53 +36645,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln402_fu_742_p2 ( + ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>9</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>16</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>add_ln411_1_fu_1254_p2 ( + ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>64</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>71</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>add_ln411_2_fu_885_p2 ( + ) </first>
+          <first>add_ln49_2_fu_885_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -36774,7 +36668,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln411_fu_860_p2 ( + ) </first>
+          <first>add_ln49_fu_860_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -36797,7 +36691,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln419_fu_973_p2 ( + ) </first>
+          <first>add_ln57_fu_973_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -36820,7 +36714,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln423_fu_994_p2 ( + ) </first>
+          <first>add_ln61_fu_994_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -36843,7 +36737,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln435_fu_1093_p2 ( + ) </first>
+          <first>add_ln73_fu_1093_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -36866,7 +36760,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln437_fu_1142_p2 ( + ) </first>
+          <first>add_ln75_fu_1142_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -36889,7 +36783,76 @@
           </second>
         </item>
         <item>
-          <first>add_ln456_fu_1286_p2 ( + ) </first>
+          <first>add_ln8_1_fu_1055_p2 ( + ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>10</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>17</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>add_ln8_2_fu_1211_p2 ( + ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>10</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>17</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>add_ln8_fu_957_p2 ( + ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>10</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>17</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>add_ln94_fu_1286_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -36912,7 +36875,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln458_fu_1335_p2 ( + ) </first>
+          <first>add_ln96_fu_1335_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -36935,7 +36898,7 @@
           </second>
         </item>
         <item>
-          <first>and_ln377_1_fu_1038_p2 ( and ) </first>
+          <first>and_ln16_1_fu_1038_p2 ( and ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -36958,7 +36921,7 @@
           </second>
         </item>
         <item>
-          <first>and_ln377_2_fu_1125_p2 ( and ) </first>
+          <first>and_ln16_2_fu_1125_p2 ( and ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -36981,7 +36944,7 @@
           </second>
         </item>
         <item>
-          <first>and_ln377_fu_1318_p2 ( and ) </first>
+          <first>and_ln16_fu_1318_p2 ( and ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -37004,7 +36967,7 @@
           </second>
         </item>
         <item>
-          <first>and_ln389_fu_941_p2 ( and ) </first>
+          <first>and_ln27_fu_941_p2 ( and ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -37096,7 +37059,7 @@
           </second>
         </item>
         <item>
-          <first>empty_33_fu_797_p2 ( + ) </first>
+          <first>empty_34_fu_797_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -37119,7 +37082,7 @@
           </second>
         </item>
         <item>
-          <first>empty_38_fu_1016_p2 ( + ) </first>
+          <first>empty_39_fu_1016_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -37142,7 +37105,7 @@
           </second>
         </item>
         <item>
-          <first>empty_42_fu_1103_p2 ( + ) </first>
+          <first>empty_43_fu_1103_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -37165,7 +37128,7 @@
           </second>
         </item>
         <item>
-          <first>empty_46_fu_1296_p2 ( + ) </first>
+          <first>empty_47_fu_1296_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -37372,7 +37335,30 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln368_1_fu_963_p2 ( icmp ) </first>
+          <first>i_1_fu_742_p2 ( + ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>9</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>16</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln16_2_fu_1032_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -37395,30 +37381,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln368_2_fu_1049_p2 ( icmp ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>10</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>11</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>icmp_ln368_3_fu_1061_p2 ( icmp ) </first>
+          <first>icmp_ln16_5_fu_1119_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -37441,30 +37404,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln368_4_fu_1205_p2 ( icmp ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>10</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>11</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>icmp_ln368_5_fu_1217_p2 ( icmp ) </first>
+          <first>icmp_ln16_fu_1312_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -37487,99 +37427,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln368_fu_951_p2 ( icmp ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>10</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>11</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>icmp_ln377_2_fu_1032_p2 ( icmp ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>8</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>11</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>icmp_ln377_5_fu_1119_p2 ( icmp ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>8</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>11</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>icmp_ln377_fu_1312_p2 ( icmp ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>8</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>11</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>icmp_ln389_1_fu_929_p2 ( icmp ) </first>
+          <first>icmp_ln27_1_fu_929_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -37602,7 +37450,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln402_fu_748_p2 ( icmp ) </first>
+          <first>icmp_ln40_fu_748_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -37612,7 +37460,7 @@
             </item>
             <item>
               <first>(1P1)</first>
-              <second>9</second>
+              <second>10</second>
             </item>
             <item>
               <first>FF</first>
@@ -37625,7 +37473,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln411_fu_913_p2 ( icmp ) </first>
+          <first>icmp_ln49_fu_913_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -37648,7 +37496,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln423_1_fu_988_p2 ( icmp ) </first>
+          <first>icmp_ln61_1_fu_988_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -37671,7 +37519,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln435_fu_1087_p2 ( icmp ) </first>
+          <first>icmp_ln73_fu_1087_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -37694,7 +37542,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln443_fu_1177_p2 ( icmp ) </first>
+          <first>icmp_ln81_fu_1177_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -37717,7 +37565,145 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln456_1_fu_1280_p2 ( icmp ) </first>
+          <first>icmp_ln8_3_fu_963_p2 ( icmp ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>8</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>11</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln8_4_fu_1049_p2 ( icmp ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>10</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>2</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>11</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln8_5_fu_1061_p2 ( icmp ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>8</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>11</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln8_6_fu_1205_p2 ( icmp ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>10</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>2</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>11</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln8_7_fu_1217_p2 ( icmp ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>8</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>11</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln8_fu_951_p2 ( icmp ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>10</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>2</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>11</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln94_1_fu_1280_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -37740,7 +37726,7 @@
           </second>
         </item>
         <item>
-          <first>lshr_ln411_fu_904_p2 ( lshr ) </first>
+          <first>lshr_ln49_fu_904_p2 ( lshr ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -37763,7 +37749,7 @@
           </second>
         </item>
         <item>
-          <first>or_ln404_fu_772_p2 ( or ) </first>
+          <first>or_ln42_fu_772_p2 ( or ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -38007,7 +37993,7 @@
           </second>
         </item>
         <item>
-          <first>empty_32_reg_494</first>
+          <first>empty_33_reg_494</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -38306,7 +38292,7 @@
           </second>
         </item>
         <item>
-          <first>i_1_reg_505</first>
+          <first>i_2_reg_505</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -38329,7 +38315,7 @@
           </second>
         </item>
         <item>
-          <first>i_2_reg_531</first>
+          <first>i_3_reg_531</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -38352,7 +38338,7 @@
           </second>
         </item>
         <item>
-          <first>i_3_reg_653</first>
+          <first>i_4_reg_653</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -38375,7 +38361,7 @@
           </second>
         </item>
         <item>
-          <first>i_4_reg_553</first>
+          <first>i_5_reg_553</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -38398,7 +38384,7 @@
           </second>
         </item>
         <item>
-          <first>i_5_reg_565</first>
+          <first>i_6_reg_565</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -38421,7 +38407,7 @@
           </second>
         </item>
         <item>
-          <first>i_6_reg_587</first>
+          <first>i_7_reg_587</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -38444,7 +38430,7 @@
           </second>
         </item>
         <item>
-          <first>i_7_reg_620</first>
+          <first>i_8_reg_620</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -39115,64 +39101,7 @@
         <count>61</count>
         <item_version>0</item_version>
         <item>
-          <first>add_ln368_1_reg_1598</first>
-          <second>
-            <count>3</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(Bits)</first>
-              <second>10</second>
-            </item>
-            <item>
-              <first>(Consts)</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>10</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>add_ln368_2_reg_1689</first>
-          <second>
-            <count>3</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(Bits)</first>
-              <second>10</second>
-            </item>
-            <item>
-              <first>(Consts)</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>10</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>add_ln368_reg_1527</first>
-          <second>
-            <count>3</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(Bits)</first>
-              <second>10</second>
-            </item>
-            <item>
-              <first>(Consts)</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>10</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>add_ln381_1_reg_1568</first>
+          <first>add_ln20_1_reg_1568</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -39191,7 +39120,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln381_2_reg_1640</first>
+          <first>add_ln20_2_reg_1640</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -39210,7 +39139,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln381_reg_1736</first>
+          <first>add_ln20_reg_1736</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -39229,7 +39158,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln411_2_reg_1467</first>
+          <first>add_ln49_2_reg_1467</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -39248,7 +39177,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln423_reg_1548</first>
+          <first>add_ln61_reg_1548</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -39267,7 +39196,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln435_reg_1625</first>
+          <first>add_ln73_reg_1625</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -39286,7 +39215,64 @@
           </second>
         </item>
         <item>
-          <first>add_ln456_reg_1721</first>
+          <first>add_ln8_1_reg_1598</first>
+          <second>
+            <count>3</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(Bits)</first>
+              <second>10</second>
+            </item>
+            <item>
+              <first>(Consts)</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>10</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>add_ln8_2_reg_1689</first>
+          <second>
+            <count>3</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(Bits)</first>
+              <second>10</second>
+            </item>
+            <item>
+              <first>(Consts)</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>10</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>add_ln8_reg_1527</first>
+          <second>
+            <count>3</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(Bits)</first>
+              <second>10</second>
+            </item>
+            <item>
+              <first>(Consts)</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>10</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>add_ln94_reg_1721</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -39362,7 +39348,7 @@
           </second>
         </item>
         <item>
-          <first>empty_32_reg_494</first>
+          <first>empty_33_reg_494</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -39381,7 +39367,7 @@
           </second>
         </item>
         <item>
-          <first>gmem_addr_1_read_reg_1472</first>
+          <first>gmem_addr_2_read_reg_1472</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -39400,7 +39386,7 @@
           </second>
         </item>
         <item>
-          <first>gmem_addr_1_reg_1461</first>
+          <first>gmem_addr_2_reg_1461</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -39419,7 +39405,7 @@
           </second>
         </item>
         <item>
-          <first>gmem_addr_2_reg_1755</first>
+          <first>gmem_addr_3_reg_1755</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -39438,7 +39424,7 @@
           </second>
         </item>
         <item>
-          <first>gmem_addr_4_reg_1659</first>
+          <first>gmem_addr_5_reg_1659</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -39457,7 +39443,7 @@
           </second>
         </item>
         <item>
-          <first>i_1_reg_505</first>
+          <first>i_2_reg_505</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -39476,7 +39462,7 @@
           </second>
         </item>
         <item>
-          <first>i_2_cast_reg_1517</first>
+          <first>i_3_cast_reg_1517</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -39495,7 +39481,7 @@
           </second>
         </item>
         <item>
-          <first>i_2_reg_531</first>
+          <first>i_3_reg_531</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -39514,7 +39500,7 @@
           </second>
         </item>
         <item>
-          <first>i_3_reg_653</first>
+          <first>i_4_reg_653</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -39533,7 +39519,7 @@
           </second>
         </item>
         <item>
-          <first>i_4_reg_553</first>
+          <first>i_5_reg_553</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -39552,7 +39538,7 @@
           </second>
         </item>
         <item>
-          <first>i_5_cast_reg_1588</first>
+          <first>i_6_cast_reg_1588</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -39571,7 +39557,7 @@
           </second>
         </item>
         <item>
-          <first>i_5_reg_565</first>
+          <first>i_6_reg_565</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -39590,7 +39576,7 @@
           </second>
         </item>
         <item>
-          <first>i_6_reg_587</first>
+          <first>i_7_reg_587</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -39609,7 +39595,7 @@
           </second>
         </item>
         <item>
-          <first>i_7_reg_620</first>
+          <first>i_8_reg_620</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -39647,7 +39633,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln368_2_reg_1594</first>
+          <first>icmp_ln27_1_reg_1504</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -39666,7 +39652,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln368_4_reg_1685</first>
+          <first>icmp_ln61_1_reg_1544</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -39685,7 +39671,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln368_reg_1523</first>
+          <first>icmp_ln61_reg_1540</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -39704,7 +39690,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln389_1_reg_1504</first>
+          <first>icmp_ln81_reg_1670</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -39723,7 +39709,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln423_1_reg_1544</first>
+          <first>icmp_ln8_4_reg_1594</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -39742,7 +39728,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln423_reg_1540</first>
+          <first>icmp_ln8_6_reg_1685</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -39761,7 +39747,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln443_reg_1670</first>
+          <first>icmp_ln8_reg_1523</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -39780,7 +39766,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln456_1_reg_1717</first>
+          <first>icmp_ln94_1_reg_1717</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -39799,7 +39785,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln456_reg_1495</first>
+          <first>icmp_ln94_reg_1495</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -40179,7 +40165,7 @@
           </second>
         </item>
         <item>
-          <first>trunc_ln408_reg_1441</first>
+          <first>trunc_ln46_reg_1441</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -40198,7 +40184,7 @@
           </second>
         </item>
         <item>
-          <first>trunc_ln411_reg_1456</first>
+          <first>trunc_ln49_reg_1456</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -40217,7 +40203,7 @@
           </second>
         </item>
         <item>
-          <first>zext_ln435_reg_1611</first>
+          <first>zext_ln73_reg_1611</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -40236,7 +40222,7 @@
           </second>
         </item>
         <item>
-          <first>zext_ln444_reg_1674</first>
+          <first>zext_ln82_reg_1674</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -40255,7 +40241,7 @@
           </second>
         </item>
         <item>
-          <first>zext_ln456_reg_1707</first>
+          <first>zext_ln94_reg_1707</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -40286,31 +40272,7 @@
         <count>53</count>
         <item_version>0</item_version>
         <item class_id="42" tracking_level="0" version="0">
-          <first>add_ln368_1_fu_1055_p2 ( + ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>184</item>
-          </second>
-        </item>
-        <item>
-          <first>add_ln368_2_fu_1211_p2 ( + ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>278</item>
-          </second>
-        </item>
-        <item>
-          <first>add_ln368_fu_957_p2 ( + ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>111</item>
-          </second>
-        </item>
-        <item>
-          <first>add_ln381_1_fu_1026_p2 ( + ) </first>
+          <first>add_ln20_1_fu_1026_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40318,7 +40280,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln381_2_fu_1113_p2 ( + ) </first>
+          <first>add_ln20_2_fu_1113_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40326,7 +40288,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln381_fu_1306_p2 ( + ) </first>
+          <first>add_ln20_fu_1306_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40334,7 +40296,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln390_fu_935_p2 ( + ) </first>
+          <first>add_ln28_fu_935_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40342,15 +40304,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln402_fu_742_p2 ( + ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>16</item>
-          </second>
-        </item>
-        <item>
-          <first>add_ln411_1_fu_1254_p2 ( + ) </first>
+          <first>add_ln49_1_fu_1254_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40358,7 +40312,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln411_2_fu_885_p2 ( + ) </first>
+          <first>add_ln49_2_fu_885_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40366,7 +40320,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln411_fu_860_p2 ( + ) </first>
+          <first>add_ln49_fu_860_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40374,7 +40328,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln419_fu_973_p2 ( + ) </first>
+          <first>add_ln57_fu_973_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40382,7 +40336,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln423_fu_994_p2 ( + ) </first>
+          <first>add_ln61_fu_994_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40390,7 +40344,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln435_fu_1093_p2 ( + ) </first>
+          <first>add_ln73_fu_1093_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40398,7 +40352,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln437_fu_1142_p2 ( + ) </first>
+          <first>add_ln75_fu_1142_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40406,7 +40360,31 @@
           </second>
         </item>
         <item>
-          <first>add_ln456_fu_1286_p2 ( + ) </first>
+          <first>add_ln8_1_fu_1055_p2 ( + ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>184</item>
+          </second>
+        </item>
+        <item>
+          <first>add_ln8_2_fu_1211_p2 ( + ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>278</item>
+          </second>
+        </item>
+        <item>
+          <first>add_ln8_fu_957_p2 ( + ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>111</item>
+          </second>
+        </item>
+        <item>
+          <first>add_ln94_fu_1286_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40414,7 +40392,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln458_fu_1335_p2 ( + ) </first>
+          <first>add_ln96_fu_1335_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40422,7 +40400,7 @@
           </second>
         </item>
         <item>
-          <first>and_ln377_1_fu_1038_p2 ( and ) </first>
+          <first>and_ln16_1_fu_1038_p2 ( and ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40430,7 +40408,7 @@
           </second>
         </item>
         <item>
-          <first>and_ln377_2_fu_1125_p2 ( and ) </first>
+          <first>and_ln16_2_fu_1125_p2 ( and ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40438,7 +40416,7 @@
           </second>
         </item>
         <item>
-          <first>and_ln377_fu_1318_p2 ( and ) </first>
+          <first>and_ln16_fu_1318_p2 ( and ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40446,7 +40424,7 @@
           </second>
         </item>
         <item>
-          <first>and_ln389_fu_941_p2 ( and ) </first>
+          <first>and_ln27_fu_941_p2 ( and ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40462,7 +40440,7 @@
           </second>
         </item>
         <item>
-          <first>empty_33_fu_797_p2 ( + ) </first>
+          <first>empty_34_fu_797_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40470,7 +40448,7 @@
           </second>
         </item>
         <item>
-          <first>empty_38_fu_1016_p2 ( + ) </first>
+          <first>empty_39_fu_1016_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40478,7 +40456,7 @@
           </second>
         </item>
         <item>
-          <first>empty_42_fu_1103_p2 ( + ) </first>
+          <first>empty_43_fu_1103_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40486,7 +40464,7 @@
           </second>
         </item>
         <item>
-          <first>empty_46_fu_1296_p2 ( + ) </first>
+          <first>empty_47_fu_1296_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40565,55 +40543,15 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln368_1_fu_963_p2 ( icmp ) </first>
+          <first>i_1_fu_742_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>117</item>
+            <item>16</item>
           </second>
         </item>
         <item>
-          <first>icmp_ln368_2_fu_1049_p2 ( icmp ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>182</item>
-          </second>
-        </item>
-        <item>
-          <first>icmp_ln368_3_fu_1061_p2 ( icmp ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>190</item>
-          </second>
-        </item>
-        <item>
-          <first>icmp_ln368_4_fu_1205_p2 ( icmp ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>276</item>
-          </second>
-        </item>
-        <item>
-          <first>icmp_ln368_5_fu_1217_p2 ( icmp ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>284</item>
-          </second>
-        </item>
-        <item>
-          <first>icmp_ln368_fu_951_p2 ( icmp ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>109</item>
-          </second>
-        </item>
-        <item>
-          <first>icmp_ln377_2_fu_1032_p2 ( icmp ) </first>
+          <first>icmp_ln16_2_fu_1032_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40621,7 +40559,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln377_5_fu_1119_p2 ( icmp ) </first>
+          <first>icmp_ln16_5_fu_1119_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40629,7 +40567,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln377_fu_1312_p2 ( icmp ) </first>
+          <first>icmp_ln16_fu_1312_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40637,7 +40575,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln389_1_fu_929_p2 ( icmp ) </first>
+          <first>icmp_ln27_1_fu_929_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40645,7 +40583,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln402_fu_748_p2 ( icmp ) </first>
+          <first>icmp_ln40_fu_748_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40653,7 +40591,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln411_fu_913_p2 ( icmp ) </first>
+          <first>icmp_ln49_fu_913_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40661,7 +40599,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln423_1_fu_988_p2 ( icmp ) </first>
+          <first>icmp_ln61_1_fu_988_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40669,7 +40607,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln435_fu_1087_p2 ( icmp ) </first>
+          <first>icmp_ln73_fu_1087_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40677,7 +40615,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln443_fu_1177_p2 ( icmp ) </first>
+          <first>icmp_ln81_fu_1177_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40685,7 +40623,55 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln456_1_fu_1280_p2 ( icmp ) </first>
+          <first>icmp_ln8_3_fu_963_p2 ( icmp ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>117</item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln8_4_fu_1049_p2 ( icmp ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>182</item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln8_5_fu_1061_p2 ( icmp ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>190</item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln8_6_fu_1205_p2 ( icmp ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>276</item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln8_7_fu_1217_p2 ( icmp ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>284</item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln8_fu_951_p2 ( icmp ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>109</item>
+          </second>
+        </item>
+        <item>
+          <first>icmp_ln94_1_fu_1280_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40693,7 +40679,7 @@
           </second>
         </item>
         <item>
-          <first>lshr_ln411_fu_904_p2 ( lshr ) </first>
+          <first>lshr_ln49_fu_904_p2 ( lshr ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -40701,7 +40687,7 @@
           </second>
         </item>
         <item>
-          <first>or_ln404_fu_772_p2 ( or ) </first>
+          <first>or_ln42_fu_772_p2 ( or ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -43206,7 +43192,7 @@
       <count>9</count>
       <item_version>0</item_version>
       <item class_id="50" tracking_level="1" version="0" object_id="_2586">
-        <region_name>VITIS_LOOP_402_1</region_name>
+        <region_name>VITIS_LOOP_40_1</region_name>
         <basic_blocks>
           <count>2</count>
           <item_version>0</item_version>
@@ -43240,7 +43226,7 @@
         <pipe_depth>1</pipe_depth>
       </item>
       <item class_id_reference="50" object_id="_2588">
-        <region_name>VITIS_LOOP_389_1</region_name>
+        <region_name>VITIS_LOOP_27_1</region_name>
         <basic_blocks>
           <count>2</count>
           <item_version>0</item_version>
@@ -43257,7 +43243,7 @@
         <pipe_depth>2</pipe_depth>
       </item>
       <item class_id_reference="50" object_id="_2589">
-        <region_name>VITIS_LOOP_368_1</region_name>
+        <region_name>VITIS_LOOP_8_1</region_name>
         <basic_blocks>
           <count>3</count>
           <item_version>0</item_version>
@@ -43275,7 +43261,7 @@
         <pipe_depth>2</pipe_depth>
       </item>
       <item class_id_reference="50" object_id="_2590">
-        <region_name>VITIS_LOOP_377_1</region_name>
+        <region_name>VITIS_LOOP_16_1</region_name>
         <basic_blocks>
           <count>3</count>
           <item_version>0</item_version>
@@ -43293,7 +43279,7 @@
         <pipe_depth>2</pipe_depth>
       </item>
       <item class_id_reference="50" object_id="_2591">
-        <region_name>VITIS_LOOP_368_1</region_name>
+        <region_name>VITIS_LOOP_8_1</region_name>
         <basic_blocks>
           <count>3</count>
           <item_version>0</item_version>
@@ -43311,7 +43297,7 @@
         <pipe_depth>2</pipe_depth>
       </item>
       <item class_id_reference="50" object_id="_2592">
-        <region_name>VITIS_LOOP_377_1</region_name>
+        <region_name>VITIS_LOOP_16_1</region_name>
         <basic_blocks>
           <count>3</count>
           <item_version>0</item_version>
@@ -43329,7 +43315,7 @@
         <pipe_depth>2</pipe_depth>
       </item>
       <item class_id_reference="50" object_id="_2593">
-        <region_name>VITIS_LOOP_368_1</region_name>
+        <region_name>VITIS_LOOP_8_1</region_name>
         <basic_blocks>
           <count>3</count>
           <item_version>0</item_version>
@@ -43347,7 +43333,7 @@
         <pipe_depth>2</pipe_depth>
       </item>
       <item class_id_reference="50" object_id="_2594">
-        <region_name>VITIS_LOOP_377_1</region_name>
+        <region_name>VITIS_LOOP_16_1</region_name>
         <basic_blocks>
           <count>3</count>
           <item_version>0</item_version>
@@ -43891,8 +43877,8 @@
         <second>
           <count>10</count>
           <item_version>0</item_version>
+          <item>31</item>
           <item>32</item>
-          <item>33</item>
           <item>160</item>
           <item>160</item>
           <item>225</item>
@@ -43908,7 +43894,7 @@
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>34</item>
+          <item>33</item>
         </second>
       </item>
       <item>
@@ -44430,7 +44416,7 @@
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>31</item>
+          <item>34</item>
         </second>
       </item>
       <item>
@@ -45270,31 +45256,7 @@
       <count>162</count>
       <item_version>0</item_version>
       <item class_id="55" tracking_level="0" version="0">
-        <first>add_ln368_1_fu_1055</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>184</item>
-        </second>
-      </item>
-      <item>
-        <first>add_ln368_2_fu_1211</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>278</item>
-        </second>
-      </item>
-      <item>
-        <first>add_ln368_fu_957</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>111</item>
-        </second>
-      </item>
-      <item>
-        <first>add_ln381_1_fu_1026</first>
+        <first>add_ln20_1_fu_1026</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45302,7 +45264,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln381_2_fu_1113</first>
+        <first>add_ln20_2_fu_1113</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45310,7 +45272,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln381_fu_1306</first>
+        <first>add_ln20_fu_1306</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45318,7 +45280,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln390_fu_935</first>
+        <first>add_ln28_fu_935</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45326,15 +45288,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln402_fu_742</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>16</item>
-        </second>
-      </item>
-      <item>
-        <first>add_ln411_1_fu_1254</first>
+        <first>add_ln49_1_fu_1254</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45342,7 +45296,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln411_2_fu_885</first>
+        <first>add_ln49_2_fu_885</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45350,7 +45304,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln411_fu_860</first>
+        <first>add_ln49_fu_860</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45358,7 +45312,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln419_fu_973</first>
+        <first>add_ln57_fu_973</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45366,7 +45320,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln423_fu_994</first>
+        <first>add_ln61_fu_994</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45374,7 +45328,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln435_fu_1093</first>
+        <first>add_ln73_fu_1093</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45382,7 +45336,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln437_fu_1142</first>
+        <first>add_ln75_fu_1142</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45390,7 +45344,31 @@
         </second>
       </item>
       <item>
-        <first>add_ln456_fu_1286</first>
+        <first>add_ln8_1_fu_1055</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>184</item>
+        </second>
+      </item>
+      <item>
+        <first>add_ln8_2_fu_1211</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>278</item>
+        </second>
+      </item>
+      <item>
+        <first>add_ln8_fu_957</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>111</item>
+        </second>
+      </item>
+      <item>
+        <first>add_ln94_fu_1286</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45398,7 +45376,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln458_fu_1335</first>
+        <first>add_ln96_fu_1335</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45406,7 +45384,7 @@
         </second>
       </item>
       <item>
-        <first>and_ln377_1_fu_1038</first>
+        <first>and_ln16_1_fu_1038</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45414,7 +45392,7 @@
         </second>
       </item>
       <item>
-        <first>and_ln377_2_fu_1125</first>
+        <first>and_ln16_2_fu_1125</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45422,7 +45400,7 @@
         </second>
       </item>
       <item>
-        <first>and_ln377_fu_1318</first>
+        <first>and_ln16_fu_1318</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45430,7 +45408,7 @@
         </second>
       </item>
       <item>
-        <first>and_ln389_fu_941</first>
+        <first>and_ln27_fu_941</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45462,7 +45440,7 @@
         </second>
       </item>
       <item>
-        <first>empty_32_phi_fu_498</first>
+        <first>empty_33_phi_fu_498</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45470,7 +45448,7 @@
         </second>
       </item>
       <item>
-        <first>empty_33_fu_797</first>
+        <first>empty_34_fu_797</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45478,7 +45456,7 @@
         </second>
       </item>
       <item>
-        <first>empty_36_fu_1000</first>
+        <first>empty_37_fu_1000</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45486,7 +45464,7 @@
         </second>
       </item>
       <item>
-        <first>empty_37_fu_1012</first>
+        <first>empty_38_fu_1012</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45494,7 +45472,7 @@
         </second>
       </item>
       <item>
-        <first>empty_38_fu_1016</first>
+        <first>empty_39_fu_1016</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45502,7 +45480,7 @@
         </second>
       </item>
       <item>
-        <first>empty_40_fu_1071</first>
+        <first>empty_41_fu_1071</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45510,7 +45488,7 @@
         </second>
       </item>
       <item>
-        <first>empty_41_fu_1099</first>
+        <first>empty_42_fu_1099</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45518,7 +45496,7 @@
         </second>
       </item>
       <item>
-        <first>empty_42_fu_1103</first>
+        <first>empty_43_fu_1103</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45526,7 +45504,7 @@
         </second>
       </item>
       <item>
-        <first>empty_44_fu_1264</first>
+        <first>empty_45_fu_1264</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45534,7 +45512,7 @@
         </second>
       </item>
       <item>
-        <first>empty_45_fu_1292</first>
+        <first>empty_46_fu_1292</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45542,7 +45520,7 @@
         </second>
       </item>
       <item>
-        <first>empty_46_fu_1296</first>
+        <first>empty_47_fu_1296</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45558,7 +45536,7 @@
         </second>
       </item>
       <item>
-        <first>gmem_addr_1_fu_879</first>
+        <first>gmem_addr_2_fu_879</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45566,7 +45544,7 @@
         </second>
       </item>
       <item>
-        <first>gmem_addr_2_fu_1354</first>
+        <first>gmem_addr_3_fu_1354</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45574,7 +45552,7 @@
         </second>
       </item>
       <item>
-        <first>gmem_addr_3_fu_1373</first>
+        <first>gmem_addr_4_fu_1373</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45582,7 +45560,7 @@
         </second>
       </item>
       <item>
-        <first>gmem_addr_4_fu_1161</first>
+        <first>gmem_addr_5_fu_1161</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45661,7 +45639,15 @@
         </second>
       </item>
       <item>
-        <first>i_1_phi_fu_509</first>
+        <first>i_1_fu_742</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>16</item>
+        </second>
+      </item>
+      <item>
+        <first>i_2_phi_fu_509</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45669,7 +45655,7 @@
         </second>
       </item>
       <item>
-        <first>i_2_cast_fu_946</first>
+        <first>i_3_cast_fu_946</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45677,7 +45663,7 @@
         </second>
       </item>
       <item>
-        <first>i_2_phi_fu_535</first>
+        <first>i_3_phi_fu_535</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45685,7 +45671,7 @@
         </second>
       </item>
       <item>
-        <first>i_3_phi_fu_657</first>
+        <first>i_4_phi_fu_657</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45693,7 +45679,7 @@
         </second>
       </item>
       <item>
-        <first>i_4_phi_fu_557</first>
+        <first>i_5_phi_fu_557</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45701,7 +45687,7 @@
         </second>
       </item>
       <item>
-        <first>i_5_cast_fu_1044</first>
+        <first>i_6_cast_fu_1044</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45709,7 +45695,7 @@
         </second>
       </item>
       <item>
-        <first>i_5_phi_fu_569</first>
+        <first>i_6_phi_fu_569</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45717,7 +45703,7 @@
         </second>
       </item>
       <item>
-        <first>i_6_phi_fu_591</first>
+        <first>i_7_phi_fu_591</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45725,7 +45711,7 @@
         </second>
       </item>
       <item>
-        <first>i_7_cast_fu_1187</first>
+        <first>i_8_cast_fu_1187</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45733,11 +45719,19 @@
         </second>
       </item>
       <item>
-        <first>i_7_phi_fu_624</first>
+        <first>i_8_phi_fu_624</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
           <item>269</item>
+        </second>
+      </item>
+      <item>
+        <first>i_cast_fu_754</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>22</item>
         </second>
       </item>
       <item>
@@ -45749,55 +45743,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln368_1_fu_963</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>117</item>
-        </second>
-      </item>
-      <item>
-        <first>icmp_ln368_2_fu_1049</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>182</item>
-        </second>
-      </item>
-      <item>
-        <first>icmp_ln368_3_fu_1061</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>190</item>
-        </second>
-      </item>
-      <item>
-        <first>icmp_ln368_4_fu_1205</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>276</item>
-        </second>
-      </item>
-      <item>
-        <first>icmp_ln368_5_fu_1217</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>284</item>
-        </second>
-      </item>
-      <item>
-        <first>icmp_ln368_fu_951</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>109</item>
-        </second>
-      </item>
-      <item>
-        <first>icmp_ln377_2_fu_1032</first>
+        <first>icmp_ln16_2_fu_1032</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45805,7 +45751,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln377_5_fu_1119</first>
+        <first>icmp_ln16_5_fu_1119</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45813,7 +45759,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln377_fu_1312</first>
+        <first>icmp_ln16_fu_1312</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45821,7 +45767,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln389_1_fu_929</first>
+        <first>icmp_ln27_1_fu_929</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45829,7 +45775,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln402_fu_748</first>
+        <first>icmp_ln40_fu_748</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45837,7 +45783,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln411_fu_913</first>
+        <first>icmp_ln49_fu_913</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45845,7 +45791,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln423_1_fu_988</first>
+        <first>icmp_ln61_1_fu_988</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45853,7 +45799,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln435_fu_1087</first>
+        <first>icmp_ln73_fu_1087</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45861,7 +45807,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln443_fu_1177</first>
+        <first>icmp_ln81_fu_1177</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45869,7 +45815,55 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln456_1_fu_1280</first>
+        <first>icmp_ln8_3_fu_963</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>117</item>
+        </second>
+      </item>
+      <item>
+        <first>icmp_ln8_4_fu_1049</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>182</item>
+        </second>
+      </item>
+      <item>
+        <first>icmp_ln8_5_fu_1061</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>190</item>
+        </second>
+      </item>
+      <item>
+        <first>icmp_ln8_6_fu_1205</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>276</item>
+        </second>
+      </item>
+      <item>
+        <first>icmp_ln8_7_fu_1217</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>284</item>
+        </second>
+      </item>
+      <item>
+        <first>icmp_ln8_fu_951</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>109</item>
+        </second>
+      </item>
+      <item>
+        <first>icmp_ln94_1_fu_1280</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45901,7 +45895,7 @@
         </second>
       </item>
       <item>
-        <first>lshr_ln411_fu_904</first>
+        <first>lshr_ln49_fu_904</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -45909,7 +45903,7 @@
         </second>
       </item>
       <item>
-        <first>or_ln404_fu_772</first>
+        <first>or_ln42_fu_772</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -46037,7 +46031,7 @@
         </second>
       </item>
       <item>
-        <first>p_cast183_fu_1301</first>
+        <first>p_cast184_fu_1301</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -46045,7 +46039,7 @@
         </second>
       </item>
       <item>
-        <first>p_cast185_fu_1021</first>
+        <first>p_cast186_fu_1021</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -46053,7 +46047,7 @@
         </second>
       </item>
       <item>
-        <first>p_cast186_fu_1108</first>
+        <first>p_cast187_fu_1108</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -46077,7 +46071,15 @@
         </second>
       </item>
       <item>
-        <first>sext_ln408_fu_823</first>
+        <first>sext_ln101_fu_1369</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>373</item>
+        </second>
+      </item>
+      <item>
+        <first>sext_ln46_fu_823</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -46085,7 +46087,7 @@
         </second>
       </item>
       <item>
-        <first>sext_ln411_fu_875</first>
+        <first>sext_ln49_fu_875</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -46093,7 +46095,7 @@
         </second>
       </item>
       <item>
-        <first>sext_ln437_1_fu_1157</first>
+        <first>sext_ln75_1_fu_1157</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -46101,7 +46103,7 @@
         </second>
       </item>
       <item>
-        <first>sext_ln437_fu_1138</first>
+        <first>sext_ln75_fu_1138</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -46109,7 +46111,7 @@
         </second>
       </item>
       <item>
-        <first>sext_ln458_1_fu_1350</first>
+        <first>sext_ln96_1_fu_1350</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -46117,19 +46119,11 @@
         </second>
       </item>
       <item>
-        <first>sext_ln458_fu_1331</first>
+        <first>sext_ln96_fu_1331</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
           <item>359</item>
-        </second>
-      </item>
-      <item>
-        <first>sext_ln463_fu_1369</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>373</item>
         </second>
       </item>
       <item>
@@ -46185,7 +46179,7 @@
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>34</item>
+          <item>33</item>
         </second>
       </item>
       <item>
@@ -46397,23 +46391,15 @@
         </second>
       </item>
       <item>
-        <first>trunc_ln403_cast_fu_754</first>
+        <first>trunc_ln41_fu_787</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>22</item>
+          <item>30</item>
         </second>
       </item>
       <item>
-        <first>trunc_ln403_fu_792</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>31</item>
-        </second>
-      </item>
-      <item>
-        <first>trunc_ln408_1_fu_814</first>
+        <first>trunc_ln46_1_fu_814</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -46421,7 +46407,7 @@
         </second>
       </item>
       <item>
-        <first>trunc_ln408_fu_849</first>
+        <first>trunc_ln46_fu_849</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -46429,7 +46415,7 @@
         </second>
       </item>
       <item>
-        <first>trunc_ln411_1_fu_856</first>
+        <first>trunc_ln49_1_fu_856</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -46437,7 +46423,7 @@
         </second>
       </item>
       <item>
-        <first>trunc_ln411_2_fu_865</first>
+        <first>trunc_ln49_2_fu_865</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -46445,19 +46431,11 @@
         </second>
       </item>
       <item>
-        <first>trunc_ln411_fu_853</first>
+        <first>trunc_ln49_fu_853</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
           <item>64</item>
-        </second>
-      </item>
-      <item>
-        <first>trunc_ln414_fu_969</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>126</item>
         </second>
       </item>
       <item>
@@ -46466,6 +46444,14 @@
           <count>1</count>
           <item_version>0</item_version>
           <item>361</item>
+        </second>
+      </item>
+      <item>
+        <first>trunc_ln52_fu_969</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>126</item>
         </second>
       </item>
       <item>
@@ -46485,7 +46471,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln371_fu_1200</first>
+        <first>zext_ln11_fu_1200</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -46493,7 +46479,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln403_1_fu_767</first>
+        <first>zext_ln41_fu_767</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -46501,15 +46487,15 @@
         </second>
       </item>
       <item>
-        <first>zext_ln403_fu_787</first>
+        <first>zext_ln43_fu_792</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>30</item>
+          <item>34</item>
         </second>
       </item>
       <item>
-        <first>zext_ln411_fu_900</first>
+        <first>zext_ln49_fu_900</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -46517,7 +46503,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln419_fu_979</first>
+        <first>zext_ln57_fu_979</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -46525,7 +46511,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln423_fu_984</first>
+        <first>zext_ln61_fu_984</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -46533,7 +46519,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln435_1_fu_1083</first>
+        <first>zext_ln73_1_fu_1083</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -46541,7 +46527,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln435_fu_1067</first>
+        <first>zext_ln73_fu_1067</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -46549,7 +46535,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln444_fu_1183</first>
+        <first>zext_ln82_fu_1183</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -46557,7 +46543,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln456_1_fu_1276</first>
+        <first>zext_ln94_1_fu_1276</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -46565,7 +46551,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln456_fu_1260</first>
+        <first>zext_ln94_fu_1260</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -46589,7 +46575,7 @@
         </second>
       </item>
       <item>
-        <first>gmem_addr_1_read_read_fu_209</first>
+        <first>gmem_addr_2_read_read_fu_209</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -47035,7 +47021,7 @@
         </second>
       </item>
       <item>
-        <first>store_ln411_store_fu_834</first>
+        <first>store_ln49_store_fu_834</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -47043,7 +47029,7 @@
         </second>
       </item>
       <item>
-        <first>store_ln411_store_fu_839</first>
+        <first>store_ln49_store_fu_839</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -47051,7 +47037,7 @@
         </second>
       </item>
       <item>
-        <first>store_ln411_store_fu_844</first>
+        <first>store_ln49_store_fu_844</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -47059,7 +47045,7 @@
         </second>
       </item>
       <item>
-        <first>store_ln447_store_fu_1239</first>
+        <first>store_ln85_store_fu_1239</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -47067,7 +47053,7 @@
         </second>
       </item>
       <item>
-        <first>store_ln447_store_fu_1244</first>
+        <first>store_ln85_store_fu_1244</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -47075,7 +47061,7 @@
         </second>
       </item>
       <item>
-        <first>store_ln458_store_fu_1249</first>
+        <first>store_ln96_store_fu_1249</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -47083,7 +47069,15 @@
         </second>
       </item>
       <item>
-        <first>write_ln437_write_fu_221</first>
+        <first>write_ln101_write_fu_253</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>376</item>
+        </second>
+      </item>
+      <item>
+        <first>write_ln75_write_fu_221</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -47091,19 +47085,11 @@
         </second>
       </item>
       <item>
-        <first>write_ln458_write_fu_237</first>
+        <first>write_ln96_write_fu_237</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
           <item>365</item>
-        </second>
-      </item>
-      <item>
-        <first>write_ln463_write_fu_253</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>376</item>
         </second>
       </item>
     </dp_fu_nodes_io>
@@ -47172,7 +47158,7 @@
         <second>
           <count>6</count>
           <item_version>0</item_version>
-          <item>33</item>
+          <item>32</item>
           <item>160</item>
           <item>160</item>
           <item>287</item>
@@ -47188,7 +47174,7 @@
         <second>
           <count>4</count>
           <item_version>0</item_version>
-          <item>32</item>
+          <item>31</item>
           <item>225</item>
           <item>225</item>
           <item>292</item>
@@ -47941,31 +47927,7 @@
       <count>88</count>
       <item_version>0</item_version>
       <item>
-        <first>add_ln368_1_reg_1598</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>184</item>
-        </second>
-      </item>
-      <item>
-        <first>add_ln368_2_reg_1689</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>278</item>
-        </second>
-      </item>
-      <item>
-        <first>add_ln368_reg_1527</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>111</item>
-        </second>
-      </item>
-      <item>
-        <first>add_ln381_1_reg_1568</first>
+        <first>add_ln20_1_reg_1568</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -47973,7 +47935,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln381_2_reg_1640</first>
+        <first>add_ln20_2_reg_1640</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -47981,7 +47943,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln381_reg_1736</first>
+        <first>add_ln20_reg_1736</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -47989,7 +47951,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln390_reg_1509</first>
+        <first>add_ln28_reg_1509</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -47997,15 +47959,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln402_reg_1398</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>16</item>
-        </second>
-      </item>
-      <item>
-        <first>add_ln411_1_reg_1702</first>
+        <first>add_ln49_1_reg_1702</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48013,7 +47967,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln411_2_reg_1467</first>
+        <first>add_ln49_2_reg_1467</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48021,7 +47975,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln423_reg_1548</first>
+        <first>add_ln61_reg_1548</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48029,7 +47983,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln435_reg_1625</first>
+        <first>add_ln73_reg_1625</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48037,7 +47991,31 @@
         </second>
       </item>
       <item>
-        <first>add_ln456_reg_1721</first>
+        <first>add_ln8_1_reg_1598</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>184</item>
+        </second>
+      </item>
+      <item>
+        <first>add_ln8_2_reg_1689</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>278</item>
+        </second>
+      </item>
+      <item>
+        <first>add_ln8_reg_1527</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>111</item>
+        </second>
+      </item>
+      <item>
+        <first>add_ln94_reg_1721</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48061,7 +48039,7 @@
         </second>
       </item>
       <item>
-        <first>empty_32_reg_494</first>
+        <first>empty_33_reg_494</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48069,7 +48047,7 @@
         </second>
       </item>
       <item>
-        <first>empty_33_reg_1406</first>
+        <first>empty_34_reg_1406</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48077,7 +48055,7 @@
         </second>
       </item>
       <item>
-        <first>gmem_addr_1_read_reg_1472</first>
+        <first>gmem_addr_2_read_reg_1472</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48085,7 +48063,7 @@
         </second>
       </item>
       <item>
-        <first>gmem_addr_1_reg_1461</first>
+        <first>gmem_addr_2_reg_1461</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48093,7 +48071,7 @@
         </second>
       </item>
       <item>
-        <first>gmem_addr_2_reg_1755</first>
+        <first>gmem_addr_3_reg_1755</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48101,7 +48079,7 @@
         </second>
       </item>
       <item>
-        <first>gmem_addr_3_reg_1766</first>
+        <first>gmem_addr_4_reg_1766</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48109,7 +48087,7 @@
         </second>
       </item>
       <item>
-        <first>gmem_addr_4_reg_1659</first>
+        <first>gmem_addr_5_reg_1659</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48125,7 +48103,15 @@
         </second>
       </item>
       <item>
-        <first>i_1_reg_505</first>
+        <first>i_1_reg_1398</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>16</item>
+        </second>
+      </item>
+      <item>
+        <first>i_2_reg_505</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48133,7 +48119,7 @@
         </second>
       </item>
       <item>
-        <first>i_2_cast_reg_1517</first>
+        <first>i_3_cast_reg_1517</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48141,7 +48127,7 @@
         </second>
       </item>
       <item>
-        <first>i_2_reg_531</first>
+        <first>i_3_reg_531</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48149,7 +48135,7 @@
         </second>
       </item>
       <item>
-        <first>i_3_reg_653</first>
+        <first>i_4_reg_653</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48157,7 +48143,7 @@
         </second>
       </item>
       <item>
-        <first>i_4_reg_553</first>
+        <first>i_5_reg_553</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48165,7 +48151,7 @@
         </second>
       </item>
       <item>
-        <first>i_5_cast_reg_1588</first>
+        <first>i_6_cast_reg_1588</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48173,7 +48159,7 @@
         </second>
       </item>
       <item>
-        <first>i_5_reg_565</first>
+        <first>i_6_reg_565</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48181,7 +48167,7 @@
         </second>
       </item>
       <item>
-        <first>i_6_reg_587</first>
+        <first>i_7_reg_587</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48189,7 +48175,7 @@
         </second>
       </item>
       <item>
-        <first>i_7_reg_620</first>
+        <first>i_8_reg_620</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48205,31 +48191,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln368_2_reg_1594</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>182</item>
-        </second>
-      </item>
-      <item>
-        <first>icmp_ln368_4_reg_1685</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>276</item>
-        </second>
-      </item>
-      <item>
-        <first>icmp_ln368_reg_1523</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>109</item>
-        </second>
-      </item>
-      <item>
-        <first>icmp_ln389_1_reg_1504</first>
+        <first>icmp_ln27_1_reg_1504</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48237,7 +48199,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln411_reg_1491</first>
+        <first>icmp_ln49_reg_1491</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48245,7 +48207,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln423_1_reg_1544</first>
+        <first>icmp_ln61_1_reg_1544</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48253,7 +48215,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln423_reg_1540</first>
+        <first>icmp_ln61_reg_1540</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48261,7 +48223,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln424_reg_1584</first>
+        <first>icmp_ln62_reg_1584</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48269,7 +48231,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln435_reg_1621</first>
+        <first>icmp_ln73_reg_1621</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48277,7 +48239,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln443_reg_1670</first>
+        <first>icmp_ln81_reg_1670</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48285,7 +48247,31 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln456_1_reg_1717</first>
+        <first>icmp_ln8_4_reg_1594</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>182</item>
+        </second>
+      </item>
+      <item>
+        <first>icmp_ln8_6_reg_1685</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>276</item>
+        </second>
+      </item>
+      <item>
+        <first>icmp_ln8_reg_1523</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>109</item>
+        </second>
+      </item>
+      <item>
+        <first>icmp_ln94_1_reg_1717</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48293,7 +48279,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln456_reg_1495</first>
+        <first>icmp_ln94_reg_1495</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48609,7 +48595,7 @@
         </second>
       </item>
       <item>
-        <first>trunc_ln408_reg_1441</first>
+        <first>trunc_ln46_reg_1441</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48617,7 +48603,7 @@
         </second>
       </item>
       <item>
-        <first>trunc_ln411_reg_1456</first>
+        <first>trunc_ln49_reg_1456</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48625,7 +48611,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln435_reg_1611</first>
+        <first>zext_ln73_reg_1611</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48633,7 +48619,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln444_reg_1674</first>
+        <first>zext_ln82_reg_1674</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48641,7 +48627,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln456_reg_1707</first>
+        <first>zext_ln94_reg_1707</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48793,7 +48779,7 @@
       <count>17</count>
       <item_version>0</item_version>
       <item>
-        <first>empty_32_reg_494</first>
+        <first>empty_33_reg_494</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48801,7 +48787,7 @@
         </second>
       </item>
       <item>
-        <first>i_1_reg_505</first>
+        <first>i_2_reg_505</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48809,7 +48795,7 @@
         </second>
       </item>
       <item>
-        <first>i_2_reg_531</first>
+        <first>i_3_reg_531</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48817,7 +48803,7 @@
         </second>
       </item>
       <item>
-        <first>i_3_reg_653</first>
+        <first>i_4_reg_653</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48825,7 +48811,7 @@
         </second>
       </item>
       <item>
-        <first>i_4_reg_553</first>
+        <first>i_5_reg_553</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48833,7 +48819,7 @@
         </second>
       </item>
       <item>
-        <first>i_5_reg_565</first>
+        <first>i_6_reg_565</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48841,7 +48827,7 @@
         </second>
       </item>
       <item>
-        <first>i_6_reg_587</first>
+        <first>i_7_reg_587</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -48849,7 +48835,7 @@
         </second>
       </item>
       <item>
-        <first>i_7_reg_620</first>
+        <first>i_8_reg_620</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -49035,14 +49021,14 @@
         </second>
       </item>
       <item>
-        <first>32</first>
+        <first>31</first>
         <second>
           <first>27</first>
           <second>136</second>
         </second>
       </item>
       <item>
-        <first>33</first>
+        <first>32</first>
         <second>
           <first>27</first>
           <second>136</second>

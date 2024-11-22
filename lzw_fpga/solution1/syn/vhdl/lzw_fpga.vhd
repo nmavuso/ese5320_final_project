@@ -96,7 +96,7 @@ end;
 architecture behav of lzw_fpga is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "lzw_fpga_lzw_fpga,hls_ip_2020_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-i,HLS_INPUT_CLOCK=6.700000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=4.891000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=4109,HLS_SYN_DSP=0,HLS_SYN_FF=4736,HLS_SYN_LUT=9907,HLS_VERSION=2020_2}";
+    "lzw_fpga_lzw_fpga,hls_ip_2020_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-i,HLS_INPUT_CLOCK=6.700000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=4.891000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=4110,HLS_SYN_DSP=0,HLS_SYN_FF=4786,HLS_SYN_LUT=10569,HLS_VERSION=2020_2}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (74 downto 0) := "000000000000000000000000000000000000000000000000000000000000000000000000001";
@@ -345,7 +345,7 @@ attribute shreg_extract of ap_rst_n_inv : signal is "no";
     signal grp_decoding_fu_116_ap_start_reg : STD_LOGIC := '0';
     signal ap_CS_fsm_state75 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state75 : signal is "none";
-    signal sext_ln530_fu_136_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal sext_ln171_fu_136_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal ap_block_state1 : BOOLEAN;
     signal trunc_ln_fu_126_p4 : STD_LOGIC_VECTOR (61 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (74 downto 0);
@@ -989,7 +989,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state1)) then
-                gmem_addr_reg_162 <= sext_ln530_fu_136_p1;
+                gmem_addr_reg_162 <= sext_ln171_fu_136_p1;
             end if;
         end if;
     end process;
@@ -1633,7 +1633,7 @@ begin
 
     grp_decoding_fu_116_ap_start <= grp_decoding_fu_116_ap_start_reg;
     grp_encoding_fu_104_ap_start <= grp_encoding_fu_104_ap_start_reg;
-        sext_ln530_fu_136_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(trunc_ln_fu_126_p4),64));
+        sext_ln171_fu_136_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(trunc_ln_fu_126_p4),64));
 
     trunc_ln_fu_126_p4 <= output_size(63 downto 2);
 end behav;

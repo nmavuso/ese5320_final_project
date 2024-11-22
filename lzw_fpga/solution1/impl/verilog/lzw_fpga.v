@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="lzw_fpga_lzw_fpga,hls_ip_2020_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-i,HLS_INPUT_CLOCK=6.700000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=4.891000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=4109,HLS_SYN_DSP=0,HLS_SYN_FF=4736,HLS_SYN_LUT=9907,HLS_VERSION=2020_2}" *)
+(* CORE_GENERATION_INFO="lzw_fpga_lzw_fpga,hls_ip_2020_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-i,HLS_INPUT_CLOCK=6.700000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=4.891000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=4110,HLS_SYN_DSP=0,HLS_SYN_FF=4786,HLS_SYN_LUT=10569,HLS_VERSION=2020_2}" *)
 
 module lzw_fpga (
         ap_clk,
@@ -383,7 +383,7 @@ reg    ap_block_state1_ignore_call17;
 wire    ap_CS_fsm_state2;
 reg    grp_decoding_fu_116_ap_start_reg;
 wire    ap_CS_fsm_state75;
-wire  signed [63:0] sext_ln530_fu_136_p1;
+wire  signed [63:0] sext_ln171_fu_136_p1;
 reg    ap_block_state1;
 wire   [61:0] trunc_ln_fu_126_p4;
 reg   [74:0] ap_NS_fsm;
@@ -730,7 +730,7 @@ end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state1)) begin
-        gmem_addr_reg_162 <= sext_ln530_fu_136_p1;
+        gmem_addr_reg_162 <= sext_ln171_fu_136_p1;
     end
 end
 
@@ -1379,7 +1379,7 @@ assign grp_decoding_fu_116_ap_start = grp_decoding_fu_116_ap_start_reg;
 
 assign grp_encoding_fu_104_ap_start = grp_encoding_fu_104_ap_start_reg;
 
-assign sext_ln530_fu_136_p1 = $signed(trunc_ln_fu_126_p4);
+assign sext_ln171_fu_136_p1 = $signed(trunc_ln_fu_126_p4);
 
 assign trunc_ln_fu_126_p4 = {{output_size[63:2]}};
 

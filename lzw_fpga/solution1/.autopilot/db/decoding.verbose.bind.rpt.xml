@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'decoding'" level="0">
-<item name = "Date">Fri Nov 15 13:33:31 2024
+<item name = "Date">Fri Nov 22 12:57:50 2024
 </item>
 <item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
 <item name = "Project">lzw_fpga</item>
@@ -31,19 +31,22 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_string_copy_1_fu_496">string_copy_1, ?, ?, ?, ?, ?, ?, none</column>
+<column name="grp_string_copy_16_fu_506">string_copy_16, 5, 2049, 33.500 ns, 13.728 us, 5, 2049, none</column>
+<column name="grp_string_copy_fu_513">string_copy, 5, 2049, 33.500 ns, 13.728 us, 5, 2049, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_472_1">257, 257, 1, 1, 1, 257, yes</column>
-<column name="- VITIS_LOOP_368_1">71, 2115, 72, 2, 1, 1 ~ 1023, yes</column>
-<column name="- VITIS_LOOP_389_1">?, ?, 2, 2, 1, ?, yes</column>
-<column name="- VITIS_LOOP_486_2">?, ?, ?, -, -, ?, no</column>
-<column name=" + VITIS_LOOP_493_3">?, ?, 2, 2, 1, ?, yes</column>
-<column name=" + VITIS_LOOP_368_1">3, 2047, 2, 2, 1, 1 ~ 1023, yes</column>
-<column name=" + VITIS_LOOP_505_4">?, ?, 72, 2, 1, ?, yes</column>
-<column name=" + VITIS_LOOP_368_1">3, 2047, 2, 2, 1, 1 ~ 1023, yes</column>
-<column name=" + VITIS_LOOP_389_1">?, ?, 2, 2, 1, ?, yes</column>
+<column name="- VITIS_LOOP_111_1">256, 256, 1, 1, 1, 256, yes</column>
+<column name="- Loop 2">1024, 1024, 1, 1, 1, 1024, yes</column>
+<column name="- VITIS_LOOP_27_1">?, ?, 2, 2, 1, ?, yes</column>
+<column name="- VITIS_LOOP_131_2">?, ?, ?, -, -, ?, no</column>
+<column name=" + VITIS_LOOP_131_2.1">1024, 1024, 1, 1, 1, 1024, yes</column>
+<column name=" + VITIS_LOOP_27_1">?, ?, 2, 2, 1, ?, yes</column>
+<column name=" + VITIS_LOOP_27_1">?, ?, 2, 2, 1, ?, yes</column>
+<column name=" + VITIS_LOOP_27_1">?, ?, 2, 2, 1, ?, yes</column>
+<column name=" + VITIS_LOOP_8_1">3, 2047, 2, 2, 1, 1 ~ 1023, yes</column>
 </table>
 </item>
 </section>

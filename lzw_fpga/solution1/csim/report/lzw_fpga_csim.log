@@ -1,6 +1,12 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-make: 'csim.exe' is up to date.
-TEST PASSED
+   Compiling ../../../../hls/lzw_hls.cpp in debug mode
+   Generating csim.exe
+Encoded Output: 73 32 65 77 32 83 258 260 262 256 258 
+Decoded Output: I AM SAM SAM I AM
+TEST PASSED: Decoded output matches the input.
+Encoded Output: 73 32 65 77 32 83 258 260 262 256 258 
+Decoded Output: I AM SAM SAM I AM
+TEST PASSED: Decoded output matches the input.
 INFO: [SIM 1] CSim done with 0 errors.
 INFO: [SIM 3] *************** CSIM finish ***************
