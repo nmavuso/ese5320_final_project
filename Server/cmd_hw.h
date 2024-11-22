@@ -25,7 +25,7 @@ typedef struct {
 } HashTable;
 
 
-uint64_t compute_hash(const unsigned char *chunk, int size);
+uint64_t compute_hash(const char *chunk, int size);
 
 void initialize_hash_table(HashTable *table);
 
@@ -35,8 +35,8 @@ void insert_hash_table(HashTable *table, uint64_t key, int *value, int size);
 
 int *lookup_hash_table(HashTable *table, uint64_t key, int *size);
 
-int deduplicate_chunks(const unsigned char *chunk, int chunk_size, HashTable *hash_table,
+int deduplicate_chunks(const char *chunk, int chunk_size, HashTable *hash_table,
                        cl::Kernel &krnl_lzw, cl::CommandQueue &q,
-                       cl::Buffer &input_buf, cl::Buffer &output_buf, cl::Buffer &output_size_buf,
-                       char *input, int *output_hw, int *output_size_hw, std::string outputFileName);
+                       cl::Buffer &input_buf, cl::Buffer &output_buf, cl::Buffer &output_size_buf, cl::Buffer &output_r_buf,
+                       char *input, int *output_hw, int *output_size_hw, char *output_r, std::string outputFileName);
 #endif 

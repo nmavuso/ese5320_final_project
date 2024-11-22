@@ -42,8 +42,8 @@ size_t getFileSize(const std::string& fileName) {
 
 int appHost(unsigned char* buffer, unsigned int length,
             cl::Kernel &krnl_lzw, cl::CommandQueue &q,
-            cl::Buffer &input_buf, cl::Buffer &output_buf, cl::Buffer &output_size_buf,
-            char *input, int *output_hw, int *output_size_hw, std::string outputFileName) {
+            cl::Buffer &input_buf, cl::Buffer &output_buf, cl::Buffer &output_size_buf, cl::Buffer &output_r_buf,
+            char *input, int *output_hw, int *output_size_hw, char *output_r, std::string outputFileName) {
     std::cout << "Encoding Working Started" << std::endl;
 
     /*************************************/
@@ -70,15 +70,15 @@ int appHost(unsigned char* buffer, unsigned int length,
     std::cout << "Starting deduplication and encoding..." << std::endl;
     for (int i = 0; i < num_chunks; ++i) {
         std::cout << "Processing chunk " << i + 1 << "..." << std::endl;
-        unsigned char* chunk_data = chunks[i].data;
+        const char* chunk_data = reinterpret_cast<const char*>(chunks[i].data);
         int chunk_size = chunks[i].size;
         std::cout << "Chunk size: " << chunk_size << std::endl;
 
         // Deduplicate chunk (conditional check done here)
         std::cout << "Before Deduplicate chunks HERE" << std::endl;
         int is_new_chunk = deduplicate_chunks(chunk_data, chunk_size, &hash_table,
-                                      krnl_lzw, q, input_buf, output_buf, output_size_buf,
-                                      input, output_hw, output_size_hw, outputFileName);
+                                      krnl_lzw, q, input_buf, output_buf, output_size_buf, output_r_buf,
+                                      input, output_hw, output_size_hw, output_r, outputFileName);
 
         std::cout << "Deduplication result for chunk " << i + 1 << ": " << is_new_chunk << std::endl;
     }
@@ -123,6 +123,17 @@ int main(int argc, char* argv[]) {
     } else {
         // Change the extension to .bin
         outputFileName = outputFileNameNotBin + ".bin";
+    }
+
+    struct stat bufferInit;
+    if (stat(outputFileName.c_str(), &bufferInit) == 0) {
+        // File exists; delete it
+        if (std::remove(outputFileName.c_str()) != 0) {
+            std::cerr << "Error: Unable to delete existing file: " << outputFileName << std::endl;
+            return 1; // Exit with an error code
+        } else {
+            std::cout << "Existing file " << outputFileName << " deleted successfully." << std::endl;
+        }
     }
 
     // Assume the binary file "lzw_hls.xclbin" is in the same directory as the executable
@@ -236,7 +247,7 @@ int main(int argc, char* argv[]) {
     length = buffer[0] | (buffer[1] << 8);
     length &= ~DONE_BIT_H;
 
-    appHost(buffer, length, krnl_lzw, q, input_buf, output_buf, output_size_buf, input_hw, output_hw, output_size_hw, outputFileName);
+    appHost(buffer, length, krnl_lzw, q, input_buf, output_buf, output_size_buf, output_r_buf, input_hw, output_hw, output_size_hw, output_r, outputFileName);
     // memcpy(&file[offset], &buffer[HEADER], length);
     // memcpy(&file[offset], output_hw, (*output_size_hw) * sizeof(int));
     // offset += (*output_size_hw) * sizeof(int);  // Update offset accordingly
