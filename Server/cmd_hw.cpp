@@ -66,19 +66,19 @@ int *lookup_hash_table(HashTable *table, uint64_t key, int *size) {
     return NULL;
 }
 
-// DELETE AFTER DEBUG FINISHES
-#include <iomanip> // For std::hex and std::setw
-void printHexDump(const char* label, const char* data, size_t size) {
-    std::cout << label << " Hexdump (size: " << size << "):" << std::endl;
-    for (size_t i = 0; i < size; ++i) {
-        // Print each byte in hex format
-        std::cout << std::hex << std::setw(2) << std::setfill('0') 
-                  << (static_cast<unsigned int>(data[i]) & 0xff) << " ";
-        if ((i + 1) % 16 == 0) { // Newline every 16 bytes for readability
-            std::cout << std::endl;
+void clean_chunk(const char* chunk, int chunk_size, char* clean_data, int& clean_size) {
+    clean_size = 0;
+
+    // Clean and filter only valid payload data
+    for (int i = 0; i < chunk_size; ++i) {
+        // Skip any unexpected values like flags or padding
+        if (chunk[i] != 0x00 && chunk[i] != 0x01 && chunk[i] != 0xC7) {
+            clean_data[clean_size++] = static_cast<char>(chunk[i]);
         }
     }
-    std::cout << std::dec << std::endl; // Reset back to decimal formatting
+
+    // Null-terminate the cleaned data
+    clean_data[clean_size] = '\0';
 }
 
 int deduplicate_chunks(const char *chunk, int chunk_size, HashTable *hash_table,
@@ -108,27 +108,19 @@ int deduplicate_chunks(const char *chunk, int chunk_size, HashTable *hash_table,
         // ----------------------
         printf("Inside the Kernel Hardware Execution...\n");
 
-        // AHMED TO DO <--- Make sure the test input loads through here
-        // Load the current chunk into the input buffer
-
         std::cout << "Chunk content (size: " << chunk_size << "): ";
         for (int i = 0; i < chunk_size; ++i) {
             std::cout << chunk[i];
         }
         std::cout << std::endl;
 
+        // Test out values in input are valid
+        char clean_data[MAX_INPUT_SIZE];
+        int clean_size;
 
-        // printHexDump("Chunk", chunk, chunk_size);
-
-        // const char *test_input = "I AM SAM SAM I AM";
-        // printHexDump("Test Input", test_input, strlen(test_input));
-
-        // strncpy(input, (const char *)chunk, MAX_INPUT_SIZE);
-        // printf("Input 1 buffer content: %s\n", input);
-
-        const char *test_input = "I AM SAM SAM I AM";
-        strncpy(input, (const char *)test_input, MAX_INPUT_SIZE);
-        // printf("Input 2 buffer content: %s\n", input);
+        // Clean and then copy the chunk data
+        clean_chunk(chunk, chunk_size, clean_data, clean_size);
+        strncpy(input, (const char *)clean_data, MAX_INPUT_SIZE);
 
         // Migrate input buffer to FPGA
         q.enqueueMigrateMemObjects({input_buf}, 0 /* Host to device */, NULL, NULL);
@@ -152,7 +144,8 @@ int deduplicate_chunks(const char *chunk, int chunk_size, HashTable *hash_table,
             printf("%d ", output_hw[j]);
         }
 
-        std::cout << "output_hw: " << output_r << std::endl;
+        // Print out decoded output:
+        // std::cout << "output_hw: " << output_r << std::endl;
 
         printf("\n");
 
