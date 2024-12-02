@@ -1,0 +1,54 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'lzw_fpga'" level="0">
+<item name = "Date">Fri Nov 29 23:45:48 2024
+</item>
+<item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
+<item name = "Project">fpga_accelerate</item>
+<item name = "Solution">solution1 (Vitis Kernel Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu3eg-sbva484-1-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">6.70 ns, 4.891 ns, 1.81 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_decoding_fu_248">decoding, ?, ?, ?, ?, ?, ?, none</column>
+<column name="grp_encoding_fu_256">encoding, ?, ?, ?, ?, ?, ?, none</column>
+<column name="grp_copy_output_code_fu_266">copy_output_code, 1, ?, 6.700 ns, ?, 1, ?, none</column>
+<column name="grp_load_input_fu_275">load_input, 1, ?, 6.700 ns, ?, 1, ?, none</column>
+<column name="grp_copy_output_fu_284">copy_output, 1, ?, 6.700 ns, ?, 1, ?, none</column>
+<column name="grp_Block_split214_proc_fu_293">Block_split214_proc, 71, 71, 0.476 us, 0.476 us, 71, 71, none</column>
+<column name="grp_store_output_fu_303">store_output, 3, 258, 20.100 ns, 1.729 us, 3, 258, none</column>
+<column name="call_ln187_lzw_fpga_entry11_fu_310">lzw_fpga_entry11, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="call_ret8_Block_split212_proc_fu_333">Block_split212_proc, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Dec  1 17:42:36 2024
+# Process ID: 26071
+# Current directory: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl
+# Command line: vivado -log vivado.log -applog -messageDb vivado.pb -mode batch -source vpl.tcl -notrace
+# Log file: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/vivado.log
+# Journal file: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/vivado.jou
+#-----------------------------------------------------------
+source vpl.tcl -notrace

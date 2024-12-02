@@ -1,0 +1,15 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../hls/Testbench.cpp in debug mode
+   Compiling ../../../../hls/lzw_hls.cpp in debug mode
+   Generating csim.exe
+Software Encoded Output: 87 89 83 42 256 71 256 258 262 262 71 
+Software Decoded Output: WYS*WYGWYS*WYSWYSG
+SOFTWARE TEST PASSED: Decoded output matches the input.
+Hardware Encoded Output: 87 89 83 42 256 71 256 258 262 262 71 
+Hardware Decoded Output: WYS*WYGWYS*WYSWYSG
+HARDWARE TEST PASSED: Decoded output matches the input.
+TEST PASSED: Software and hardware encoded outputs match.
+The maximum depth reached by any of the 3 hls::stream() instances in the design is 18
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

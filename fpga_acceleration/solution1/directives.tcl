@@ -1,7 +1,0 @@
-############################################################
-## This file is generated automatically by Vitis HLS.
-## Please DO NOT edit it.
-## Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
-############################################################
-set_directive_top -name main "lzw_fpga"
-set_directive_top -name lzw_fpga "lzw_fpga"

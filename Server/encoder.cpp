@@ -137,7 +137,7 @@ int main(int argc, char* argv[]) {
     }
 
     // Assume the binary file "lzw_hls.xclbin" is in the same directory as the executable
-    std::string binaryFile = "lzw_hls.xclbin";
+    std::string binaryFile = argv[2];
 
     // Initialize an event timer for monitoring the application
     printf("Sanity Check inside Encoder combined Host.cpp\n");
@@ -276,7 +276,7 @@ int main(int argc, char* argv[]) {
         length = buffer[0] | (buffer[1] << 8);
         length &= ~DONE_BIT_H;
 
-        // appHost(buffer, length, outfc);
+        appHost(buffer, length, krnl_lzw, q, input_buf, output_buf, output_size_buf, output_r_buf, input_hw, output_hw, output_size_hw, output_r, outputFileName);
         // memcpy(&file[offset], &buffer[HEADER], length);
 
         offset += length;
@@ -291,8 +291,8 @@ int main(int argc, char* argv[]) {
     size_t inputBytesWritten = offset;
 
     std::cout << "--------------- Compression Ratio ---------------" << std::endl;
-    if (inputBytesWritten > 0) {
-       float compressionRatio = (float)inputBytesWritten / (float)compressed_outputFileLength;
+    if (compressed_outputFileLength > 0) {
+       float compressionRatio = (float)compressed_outputFileLength/(float) inputBytesWritten;
         std::cout << "Compression Ratio: " << compressionRatio << std::endl;
     } else {
         std::cerr << "No bytes written to compressed file; compression ratio cannot be calculated." << std::endl;
@@ -363,15 +363,4 @@ int main(int argc, char* argv[]) {
 //     // Close the output file
 //     fclose(outfc);
 
-//     // ------------------------------------------------------------------------------------
-//     // For debug: Print what was written
-//     // ------------------------------------------------------------------------------------
-//     std::cout << "Sample size: " << sample_output_size_hw << std::endl;
-//     std::cout << "Sample compressed data: ";
-//     for (int i = 0; i < sample_output_size_hw; ++i) {
-//         std::cout << sample_output_hw[i] << " ";
-//     }
-//     std::cout << std::endl;
-
-//     return 0;
-// }
+//     // ---------------------------

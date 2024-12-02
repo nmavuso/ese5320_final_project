@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1732941949110">
+  <ports id="1" name="input_r" type="PortType" coreId="1998615406" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="input_size" type="PortType" coreId="49" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="output_code" type="PortType" coreId="132" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="output_size" type="PortType" coreId="1089" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="output_r" type="PortType" coreId="132" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="6" name="output_length" type="PortType" coreId="0" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="7" name="input_out" type="PortType" coreName="FIFO_SRL" coreId="26" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="8" name="input_size_out" type="PortType" coreName="FIFO_SRL" coreId="1811939472" bitwidth="32" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="9" name="input_size_out1" type="PortType" coreName="FIFO_SRL" coreId="949769552" bitwidth="32" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="10" name="output_code_out" type="PortType" coreName="FIFO_SRL" coreId="49" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="11" name="output_size_out" type="PortType" coreName="FIFO_SRL" coreId="132" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="12" name="output_out" type="PortType" coreName="FIFO_SRL" coreId="132" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="13" name="output_length_out" type="PortType" coreName="FIFO_SRL" coreId="1521" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="38" source_obj="//@ports.5" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="40" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="42" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="44" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="47" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="49" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="52" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@ports.6"/>
+  <edges id="53" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="56" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@ports.7"/>
+  <edges id="57" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="59" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@ports.8"/>
+  <edges id="60" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="62" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@ports.9"/>
+  <edges id="63" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="65" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@ports.10"/>
+  <edges id="66" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="68" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@ports.11"/>
+  <edges id="69" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="71" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@ports.12"/>
+  <edges id="72" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.12"/>
+  <blocks id="35" name="lzw_fpga.entry11" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="output_length_read" coreId="1572684299" bitwidth="64" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataInputObjs>output_length</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="output_read" coreId="1573072291" bitwidth="64" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>output_r</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="output_size_read" coreId="76903699" bitwidth="64" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataInputObjs>output_size</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="output_code_read" coreId="0" bitwidth="64" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataInputObjs>output_code</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="input_size_read" coreId="49" bitwidth="32" opcode="read" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <dataInputObjs>input_size</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="input_read" coreId="1629888624" bitwidth="64" opcode="read" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <dataInputObjs>input_r</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="input_out_write_ln0" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" opcode="write" m_display="0" m_delay="2.16" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>input_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="input_size_out_write_ln0" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" opcode="write" m_display="0" m_delay="2.16" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>input_size_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="input_size_out1_write_ln0" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" opcode="write" m_display="0" m_delay="2.16" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>input_size_out1</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="output_code_out_write_ln0" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" opcode="write" m_display="0" m_delay="2.16" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>output_code_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="output_size_out_write_ln0" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" opcode="write" m_display="0" m_delay="2.14" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>output_size_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="output_out_write_ln0" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" opcode="write" m_display="0" m_delay="2.14" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>output_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="output_length_out_write_ln0" coreName="FIFO_SRL" implIndex="srl" control="auto" opType="fifo" coreId="81" opcode="write" m_display="0" m_delay="2.14" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>output_length_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="_ln0" coreId="0" opcode="ret" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1"/>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ioNodes realName="write_ln0_write_fu_108">
+    <nodeIds>27</nodeIds>
+  </ioNodes>
+  <ioNodes realName="input_read_read_fu_78">
+    <nodeIds>20</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_132">
+    <nodeIds>33</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_100">
+    <nodeIds>25</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_124">
+    <nodeIds>31</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_116">
+    <nodeIds>29</nodeIds>
+  </ioNodes>
+  <ioNodes realName="output_length_read_read_fu_48">
+    <nodeIds>15</nodeIds>
+  </ioNodes>
+  <ioNodes realName="output_code_read_read_fu_66">
+    <nodeIds>18</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_92">
+    <nodeIds>23</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_84">
+    <nodeIds>21</nodeIds>
+  </ioNodes>
+  <ioNodes realName="input_size_read_read_fu_72">
+    <nodeIds>19</nodeIds>
+  </ioNodes>
+  <ioNodes realName="output_size_read_read_fu_60">
+    <nodeIds>17</nodeIds>
+  </ioNodes>
+  <ioNodes realName="output_read_read_fu_54">
+    <nodeIds>16</nodeIds>
+  </ioNodes>
+  <ioPorts name="input_out">
+    <contents name="write">
+      <nodeIds>21</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="input_r">
+    <contents name="read">
+      <nodeIds>20</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="input_size">
+    <contents name="read">
+      <nodeIds>19</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="input_size_out">
+    <contents name="write">
+      <nodeIds>23</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="input_size_out1">
+    <contents name="write">
+      <nodeIds>25</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_code">
+    <contents name="read">
+      <nodeIds>18</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_code_out">
+    <contents name="write">
+      <nodeIds>27</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_length">
+    <contents name="read">
+      <nodeIds>15</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_length_out">
+    <contents name="write">
+      <nodeIds>33</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_out">
+    <contents name="write">
+      <nodeIds>31</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_r">
+    <contents name="read">
+      <nodeIds>16</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_size">
+    <contents name="read">
+      <nodeIds>17</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_size_out">
+    <contents name="write">
+      <nodeIds>29</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="lzw_fpga_entry11" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>35</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

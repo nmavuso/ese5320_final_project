@@ -1,0 +1,163 @@
+
+
+================================================================
+== Vitis HLS Report for 'lzw_fpga_entry11'
+================================================================
+* Date:           Fri Nov 29 23:45:49 2024
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        fpga_accelerate
+* Solution:       solution1 (Vitis Kernel Flow Target)
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.70 ns|  2.167 ns|     1.81 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    0|    0|     none|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|      2|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     81|    -|
+|Register         |        -|    -|       3|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|       3|     83|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      432|  360|  141120|  70560|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done                  |   9|          2|    1|          2|
+    |input_out_blk_n          |   9|          2|    1|          2|
+    |input_size_out1_blk_n    |   9|          2|    1|          2|
+    |input_size_out_blk_n     |   9|          2|    1|          2|
+    |output_code_out_blk_n    |   9|          2|    1|          2|
+    |output_length_out_blk_n  |   9|          2|    1|          2|
+    |output_out_blk_n         |   9|          2|    1|          2|
+    |output_size_out_blk_n    |   9|          2|    1|          2|
+    |real_start               |   9|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  81|         18|    9|         18|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------+---+----+-----+-----------+
+    |      Name      | FF| LUT| Bits| Const Bits|
+    +----------------+---+----+-----+-----------+
+    |ap_CS_fsm       |  1|   0|    1|          0|
+    |ap_done_reg     |  1|   0|    1|          0|
+    |start_once_reg  |  1|   0|    1|          0|
+    +----------------+---+----+-----+-----------+
+    |Total           |  3|   0|    3|          0|
+    +----------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+------------+-------------------+--------------+
+|         RTL Ports        | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++--------------------------+-----+-----+------------+-------------------+--------------+
+|ap_clk                    |   in|    1|  ap_ctrl_hs|   lzw_fpga.entry11|  return value|
+|ap_rst                    |   in|    1|  ap_ctrl_hs|   lzw_fpga.entry11|  return value|
+|ap_start                  |   in|    1|  ap_ctrl_hs|   lzw_fpga.entry11|  return value|
+|start_full_n              |   in|    1|  ap_ctrl_hs|   lzw_fpga.entry11|  return value|
+|ap_done                   |  out|    1|  ap_ctrl_hs|   lzw_fpga.entry11|  return value|
+|ap_continue               |   in|    1|  ap_ctrl_hs|   lzw_fpga.entry11|  return value|
+|ap_idle                   |  out|    1|  ap_ctrl_hs|   lzw_fpga.entry11|  return value|
+|ap_ready                  |  out|    1|  ap_ctrl_hs|   lzw_fpga.entry11|  return value|
+|start_out                 |  out|    1|  ap_ctrl_hs|   lzw_fpga.entry11|  return value|
+|start_write               |  out|    1|  ap_ctrl_hs|   lzw_fpga.entry11|  return value|
+|input_r                   |   in|   64|     ap_none|            input_r|        scalar|
+|input_size                |   in|   32|     ap_none|         input_size|        scalar|
+|output_code               |   in|   64|     ap_none|        output_code|        scalar|
+|output_size               |   in|   64|     ap_none|        output_size|        scalar|
+|output_r                  |   in|   64|     ap_none|           output_r|        scalar|
+|output_length             |   in|   64|     ap_none|      output_length|        scalar|
+|input_out_din             |  out|   64|     ap_fifo|          input_out|       pointer|
+|input_out_full_n          |   in|    1|     ap_fifo|          input_out|       pointer|
+|input_out_write           |  out|    1|     ap_fifo|          input_out|       pointer|
+|input_size_out_din        |  out|   32|     ap_fifo|     input_size_out|       pointer|
+|input_size_out_full_n     |   in|    1|     ap_fifo|     input_size_out|       pointer|
+|input_size_out_write      |  out|    1|     ap_fifo|     input_size_out|       pointer|
+|input_size_out1_din       |  out|   32|     ap_fifo|    input_size_out1|       pointer|
+|input_size_out1_full_n    |   in|    1|     ap_fifo|    input_size_out1|       pointer|
+|input_size_out1_write     |  out|    1|     ap_fifo|    input_size_out1|       pointer|
+|output_code_out_din       |  out|   64|     ap_fifo|    output_code_out|       pointer|
+|output_code_out_full_n    |   in|    1|     ap_fifo|    output_code_out|       pointer|
+|output_code_out_write     |  out|    1|     ap_fifo|    output_code_out|       pointer|
+|output_size_out_din       |  out|   64|     ap_fifo|    output_size_out|       pointer|
+|output_size_out_full_n    |   in|    1|     ap_fifo|    output_size_out|       pointer|
+|output_size_out_write     |  out|    1|     ap_fifo|    output_size_out|       pointer|
+|output_out_din            |  out|   64|     ap_fifo|         output_out|       pointer|
+|output_out_full_n         |   in|    1|     ap_fifo|         output_out|       pointer|
+|output_out_write          |  out|    1|     ap_fifo|         output_out|       pointer|
+|output_length_out_din     |  out|   64|     ap_fifo|  output_length_out|       pointer|
+|output_length_out_full_n  |   in|    1|     ap_fifo|  output_length_out|       pointer|
+|output_length_out_write   |  out|    1|     ap_fifo|  output_length_out|       pointer|
++--------------------------+-----+-----+------------+-------------------+--------------+
+

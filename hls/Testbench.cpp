@@ -1,194 +1,250 @@
+// lzw_testbench.cpp
+
 #include "lzw_hls.h"
-#include <cstdint>
-#include <cstdlib>
 #include <iostream>
 #include <cstring>
-//#include <climits>
 
-#define INPUT_SIZE 1024
-#define TABLE_SIZE 4096 // Adjust as needed for your use case
+// Constants matching the hardware implementation
+#define INPUT_SIZE     256   // Maximum input size (should match lzw_hls.h)
+#define TABLE_SIZE     512   // Maximum dictionary size (should match lzw_hls.h)
+#define MAX_STACK_SIZE 16    // Maximum depth for decoding (should match lzw_hls.h)
 
-
-
-int encoding_sw(const char *s, int *output_code, int *output_size) {
-    if (!s || !output_code || !output_size) {
-        fprintf(stderr, "Invalid input to encoding function\n");
-        return -1;
-    }
-
+// Software LZW Encoding Function (mirrors hardware logic)
+void encoding_sw(
+    const char input[INPUT_SIZE],
+    int input_size,
+    int output_code[INPUT_SIZE],
+    int &output_size
+) {
     DictionaryEntry table[TABLE_SIZE];
-    int code = CHAR_MAX + 1;
-    int table_size = CHAR_MAX + 1;
 
-    // Initialize dictionary with single-character strings
-    for (int i = 0; i < CHAR_MAX; i++) {
-        table[i].str[0] = (char)i;
-        table[i].str[1] = '\0';
-        table[i].code = i;
+    int table_size = 256; // Start after single-character entries
+
+    // Initialize the dictionary with single characters
+    for (int i = 0; i < 256; i++) {
+        table[i].prefix_code = -1; // No prefix
+        table[i].character = (char)i;
     }
 
-    char p[INPUT_SIZE] = {s[0], '\0'};
+    int p = (unsigned char)input[0]; // Code of the current prefix
     int out_index = 0;
 
-    for (int i = 1; s[i] != '\0'; i++) {
-        char c[2] = {s[i], '\0'};
-        char temp[INPUT_SIZE];
-        snprintf(temp, sizeof(temp), "%s%s", p, c);
+    for (int i = 1; i < input_size; i++) {
+        char c = input[i];
 
+        // Search for (p, c) in the dictionary
         int found = -1;
-        for (int j = 0; j < table_size; j++) {
-            if (strcmp(table[j].str, temp) == 0) {
+        for (int j = 256; j < table_size; j++) {
+            if (table[j].prefix_code == p && table[j].character == c) {
                 found = j;
                 break;
             }
         }
 
         if (found != -1) {
-            strcpy(p, temp);
+            // Update p to the code of (p, c)
+            p = found;
         } else {
-            // Output the code for the current substring
-            for (int j = 0; j < table_size; j++) {
-                if (strcmp(table[j].str, p) == 0) {
-                    output_code[out_index++] = table[j].code;
+            // Output code for p
+            output_code[out_index++] = p;
+
+            // Add (p, c) to the dictionary if space is available
+            if (table_size < TABLE_SIZE) {
+                table[table_size].prefix_code = p;
+                table[table_size].character = c;
+                table_size++;
+            }
+
+            // Update p to code of c
+            p = (unsigned char)c;
+        }
+    }
+
+    // Output code for the last sequence in p
+    output_code[out_index++] = p;
+
+    output_size = out_index;
+}
+
+// Software LZW Decoding Function (mirrors hardware logic)
+void decoding_sw(
+    const int encoded_data[INPUT_SIZE],
+    int encoded_size,
+    char output[INPUT_SIZE],
+    int &output_length
+) {
+    DictionaryEntry table[TABLE_SIZE];
+
+    int table_size = 256; // Start after single-character entries
+
+    // Initialize the dictionary with single characters
+    for (int i = 0; i < 256; i++) {
+        table[i].prefix_code = -1; // No prefix
+        table[i].character = (char)i;
+    }
+
+    int out_index = 0;
+    int prev_code = encoded_data[0];
+
+    // Output the string corresponding to prev_code
+    char stack[MAX_STACK_SIZE];
+    int stack_index = 0;
+
+    // Build the string for prev_code
+    int current_code = prev_code;
+    while (current_code != -1 && stack_index < MAX_STACK_SIZE) {
+        stack[stack_index++] = table[current_code].character;
+        current_code = table[current_code].prefix_code;
+    }
+
+    // Output in reverse order
+    for (int i = stack_index - 1; i >= 0; i--) {
+        output[out_index++] = stack[i];
+    }
+
+    // Main decoding loop
+    for (int i = 1; i < encoded_size; i++) {
+        int current_code = encoded_data[i];
+        stack_index = 0;
+
+        int temp_code = current_code;
+        bool code_in_table = (current_code < table_size);
+
+        // Build the string for current_code
+        while (true) {
+            if (code_in_table) {
+                if (stack_index < MAX_STACK_SIZE) {
+                    stack[stack_index++] = table[temp_code].character;
+                    temp_code = table[temp_code].prefix_code;
+                    if (temp_code == -1) break;
+                } else {
+                    // Stack overflow protection
+                    break;
+                }
+            } else {
+                // Special case handling
+                if (stack_index < MAX_STACK_SIZE) {
+                    stack[stack_index++] = table[prev_code].character;
+                    temp_code = prev_code;
+                    code_in_table = true;
+                } else {
+                    // Stack overflow protection
                     break;
                 }
             }
-
-            // Add the new substring to the dictionary
-            if (table_size < TABLE_SIZE) {
-                strncpy(table[table_size].str, temp, sizeof(table[table_size].str) - 1);
-                table[table_size].str[sizeof(table[table_size].str) - 1] = '\0'; // Null-terminate
-                table[table_size].code = code++;
-                table_size++;
-            }
-            strcpy(p, c);
-        }
-    }
-
-    // Output the code for the last substring
-    for (int j = 0; j < table_size; j++) {
-        if (strcmp(table[j].str, p) == 0) {
-            output_code[out_index++] = table[j].code;
-            break;
-        }
-    }
-
-    *output_size = out_index;
-    return 0;
-}
-
-int decoding_sw(const int *input_code, int input_size, char *output) {
-    if (!input_code || !output || input_size <= 0) {
-        fprintf(stderr, "Invalid input to decoding function\n");
-        return -1;
-    }
-
-    DictionaryEntry table[TABLE_SIZE];
-    int table_size = CHAR_MAX + 1;
-    int code = CHAR_MAX + 1;
-
-    // Initialize the dictionary with single-character strings
-    for (int i = 0; i < CHAR_MAX; i++) {
-        table[i].str[0] = (char)i;
-        table[i].str[1] = '\0';
-        table[i].code = i;
-    }
-
-    char temp[INPUT_SIZE] = "";
-    int out_index = 0;
-
-    // Decode the first code
-    if (input_code[0] >= table_size || input_code[0] < 0) {
-        fprintf(stderr, "Invalid code in input stream\n");
-        return -1;
-    }
-
-    strcpy(temp, table[input_code[0]].str);
-    strcpy(output, temp);
-    out_index = strlen(output);
-
-    for (int i = 1; i < input_size; i++) {
-        char new_str[INPUT_SIZE] = {0};
-        int current_code = input_code[i];
-
-        if (current_code < table_size && current_code >= 0) {
-            strcpy(new_str, table[current_code].str);
-        } else if (current_code == table_size) {
-            snprintf(new_str, sizeof(new_str), "%s%c", temp, temp[0]);
-        } else {
-            fprintf(stderr, "Invalid code in input stream at position %d\n", i);
-            return -1;
         }
 
-        if (out_index + (int)strlen(new_str) >= INPUT_SIZE - 1) {
-            fprintf(stderr, "Output buffer overflow\n");
-            return -1;
+        // Output in reverse order
+        for (int j = stack_index - 1; j >= 0; j--) {
+            output[out_index++] = stack[j];
         }
 
-        strcat(output, new_str);
-        out_index += strlen(new_str);
-
+        // Add new entry to the dictionary
         if (table_size < TABLE_SIZE) {
-            snprintf(table[table_size].str, sizeof(table[table_size].str), "%s%c", temp, new_str[0]);
-            table[table_size].str[sizeof(table[table_size].str) - 1] = '\0'; // Null-terminate
-            table[table_size].code = code++;
+            table[table_size].prefix_code = prev_code;
+            table[table_size].character = stack[stack_index - 1];
             table_size++;
         }
 
-        strcpy(temp, new_str);
+        prev_code = current_code;
     }
 
-    output[out_index] = '\0';
-    return 0;
+    output_length = out_index;
 }
 
-void lzw_sw(const char *s, int *output_code, int *output_size, char *output) {
-    encoding_sw(s, output_code, output_size);
-    decoding_sw(output_code, *output_size, output);
+// Unified Software LZW Function
+void lzw_sw(
+    const char input[INPUT_SIZE],
+    int input_size,
+    int output_code[INPUT_SIZE],
+    int &output_size,
+    char output[INPUT_SIZE],
+    int &output_length
+) {
+    encoding_sw(input, input_size, output_code, output_size);
+    decoding_sw(output_code, output_size, output, output_length);
 }
 
+// Main Testbench Function
 int main() {
-    const char *Input = "I AM SAM SAM I AM";
+    // Test Input String
+    const char Input[] = "WYS*WYGWYS*WYSWYSG";
+    int input_size = strlen(Input);
 
-    const int MAX_OUTPUT_SIZE = 1024;
-    int Output_SW[MAX_OUTPUT_SIZE] = {0};
+    // Output Buffers for Software Implementation
+    int Output_SW[INPUT_SIZE] = {0};
     int output_size_sw = 0;
-    int Output_HW[MAX_OUTPUT_SIZE] = {0};
+    char decoded_sw[INPUT_SIZE] = {0};
+    int output_length_sw = 0;
+
+    // Output Buffers for Hardware Implementation
+    int Output_HW[INPUT_SIZE] = {0};
     int output_size_hw = 0;
+    char decoded_hw[INPUT_SIZE] = {0};
+    int output_length_hw = 0;
 
-    char decoded_sw[MAX_OUTPUT_SIZE] = {0};
-    char decoded_hw[MAX_OUTPUT_SIZE] = {0};
-    lzw_sw(Input, Output_SW, &output_size_sw, decoded_sw);
-    lzw_fpga(Input, Output_HW, &output_size_hw, decoded_hw);
+    // Run Software LZW Implementation
+    lzw_sw(Input, input_size, Output_SW, output_size_sw, decoded_sw, output_length_sw);
 
-    // Print the encoded and decoded results
-    std::cout << "Encoded Output: ";
+    // Run Hardware LZW Implementation
+    lzw_fpga(Input, input_size, Output_HW, &output_size_hw, decoded_hw, &output_length_hw);
+
+    // Print Software Encoded Output
+    std::cout << "Software Encoded Output: ";
     for (int i = 0; i < output_size_sw; ++i) {
         std::cout << Output_SW[i] << " ";
     }
     std::cout << std::endl;
 
-    std::cout << "Decoded Output: " << decoded_sw << std::endl;
-
-    // Verify the decoded output matches the original input
-    if (strcmp(Input, decoded_sw) == 0) {
-        std::cout << "TEST PASSED: Decoded output matches the input." << std::endl;
-    } else {
-        std::cout << "TEST FAILED: Decoded output does not match the input." << std::endl;
+    // Print Software Decoded Output
+    std::cout << "Software Decoded Output: ";
+    for (int i = 0; i < output_length_sw; ++i) {
+        std::cout << decoded_sw[i];
     }
-    // Print the encoded and decoded results
-       std::cout << "Encoded Output: ";
-       for (int i = 0; i < output_size_hw; ++i) {
-           std::cout << Output_HW[i] << " ";
-       }
-       std::cout << std::endl;
+    std::cout << std::endl;
 
-       std::cout << "Decoded Output: " << decoded_hw << std::endl;
+    // Verify Software Decoded Output Matches Input
+    if (strncmp(Input, decoded_sw, output_length_sw) == 0) {
+        std::cout << "SOFTWARE TEST PASSED: Decoded output matches the input." << std::endl;
+    } else {
+        std::cout << "SOFTWARE TEST FAILED: Decoded output does not match the input." << std::endl;
+    }
 
-    if (strcmp(Input, decoded_hw) == 0) {
-            std::cout << "TEST PASSED: Decoded output matches the input." << std::endl;
-        } else {
-            std::cout << "TEST FAILED: Decoded output does not match the input." << std::endl;
+    // Print Hardware Encoded Output
+    std::cout << "Hardware Encoded Output: ";
+    for (int i = 0; i < output_size_hw; ++i) {
+        std::cout << Output_HW[i] << " ";
+    }
+    std::cout << std::endl;
+
+    // Print Hardware Decoded Output
+    std::cout << "Hardware Decoded Output: ";
+    for (int i = 0; i < output_length_hw; ++i) {
+        std::cout << decoded_hw[i];
+    }
+    std::cout << std::endl;
+
+    // Verify Hardware Decoded Output Matches Input
+    if (strncmp(Input, decoded_hw, output_length_hw) == 0) {
+        std::cout << "HARDWARE TEST PASSED: Decoded output matches the input." << std::endl;
+    } else {
+        std::cout << "HARDWARE TEST FAILED: Decoded output does not match the input." << std::endl;
+    }
+
+    // Compare Software and Hardware Encoded Outputs
+    bool codes_match = (output_size_sw == output_size_hw);
+    for (int i = 0; i < output_size_sw && codes_match; ++i) {
+        if (Output_SW[i] != Output_HW[i]) {
+            codes_match = false;
+            break;
         }
+    }
+
+    if (codes_match) {
+        std::cout << "TEST PASSED: Software and hardware encoded outputs match." << std::endl;
+    } else {
+        std::cout << "TEST FAILED: Software and hardware encoded outputs do not match." << std::endl;
+    }
+
     return 0;
 }

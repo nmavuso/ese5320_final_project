@@ -1,6 +1,6 @@
 <ENTRY>
 {
- "thisFile": "/mnt/castor/seas_home/n/nmavuso/soc/ese5320_final_project/lzw_hls.xo.compile_summary",
+ "thisFile": "/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/lzw_hls.xo.compile_summary",
  "connectId": "",
  "serverToken": "",
  "timestamp": "0"
@@ -9,13 +9,13 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "Fri Nov 22 13:13:28 2024",
- "timestampMillis": "1732299208240",
+ "dateTimestamp": "Sat Nov 30 00:07:44 2024",
+ "timestampMillis": "1732943264481",
  "buildStep": {
-  "cmdId": "43d94d51-52db-4f20-b9cd-b6e821da7596",
+  "cmdId": "3eb750b2-d2ca-4853-b7f7-ee0805b40411",
   "name": "v++",
-  "logFile": "/mnt/castor/seas_home/n/nmavuso/soc/ese5320_final_project/_x/lzw_hls/lzw_hls.steps.log",
-  "commandLine": "/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/bin/unwrapped/lnx64.o/v++  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --target hw -k lzw_fpga --compile -Ihls --config fpga_acceleration/design.cfg -olzw_hls.xo hls/lzw_hls.cpp ",
+  "logFile": "/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/lzw_hls/lzw_hls.steps.log",
+  "commandLine": "/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/bin/unwrapped/lnx64.o/v++  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --target hw -k lzw_fpga --compile -Ihls --config fpga_accelerate/design.cfg -olzw_hls.xo hls/lzw_hls.cpp ",
   "args": [
    "--target",
    "hw",
@@ -24,27 +24,27 @@
    "--compile",
    "-Ihls",
    "--config",
-   "fpga_acceleration/design.cfg",
+   "fpga_accelerate/design.cfg",
    "-olzw_hls.xo",
    "hls/lzw_hls.cpp"
   ],
   "iniFiles": [
    {
-    "path": "/mnt/castor/seas_home/n/nmavuso/soc/ese5320_final_project/fpga_acceleration/design.cfg",
+    "path": "/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/fpga_accelerate/design.cfg",
     "content": "platform=u96v2_sbc_base\ndebug=1\nsave-temps=1\n\n[connectivity]\nnk=lzw_fpga:1:lzw_fpga_1\n"
    }
   ],
-  "cwd": "/mnt/castor/seas_home/n/nmavuso/soc/ese5320_final_project"
+  "cwd": "/mnt/castor/seas_home/n/nmavuso/ese5320_final_project"
  }
 }
 </ENTRY>
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Fri Nov 22 13:13:28 2024",
- "timestampMillis": "1732299208243",
+ "dateTimestamp": "Sat Nov 30 00:07:44 2024",
+ "timestampMillis": "1732943264485",
  "status": {
-  "cmdId": "43d94d51-52db-4f20-b9cd-b6e821da7596",
+  "cmdId": "3eb750b2-d2ca-4853-b7f7-ee0805b40411",
   "state": "CS_RUNNING"
  }
 }
@@ -52,8 +52,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "Fri Nov 22 13:13:31 2024",
- "timestampMillis": "1732299211073",
+ "dateTimestamp": "Sat Nov 30 00:07:46 2024",
+ "timestampMillis": "1732943266868",
  "buildSummary": {
   "hardwarePlatform": "u96v2_sbc_base.xpfm",
   "hardwareDsa": "u96v2_sbc_base.xsa",
@@ -67,12 +67,12 @@
     "base": {
      "type": "KERNEL",
      "name": "lzw_fpga",
-     "file": "/mnt/castor/seas_home/n/nmavuso/soc/ese5320_final_project/lzw_hls.xo",
+     "file": "/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/lzw_hls.xo",
      "reports": [],
      "uuid": ""
     },
     "sources": [
-     "/mnt/castor/seas_home/n/nmavuso/soc/ese5320_final_project/hls/lzw_hls.cpp"
+     "/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/hls/lzw_hls.cpp"
     ],
     "psSources": [],
     "cuNames": [],
@@ -88,32 +88,32 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "Fri Nov 22 13:13:31 2024",
- "timestampMillis": "1732299211093",
+ "dateTimestamp": "Sat Nov 30 00:07:47 2024",
+ "timestampMillis": "1732943267018",
  "buildStep": {
-  "cmdId": "69fde869-f91f-48eb-be9e-a085bdf44dac",
+  "cmdId": "3bc6a12c-c6cd-416c-bb36-17e2de3bd9a0",
   "name": "vitis_hls",
-  "logFile": "/mnt/castor/seas_home/n/nmavuso/soc/ese5320_final_project/_x/lzw_hls/lzw_fpga/vitis_hls.log",
-  "commandLine": "vitis_hls -f /mnt/castor/seas_home/n/nmavuso/soc/ese5320_final_project/_x/lzw_hls/lzw_fpga/lzw_fpga.tcl -messageDb vitis_hls.pb",
+  "logFile": "/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/lzw_hls/lzw_fpga/vitis_hls.log",
+  "commandLine": "vitis_hls -f /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/lzw_hls/lzw_fpga/lzw_fpga.tcl -messageDb vitis_hls.pb",
   "args": [
    "vitis_hls",
    "-f",
-   "/mnt/castor/seas_home/n/nmavuso/soc/ese5320_final_project/_x/lzw_hls/lzw_fpga/lzw_fpga.tcl",
+   "/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/lzw_hls/lzw_fpga/lzw_fpga.tcl",
    "-messageDb",
    "vitis_hls.pb"
   ],
   "iniFiles": [],
-  "cwd": "/mnt/castor/seas_home/n/nmavuso/soc/ese5320_final_project"
+  "cwd": "/mnt/castor/seas_home/n/nmavuso/ese5320_final_project"
  }
 }
 </ENTRY>
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Fri Nov 22 13:13:31 2024",
- "timestampMillis": "1732299211094",
+ "dateTimestamp": "Sat Nov 30 00:07:47 2024",
+ "timestampMillis": "1732943267019",
  "status": {
-  "cmdId": "69fde869-f91f-48eb-be9e-a085bdf44dac",
+  "cmdId": "3bc6a12c-c6cd-416c-bb36-17e2de3bd9a0",
   "state": "CS_RUNNING"
  }
 }
@@ -121,113 +121,11 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Fri Nov 22 13:15:00 2024",
- "timestampMillis": "1732299300923",
+ "dateTimestamp": "Sat Nov 30 00:08:22 2024",
+ "timestampMillis": "1732943302736",
  "status": {
-  "cmdId": "69fde869-f91f-48eb-be9e-a085bdf44dac",
-  "state": "CS_PASSED"
- }
-}
-</ENTRY>
-<ENTRY>
-{
- "type": "ET_Report",
- "dateTimestamp": "Fri Nov 22 13:15:01 2024",
- "timestampMillis": "1732299301697",
- "report": {
-  "path": "/mnt/castor/seas_home/n/nmavuso/soc/ese5320_final_project/_x/lzw_hls/lzw_fpga/lzw_fpga/solution/.autopilot/db/lzw_fpga.design.xml",
-  "name": "lzw_fpga",
-  "fileType": "XML",
-  "reportType": "KERNEL_HLS_REPORT"
- }
-}
-</ENTRY>
-<ENTRY>
-{
- "type": "ET_Report",
- "dateTimestamp": "Fri Nov 22 13:15:01 2024",
- "timestampMillis": "1732299301702",
- "report": {
-  "path": "/mnt/castor/seas_home/n/nmavuso/soc/ese5320_final_project/_x/lzw_hls/lzw_fpga/lzw_fpga/solution/.autopilot/db/.message_syn.xml",
-  "name": "lzw_fpga",
-  "fileType": "XML",
-  "reportType": "KERNEL_HLS_DRC_SYNTHESIS"
- }
-}
-</ENTRY>
-<ENTRY>
-{
- "type": "ET_Report",
- "dateTimestamp": "Fri Nov 22 13:15:01 2024",
- "timestampMillis": "1732299301739",
- "report": {
-  "path": "/mnt/castor/seas_home/n/nmavuso/soc/ese5320_final_project/_x/reports/lzw_hls/hls_reports/lzw_fpga_csynth.rpt",
-  "name": "lzw_fpga",
-  "fileType": "TEXT",
-  "reportType": "KERNEL_HLS_CSYNTH"
- }
-}
-</ENTRY>
-<ENTRY>
-{
- "type": "ET_Report",
- "dateTimestamp": "Fri Nov 22 13:15:01 2024",
- "timestampMillis": "1732299301740",
- "report": {
-  "path": "/mnt/castor/seas_home/n/nmavuso/soc/ese5320_final_project/_x/lzw_hls/lzw_fpga/lzw_fpga/solution/syn/report/lzw_fpga_csynth.xml",
-  "name": "lzw_fpga",
-  "fileType": "XML",
-  "reportType": "KERNEL_HLS_CSYNTH"
- }
-}
-</ENTRY>
-<ENTRY>
-{
- "type": "ET_Report",
- "dateTimestamp": "Fri Nov 22 13:15:01 2024",
- "timestampMillis": "1732299301762",
- "report": {
-  "path": "/mnt/castor/seas_home/n/nmavuso/soc/ese5320_final_project/_x/reports/lzw_hls/system_estimate_lzw_hls.xtxt",
-  "name": "",
-  "fileType": "TEXT",
-  "reportType": "GLOBAL_SYSTEM_ESTIMATE"
- }
-}
-</ENTRY>
-<ENTRY>
-{
- "type": "ET_Report",
- "dateTimestamp": "Fri Nov 22 13:15:02 2024",
- "timestampMillis": "1732299302626",
- "report": {
-  "path": "/mnt/castor/seas_home/n/nmavuso/soc/ese5320_final_project/_x/reports/lzw_hls/v++_compile_lzw_hls_guidance.html",
-  "name": "",
-  "fileType": "HTML",
-  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
- }
-}
-</ENTRY>
-<ENTRY>
-{
- "type": "ET_Report",
- "dateTimestamp": "Fri Nov 22 13:15:02 2024",
- "timestampMillis": "1732299302627",
- "report": {
-  "path": "/mnt/castor/seas_home/n/nmavuso/soc/ese5320_final_project/_x/v++_compile_lzw_hls_guidance.pb",
-  "name": "",
-  "fileType": "BINARY_PROTOBUF",
-  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
- }
-}
-</ENTRY>
-<ENTRY>
-{
- "type": "ET_Status",
- "dateTimestamp": "Fri Nov 22 13:15:02 2024",
- "timestampMillis": "1732299302639",
- "status": {
-  "cmdId": "43d94d51-52db-4f20-b9cd-b6e821da7596",
-  "state": "CS_PASSED"
+  "cmdId": "3bc6a12c-c6cd-416c-bb36-17e2de3bd9a0",
+  "state": "CS_FAILED"
  }
 }
 </ENTRY>

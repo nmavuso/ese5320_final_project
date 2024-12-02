@@ -1,13 +1,10 @@
-Fri Nov 22 13:15:17 2024: Server was asked to start on port: '41663'
-Fri Nov 22 13:15:17 2024: Server is using token UUID: '5323e11d-6341-43d5-bad7-03d9a2d0a6dc'
-Fri Nov 22 13:15:17 2024: Attempting to start server on port '41663'
-Fri Nov 22 13:15:17 2024: XRC main fifo: created main fifo '/tmp/xrcmain5323e11d-6341-43d5-bad7-03d9a2d0a6dc', fd read = 13
-Fri Nov 22 13:15:17 2024: Running Rule Check Server
-Fri Nov 22 13:15:17 2024: Version 1.6.1
-Fri Nov 22 13:15:17 2024: Rule Check Server: Accepted socket connection from client
-Fri Nov 22 13:15:17 2024: EXCHANGE_TOKEN received, server token: 5323e11d-6341-43d5-bad7-03d9a2d0a6dc, passed token: 5323e11d-6341-43d5-bad7-03d9a2d0a6dc
-Fri Nov 22 13:15:17 2024: SESSION_MGR: creating session with session uuid: '4a519868-4762-4a63-ba69-c8388ff0eac4' and name 'v++_link_lzw_hls'
-Fri Nov 22 13:15:21 2024: Rule Check Server: Accepted socket connection from client
-Fri Nov 22 13:15:42 2024: Exception writing guidance report: boost::filesystem::create_directory: Disk quota exceeded: "/mnt/castor/seas_home/n/nmavuso/soc/ese5320_final_project/_x/reports/link"
-Fri Nov 22 13:15:42 2024: SESSION_MGR: closing session for UUID '4a519868-4762-4a63-ba69-c8388ff0eac4' with name 'v++_link_lzw_hls'
-Fri Nov 22 13:15:42 2024: Exception writing guidance report: boost::filesystem::create_directory: Disk quota exceeded: "/mnt/castor/seas_home/n/nmavuso/soc/ese5320_final_project/_x/reports/link"
+Sun Dec  1 17:56:55 2024: Server was asked to start on port: '33637'
+Sun Dec  1 17:56:55 2024: Server is using token UUID: 'c98a43ad-c63b-4edf-8963-625b7935f3c5'
+Sun Dec  1 17:56:55 2024: Attempting to start server on port '33637'
+Sun Dec  1 17:56:55 2024: XRC main fifo: created main fifo '/tmp/xrcmainc98a43ad-c63b-4edf-8963-625b7935f3c5', fd read = 13
+Sun Dec  1 17:56:55 2024: Running Rule Check Server
+Sun Dec  1 17:56:55 2024: Version 1.6.1
+Sun Dec  1 17:56:55 2024: Rule Check Server: Accepted socket connection from client
+Sun Dec  1 17:56:55 2024: EXCHANGE_TOKEN received, server token: c98a43ad-c63b-4edf-8963-625b7935f3c5, passed token: c98a43ad-c63b-4edf-8963-625b7935f3c5
+Sun Dec  1 17:56:55 2024: SESSION_MGR: creating session with session uuid: 'bea23c67-c99c-4a17-9e40-c1f20f39841c' and name 'v++_package_a'
+Sun Dec  1 17:59:04 2024: SESSION_MGR: closing session for UUID 'bea23c67-c99c-4a17-9e40-c1f20f39841c' with name 'v++_package_a'

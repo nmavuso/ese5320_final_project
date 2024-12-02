@@ -1,0 +1,42 @@
+{
+    "schema_version": {
+        "major": "1",
+        "minor": "0",
+        "patch": "0"
+    },
+    "design_state": "Fully Placed",
+    "user_budget": {
+        "actual_resources": {
+            "LUT": "6723",
+            "LUTAsMem": "1888",
+            "REG": "6839",
+            "BRAM": "3",
+            "DSP": "0"
+        },
+        "supply_resources": {
+            "LUT": "52321",
+            "LUTAsMem": "27142",
+            "REG": "119228",
+            "BRAM": "198",
+            "DSP": "360"
+        }
+    },
+    "kernels": [
+        {
+            "name": "lzw_fpga",
+            "compute_unit_count": "1",
+            "compute_units": [
+                {
+                    "cu_name": "lzw_fpga_1",
+                    "actual_resources": {
+                        "LUT": "6723",
+                        "LUTAsMem": "1888",
+                        "REG": "6839",
+                        "BRAM": "3",
+                        "DSP": "0"
+                    }
+                }
+            ]
+        }
+    ]
+}

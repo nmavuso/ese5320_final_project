@@ -1,0 +1,48 @@
+{
+    "Used Resources": [
+        {
+            "ip_instance": "u96v2_sbc_base_lzw_fpga_1_0",
+            "resources": [
+                {
+                    "LUT": "7064"
+                },
+                {
+                    "LUTAsLogic": "5006"
+                },
+                {
+                    "LUTAsMem": "2058"
+                },
+                {
+                    "REG": "6838"
+                },
+                {
+                    "CARRY8": "222"
+                },
+                {
+                    "F7MUX": "720"
+                },
+                {
+                    "F8MUX": "18"
+                },
+                {
+                    "F9MUX": "0"
+                },
+                {
+                    "BRAM": "3"
+                },
+                {
+                    "DSP": "0"
+                },
+                {
+                    "GLOBAL_CLOCK_BUFFERS": "0"
+                },
+                {
+                    "PLL": "0"
+                },
+                {
+                    "MMCM": "0"
+                }
+            ]
+        }
+    ]
+}

@@ -19,7 +19,7 @@ help:
 	@echo "  	Command to build the FPGA binary (kernel.xclbin)."
 	@echo ""
 	@echo "  make host"
-	@echo "  	Command to build Host.cpp with lzw_hls.xclbin"
+	@echo "  	Command to build Host.cpp with lzw_hls.xclbin --> why are we building lzw_hls.xclbin??" 
 	@echo ""
 	@echo "  make clean"
 	@echo "  	Command to remove the generated files."
@@ -44,8 +44,8 @@ LDFLAGS += -lxilinxopencl -lpthread -lrt -ldl -lcrypt -lstdc++ -L$(VITIS_PLATFOR
 VPP_OPTS = --target hw
 
 # OpenCL kernel files
-XO := lzw_hls.xo
-XCLBIN := lzw_hls.xclbin
+XO := lzw_fpga.xo
+XCLBIN := lzw_fpga.xclbin
 ALL_MESSAGE_FILES = $(subst .xo,.mdb,$(XO)) $(subst .xclbin,.mdb,$(XCLBIN))
 
 # Host files
@@ -55,14 +55,14 @@ CLIENT_EXE = client
 SERVER_SOURCES = Server/encoder.cpp Server/server.cpp Server/cdc_hw.cpp Server/cmd_hw.cpp hls/lzw_hls.cpp Server/sha3.cpp ./common/Utilities.cpp ./common/EventTimer.cpp
 SERVER_OBJECTS = $(SERVER_SOURCES:.cpp=.o)
 SERVER_EXE = encoder
-
+ 
 DECODER_SOURCES = Decoder/Decoder.cpp
 DECODER_OBJECTS = $(DECODER_SOURCES:.cpp=.o)
 DECODER_EXE = decoder
 
 # Host files
 # Host files
-HOST_SOURCES = ./package/sd_card/Host.cpp ./common/Utilities.cpp ./common/EventTimer.cpp hls/lzw_hls.cpp
+HOST_SOURCES = ./fpga_accelerate/Host.cpp ./common/Utilities.cpp ./common/EventTimer.cpp hls/lzw_hls.cpp
 HOST_OBJECTS = $(HOST_SOURCES:.cpp=.o)
 HOST_EXE = host
 
@@ -79,9 +79,10 @@ $(SHA_EXE): $(SHA_OBJECTS)
 
 # Host executable target
 $(HOST_EXE): $(HOST_OBJECTS)
-	$(HOST_CXX) -o "$@" $(HOST_OBJECTS) $(LDFLAGS)
-	@mkdir -p package/sd_card
-	@cp $(HOST_EXE) package/sd_card/
+	$(HOST_CXX) -o "$@" $(+) $(LDFLAGS)
+#	$(HOST_CXX) -o "$@" $(HOST_OBJECTS) $(LDFLAGS)
+#	@mkdir -p package/sd_card
+#	@cp $(HOST_EXE) package/sd_card/
 
 %.o: %.cpp
 	$(HOST_CXX) $(CXXFLAGS) -c -I./common -I./hls -o"$@" "$<"
@@ -111,25 +112,25 @@ fpga: package/sd_card.img
 
 $(XO): hls/lzw_hls.cpp
 	-@$(RM) $@
-	$(VPP) $(VPP_OPTS) -k lzw_fpga --compile -I"$(<D)" --config fpga_acceleration/design.cfg -o"$@" "$<"
+	$(VPP) $(VPP_OPTS) -k lzw_fpga --compile -I"$(<D)" --config fpga_accelerate/design.cfg -o"$@" "$<"
 
 $(XCLBIN): $(XO)
-	$(VPP) $(VPP_OPTS) --link --config fpga_acceleration/design.cfg -o"$@" $(+)
+	$(VPP) $(VPP_OPTS) --link --config fpga_accelerate/design.cfg -o"$@" $(+)
 
-package/sd_card.img: $(SERVER_EXE) $(XCLBIN) ./fpga_acceleration/xrt.ini
-	$(VPP) --package $(VPP_OPTS) --config fpga_acceleration/package.cfg $(XCLBIN) \
+package/sd_card.img: $(SERVER_EXE) $(XCLBIN) ./fpga_accelerate/xrt.ini
+	$(VPP) --package $(VPP_OPTS) --config fpga_accelerate/package.cfg $(XCLBIN) \
     	--package.out_dir package \
     	--package.sd_file $(SERVER_EXE) \
     	--package.kernel_image $(PLATFORM_REPO_PATHS)/sw/$(VITIS_PLATFORM)/PetaLinux/image/image.ub \
     	--package.rootfs $(PLATFORM_REPO_PATHS)/sw/$(VITIS_PLATFORM)/PetaLinux/rootfs/rootfs.ext4 \
     	--package.sd_file $(XCLBIN) \
-    	--package.sd_file ./fpga_acceleration/xrt.ini
+    	--package.sd_file ./fpga_accelerate/xrt.ini
 
 # Clean commands
 .NOTPARALLEL: clean
 clean:
 	-$(RM) $(SERVER_EXE) $(SERVER_OBJECTS) $(DECODER_EXE) $(DECODER_OBJECTS) $(CLIENT_EXE)
-	-$(RM) $(XCLBIN) $(XO) $(ALL_MESSAGE_FILES)
+#	-$(RM) $(XCLBIN) $(XO) $(ALL_MESSAGE_FILES)
 	-${RMDIR} package package.build .Xil fpga/hls/proj_kernel
 	-${RMDIR} _x .ipcache
 
@@ -137,7 +138,7 @@ clean:
 TESTBENCH_SOURCES = hls/lzw_hls.cpp hls/Testbench.cpp
 TESTBENCH_EXE = lzw_hls_testbench
 
-.PHONY: lzw_hls
+.PHONY: fpga_accelerate
 lzw_hls: $(TESTBENCH_EXE)
 
 $(TESTBENCH_EXE): $(TESTBENCH_SOURCES)

@@ -1,0 +1,66 @@
+===============================================================================
+Version:    v++ v2020.2 (64-bit)
+Build:      SW Build (by xbuild) on 2020-11-18-05:13:29
+Copyright:  Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+Created:    Sun Dec  1 17:56:42 2024
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             lzw_fpga
+Target Device:           avnet.com:u96v2_sbc_base:u96v2_sbc_base:1.0
+Target Clock:            150.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library  Compute Units
+-----------  ----  ------------------  --------------  -------------
+lzw_fpga     c     fpga0:OCL_REGION_0  lzw_fpga        1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     lzw_fpga
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name          Target Frequency  Estimated Frequency
+------------  -----------  -------------------  ----------------  -------------------
+lzw_fpga_1    lzw_fpga     lzw_fpga_entry11     149.253738        461.467468
+lzw_fpga_1    lzw_fpga     load_input           149.253738        204.457169
+lzw_fpga_1    lzw_fpga     encoding             149.253738        296.735901
+lzw_fpga_1    lzw_fpga     decoding             149.253738        230.733734
+lzw_fpga_1    lzw_fpga     store_output         149.253738        277.161865
+lzw_fpga_1    lzw_fpga     copy_output_code     149.253738        204.457169
+lzw_fpga_1    lzw_fpga     Block_split212_proc  149.253738        461.467468
+lzw_fpga_1    lzw_fpga     copy_output          149.253738        204.457169
+lzw_fpga_1    lzw_fpga     Block_split214_proc  149.253738        204.457169
+lzw_fpga_1    lzw_fpga     lzw_fpga             149.253738        204.457169
+
+Latency Information
+Compute Unit  Kernel Name  Module Name          Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+------------  -----------  -------------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+lzw_fpga_1    lzw_fpga     lzw_fpga_entry11     0               0              0             0               0 ns             0 ns            0 ns
+lzw_fpga_1    lzw_fpga     load_input           1 ~ -1          1              undef         undef           6.700 ns         undef           undef
+lzw_fpga_1    lzw_fpga     encoding             undef           undef          undef         undef           undef            undef           undef
+lzw_fpga_1    lzw_fpga     decoding             undef           undef          undef         undef           undef            undef           undef
+lzw_fpga_1    lzw_fpga     store_output         3 ~ 258         3              130           258             20.100 ns        0.871 us        1.729 us
+lzw_fpga_1    lzw_fpga     copy_output_code     1 ~ -1          1              undef         undef           6.700 ns         undef           undef
+lzw_fpga_1    lzw_fpga     Block_split212_proc  0               0              0             0               0 ns             0 ns            0 ns
+lzw_fpga_1    lzw_fpga     copy_output          1 ~ -1          1              undef         undef           6.700 ns         undef           undef
+lzw_fpga_1    lzw_fpga     Block_split214_proc  71              71             71            71              0.476 us         0.476 us        0.476 us
+lzw_fpga_1    lzw_fpga     lzw_fpga             undef           undef          undef         undef           undef            undef           undef
+
+Area Information
+Compute Unit  Kernel Name  Module Name          FF    LUT    DSP  BRAM  URAM
+------------  -----------  -------------------  ----  -----  ---  ----  ----
+lzw_fpga_1    lzw_fpga     lzw_fpga_entry11     3     83     0    0     0
+lzw_fpga_1    lzw_fpga     load_input           245   559    0    0     0
+lzw_fpga_1    lzw_fpga     encoding             260   847    0    8     0
+lzw_fpga_1    lzw_fpga     decoding             1047  3124   0    8     0
+lzw_fpga_1    lzw_fpga     store_output         23    100    0    0     0
+lzw_fpga_1    lzw_fpga     copy_output_code     268   536    0    0     0
+lzw_fpga_1    lzw_fpga     Block_split212_proc  20    38     0    0     0
+lzw_fpga_1    lzw_fpga     copy_output          168   488    0    0     0
+lzw_fpga_1    lzw_fpga     Block_split214_proc  233   472    0    0     0
+lzw_fpga_1    lzw_fpga     lzw_fpga             6402  10684  0    26    0
+-------------------------------------------------------------------------------
