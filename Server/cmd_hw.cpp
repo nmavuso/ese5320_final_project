@@ -130,6 +130,8 @@ int deduplicate_chunks(const char *chunk, int chunk_size, HashTable *hash_table,
         printf("KRNL 1...\n");
         // krnl_lzw.setArg(1, clean_size);
 
+        lzw_sw(input_hw, clean_size, output_code, output_size, output, output_length)
+
         // Migrate input buffer to FPGA
         printf("KRNL 2...\n");
         q.enqueueMigrateMemObjects({input_buf}, 0 /* Host to device */, NULL, NULL);

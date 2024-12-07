@@ -1,15 +1,15 @@
 #define INPUT_SIZE 256   // Maximum input size
 #define OUTPUT_SIZE 512  // Maximum output size
 
-// Error-checking macro with debugging messages
-inline void CHECK_ERROR(cl_int err, const char* msg) {
-    if (err != CL_SUCCESS) {
-        std::cerr << "ERROR: " << msg << " (" << err << ")" << std::endl;
-        exit(EXIT_FAILURE);
-    } else {
-        std::cout << "DEBUG: " << msg << " succeeded." << std::endl;
-    }
-}
+// // Error-checking macro with debugging messages
+// inline void CHECK_ERROR(cl_int err, const char* msg) {
+//     if (err != CL_SUCCESS) {
+//         std::cerr << "ERROR: " << msg << " (" << err << ")" << std::endl;
+//         exit(EXIT_FAILURE);
+//     } else {
+//         std::cout << "DEBUG: " << msg << " succeeded." << std::endl;
+//     }
+// }
 
 void encoding_sw(
     const char input[INPUT_SIZE],

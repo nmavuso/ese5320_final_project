@@ -12,6 +12,7 @@
 #include <sys/mman.h>
 #include "stopwatch.h"
 #include "lzw_hls.h"
+#include "lzw_hw.h"
 #include "cdc_hw.h"
 #include "cmd_hw.h"
 #include "Utilities.h"

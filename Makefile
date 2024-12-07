@@ -49,7 +49,7 @@ ALL_MESSAGE_FILES = $(subst .xo,.mdb,$(XO)) $(subst .xclbin,.mdb,$(XCLBIN))
 CLIENT_SOURCES = Client/client.cpp
 CLIENT_EXE = client
 
-SERVER_SOURCES = Server/encoder.cpp Server/server.cpp Server/cdc_hw.cpp Server/cmd_hw.cpp hls/lzw_hls.cpp Server/sha3.cpp ./common/Utilities.cpp ./common/EventTimer.cpp
+SERVER_SOURCES = Server/encoder.cpp Server/server.cpp Server/lzw_hw.cpp Server/cdc_hw.cpp Server/cmd_hw.cpp hls/lzw_hls.cpp Server/sha3.cpp ./common/Utilities.cpp ./common/EventTimer.cpp
 SERVER_OBJECTS = $(SERVER_SOURCES:.cpp=.o)
 SERVER_EXE = encoder
  
