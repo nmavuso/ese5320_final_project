@@ -81,10 +81,7 @@ void clean_chunk(const char* chunk, int chunk_size, char* clean_data, int& clean
     clean_data[clean_size] = '\0';
 }
 
-int deduplicate_chunks(const char *chunk, int chunk_size, HashTable *hash_table,
-                       cl::Kernel &krnl_lzw, cl::CommandQueue &q,
-                       cl::Buffer &input_buf, cl::Buffer &output_buf, cl::Buffer &output_size_buf, cl::Buffer &output_r_buf,
-                       char *input, int *output_hw, int *output_size_hw, char *output_r, std::string outputFileName) {
+int deduplicate_chunks(const char *chunk, int chunk_size, HashTable *hash_table, cl::Kernel &krnl_lzw, cl::CommandQueue &q, cl::Buffer &input_buf, cl::Buffer &output_code_buf, cl::Buffer &output_size_buf, cl::Buffer &output_buf, cl:: Buffer &output_length_buf, char *input_hw, int *output_code, int *output_size, char *output, int *output_length, std::string outputFileName){
     if (hash_table == NULL) {
         fprintf(stderr, "Hash table is not initialized\n");
         return -1;
@@ -118,30 +115,45 @@ int deduplicate_chunks(const char *chunk, int chunk_size, HashTable *hash_table,
         char clean_data[MAX_INPUT_SIZE];
         int clean_size;
 
-        // Clean and then copy the chunk data
+        // Clean and then copy the chunk data into the input hardware array that then gets sent to the FPGA
         clean_chunk(chunk, chunk_size, clean_data, clean_size);
-        strncpy(input, (const char *)clean_data, MAX_INPUT_SIZE);
+        strncpy(input_hw, (const char *)clean_data, MAX_INPUT_SIZE);
+
+        std::cout << "Cleaned Data: ";
+        for (int i = 0; i < clean_size; ++i) {
+            std::cout << input_hw[i];
+        }
+        std::cout << std::endl;
+
+        // Set the input_size argument
+        std::cerr << clean_size << std::endl;
+        printf("KRNL 1...\n");
+        // krnl_lzw.setArg(1, clean_size);
 
         // Migrate input buffer to FPGA
+        printf("KRNL 2...\n");
         q.enqueueMigrateMemObjects({input_buf}, 0 /* Host to device */, NULL, NULL);
+        printf("KRNL 3...\n");
         q.finish();
 
         // Launch the FPGA kernel
         q.enqueueTask(krnl_lzw, NULL, NULL);
+        printf("KRNL 4...\n");
         q.finish();
 
         // Migrate output buffer back to host
-        q.enqueueMigrateMemObjects({output_buf, output_size_buf, output_r_buf}, CL_MIGRATE_MEM_OBJECT_HOST);
+        printf("KRNL 5...\n");
+        q.enqueueMigrateMemObjects({output_code_buf, output_size_buf, output_buf, output_length_buf}, CL_MIGRATE_MEM_OBJECT_HOST);
         q.finish();
 
         // Retrieve encoded data
-        int encoded_size = *output_size_hw;
+        int encoded_size = *output_length;
         printf("Encoded Size: %d\n", encoded_size);
 
         // Print encoded data for debugging
         printf("Encoded Chunk FPGA: ");
         for (int j = 0; j < encoded_size; ++j) {
-            printf("%d ", output_hw[j]);
+            printf("%d ", output[j]);
         }
 
         // Print out decoded output:
@@ -161,7 +173,7 @@ int deduplicate_chunks(const char *chunk, int chunk_size, HashTable *hash_table,
             return 1; // Exit with an error code
         }
 
-        size_t written_data = fwrite(output_hw, sizeof(int), encoded_size, outfc);
+        size_t written_data = fwrite(output, sizeof(int), encoded_size, outfc);
         if (written_data != (size_t)encoded_size) {
             std::cerr << "Error: Failed to write encoded data to file." << std::endl;
         }
@@ -182,7 +194,7 @@ int deduplicate_chunks(const char *chunk, int chunk_size, HashTable *hash_table,
         }
 
         // Copy encoded data to storage
-        memcpy(encoding_storage[chunk_hash], output_hw, encoded_size * sizeof(int));
+        memcpy(encoding_storage[chunk_hash], output, encoded_size * sizeof(int));
         printf("Storing encoded data for hash: %lu\n", chunk_hash);
 
         // Insert into hash table

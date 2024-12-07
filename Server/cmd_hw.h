@@ -35,8 +35,6 @@ void insert_hash_table(HashTable *table, uint64_t key, int *value, int size);
 
 int *lookup_hash_table(HashTable *table, uint64_t key, int *size);
 
-int deduplicate_chunks(const char *chunk, int chunk_size, HashTable *hash_table,
-                       cl::Kernel &krnl_lzw, cl::CommandQueue &q,
-                       cl::Buffer &input_buf, cl::Buffer &output_buf, cl::Buffer &output_size_buf, cl::Buffer &output_r_buf,
-                       char *input, int *output_hw, int *output_size_hw, char *output_r, std::string outputFileName);
+int deduplicate_chunks(const char *chunk, int chunk_size, HashTable *hash_table, cl::Kernel &krnl_lzw, cl::CommandQueue &q, cl::Buffer &input_buf, cl::Buffer &output_code_buf, cl::Buffer &output_size_buf, cl::Buffer &output_buf, cl:: Buffer &output_length_buf, char *input_hw, int *output_code, int *output_size, char *output, int *output_length, std::string outputFileName);
+
 #endif 

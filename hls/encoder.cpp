@@ -147,10 +147,14 @@ void handle_input(int argc, char* argv[], int& blocksize) {
 }
 
 int main(int argc, char* argv[]) {
+    std::cerr << "Hello 1" << std::endl;
+
     if (argc <= 1) {
         std::cerr << "Error: No output file name provided. Please specify the output file name." << std::endl;
         return 1;
     }
+
+    std::cerr << "Hello 2" << std::endl;
 
     std::string outputFileName = argv[1];
     if (outputFileName.size() < 4 || outputFileName.substr(outputFileName.size() - 4) != ".bin") {
@@ -164,6 +168,8 @@ int main(int argc, char* argv[]) {
     }
 
     // OpenCL initialization
+    std::cerr << "Hello 3" << std::endl;
+
     cl_int err;
     std::vector<cl::Device> devices = get_xilinx_devices();
     if (devices.empty()) {
@@ -174,6 +180,8 @@ int main(int argc, char* argv[]) {
     cl::Context context(device, nullptr, nullptr, nullptr, &err);
 
     // Read the binary file and create a program
+    std::cerr << "Hello 4" << std::endl;
+
     std::string binaryFile = "lzw_hls.xclbin";
     unsigned fileBufSize;
     char* fileBuf = read_binary_file(binaryFile, fileBufSize);

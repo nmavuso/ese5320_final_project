@@ -16,6 +16,7 @@
 #include "cmd_hw.h"
 #include "Utilities.h"
 #include <sys/stat.h> // Fallback for older compilers
+#include <cstring>     // For memset, if needed
 
 #define NUM_PACKETS 8
 #define PIPE_DEPTH 4
@@ -42,8 +43,8 @@ size_t getFileSize(const std::string& fileName) {
 
 int appHost(unsigned char* buffer, unsigned int length,
             cl::Kernel &krnl_lzw, cl::CommandQueue &q,
-            cl::Buffer &input_buf, cl::Buffer &output_buf, cl::Buffer &output_size_buf, cl::Buffer &output_r_buf,
-            char *input, int *output_hw, int *output_size_hw, char *output_r, std::string outputFileName) {
+            cl::Buffer &input_buf, cl::Buffer &output_code_buf, cl::Buffer &output_size_buf, cl::Buffer &output_buf,cl::Buffer &output_length_buf,
+            char *input_hw, int *output_code_hw, int *output_size_hw, char *output_hw, int *output_length_hw, std::string outputFileName) {
     std::cout << "Encoding Working Started" << std::endl;
 
     /*************************************/
@@ -76,9 +77,7 @@ int appHost(unsigned char* buffer, unsigned int length,
 
         // Deduplicate chunk (conditional check done here)
         std::cout << "Before Deduplicate chunks HERE" << std::endl;
-        int is_new_chunk = deduplicate_chunks(chunk_data, chunk_size, &hash_table,
-                                      krnl_lzw, q, input_buf, output_buf, output_size_buf, output_r_buf,
-                                      input, output_hw, output_size_hw, output_r, outputFileName);
+        int is_new_chunk = deduplicate_chunks(chunk_data, chunk_size, &hash_table, krnl_lzw, q, input_buf, output_buf, output_size_buf, output_buf, output_length_buf, input_hw, output_code_hw, output_size_hw, output_hw, output_length_hw, outputFileName);
 
         std::cout << "Deduplication result for chunk " << i + 1 << ": " << is_new_chunk << std::endl;
     }
@@ -137,7 +136,7 @@ int main(int argc, char* argv[]) {
     }
 
     // Assume the binary file "lzw_hls.xclbin" is in the same directory as the executable
-    std::string binaryFile = argv[2];
+    std::string binaryFile = "lzw_fpga.xclbin";
 
     // Initialize an event timer for monitoring the application
     printf("Sanity Check inside Encoder combined Host.cpp\n");
@@ -178,23 +177,27 @@ int main(int argc, char* argv[]) {
     // ------------------------------------------------------------------------------------
     // Create buffers for input and output
     cl::Buffer input_buf(context, CL_MEM_ALLOC_HOST_PTR | CL_MEM_READ_ONLY, sizeof(char) * MAX_INPUT_SIZE, NULL, &err);
-    cl::Buffer output_buf(context, CL_MEM_ALLOC_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(int) * MAX_OUTPUT_SIZE, NULL, &err);
+    cl::Buffer output_code_buf(context, CL_MEM_ALLOC_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(int) * MAX_INPUT_SIZE, NULL, &err);
     cl::Buffer output_size_buf(context, CL_MEM_ALLOC_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(int), NULL, &err);
-    cl::Buffer output_r_buf(context, CL_MEM_ALLOC_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(char) * MAX_OUTPUT_SIZE, NULL, &err);
+    cl::Buffer output_buf(context, CL_MEM_ALLOC_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(char) * MAX_INPUT_SIZE, NULL, &err);
+    cl::Buffer output_length_buf(context, CL_MEM_ALLOC_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(int), NULL, &err);
 
     // Map buffers to host pointers
     char *input_hw = (char *)q.enqueueMapBuffer(input_buf, CL_TRUE, CL_MAP_WRITE, 0, sizeof(char) * MAX_INPUT_SIZE);
-    int *output_hw = (int *)q.enqueueMapBuffer(output_buf, CL_TRUE, CL_MAP_READ, 0, sizeof(int) * MAX_OUTPUT_SIZE);
+    int *output_code_hw = (int *)q.enqueueMapBuffer(output_code_buf, CL_TRUE, CL_MAP_READ, 0, sizeof(int) * MAX_INPUT_SIZE);
+    char *output_hw = (char *)q.enqueueMapBuffer(output_buf, CL_TRUE, CL_MAP_READ, 0, sizeof(char) * MAX_INPUT_SIZE);
     int *output_size_hw = (int *)q.enqueueMapBuffer(output_size_buf, CL_TRUE, CL_MAP_READ, 0, sizeof(int));
-    char *output_r = (char *)q.enqueueMapBuffer(output_r_buf, CL_TRUE, CL_MAP_READ, 0, sizeof(char) * MAX_OUTPUT_SIZE);
+    int *output_length_hw = (int *)q.enqueueMapBuffer(output_length_buf, CL_TRUE, CL_MAP_READ, 0, sizeof(int));
 
     // ------------------------------------------------------------------------------------
     // Step 3: Set Kernel Arguments
     // ------------------------------------------------------------------------------------
     krnl_lzw.setArg(0, input_buf);
-    krnl_lzw.setArg(1, output_buf);
-    krnl_lzw.setArg(2, output_size_buf);
-    krnl_lzw.setArg(3, output_r_buf);
+    // set Argument 1 of input size gets set in the 
+    krnl_lzw.setArg(2, output_code_buf);
+    krnl_lzw.setArg(3, output_size_buf);
+    krnl_lzw.setArg(4, output_buf);
+    krnl_lzw.setArg(5, output_length_buf);
 
     // ------------------------------------------------------------------------------------
     // Ethernet Setup
@@ -247,7 +250,7 @@ int main(int argc, char* argv[]) {
     length = buffer[0] | (buffer[1] << 8);
     length &= ~DONE_BIT_H;
 
-    appHost(buffer, length, krnl_lzw, q, input_buf, output_buf, output_size_buf, output_r_buf, input_hw, output_hw, output_size_hw, output_r, outputFileName);
+    appHost(buffer, length, krnl_lzw, q, input_buf, output_code_buf, output_size_buf, output_buf, output_length_buf, input_hw, output_code_hw, output_size_hw, output_hw, output_length_hw, outputFileName);
     // memcpy(&file[offset], &buffer[HEADER], length);
     // memcpy(&file[offset], output_hw, (*output_size_hw) * sizeof(int));
     // offset += (*output_size_hw) * sizeof(int);  // Update offset accordingly
@@ -276,7 +279,7 @@ int main(int argc, char* argv[]) {
         length = buffer[0] | (buffer[1] << 8);
         length &= ~DONE_BIT_H;
 
-        appHost(buffer, length, krnl_lzw, q, input_buf, output_buf, output_size_buf, output_r_buf, input_hw, output_hw, output_size_hw, output_r, outputFileName);
+        appHost(buffer, length, krnl_lzw, q, input_buf, output_code_buf, output_size_buf, output_buf, output_length_buf, input_hw, output_code_hw, output_size_hw, output_hw, output_length_hw, outputFileName);
         // memcpy(&file[offset], &buffer[HEADER], length);
 
         offset += length;
@@ -312,9 +315,12 @@ int main(int argc, char* argv[]) {
 
     delete[] fileBuf; // Free the binary file buffer
     q.enqueueUnmapMemObject(input_buf, input_hw);
+    q.enqueueUnmapMemObject(output_code_buf, output_code_hw);
     q.enqueueUnmapMemObject(output_buf, output_hw);
     q.enqueueUnmapMemObject(output_size_buf, output_size_hw);
+    q.enqueueUnmapMemObject(output_length_buf, output_length_hw);
     q.finish();
+
 
     free(file);
     return 0;
