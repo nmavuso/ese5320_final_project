@@ -11,6 +11,8 @@
 //     }
 // }
 
+#include "lzw_hls.h"
+
 void encoding_sw(
     const char input[INPUT_SIZE],
     int input_size,

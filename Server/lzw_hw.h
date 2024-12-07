@@ -24,9 +24,6 @@ void decoding_sw(
     char output[INPUT_SIZE],
     int &output_length
 );
-
-
-
     
 void lzw_sw(
     const char input[INPUT_SIZE],

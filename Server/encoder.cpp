@@ -107,6 +107,50 @@ void handle_input(int argc, char* argv[], int* blocksize) {
     }
 }
 
+void handle_16bit_boundary(const std::string& outputFileName) {
+    // Open the file for both reading and writing
+    FILE* file = fopen(outputFileName.c_str(), "r+b");
+    if (!file) {
+        perror("Error opening file");
+        return;
+    }
+
+    // Get the file size
+    fseek(file, 0, SEEK_END);
+    long file_size = ftell(file);
+
+    if (file_size <= 0) {
+        std::cerr << "File is empty or corrupted." << std::endl;
+        fclose(file);
+        return;
+    }
+
+    // Check if the file is at a 16-bit boundary
+    bool is_at_16bit_boundary = (file_size % 2 == 0);
+
+    if (!is_at_16bit_boundary) {
+        // Add a 0x00 byte to the file to align to a 16-bit boundary
+        uint8_t padding = 0x00;
+        fwrite(&padding, sizeof(uint8_t), 1, file);
+
+        // Recalculate the file size after padding
+        file_size += 1;
+
+        // Swap the last two bytes in the file
+        fseek(file, -2, SEEK_END); // Move to the second last byte
+        uint8_t second_last_byte, last_byte;
+        fread(&second_last_byte, sizeof(uint8_t), 1, file); // Read the second last byte
+        fread(&last_byte, sizeof(uint8_t), 1, file);        // Read the last byte
+
+        // Write them in swapped order
+        fseek(file, -2, SEEK_END); // Move back to overwrite the last two bytes
+        fwrite(&last_byte, sizeof(uint8_t), 1, file);
+        fwrite(&second_last_byte, sizeof(uint8_t), 1, file);
+    }
+
+    fclose(file); // Close the file
+}
+
 int main(int argc, char* argv[]) {
     // Check if the output file name is provided
     if (argc <= 1) {
@@ -243,23 +287,9 @@ int main(int argc, char* argv[]) {
     // Process Ethernet Packets Using FPGA
     // ------------------------------------------------------------------------------------
     writer = PIPE_DEPTH;
-    server.get_packet(input[writer]);
-    packet_count++;
 
-    unsigned char* buffer = input[writer];
-    is_done = buffer[1] & DONE_BIT_L;
-    length = buffer[0] | (buffer[1] << 8);
-    length &= ~DONE_BIT_H;
-
-    appHost(buffer, length, krnl_lzw, q, input_buf, output_code_buf, output_size_buf, output_buf, output_length_buf, input_hw, output_code_hw, output_size_hw, output_hw, output_length_hw, outputFileName);
-    // memcpy(&file[offset], &buffer[HEADER], length);
-    // memcpy(&file[offset], output_hw, (*output_size_hw) * sizeof(int));
-    // offset += (*output_size_hw) * sizeof(int);  // Update offset accordingly
-
-    offset += length;
-    writer++;
-
-    while (!is_done) {
+    while (true) {
+        // Reset writer index if it exceeds the number of packets
         if (writer == NUM_PACKETS) {
             writer = 0;
         }
@@ -275,16 +305,22 @@ int main(int argc, char* argv[]) {
 
         packet_count++;
 
-        buffer = input[writer];
+        // Process the received packet
+        unsigned char* buffer = input[writer];
         is_done = buffer[1] & DONE_BIT_L;
         length = buffer[0] | (buffer[1] << 8);
         length &= ~DONE_BIT_H;
 
         appHost(buffer, length, krnl_lzw, q, input_buf, output_code_buf, output_size_buf, output_buf, output_length_buf, input_hw, output_code_hw, output_size_hw, output_hw, output_length_hw, outputFileName);
-        // memcpy(&file[offset], &buffer[HEADER], length);
 
+        // Update the offset
         offset += length;
         writer++;
+
+        // Exit the loop if done
+        if (is_done) {
+            break;
+        }
     }
 
     // ------------------------------------------------------------------------------------
@@ -322,8 +358,9 @@ int main(int argc, char* argv[]) {
     q.enqueueUnmapMemObject(output_length_buf, output_length_hw);
     q.finish();
 
-
+    handle_16bit_boundary(outputFileName);
     free(file);
+
     return 0;
 }
 
