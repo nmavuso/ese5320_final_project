@@ -87,109 +87,6 @@ int *lookup_hash_table(HashTable *table, uint64_t key, int *size) {
     return NULL;
 }
 
-// void pack_codes_msb_first(const uint16_t* codes, size_t num_codes, std::vector<uint8_t>& packed_data, FILE* file, uint32_t header, std::string outputFileName) {
-//     uint32_t bit_buffer = 0;   // Buffer to store bits before writing
-//     int bits_in_buffer = 0;    // Number of bits currently in the buffer
-//     int code_length = std::ceil(std::log2(MAX_CHUNK_SIZE));
-
-//     // Add the header to the packed data
-//     std::cerr << "Header (Hex): 0x" 
-//               << std::hex << std::setw(8) << std::setfill('0') << header << std::endl;
-
-//     // Retrieve the last byte from the file if necessary (This comes in handy for later in the function when we swap the bytes)
-//     bool isAt16BitBoundary = is_at_16bit_boundary(file);
-
-//     if (!isAt16BitBoundary && ftell(file) > 0) {
-//         // Save current file position
-//         long current_pos = ftell(file);
-
-//         // Move back to the last byte
-//         uint8_t last_byte;
-//         FILE* fileSeek = fopen(outputFileName.c_str(), "rb");
-//         fseek(fileSeek, -1, SEEK_END);
-//         fread(&last_byte, sizeof(uint8_t), 1, fileSeek);
-//         std::cout << "Inside Last Byte: 0x" << std::hex << static_cast<int>(last_byte) << std::endl;
-
-//         // Push the last byte into packed_data
-//         packed_data.push_back(last_byte);
-
-//         // Truncate the file to remove the last byte
-//         fseek(file, -1, SEEK_END);
-//         ftruncate(fileno(file), current_pos - 1);
-//     }
-
-
-//     // Break the header into bytes and add to the vector
-//     packed_data.push_back((header >> 24) & 0xFF);
-//     packed_data.push_back((header >> 16) & 0xFF);
-//     packed_data.push_back((header >> 8) & 0xFF);
-//     packed_data.push_back(header & 0xFF);
-
-//     std::cout << "Reformating Endianess Starting" << std::endl;
-//     for (size_t i = 0; i < num_codes; ++i) {
-//         if (codes[i] == 0) continue;
-
-//         // Add the current code_length code to the buffer
-//         bit_buffer = (bit_buffer << code_length) | (codes[i] & ((1 << code_length) - 1));
-//         bits_in_buffer += code_length;
-
-//         // Write out full bytes from the buffer
-//         while (bits_in_buffer >= 8) {
-//             uint8_t byte_to_write = (bit_buffer >> (bits_in_buffer - 8)) & 0xFF;
-
-//             if (packed_data.capacity() == 0) {
-//                 std::cerr << "Error: packed_data vector is not properly initialized." << std::endl;
-//                 return;
-//             }
-
-//             packed_data.push_back(byte_to_write);
-//             bits_in_buffer -= 8;
-//         }
-//     }
-
-//     std::cout << "Finished Outside For Loop" << std::endl;
-
-//     // Write any remaining bits from the buffer, padded to align to an 8-bit boundary
-//     if (bits_in_buffer > 0) {
-//         uint8_t byte_to_write = (bit_buffer << (8 - bits_in_buffer)) & 0xFF;
-//         packed_data.push_back(byte_to_write);
-//     }
-
-//     std::cout << "Packed Data (Hex and Binary BEFORE ENDIANESS):" << std::endl;
-//     for (size_t i = 0; i < packed_data.size(); ++i) {
-//         // Print the hex representation
-//         printf("Hex: %02x ", packed_data[i]);
-
-//         // Print the binary representation
-//         printf("Binary: ");
-//         for (int bit = 7; bit >= 0; --bit) {
-//             printf("%d", (packed_data[i] >> bit) & 1);
-//         }
-
-//         printf("  "); // Separate each byte for readability
-
-//         // Newline every 4 bytes for compactness (or 16 if preferred)
-//         if ((i + 1) % 4 == 0) {
-//             printf("\n");
-//         }
-//     }
-//     std::cout << std::endl;
-
-//     for (size_t i = 0; i + 1 < packed_data.size(); i += 2) {
-//         std::swap(packed_data[i], packed_data[i + 1]);
-//     }
-
-//     // Step 3: Write the Packed Compressed Data
-//     size_t written_data = fwrite(packed_data.data(), sizeof(uint8_t), packed_data.size(), file);
-//     if (written_data != packed_data.size()) {
-//         std::cerr << "Error: Failed to write packed LZW compressed data to file." << std::endl;
-//         fclose(file);
-//         return;
-//     }
-
-//     fclose(file);
-// }
-
 void pack_codes_msb_first(const uint16_t* codes, size_t num_codes, uint8_t* packed_data, size_t& packed_data_size, size_t max_packed_data_size, FILE* file, uint32_t header, std::string outputFileName) {
     uint32_t bit_buffer = 0;   // Buffer to store bits before writing
     int bits_in_buffer = 0;    // Number of bits currently in the buffer
@@ -272,25 +169,25 @@ void pack_codes_msb_first(const uint16_t* codes, size_t num_codes, uint8_t* pack
         packed_data[packed_data_size++] = byte_to_write;
     }
 
-    // std::cout << "Packed Data (Hex and Binary BEFORE ENDIANESS):" << std::endl;
-    // for (size_t i = 0; i < packed_data_size; ++i) {
-    //     // Print the hex representation
-    //     printf("Hex: %02x ", packed_data[i]);
+    std::cout << "Packed Data (Hex and Binary BEFORE ENDIANESS):" << std::endl;
+    for (size_t i = 0; i < packed_data_size; ++i) {
+        // Print the hex representation
+        printf("Hex: %02x ", packed_data[i]);
 
-    //     // Print the binary representation
-    //     printf("Binary: ");
-    //     for (int bit = 7; bit >= 0; --bit) {
-    //         printf("%d", (packed_data[i] >> bit) & 1);
-    //     }
+        // Print the binary representation
+        printf("Binary: ");
+        for (int bit = 7; bit >= 0; --bit) {
+            printf("%d", (packed_data[i] >> bit) & 1);
+        }
 
-    //     printf("  "); // Separate each byte for readability
+        printf("  "); // Separate each byte for readability
 
-    //     // Newline every 4 bytes for compactness (or 16 if preferred)
-    //     if ((i + 1) % 4 == 0) {
-    //         printf("\n");
-    //     }
-    // }
-    // std::cout << std::endl;
+        // Newline every 4 bytes for compactness (or 16 if preferred)
+        if ((i + 1) % 4 == 0) {
+            printf("\n");
+        }
+    }
+    std::cout << std::endl;
 
     for (size_t i = 0; i + 1 < packed_data_size; i += 2) {
         std::swap(packed_data[i], packed_data[i + 1]);
