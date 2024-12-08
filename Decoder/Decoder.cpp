@@ -26,6 +26,7 @@ static int Read_code(void)
   {
     if (Input_position % 8 == 0)
       Byte = Input.get();
+
     Code = (Code << 1) | ((Byte >> (7 - Input_position % 8)) & 1);
     Input_position++;
   }
@@ -34,7 +35,8 @@ static int Read_code(void)
 
 static const std::string Decompress(size_t Size)
 {
-  std::cerr << "Inside Decompress" << std::endl;
+  std::cerr << "Inside Decompress" << std::endl;  
+  std::cerr << "Decompress Size: 0x" << std::hex << Size << std::endl;
   Input_position = 0;
 
   Code_table.clear();
@@ -47,8 +49,6 @@ static const std::string Decompress(size_t Size)
   while (Input_position / 8 < Size - 1)
   {
     int New = Read_code();
-    std::cerr << "Inside While Loop Value (Binary): 0b"
-    << std::bitset<13>(New) << std::endl;
 
     std::string Symbols;
     if (New >= (int) Code_table.size())
@@ -63,6 +63,13 @@ static const std::string Decompress(size_t Size)
 
   return Output;
 }
+
+uint32_t swap_8byte_segments(uint32_t value) {
+    uint16_t high = (value >> 16) & 0xFFFF; // Extract high 16 bits
+    uint16_t low = value & 0xFFFF;          // Extract low 16 bits
+    return (low << 16) | high;              // Swap and recombine
+}
+
 
 int main(int Parameter_count, char * Parameters[])
 {
@@ -95,12 +102,13 @@ int main(int Parameter_count, char * Parameters[])
     if (Input.eof())
       break;
 
-    std::cerr << "Inside Header: 0x" << std::hex << Header << std::endl;
-
+    // Header = swap_8byte_segments(Header);
+    std::cerr << "TESTING Inside Header: 0x" << std::hex << Header << std::endl;
 
     if ((Header & 1) == 0)
     {
       int Chunk_size = Header >> 1;
+        std::cerr << "Chunk Size" << std::hex << Header << std::endl;
       const std::string & Chunk = Decompress(Chunk_size);
       Chunks.push_back(Chunk);
       std::cout << "Decompressed chunk of size " << Chunk.length() << ".\n";

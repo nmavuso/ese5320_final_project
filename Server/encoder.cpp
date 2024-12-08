@@ -151,6 +151,17 @@ void handle_16bit_boundary(const std::string& outputFileName) {
     fclose(file); // Close the file
 }
 
+bool firstChunkCheckFunction(const unsigned char* buffer) {
+    // Check if the last 10 bytes of the buffer are zero
+    for (int i = MAX_CHUNK_SIZE - 10; i < MAX_CHUNK_SIZE; ++i) {
+        if (buffer[i] != 0) {
+            return false; // If any byte is non-zero, return false
+        }
+    }
+    return true; // All last 10 bytes are zero
+}
+
+
 int main(int argc, char* argv[]) {
     // Check if the output file name is provided
     if (argc <= 1) {
@@ -317,8 +328,14 @@ int main(int argc, char* argv[]) {
         std::cout << "  Is last packet: " << (is_done ? "Yes" : "No") << std::endl;
         std::cout << "  Current offset: " << offset << " bytes" << std::endl;
 
-        // Now that the packet is not done, call the appHost
-        appHost(buffer, length, krnl_lzw, q, input_buf, output_code_buf, output_size_buf, output_buf, output_length_buf, input_hw, output_code_hw, output_size_hw, output_hw, output_length_hw, outputFileName);
+        if (packet_count == 1 && length == MAX_CHUNK_SIZE && !is_done && firstChunkCheckFunction(buffer)) {
+            // This is to skip an error where there comes a duplicate chunk when the chunk is less than the minimum sive
+
+            // Do Nothing for it to skip
+        } else {
+            // Now that the packet is not done, call the appHost
+            appHost(buffer, length, krnl_lzw, q, input_buf, output_code_buf, output_size_buf, output_buf, output_length_buf, input_hw, output_code_hw, output_size_hw, output_hw, output_length_hw, outputFileName);
+        }
 
         // Update the offset
         offset += length;
@@ -353,10 +370,6 @@ int main(int argc, char* argv[]) {
     std::cout << "Input Throughput to Encoder: " << input_throughput << " Mb/s."
     << " (Latency: " << ethernet_latency << " s)." << std::endl;
 
-    for (int i = 0; i < NUM_PACKETS; i++) {
-        free(input[i]);
-    }
-
     delete[] fileBuf; // Free the binary file buffer
     q.enqueueUnmapMemObject(input_buf, input_hw);
     q.enqueueUnmapMemObject(output_code_buf, output_code_hw);
@@ -365,9 +378,13 @@ int main(int argc, char* argv[]) {
     q.enqueueUnmapMemObject(output_length_buf, output_length_hw);
     q.finish();
 
-    handle_16bit_boundary(outputFileName);
+    // handle_16bit_boundary(outputFileName);
 
     free(file);
+
+    for (int i = 0; i < NUM_PACKETS; i++) {
+        free(input[i]);
+    }
 
     return 0;
 }
