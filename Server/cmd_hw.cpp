@@ -120,59 +120,59 @@ void pack_codes_msb_first(const uint16_t* codes, size_t num_codes, uint8_t* pack
     //     ftruncate(fileno(file), current_pos - 1);
     // }
 
-    // std::cout << "Reformatting Endianness Starting" << std::endl;
-    // for (size_t i = 0; i < num_codes; ++i) {
-    //     if (codes[i] == 0) continue;
+    std::cout << "Reformatting Endianness Starting" << std::endl;
+    for (size_t i = 0; i < num_codes; ++i) {
+        if (codes[i] == 0) continue;
 
-    //     // Add the current code_length code to the buffer
-    //     bit_buffer = (bit_buffer << code_length) | (codes[i] & ((1 << code_length) - 1));
-    //     bits_in_buffer += code_length;
+        // Add the current code_length code to the buffer
+        bit_buffer = (bit_buffer << code_length) | (codes[i] & ((1 << code_length) - 1));
+        bits_in_buffer += code_length;
 
-    //     // Write out full bytes from the buffer
-    //     while (bits_in_buffer >= 8) {
-    //         if (packed_data_size >= max_packed_data_size) {
-    //             std::cerr << "Error: packed_data array is full." << std::endl;
-    //             return;
-    //         }
+        // Write out full bytes from the buffer
+        while (bits_in_buffer >= 8) {
+            if (packed_data_size >= max_packed_data_size) {
+                std::cerr << "Error: packed_data array is full." << std::endl;
+                return;
+            }
 
-    //         uint8_t byte_to_write = (bit_buffer >> (bits_in_buffer - 8)) & 0xFF;
-    //         packed_data[packed_data_size++] = byte_to_write;
-    //         bits_in_buffer -= 8;
-    //     }
-    // }
+            uint8_t byte_to_write = (bit_buffer >> (bits_in_buffer - 8)) & 0xFF;
+            packed_data[packed_data_size++] = byte_to_write;
+            bits_in_buffer -= 8;
+        }
+    }
 
     std::cout << "Finished Outside For Loop" << std::endl;
 
-    // // Write any remaining bits from the buffer, padded to align to an 8-bit boundary
-    // if (bits_in_buffer > 0) {
-    //     if (packed_data_size >= max_packed_data_size) {
-    //         std::cerr << "Error: packed_data array is full." << std::endl;
-    //         return;
+    // Write any remaining bits from the buffer, padded to align to an 8-bit boundary
+    if (bits_in_buffer > 0) {
+        if (packed_data_size >= max_packed_data_size) {
+            std::cerr << "Error: packed_data array is full." << std::endl;
+            return;
+        }
+
+        uint8_t byte_to_write = (bit_buffer << (8 - bits_in_buffer)) & 0xFF;
+        packed_data[packed_data_size++] = byte_to_write;
+    }
+
+    // std::cout << "Packed Data (Hex and Binary BEFORE ENDIANESS):" << std::endl;
+    // for (size_t i = 0; i < packed_data_size; ++i) {
+    //     // Print the hex representation
+    //     printf("Hex: %02x ", packed_data[i]);
+
+    //     // Print the binary representation
+    //     printf("Binary: ");
+    //     for (int bit = 7; bit >= 0; --bit) {
+    //         printf("%d", (packed_data[i] >> bit) & 1);
     //     }
 
-    //     uint8_t byte_to_write = (bit_buffer << (8 - bits_in_buffer)) & 0xFF;
-    //     packed_data[packed_data_size++] = byte_to_write;
+    //     printf("  "); // Separate each byte for readability
+
+    //     // Newline every 4 bytes for compactness (or 16 if preferred)
+    //     if ((i + 1) % 4 == 0) {
+    //         printf("\n");
+    //     }
     // }
-
-    std::cout << "Packed Data (Hex and Binary BEFORE ENDIANESS):" << std::endl;
-    for (size_t i = 0; i < packed_data_size; ++i) {
-        // Print the hex representation
-        printf("Hex: %02x ", packed_data[i]);
-
-        // Print the binary representation
-        printf("Binary: ");
-        for (int bit = 7; bit >= 0; --bit) {
-            printf("%d", (packed_data[i] >> bit) & 1);
-        }
-
-        printf("  "); // Separate each byte for readability
-
-        // Newline every 4 bytes for compactness (or 16 if preferred)
-        if ((i + 1) % 4 == 0) {
-            printf("\n");
-        }
-    }
-    std::cout << std::endl;
+    // std::cout << std::endl;
 
     // for (size_t i = 0; i + 1 < packed_data_size; i += 2) {
     //     std::swap(packed_data[i], packed_data[i + 1]);
