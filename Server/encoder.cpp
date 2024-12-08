@@ -311,6 +311,15 @@ int main(int argc, char* argv[]) {
         length = buffer[0] | (buffer[1] << 8);
         length &= ~DONE_BIT_H;
 
+        std::cout << "Packet " << packet_count << " received:" << std::endl;
+        std::cout << "  Writer index: " << writer << std::endl;
+        std::cout << "  Packet length: " << length << " bytes" << std::endl;
+        std::cout << "  Is last packet: " << (is_done ? "Yes" : "No") << std::endl;
+        std::cout << "  Current offset: " << offset << " bytes" << std::endl;
+
+        // Now that the packet is not done, call the appHost
+        appHost(buffer, length, krnl_lzw, q, input_buf, output_code_buf, output_size_buf, output_buf, output_length_buf, input_hw, output_code_hw, output_size_hw, output_hw, output_length_hw, outputFileName);
+
         // Update the offset
         offset += length;
         writer++;
@@ -319,9 +328,6 @@ int main(int argc, char* argv[]) {
         if (is_done) {
             break;
         }
-
-        // Now that the packet is not done, call the appHost
-        appHost(buffer, length, krnl_lzw, q, input_buf, output_code_buf, output_size_buf, output_buf, output_length_buf, input_hw, output_code_hw, output_size_hw, output_hw, output_length_hw, outputFileName);
     }
 
     // ------------------------------------------------------------------------------------
