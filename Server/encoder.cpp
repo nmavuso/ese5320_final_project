@@ -284,7 +284,7 @@ int main(int argc, char* argv[]) {
     server.setup_server(blocksize);
 
     // ------------------------------------------------------------------------------------
-    // Process Ethernet Packets Using FPGA
+    // Process Ethernet Packets
     // ------------------------------------------------------------------------------------
     writer = PIPE_DEPTH;
 
@@ -311,8 +311,6 @@ int main(int argc, char* argv[]) {
         length = buffer[0] | (buffer[1] << 8);
         length &= ~DONE_BIT_H;
 
-        appHost(buffer, length, krnl_lzw, q, input_buf, output_code_buf, output_size_buf, output_buf, output_length_buf, input_hw, output_code_hw, output_size_hw, output_hw, output_length_hw, outputFileName);
-
         // Update the offset
         offset += length;
         writer++;
@@ -321,6 +319,9 @@ int main(int argc, char* argv[]) {
         if (is_done) {
             break;
         }
+
+        // Now that the packet is not done, call the appHost
+        appHost(buffer, length, krnl_lzw, q, input_buf, output_code_buf, output_size_buf, output_buf, output_length_buf, input_hw, output_code_hw, output_size_hw, output_hw, output_length_hw, outputFileName);
     }
 
     // ------------------------------------------------------------------------------------
@@ -363,48 +364,3 @@ int main(int argc, char* argv[]) {
 
     return 0;
 }
-
-// int main(int argc, char* argv[]) {
-//     // Check if the output file name is provided
-//     if (argc <= 1) {
-//         std::cerr << "Error: No output file name provided. Please specify the output file name." << std::endl;
-//         return 1; // Exit with an error code
-//     }
-
-//     // File name for storing compressed data
-//     const char* outputFileName = argv[1];
-//     std::cout << "Output file name: " << outputFileName << std::endl;
-
-//     // Open the output file in write mode
-//     FILE* outfc = fopen(outputFileName, "wb");
-//     if (!outfc) {
-//         perror("Failed to open output file.");
-//         return 1;
-//     }
-
-//     // ------------------------------------------------------------------------------------
-//     // Sample data for testing
-//     // ------------------------------------------------------------------------------------
-//     int sample_output_hw[] = {42, 84, 126, 168, 210}; // Example compressed data
-//     int sample_output_size_hw = 5; // Size of the compressed data
-
-//     // Write the size of the sample compressed data
-//     size_t written_size = fwrite(&sample_output_size_hw, sizeof(int), 1, outfc);
-//     if (written_size != 1) {
-//         std::cerr << "Error: Failed to write sample compressed size to file." << std::endl;
-//     } else {
-//         std::cout << "Sample compressed size written successfully." << std::endl;
-//     }
-
-//     // Write the sample compressed data
-//     size_t written_data = fwrite(sample_output_hw, sizeof(int), sample_output_size_hw, outfc);
-//     if (written_data != (size_t)sample_output_size_hw) {
-//         std::cerr << "Error: Failed to write sample compressed data to file." << std::endl;
-//     } else {
-//         std::cout << "Sample compressed data written successfully." << std::endl;
-//     }
-
-//     // Close the output file
-//     fclose(outfc);
-
-//     // ---------------------------
