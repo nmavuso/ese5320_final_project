@@ -9,6 +9,9 @@
 
 #define NUM_CHUNKS 3
 #define MAX_CHUNK_SIZE 8192
+
+// This is because each 8 bit char can in the worst case map to 13 bits
+#define MAX_CHUNK_STORAGE (MAX_CHUNK_SIZE * (13 / 8))
 #define HASH_TABLE_SIZE 1024
 // #define INPUT_SIZE 256
 

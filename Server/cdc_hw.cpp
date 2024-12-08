@@ -32,6 +32,8 @@ uint64_t update_hash(uint64_t hash, unsigned char outgoing, unsigned char incomi
 }
 
 void cdc(const unsigned char* buff, unsigned int buff_size, Chunk chunks[], int *num_chunks) {
+    std::cout <<"Buffer Size: " << buff_size << std::endl;
+
     uint64_t rolling_hash = initialize_hash(buff, WINDOW_SIZE);
     int chunk_index = 0;
     

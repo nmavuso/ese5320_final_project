@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include <stdint.h>
+#include <bitset> // For std::bitset
 
 #define CODE_LENGTH (13)
 
@@ -33,6 +34,7 @@ static int Read_code(void)
 
 static const std::string Decompress(size_t Size)
 {
+  std::cerr << "Inside Decompress" << std::endl;
   Input_position = 0;
 
   Code_table.clear();
@@ -45,6 +47,9 @@ static const std::string Decompress(size_t Size)
   while (Input_position / 8 < Size - 1)
   {
     int New = Read_code();
+    std::cerr << "Inside While Loop Value (Binary): 0b"
+    << std::bitset<13>(New) << std::endl;
+
     std::string Symbols;
     if (New >= (int) Code_table.size())
       Symbols = Code_table[Old] + Symbol;
@@ -89,6 +94,9 @@ int main(int Parameter_count, char * Parameters[])
     Input.read((char *) &Header, sizeof(int32_t));
     if (Input.eof())
       break;
+
+    std::cerr << "Inside Header: 0x" << std::hex << Header << std::endl;
+
 
     if ((Header & 1) == 0)
     {

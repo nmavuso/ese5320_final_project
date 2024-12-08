@@ -345,7 +345,7 @@ int main(int argc, char* argv[]) {
     float ethernet_latency = ethernet_timer.latency() / 1000.0;
     float input_throughput = (inputBytesWritten / 1000000.0) / ethernet_latency; // Mb/s
     std::cout << "Input Throughput to Encoder: " << input_throughput << " Mb/s."
-              << " (Latency: " << ethernet_latency << " s)." << std::endl;
+    << " (Latency: " << ethernet_latency << " s)." << std::endl;
 
     for (int i = 0; i < NUM_PACKETS; i++) {
         free(input[i]);
@@ -360,6 +360,7 @@ int main(int argc, char* argv[]) {
     q.finish();
 
     handle_16bit_boundary(outputFileName);
+
     free(file);
 
     return 0;
