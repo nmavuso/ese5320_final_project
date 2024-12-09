@@ -66,7 +66,14 @@ int appHost(unsigned char* buffer, unsigned int length,
         int chunk_size = chunks[i].size;
 
         // Deduplicate chunk (conditional check done here)
-        int is_new_chunk = deduplicate_chunks(chunk_data, chunk_size, &hash_table, krnl_lzw, q, input_buf, output_buf, output_size_buf, output_buf, output_length_buf, input_hw, output_code_hw, output_size_hw, output_hw, output_length_hw, outputFileName);
+        printf("About to deduplicate\n");
+        int is_new_chunk = deduplicate_chunks(chunk_data, chunk_size, &hash_table, 
+                                      krnl_lzw, q, input_buf, 
+                                      output_code_buf, output_size_buf, 
+                                      output_buf, output_length_buf, 
+                                      input_hw, output_code_hw, 
+                                      output_size_hw, output_hw, 
+                                      output_length_hw, outputFileName);
     }
 
     return 0;
