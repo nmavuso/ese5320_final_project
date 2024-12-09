@@ -1,8 +1,8 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
---Date        : Sun Dec  1 17:44:33 2024
---Host        : big08.seas.upenn.edu running 64-bit openSUSE Leap 15.6
+--Date        : Sun Dec  8 20:13:44 2024
+--Host        : altair.seas.upenn.edu running 64-bit openSUSE Leap 15.6
 --Command     : generate_target u96v2_sbc_base.bd
 --Design      : u96v2_sbc_base
 --Purpose     : IP block netlist
@@ -13092,6 +13092,12 @@ architecture STRUCTURE of u96v2_sbc_base is
   end component u96v2_sbc_base_proc_sys_reset_6_0;
   component u96v2_sbc_base_lzw_fpga_1_0 is
   port (
+    stall_start_ext : out STD_LOGIC;
+    stall_done_ext : out STD_LOGIC;
+    stall_start_str : out STD_LOGIC;
+    stall_done_str : out STD_LOGIC;
+    stall_start_int : out STD_LOGIC;
+    stall_done_int : out STD_LOGIC;
     s_axi_control_AWADDR : in STD_LOGIC_VECTOR ( 6 downto 0 );
     s_axi_control_AWVALID : in STD_LOGIC;
     s_axi_control_AWREADY : out STD_LOGIC;
@@ -13111,7 +13117,9 @@ architecture STRUCTURE of u96v2_sbc_base is
     s_axi_control_RREADY : in STD_LOGIC;
     ap_clk : in STD_LOGIC;
     ap_rst_n : in STD_LOGIC;
+    event_done : out STD_LOGIC;
     interrupt : out STD_LOGIC;
+    event_start : out STD_LOGIC;
     m_axi_gmem0_AWADDR : out STD_LOGIC_VECTOR ( 63 downto 0 );
     m_axi_gmem0_AWLEN : out STD_LOGIC_VECTOR ( 7 downto 0 );
     m_axi_gmem0_AWSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -13840,6 +13848,14 @@ architecture STRUCTURE of u96v2_sbc_base is
   signal NLW_axi_uart16550_1_rtsn_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_uart16550_1_rxrdyn_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_uart16550_1_txrdyn_UNCONNECTED : STD_LOGIC;
+  signal NLW_lzw_fpga_1_event_done_UNCONNECTED : STD_LOGIC;
+  signal NLW_lzw_fpga_1_event_start_UNCONNECTED : STD_LOGIC;
+  signal NLW_lzw_fpga_1_stall_done_ext_UNCONNECTED : STD_LOGIC;
+  signal NLW_lzw_fpga_1_stall_done_int_UNCONNECTED : STD_LOGIC;
+  signal NLW_lzw_fpga_1_stall_done_str_UNCONNECTED : STD_LOGIC;
+  signal NLW_lzw_fpga_1_stall_start_ext_UNCONNECTED : STD_LOGIC;
+  signal NLW_lzw_fpga_1_stall_start_int_UNCONNECTED : STD_LOGIC;
+  signal NLW_lzw_fpga_1_stall_start_str_UNCONNECTED : STD_LOGIC;
   signal NLW_proc_sys_reset_0_mb_reset_UNCONNECTED : STD_LOGIC;
   signal NLW_proc_sys_reset_0_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_proc_sys_reset_0_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -14529,6 +14545,8 @@ lzw_fpga_1: component u96v2_sbc_base_lzw_fpga_1_0
      port map (
       ap_clk => clk_wiz_0_clk_out1,
       ap_rst_n => proc_sys_reset_0_peripheral_aresetn1(0),
+      event_done => NLW_lzw_fpga_1_event_done_UNCONNECTED,
+      event_start => NLW_lzw_fpga_1_event_start_UNCONNECTED,
       interrupt => lzw_fpga_1_interrupt,
       m_axi_gmem0_ARADDR(63 downto 0) => lzw_fpga_1_m_axi_gmem0_ARADDR(63 downto 0),
       m_axi_gmem0_ARBURST(1 downto 0) => lzw_fpga_1_m_axi_gmem0_ARBURST(1 downto 0),
@@ -14686,7 +14704,13 @@ lzw_fpga_1: component u96v2_sbc_base_lzw_fpga_1_0
       s_axi_control_WDATA(31 downto 0) => axi_ic_zynq_ultra_ps_e_0_M_AXI_HPM1_FPD_M00_AXI_WDATA(31 downto 0),
       s_axi_control_WREADY => axi_ic_zynq_ultra_ps_e_0_M_AXI_HPM1_FPD_M00_AXI_WREADY,
       s_axi_control_WSTRB(3 downto 0) => axi_ic_zynq_ultra_ps_e_0_M_AXI_HPM1_FPD_M00_AXI_WSTRB(3 downto 0),
-      s_axi_control_WVALID => axi_ic_zynq_ultra_ps_e_0_M_AXI_HPM1_FPD_M00_AXI_WVALID
+      s_axi_control_WVALID => axi_ic_zynq_ultra_ps_e_0_M_AXI_HPM1_FPD_M00_AXI_WVALID,
+      stall_done_ext => NLW_lzw_fpga_1_stall_done_ext_UNCONNECTED,
+      stall_done_int => NLW_lzw_fpga_1_stall_done_int_UNCONNECTED,
+      stall_done_str => NLW_lzw_fpga_1_stall_done_str_UNCONNECTED,
+      stall_start_ext => NLW_lzw_fpga_1_stall_start_ext_UNCONNECTED,
+      stall_start_int => NLW_lzw_fpga_1_stall_start_int_UNCONNECTED,
+      stall_start_str => NLW_lzw_fpga_1_stall_start_str_UNCONNECTED
     );
 proc_sys_reset_0: component u96v2_sbc_base_proc_sys_reset_0_1
      port map (

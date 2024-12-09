@@ -1,0 +1,78 @@
+Begin Function 'encoding'
+
+RTL state condition: (1'b1 == ap_CS_fsm_state1)
+# ST_1
+local input_size_read <read_15> <integer> <FifoRead> 'read' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:15>
+input_size /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:15
+reg: input_size_read_reg_747[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state2)
+# ST_2
+local i <> <integer> <Phi> 'phi' <>
+i /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:26
+i_2 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:196
+reg: i_reg_412[8:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state4)
+# ST_4
+local i_3 <> <integer> <Phi> 'phi' <>
+i /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:35
+i_4 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:196
+reg: i_3_reg_423[30:0] lv
+
+local p_1 <phi_196> <integer> <Phi> 'phi' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:32->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:196>
+zext_ln35_1 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:35
+zext_ln35_1 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:196
+reg: p_1_reg_435[31:0] lv
+
+local tmp_7 <read_145> <integer> <FifoRead> 'read' </mnt/pollux/software/xilinx/2020.2/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145>
+tmp /mnt/pollux/software/xilinx/2020.2/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145
+reg: tmp_7_reg_784[7:0] lv
+
+local icmp_ln40 <icmp_196> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:40->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:196>
+icmp_ln40 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:40
+icmp_ln40 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:196
+reg: icmp_ln40_reg_794[0:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state5)
+# ST_5
+local found <phi_196> <integer> <Phi> 'phi' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:42->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:196>
+add_ln40 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:40
+add_ln40 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:196
+reg: found_reg_453[30:0] lv
+
+local icmp_ln40_1 <icmp_196> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:40->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:196>
+icmp_ln40_1 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:40
+icmp_ln40_1 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:196
+reg: icmp_ln40_1_reg_798[0:0] lv
+
+local zext_ln42_1 <zext_196> <integer> <> 'zext' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:42->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:196>
+zext_ln42_1 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:42
+zext_ln42_1 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:196
+reg: zext_ln42_1_reg_802[63:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state6)
+# ST_6
+local zext_ln42 <zext_196> <integer> <> 'zext' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:42->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:196>
+zext_ln42 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:42
+zext_ln42 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:196
+reg: zext_ln42_reg_836[63:0] lv
+
+local icmp_ln42 <icmp_196> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:42->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:196>
+icmp_ln42 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:42
+icmp_ln42 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:196
+reg: icmp_ln42_reg_841[0:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state7)
+# ST_7
+local p_3 <> <integer> <Phi> 'phi' <>
+reg: p_3_reg_465[30:0] lv
+
+
+End Function 'encoding'
+

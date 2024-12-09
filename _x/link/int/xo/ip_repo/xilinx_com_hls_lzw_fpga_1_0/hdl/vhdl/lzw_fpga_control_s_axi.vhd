@@ -42,7 +42,8 @@ port (
     ap_done               :in   STD_LOGIC;
     ap_ready              :in   STD_LOGIC;
     ap_continue           :out  STD_LOGIC;
-    ap_idle               :in   STD_LOGIC
+    ap_idle               :in   STD_LOGIC;
+    event_start           :out  STD_LOGIC
 );
 end entity lzw_fpga_control_s_axi;
 
@@ -136,6 +137,7 @@ architecture behave of lzw_fpga_control_s_axi is
     signal ARREADY_t           : STD_LOGIC;
     signal RVALID_t            : STD_LOGIC;
     -- internal registers
+    signal int_event_start     : STD_LOGIC := '0';
     signal int_ap_idle         : STD_LOGIC;
     signal int_ap_continue     : STD_LOGIC;
     signal int_ap_ready        : STD_LOGIC;
@@ -311,6 +313,7 @@ begin
 
 -- ----------------------- Register logic ----------------
     interrupt            <= int_gie and (int_isr(0) or int_isr(1));
+    event_start          <= int_event_start;
     ap_start             <= int_ap_start;
     int_ap_done          <= ap_done;
     ap_continue          <= int_ap_continue;
@@ -320,6 +323,21 @@ begin
     output_size          <= STD_LOGIC_VECTOR(int_output_size);
     output_r             <= STD_LOGIC_VECTOR(int_output_r);
     output_length        <= STD_LOGIC_VECTOR(int_output_length);
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ARESET = '1') then
+                int_event_start <= '0';
+            elsif (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_AP_CTRL and WSTRB(0) = '1' and WDATA(0) = '1') then
+                    int_event_start <= '1';
+                else
+                    int_event_start <= '0'; -- self clear
+                end if;
+            end if;
+        end if;
+    end process;
 
     process (ACLK)
     begin

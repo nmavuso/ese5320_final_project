@@ -105,8 +105,8 @@
     "time_stamp": "2020-11-18-05:13:29",
     "options": "/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/bin/unwrapped/lnx64.o/v++ --target hw --link --config fpga_accelerate/design.cfg -olzw_fpga.xclbin lzw_fpga.xo ",
     "xclbin_name": "lzw_fpga",
-    "uuid": "3e1cbe65-b4e8-405e-9280-c294acc3804f",
-    "link_uuid": "3e1cbe65-b4e8-405e-9280-c294acc3804f",
+    "uuid": "036c66cb-24a2-4f62-9607-3e40b01bb375",
+    "link_uuid": "036c66cb-24a2-4f62-9607-3e40b01bb375",
     "package_uuid": ""
    },
    "user_regions": [
@@ -126,7 +126,7 @@
       {
        "name": "lzw_fpga",
        "estimated_resources": {
-        "LUT": "83",
+        "LUT": "91",
         "REG": "3",
         "BRAM": "",
         "DSP": "",

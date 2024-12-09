@@ -7,4 +7,4 @@ Family       : zynquplus
 Device       : xczu3eg
 Package      : -sbva484
 Speed Grade  : -1-i
-Clock Period : 6.700 ns
+Clock Period : 6.667 ns

@@ -142,7 +142,7 @@ void handle_16bit_boundary(const std::string& outputFileName) {
         fread(&second_last_byte, sizeof(uint8_t), 1, file); // Read the second last byte
         fread(&last_byte, sizeof(uint8_t), 1, file);        // Read the last byte
 
-        // Write them in swapped order
+        // Write them in Server/encoder.cpp:81:84: error: cannot convert 'cl::Kernel' to 'int'swapped order
         fseek(file, -2, SEEK_END); // Move back to overwrite the last two bytes
         fwrite(&last_byte, sizeof(uint8_t), 1, file);
         fwrite(&second_last_byte, sizeof(uint8_t), 1, file);

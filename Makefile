@@ -25,7 +25,7 @@ help:
 
 # Compiler tools
 HOST_CXX ?= aarch64-linux-gnu-g++
-VPP ?= ${XILINX_VITIS}/bin/v++
+VPP = ${XILINX_VITIS}/bin/v++
 RM = rm -f
 RMDIR = rm -rf
 
@@ -34,8 +34,9 @@ VITIS_PLATFORM_DIR = ${PLATFORM_REPO_PATHS}
 VITIS_PLATFORM_PATH = $(VITIS_PLATFORM_DIR)/u96v2_sbc_base.xpfm
 
 # Host compiler global settings
-CXXFLAGS += -march=armv8-a+simd -mtune=cortex-a53 -std=c++11 -DVITIS_PLATFORM=$(VITIS_PLATFORM) -D__USE_XOPEN2K8 -I$(XILINX_VIVADO)/include/ -I$(VITIS_PLATFORM_DIR)/sw/u96v2_sbc_base/PetaLinux/sysroot/aarch64-xilinx-linux/usr/include/xrt/ -O3 -g -Wall -c -fmessage-length=0 --sysroot=$(VITIS_PLATFORM_DIR)/sw/u96v2_sbc_base/PetaLinux/sysroot/aarch64-xilinx-linux
-LDFLAGS += -lxilinxopencl -lpthread -lrt -ldl -lcrypt -lstdc++ -L$(VITIS_PLATFORM_DIR)/sw/u96v2_sbc_base/PetaLinux/sysroot/aarch64-xilinx-linux/usr/lib/ --sysroot=$(VITIS_PLATFORM_DIR)/sw/u96v2_sbc_base/PetaLinux/sysroot/aarch64-xilinx-linux
+CXXFLAGS += -march=armv8-a+simd -mtune=cortex-a53 -std=c++11 -DVITIS_PLATFORM=$(VITIS_PLATFORM) -D__USE_XOPEN2K8 -I$(XILINX_VIVADO)/include/ -I$(VITIS_PLATFORM_DIR)/sw/$(VITIS_PLATFORM)/PetaLinux/sysroot/aarch64-xilinx-linux/usr/include/xrt/ -O3 -g -Wall -c -fmessage-length=0 --sysroot=$(VITIS_PLATFORM_DIR)/sw/$(VITIS_PLATFORM)/PetaLinux/sysroot/aarch64-xilinx-linux
+
+LDFLAGS += -lxilinxopencl -lpthread -lrt -ldl -lcrypt -lstdc++ -L$(VITIS_PLATFORM_DIR)/sw/$(VITIS_PLATFORM)/PetaLinux/sysroot/aarch64-xilinx-linux/usr/lib/ --sysroot=$(VITIS_PLATFORM_DIR)/sw/$(VITIS_PLATFORM)/PetaLinux/sysroot/aarch64-xilinx-linux
 
 # Hardware compiler shared settings
 VPP_OPTS = --target hw
@@ -49,7 +50,7 @@ ALL_MESSAGE_FILES = $(subst .xo,.mdb,$(XO)) $(subst .xclbin,.mdb,$(XCLBIN))
 CLIENT_SOURCES = Client/client.cpp
 CLIENT_EXE = client
 
-SERVER_SOURCES = Server/encoder.cpp Server/server.cpp Server/lzw_hw.cpp Server/cdc_hw.cpp Server/cmd_hw.cpp hls/lzw_hls.cpp Server/sha3.cpp ./common/Utilities.cpp ./common/EventTimer.cpp
+SERVER_SOURCES = Server/encoder.cpp Server/server.cpp Server/lzw_hw.cpp Server/cdc_hw.cpp Server/cmd_hw.cpp hls/lzw_hls.cpp ./common/Utilities.cpp ./common/EventTimer.cpp
 SERVER_OBJECTS = $(SERVER_SOURCES:.cpp=.o)
 SERVER_EXE = encoder
  
@@ -70,13 +71,13 @@ SHA_EXE = sha
 
 # Sha executable target
 $(SHA_EXE): $(SHA_OBJECTS)
-	$(HOST_CXX) -o "$@" $(SHA_OBJECTS) $(LDFLAGS)
+	$(HOST_CXX) -o "$@" $(SHA_OBJECTS) $(LDFLAGS) -lcrypto
 	@mkdir -p package/sd_card
 	@cp $(SHA_EXE) package/sd_card/
 
 # Host executable target
 $(HOST_EXE): $(HOST_OBJECTS)
-	$(HOST_CXX) -o "$@" $(+) $(LDFLAGS)
+	$(HOST_CXX) -o "$@" $(+) $(LDFLAGS) -lcrypto
 #	$(HOST_CXX) -o "$@" $(HOST_OBJECTS) $(LDFLAGS)
 #	@mkdir -p package/sd_card
 #	@cp $(HOST_EXE) package/sd_card/
@@ -92,13 +93,13 @@ sha: $(SHA_EXE)
 all: $(CLIENT_EXE) $(SERVER_EXE) $(DECODER_EXE)
 
 $(CLIENT_EXE):
-	g++ -O3 $(CLIENT_SOURCES) -o "$@"
+	g++ -O3 $(CLIENT_SOURCES) -o "$@" -lcrypto
 
 $(SERVER_EXE): $(SERVER_OBJECTS)
-	$(HOST_CXX) -o "$@" $(+) $(LDFLAGS)
+	$(HOST_CXX) -o "$@" $(+) $(LDFLAGS) -lcrypto
 
 $(DECODER_EXE): $(DECODER_OBJECTS)
-	$(HOST_CXX) -o "$@" $(+) $(LDFLAGS)
+	$(HOST_CXX) -o "$@" $(+) $(LDFLAGS) -lcrypto
 
 .cpp.o:
 	$(HOST_CXX) $(CXXFLAGS) -I./server -o "$@" "$<"
@@ -127,7 +128,7 @@ package/sd_card.img: $(SERVER_EXE) $(XCLBIN) ./fpga_accelerate/xrt.ini
 .NOTPARALLEL: clean
 clean:
 	-$(RM) $(SERVER_EXE) $(SERVER_OBJECTS) $(DECODER_EXE) $(DECODER_OBJECTS) $(CLIENT_EXE)
-#	-$(RM) $(XCLBIN) $(XO) $(ALL_MESSAGE_FILES)
+	# -$(RM) $(XCLBIN) $(XO) $(ALL_MESSAGE_FILES)
 	-${RMDIR} package package.build .Xil fpga/hls/proj_kernel
 	-${RMDIR} _x .ipcache
 

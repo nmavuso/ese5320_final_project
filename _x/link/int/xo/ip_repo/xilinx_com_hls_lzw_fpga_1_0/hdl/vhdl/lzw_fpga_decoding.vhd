@@ -32,7 +32,10 @@ port (
     local_output_size_read : OUT STD_LOGIC;
     local_output_size_out_din : OUT STD_LOGIC_VECTOR (31 downto 0);
     local_output_size_out_full_n : IN STD_LOGIC;
-    local_output_size_out_write : OUT STD_LOGIC );
+    local_output_size_out_write : OUT STD_LOGIC;
+    ap_ext_blocking_n : OUT STD_LOGIC;
+    ap_str_blocking_n : OUT STD_LOGIC;
+    ap_int_blocking_n : OUT STD_LOGIC );
 end;
 
 
@@ -559,6 +562,7 @@ attribute shreg_extract : string;
     signal tmp_23_fu_3481_p4 : STD_LOGIC_VECTOR (22 downto 0);
     signal lshr_ln5_fu_3501_p4 : STD_LOGIC_VECTOR (6 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (28 downto 0);
+    signal ap_int_blocking_cur_n : STD_LOGIC;
     signal ap_idle_pp1 : STD_LOGIC;
     signal ap_enable_pp1 : STD_LOGIC;
     signal ap_idle_pp2 : STD_LOGIC;
@@ -2877,6 +2881,7 @@ begin
     ap_enable_pp1 <= (ap_idle_pp1 xor ap_const_logic_1);
     ap_enable_pp2 <= (ap_idle_pp2 xor ap_const_logic_1);
     ap_enable_pp3 <= (ap_idle_pp3 xor ap_const_logic_1);
+    ap_ext_blocking_n <= (ap_const_logic_1 and ap_const_logic_1);
 
     ap_idle_assign_proc : process(real_start, ap_CS_fsm_state1)
     begin
@@ -2917,6 +2922,8 @@ begin
         end if; 
     end process;
 
+    ap_int_blocking_cur_n <= (output_stream_blk_n and local_output_size_out_blk_n and local_output_size_blk_n and code_stream_blk_n);
+    ap_int_blocking_n <= (ap_int_blocking_cur_n and ap_const_logic_1);
 
     ap_phi_mux_current_code_1_in_in_phi_fu_1475_p4_assign_proc : process(current_code_1_in_in_reg_1472, tmp_19_reg_3700, ap_CS_fsm_pp1_stage0, current_code_1_reg_3844, icmp_ln102_reg_3849, ap_enable_reg_pp1_iter1, ap_block_pp1_stage0)
     begin
@@ -2954,6 +2961,7 @@ begin
     end process;
 
     ap_ready <= internal_ap_ready;
+    ap_str_blocking_n <= (ap_const_logic_1 and ap_const_logic_1);
     arrayNo304_i_i_fu_2379_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(empty_63_fu_2375_p1),32));
     code_in_table_fu_2369_p2 <= "1" when (signed(code_stream_dout) < signed(table_size_fu_306)) else "0";
 

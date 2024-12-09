@@ -1,0 +1,152 @@
+
+
+================================================================
+== Vitis HLS Report for 'store_output'
+================================================================
+* Date:           Sun Dec  8 20:09:50 2024
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        lzw_fpga
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.67 ns|  3.608 ns|     1.80 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        3|      258|  20.001 ns|  1.720 us|    3|  258|     none|
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |                     |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip  |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |- store_output_loop  |        1|      256|         1|          1|          1|  1 ~ 256|       yes|
+        +---------------------+---------+---------+----------+-----------+-----------+---------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 2 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.48>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %output_stream, void @empty_4, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20"   --->   Operation 4 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %output_stream, void @empty_4, i32 0, i32 0, void @empty_20, i32 0, i32 0, void @empty_20, void @empty_20, void @empty_20, i32 0, i32 0, i32 0, i32 0, void @empty_20, void @empty_20"   --->   Operation 5 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.48ns)   --->   "%br_ln167 = br void" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:167]   --->   Operation 6 'br' 'br_ln167' <Predicate = true> <Delay = 0.48>
+
+State 2 <SV = 1> <Delay = 3.60>
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "%out_index_1 = phi i9 0, void %entry, i9 %i, void"   --->   Operation 7 'phi' 'out_index_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %out_index_1, i32 8" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:167]   --->   Operation 8 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1, i64 256, i64 128"   --->   Operation 9 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.92ns)   --->   "%i = add i9 %out_index_1, i9 1" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:170]   --->   Operation 10 'add' 'i' <Predicate = true> <Delay = 0.92> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.92> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 11 [1/1] (0.48ns)   --->   "%br_ln167 = br i1 %tmp, void %.split.i, void %.exit" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:167]   --->   Operation 11 'br' 'br_ln167' <Predicate = true> <Delay = 0.48>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%zext_ln167 = zext i9 %out_index_1" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:167]   --->   Operation 12 'zext' 'zext_ln167' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_20" [/mnt/pollux/software/xilinx/2020.2/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:0]   --->   Operation 13 'specpipeline' 'specpipeline_ln0' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @empty_11" [/mnt/pollux/software/xilinx/2020.2/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:0]   --->   Operation 14 'specloopname' 'specloopname_ln0' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%tmp_i = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i8P0A, i8 %output_stream, i32 1" [/mnt/pollux/software/xilinx/2020.2/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:136]   --->   Operation 15 'nbreadreq' 'tmp_i' <Predicate = (!tmp)> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.25> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 16> <FIFO>
+ST_2 : Operation 16 [1/1] (0.48ns)   --->   "%br_ln169 = br i1 %tmp_i, void %.exit, void" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:169]   --->   Operation 16 'br' 'br_ln169' <Predicate = (!tmp)> <Delay = 0.48>
+ST_2 : Operation 17 [1/1] (2.25ns)   --->   "%tmp_1 = read i8 @_ssdm_op_Read.ap_fifo.volatile.i8P0A, i8 %output_stream" [/mnt/pollux/software/xilinx/2020.2/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 17 'read' 'tmp_1' <Predicate = (!tmp & tmp_i)> <Delay = 2.25> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.25> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 16> <FIFO>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%local_output_addr = getelementptr i8 %local_output, i64 0, i64 %zext_ln167" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:170]   --->   Operation 18 'getelementptr' 'local_output_addr' <Predicate = (!tmp & tmp_i)> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (1.35ns)   --->   "%store_ln170 = store i8 %tmp_1, i8 %local_output_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:170]   --->   Operation 19 'store' 'store_ln170' <Predicate = (!tmp & tmp_i)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 256> <RAM>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 20 'br' 'br_ln0' <Predicate = (!tmp & tmp_i)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 2.16>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%local_output_length_dc_0 = phi i9 %out_index_1, void %.split.i, i9 256, void"   --->   Operation 21 'phi' 'local_output_length_dc_0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i9 %local_output_length_out, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (2.16ns)   --->   "%write_ln169 = write void @_ssdm_op_Write.ap_fifo.i9P0A, i9 %local_output_length_out, i9 %local_output_length_dc_0" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:169]   --->   Operation 23 'write' 'write_ln169' <Predicate = true> <Delay = 2.16> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 9> <Depth = 2> <FIFO>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 24 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 6.67ns, clock uncertainty: 1.8ns.
+
+ <State 1>: 0.489ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:170) [8]  (0.489 ns)
+
+ <State 2>: 3.61ns
+The critical path consists of the following:
+	fifo read on port 'output_stream' (/mnt/pollux/software/xilinx/2020.2/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145) [20]  (2.26 ns)
+	'store' operation ('store_ln170', /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:170) of variable 'tmp', /mnt/pollux/software/xilinx/2020.2/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145 on array 'local_output' [22]  (1.35 ns)
+
+ <State 3>: 2.17ns
+The critical path consists of the following:
+	'phi' operation ('out_index') with incoming values : ('i', /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:170) [25]  (0 ns)
+	fifo write on port 'local_output_length_out' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:169) [27]  (2.17 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

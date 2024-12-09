@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Dec  1 17:45:01 2024" VIVADOVERSION="2020.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Dec  8 20:14:10 2024" VIVADOVERSION="2020.2">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="avnet.com:ultra96v2:part0:1.2" DEVICE="xczu3eg" NAME="u96v2_sbc_base" PACKAGE="sbva484" SPEEDGRADE="-1"/>
 
@@ -9012,7 +9012,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="2113844549" FULLNAME="/lzw_fpga_1" HWVERSION="1.0" INSTANCE="lzw_fpga_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="lzw_fpga" VLNV="xilinx.com:hls:lzw_fpga:1.0">
+    <MODULE COREREVISION="2113857250" FULLNAME="/lzw_fpga_1" HWVERSION="1.0" INSTANCE="lzw_fpga_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="lzw_fpga" VLNV="xilinx.com:hls:lzw_fpga:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="read-write" INTERFACE="s_axi_control" NAME="Reg" RANGE="65536" USAGE="register">
@@ -9496,7 +9496,7 @@
         <PARAMETER NAME="C_M_AXI_GMEM2_ENABLE_ID_PORTS" VALUE="false"/>
         <PARAMETER NAME="C_M_AXI_GMEM2_ENABLE_USER_PORTS" VALUE="false"/>
         <PARAMETER NAME="Component_Name" VALUE="u96v2_sbc_base_lzw_fpga_1_0"/>
-        <PARAMETER NAME="clk_period" VALUE="6.7"/>
+        <PARAMETER NAME="clk_period" VALUE="6.667"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
         <PARAMETER NAME="latency" VALUE="undef"/>
@@ -9506,6 +9506,12 @@
         <PARAMETER NAME="C_S_AXI_CONTROL_HIGHADDR" VALUE="0xB000FFFF"/>
       </PARAMETERS>
       <PORTS>
+        <PORT DIR="O" NAME="stall_start_ext" SIGIS="undef"/>
+        <PORT DIR="O" NAME="stall_done_ext" SIGIS="undef"/>
+        <PORT DIR="O" NAME="stall_start_str" SIGIS="undef"/>
+        <PORT DIR="O" NAME="stall_done_str" SIGIS="undef"/>
+        <PORT DIR="O" NAME="stall_start_int" SIGIS="undef"/>
+        <PORT DIR="O" NAME="stall_done_int" SIGIS="undef"/>
         <PORT DIR="I" LEFT="6" NAME="s_axi_control_AWADDR" RIGHT="0" SIGIS="undef" SIGNAME="axi_ic_zynq_ultra_ps_e_0_M_AXI_HPM1_FPD_M00_AXI_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_ic_zynq_ultra_ps_e_0_M_AXI_HPM1_FPD" PORT="M00_AXI_awaddr"/>
@@ -9601,11 +9607,13 @@
             <CONNECTION INSTANCE="proc_sys_reset_0" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" NAME="event_done" SIGIS="data"/>
         <PORT DIR="O" NAME="interrupt" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="lzw_fpga_1_interrupt">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_intc_0_intr_1_interrupt_concat" PORT="In1"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" NAME="event_start" SIGIS="data"/>
         <PORT DIR="O" LEFT="63" NAME="m_axi_gmem0_AWADDR" RIGHT="0" SIGIS="undef" SIGNAME="axi_ic_zynq_ultra_ps_e_0_S_AXI_HP0_FPD_S00_AXI_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_ic_zynq_ultra_ps_e_0_S_AXI_HP0_FPD" PORT="S00_AXI_awaddr"/>

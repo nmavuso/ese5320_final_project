@@ -72,7 +72,10 @@ port (
     output_length_dout : IN STD_LOGIC_VECTOR (63 downto 0);
     output_length_empty_n : IN STD_LOGIC;
     output_length_read : OUT STD_LOGIC;
-    p_read : IN STD_LOGIC_VECTOR (31 downto 0) );
+    p_read : IN STD_LOGIC_VECTOR (31 downto 0);
+    ap_ext_blocking_n : OUT STD_LOGIC;
+    ap_str_blocking_n : OUT STD_LOGIC;
+    ap_int_blocking_n : OUT STD_LOGIC );
 end;
 
 
@@ -193,13 +196,15 @@ attribute shreg_extract : string;
     signal local_output_size_read_reg_151 : STD_LOGIC_VECTOR (31 downto 0);
     signal gmem_addr_reg_156 : STD_LOGIC_VECTOR (63 downto 0);
     signal gmem_addr_1_reg_162 : STD_LOGIC_VECTOR (63 downto 0);
-    signal sext_ln235_fu_121_p1 : STD_LOGIC_VECTOR (63 downto 0);
-    signal sext_ln236_fu_141_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal sext_ln239_fu_121_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal sext_ln240_fu_141_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal ap_block_state3_io : BOOLEAN;
     signal ap_block_state1 : BOOLEAN;
     signal trunc_ln_fu_111_p4 : STD_LOGIC_VECTOR (61 downto 0);
     signal trunc_ln7_fu_131_p4 : STD_LOGIC_VECTOR (61 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (71 downto 0);
+    signal ap_ext_blocking_cur_n : STD_LOGIC;
+    signal ap_int_blocking_cur_n : STD_LOGIC;
     signal ap_ce_reg : STD_LOGIC;
 
 
@@ -239,8 +244,8 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state1)) then
-                gmem_addr_1_reg_162 <= sext_ln236_fu_141_p1;
-                gmem_addr_reg_156 <= sext_ln235_fu_121_p1;
+                gmem_addr_1_reg_162 <= sext_ln240_fu_141_p1;
+                gmem_addr_reg_156 <= sext_ln239_fu_121_p1;
                 local_output_size_read_reg_151 <= local_output_size_dout;
             end if;
         end if;
@@ -449,6 +454,8 @@ begin
         end if; 
     end process;
 
+    ap_ext_blocking_cur_n <= (gmem_blk_n_W and gmem_blk_n_B and gmem_blk_n_AW);
+    ap_ext_blocking_n <= (ap_ext_blocking_cur_n and ap_const_logic_1);
 
     ap_idle_assign_proc : process(ap_start, ap_CS_fsm_state1)
     begin
@@ -459,6 +466,8 @@ begin
         end if; 
     end process;
 
+    ap_int_blocking_cur_n <= (output_size_blk_n and output_length_blk_n and local_output_size_blk_n);
+    ap_int_blocking_n <= (ap_int_blocking_cur_n and ap_const_logic_1);
 
     ap_ready_assign_proc : process(m_axi_gmem_BVALID, ap_CS_fsm_state72)
     begin
@@ -469,6 +478,7 @@ begin
         end if; 
     end process;
 
+    ap_str_blocking_n <= (ap_const_logic_1 and ap_const_logic_1);
 
     gmem_blk_n_AW_assign_proc : process(m_axi_gmem_AWREADY, ap_CS_fsm_state2, ap_CS_fsm_state3)
     begin
@@ -640,9 +650,9 @@ begin
         end if; 
     end process;
 
-        sext_ln235_fu_121_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(trunc_ln_fu_111_p4),64));
+        sext_ln239_fu_121_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(trunc_ln_fu_111_p4),64));
 
-        sext_ln236_fu_141_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(trunc_ln7_fu_131_p4),64));
+        sext_ln240_fu_141_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(trunc_ln7_fu_131_p4),64));
 
     trunc_ln7_fu_131_p4 <= output_length_dout(63 downto 2);
     trunc_ln_fu_111_p4 <= output_size_dout(63 downto 2);

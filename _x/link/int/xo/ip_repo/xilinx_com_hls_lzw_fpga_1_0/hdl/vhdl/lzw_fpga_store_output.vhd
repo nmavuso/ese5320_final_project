@@ -30,7 +30,10 @@ port (
     local_output_d0 : OUT STD_LOGIC_VECTOR (7 downto 0);
     local_output_length_out_din : OUT STD_LOGIC_VECTOR (8 downto 0);
     local_output_length_out_full_n : IN STD_LOGIC;
-    local_output_length_out_write : OUT STD_LOGIC );
+    local_output_length_out_write : OUT STD_LOGIC;
+    ap_ext_blocking_n : OUT STD_LOGIC;
+    ap_str_blocking_n : OUT STD_LOGIC;
+    ap_int_blocking_n : OUT STD_LOGIC );
 end;
 
 
@@ -77,6 +80,7 @@ attribute shreg_extract : string;
     signal local_output_length_dc_0_reg_105 : STD_LOGIC_VECTOR (8 downto 0);
     signal zext_ln167_fu_132_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_int_blocking_cur_n : STD_LOGIC;
     signal ap_condition_82 : BOOLEAN;
     signal ap_ce_reg : STD_LOGIC;
 
@@ -212,6 +216,7 @@ begin
         end if; 
     end process;
 
+    ap_ext_blocking_n <= (ap_const_logic_1 and ap_const_logic_1);
 
     ap_idle_assign_proc : process(real_start, ap_CS_fsm_state1)
     begin
@@ -222,6 +227,8 @@ begin
         end if; 
     end process;
 
+    ap_int_blocking_cur_n <= (output_stream_blk_n and local_output_length_out_blk_n);
+    ap_int_blocking_n <= (ap_int_blocking_cur_n and ap_const_logic_1);
 
     ap_predicate_op17_read_state2_assign_proc : process(tmp_fu_118_p3, tmp_i_nbreadreq_fu_58_p3)
     begin
@@ -229,6 +236,7 @@ begin
     end process;
 
     ap_ready <= internal_ap_ready;
+    ap_str_blocking_n <= (ap_const_logic_1 and ap_const_logic_1);
     i_fu_126_p2 <= std_logic_vector(unsigned(out_index_1_reg_93) + unsigned(ap_const_lv9_1));
 
     internal_ap_ready_assign_proc : process(local_output_length_out_full_n, ap_CS_fsm_state3)

@@ -22,7 +22,10 @@ port (
     local_output_length_empty_n : IN STD_LOGIC;
     local_output_length_read : OUT STD_LOGIC;
     ap_return_0 : OUT STD_LOGIC_VECTOR (8 downto 0);
-    ap_return_1 : OUT STD_LOGIC_VECTOR (31 downto 0) );
+    ap_return_1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+    ap_ext_blocking_n : OUT STD_LOGIC;
+    ap_str_blocking_n : OUT STD_LOGIC;
+    ap_int_blocking_n : OUT STD_LOGIC );
 end;
 
 
@@ -43,10 +46,11 @@ attribute shreg_extract : string;
     attribute fsm_encoding of ap_CS_fsm_state1 : signal is "none";
     signal local_output_length_blk_n : STD_LOGIC;
     signal ap_block_state1 : BOOLEAN;
-    signal zext_ln233_fu_26_p1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal zext_ln237_fu_26_p1 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_return_0_preg : STD_LOGIC_VECTOR (8 downto 0) := "000000000";
     signal ap_return_1_preg : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
     signal ap_NS_fsm : STD_LOGIC_VECTOR (0 downto 0);
+    signal ap_int_blocking_cur_n : STD_LOGIC;
     signal ap_ce_reg : STD_LOGIC;
 
 
@@ -112,7 +116,7 @@ begin
                 ap_return_1_preg(8) <= '0';
             else
                 if ((not(((ap_start = ap_const_logic_0) or (local_output_length_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-                                        ap_return_1_preg(8 downto 0) <= zext_ln233_fu_26_p1(8 downto 0);
+                                        ap_return_1_preg(8 downto 0) <= zext_ln237_fu_26_p1(8 downto 0);
                 end if; 
             end if;
         end if;
@@ -146,6 +150,7 @@ begin
         end if; 
     end process;
 
+    ap_ext_blocking_n <= (ap_const_logic_1 and ap_const_logic_1);
 
     ap_idle_assign_proc : process(ap_start, ap_CS_fsm_state1)
     begin
@@ -156,6 +161,8 @@ begin
         end if; 
     end process;
 
+    ap_int_blocking_cur_n <= (local_output_length_blk_n);
+    ap_int_blocking_n <= (ap_int_blocking_cur_n and ap_const_logic_1);
 
     ap_ready_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, local_output_length_empty_n)
     begin
@@ -177,15 +184,16 @@ begin
     end process;
 
 
-    ap_return_1_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, local_output_length_empty_n, zext_ln233_fu_26_p1, ap_return_1_preg)
+    ap_return_1_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, local_output_length_empty_n, zext_ln237_fu_26_p1, ap_return_1_preg)
     begin
         if ((not(((ap_start = ap_const_logic_0) or (local_output_length_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-            ap_return_1 <= zext_ln233_fu_26_p1;
+            ap_return_1 <= zext_ln237_fu_26_p1;
         else 
             ap_return_1 <= ap_return_1_preg;
         end if; 
     end process;
 
+    ap_str_blocking_n <= (ap_const_logic_1 and ap_const_logic_1);
 
     local_output_length_blk_n_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, local_output_length_empty_n)
     begin
@@ -206,5 +214,5 @@ begin
         end if; 
     end process;
 
-    zext_ln233_fu_26_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(local_output_length_dout),32));
+    zext_ln237_fu_26_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(local_output_length_dout),32));
 end behav;

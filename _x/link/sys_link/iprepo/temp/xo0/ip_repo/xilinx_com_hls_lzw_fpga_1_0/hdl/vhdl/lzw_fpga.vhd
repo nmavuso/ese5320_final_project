@@ -77,7 +77,9 @@ port (
     s_axi_control_BRESP : OUT STD_LOGIC_VECTOR (1 downto 0);
     ap_clk : IN STD_LOGIC;
     ap_rst_n : IN STD_LOGIC;
+    event_done : OUT STD_LOGIC;
     interrupt : OUT STD_LOGIC;
+    event_start : OUT STD_LOGIC;
     m_axi_gmem0_AWVALID : OUT STD_LOGIC;
     m_axi_gmem0_AWREADY : IN STD_LOGIC;
     m_axi_gmem0_AWADDR : OUT STD_LOGIC_VECTOR (C_M_AXI_GMEM0_ADDR_WIDTH-1 downto 0);
@@ -257,14 +259,20 @@ port (
     m_axi_gmem2_BREADY : OUT STD_LOGIC;
     m_axi_gmem2_BRESP : IN STD_LOGIC_VECTOR (1 downto 0);
     m_axi_gmem2_BID : IN STD_LOGIC_VECTOR (C_M_AXI_GMEM2_ID_WIDTH-1 downto 0);
-    m_axi_gmem2_BUSER : IN STD_LOGIC_VECTOR (C_M_AXI_GMEM2_BUSER_WIDTH-1 downto 0) );
+    m_axi_gmem2_BUSER : IN STD_LOGIC_VECTOR (C_M_AXI_GMEM2_BUSER_WIDTH-1 downto 0);
+    stall_start_ext : OUT STD_LOGIC;
+    stall_done_ext : OUT STD_LOGIC;
+    stall_start_str : OUT STD_LOGIC;
+    stall_done_str : OUT STD_LOGIC;
+    stall_start_int : OUT STD_LOGIC;
+    stall_done_int : OUT STD_LOGIC );
 end;
 
 
 architecture behav of lzw_fpga is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "lzw_fpga_lzw_fpga,hls_ip_2020_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-i,HLS_INPUT_CLOCK=6.700000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=4.891000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=26,HLS_SYN_DSP=0,HLS_SYN_FF=6402,HLS_SYN_LUT=10684,HLS_VERSION=2020_2}";
+    "lzw_fpga_lzw_fpga,hls_ip_2020_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-i,HLS_INPUT_CLOCK=6.667000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=4.866910,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=26,HLS_SYN_DSP=0,HLS_SYN_FF=6405,HLS_SYN_LUT=10776,HLS_VERSION=2020_2}";
     constant C_S_AXI_DATA_WIDTH : INTEGER range 63 downto 0 := 20;
     constant C_S_AXI_WSTRB_WIDTH : INTEGER range 63 downto 0 := 4;
     constant C_S_AXI_ADDR_WIDTH : INTEGER range 63 downto 0 := 20;
@@ -281,6 +289,7 @@ architecture behav of lzw_fpga is
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_const_lv32_0 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
     constant ap_const_lv8_0 : STD_LOGIC_VECTOR (7 downto 0) := "00000000";
+    constant ap_const_boolean_1 : BOOLEAN := true;
     constant ap_const_lv64_0 : STD_LOGIC_VECTOR (63 downto 0) := "0000000000000000000000000000000000000000000000000000000000000000";
     constant ap_const_lv64_1 : STD_LOGIC_VECTOR (63 downto 0) := "0000000000000000000000000000000000000000000000000000000000000001";
     constant ap_const_lv1_0 : STD_LOGIC_VECTOR (0 downto 0) := "0";
@@ -293,7 +302,6 @@ architecture behav of lzw_fpga is
     constant ap_const_lv4_0 : STD_LOGIC_VECTOR (3 downto 0) := "0000";
     constant ap_const_lv4_1 : STD_LOGIC_VECTOR (3 downto 0) := "0001";
     constant ap_const_lv8_1 : STD_LOGIC_VECTOR (7 downto 0) := "00000001";
-    constant ap_const_boolean_1 : BOOLEAN := true;
 
 attribute shreg_extract : string;
     signal ap_rst_reg_2 : STD_LOGIC := '1';
@@ -390,6 +398,9 @@ attribute shreg_extract of ap_rst_n_inv : signal is "no";
     signal lzw_fpga_entry11_U0_output_out_write : STD_LOGIC;
     signal lzw_fpga_entry11_U0_output_length_out_din : STD_LOGIC_VECTOR (63 downto 0);
     signal lzw_fpga_entry11_U0_output_length_out_write : STD_LOGIC;
+    signal lzw_fpga_entry11_U0_ap_ext_blocking_n : STD_LOGIC;
+    signal lzw_fpga_entry11_U0_ap_str_blocking_n : STD_LOGIC;
+    signal lzw_fpga_entry11_U0_ap_int_blocking_n : STD_LOGIC;
     signal load_input_U0_ap_start : STD_LOGIC;
     signal load_input_U0_ap_done : STD_LOGIC;
     signal load_input_U0_ap_continue : STD_LOGIC;
@@ -431,6 +442,9 @@ attribute shreg_extract of ap_rst_n_inv : signal is "no";
     signal load_input_U0_input_stream_write : STD_LOGIC;
     signal load_input_U0_input_r_read : STD_LOGIC;
     signal load_input_U0_input_size_read : STD_LOGIC;
+    signal load_input_U0_ap_ext_blocking_n : STD_LOGIC;
+    signal load_input_U0_ap_str_blocking_n : STD_LOGIC;
+    signal load_input_U0_ap_int_blocking_n : STD_LOGIC;
     signal encoding_U0_ap_start : STD_LOGIC;
     signal encoding_U0_ap_done : STD_LOGIC;
     signal encoding_U0_ap_continue : STD_LOGIC;
@@ -450,6 +464,9 @@ attribute shreg_extract of ap_rst_n_inv : signal is "no";
     signal encoding_U0_local_output_size_out_write : STD_LOGIC;
     signal encoding_U0_local_output_size_out1_din : STD_LOGIC_VECTOR (31 downto 0);
     signal encoding_U0_local_output_size_out1_write : STD_LOGIC;
+    signal encoding_U0_ap_ext_blocking_n : STD_LOGIC;
+    signal encoding_U0_ap_str_blocking_n : STD_LOGIC;
+    signal encoding_U0_ap_int_blocking_n : STD_LOGIC;
     signal ap_channel_done_local_output_code : STD_LOGIC;
     signal encoding_U0_local_output_code_full_n : STD_LOGIC;
     signal decoding_U0_ap_start : STD_LOGIC;
@@ -465,6 +482,9 @@ attribute shreg_extract of ap_rst_n_inv : signal is "no";
     signal decoding_U0_local_output_size_read : STD_LOGIC;
     signal decoding_U0_local_output_size_out_din : STD_LOGIC_VECTOR (31 downto 0);
     signal decoding_U0_local_output_size_out_write : STD_LOGIC;
+    signal decoding_U0_ap_ext_blocking_n : STD_LOGIC;
+    signal decoding_U0_ap_str_blocking_n : STD_LOGIC;
+    signal decoding_U0_ap_int_blocking_n : STD_LOGIC;
     signal store_output_U0_ap_start : STD_LOGIC;
     signal store_output_U0_ap_done : STD_LOGIC;
     signal store_output_U0_ap_continue : STD_LOGIC;
@@ -479,6 +499,9 @@ attribute shreg_extract of ap_rst_n_inv : signal is "no";
     signal store_output_U0_local_output_d0 : STD_LOGIC_VECTOR (7 downto 0);
     signal store_output_U0_local_output_length_out_din : STD_LOGIC_VECTOR (8 downto 0);
     signal store_output_U0_local_output_length_out_write : STD_LOGIC;
+    signal store_output_U0_ap_ext_blocking_n : STD_LOGIC;
+    signal store_output_U0_ap_str_blocking_n : STD_LOGIC;
+    signal store_output_U0_ap_int_blocking_n : STD_LOGIC;
     signal ap_channel_done_local_output : STD_LOGIC;
     signal store_output_U0_local_output_full_n : STD_LOGIC;
     signal copy_output_code_U0_ap_start : STD_LOGIC;
@@ -522,6 +545,9 @@ attribute shreg_extract of ap_rst_n_inv : signal is "no";
     signal copy_output_code_U0_local_output_code_ce0 : STD_LOGIC;
     signal copy_output_code_U0_output_code_read : STD_LOGIC;
     signal copy_output_code_U0_local_output_size_read : STD_LOGIC;
+    signal copy_output_code_U0_ap_ext_blocking_n : STD_LOGIC;
+    signal copy_output_code_U0_ap_str_blocking_n : STD_LOGIC;
+    signal copy_output_code_U0_ap_int_blocking_n : STD_LOGIC;
     signal ap_sync_continue : STD_LOGIC;
     signal Block_split212_proc_U0_ap_start : STD_LOGIC;
     signal Block_split212_proc_U0_ap_done : STD_LOGIC;
@@ -531,6 +557,9 @@ attribute shreg_extract of ap_rst_n_inv : signal is "no";
     signal Block_split212_proc_U0_local_output_length_read : STD_LOGIC;
     signal Block_split212_proc_U0_ap_return_0 : STD_LOGIC_VECTOR (8 downto 0);
     signal Block_split212_proc_U0_ap_return_1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal Block_split212_proc_U0_ap_ext_blocking_n : STD_LOGIC;
+    signal Block_split212_proc_U0_ap_str_blocking_n : STD_LOGIC;
+    signal Block_split212_proc_U0_ap_int_blocking_n : STD_LOGIC;
     signal ap_channel_done_local_output_length_load_cast_loc_channel : STD_LOGIC;
     signal local_output_length_load_cast_loc_channel_full_n : STD_LOGIC;
     signal ap_sync_reg_channel_write_local_output_length_load_cast_loc_channel : STD_LOGIC := '0';
@@ -579,6 +608,9 @@ attribute shreg_extract of ap_rst_n_inv : signal is "no";
     signal copy_output_U0_local_output_address0 : STD_LOGIC_VECTOR (7 downto 0);
     signal copy_output_U0_local_output_ce0 : STD_LOGIC;
     signal copy_output_U0_output_r_read : STD_LOGIC;
+    signal copy_output_U0_ap_ext_blocking_n : STD_LOGIC;
+    signal copy_output_U0_ap_str_blocking_n : STD_LOGIC;
+    signal copy_output_U0_ap_int_blocking_n : STD_LOGIC;
     signal Block_split214_proc_U0_ap_start : STD_LOGIC;
     signal Block_split214_proc_U0_ap_done : STD_LOGIC;
     signal Block_split214_proc_U0_ap_continue : STD_LOGIC;
@@ -619,6 +651,9 @@ attribute shreg_extract of ap_rst_n_inv : signal is "no";
     signal Block_split214_proc_U0_m_axi_gmem_BREADY : STD_LOGIC;
     signal Block_split214_proc_U0_local_output_size_read : STD_LOGIC;
     signal Block_split214_proc_U0_output_length_read : STD_LOGIC;
+    signal Block_split214_proc_U0_ap_ext_blocking_n : STD_LOGIC;
+    signal Block_split214_proc_U0_ap_str_blocking_n : STD_LOGIC;
+    signal Block_split214_proc_U0_ap_int_blocking_n : STD_LOGIC;
     signal local_output_code_i_full_n : STD_LOGIC;
     signal local_output_code_t_empty_n : STD_LOGIC;
     signal local_output_i_full_n : STD_LOGIC;
@@ -701,6 +736,18 @@ attribute shreg_extract of ap_rst_n_inv : signal is "no";
     signal copy_output_U0_start_write : STD_LOGIC;
     signal Block_split214_proc_U0_start_full_n : STD_LOGIC;
     signal Block_split214_proc_U0_start_write : STD_LOGIC;
+    signal ap_ext_blocking_cur_n : STD_LOGIC;
+    signal ap_str_blocking_cur_n : STD_LOGIC;
+    signal ap_int_blocking_cur_n : STD_LOGIC;
+    signal ap_ext_blocking_sub_n : STD_LOGIC;
+    signal ap_str_blocking_sub_n : STD_LOGIC;
+    signal ap_int_blocking_sub_n : STD_LOGIC;
+    signal ap_ext_blocking_n : STD_LOGIC;
+    signal ap_str_blocking_n : STD_LOGIC;
+    signal ap_int_blocking_n : STD_LOGIC;
+    signal ap_ext_blocking_n_reg : STD_LOGIC;
+    signal ap_str_blocking_n_reg : STD_LOGIC;
+    signal ap_int_blocking_n_reg : STD_LOGIC;
     signal ap_ce_reg : STD_LOGIC;
 
     component lzw_fpga_lzw_fpga_entry11 IS
@@ -741,7 +788,10 @@ attribute shreg_extract of ap_rst_n_inv : signal is "no";
         output_out_write : OUT STD_LOGIC;
         output_length_out_din : OUT STD_LOGIC_VECTOR (63 downto 0);
         output_length_out_full_n : IN STD_LOGIC;
-        output_length_out_write : OUT STD_LOGIC );
+        output_length_out_write : OUT STD_LOGIC;
+        ap_ext_blocking_n : OUT STD_LOGIC;
+        ap_str_blocking_n : OUT STD_LOGIC;
+        ap_int_blocking_n : OUT STD_LOGIC );
     end component;
 
 
@@ -807,7 +857,10 @@ attribute shreg_extract of ap_rst_n_inv : signal is "no";
         input_r_read : OUT STD_LOGIC;
         input_size_dout : IN STD_LOGIC_VECTOR (31 downto 0);
         input_size_empty_n : IN STD_LOGIC;
-        input_size_read : OUT STD_LOGIC );
+        input_size_read : OUT STD_LOGIC;
+        ap_ext_blocking_n : OUT STD_LOGIC;
+        ap_str_blocking_n : OUT STD_LOGIC;
+        ap_int_blocking_n : OUT STD_LOGIC );
     end component;
 
 
@@ -841,7 +894,10 @@ attribute shreg_extract of ap_rst_n_inv : signal is "no";
         local_output_size_out_write : OUT STD_LOGIC;
         local_output_size_out1_din : OUT STD_LOGIC_VECTOR (31 downto 0);
         local_output_size_out1_full_n : IN STD_LOGIC;
-        local_output_size_out1_write : OUT STD_LOGIC );
+        local_output_size_out1_write : OUT STD_LOGIC;
+        ap_ext_blocking_n : OUT STD_LOGIC;
+        ap_str_blocking_n : OUT STD_LOGIC;
+        ap_int_blocking_n : OUT STD_LOGIC );
     end component;
 
 
@@ -868,7 +924,10 @@ attribute shreg_extract of ap_rst_n_inv : signal is "no";
         local_output_size_read : OUT STD_LOGIC;
         local_output_size_out_din : OUT STD_LOGIC_VECTOR (31 downto 0);
         local_output_size_out_full_n : IN STD_LOGIC;
-        local_output_size_out_write : OUT STD_LOGIC );
+        local_output_size_out_write : OUT STD_LOGIC;
+        ap_ext_blocking_n : OUT STD_LOGIC;
+        ap_str_blocking_n : OUT STD_LOGIC;
+        ap_int_blocking_n : OUT STD_LOGIC );
     end component;
 
 
@@ -893,7 +952,10 @@ attribute shreg_extract of ap_rst_n_inv : signal is "no";
         local_output_d0 : OUT STD_LOGIC_VECTOR (7 downto 0);
         local_output_length_out_din : OUT STD_LOGIC_VECTOR (8 downto 0);
         local_output_length_out_full_n : IN STD_LOGIC;
-        local_output_length_out_write : OUT STD_LOGIC );
+        local_output_length_out_write : OUT STD_LOGIC;
+        ap_ext_blocking_n : OUT STD_LOGIC;
+        ap_str_blocking_n : OUT STD_LOGIC;
+        ap_int_blocking_n : OUT STD_LOGIC );
     end component;
 
 
@@ -959,7 +1021,10 @@ attribute shreg_extract of ap_rst_n_inv : signal is "no";
         output_code_read : OUT STD_LOGIC;
         local_output_size_dout : IN STD_LOGIC_VECTOR (31 downto 0);
         local_output_size_empty_n : IN STD_LOGIC;
-        local_output_size_read : OUT STD_LOGIC );
+        local_output_size_read : OUT STD_LOGIC;
+        ap_ext_blocking_n : OUT STD_LOGIC;
+        ap_str_blocking_n : OUT STD_LOGIC;
+        ap_int_blocking_n : OUT STD_LOGIC );
     end component;
 
 
@@ -976,7 +1041,10 @@ attribute shreg_extract of ap_rst_n_inv : signal is "no";
         local_output_length_empty_n : IN STD_LOGIC;
         local_output_length_read : OUT STD_LOGIC;
         ap_return_0 : OUT STD_LOGIC_VECTOR (8 downto 0);
-        ap_return_1 : OUT STD_LOGIC_VECTOR (31 downto 0) );
+        ap_return_1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        ap_ext_blocking_n : OUT STD_LOGIC;
+        ap_str_blocking_n : OUT STD_LOGIC;
+        ap_int_blocking_n : OUT STD_LOGIC );
     end component;
 
 
@@ -1040,7 +1108,10 @@ attribute shreg_extract of ap_rst_n_inv : signal is "no";
         output_r_dout : IN STD_LOGIC_VECTOR (63 downto 0);
         output_r_empty_n : IN STD_LOGIC;
         output_r_read : OUT STD_LOGIC;
-        output_length : IN STD_LOGIC_VECTOR (8 downto 0) );
+        output_length : IN STD_LOGIC_VECTOR (8 downto 0);
+        ap_ext_blocking_n : OUT STD_LOGIC;
+        ap_str_blocking_n : OUT STD_LOGIC;
+        ap_int_blocking_n : OUT STD_LOGIC );
     end component;
 
 
@@ -1107,7 +1178,10 @@ attribute shreg_extract of ap_rst_n_inv : signal is "no";
         output_length_dout : IN STD_LOGIC_VECTOR (63 downto 0);
         output_length_empty_n : IN STD_LOGIC;
         output_length_read : OUT STD_LOGIC;
-        p_read : IN STD_LOGIC_VECTOR (31 downto 0) );
+        p_read : IN STD_LOGIC_VECTOR (31 downto 0);
+        ap_ext_blocking_n : OUT STD_LOGIC;
+        ap_str_blocking_n : OUT STD_LOGIC;
+        ap_int_blocking_n : OUT STD_LOGIC );
     end component;
 
 
@@ -1393,6 +1467,7 @@ attribute shreg_extract of ap_rst_n_inv : signal is "no";
         output_length : OUT STD_LOGIC_VECTOR (63 downto 0);
         ap_start : OUT STD_LOGIC;
         interrupt : OUT STD_LOGIC;
+        event_start : OUT STD_LOGIC;
         ap_ready : IN STD_LOGIC;
         ap_done : IN STD_LOGIC;
         ap_continue : OUT STD_LOGIC;
@@ -1907,6 +1982,7 @@ begin
         output_length => output_length,
         ap_start => ap_start,
         interrupt => interrupt,
+        event_start => event_start,
         ap_ready => ap_ready,
         ap_done => ap_done,
         ap_continue => ap_continue,
@@ -1914,7 +1990,7 @@ begin
 
     gmem0_m_axi_U : component lzw_fpga_gmem0_m_axi
     generic map (
-        CONSERVATIVE => 0,
+        CONSERVATIVE => 1,
         USER_DW => 8,
         USER_AW => 64,
         USER_MAXREQS => 69,
@@ -2030,7 +2106,7 @@ begin
 
     gmem1_m_axi_U : component lzw_fpga_gmem1_m_axi
     generic map (
-        CONSERVATIVE => 0,
+        CONSERVATIVE => 1,
         USER_DW => 32,
         USER_AW => 64,
         USER_MAXREQS => 69,
@@ -2146,7 +2222,7 @@ begin
 
     gmem_m_axi_U : component lzw_fpga_gmem_m_axi
     generic map (
-        CONSERVATIVE => 0,
+        CONSERVATIVE => 1,
         USER_DW => 32,
         USER_AW => 64,
         USER_MAXREQS => 69,
@@ -2262,7 +2338,7 @@ begin
 
     gmem2_m_axi_U : component lzw_fpga_gmem2_m_axi
     generic map (
-        CONSERVATIVE => 0,
+        CONSERVATIVE => 1,
         USER_DW => 8,
         USER_AW => 64,
         USER_MAXREQS => 69,
@@ -2464,7 +2540,10 @@ begin
         output_out_write => lzw_fpga_entry11_U0_output_out_write,
         output_length_out_din => lzw_fpga_entry11_U0_output_length_out_din,
         output_length_out_full_n => output_length_c_full_n,
-        output_length_out_write => lzw_fpga_entry11_U0_output_length_out_write);
+        output_length_out_write => lzw_fpga_entry11_U0_output_length_out_write,
+        ap_ext_blocking_n => lzw_fpga_entry11_U0_ap_ext_blocking_n,
+        ap_str_blocking_n => lzw_fpga_entry11_U0_ap_str_blocking_n,
+        ap_int_blocking_n => lzw_fpga_entry11_U0_ap_int_blocking_n);
 
     load_input_U0 : component lzw_fpga_load_input
     port map (
@@ -2528,7 +2607,10 @@ begin
         input_r_read => load_input_U0_input_r_read,
         input_size_dout => input_size_c_dout,
         input_size_empty_n => input_size_c_empty_n,
-        input_size_read => load_input_U0_input_size_read);
+        input_size_read => load_input_U0_input_size_read,
+        ap_ext_blocking_n => load_input_U0_ap_ext_blocking_n,
+        ap_str_blocking_n => load_input_U0_ap_str_blocking_n,
+        ap_int_blocking_n => load_input_U0_ap_int_blocking_n);
 
     encoding_U0 : component lzw_fpga_encoding
     port map (
@@ -2560,7 +2642,10 @@ begin
         local_output_size_out_write => encoding_U0_local_output_size_out_write,
         local_output_size_out1_din => encoding_U0_local_output_size_out1_din,
         local_output_size_out1_full_n => local_output_size_c25_full_n,
-        local_output_size_out1_write => encoding_U0_local_output_size_out1_write);
+        local_output_size_out1_write => encoding_U0_local_output_size_out1_write,
+        ap_ext_blocking_n => encoding_U0_ap_ext_blocking_n,
+        ap_str_blocking_n => encoding_U0_ap_str_blocking_n,
+        ap_int_blocking_n => encoding_U0_ap_int_blocking_n);
 
     decoding_U0 : component lzw_fpga_decoding
     port map (
@@ -2585,7 +2670,10 @@ begin
         local_output_size_read => decoding_U0_local_output_size_read,
         local_output_size_out_din => decoding_U0_local_output_size_out_din,
         local_output_size_out_full_n => local_output_size_c26_full_n,
-        local_output_size_out_write => decoding_U0_local_output_size_out_write);
+        local_output_size_out_write => decoding_U0_local_output_size_out_write,
+        ap_ext_blocking_n => decoding_U0_ap_ext_blocking_n,
+        ap_str_blocking_n => decoding_U0_ap_str_blocking_n,
+        ap_int_blocking_n => decoding_U0_ap_int_blocking_n);
 
     store_output_U0 : component lzw_fpga_store_output
     port map (
@@ -2608,7 +2696,10 @@ begin
         local_output_d0 => store_output_U0_local_output_d0,
         local_output_length_out_din => store_output_U0_local_output_length_out_din,
         local_output_length_out_full_n => local_output_length_c_full_n,
-        local_output_length_out_write => store_output_U0_local_output_length_out_write);
+        local_output_length_out_write => store_output_U0_local_output_length_out_write,
+        ap_ext_blocking_n => store_output_U0_ap_ext_blocking_n,
+        ap_str_blocking_n => store_output_U0_ap_str_blocking_n,
+        ap_int_blocking_n => store_output_U0_ap_int_blocking_n);
 
     copy_output_code_U0 : component lzw_fpga_copy_output_code
     port map (
@@ -2672,7 +2763,10 @@ begin
         output_code_read => copy_output_code_U0_output_code_read,
         local_output_size_dout => local_output_size_c25_dout,
         local_output_size_empty_n => local_output_size_c25_empty_n,
-        local_output_size_read => copy_output_code_U0_local_output_size_read);
+        local_output_size_read => copy_output_code_U0_local_output_size_read,
+        ap_ext_blocking_n => copy_output_code_U0_ap_ext_blocking_n,
+        ap_str_blocking_n => copy_output_code_U0_ap_str_blocking_n,
+        ap_int_blocking_n => copy_output_code_U0_ap_int_blocking_n);
 
     Block_split212_proc_U0 : component lzw_fpga_Block_split212_proc
     port map (
@@ -2687,7 +2781,10 @@ begin
         local_output_length_empty_n => local_output_length_c_empty_n,
         local_output_length_read => Block_split212_proc_U0_local_output_length_read,
         ap_return_0 => Block_split212_proc_U0_ap_return_0,
-        ap_return_1 => Block_split212_proc_U0_ap_return_1);
+        ap_return_1 => Block_split212_proc_U0_ap_return_1,
+        ap_ext_blocking_n => Block_split212_proc_U0_ap_ext_blocking_n,
+        ap_str_blocking_n => Block_split212_proc_U0_ap_str_blocking_n,
+        ap_int_blocking_n => Block_split212_proc_U0_ap_int_blocking_n);
 
     copy_output_U0 : component lzw_fpga_copy_output
     port map (
@@ -2749,7 +2846,10 @@ begin
         output_r_dout => output_c_dout,
         output_r_empty_n => output_c_empty_n,
         output_r_read => copy_output_U0_output_r_read,
-        output_length => local_output_length_load_loc_channel_dout);
+        output_length => local_output_length_load_loc_channel_dout,
+        ap_ext_blocking_n => copy_output_U0_ap_ext_blocking_n,
+        ap_str_blocking_n => copy_output_U0_ap_str_blocking_n,
+        ap_int_blocking_n => copy_output_U0_ap_int_blocking_n);
 
     Block_split214_proc_U0 : component lzw_fpga_Block_split214_proc
     port map (
@@ -2814,7 +2914,10 @@ begin
         output_length_dout => output_length_c_dout,
         output_length_empty_n => output_length_c_empty_n,
         output_length_read => Block_split214_proc_U0_output_length_read,
-        p_read => local_output_length_load_cast_loc_channel_dout);
+        p_read => local_output_length_load_cast_loc_channel_dout,
+        ap_ext_blocking_n => Block_split214_proc_U0_ap_ext_blocking_n,
+        ap_str_blocking_n => Block_split214_proc_U0_ap_str_blocking_n,
+        ap_int_blocking_n => Block_split214_proc_U0_ap_int_blocking_n);
 
     input_c_U : component lzw_fpga_fifo_w64_d2_S
     port map (
@@ -3144,6 +3247,20 @@ begin
     end process;
 
 
+    ap_ext_blocking_n_reg_assign_proc : process (ap_clk)
+    begin
+        if (ap_clk'event and ap_clk = '1') then
+            ap_ext_blocking_n_reg <= ap_ext_blocking_n;
+        end if;
+    end process;
+
+    ap_int_blocking_n_reg_assign_proc : process (ap_clk)
+    begin
+        if (ap_clk'event and ap_clk = '1') then
+            ap_int_blocking_n_reg <= ap_int_blocking_n;
+        end if;
+    end process;
+
     ap_rst_n_inv_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
@@ -3164,6 +3281,13 @@ begin
                         ap_rst_reg_2 <= not(ap_rst_n);
         end if;
     end process;
+
+    ap_str_blocking_n_reg_assign_proc : process (ap_clk)
+    begin
+        if (ap_clk'event and ap_clk = '1') then
+            ap_str_blocking_n_reg <= ap_str_blocking_n;
+        end if;
+    end process;
     Block_split212_proc_U0_ap_continue <= (ap_sync_channel_write_local_output_length_load_loc_channel and ap_sync_channel_write_local_output_length_load_cast_loc_channel);
     Block_split212_proc_U0_ap_start <= start_for_Block_split212_proc_U0_empty_n;
     Block_split212_proc_U0_start_full_n <= ap_const_logic_1;
@@ -3177,8 +3301,17 @@ begin
     ap_channel_done_local_output_length_load_cast_loc_channel <= ((ap_sync_reg_channel_write_local_output_length_load_cast_loc_channel xor ap_const_logic_1) and Block_split212_proc_U0_ap_done);
     ap_channel_done_local_output_length_load_loc_channel <= ((ap_sync_reg_channel_write_local_output_length_load_loc_channel xor ap_const_logic_1) and Block_split212_proc_U0_ap_done);
     ap_done <= ap_sync_done;
-    ap_idle <= (store_output_U0_ap_idle and lzw_fpga_entry11_U0_ap_idle and load_input_U0_ap_idle and (local_output_t_empty_n xor ap_const_logic_1) and (local_output_code_t_empty_n xor ap_const_logic_1) and (local_output_length_load_cast_loc_channel_empty_n xor ap_const_logic_1) and (local_output_length_load_loc_channel_empty_n xor ap_const_logic_1) and encoding_U0_ap_idle and decoding_U0_ap_idle and copy_output_code_U0_ap_idle and copy_output_U0_ap_idle and Block_split214_proc_U0_ap_idle and Block_split212_proc_U0_ap_idle);
+    ap_ext_blocking_cur_n <= ap_const_logic_1;
+    ap_ext_blocking_n <= (ap_ext_blocking_sub_n and ap_ext_blocking_cur_n);
+    ap_ext_blocking_sub_n <= (store_output_U0_ap_ext_blocking_n and lzw_fpga_entry11_U0_ap_ext_blocking_n and load_input_U0_ap_ext_blocking_n and encoding_U0_ap_ext_blocking_n and decoding_U0_ap_ext_blocking_n and copy_output_code_U0_ap_ext_blocking_n and copy_output_U0_ap_ext_blocking_n and Block_split214_proc_U0_ap_ext_blocking_n and Block_split212_proc_U0_ap_ext_blocking_n);
+    ap_idle <= (store_output_U0_ap_idle and lzw_fpga_entry11_U0_ap_idle and load_input_U0_ap_idle and (local_output_code_t_empty_n xor ap_const_logic_1) and (local_output_length_load_cast_loc_channel_empty_n xor ap_const_logic_1) and (local_output_length_load_loc_channel_empty_n xor ap_const_logic_1) and (local_output_t_empty_n xor ap_const_logic_1) and encoding_U0_ap_idle and decoding_U0_ap_idle and copy_output_code_U0_ap_idle and copy_output_U0_ap_idle and Block_split214_proc_U0_ap_idle and Block_split212_proc_U0_ap_idle);
+    ap_int_blocking_cur_n <= ap_const_logic_1;
+    ap_int_blocking_n <= (ap_int_blocking_sub_n and ap_int_blocking_cur_n);
+    ap_int_blocking_sub_n <= (store_output_U0_ap_int_blocking_n and lzw_fpga_entry11_U0_ap_int_blocking_n and load_input_U0_ap_int_blocking_n and encoding_U0_ap_int_blocking_n and decoding_U0_ap_int_blocking_n and copy_output_code_U0_ap_int_blocking_n and copy_output_U0_ap_int_blocking_n and Block_split214_proc_U0_ap_int_blocking_n and Block_split212_proc_U0_ap_int_blocking_n);
     ap_ready <= ap_sync_ready;
+    ap_str_blocking_cur_n <= ap_const_logic_1;
+    ap_str_blocking_n <= (ap_str_blocking_sub_n and ap_str_blocking_cur_n);
+    ap_str_blocking_sub_n <= (store_output_U0_ap_str_blocking_n and lzw_fpga_entry11_U0_ap_str_blocking_n and load_input_U0_ap_str_blocking_n and encoding_U0_ap_str_blocking_n and decoding_U0_ap_str_blocking_n and copy_output_code_U0_ap_str_blocking_n and copy_output_U0_ap_str_blocking_n and Block_split214_proc_U0_ap_str_blocking_n and Block_split212_proc_U0_ap_str_blocking_n);
     ap_sync_channel_write_local_output_length_load_cast_loc_channel <= ((local_output_length_load_cast_loc_channel_full_n and ap_channel_done_local_output_length_load_cast_loc_channel) or ap_sync_reg_channel_write_local_output_length_load_cast_loc_channel);
     ap_sync_channel_write_local_output_length_load_loc_channel <= ((local_output_length_load_loc_channel_full_n and ap_channel_done_local_output_length_load_loc_channel) or ap_sync_reg_channel_write_local_output_length_load_loc_channel);
     ap_sync_continue <= (ap_sync_done and ap_continue);
@@ -3199,12 +3332,73 @@ begin
     encoding_U0_ap_continue <= local_output_code_i_full_n;
     encoding_U0_ap_start <= start_for_encoding_U0_empty_n;
     encoding_U0_local_output_code_full_n <= local_output_code_i_full_n;
+    event_done <= ap_done;
     load_input_U0_ap_continue <= ap_const_logic_1;
     load_input_U0_ap_start <= ((ap_sync_reg_load_input_U0_ap_ready xor ap_const_logic_1) and ap_start);
     load_input_U0_start_full_n <= ap_const_logic_1;
     load_input_U0_start_write <= ap_const_logic_0;
     lzw_fpga_entry11_U0_ap_continue <= ap_const_logic_1;
     lzw_fpga_entry11_U0_ap_start <= ((ap_sync_reg_lzw_fpga_entry11_U0_ap_ready xor ap_const_logic_1) and ap_start);
+
+    stall_done_ext_assign_proc : process(ap_ext_blocking_n, ap_ext_blocking_n_reg)
+    begin
+        if (((ap_ext_blocking_n_reg = ap_const_logic_0) and (ap_ext_blocking_n = ap_const_logic_1))) then 
+            stall_done_ext <= ap_const_logic_1;
+        else 
+            stall_done_ext <= ap_const_logic_0;
+        end if; 
+    end process;
+
+
+    stall_done_int_assign_proc : process(ap_int_blocking_n, ap_int_blocking_n_reg)
+    begin
+        if (((ap_int_blocking_n_reg = ap_const_logic_0) and (ap_int_blocking_n = ap_const_logic_1))) then 
+            stall_done_int <= ap_const_logic_1;
+        else 
+            stall_done_int <= ap_const_logic_0;
+        end if; 
+    end process;
+
+
+    stall_done_str_assign_proc : process(ap_str_blocking_n, ap_str_blocking_n_reg)
+    begin
+        if (((ap_str_blocking_n_reg = ap_const_logic_0) and (ap_str_blocking_n = ap_const_logic_1))) then 
+            stall_done_str <= ap_const_logic_1;
+        else 
+            stall_done_str <= ap_const_logic_0;
+        end if; 
+    end process;
+
+
+    stall_start_ext_assign_proc : process(ap_ext_blocking_n, ap_ext_blocking_n_reg)
+    begin
+        if (((ap_ext_blocking_n_reg = ap_const_logic_1) and (ap_ext_blocking_n = ap_const_logic_0))) then 
+            stall_start_ext <= ap_const_logic_1;
+        else 
+            stall_start_ext <= ap_const_logic_0;
+        end if; 
+    end process;
+
+
+    stall_start_int_assign_proc : process(ap_int_blocking_n, ap_int_blocking_n_reg)
+    begin
+        if (((ap_int_blocking_n_reg = ap_const_logic_1) and (ap_int_blocking_n = ap_const_logic_0))) then 
+            stall_start_int <= ap_const_logic_1;
+        else 
+            stall_start_int <= ap_const_logic_0;
+        end if; 
+    end process;
+
+
+    stall_start_str_assign_proc : process(ap_str_blocking_n, ap_str_blocking_n_reg)
+    begin
+        if (((ap_str_blocking_n_reg = ap_const_logic_1) and (ap_str_blocking_n = ap_const_logic_0))) then 
+            stall_start_str <= ap_const_logic_1;
+        else 
+            stall_start_str <= ap_const_logic_0;
+        end if; 
+    end process;
+
     start_for_Block_split212_proc_U0_din <= (0=>ap_const_logic_1, others=>'-');
     start_for_decoding_U0_din <= (0=>ap_const_logic_1, others=>'-');
     start_for_encoding_U0_din <= (0=>ap_const_logic_1, others=>'-');

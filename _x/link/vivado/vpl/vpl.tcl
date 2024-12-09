@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/vpl.tcl"
+  variable script "/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/vpl.tcl"
   variable category "vivado_impl"
 }
 

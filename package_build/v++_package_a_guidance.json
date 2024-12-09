@@ -1,14 +1,14 @@
 {
  "session": {
   "name": "v++_package_a",
-  "uuid": "bea23c67-c99c-4a17-9e40-c1f20f39841c",
+  "uuid": "baae1185-1df1-4bcf-b264-92481d739f94",
   "description": "v++  --package --target hw --config fpga_accelerate/package.cfg lzw_fpga.xclbin --package.out_dir package --package.sd_file encoder --package.kernel_image /home1/e/ese5320/u96v2_sbc_base/sw/u96v2_sbc_base/PetaLinux/image/image.ub --package.rootfs /home1/e/ese5320/u96v2_sbc_base/sw/u96v2_sbc_base/PetaLinux/rootfs/rootfs.ext4 --package.sd_file lzw_fpga.xclbin --package.sd_file ./fpga_accelerate/xrt.ini ",
   "timestamp": "0",
   "report_file": {
    "scheme": "FILE",
    "host": "",
    "port": 0,
-   "path": "/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/package_build/reports/package/v++_package_a_guidance.html",
+   "path": "/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/package_build/reports/package/v++_package_a_guidance.html",
    "query": "",
    "fragment": "",
    "media_type": "",
@@ -19,7 +19,7 @@
    "scheme": "FILE",
    "host": "",
    "port": 0,
-   "path": "/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/package_build/v++_package_a_guidance.pb",
+   "path": "/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/package_build/v++_package_a_guidance.pb",
    "query": "",
    "fragment": "",
    "media_type": "",

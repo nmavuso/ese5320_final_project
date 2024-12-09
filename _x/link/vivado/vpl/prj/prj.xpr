@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="54" Path="/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/prj/prj.xpr">
+<Project Version="7" Minor="54" Path="/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/prj/prj.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="e4dfd1f1b932486b86e20ee37bb14f13"/>
+    <Option Name="Id" Val="c9443de4654f40768d1f31e27fff504b"/>
     <Option Name="Part" Val="xczu3eg-sbva484-1-i"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -39,10 +39,10 @@
     <Option Name="ProjectType" Val="Default"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../int/xo/ip_repo/xilinx_com_hls_lzw_fpga_1_0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../.local/hw_platform/iprepo"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../../../../pollux/software/xilinx/2020.2/Vitis/2020.2/data/cache/xilinx"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../../../../../pollux/software/xilinx/2020.2/Vitis/2020.2/data/cache/xilinx"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../.local/hw_platform/ipcache"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../../../../pollux/software/xilinx/2020.2/Vitis/2020.2/data/ip"/>
-    <Option Name="IPOutputRepo" Val="/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/.ipcache"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../../../../../pollux/software/xilinx/2020.2/Vitis/2020.2/data/ip"/>
+    <Option Name="IPOutputRepo" Val="/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/.ipcache"/>
     <Option Name="IPDefaultOutputPath" Val="$PGENDIR/sources_1"/>
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
@@ -63,7 +63,7 @@
     <Option Name="DSADesignIntentExternalHost" Val="false"/>
     <Option Name="DSADesignIntentEmbedded" Val="true"/>
     <Option Name="DSADesignIntentDatacenter" Val="false"/>
-    <Option Name="DSAIpCacheDir" Val="/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/prj/u96v2_sbc_base.cache/ip"/>
+    <Option Name="DSAIpCacheDir" Val="/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/prj/u96v2_sbc_base.cache/ip"/>
     <Option Name="WTXSimLaunchSim" Val="0"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
@@ -98,11 +98,116 @@
       <File Path="$PSRCDIR/sources_1/bd/u96v2_sbc_base/u96v2_sbc_base.bd">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../.local/hw_platform/prj/u96v2_sbc_base.srcs/sources_1/bd/u96v2_sbc_base/u96v2_sbc_base.bd"/>
-          <Attr Name="ImportTime" Val="1733093032"/>
+          <Attr Name="ImportTime" Val="1733706767"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_xbar_0/u96v2_sbc_base_xbar_0.xci">
+          <Proxy FileSetName="u96v2_sbc_base_xbar_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_zynq_ultra_ps_e_0_0/u96v2_sbc_base_zynq_ultra_ps_e_0_0.xci">
+          <Proxy FileSetName="u96v2_sbc_base_zynq_ultra_ps_e_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_axi_intc_0_0/u96v2_sbc_base_axi_intc_0_0.xci">
+          <Proxy FileSetName="u96v2_sbc_base_axi_intc_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_auto_pc_1/u96v2_sbc_base_auto_pc_1.xci">
+          <Proxy FileSetName="u96v2_sbc_base_auto_pc_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_xbar_1/u96v2_sbc_base_xbar_1.xci">
+          <Proxy FileSetName="u96v2_sbc_base_xbar_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_lzw_fpga_1_0/u96v2_sbc_base_lzw_fpga_1_0.xci">
+          <Proxy FileSetName="u96v2_sbc_base_lzw_fpga_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_auto_ds_9/u96v2_sbc_base_auto_ds_9.xci">
+          <Proxy FileSetName="u96v2_sbc_base_auto_ds_9"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_auto_pc_9/u96v2_sbc_base_auto_pc_9.xci">
+          <Proxy FileSetName="u96v2_sbc_base_auto_pc_9"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_auto_ds_5/u96v2_sbc_base_auto_ds_5.xci">
+          <Proxy FileSetName="u96v2_sbc_base_auto_ds_5"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_auto_ds_2/u96v2_sbc_base_auto_ds_2.xci">
+          <Proxy FileSetName="u96v2_sbc_base_auto_ds_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_auto_pc_2/u96v2_sbc_base_auto_pc_2.xci">
+          <Proxy FileSetName="u96v2_sbc_base_auto_pc_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_auto_ds_3/u96v2_sbc_base_auto_ds_3.xci">
+          <Proxy FileSetName="u96v2_sbc_base_auto_ds_3"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_auto_pc_6/u96v2_sbc_base_auto_pc_6.xci">
+          <Proxy FileSetName="u96v2_sbc_base_auto_pc_6"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_auto_pc_3/u96v2_sbc_base_auto_pc_3.xci">
+          <Proxy FileSetName="u96v2_sbc_base_auto_pc_3"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_auto_ds_4/u96v2_sbc_base_auto_ds_4.xci">
+          <Proxy FileSetName="u96v2_sbc_base_auto_ds_4"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_auto_pc_8/u96v2_sbc_base_auto_pc_8.xci">
+          <Proxy FileSetName="u96v2_sbc_base_auto_pc_8"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_auto_pc_4/u96v2_sbc_base_auto_pc_4.xci">
+          <Proxy FileSetName="u96v2_sbc_base_auto_pc_4"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_auto_ds_8/u96v2_sbc_base_auto_ds_8.xci">
+          <Proxy FileSetName="u96v2_sbc_base_auto_ds_8"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_auto_pc_7/u96v2_sbc_base_auto_pc_7.xci">
+          <Proxy FileSetName="u96v2_sbc_base_auto_pc_7"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_auto_ds_7/u96v2_sbc_base_auto_ds_7.xci">
+          <Proxy FileSetName="u96v2_sbc_base_auto_ds_7"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_auto_pc_5/u96v2_sbc_base_auto_pc_5.xci">
+          <Proxy FileSetName="u96v2_sbc_base_auto_pc_5"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_auto_ds_6/u96v2_sbc_base_auto_ds_6.xci">
+          <Proxy FileSetName="u96v2_sbc_base_auto_ds_6"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_m00_data_fifo_0/u96v2_sbc_base_m00_data_fifo_0.xci">
+          <Proxy FileSetName="u96v2_sbc_base_m00_data_fifo_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_m00_regslice_0/u96v2_sbc_base_m00_regslice_0.xci">
+          <Proxy FileSetName="u96v2_sbc_base_m00_regslice_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_auto_us_df_3/u96v2_sbc_base_auto_us_df_3.xci">
+          <Proxy FileSetName="u96v2_sbc_base_auto_us_df_3"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_s03_regslice_0/u96v2_sbc_base_s03_regslice_0.xci">
+          <Proxy FileSetName="u96v2_sbc_base_s03_regslice_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_auto_us_df_0/u96v2_sbc_base_auto_us_df_0.xci">
+          <Proxy FileSetName="u96v2_sbc_base_auto_us_df_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_s00_regslice_0/u96v2_sbc_base_s00_regslice_0.xci">
+          <Proxy FileSetName="u96v2_sbc_base_s00_regslice_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_auto_us_df_2/u96v2_sbc_base_auto_us_df_2.xci">
+          <Proxy FileSetName="u96v2_sbc_base_auto_us_df_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_s02_regslice_0/u96v2_sbc_base_s02_regslice_0.xci">
+          <Proxy FileSetName="u96v2_sbc_base_s02_regslice_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_auto_us_df_1/u96v2_sbc_base_auto_us_df_1.xci">
+          <Proxy FileSetName="u96v2_sbc_base_auto_us_df_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_s01_regslice_0/u96v2_sbc_base_s01_regslice_0.xci">
+          <Proxy FileSetName="u96v2_sbc_base_s01_regslice_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_auto_ds_0/u96v2_sbc_base_auto_ds_0.xci">
+          <Proxy FileSetName="u96v2_sbc_base_auto_ds_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_auto_pc_0/u96v2_sbc_base_auto_pc_0.xci">
+          <Proxy FileSetName="u96v2_sbc_base_auto_pc_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="u96v2_sbc_base.bd" FileRelPathName="ip/u96v2_sbc_base_auto_ds_1/u96v2_sbc_base_auto_ds_1.xci">
+          <Proxy FileSetName="u96v2_sbc_base_auto_ds_1"/>
+        </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/hdl/u96v2_sbc_base_wrapper.vhd">
         <FileInfo>
@@ -240,6 +345,216 @@
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
+    <FileSet Name="u96v2_sbc_base_xbar_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_xbar_0" RelGenDir="$PGENDIR/u96v2_sbc_base_xbar_0">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_xbar_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_zynq_ultra_ps_e_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_zynq_ultra_ps_e_0_0" RelGenDir="$PGENDIR/u96v2_sbc_base_zynq_ultra_ps_e_0_0">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_zynq_ultra_ps_e_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_axi_intc_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_axi_intc_0_0" RelGenDir="$PGENDIR/u96v2_sbc_base_axi_intc_0_0">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_axi_intc_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_auto_pc_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_auto_pc_1" RelGenDir="$PGENDIR/u96v2_sbc_base_auto_pc_1">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_auto_pc_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_xbar_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_xbar_1" RelGenDir="$PGENDIR/u96v2_sbc_base_xbar_1">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_xbar_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_lzw_fpga_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_lzw_fpga_1_0" RelGenDir="$PGENDIR/u96v2_sbc_base_lzw_fpga_1_0">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_lzw_fpga_1_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_auto_ds_9" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_auto_ds_9" RelGenDir="$PGENDIR/u96v2_sbc_base_auto_ds_9">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_auto_ds_9"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_auto_pc_9" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_auto_pc_9" RelGenDir="$PGENDIR/u96v2_sbc_base_auto_pc_9">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_auto_pc_9"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_auto_ds_5" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_auto_ds_5" RelGenDir="$PGENDIR/u96v2_sbc_base_auto_ds_5">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_auto_ds_5"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_auto_ds_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_auto_ds_2" RelGenDir="$PGENDIR/u96v2_sbc_base_auto_ds_2">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_auto_ds_2"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_auto_pc_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_auto_pc_2" RelGenDir="$PGENDIR/u96v2_sbc_base_auto_pc_2">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_auto_pc_2"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_auto_ds_3" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_auto_ds_3" RelGenDir="$PGENDIR/u96v2_sbc_base_auto_ds_3">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_auto_ds_3"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_auto_pc_6" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_auto_pc_6" RelGenDir="$PGENDIR/u96v2_sbc_base_auto_pc_6">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_auto_pc_6"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_auto_pc_3" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_auto_pc_3" RelGenDir="$PGENDIR/u96v2_sbc_base_auto_pc_3">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_auto_pc_3"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_auto_ds_4" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_auto_ds_4" RelGenDir="$PGENDIR/u96v2_sbc_base_auto_ds_4">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_auto_ds_4"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_auto_pc_8" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_auto_pc_8" RelGenDir="$PGENDIR/u96v2_sbc_base_auto_pc_8">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_auto_pc_8"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_auto_pc_4" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_auto_pc_4" RelGenDir="$PGENDIR/u96v2_sbc_base_auto_pc_4">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_auto_pc_4"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_auto_ds_8" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_auto_ds_8" RelGenDir="$PGENDIR/u96v2_sbc_base_auto_ds_8">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_auto_ds_8"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_auto_pc_7" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_auto_pc_7" RelGenDir="$PGENDIR/u96v2_sbc_base_auto_pc_7">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_auto_pc_7"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_auto_ds_7" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_auto_ds_7" RelGenDir="$PGENDIR/u96v2_sbc_base_auto_ds_7">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_auto_ds_7"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_auto_pc_5" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_auto_pc_5" RelGenDir="$PGENDIR/u96v2_sbc_base_auto_pc_5">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_auto_pc_5"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_auto_ds_6" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_auto_ds_6" RelGenDir="$PGENDIR/u96v2_sbc_base_auto_ds_6">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_auto_ds_6"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_m00_data_fifo_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_m00_data_fifo_0" RelGenDir="$PGENDIR/u96v2_sbc_base_m00_data_fifo_0">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_m00_data_fifo_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_m00_regslice_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_m00_regslice_0" RelGenDir="$PGENDIR/u96v2_sbc_base_m00_regslice_0">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_m00_regslice_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_auto_us_df_3" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_auto_us_df_3" RelGenDir="$PGENDIR/u96v2_sbc_base_auto_us_df_3">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_auto_us_df_3"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_s03_regslice_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_s03_regslice_0" RelGenDir="$PGENDIR/u96v2_sbc_base_s03_regslice_0">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_s03_regslice_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_auto_us_df_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_auto_us_df_0" RelGenDir="$PGENDIR/u96v2_sbc_base_auto_us_df_0">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_auto_us_df_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_s00_regslice_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_s00_regslice_0" RelGenDir="$PGENDIR/u96v2_sbc_base_s00_regslice_0">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_s00_regslice_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_auto_us_df_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_auto_us_df_2" RelGenDir="$PGENDIR/u96v2_sbc_base_auto_us_df_2">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_auto_us_df_2"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_s02_regslice_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_s02_regslice_0" RelGenDir="$PGENDIR/u96v2_sbc_base_s02_regslice_0">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_s02_regslice_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_auto_us_df_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_auto_us_df_1" RelGenDir="$PGENDIR/u96v2_sbc_base_auto_us_df_1">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_auto_us_df_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_s01_regslice_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_s01_regslice_0" RelGenDir="$PGENDIR/u96v2_sbc_base_s01_regslice_0">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_s01_regslice_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_auto_ds_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_auto_ds_0" RelGenDir="$PGENDIR/u96v2_sbc_base_auto_ds_0">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_auto_ds_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_auto_pc_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_auto_pc_0" RelGenDir="$PGENDIR/u96v2_sbc_base_auto_pc_0">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_auto_pc_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="u96v2_sbc_base_auto_ds_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/u96v2_sbc_base_auto_ds_1" RelGenDir="$PGENDIR/u96v2_sbc_base_auto_ds_1">
+      <Config>
+        <Option Name="TopModule" Val="u96v2_sbc_base_auto_ds_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -279,6 +594,428 @@
           <ReportConfigOption Name="dummy_option" Type="string"/>
         </ReportConfig>
       </ReportStrategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_xbar_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_xbar_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_xbar_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_xbar_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_zynq_ultra_ps_e_0_0_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_zynq_ultra_ps_e_0_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_zynq_ultra_ps_e_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_zynq_ultra_ps_e_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_zynq_ultra_ps_e_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_axi_intc_0_0_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_axi_intc_0_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_axi_intc_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_axi_intc_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_axi_intc_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_pc_1_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_auto_pc_1" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_pc_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_auto_pc_1_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_pc_1_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_xbar_1_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_xbar_1" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_xbar_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_xbar_1_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_xbar_1_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_lzw_fpga_1_0_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_lzw_fpga_1_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_lzw_fpga_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_lzw_fpga_1_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_lzw_fpga_1_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design">
+          <Option Id="MoreOptsStr"><![CDATA[-directive sdx_optimization_effort_high]]></Option>
+        </Step>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_ds_9_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_auto_ds_9" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_ds_9" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_auto_ds_9_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_ds_9_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_pc_9_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_auto_pc_9" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_pc_9" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_auto_pc_9_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_pc_9_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_ds_5_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_auto_ds_5" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_ds_5" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_auto_ds_5_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_ds_5_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_ds_2_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_auto_ds_2" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_ds_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_auto_ds_2_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_ds_2_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_pc_2_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_auto_pc_2" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_pc_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_auto_pc_2_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_pc_2_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_ds_3_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_auto_ds_3" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_ds_3" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_auto_ds_3_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_ds_3_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_pc_6_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_auto_pc_6" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_pc_6" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_auto_pc_6_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_pc_6_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_pc_3_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_auto_pc_3" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_pc_3" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_auto_pc_3_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_pc_3_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_ds_4_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_auto_ds_4" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_ds_4" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_auto_ds_4_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_ds_4_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_pc_8_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_auto_pc_8" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_pc_8" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_auto_pc_8_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_pc_8_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_pc_4_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_auto_pc_4" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_pc_4" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_auto_pc_4_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_pc_4_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_ds_8_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_auto_ds_8" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_ds_8" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_auto_ds_8_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_ds_8_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_pc_7_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_auto_pc_7" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_pc_7" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_auto_pc_7_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_pc_7_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_ds_7_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_auto_ds_7" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_ds_7" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_auto_ds_7_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_ds_7_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_pc_5_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_auto_pc_5" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_pc_5" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_auto_pc_5_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_pc_5_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_ds_6_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_auto_ds_6" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_ds_6" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_auto_ds_6_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_ds_6_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_m00_data_fifo_0_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_m00_data_fifo_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_m00_data_fifo_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_m00_data_fifo_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_m00_data_fifo_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_m00_regslice_0_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_m00_regslice_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_m00_regslice_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_m00_regslice_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_m00_regslice_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_us_df_3_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_auto_us_df_3" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_us_df_3" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_auto_us_df_3_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_us_df_3_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_s03_regslice_0_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_s03_regslice_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_s03_regslice_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_s03_regslice_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_s03_regslice_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_us_df_0_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_auto_us_df_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_us_df_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_auto_us_df_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_us_df_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_s00_regslice_0_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_s00_regslice_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_s00_regslice_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_s00_regslice_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_s00_regslice_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_us_df_2_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_auto_us_df_2" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_us_df_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_auto_us_df_2_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_us_df_2_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_s02_regslice_0_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_s02_regslice_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_s02_regslice_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_s02_regslice_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_s02_regslice_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_us_df_1_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_auto_us_df_1" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_us_df_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_auto_us_df_1_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_us_df_1_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_s01_regslice_0_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_s01_regslice_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_s01_regslice_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_s01_regslice_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_s01_regslice_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_ds_0_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_auto_ds_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_ds_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_auto_ds_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_ds_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_pc_0_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_auto_pc_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_pc_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_auto_pc_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_pc_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_ds_1_synth_1" Type="Ft3:Synth" SrcSet="u96v2_sbc_base_auto_ds_1" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_ds_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/u96v2_sbc_base_auto_ds_1_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_ds_1_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
@@ -323,6 +1060,671 @@
           <ReportConfigOption Name="dummy_option" Type="string"/>
         </ReportConfig>
       </ReportStrategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_xbar_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_xbar_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_xbar_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_zynq_ultra_ps_e_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_zynq_ultra_ps_e_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_zynq_ultra_ps_e_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_zynq_ultra_ps_e_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_axi_intc_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_axi_intc_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_axi_intc_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_axi_intc_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_pc_1_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_pc_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_auto_pc_1_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_pc_1_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_xbar_1_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_xbar_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_xbar_1_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_xbar_1_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_lzw_fpga_1_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_lzw_fpga_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_lzw_fpga_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_lzw_fpga_1_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_ds_9_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_ds_9" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_auto_ds_9_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_ds_9_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_pc_9_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_pc_9" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_auto_pc_9_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_pc_9_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_ds_5_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_ds_5" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_auto_ds_5_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_ds_5_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_ds_2_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_ds_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_auto_ds_2_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_ds_2_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_pc_2_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_pc_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_auto_pc_2_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_pc_2_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_ds_3_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_ds_3" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_auto_ds_3_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_ds_3_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_pc_6_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_pc_6" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_auto_pc_6_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_pc_6_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_pc_3_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_pc_3" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_auto_pc_3_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_pc_3_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_ds_4_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_ds_4" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_auto_ds_4_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_ds_4_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_pc_8_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_pc_8" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_auto_pc_8_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_pc_8_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_pc_4_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_pc_4" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_auto_pc_4_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_pc_4_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_ds_8_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_ds_8" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_auto_ds_8_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_ds_8_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_pc_7_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_pc_7" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_auto_pc_7_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_pc_7_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_ds_7_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_ds_7" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_auto_ds_7_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_ds_7_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_pc_5_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_pc_5" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_auto_pc_5_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_pc_5_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_ds_6_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_ds_6" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_auto_ds_6_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_ds_6_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_m00_data_fifo_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_m00_data_fifo_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_m00_data_fifo_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_m00_data_fifo_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_m00_regslice_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_m00_regslice_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_m00_regslice_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_m00_regslice_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_us_df_3_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_us_df_3" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_auto_us_df_3_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_us_df_3_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_s03_regslice_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_s03_regslice_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_s03_regslice_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_s03_regslice_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_us_df_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_us_df_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_auto_us_df_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_us_df_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_s00_regslice_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_s00_regslice_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_s00_regslice_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_s00_regslice_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_us_df_2_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_us_df_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_auto_us_df_2_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_us_df_2_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_s02_regslice_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_s02_regslice_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_s02_regslice_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_s02_regslice_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_us_df_1_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_us_df_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_auto_us_df_1_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_us_df_1_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_s01_regslice_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_s01_regslice_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_s01_regslice_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_s01_regslice_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_ds_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_ds_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_auto_ds_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_ds_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_pc_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_pc_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_auto_pc_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_pc_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="u96v2_sbc_base_auto_ds_1_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="u96v2_sbc_base_auto_ds_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="u96v2_sbc_base_auto_ds_1_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/u96v2_sbc_base_auto_ds_1_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>

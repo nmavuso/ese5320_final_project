@@ -218,6 +218,22 @@
       </spirit:parameters>
     </spirit:busInterface>
     <spirit:busInterface>
+      <spirit:name>event_done</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>DATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>event_done</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
       <spirit:name>interrupt</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="interrupt" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="interrupt_rtl" spirit:version="1.0"/>
@@ -238,6 +254,22 @@
           <spirit:value spirit:id="BUSIFPARAM_VALUE.INTERRUPT.SENSITIVITY">LEVEL_HIGH</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>event_start</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>DATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>event_start</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
     </spirit:busInterface>
     <spirit:busInterface>
       <spirit:name>m_axi_gmem0</spirit:name>
@@ -2494,7 +2526,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>8e258a2f</spirit:value>
+            <spirit:value>3e2d336e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2510,7 +2542,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>0e1f919e</spirit:value>
+            <spirit:value>ad21dfb9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2526,7 +2558,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>bf0b277d</spirit:value>
+            <spirit:value>cf89a632</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2542,7 +2574,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>3d857707</spirit:value>
+            <spirit:value>7d739cc1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2612,6 +2644,84 @@
       </spirit:view>
     </spirit:views>
     <spirit:ports>
+      <spirit:port>
+        <spirit:name>stall_start_ext</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>stall_done_ext</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>stall_start_str</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>stall_done_str</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>stall_start_int</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>stall_done_int</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
       <spirit:port>
         <spirit:name>s_axi_control_AWADDR</spirit:name>
         <spirit:wire>
@@ -2888,7 +2998,33 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
+        <spirit:name>event_done</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
         <spirit:name>interrupt</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>event_start</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -7045,7 +7181,7 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/lzw_fpga.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_eace8d64</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_bc11ae97</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -7767,7 +7903,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>clk_period</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.clk_period" spirit:order="50">6.7</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.clk_period" spirit:order="50">6.667</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>machine</spirit:name>
@@ -7796,8 +7932,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Lzw_fpga</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2113844549</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-11-30T05:30:41Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2113857250</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2024-12-09T01:10:47Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -7805,13 +7941,13 @@
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="9611a1bf"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="0f9064a3"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="20cfe0e8"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="7b77600b"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="56f86bf1"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="4c6ecacf"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="a2003538"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="c031d055"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="fab47f65"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="422ec64d"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="5b0ecb66"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

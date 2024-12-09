@@ -39,7 +39,10 @@ port (
     local_output_size_out_write : OUT STD_LOGIC;
     local_output_size_out1_din : OUT STD_LOGIC_VECTOR (31 downto 0);
     local_output_size_out1_full_n : IN STD_LOGIC;
-    local_output_size_out1_write : OUT STD_LOGIC );
+    local_output_size_out1_write : OUT STD_LOGIC;
+    ap_ext_blocking_n : OUT STD_LOGIC;
+    ap_str_blocking_n : OUT STD_LOGIC;
+    ap_int_blocking_n : OUT STD_LOGIC );
 end;
 
 
@@ -210,6 +213,7 @@ attribute shreg_extract : string;
     signal tmp_fu_690_p6 : STD_LOGIC_VECTOR (31 downto 0);
     signal tmp_1_fu_710_p6 : STD_LOGIC_VECTOR (7 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (7 downto 0);
+    signal ap_int_blocking_cur_n : STD_LOGIC;
     signal ap_ce_reg : STD_LOGIC;
 
     component lzw_fpga_mux_464_32_1_1 IS
@@ -691,6 +695,7 @@ begin
         end if; 
     end process;
 
+    ap_ext_blocking_n <= (ap_const_logic_1 and ap_const_logic_1);
 
     ap_idle_assign_proc : process(real_start, ap_CS_fsm_state1)
     begin
@@ -701,6 +706,8 @@ begin
         end if; 
     end process;
 
+    ap_int_blocking_cur_n <= (local_output_size_out_blk_n and local_output_size_out1_blk_n and input_stream_blk_n and input_size_blk_n and code_stream_blk_n);
+    ap_int_blocking_n <= (ap_int_blocking_cur_n and ap_const_logic_1);
     ap_phi_mux_p_1_phi_fu_444_p4 <= p_1_reg_435;
 
     ap_phi_mux_p_3_phi_fu_468_p4_assign_proc : process(icmp_ln40_reg_794, icmp_ln40_1_reg_798, icmp_ln42_reg_841, ap_CS_fsm_state7, icmp_ln42_1_fu_723_p2, found_reg_453, p_3_reg_465)
@@ -719,6 +726,7 @@ begin
     end process;
 
     ap_ready <= internal_ap_ready;
+    ap_str_blocking_n <= (ap_const_logic_1 and ap_const_logic_1);
 
     code_stream_blk_n_assign_proc : process(code_stream_full_n, ap_CS_fsm_state4, icmp_ln35_fu_569_p2, ap_CS_fsm_state5, icmp_ln40_1_fu_589_p2, icmp_ln40_reg_794)
     begin

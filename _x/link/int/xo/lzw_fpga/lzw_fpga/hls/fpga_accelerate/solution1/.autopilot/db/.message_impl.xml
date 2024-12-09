@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Messages>
-	<Message severity="INFO" prefix="[IMPL 213-8]" key="IMPL_8_1776" tag="" content="Exporting RTL as a Vivado IP." resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-741]" key="HLS 200-741" tag="" content="Implementing PIPO lzw_fpga_local_output_code_memcore using a single memory for all blocks" resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-741]" key="HLS 200-741" tag="" content="Implementing PIPO lzw_fpga_local_output_memcore using a single memory for all blocks" resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-741]" key="HLS 200-741" tag="" content="Implementing PIPO lzw_fpga_local_output_code_memcore using a single memory for all blocks" resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-741]" key="HLS 200-741" tag="" content="Implementing PIPO lzw_fpga_local_output_memcore using a single memory for all blocks" resolution=""/>
-</Messages>

@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/prj/prj.runs/impl_1/u96v2_sbc_base_wrapper.tcl"
+  variable script "/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/prj/prj.runs/impl_1/u96v2_sbc_base_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -124,24 +124,24 @@ set rc [catch {
   create_msg_db init_design.pb
 OPTRACE "Design Initialization: pre hook" START { }
   set src_rc [catch { 
-    puts "source /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_init_pre.tcl"
-    source /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_init_pre.tcl
+    puts "source /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_init_pre.tcl"
+    source /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_init_pre.tcl
   } _RESULT] 
   if {$src_rc} { 
     set tool_flow [get_property -quiet TOOL_FLOW [current_project -quiet]]
     if { $tool_flow eq {SDx} } { 
       send_gid_msg -id 2 -ssname VPL_TCL -severity ERROR $_RESULT
-      send_gid_msg -id 3 -ssname VPL_TCL -severity ERROR "sourcing script /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_init_pre.tcl failed"
+      send_gid_msg -id 3 -ssname VPL_TCL -severity ERROR "sourcing script /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_init_pre.tcl failed"
     } else {
       send_msg_id runtcl-1 status "$_RESULT"
-      send_msg_id runtcl-2 status "sourcing script /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_init_pre.tcl failed"
+      send_msg_id runtcl-2 status "sourcing script /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_init_pre.tcl failed"
     }
     return -code error
   }
 OPTRACE "Design Initialization: pre hook" END { }
   set_param project.enablePRFlowIPI 1
   set_param bd.enable_dpa 1
-  set_param bd.debug_profile.script /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/.local/debug_profile_automation.tcl
+  set_param bd.debug_profile.script /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/.local/debug_profile_automation.tcl
   set_param bd.ForceAppCoreUpgrade 1
   set_param hd.enableClockTrackSelectionEnancement 1
   set_param chipscope.maxJobs 1
@@ -152,37 +152,37 @@ OPTRACE "Design Initialization: pre hook" END { }
   set_param compiler.enablePerformanceTrace 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xczu3eg-sbva484-1-i
-  set_property board_part_repo_paths {/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/.local/hw_platform/board} [current_project]
+  set_property board_part_repo_paths {/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/.local/hw_platform/board} [current_project]
   set_property board_part avnet.com:ultra96v2:part0:1.2 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/prj/prj.cache/wt [current_project]
+  set_property webtalk.parent_dir /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/prj/prj.cache/wt [current_project]
   set_property tool_flow SDx [current_project]
-  set_property parent.project_path /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/prj/prj.xpr [current_project]
+  set_property parent.project_path /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/prj/prj.xpr [current_project]
   set_property ip_repo_paths {
-  /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/int/xo/ip_repo/xilinx_com_hls_lzw_fpga_1_0
-  /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/.local/hw_platform/iprepo
+  /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/int/xo/ip_repo/xilinx_com_hls_lzw_fpga_1_0
+  /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/.local/hw_platform/iprepo
   /mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/data/cache/xilinx
-  /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/.local/hw_platform/ipcache
+  /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/.local/hw_platform/ipcache
   /mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/data/ip
 } [current_project]
   update_ip_catalog
-  set_property ip_output_repo /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/.ipcache [current_project]
+  set_property ip_output_repo /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/.ipcache [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/prj/prj.runs/synth_1/u96v2_sbc_base_wrapper.dcp
+  add_files -quiet /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/prj/prj.runs/synth_1/u96v2_sbc_base_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/prj/prj.srcs/sources_1/bd/u96v2_sbc_base/u96v2_sbc_base.bd
+  add_files /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/prj/prj.srcs/sources_1/bd/u96v2_sbc_base/u96v2_sbc_base.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
-  read_xdc -mode out_of_context /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/output/u96v2_sbc_base_ooc_copy.xdc
-  set_property processing_order EARLY [get_files /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/output/u96v2_sbc_base_ooc_copy.xdc]
-  read_xdc /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/prj/prj.srcs/constrs_1/imports/base/u96v2_sbc_base.xdc
+  read_xdc -mode out_of_context /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/output/u96v2_sbc_base_ooc_copy.xdc
+  set_property processing_order EARLY [get_files /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/output/u96v2_sbc_base_ooc_copy.xdc]
+  read_xdc /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/prj/prj.srcs/constrs_1/imports/base/u96v2_sbc_base.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
@@ -194,17 +194,17 @@ OPTRACE "gray box cells" START { }
 OPTRACE "gray box cells" END { }
 OPTRACE "Design Initialization: post hook" START { }
   set src_rc [catch { 
-    puts "source /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_init_post.tcl"
-    source /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_init_post.tcl
+    puts "source /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_init_post.tcl"
+    source /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_init_post.tcl
   } _RESULT] 
   if {$src_rc} { 
     set tool_flow [get_property -quiet TOOL_FLOW [current_project -quiet]]
     if { $tool_flow eq {SDx} } { 
       send_gid_msg -id 2 -ssname VPL_TCL -severity ERROR $_RESULT
-      send_gid_msg -id 3 -ssname VPL_TCL -severity ERROR "sourcing script /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_init_post.tcl failed"
+      send_gid_msg -id 3 -ssname VPL_TCL -severity ERROR "sourcing script /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_init_post.tcl failed"
     } else {
       send_msg_id runtcl-1 status "$_RESULT"
-      send_msg_id runtcl-2 status "sourcing script /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_init_post.tcl failed"
+      send_msg_id runtcl-2 status "sourcing script /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_init_post.tcl failed"
     }
     return -code error
   }
@@ -232,17 +232,17 @@ set rc [catch {
   create_msg_db opt_design.pb
 OPTRACE "Opt Design: pre hook" START { }
   set src_rc [catch { 
-    puts "source /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_opt_pre.tcl"
-    source /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_opt_pre.tcl
+    puts "source /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_opt_pre.tcl"
+    source /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_opt_pre.tcl
   } _RESULT] 
   if {$src_rc} { 
     set tool_flow [get_property -quiet TOOL_FLOW [current_project -quiet]]
     if { $tool_flow eq {SDx} } { 
       send_gid_msg -id 2 -ssname VPL_TCL -severity ERROR $_RESULT
-      send_gid_msg -id 3 -ssname VPL_TCL -severity ERROR "sourcing script /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_opt_pre.tcl failed"
+      send_gid_msg -id 3 -ssname VPL_TCL -severity ERROR "sourcing script /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_opt_pre.tcl failed"
     } else {
       send_msg_id runtcl-1 status "$_RESULT"
-      send_msg_id runtcl-2 status "sourcing script /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_opt_pre.tcl failed"
+      send_msg_id runtcl-2 status "sourcing script /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_opt_pre.tcl failed"
     }
     return -code error
   }
@@ -256,17 +256,17 @@ OPTRACE "read constraints: opt_design_post" START { }
 OPTRACE "read constraints: opt_design_post" END { }
 OPTRACE "Opt Design: post hook" START { }
   set src_rc [catch { 
-    puts "source /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_opt_post.tcl"
-    source /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_opt_post.tcl
+    puts "source /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_opt_post.tcl"
+    source /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_opt_post.tcl
   } _RESULT] 
   if {$src_rc} { 
     set tool_flow [get_property -quiet TOOL_FLOW [current_project -quiet]]
     if { $tool_flow eq {SDx} } { 
       send_gid_msg -id 2 -ssname VPL_TCL -severity ERROR $_RESULT
-      send_gid_msg -id 3 -ssname VPL_TCL -severity ERROR "sourcing script /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_opt_post.tcl failed"
+      send_gid_msg -id 3 -ssname VPL_TCL -severity ERROR "sourcing script /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_opt_post.tcl failed"
     } else {
       send_msg_id runtcl-1 status "$_RESULT"
-      send_msg_id runtcl-2 status "sourcing script /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_opt_post.tcl failed"
+      send_msg_id runtcl-2 status "sourcing script /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_opt_post.tcl failed"
     }
     return -code error
   }
@@ -291,17 +291,17 @@ set rc [catch {
   create_msg_db place_design.pb
 OPTRACE "Place Design: pre hook" START { }
   set src_rc [catch { 
-    puts "source /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_place_pre.tcl"
-    source /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_place_pre.tcl
+    puts "source /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_place_pre.tcl"
+    source /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_place_pre.tcl
   } _RESULT] 
   if {$src_rc} { 
     set tool_flow [get_property -quiet TOOL_FLOW [current_project -quiet]]
     if { $tool_flow eq {SDx} } { 
       send_gid_msg -id 2 -ssname VPL_TCL -severity ERROR $_RESULT
-      send_gid_msg -id 3 -ssname VPL_TCL -severity ERROR "sourcing script /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_place_pre.tcl failed"
+      send_gid_msg -id 3 -ssname VPL_TCL -severity ERROR "sourcing script /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_place_pre.tcl failed"
     } else {
       send_msg_id runtcl-1 status "$_RESULT"
-      send_msg_id runtcl-2 status "sourcing script /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_place_pre.tcl failed"
+      send_msg_id runtcl-2 status "sourcing script /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_place_pre.tcl failed"
     }
     return -code error
   }
@@ -320,17 +320,17 @@ OPTRACE "read constraints: place_design_post" START { }
 OPTRACE "read constraints: place_design_post" END { }
 OPTRACE "Place Design: post hook" START { }
   set src_rc [catch { 
-    puts "source /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_place_post.tcl"
-    source /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_place_post.tcl
+    puts "source /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_place_post.tcl"
+    source /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_place_post.tcl
   } _RESULT] 
   if {$src_rc} { 
     set tool_flow [get_property -quiet TOOL_FLOW [current_project -quiet]]
     if { $tool_flow eq {SDx} } { 
       send_gid_msg -id 2 -ssname VPL_TCL -severity ERROR $_RESULT
-      send_gid_msg -id 3 -ssname VPL_TCL -severity ERROR "sourcing script /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_place_post.tcl failed"
+      send_gid_msg -id 3 -ssname VPL_TCL -severity ERROR "sourcing script /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_place_post.tcl failed"
     } else {
       send_msg_id runtcl-1 status "$_RESULT"
-      send_msg_id runtcl-2 status "sourcing script /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_place_post.tcl failed"
+      send_msg_id runtcl-2 status "sourcing script /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_place_post.tcl failed"
     }
     return -code error
   }
@@ -387,17 +387,17 @@ OPTRACE "read constraints: route_design_post" START { }
 OPTRACE "read constraints: route_design_post" END { }
 OPTRACE "Route Design: post hook" START { }
   set src_rc [catch { 
-    puts "source /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_route_post.tcl"
-    source /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_route_post.tcl
+    puts "source /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_route_post.tcl"
+    source /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_route_post.tcl
   } _RESULT] 
   if {$src_rc} { 
     set tool_flow [get_property -quiet TOOL_FLOW [current_project -quiet]]
     if { $tool_flow eq {SDx} } { 
       send_gid_msg -id 2 -ssname VPL_TCL -severity ERROR $_RESULT
-      send_gid_msg -id 3 -ssname VPL_TCL -severity ERROR "sourcing script /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_route_post.tcl failed"
+      send_gid_msg -id 3 -ssname VPL_TCL -severity ERROR "sourcing script /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_route_post.tcl failed"
     } else {
       send_msg_id runtcl-1 status "$_RESULT"
-      send_msg_id runtcl-2 status "sourcing script /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_route_post.tcl failed"
+      send_msg_id runtcl-2 status "sourcing script /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_route_post.tcl failed"
     }
     return -code error
   }
@@ -432,17 +432,17 @@ set rc [catch {
   create_msg_db write_bitstream.pb
 OPTRACE "Write Bitstream: pre hook" START { }
   set src_rc [catch { 
-    puts "source /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_write_bitstream_pre.tcl"
-    source /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_write_bitstream_pre.tcl
+    puts "source /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_write_bitstream_pre.tcl"
+    source /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_write_bitstream_pre.tcl
   } _RESULT] 
   if {$src_rc} { 
     set tool_flow [get_property -quiet TOOL_FLOW [current_project -quiet]]
     if { $tool_flow eq {SDx} } { 
       send_gid_msg -id 2 -ssname VPL_TCL -severity ERROR $_RESULT
-      send_gid_msg -id 3 -ssname VPL_TCL -severity ERROR "sourcing script /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_write_bitstream_pre.tcl failed"
+      send_gid_msg -id 3 -ssname VPL_TCL -severity ERROR "sourcing script /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_write_bitstream_pre.tcl failed"
     } else {
       send_msg_id runtcl-1 status "$_RESULT"
-      send_msg_id runtcl-2 status "sourcing script /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_write_bitstream_pre.tcl failed"
+      send_msg_id runtcl-2 status "sourcing script /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_write_bitstream_pre.tcl failed"
     }
     return -code error
   }
@@ -460,17 +460,17 @@ OPTRACE "read constraints: write_bitstream_post" START { }
 OPTRACE "read constraints: write_bitstream_post" END { }
 OPTRACE "Write Bitstream: post hook" START { }
   set src_rc [catch { 
-    puts "source /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_write_bitstream_post.tcl"
-    source /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_write_bitstream_post.tcl
+    puts "source /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_write_bitstream_post.tcl"
+    source /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_write_bitstream_post.tcl
   } _RESULT] 
   if {$src_rc} { 
     set tool_flow [get_property -quiet TOOL_FLOW [current_project -quiet]]
     if { $tool_flow eq {SDx} } { 
       send_gid_msg -id 2 -ssname VPL_TCL -severity ERROR $_RESULT
-      send_gid_msg -id 3 -ssname VPL_TCL -severity ERROR "sourcing script /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_write_bitstream_post.tcl failed"
+      send_gid_msg -id 3 -ssname VPL_TCL -severity ERROR "sourcing script /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_write_bitstream_post.tcl failed"
     } else {
       send_msg_id runtcl-1 status "$_RESULT"
-      send_msg_id runtcl-2 status "sourcing script /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_write_bitstream_post.tcl failed"
+      send_msg_id runtcl-2 status "sourcing script /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/scripts/_full_write_bitstream_post.tcl failed"
     }
     return -code error
   }

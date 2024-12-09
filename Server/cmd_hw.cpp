@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
-#include "lzw_hls.h"
+#include "lzw_hls.h"    
 #include "lzw_hw.h"
 #include "cmd_hw.h"
-#include "sha3.h"
-#include "Utilities.h"
-
+#include <sys/socket.h>
+#include <linux/if_alg.h>
+#include <unistd.h>
 #include <vector>
 #include <iostream>
 #include <cstdint>
@@ -15,6 +15,11 @@
 #include <iomanip>
 #include <stdio.h>
 #include <stdbool.h>
+#define SHA384_DIGEST_SZ 48
+
+#define NUM_CHUNKS 3
+#define MAX_CHUNK_SIZE 8192
+#define INPUT_SIZE 256
 
 const int MAX_INPUT_SIZE = 4096;
 const int MAX_OUTPUT_SIZE = 4096;
@@ -33,17 +38,78 @@ bool is_at_16bit_boundary(FILE* file) {
 }
 
 
-uint64_t compute_hash(const char *chunk, int size) {
- 
-    uint8_t hash_output[64]; 
-    sha3_ctx_t sha3; 
-    sha3_init(&sha3, 64); 
-    sha3_update(&sha3, chunk, (size_t) size); 
-    sha3_final(hash_output, &sha3); 
-    uint64_t res = 0; 
-    for(int i = 0; i < 8; i++) {
-        res |= ((uint64_t) hash_output[i]) << (8 * i); 
+uint64_t compute_hash(const unsigned char *chunk, int size)
+{
+
+    // Declare variables for our socket
+    struct sockaddr_alg sa;
+    int sockfd, fd;
+    unsigned char hash_output[SHA384_DIGEST_SZ];
+    uint64_t res = 0;
+
+    // Initialize the sockaddr_alg struct for SHA3-384
+    memset(&sa, 0, sizeof(sa));
+
+    // Populate the fields to specify our operations
+    sa.salg_family = AF_ALG;
+    strcpy((char *)sa.salg_type, "hash");
+    strcpy((char *)sa.salg_name, "sha3-384");
+
+    // Create our crypto API socket
+    sockfd = socket(AF_ALG, SOCK_SEQPACKET, 0);
+    if (sockfd < 0)
+    {
+        perror("Socket creation failed");
+        return 0; // Return 0 on error
     }
+
+    // Bind the socket to SHA3-384
+    if (bind(sockfd, (struct sockaddr *)&sa, sizeof(sa)) < 0)
+    {
+        perror("Binding failed");
+        close(sockfd);
+        return 0; // Return 0 on error
+    }
+
+    // Accept a connection to create a new file descriptor for hash operations
+    fd = accept(sockfd, NULL, 0);
+    if (fd < 0)
+    {
+        perror("Accept failed");
+        close(sockfd);
+        return 0; // Return 0 on error
+    }
+
+    // Write the input data to be hashed
+    // TODO: Check our bounds
+    if (write(fd, chunk, size) != size)
+    {
+        perror("Write failed");
+        close(fd);
+        close(sockfd);
+        return 0; // Return 0 on error
+    }
+
+    // Read the computed hash
+    if (read(fd, hash_output, SHA384_DIGEST_SZ) != SHA384_DIGEST_SZ)
+    {
+        perror("Read failed");
+        close(fd);
+        close(sockfd);
+        return 0; // Return 0 on error
+    }
+
+    // Close file descriptors
+    close(fd);
+    close(sockfd);
+
+    // Condense into a uint64_t
+    for (int i = 0; i < 8; i++)
+    {
+        res |= ((uint64_t)hash_output[i]) << (8 * i);
+    }
+
+    // Return the hash value % our hash table size
     return res % HASH_TABLE_SIZE;
 }
 
@@ -226,7 +292,9 @@ int deduplicate_chunks(const char *chunk, int chunk_size, HashTable *hash_table,
     }
 
     printf("Computing hash for chunk of size %d\n", chunk_size);
-    uint64_t chunk_hash = compute_hash(chunk, chunk_size);
+    uint64_t chunk_hash = compute_hash(reinterpret_cast<const unsigned char*>(chunk), chunk_size);
+
+    // uint64_t chunk_hash = compute_hash(chunk, chunk_size);
     printf("Computed hash: %lu\n", chunk_hash);
 
     int existing_size;

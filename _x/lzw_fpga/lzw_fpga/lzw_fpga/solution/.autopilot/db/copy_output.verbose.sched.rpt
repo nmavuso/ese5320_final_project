@@ -1,0 +1,786 @@
+
+
+================================================================
+== Vitis HLS Report for 'copy_output'
+================================================================
+* Date:           Sun Dec  8 20:09:52 2024
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        lzw_fpga
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.67 ns|  4.867 ns|     1.80 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        1|        ?|  6.667 ns|         ?|    1|    ?|     none|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count | Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |- copy_output_loop  |        2|        ?|         3|          1|          1|  1 ~ ?|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+-------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 73
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 3 4 5 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 73 
+2 --> 3 
+3 --> 6 4 
+4 --> 5 
+5 --> 3 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 45 
+45 --> 46 
+46 --> 47 
+47 --> 48 
+48 --> 49 
+49 --> 50 
+50 --> 51 
+51 --> 52 
+52 --> 53 
+53 --> 54 
+54 --> 55 
+55 --> 56 
+56 --> 57 
+57 --> 58 
+58 --> 59 
+59 --> 60 
+60 --> 61 
+61 --> 62 
+62 --> 63 
+63 --> 64 
+64 --> 65 
+65 --> 66 
+66 --> 67 
+67 --> 68 
+68 --> 69 
+69 --> 70 
+70 --> 71 
+71 --> 72 
+72 --> 73 
+73 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.14>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gmem2, void @empty_15, i32 0, i32 0, void @empty_20, i32 64, i32 0, void @empty_0, void @empty_23, void @empty_20, i32 16, i32 16, i32 16, i32 16, void @empty_20, void @empty_20"   --->   Operation 74 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %output_r, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 75 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%output_length_read = read i9 @_ssdm_op_Read.ap_auto.i9, i9 %output_length" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:178->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 76 'read' 'output_length_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (2.14ns)   --->   "%output_read = read i64 @_ssdm_op_Read.ap_fifo.i64P0A, i64 %output_r" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:178->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 77 'read' 'output_read' <Predicate = true> <Delay = 2.14> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.14> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 7> <FIFO>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%output_length_cast2_i_i = zext i9 %output_length_read" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:178->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 78 'zext' 'output_length_cast2_i_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gmem2, void @empty_15, i32 0, i32 0, void @empty_20, i32 64, i32 0, void @empty_0, void @empty_23, void @empty_20, i32 16, i32 16, i32 16, i32 16, void @empty_20, void @empty_20"   --->   Operation 79 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.85ns)   --->   "%icmp_ln179 = icmp_eq  i9 %output_length_read, i9 0" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:179->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 80 'icmp' 'icmp_ln179' <Predicate = true> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%br_ln179 = br i1 %icmp_ln179, void %.lr.ph.i.i, void %.exit" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:179->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 81 'br' 'br_ln179' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%gmem2_addr = getelementptr i8 %gmem2, i64 %output_read" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:179->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 82 'getelementptr' 'gmem2_addr' <Predicate = (!icmp_ln179)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 4.86>
+ST_2 : Operation 83 [1/1] (4.86ns)   --->   "%empty = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i8, i8 %gmem2_addr, i32 %output_length_cast2_i_i" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:179->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 83 'writereq' 'empty' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_2 : Operation 84 [1/1] (0.48ns)   --->   "%br_ln179 = br void" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:179->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 84 'br' 'br_ln179' <Predicate = true> <Delay = 0.48>
+
+State 3 <SV = 2> <Delay = 1.35>
+ST_3 : Operation 85 [1/1] (0.00ns)   --->   "%i = phi i9 %add_ln179, void %.split.i.i, i9 0, void %.lr.ph.i.i" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:179->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 85 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 86 [1/1] (0.92ns)   --->   "%add_ln179 = add i9 %i, i9 1" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:179->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 86 'add' 'add_ln179' <Predicate = true> <Delay = 0.92> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.92> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 87 [1/1] (0.85ns)   --->   "%icmp_ln179_1 = icmp_eq  i9 %i, i9 %output_length_read" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:179->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 87 'icmp' 'icmp_ln179_1' <Predicate = true> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 88 [1/1] (0.00ns)   --->   "%empty_66 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1, i64 18446744073709551615, i64 0"   --->   Operation 88 'speclooptripcount' 'empty_66' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 89 [1/1] (0.00ns)   --->   "%br_ln179 = br i1 %icmp_ln179_1, void %.split.i.i, void %._crit_edge.loopexit.i.i" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:179->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 89 'br' 'br_ln179' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 90 [1/1] (0.00ns)   --->   "%zext_ln179 = zext i9 %i" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:179->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 90 'zext' 'zext_ln179' <Predicate = (!icmp_ln179_1)> <Delay = 0.00>
+ST_3 : Operation 91 [1/1] (0.00ns)   --->   "%local_output_addr = getelementptr i8 %local_output, i64 0, i64 %zext_ln179" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:181->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 91 'getelementptr' 'local_output_addr' <Predicate = (!icmp_ln179_1)> <Delay = 0.00>
+ST_3 : Operation 92 [2/2] (1.35ns)   --->   "%local_output_load = load i8 %local_output_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:181->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 92 'load' 'local_output_load' <Predicate = (!icmp_ln179_1)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 256> <RAM>
+
+State 4 <SV = 3> <Delay = 1.35>
+ST_4 : Operation 93 [1/2] (1.35ns)   --->   "%local_output_load = load i8 %local_output_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:181->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 93 'load' 'local_output_load' <Predicate = (!icmp_ln179_1)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 256> <RAM>
+
+State 5 <SV = 4> <Delay = 4.86>
+ST_5 : Operation 94 [1/1] (0.00ns)   --->   "%specpipeline_ln179 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_20" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:179->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 94 'specpipeline' 'specpipeline_ln179' <Predicate = (!icmp_ln179_1)> <Delay = 0.00>
+ST_5 : Operation 95 [1/1] (0.00ns)   --->   "%specloopname_ln179 = specloopname void @_ssdm_op_SpecLoopName, void @empty_30" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:179->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 95 'specloopname' 'specloopname_ln179' <Predicate = (!icmp_ln179_1)> <Delay = 0.00>
+ST_5 : Operation 96 [1/1] (4.86ns)   --->   "%write_ln181 = write void @_ssdm_op_Write.m_axi.p1i8, i8 %gmem2_addr, i8 %local_output_load, i1 1" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:181->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 96 'write' 'write_ln181' <Predicate = (!icmp_ln179_1)> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_5 : Operation 97 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 97 'br' 'br_ln0' <Predicate = (!icmp_ln179_1)> <Delay = 0.00>
+
+State 6 <SV = 3> <Delay = 4.86>
+ST_6 : Operation 98 [68/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 98 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 4> <Delay = 4.86>
+ST_7 : Operation 99 [67/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 99 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 5> <Delay = 4.86>
+ST_8 : Operation 100 [66/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 100 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 9 <SV = 6> <Delay = 4.86>
+ST_9 : Operation 101 [65/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 101 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 10 <SV = 7> <Delay = 4.86>
+ST_10 : Operation 102 [64/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 102 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 11 <SV = 8> <Delay = 4.86>
+ST_11 : Operation 103 [63/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 103 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 12 <SV = 9> <Delay = 4.86>
+ST_12 : Operation 104 [62/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 104 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 13 <SV = 10> <Delay = 4.86>
+ST_13 : Operation 105 [61/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 105 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 14 <SV = 11> <Delay = 4.86>
+ST_14 : Operation 106 [60/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 106 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 15 <SV = 12> <Delay = 4.86>
+ST_15 : Operation 107 [59/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 107 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 16 <SV = 13> <Delay = 4.86>
+ST_16 : Operation 108 [58/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 108 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 17 <SV = 14> <Delay = 4.86>
+ST_17 : Operation 109 [57/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 109 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 18 <SV = 15> <Delay = 4.86>
+ST_18 : Operation 110 [56/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 110 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 19 <SV = 16> <Delay = 4.86>
+ST_19 : Operation 111 [55/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 111 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 20 <SV = 17> <Delay = 4.86>
+ST_20 : Operation 112 [54/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 112 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 21 <SV = 18> <Delay = 4.86>
+ST_21 : Operation 113 [53/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 113 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 22 <SV = 19> <Delay = 4.86>
+ST_22 : Operation 114 [52/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 114 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 23 <SV = 20> <Delay = 4.86>
+ST_23 : Operation 115 [51/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 115 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 24 <SV = 21> <Delay = 4.86>
+ST_24 : Operation 116 [50/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 116 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 25 <SV = 22> <Delay = 4.86>
+ST_25 : Operation 117 [49/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 117 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 26 <SV = 23> <Delay = 4.86>
+ST_26 : Operation 118 [48/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 118 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 27 <SV = 24> <Delay = 4.86>
+ST_27 : Operation 119 [47/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 119 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 28 <SV = 25> <Delay = 4.86>
+ST_28 : Operation 120 [46/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 120 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 29 <SV = 26> <Delay = 4.86>
+ST_29 : Operation 121 [45/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 121 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 30 <SV = 27> <Delay = 4.86>
+ST_30 : Operation 122 [44/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 122 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 31 <SV = 28> <Delay = 4.86>
+ST_31 : Operation 123 [43/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 123 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 32 <SV = 29> <Delay = 4.86>
+ST_32 : Operation 124 [42/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 124 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 33 <SV = 30> <Delay = 4.86>
+ST_33 : Operation 125 [41/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 125 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 34 <SV = 31> <Delay = 4.86>
+ST_34 : Operation 126 [40/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 126 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 35 <SV = 32> <Delay = 4.86>
+ST_35 : Operation 127 [39/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 127 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 36 <SV = 33> <Delay = 4.86>
+ST_36 : Operation 128 [38/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 128 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 37 <SV = 34> <Delay = 4.86>
+ST_37 : Operation 129 [37/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 129 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 38 <SV = 35> <Delay = 4.86>
+ST_38 : Operation 130 [36/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 130 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 39 <SV = 36> <Delay = 4.86>
+ST_39 : Operation 131 [35/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 131 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 40 <SV = 37> <Delay = 4.86>
+ST_40 : Operation 132 [34/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 132 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 41 <SV = 38> <Delay = 4.86>
+ST_41 : Operation 133 [33/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 133 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 42 <SV = 39> <Delay = 4.86>
+ST_42 : Operation 134 [32/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 134 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 43 <SV = 40> <Delay = 4.86>
+ST_43 : Operation 135 [31/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 135 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 44 <SV = 41> <Delay = 4.86>
+ST_44 : Operation 136 [30/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 136 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 45 <SV = 42> <Delay = 4.86>
+ST_45 : Operation 137 [29/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 137 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 46 <SV = 43> <Delay = 4.86>
+ST_46 : Operation 138 [28/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 138 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 47 <SV = 44> <Delay = 4.86>
+ST_47 : Operation 139 [27/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 139 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 48 <SV = 45> <Delay = 4.86>
+ST_48 : Operation 140 [26/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 140 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 49 <SV = 46> <Delay = 4.86>
+ST_49 : Operation 141 [25/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 141 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 50 <SV = 47> <Delay = 4.86>
+ST_50 : Operation 142 [24/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 142 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 51 <SV = 48> <Delay = 4.86>
+ST_51 : Operation 143 [23/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 143 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 52 <SV = 49> <Delay = 4.86>
+ST_52 : Operation 144 [22/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 144 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 53 <SV = 50> <Delay = 4.86>
+ST_53 : Operation 145 [21/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 145 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 54 <SV = 51> <Delay = 4.86>
+ST_54 : Operation 146 [20/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 146 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 55 <SV = 52> <Delay = 4.86>
+ST_55 : Operation 147 [19/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 147 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 56 <SV = 53> <Delay = 4.86>
+ST_56 : Operation 148 [18/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 148 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 57 <SV = 54> <Delay = 4.86>
+ST_57 : Operation 149 [17/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 149 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 58 <SV = 55> <Delay = 4.86>
+ST_58 : Operation 150 [16/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 150 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 59 <SV = 56> <Delay = 4.86>
+ST_59 : Operation 151 [15/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 151 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 60 <SV = 57> <Delay = 4.86>
+ST_60 : Operation 152 [14/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 152 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 61 <SV = 58> <Delay = 4.86>
+ST_61 : Operation 153 [13/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 153 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 62 <SV = 59> <Delay = 4.86>
+ST_62 : Operation 154 [12/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 154 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 63 <SV = 60> <Delay = 4.86>
+ST_63 : Operation 155 [11/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 155 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 64 <SV = 61> <Delay = 4.86>
+ST_64 : Operation 156 [10/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 156 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 65 <SV = 62> <Delay = 4.86>
+ST_65 : Operation 157 [9/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 157 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 66 <SV = 63> <Delay = 4.86>
+ST_66 : Operation 158 [8/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 158 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 67 <SV = 64> <Delay = 4.86>
+ST_67 : Operation 159 [7/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 159 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 68 <SV = 65> <Delay = 4.86>
+ST_68 : Operation 160 [6/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 160 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 69 <SV = 66> <Delay = 4.86>
+ST_69 : Operation 161 [5/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 161 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 70 <SV = 67> <Delay = 4.86>
+ST_70 : Operation 162 [4/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 162 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 71 <SV = 68> <Delay = 4.86>
+ST_71 : Operation 163 [3/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 163 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 72 <SV = 69> <Delay = 4.86>
+ST_72 : Operation 164 [2/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 164 'writeresp' 'empty_67' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 73 <SV = 70> <Delay = 4.86>
+ST_73 : Operation 165 [1/68] (4.86ns)   --->   "%empty_67 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %gmem2_addr" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 165 'writeresp' 'empty_67' <Predicate = (!icmp_ln179)> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_73 : Operation 166 [1/1] (0.00ns)   --->   "%br_ln183 = br void %.exit" [/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237]   --->   Operation 166 'br' 'br_ln183' <Predicate = (!icmp_ln179)> <Delay = 0.00>
+ST_73 : Operation 167 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 167 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 6.67ns, clock uncertainty: 1.8ns.
+
+ <State 1>: 2.14ns
+The critical path consists of the following:
+	fifo read on port 'output_r' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:178->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [8]  (2.14 ns)
+	'getelementptr' operation ('gmem2_addr', /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:179->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [14]  (0 ns)
+
+ <State 2>: 4.87ns
+The critical path consists of the following:
+	bus request on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:179->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [15]  (4.87 ns)
+
+ <State 3>: 1.35ns
+The critical path consists of the following:
+	'phi' operation ('i', /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:179->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) with incoming values : ('add_ln179', /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:179->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [18]  (0 ns)
+	'getelementptr' operation ('local_output_addr', /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:181->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [27]  (0 ns)
+	'load' operation ('local_output_load', /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:181->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) on array 'local_output' [28]  (1.35 ns)
+
+ <State 4>: 1.35ns
+The critical path consists of the following:
+	'load' operation ('local_output_load', /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:181->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) on array 'local_output' [28]  (1.35 ns)
+
+ <State 5>: 4.87ns
+The critical path consists of the following:
+	bus write on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:181->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [29]  (4.87 ns)
+
+ <State 6>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 7>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 8>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 9>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 10>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 11>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 12>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 13>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 14>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 15>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 16>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 17>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 18>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 19>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 20>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 21>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 22>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 23>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 24>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 25>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 26>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 27>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 28>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 29>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 30>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 31>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 32>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 33>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 34>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 35>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 36>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 37>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 38>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 39>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 40>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 41>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 42>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 43>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 44>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 45>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 46>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 47>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 48>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 49>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 50>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 51>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 52>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 53>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 54>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 55>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 56>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 57>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 58>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 59>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 60>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 61>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 62>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 63>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 64>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 65>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 66>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 67>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 68>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 69>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 70>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 71>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 72>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+ <State 73>: 4.87ns
+The critical path consists of the following:
+	bus response on port 'gmem2' (/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:183->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237) [32]  (4.87 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

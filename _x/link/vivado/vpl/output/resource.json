@@ -4,22 +4,22 @@
             "ip_instance": "u96v2_sbc_base_lzw_fpga_1_0",
             "resources": [
                 {
-                    "LUT": "7064"
+                    "LUT": "7554"
                 },
                 {
-                    "LUTAsLogic": "5006"
+                    "LUTAsLogic": "5187"
                 },
                 {
-                    "LUTAsMem": "2058"
+                    "LUTAsMem": "2367"
                 },
                 {
-                    "REG": "6838"
+                    "REG": "7532"
                 },
                 {
-                    "CARRY8": "222"
+                    "CARRY8": "219"
                 },
                 {
-                    "F7MUX": "720"
+                    "F7MUX": "719"
                 },
                 {
                     "F8MUX": "18"

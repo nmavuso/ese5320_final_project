@@ -1,0 +1,479 @@
+Begin Function 'decoding'
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp1_stage0)
+# ST_4
+local k_1 <> <integer> <Phi> 'phi' <>
+stack_index /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:100
+stack_index /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: k_1_reg_1460[4:0] lv
+
+local current_code_1_in_in <> <integer> <Phi> 'phi' <>
+current_code /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:101
+current_code_1 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: current_code_1_in_in_reg_1472[31:0] lv
+
+local tmp_19 <bitselect_231> <integer> <> 'bitselect' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:97->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+tmp_19 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:97
+tmp_19 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: tmp_19_reg_3700[0:0] lv
+
+local trunc_ln100 <trunc_231> <integer> <> 'trunc' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:100->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+trunc_ln100 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:100
+trunc_ln100 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: trunc_ln100_reg_3704[1:0] lv
+
+local trunc_ln100_1 <trunc_231> <integer> <> 'trunc' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:100->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+trunc_ln100_1 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:100
+trunc_ln100_1 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: trunc_ln100_1_reg_3729[3:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp1_stage1)
+# ST_5
+local stack_index <add_231> <integer> <Arithmetic> 'add' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:100->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+stack_index /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:100
+stack_index /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: stack_index_reg_3834[4:0] lv
+
+local add_ln100_1 <add_231> <integer> <Arithmetic> 'add' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:100->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+add_ln100_1 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:100
+add_ln100_1 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: add_ln100_1_reg_3839[3:0] lv
+
+local current_code_1 <mux_231> <integer> <> 'mux' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:101->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+current_code /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:101
+current_code_1 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: current_code_1_reg_3844[31:0] lv
+
+local icmp_ln102 <icmp_231> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:102->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+icmp_ln102 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:102
+icmp_ln102 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: icmp_ln102_reg_3849[0:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp2_stage0)
+# ST_8
+local i_6 <phi_231> <integer> <Phi> 'phi' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:109->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+add_ln109_1 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:109
+add_ln109_1 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: i_6_reg_1652[63:0] lv
+
+local tmp_20 <bitselect_231> <integer> <> 'bitselect' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:109->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+tmp_20 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:109
+tmp_20 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: tmp_20_reg_3938[0:0] lv
+
+local trunc_ln111 <trunc_231> <integer> <> 'trunc' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:111->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+trunc_ln111 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:111
+trunc_ln111 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: trunc_ln111_reg_3942[3:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp3_stage0)
+# ST_30
+local j_1 <phi_231> <integer> <Phi> 'phi' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:143->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+add_ln143 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:143
+add_ln143 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: j_1_reg_1829[63:0] lv
+
+local tmp_22 <bitselect_231> <integer> <> 'bitselect' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:143->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+tmp_22 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:143
+tmp_22 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: tmp_22_reg_4948[0:0] lv
+
+local trunc_ln145 <trunc_231> <integer> <> 'trunc' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:145->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+trunc_ln145 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:145
+trunc_ln145 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: trunc_ln145_reg_4952[3:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state1)
+# ST_1
+local local_output_size_read <read_231> <integer> <FifoRead> 'read' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+local_output_size_read /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: local_output_size_read_reg_3585[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state11)
+# ST_11
+local prev_code_2 <> <integer> <Phi> 'phi' <>
+tmp /mnt/pollux/software/xilinx/2020.2/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145
+reg: prev_code_2_reg_1661[31:0] lv
+
+local i_7 <> <integer> <Phi> 'phi' <>
+i /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:114
+i_8 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: i_7_reg_1675[30:0] lv
+
+local tmp_24 <read_145> <integer> <FifoRead> 'read' </mnt/pollux/software/xilinx/2020.2/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145>
+tmp /mnt/pollux/software/xilinx/2020.2/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145
+reg: tmp_24_reg_4068[31:0] lv
+
+local code_in_table <icmp_231> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:120->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+code_in_table /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:120
+code_in_table /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: code_in_table_reg_4073[0:0] lv
+
+local arrayNo304_i_i <zext_145> <integer> <> 'zext' </mnt/pollux/software/xilinx/2020.2/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145>
+arrayNo304_i_i /mnt/pollux/software/xilinx/2020.2/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145
+reg: arrayNo304_i_i_reg_4077[31:0] lv
+
+local trunc_ln126 <trunc_231> <integer> <> 'trunc' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+trunc_ln126 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126
+trunc_ln126 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: trunc_ln126_reg_4102[1:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state13)
+# ST_13
+local icmp_ln128 <icmp_231> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+icmp_ln128 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128
+icmp_ln128 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: icmp_ln128_reg_4163[0:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state14)
+# ST_14
+local stack_0_3 <> <integer> <Phi> 'phi' <>
+reg: stack_0_3_reg_1687[7:0] lv
+
+local temp_code_1_0_i_i_in <> <integer> <Phi> 'phi' <>
+reg: temp_code_1_0_i_i_in_reg_1697[31:0] lv
+
+local trunc_ln126_1 <trunc_231> <integer> <> 'trunc' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+trunc_ln126_1 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126
+trunc_ln126_1 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: trunc_ln126_1_reg_4167[1:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state15)
+# ST_15
+local stack_1 <mux_231> <integer> <> 'mux' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+stack[1] /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126
+stack_1 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: stack_1_reg_4212[7:0] lv
+
+local icmp_ln128_1 <icmp_231> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+icmp_ln128_1 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128
+icmp_ln128_1 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: icmp_ln128_1_reg_4217[0:0] lv
+
+local trunc_ln126_2 <trunc_231> <integer> <> 'trunc' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+trunc_ln126_2 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126
+trunc_ln126_2 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: trunc_ln126_2_reg_4221[1:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state16)
+# ST_16
+local stack_2 <mux_231> <integer> <> 'mux' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+stack[2] /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126
+stack_2 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: stack_2_reg_4266[7:0] lv
+
+local icmp_ln128_2 <icmp_231> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+icmp_ln128_2 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128
+icmp_ln128_2 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: icmp_ln128_2_reg_4271[0:0] lv
+
+local trunc_ln126_3 <trunc_231> <integer> <> 'trunc' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+trunc_ln126_3 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126
+trunc_ln126_3 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: trunc_ln126_3_reg_4275[1:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state17)
+# ST_17
+local stack_3 <mux_231> <integer> <> 'mux' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+stack[3] /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126
+stack_3 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: stack_3_reg_4320[7:0] lv
+
+local icmp_ln128_3 <icmp_231> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+icmp_ln128_3 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128
+icmp_ln128_3 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: icmp_ln128_3_reg_4325[0:0] lv
+
+local trunc_ln126_4 <trunc_231> <integer> <> 'trunc' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+trunc_ln126_4 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126
+trunc_ln126_4 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: trunc_ln126_4_reg_4329[1:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state18)
+# ST_18
+local stack_4 <mux_231> <integer> <> 'mux' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+stack[4] /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126
+stack_4 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: stack_4_reg_4374[7:0] lv
+
+local icmp_ln128_4 <icmp_231> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+icmp_ln128_4 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128
+icmp_ln128_4 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: icmp_ln128_4_reg_4379[0:0] lv
+
+local trunc_ln126_5 <trunc_231> <integer> <> 'trunc' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+trunc_ln126_5 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126
+trunc_ln126_5 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: trunc_ln126_5_reg_4383[1:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state19)
+# ST_19
+local stack_5 <mux_231> <integer> <> 'mux' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+stack[5] /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126
+stack_5 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: stack_5_reg_4428[7:0] lv
+
+local icmp_ln128_5 <icmp_231> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+icmp_ln128_5 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128
+icmp_ln128_5 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: icmp_ln128_5_reg_4433[0:0] lv
+
+local trunc_ln126_6 <trunc_231> <integer> <> 'trunc' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+trunc_ln126_6 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126
+trunc_ln126_6 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: trunc_ln126_6_reg_4437[1:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state2)
+# ST_2
+local i <> <integer> <Phi> 'phi' <>
+i /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:84
+i_5 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: i_reg_1449[8:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state20)
+# ST_20
+local stack_6 <mux_231> <integer> <> 'mux' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+stack[6] /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126
+stack_6 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: stack_6_reg_4482[7:0] lv
+
+local icmp_ln128_6 <icmp_231> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+icmp_ln128_6 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128
+icmp_ln128_6 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: icmp_ln128_6_reg_4487[0:0] lv
+
+local trunc_ln126_7 <trunc_231> <integer> <> 'trunc' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+trunc_ln126_7 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126
+trunc_ln126_7 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: trunc_ln126_7_reg_4491[1:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state21)
+# ST_21
+local stack_7 <mux_231> <integer> <> 'mux' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+stack[7] /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126
+stack_7 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: stack_7_reg_4536[7:0] lv
+
+local icmp_ln128_7 <icmp_231> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+icmp_ln128_7 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128
+icmp_ln128_7 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: icmp_ln128_7_reg_4541[0:0] lv
+
+local trunc_ln126_8 <trunc_231> <integer> <> 'trunc' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+trunc_ln126_8 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126
+trunc_ln126_8 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: trunc_ln126_8_reg_4545[1:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state22)
+# ST_22
+local stack_8 <mux_231> <integer> <> 'mux' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+stack[8] /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126
+stack_8 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: stack_8_reg_4590[7:0] lv
+
+local icmp_ln128_8 <icmp_231> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+icmp_ln128_8 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128
+icmp_ln128_8 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: icmp_ln128_8_reg_4595[0:0] lv
+
+local trunc_ln126_9 <trunc_231> <integer> <> 'trunc' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+trunc_ln126_9 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126
+trunc_ln126_9 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: trunc_ln126_9_reg_4599[1:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state23)
+# ST_23
+local stack_9 <mux_231> <integer> <> 'mux' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+stack[9] /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126
+stack_9 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: stack_9_reg_4644[7:0] lv
+
+local icmp_ln128_9 <icmp_231> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+icmp_ln128_9 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128
+icmp_ln128_9 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: icmp_ln128_9_reg_4649[0:0] lv
+
+local trunc_ln126_10 <trunc_231> <integer> <> 'trunc' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+trunc_ln126_10 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126
+trunc_ln126_10 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: trunc_ln126_10_reg_4653[1:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state24)
+# ST_24
+local stack_10 <mux_231> <integer> <> 'mux' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+stack[10] /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126
+stack_10 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: stack_10_reg_4698[7:0] lv
+
+local icmp_ln128_10 <icmp_231> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+icmp_ln128_10 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128
+icmp_ln128_10 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: icmp_ln128_10_reg_4703[0:0] lv
+
+local trunc_ln126_11 <trunc_231> <integer> <> 'trunc' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+trunc_ln126_11 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126
+trunc_ln126_11 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: trunc_ln126_11_reg_4707[1:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state25)
+# ST_25
+local stack_11 <mux_231> <integer> <> 'mux' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+stack[11] /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126
+stack_11 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: stack_11_reg_4752[7:0] lv
+
+local icmp_ln128_11 <icmp_231> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+icmp_ln128_11 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128
+icmp_ln128_11 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: icmp_ln128_11_reg_4757[0:0] lv
+
+local trunc_ln126_12 <trunc_231> <integer> <> 'trunc' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+trunc_ln126_12 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126
+trunc_ln126_12 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: trunc_ln126_12_reg_4761[1:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state26)
+# ST_26
+local stack_12 <mux_231> <integer> <> 'mux' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+stack[12] /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126
+stack_12 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: stack_12_reg_4806[7:0] lv
+
+local icmp_ln128_12 <icmp_231> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+icmp_ln128_12 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128
+icmp_ln128_12 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: icmp_ln128_12_reg_4811[0:0] lv
+
+local trunc_ln126_13 <trunc_231> <integer> <> 'trunc' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+trunc_ln126_13 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126
+trunc_ln126_13 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: trunc_ln126_13_reg_4815[1:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state27)
+# ST_27
+local stack_13 <mux_231> <integer> <> 'mux' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+stack[13] /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126
+stack_13 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: stack_13_reg_4860[7:0] lv
+
+local icmp_ln128_13 <icmp_231> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+icmp_ln128_13 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128
+icmp_ln128_13 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: icmp_ln128_13_reg_4865[0:0] lv
+
+local trunc_ln126_14 <trunc_231> <integer> <> 'trunc' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+trunc_ln126_14 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126
+trunc_ln126_14 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: trunc_ln126_14_reg_4869[1:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state28)
+# ST_28
+local icmp_ln128_14 <icmp_231> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+icmp_ln128_14 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:128
+icmp_ln128_14 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: icmp_ln128_14_reg_4914[0:0] lv
+
+local trunc_ln126_15 <trunc_231> <integer> <> 'trunc' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+trunc_ln126_15 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:126
+trunc_ln126_15 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: trunc_ln126_15_reg_4918[1:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state29)
+# ST_29
+local stack_0_4 <> <integer> <Phi> 'phi' <>
+reg: stack_0_4_reg_1707[7:0] lv
+
+local j <phi_231> <integer> <Phi> 'phi' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:150->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+j /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:150
+j /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: j_reg_1760[3:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state3)
+# ST_3
+local prev_code_1 <read_145> <integer> <FifoRead> 'read' </mnt/pollux/software/xilinx/2020.2/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145>
+tmp /mnt/pollux/software/xilinx/2020.2/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:145
+reg: prev_code_1_reg_3694[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state7)
+# ST_7
+local stack_15_2 <> <integer> <Phi> 'phi' <>
+reg: stack_15_2_reg_1481[7:0] lv
+
+local stack_14_2 <> <integer> <Phi> 'phi' <>
+reg: stack_14_2_reg_1491[7:0] lv
+
+local stack_13_2 <> <integer> <Phi> 'phi' <>
+reg: stack_13_2_reg_1501[7:0] lv
+
+local stack_12_2 <> <integer> <Phi> 'phi' <>
+reg: stack_12_2_reg_1511[7:0] lv
+
+local stack_11_2 <> <integer> <Phi> 'phi' <>
+reg: stack_11_2_reg_1521[7:0] lv
+
+local stack_10_2 <> <integer> <Phi> 'phi' <>
+reg: stack_10_2_reg_1531[7:0] lv
+
+local stack_9_2 <> <integer> <Phi> 'phi' <>
+reg: stack_9_2_reg_1541[7:0] lv
+
+local stack_8_2 <> <integer> <Phi> 'phi' <>
+reg: stack_8_2_reg_1551[7:0] lv
+
+local stack_7_2 <> <integer> <Phi> 'phi' <>
+reg: stack_7_2_reg_1561[7:0] lv
+
+local stack_6_2 <> <integer> <Phi> 'phi' <>
+reg: stack_6_2_reg_1571[7:0] lv
+
+local stack_5_2 <> <integer> <Phi> 'phi' <>
+reg: stack_5_2_reg_1581[7:0] lv
+
+local stack_4_2 <> <integer> <Phi> 'phi' <>
+reg: stack_4_2_reg_1591[7:0] lv
+
+local stack_3_2 <> <integer> <Phi> 'phi' <>
+reg: stack_3_2_reg_1601[7:0] lv
+
+local stack_2_2 <> <integer> <Phi> 'phi' <>
+reg: stack_2_2_reg_1611[7:0] lv
+
+local stack_1_2 <> <integer> <Phi> 'phi' <>
+reg: stack_1_2_reg_1621[7:0] lv
+
+local stack_0_2 <> <integer> <Phi> 'phi' <>
+reg: stack_0_2_reg_1631[7:0] lv
+
+local stack_index_154_i_i <phi_231> <integer> <Phi> 'phi' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:100->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+stack_index_154_i_i /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:100
+stack_index_154_i_i /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: stack_index_154_i_i_reg_1641[3:0] lv
+
+
+End Function 'decoding'
+

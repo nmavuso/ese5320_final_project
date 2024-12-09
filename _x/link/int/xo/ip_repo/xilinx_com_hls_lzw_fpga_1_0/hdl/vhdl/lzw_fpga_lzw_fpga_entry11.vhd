@@ -47,7 +47,10 @@ port (
     output_out_write : OUT STD_LOGIC;
     output_length_out_din : OUT STD_LOGIC_VECTOR (63 downto 0);
     output_length_out_full_n : IN STD_LOGIC;
-    output_length_out_write : OUT STD_LOGIC );
+    output_length_out_write : OUT STD_LOGIC;
+    ap_ext_blocking_n : OUT STD_LOGIC;
+    ap_str_blocking_n : OUT STD_LOGIC;
+    ap_int_blocking_n : OUT STD_LOGIC );
 end;
 
 
@@ -77,6 +80,7 @@ attribute shreg_extract : string;
     signal output_length_out_blk_n : STD_LOGIC;
     signal ap_block_state1 : BOOLEAN;
     signal ap_NS_fsm : STD_LOGIC_VECTOR (0 downto 0);
+    signal ap_int_blocking_cur_n : STD_LOGIC;
     signal ap_ce_reg : STD_LOGIC;
 
 
@@ -155,6 +159,7 @@ begin
         end if; 
     end process;
 
+    ap_ext_blocking_n <= (ap_const_logic_1 and ap_const_logic_1);
 
     ap_idle_assign_proc : process(real_start, ap_CS_fsm_state1)
     begin
@@ -165,7 +170,10 @@ begin
         end if; 
     end process;
 
+    ap_int_blocking_cur_n <= (output_size_out_blk_n and output_out_blk_n and output_length_out_blk_n and output_code_out_blk_n and input_size_out_blk_n and input_size_out1_blk_n and input_out_blk_n);
+    ap_int_blocking_n <= (ap_int_blocking_cur_n and ap_const_logic_1);
     ap_ready <= internal_ap_ready;
+    ap_str_blocking_n <= (ap_const_logic_1 and ap_const_logic_1);
 
     input_out_blk_n_assign_proc : process(real_start, ap_done_reg, ap_CS_fsm_state1, input_out_full_n)
     begin

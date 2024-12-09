@@ -9,9 +9,9 @@
     "generateEstimateRpt": "false",
     "keepSolution": "false",
     "link": "false",
-    "logDir": "\/mnt\/castor\/seas_home\/n\/nmavuso\/ese5320_final_project\/_x\/logs\/link",
+    "logDir": "\/mnt\/castor\/seas_home\/a\/abdellah\/Documents\/ese5320_final_project\/_x\/logs\/link",
     "package": "false",
-    "reportDir": "\/mnt\/castor\/seas_home\/n\/nmavuso\/ese5320_final_project\/_x\/reports\/link",
+    "reportDir": "\/mnt\/castor\/seas_home\/a\/abdellah\/Documents\/ese5320_final_project\/_x\/reports\/link",
     "saveTemps": "false",
     "verbose": "false",
     "vplNoIpCache": "false"

@@ -1,8 +1,8 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
---Date        : Sun Dec  1 17:44:34 2024
---Host        : big08.seas.upenn.edu running 64-bit openSUSE Leap 15.6
+--Date        : Sun Dec  8 20:13:44 2024
+--Host        : altair.seas.upenn.edu running 64-bit openSUSE Leap 15.6
 --Command     : generate_target u96v2_sbc_base_wrapper.bd
 --Design      : u96v2_sbc_base_wrapper
 --Purpose     : IP block netlist

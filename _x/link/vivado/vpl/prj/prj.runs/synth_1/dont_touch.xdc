@@ -3,7 +3,7 @@
 
 # XDC: imports/base/u96v2_sbc_base.xdc
 
-# XDC: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/output/u96v2_sbc_base_ooc_copy.xdc
+# XDC: /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/output/u96v2_sbc_base_ooc_copy.xdc
 
 # Block Designs: bd/u96v2_sbc_base/u96v2_sbc_base.bd
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==u96v2_sbc_base || ORIG_REF_NAME==u96v2_sbc_base} -quiet] -quiet
@@ -218,4 +218,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==u96v2_sbc_b
 # IP: bd/u96v2_sbc_base/ip/u96v2_sbc_base_m00_regslice_0/u96v2_sbc_base_m00_regslice_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==u96v2_sbc_base_m00_regslice_0 || ORIG_REF_NAME==u96v2_sbc_base_m00_regslice_0} -quiet] -quiet
 
-# XDC: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/prj/prj.gen/sources_1/bd/u96v2_sbc_base/u96v2_sbc_base_ooc.xdc
+# XDC: /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/prj/prj.gen/sources_1/bd/u96v2_sbc_base/u96v2_sbc_base_ooc.xdc

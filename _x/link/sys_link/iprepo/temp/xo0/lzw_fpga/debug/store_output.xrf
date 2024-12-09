@@ -1,0 +1,17 @@
+Begin Function 'store_output'
+
+RTL state condition: (1'b1 == ap_CS_fsm_state2)
+# ST_2
+local out_index_1 <> <integer> <Phi> 'phi' <>
+i /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:170
+reg: out_index_1_reg_93[8:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state3)
+# ST_3
+local local_output_length_dc_0 <> <integer> <Phi> 'phi' <>
+reg: local_output_length_dc_0_reg_105[8:0] lv
+
+
+End Function 'store_output'
+

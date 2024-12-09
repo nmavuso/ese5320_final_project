@@ -105,8 +105,8 @@
     "time_stamp": "2020-11-18-05:13:29",
     "options": "/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/bin/unwrapped/lnx64.o/v++ --target hw --link --config fpga_accelerate/design.cfg -olzw_fpga.xclbin lzw_fpga.xo ",
     "xclbin_name": "lzw_fpga",
-    "uuid": "3e1cbe65-b4e8-405e-9280-c294acc3804f",
-    "link_uuid": "3e1cbe65-b4e8-405e-9280-c294acc3804f",
+    "uuid": "036c66cb-24a2-4f62-9607-3e40b01bb375",
+    "link_uuid": "036c66cb-24a2-4f62-9607-3e40b01bb375",
     "package_uuid": ""
    },
    "user_regions": [
@@ -126,7 +126,7 @@
       {
        "name": "lzw_fpga",
        "estimated_resources": {
-        "LUT": "83",
+        "LUT": "91",
         "REG": "3",
         "BRAM": "",
         "DSP": "",
@@ -264,24 +264,24 @@
        "actual_resources": [
         {
          "design_state": "routed",
-         "LUT": "6723",
-         "REG": "6839",
+         "LUT": "7046",
+         "REG": "7530",
          "BRAM": "3",
          "DSP": "0",
          "URAM": ""
         },
         {
          "design_state": "fully_placed",
-         "LUT": "6723",
-         "REG": "6839",
+         "LUT": "7046",
+         "REG": "7530",
          "BRAM": "3",
          "DSP": "0",
          "URAM": ""
         },
         {
          "design_state": "synthesized",
-         "LUT": "7064",
-         "REG": "6838",
+         "LUT": "7554",
+         "REG": "7532",
          "BRAM": "3",
          "DSP": "0",
          "URAM": ""

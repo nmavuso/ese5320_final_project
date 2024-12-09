@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl/prj/prj.srcs/constrs_1/imports/base/u96v2_sbc_base.xdc rfile:../../../prj.srcs/constrs_1/imports/base/u96v2_sbc_base.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl/prj/prj.srcs/constrs_1/imports/base/u96v2_sbc_base.xdc rfile:../../../prj.srcs/constrs_1/imports/base/u96v2_sbc_base.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN B7 [get_ports bt_ctsn]
 set_property src_info {type:XDC file:1 line:9 export:INPUT save:INPUT read:READ} [current_design]

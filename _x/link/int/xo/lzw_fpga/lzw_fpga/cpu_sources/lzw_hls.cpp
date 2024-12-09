@@ -182,6 +182,10 @@ void copy_output(char local_output[INPUT_SIZE], char output[INPUT_SIZE], int out
     }
 }
 
+// void lzw_fpga(const char *s, int *output_code, int *output_size, char *output) {
+//     encoding(s, output_code, output_size);
+//     decoding(output_code, *output_size, output);
+// }
 
 void lzw_fpga(
     const char input[INPUT_SIZE],

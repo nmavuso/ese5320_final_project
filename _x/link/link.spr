@@ -2,7 +2,7 @@
 <project name="link" dir="" srcset="sources_1">
   <FileSets>
     <FileSet Name="kernel_lzw_fpga" Type="DesignSrcs">
-      <File Path="/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/int/xo/lzw_fpga/lzw_fpga/cpu_sources/lzw_hls.cpp"/>
+      <File Path="/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/int/xo/lzw_fpga/lzw_fpga/cpu_sources/lzw_hls.cpp"/>
       <Config/>
     </FileSet>
     <FileSet Name="sources_1" Type="DesignSrcs">
@@ -14,7 +14,7 @@
       <Strategy>
         <StratHandle Name="" Flow="Link HW 2018"/>
         <Step Id="system_link">
-          <Option Id="ConfigFileStr">/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/int/syslinkConfig.ini</Option>
+          <Option Id="ConfigFileStr">/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/int/syslinkConfig.ini</Option>
           <Option Id="OptionsStrList"></Option>
         </Step>
         <Step Id="cf2sw">
@@ -22,7 +22,7 @@
         </Step>
         <Step Id="rtd2_system_diagram"/>
         <Step Id="vpl">
-          <Option Id="ConfigFileStr">/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/int/vplConfig.ini</Option>
+          <Option Id="ConfigFileStr">/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/int/vplConfig.ini</Option>
           <Option Id="OptionsStrList"></Option>
         </Step>
         <Step Id="rtdgen"/>

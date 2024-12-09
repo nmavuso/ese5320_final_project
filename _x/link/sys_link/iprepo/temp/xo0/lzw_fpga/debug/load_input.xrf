@@ -1,0 +1,42 @@
+Begin Function 'load_input'
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage0)
+# ST_72
+local i <phi_196> <integer> <Phi> 'phi' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:159->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:196>
+add_ln159 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:159
+add_ln159 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:196
+reg: i_reg_94[30:0] lv
+
+local icmp_ln159_1 <icmp_196> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:159->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:196>
+icmp_ln159_1 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:159
+icmp_ln159_1 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:196
+reg: icmp_ln159_1_reg_157[0:0] lv
+
+# ST_73
+local gmem0_addr_read <read_174> <integer> <> 'read' </mnt/pollux/software/xilinx/2020.2/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174>
+gmem0_addr_read /mnt/pollux/software/xilinx/2020.2/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174
+reg: gmem0_addr_read_reg_161[7:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state1)
+# ST_1
+local input_size_read <read_158> <integer> <FifoRead> 'read' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:158>
+input_size /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:158
+reg: input_size_read_reg_131[31:0] lv
+
+local gmem0_addr <getelementptr_196> <integer> <> 'getelementptr' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:159->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:196>
+gmem0_addr /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:159
+gmem0_addr /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:196
+reg: gmem0_addr_reg_141[63:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state2)
+# ST_2
+local trunc_ln159 <trunc_196> <integer> <> 'trunc' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:159->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:196>
+trunc_ln159 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:159
+trunc_ln159 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:196
+reg: trunc_ln159_reg_147[30:0] lv
+
+
+End Function 'load_input'
+

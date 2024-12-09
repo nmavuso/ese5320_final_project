@@ -69,7 +69,10 @@ port (
     output_r_dout : IN STD_LOGIC_VECTOR (63 downto 0);
     output_r_empty_n : IN STD_LOGIC;
     output_r_read : OUT STD_LOGIC;
-    output_length : IN STD_LOGIC_VECTOR (8 downto 0) );
+    output_length : IN STD_LOGIC_VECTOR (8 downto 0);
+    ap_ext_blocking_n : OUT STD_LOGIC;
+    ap_str_blocking_n : OUT STD_LOGIC;
+    ap_int_blocking_n : OUT STD_LOGIC );
 end;
 
 
@@ -206,6 +209,8 @@ attribute shreg_extract : string;
     signal ap_block_pp0_stage0_01001 : BOOLEAN;
     signal ap_block_state1 : BOOLEAN;
     signal ap_NS_fsm : STD_LOGIC_VECTOR (70 downto 0);
+    signal ap_ext_blocking_cur_n : STD_LOGIC;
+    signal ap_int_blocking_cur_n : STD_LOGIC;
     signal ap_idle_pp0 : STD_LOGIC;
     signal ap_enable_pp0 : STD_LOGIC;
     signal ap_ce_reg : STD_LOGIC;
@@ -570,6 +575,8 @@ begin
     end process;
 
     ap_enable_pp0 <= (ap_idle_pp0 xor ap_const_logic_1);
+    ap_ext_blocking_cur_n <= (gmem2_blk_n_W and gmem2_blk_n_B and gmem2_blk_n_AW);
+    ap_ext_blocking_n <= (ap_ext_blocking_cur_n and ap_const_logic_1);
 
     ap_idle_assign_proc : process(ap_start, ap_CS_fsm_state1)
     begin
@@ -590,6 +597,8 @@ begin
         end if; 
     end process;
 
+    ap_int_blocking_cur_n <= (output_r_blk_n);
+    ap_int_blocking_n <= (ap_int_blocking_cur_n and ap_const_logic_1);
 
     ap_ready_assign_proc : process(m_axi_gmem2_BVALID, ap_CS_fsm_state73, icmp_ln179_reg_157)
     begin
@@ -600,6 +609,7 @@ begin
         end if; 
     end process;
 
+    ap_str_blocking_n <= (ap_const_logic_1 and ap_const_logic_1);
 
     gmem2_blk_n_AW_assign_proc : process(m_axi_gmem2_AWREADY, ap_CS_fsm_state2)
     begin

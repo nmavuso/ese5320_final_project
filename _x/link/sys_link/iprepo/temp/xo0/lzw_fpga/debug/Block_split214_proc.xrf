@@ -1,0 +1,19 @@
+Begin Function 'Block_.split214_proc'
+
+RTL state condition: (1'b1 == ap_CS_fsm_state1)
+# ST_1
+local local_output_size_read <read_231> <integer> <FifoRead> 'read' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+local_output_size_read /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: local_output_size_read_reg_151[31:0] lv
+
+local gmem_addr <getelementptr_239> <integer> <> 'getelementptr' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:239>
+gmem_addr /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:239
+reg: gmem_addr_reg_156[63:0] lv
+
+local gmem_addr_1 <getelementptr_240> <integer> <> 'getelementptr' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:240>
+gmem_addr_1 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:240
+reg: gmem_addr_1_reg_162[63:0] lv
+
+
+End Function 'Block_.split214_proc'
+

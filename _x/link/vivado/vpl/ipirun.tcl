@@ -67,11 +67,11 @@ set vivado_error_file "vivado_error.txt"
 set vivado_warn_file "vivado_warning.txt"
 set vivado_output_dir "output"
 set output_dir "output"
-set vpl_output_dir "/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/int"
+set vpl_output_dir "/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/int"
 set input_dir "input"
 set steps_log "../../link.steps.log"
 set kernel_ip_dirs {
-  {/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/int/xo/ip_repo/xilinx_com_hls_lzw_fpga_1_0}}
+  {/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/int/xo/ip_repo/xilinx_com_hls_lzw_fpga_1_0}}
 set install_ip_cache "/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/data/cache/xilinx"
 
 
@@ -179,7 +179,7 @@ set config_info [dict create \
   steps_log                 $steps_log \
   impl_from_step           "" \
   impl_to_step             "" \
-  num_jobs_synth            4 \
+  num_jobs_synth            8 \
   num_jobs_impl             0 \
   lsf_string_synth         {} \
   lsf_string_impl          {} \
@@ -194,7 +194,7 @@ set config_info [dict create \
   no_install_ip_cache       false \
   install_ip_cache          $install_ip_cache \
   no_ip_cache               false \
-  remote_ip_cache          "/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/.ipcache" \
+  remote_ip_cache          "/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/.ipcache" \
   user_board_repo           {} \
   user_bconn                {} \
   dr_bd_tcl                ".local/dr.bd.tcl" \
@@ -223,7 +223,7 @@ set config_info [dict create \
   failfast_config          {} \
   enable_explicit_emu_data  false \
   is_debug_enabled           "1" \
-  aie_archive_file         "/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/int/system.aieprj" \
+  aie_archive_file         "/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/int/system.aieprj" \
   system_dpa_enabled       "1" \
   is_hw_export              false \
   fixed_xsa                "vpl_gen_fixed.xsa" \

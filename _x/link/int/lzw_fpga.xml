@@ -24,7 +24,7 @@
           <clock port="KERNEL_CLK" frequency="300.000000MHz"/>
           <clock port="DATA_CLK" frequency="150.000000MHz"/>
         </kernelClocks>
-        <kernel name="lzw_fpga" language="c" vlnv="xilinx.com:hls:lzw_fpga:1.0" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="false" interrupt="true" hwControlProtocol="ap_ctrl_chain">
+        <kernel name="lzw_fpga" language="c" vlnv="xilinx.com:hls:lzw_fpga:1.0" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="true" interrupt="true" hwControlProtocol="ap_ctrl_chain">
           <module name="lzw_fpga">
             <module name="decoding" instName="decoding_U0" type="DataflowHS"/>
             <module name="encoding" instName="encoding_U0" type="DataflowHS">

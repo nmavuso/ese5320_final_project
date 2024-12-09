@@ -71,7 +71,10 @@ port (
     output_code_read : OUT STD_LOGIC;
     local_output_size_dout : IN STD_LOGIC_VECTOR (31 downto 0);
     local_output_size_empty_n : IN STD_LOGIC;
-    local_output_size_read : OUT STD_LOGIC );
+    local_output_size_read : OUT STD_LOGIC;
+    ap_ext_blocking_n : OUT STD_LOGIC;
+    ap_str_blocking_n : OUT STD_LOGIC;
+    ap_int_blocking_n : OUT STD_LOGIC );
 end;
 
 
@@ -214,6 +217,8 @@ attribute shreg_extract : string;
     signal ap_block_state1 : BOOLEAN;
     signal trunc_ln71_1_fu_125_p4 : STD_LOGIC_VECTOR (61 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (70 downto 0);
+    signal ap_ext_blocking_cur_n : STD_LOGIC;
+    signal ap_int_blocking_cur_n : STD_LOGIC;
     signal ap_idle_pp0 : STD_LOGIC;
     signal ap_enable_pp0 : STD_LOGIC;
     signal ap_ce_reg : STD_LOGIC;
@@ -585,6 +590,8 @@ begin
     end process;
 
     ap_enable_pp0 <= (ap_idle_pp0 xor ap_const_logic_1);
+    ap_ext_blocking_cur_n <= (gmem1_blk_n_W and gmem1_blk_n_B and gmem1_blk_n_AW);
+    ap_ext_blocking_n <= (ap_ext_blocking_cur_n and ap_const_logic_1);
 
     ap_idle_assign_proc : process(ap_start, ap_CS_fsm_state1)
     begin
@@ -605,6 +612,8 @@ begin
         end if; 
     end process;
 
+    ap_int_blocking_cur_n <= (output_code_blk_n and local_output_size_blk_n);
+    ap_int_blocking_n <= (ap_int_blocking_cur_n and ap_const_logic_1);
 
     ap_ready_assign_proc : process(m_axi_gmem1_BVALID, ap_CS_fsm_state73, icmp_ln71_reg_170)
     begin
@@ -615,6 +624,7 @@ begin
         end if; 
     end process;
 
+    ap_str_blocking_n <= (ap_const_logic_1 and ap_const_logic_1);
 
     gmem1_blk_n_AW_assign_proc : process(m_axi_gmem1_AWREADY, ap_CS_fsm_state2)
     begin

@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:hls:lzw_fpga:1.0
--- IP Revision: 2113844549
+-- IP Revision: 2113857250
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -55,6 +55,12 @@ USE ieee.numeric_std.ALL;
 
 ENTITY u96v2_sbc_base_lzw_fpga_1_0 IS
   PORT (
+    stall_start_ext : OUT STD_LOGIC;
+    stall_done_ext : OUT STD_LOGIC;
+    stall_start_str : OUT STD_LOGIC;
+    stall_done_str : OUT STD_LOGIC;
+    stall_start_int : OUT STD_LOGIC;
+    stall_done_int : OUT STD_LOGIC;
     s_axi_control_AWADDR : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
     s_axi_control_AWVALID : IN STD_LOGIC;
     s_axi_control_AWREADY : OUT STD_LOGIC;
@@ -74,7 +80,9 @@ ENTITY u96v2_sbc_base_lzw_fpga_1_0 IS
     s_axi_control_RREADY : IN STD_LOGIC;
     ap_clk : IN STD_LOGIC;
     ap_rst_n : IN STD_LOGIC;
+    event_done : OUT STD_LOGIC;
     interrupt : OUT STD_LOGIC;
+    event_start : OUT STD_LOGIC;
     m_axi_gmem0_AWADDR : OUT STD_LOGIC_VECTOR(63 DOWNTO 0);
     m_axi_gmem0_AWLEN : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
     m_axi_gmem0_AWSIZE : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
@@ -271,6 +279,12 @@ ARCHITECTURE u96v2_sbc_base_lzw_fpga_1_0_arch OF u96v2_sbc_base_lzw_fpga_1_0 IS
       C_M_AXI_GMEM2_CACHE_VALUE : INTEGER
     );
     PORT (
+      stall_start_ext : OUT STD_LOGIC;
+      stall_done_ext : OUT STD_LOGIC;
+      stall_start_str : OUT STD_LOGIC;
+      stall_done_str : OUT STD_LOGIC;
+      stall_start_int : OUT STD_LOGIC;
+      stall_done_int : OUT STD_LOGIC;
       s_axi_control_AWADDR : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
       s_axi_control_AWVALID : IN STD_LOGIC;
       s_axi_control_AWREADY : OUT STD_LOGIC;
@@ -290,7 +304,9 @@ ARCHITECTURE u96v2_sbc_base_lzw_fpga_1_0_arch OF u96v2_sbc_base_lzw_fpga_1_0 IS
       s_axi_control_RREADY : IN STD_LOGIC;
       ap_clk : IN STD_LOGIC;
       ap_rst_n : IN STD_LOGIC;
+      event_done : OUT STD_LOGIC;
       interrupt : OUT STD_LOGIC;
+      event_start : OUT STD_LOGIC;
       m_axi_gmem0_AWID : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
       m_axi_gmem0_AWADDR : OUT STD_LOGIC_VECTOR(63 DOWNTO 0);
       m_axi_gmem0_AWLEN : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
@@ -631,8 +647,12 @@ ARCHITECTURE u96v2_sbc_base_lzw_fpga_1_0_arch OF u96v2_sbc_base_lzw_fpga_1_0 IS
   ATTRIBUTE X_INTERFACE_PARAMETER OF m_axi_gmem0_AWADDR: SIGNAL IS "XIL_INTERFACENAME m_axi_gmem0, ADDR_WIDTH 64, MAX_BURST_LENGTH 256, NUM_READ_OUTSTANDING 16, NUM_WRITE_OUTSTANDING 16, MAX_READ_BURST_LENGTH 16, MAX_WRITE_BURST_LENGTH 16, PROTOCOL AXI4, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, FREQ_HZ 150000000, ID_WIDTH 0, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, PHASE 0.0, CLK_DOMAIN u" & 
 "96v2_sbc_base_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF m_axi_gmem0_AWADDR: SIGNAL IS "xilinx.com:interface:aximm:1.0 m_axi_gmem0 AWADDR";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF event_start: SIGNAL IS "XIL_INTERFACENAME event_start, LAYERED_METADATA undef";
+  ATTRIBUTE X_INTERFACE_INFO OF event_start: SIGNAL IS "xilinx.com:signal:data:1.0 event_start DATA";
   ATTRIBUTE X_INTERFACE_PARAMETER OF interrupt: SIGNAL IS "XIL_INTERFACENAME interrupt, SENSITIVITY LEVEL_HIGH, PortWidth 1";
   ATTRIBUTE X_INTERFACE_INFO OF interrupt: SIGNAL IS "xilinx.com:signal:interrupt:1.0 interrupt INTERRUPT";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF event_done: SIGNAL IS "XIL_INTERFACENAME event_done, LAYERED_METADATA undef";
+  ATTRIBUTE X_INTERFACE_INFO OF event_done: SIGNAL IS "xilinx.com:signal:data:1.0 event_done DATA";
   ATTRIBUTE X_INTERFACE_PARAMETER OF ap_rst_n: SIGNAL IS "XIL_INTERFACENAME ap_rst_n, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF ap_rst_n: SIGNAL IS "xilinx.com:signal:reset:1.0 ap_rst_n RST";
   ATTRIBUTE X_INTERFACE_PARAMETER OF ap_clk: SIGNAL IS "XIL_INTERFACENAME ap_clk, ASSOCIATED_BUSIF s_axi_control:m_axi_gmem0:m_axi_gmem1:m_axi_gmem:m_axi_gmem2, ASSOCIATED_RESET ap_rst_n, FREQ_HZ 150000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN u96v2_sbc_base_clk_wiz_0_0_clk_out1, INSERT_VIP 0";
@@ -707,6 +727,12 @@ BEGIN
       C_M_AXI_GMEM2_CACHE_VALUE => 3
     )
     PORT MAP (
+      stall_start_ext => stall_start_ext,
+      stall_done_ext => stall_done_ext,
+      stall_start_str => stall_start_str,
+      stall_done_str => stall_done_str,
+      stall_start_int => stall_start_int,
+      stall_done_int => stall_done_int,
       s_axi_control_AWADDR => s_axi_control_AWADDR,
       s_axi_control_AWVALID => s_axi_control_AWVALID,
       s_axi_control_AWREADY => s_axi_control_AWREADY,
@@ -726,7 +752,9 @@ BEGIN
       s_axi_control_RREADY => s_axi_control_RREADY,
       ap_clk => ap_clk,
       ap_rst_n => ap_rst_n,
+      event_done => event_done,
       interrupt => interrupt,
+      event_start => event_start,
       m_axi_gmem0_AWADDR => m_axi_gmem0_AWADDR,
       m_axi_gmem0_AWLEN => m_axi_gmem0_AWLEN,
       m_axi_gmem0_AWSIZE => m_axi_gmem0_AWSIZE,

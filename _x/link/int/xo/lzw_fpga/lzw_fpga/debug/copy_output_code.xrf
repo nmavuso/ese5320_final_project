@@ -1,0 +1,48 @@
+Begin Function 'copy_output_code'
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage0)
+# ST_3
+local i <phi_235> <integer> <Phi> 'phi' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:71->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:235>
+add_ln71 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:71
+add_ln71 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:235
+reg: i_reg_108[30:0] lv
+
+local icmp_ln71_1 <icmp_235> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:71->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:235>
+icmp_ln71_1 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:71
+icmp_ln71_1 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:235
+reg: icmp_ln71_1_reg_190[0:0] lv
+
+# ST_4
+local local_output_code_load <load_235> <integer> <ArrayAccess><ArrayLoad><MultiCycle> 'load' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:73->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:235>
+local_output_code_load /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:73
+local_output_code_load /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:235
+reg: local_output_code_load_reg_199[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state1)
+# ST_1
+local local_output_size_read <read_231> <integer> <FifoRead> 'read' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231>
+local_output_size_read /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:231
+reg: local_output_size_read_reg_164[31:0] lv
+
+local icmp_ln71 <icmp_235> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:71->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:235>
+icmp_ln71 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:71
+icmp_ln71 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:235
+reg: icmp_ln71_reg_170[0:0] lv
+
+local gmem1_addr <getelementptr_235> <integer> <> 'getelementptr' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:71->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:235>
+gmem1_addr /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:71
+gmem1_addr /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:235
+reg: gmem1_addr_reg_174[63:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state2)
+# ST_2
+local trunc_ln71 <trunc_235> <integer> <> 'trunc' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:71->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:235>
+trunc_ln71 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:71
+trunc_ln71 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:235
+reg: trunc_ln71_reg_180[30:0] lv
+
+
+End Function 'copy_output_code'
+

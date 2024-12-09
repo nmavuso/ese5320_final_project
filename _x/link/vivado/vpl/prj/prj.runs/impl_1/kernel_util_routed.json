@@ -7,14 +7,14 @@
     "design_state": "Routed",
     "user_budget": {
         "actual_resources": {
-            "LUT": "6723",
-            "LUTAsMem": "1888",
-            "REG": "6839",
+            "LUT": "7046",
+            "LUTAsMem": "2053",
+            "REG": "7530",
             "BRAM": "3",
             "DSP": "0"
         },
         "supply_resources": {
-            "LUT": "52321",
+            "LUT": "52327",
             "LUTAsMem": "27142",
             "REG": "119228",
             "BRAM": "198",
@@ -29,9 +29,9 @@
                 {
                     "cu_name": "lzw_fpga_1",
                     "actual_resources": {
-                        "LUT": "6723",
-                        "LUTAsMem": "1888",
-                        "REG": "6839",
+                        "LUT": "7046",
+                        "LUTAsMem": "2053",
+                        "REG": "7530",
                         "BRAM": "3",
                         "DSP": "0"
                     }

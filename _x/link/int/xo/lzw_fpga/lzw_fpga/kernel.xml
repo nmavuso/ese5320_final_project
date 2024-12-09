@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root versionMajor="1" versionMinor="5">
-  <kernel name="lzw_fpga" language="c" vlnv="xilinx.com:hls:lzw_fpga:1.0" attributes="" hash="" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="false" compileOptions="" profileType="none" interrupt="true" hwControlProtocol="ap_ctrl_chain">
+  <kernel name="lzw_fpga" language="c" vlnv="xilinx.com:hls:lzw_fpga:1.0" attributes="" hash="" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="true" compileOptions=" -g -I /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls" profileType="" interrupt="true" hwControlProtocol="ap_ctrl_chain">
     <ports>
       <port name="M_AXI_GMEM0" mode="master" range="0xFFFFFFFF" dataWidth="8" portType="addressable" base="0x0"/>
       <port name="M_AXI_GMEM1" mode="master" range="0xFFFFFFFF" dataWidth="32" portType="addressable" base="0x0"/>
@@ -77,8 +77,8 @@
         <Name>lzw_fpga_entry11</Name>
         <PerformanceEstimates>
           <SummaryOfTimingAnalysis>
-            <TargetClockPeriod>6.7</TargetClockPeriod>
-            <ClockUncertainty>1.81</ClockUncertainty>
+            <TargetClockPeriod>6.67</TargetClockPeriod>
+            <ClockUncertainty>1.8</ClockUncertainty>
             <EstimatedClockPeriod>2.167</EstimatedClockPeriod>
           </SummaryOfTimingAnalysis>
           <SummaryOfOverallLatency>
@@ -95,7 +95,7 @@
         <AreaEstimates>
           <Resources>
             <FF>3</FF>
-            <LUT>83</LUT>
+            <LUT>91</LUT>
           </Resources>
         </AreaEstimates>
         <InterfaceSummary>
@@ -208,6 +208,39 @@
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>ap_ext_blocking_n</name>
+            <Object>lzw_fpga.entry11</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>ap_str_blocking_n</name>
+            <Object>lzw_fpga.entry11</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>ap_int_blocking_n</name>
+            <Object>lzw_fpga.entry11</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
           </RtlPorts>
           <RtlPorts>
             <name>input_r</name>
@@ -512,15 +545,15 @@
         <Name>load_input</Name>
         <PerformanceEstimates>
           <SummaryOfTimingAnalysis>
-            <TargetClockPeriod>6.7</TargetClockPeriod>
-            <ClockUncertainty>1.81</ClockUncertainty>
-            <EstimatedClockPeriod>4.891</EstimatedClockPeriod>
+            <TargetClockPeriod>6.67</TargetClockPeriod>
+            <ClockUncertainty>1.8</ClockUncertainty>
+            <EstimatedClockPeriod>4.867</EstimatedClockPeriod>
           </SummaryOfTimingAnalysis>
           <SummaryOfOverallLatency>
             <Best-caseLatency>1</Best-caseLatency>
             <Average-caseLatency>undef</Average-caseLatency>
             <Worst-caseLatency>undef</Worst-caseLatency>
-            <Best-caseRealTimeLatency>6.700 ns</Best-caseRealTimeLatency>
+            <Best-caseRealTimeLatency>6.667 ns</Best-caseRealTimeLatency>
             <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
             <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
             <PipelineInitiationInterval>1 ~ -1</PipelineInitiationInterval>
@@ -531,7 +564,7 @@
         <AreaEstimates>
           <Resources>
             <FF>245</FF>
-            <LUT>559</LUT>
+            <LUT>569</LUT>
           </Resources>
         </AreaEstimates>
         <InterfaceSummary>
@@ -611,6 +644,39 @@
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>control</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>ap_ext_blocking_n</name>
+            <Object>load_input</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>ap_str_blocking_n</name>
+            <Object>load_input</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>ap_int_blocking_n</name>
+            <Object>load_input</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
           </RtlPorts>
           <RtlPorts>
             <name>m_axi_gmem0_AWVALID</name>
@@ -1212,8 +1278,8 @@
         <Name>encoding</Name>
         <PerformanceEstimates>
           <SummaryOfTimingAnalysis>
-            <TargetClockPeriod>6.7</TargetClockPeriod>
-            <ClockUncertainty>1.81</ClockUncertainty>
+            <TargetClockPeriod>6.67</TargetClockPeriod>
+            <ClockUncertainty>1.8</ClockUncertainty>
             <EstimatedClockPeriod>3.37</EstimatedClockPeriod>
           </SummaryOfTimingAnalysis>
           <SummaryOfOverallLatency>
@@ -1232,7 +1298,7 @@
           <Resources>
             <BRAM_18K>8</BRAM_18K>
             <FF>260</FF>
-            <LUT>847</LUT>
+            <LUT>855</LUT>
             <URAM>0</URAM>
           </Resources>
         </AreaEstimates>
@@ -1346,6 +1412,39 @@
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>ap_ext_blocking_n</name>
+            <Object>encoding</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>ap_str_blocking_n</name>
+            <Object>encoding</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>ap_int_blocking_n</name>
+            <Object>encoding</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
           </RtlPorts>
           <RtlPorts>
             <name>input_stream_dout</name>
@@ -1562,8 +1661,8 @@
         <Name>decoding</Name>
         <PerformanceEstimates>
           <SummaryOfTimingAnalysis>
-            <TargetClockPeriod>6.7</TargetClockPeriod>
-            <ClockUncertainty>1.81</ClockUncertainty>
+            <TargetClockPeriod>6.67</TargetClockPeriod>
+            <ClockUncertainty>1.8</ClockUncertainty>
             <EstimatedClockPeriod>4.334</EstimatedClockPeriod>
           </SummaryOfTimingAnalysis>
           <SummaryOfOverallLatency>
@@ -1582,7 +1681,7 @@
           <Resources>
             <BRAM_18K>8</BRAM_18K>
             <FF>1047</FF>
-            <LUT>3124</LUT>
+            <LUT>3132</LUT>
             <URAM>0</URAM>
           </Resources>
         </AreaEstimates>
@@ -1696,6 +1795,39 @@
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>ap_ext_blocking_n</name>
+            <Object>decoding</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>ap_str_blocking_n</name>
+            <Object>decoding</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>ap_int_blocking_n</name>
+            <Object>decoding</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
           </RtlPorts>
           <RtlPorts>
             <name>code_stream_dout</name>
@@ -1835,17 +1967,17 @@
         <Name>store_output</Name>
         <PerformanceEstimates>
           <SummaryOfTimingAnalysis>
-            <TargetClockPeriod>6.7</TargetClockPeriod>
-            <ClockUncertainty>1.81</ClockUncertainty>
+            <TargetClockPeriod>6.67</TargetClockPeriod>
+            <ClockUncertainty>1.8</ClockUncertainty>
             <EstimatedClockPeriod>3.608</EstimatedClockPeriod>
           </SummaryOfTimingAnalysis>
           <SummaryOfOverallLatency>
             <Best-caseLatency>3</Best-caseLatency>
             <Average-caseLatency>130</Average-caseLatency>
             <Worst-caseLatency>258</Worst-caseLatency>
-            <Best-caseRealTimeLatency>20.100 ns</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>0.871 us</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>1.729 us</Worst-caseRealTimeLatency>
+            <Best-caseRealTimeLatency>20.001 ns</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0.867 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>1.720 us</Worst-caseRealTimeLatency>
             <PipelineInitiationInterval>3 ~ 258</PipelineInitiationInterval>
             <PipelineType>none</PipelineType>
           </SummaryOfOverallLatency>
@@ -1854,7 +1986,7 @@
         <AreaEstimates>
           <Resources>
             <FF>23</FF>
-            <LUT>100</LUT>
+            <LUT>108</LUT>
           </Resources>
         </AreaEstimates>
         <InterfaceSummary>
@@ -1967,6 +2099,39 @@
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>unknown</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>ap_ext_blocking_n</name>
+            <Object>store_output</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>ap_str_blocking_n</name>
+            <Object>store_output</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>ap_int_blocking_n</name>
+            <Object>store_output</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
           </RtlPorts>
           <RtlPorts>
             <name>output_stream_dout</name>
@@ -2084,15 +2249,15 @@
         <Name>copy_output_code</Name>
         <PerformanceEstimates>
           <SummaryOfTimingAnalysis>
-            <TargetClockPeriod>6.7</TargetClockPeriod>
-            <ClockUncertainty>1.81</ClockUncertainty>
-            <EstimatedClockPeriod>4.891</EstimatedClockPeriod>
+            <TargetClockPeriod>6.67</TargetClockPeriod>
+            <ClockUncertainty>1.8</ClockUncertainty>
+            <EstimatedClockPeriod>4.867</EstimatedClockPeriod>
           </SummaryOfTimingAnalysis>
           <SummaryOfOverallLatency>
             <Best-caseLatency>1</Best-caseLatency>
             <Average-caseLatency>undef</Average-caseLatency>
             <Worst-caseLatency>undef</Worst-caseLatency>
-            <Best-caseRealTimeLatency>6.700 ns</Best-caseRealTimeLatency>
+            <Best-caseRealTimeLatency>6.667 ns</Best-caseRealTimeLatency>
             <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
             <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
             <PipelineInitiationInterval>1 ~ -1</PipelineInitiationInterval>
@@ -2103,7 +2268,7 @@
         <AreaEstimates>
           <Resources>
             <FF>268</FF>
-            <LUT>536</LUT>
+            <LUT>546</LUT>
           </Resources>
         </AreaEstimates>
         <InterfaceSummary>
@@ -2183,6 +2348,39 @@
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>control</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>ap_ext_blocking_n</name>
+            <Object>copy_output_code</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>ap_str_blocking_n</name>
+            <Object>copy_output_code</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>ap_int_blocking_n</name>
+            <Object>copy_output_code</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
           </RtlPorts>
           <RtlPorts>
             <name>m_axi_gmem1_AWVALID</name>
@@ -2784,8 +2982,8 @@
         <Name>Block_split212_proc</Name>
         <PerformanceEstimates>
           <SummaryOfTimingAnalysis>
-            <TargetClockPeriod>6.7</TargetClockPeriod>
-            <ClockUncertainty>1.81</ClockUncertainty>
+            <TargetClockPeriod>6.67</TargetClockPeriod>
+            <ClockUncertainty>1.8</ClockUncertainty>
             <EstimatedClockPeriod>2.167</EstimatedClockPeriod>
           </SummaryOfTimingAnalysis>
           <SummaryOfOverallLatency>
@@ -2802,7 +3000,7 @@
         <AreaEstimates>
           <Resources>
             <FF>20</FF>
-            <LUT>38</LUT>
+            <LUT>46</LUT>
           </Resources>
         </AreaEstimates>
         <InterfaceSummary>
@@ -2906,6 +3104,39 @@
             <Attribute>data</Attribute>
           </RtlPorts>
           <RtlPorts>
+            <name>ap_ext_blocking_n</name>
+            <Object>Block_.split212_proc</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>ap_str_blocking_n</name>
+            <Object>Block_.split212_proc</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>ap_int_blocking_n</name>
+            <Object>Block_.split212_proc</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+          </RtlPorts>
+          <RtlPorts>
             <name>local_output_length_dout</name>
             <Object>local_output_length</Object>
             <Type>pointer</Type>
@@ -2944,15 +3175,15 @@
         <Name>copy_output</Name>
         <PerformanceEstimates>
           <SummaryOfTimingAnalysis>
-            <TargetClockPeriod>6.7</TargetClockPeriod>
-            <ClockUncertainty>1.81</ClockUncertainty>
-            <EstimatedClockPeriod>4.891</EstimatedClockPeriod>
+            <TargetClockPeriod>6.67</TargetClockPeriod>
+            <ClockUncertainty>1.8</ClockUncertainty>
+            <EstimatedClockPeriod>4.867</EstimatedClockPeriod>
           </SummaryOfTimingAnalysis>
           <SummaryOfOverallLatency>
             <Best-caseLatency>1</Best-caseLatency>
             <Average-caseLatency>undef</Average-caseLatency>
             <Worst-caseLatency>undef</Worst-caseLatency>
-            <Best-caseRealTimeLatency>6.700 ns</Best-caseRealTimeLatency>
+            <Best-caseRealTimeLatency>6.667 ns</Best-caseRealTimeLatency>
             <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
             <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
             <PipelineInitiationInterval>1 ~ -1</PipelineInitiationInterval>
@@ -2963,7 +3194,7 @@
         <AreaEstimates>
           <Resources>
             <FF>168</FF>
-            <LUT>488</LUT>
+            <LUT>498</LUT>
           </Resources>
         </AreaEstimates>
         <InterfaceSummary>
@@ -3043,6 +3274,39 @@
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>control</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>ap_ext_blocking_n</name>
+            <Object>copy_output</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>ap_str_blocking_n</name>
+            <Object>copy_output</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>ap_int_blocking_n</name>
+            <Object>copy_output</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
           </RtlPorts>
           <RtlPorts>
             <name>m_axi_gmem2_AWVALID</name>
@@ -3622,17 +3886,17 @@
         <Name>Block_split214_proc</Name>
         <PerformanceEstimates>
           <SummaryOfTimingAnalysis>
-            <TargetClockPeriod>6.7</TargetClockPeriod>
-            <ClockUncertainty>1.81</ClockUncertainty>
-            <EstimatedClockPeriod>4.891</EstimatedClockPeriod>
+            <TargetClockPeriod>6.67</TargetClockPeriod>
+            <ClockUncertainty>1.8</ClockUncertainty>
+            <EstimatedClockPeriod>4.867</EstimatedClockPeriod>
           </SummaryOfTimingAnalysis>
           <SummaryOfOverallLatency>
             <Best-caseLatency>71</Best-caseLatency>
             <Average-caseLatency>71</Average-caseLatency>
             <Worst-caseLatency>71</Worst-caseLatency>
-            <Best-caseRealTimeLatency>0.476 us</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>0.476 us</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>0.476 us</Worst-caseRealTimeLatency>
+            <Best-caseRealTimeLatency>0.473 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0.473 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0.473 us</Worst-caseRealTimeLatency>
             <PipelineInitiationInterval>71</PipelineInitiationInterval>
             <PipelineType>none</PipelineType>
           </SummaryOfOverallLatency>
@@ -3640,7 +3904,7 @@
         <AreaEstimates>
           <Resources>
             <FF>233</FF>
-            <LUT>472</LUT>
+            <LUT>482</LUT>
           </Resources>
         </AreaEstimates>
         <InterfaceSummary>
@@ -3720,6 +3984,39 @@
             <Dir>out</Dir>
             <Bits>1</Bits>
             <Attribute>control</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>ap_ext_blocking_n</name>
+            <Object>Block_.split214_proc</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>ap_str_blocking_n</name>
+            <Object>Block_.split214_proc</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>ap_int_blocking_n</name>
+            <Object>Block_.split214_proc</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
           </RtlPorts>
           <RtlPorts>
             <name>output_size_dout</name>
@@ -4332,9 +4629,9 @@
         <Name>lzw_fpga</Name>
         <PerformanceEstimates>
           <SummaryOfTimingAnalysis>
-            <TargetClockPeriod>6.7</TargetClockPeriod>
-            <ClockUncertainty>1.81</ClockUncertainty>
-            <EstimatedClockPeriod>4.891</EstimatedClockPeriod>
+            <TargetClockPeriod>6.67</TargetClockPeriod>
+            <ClockUncertainty>1.8</ClockUncertainty>
+            <EstimatedClockPeriod>4.867</EstimatedClockPeriod>
           </SummaryOfTimingAnalysis>
           <SummaryOfOverallLatency>
             <Best-caseLatency>undef</Best-caseLatency>
@@ -4350,8 +4647,8 @@
         <AreaEstimates>
           <Resources>
             <BRAM_18K>26</BRAM_18K>
-            <FF>6402</FF>
-            <LUT>10684</LUT>
+            <FF>6405</FF>
+            <LUT>10776</LUT>
             <URAM>0</URAM>
           </Resources>
         </AreaEstimates>
@@ -4583,7 +4880,95 @@
             <Attribute>control</Attribute>
           </RtlPorts>
           <RtlPorts>
+            <name>event_done</name>
+            <Object>lzw_fpga</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_chain</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+          </RtlPorts>
+          <RtlPorts>
             <name>interrupt</name>
+            <Object>lzw_fpga</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_chain</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>event_start</name>
+            <Object>lzw_fpga</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_chain</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>stall_start_ext</name>
+            <Object>lzw_fpga</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_chain</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>stall_done_ext</name>
+            <Object>lzw_fpga</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_chain</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>stall_start_str</name>
+            <Object>lzw_fpga</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_chain</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>stall_done_str</name>
+            <Object>lzw_fpga</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_chain</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>stall_start_int</name>
+            <Object>lzw_fpga</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_chain</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+          </RtlPorts>
+          <RtlPorts>
+            <name>stall_done_int</name>
             <Object>lzw_fpga</Object>
             <Type>return value</Type>
             <Scope/>

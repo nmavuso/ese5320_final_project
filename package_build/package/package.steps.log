@@ -13,35 +13,43 @@ LS_COLORS=no=00:fi=00:di=01;34:ln=00;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:c
 LD_LIBRARY_PATH=/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/lib/lnx64.o/SuSE:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/lib/lnx64.o:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/lib/lnx64.o/SuSE:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/lib/lnx64.o:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/bin/../lnx64/tools/dot/lib
 HOSTTYPE=x86_64
 XILINX_VITIS=/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2
-SSH_CONNECTION=10.103.144.62 49202 158.130.24.116 22
-XAUTHLOCALHOSTNAME=big08.seas.upenn.edu
+XAUTHLOCALHOSTNAME=altair.seas.upenn.edu
 LESSCLOSE=lessclose.sh %s %s
 XKEYSYMDB=/usr/X11R6/lib/X11/XKeysymDB
 XILINX_DSP=
+XDG_MENU_PREFIX=gnome-
 RDI_PATCHROOT=
 RT_LIBPATH=/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/scripts/rt/data
 LANG=en_US.UTF-8
 SINGULARITY_DISABLE_CACHE=1
-WINDOWMANAGER=/usr/bin/startplasma-x11
+WINDOWMANAGER=gnome
 LESS=-M -I -R
+MANAGERPID=27983
+SYSTEMD_EXEC_PID=28269
 APPTAINER_DISABLE_CACHE=1
-DISPLAY=localhost:10.0
+DISPLAY=:0
 GUESTFISH_RESTORE=\e[0m
 RDI_INSTALLROOT=/mnt/pollux/software/xilinx/2020.2
-HOSTNAME=big08.seas.upenn.edu
+HOSTNAME=altair.seas.upenn.edu
+ORIGINAL_XDG_CURRENT_DESKTOP=GNOME
 OLDPWD=/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/bin
-CONFIG_SITE=/usr/share/site/x86_64-unknown-linux-gnu
+INVOCATION_ID=e2d1a323e80b45db95d3e528676de995
 CSHEDIT=emacs
 AUDIODRIVER=pulseaudio
-GPG_TTY=/dev/pts/11
+GPG_TTY=/dev/pts/2
 LESS_ADVANCED_PREPROCESSOR=no
-COLORTERM=1
+COLORTERM=truecolor
 GUESTFISH_INIT=\e[1;34m
 RDI_PREPEND_PATH=/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/bin
-MAKE_TERMOUT=/dev/pts/11
-JAVA_HOME=/usr/lib64/jvm/java-11-openjdk-11
+MAKE_TERMOUT=/dev/pts/2
+JAVA_HOME=/usr/lib64/jvm/java-17-openjdk-17
+VSCODE_GIT_ASKPASS_EXTRA_ARGS=--ms-enable-electron-run-as-node
+CHROME_DESKTOP=code-url-handler.desktop
 MACHTYPE=x86_64-suse-linux
 PLATFORM_REPO_PATHS=/home1/e/ese5320/u96v2_sbc_base
+NO_AT_BRIDGE=1
+GIO_LAUNCHED_DESKTOP_FILE_PID=1108
+SSH_AUTH_SOCK=/run/user/61484/keyring/ssh
 QEMU_AUDIO_DRV=pa
 MFLAGS=
 MINICOM=-c on
@@ -49,87 +57,108 @@ XILINX_VIVADO=/mnt/pollux/software/xilinx/2020.2/Vivado/2020.2
 XILINX_SDK=/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2
 OSTYPE=linux
 XILINX_PLANAHEAD=/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2
-XDG_SESSION_ID=11395
-USER=nmavuso
+USER=abdellah
 XILINXD_LICENSE_FILE=/mnt/pollux/software/xilinx/.Xilinx/
 PAGER=less
 GUESTFISH_PS1=\[\e[1;32m\]><fs>\[\e[0;31m\] 
+DESKTOP_SESSION=gnome
 RDI_BASEROOT=/mnt/pollux/software/xilinx/2020.2/Vitis
 RDI_INSTALLVER=2020.2
 MORE=-sl
 RDI_JAVA_VERSION=9.0.4
-PWD=/home1/n/nmavuso/ese5320_final_project
+PWD=/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project
 XILINX_HLS=/mnt/pollux/software/xilinx/2020.2/Vitis_HLS/2020.2
-HOME=/home1/n/nmavuso
+SSH_ASKPASS=/usr/lib/ssh/ssh-askpass
+HOME=/home1/a/abdellah
 LC_CTYPE=en_US.UTF-8
-HOST=big08.seas.upenn.edu
-SSH_CLIENT=10.103.144.62 49202 22
+JOURNAL_STREAM=8:451710
+VSCODE_GIT_ASKPASS_NODE=/usr/share/code/code
+SSH_AGENT_PID=28102
+TERM_PROGRAM=vscode
+HOST=altair.seas.upenn.edu
+TERM_PROGRAM_VERSION=1.76.2
 XNLSPATH=/usr/share/X11/nls
 TCL_LIBRARY=/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/tps/tcl/tcl8.5
-XDG_SESSION_TYPE=tty
+XDG_SESSION_TYPE=x11
 XIL_CHECK_TCL_DEBUG=False
 XILINX_VIVADO_HLS=/mnt/pollux/software/xilinx/2020.2/Vivado/2020.2
-SDK_HOME=/usr/lib64/jvm/java-11-openjdk-11
-KRB5CCNAME=FILE:/tmp/krb5cc_64880
+SDK_HOME=/usr/lib64/jvm/java-17-openjdk-17
+KRB5CCNAME=FILE:/tmp/krb5cc_61484
 RDI_APPROOT=/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2
-XDG_DATA_DIRS=/home1/n/nmavuso/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+XDG_DATA_DIRS=/home1/a/abdellah/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
 _RDI_DONT_SET_XILINX_AS_PATH=True
 MYVIVADO=
 RDI_TPS_ROOT=/mnt/pollux/software/xilinx/2020.2/Vivado/2020.2/tps/lnx64
 RDI_BUILD=yes
-LIBGL_DEBUG=quiet
 ISL_IOSTREAMS_RSA=/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/tps/isl
-JDK_HOME=/usr/lib64/jvm/java-11-openjdk-11
-NNTPSERVER=news
+JDK_HOME=/usr/lib64/jvm/java-17-openjdk-17
+XDG_SESSION_DESKTOP=GNOME
 PROFILEREAD=true
+GJS_DEBUG_OUTPUT=stderr
 RDI_PLATFORM=lnx64
 RDI_BINROOT=/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/bin
 RDI_PROG=/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/bin/unwrapped/lnx64.o/v++
 HDIPRELDPATH=/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/lib/lnx64.o/SuSE:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/lib/lnx64.o:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/bin/../lnx64/tools/dot/lib
 RDI_DATADIR=/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/data
 SYNTH_COMMON=/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/scripts/rt/data
-SSH_TTY=/dev/pts/11
+GTK_MODULES=canberra-gtk-module
 FROM_HEADER=seas.upenn.edu
-MAIL=/var/spool/mail/nmavuso
+MAIL=/var/spool/mail/abdellah
+VSCODE_GIT_ASKPASS_MAIN=/usr/share/code/resources/app/extensions/git/dist/askpass-main.js
 LESSKEY=/etc/lesskey.bin
 SHELL=/pkg/bin/bash
 TERM=xterm-256color
 XDG_SESSION_CLASS=user
-LM_LICENSE_FILE=2100@potato.cis.upenn.edu:1709@potato.cis.upenn.edu:1717@potato.cis.upenn.edu:27010@potato.cis.upenn.edu:27009@potato.cis.upenn.edu
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
 LS_OPTIONS=-N --color=tty -T 0
+XDG_CURRENT_DESKTOP=GNOME
 MAKELEVEL=1
+GIO_LAUNCHED_DESKTOP_FILE=/usr/share/applications/code.desktop
 PYTHONSTARTUP=/etc/pythonstart
 HDI_APPROOT=/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2
-SHLVL=3
+SHLVL=6
 G_FILENAME_ENCODING=@locale,UTF-8,ISO-8859-15,CP1252
 R3D_LIB=/usr/local/share/Raster3D/materials
-MAKE_TERMERR=/dev/pts/11
+MAKE_TERMERR=/dev/pts/2
+VSCODE_GIT_IPC_HANDLE=/run/user/61484/vscode-git-5b5a795238.sock
 XIL_NO_OVERRIDE=0
 MANPATH=/usr/local/man:/usr/local/share/man:/usr/share/man
+XSESSION_IS_UP=yes
 RDI_OPT_EXT=.o
-LOGNAME=nmavuso
-DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/64880/bus
-XDG_RUNTIME_DIR=/run/user/64880
+GDK_BACKEND=x11
+LOGNAME=abdellah
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/61484/bus
+GIT_ASKPASS=/usr/share/code/resources/app/extensions/git/dist/askpass.sh
+XDG_RUNTIME_DIR=/run/user/61484
 XIL_SUPPRESS_OVERRIDE_WARNINGS=1
-JRE_HOME=/usr/lib64/jvm/java-11-openjdk-11
+XAUTHORITY=/tmp/xauth_dUpukv
+INPUT_METHOD=fcitx
+JRE_HOME=/usr/lib64/jvm/java-17-openjdk-17
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session7
 XDG_CONFIG_DIRS=/etc/xdg
-PATH=/mnt/pollux/software/xilinx/2020.2/Vivado/2020.2/tps/lnx64/binutils-2.26/bin:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/bin/../gnu/aarch64/lin/aarch64-linux/bin:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/bin/../gnu/ppc64le/4.9.3/lnx64/bin:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/bin/../gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin:/mnt/pollux/software/xilinx/2020.2/Vivado/2020.2/tps/lnx64/gcc-6.2.0/bin:/mnt/pollux/software/xilinx/2020.2/Vivado/2020.2/gnu/microblaze/lin/bin:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/bin:/mnt/pollux/software/xilinx/2020.2/Vivado/2020.2/bin:/usr/sbin:/Model_Composer/2020.2/bin:/mnt/pollux/software/xilinx/2020.2/Vitis_HLS/2020.2/bin:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/gnu/microblaze/lin/bin:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/gnu/arm/lin/bin:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/gnu/microblaze/linux_toolchain/lin64_le/bin:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/gnu/aarch64/lin/aarch64-linux/bin:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/gnu/aarch64/lin/aarch64-none/bin:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/gnu/armr5/lin/gcc-arm-none-eabi/bin:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/tps/lnx64/cmake-3.3.2/bin:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/cardano/bin:/home1/c/cis5710/tools/bin:/home1/n/nmavuso/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/local/homer/bin:/usr/lib/mit/bin:/usr/local/mirnylib/bin:/usr/local/Qt5.4.0/Tools/QtCreator/bin:/usr/local/sra-toolkit/bin:/usr/local/tophat/bin
-JAVA_BINDIR=/usr/lib64/jvm/java-11-openjdk-11/bin
+PATH=/mnt/pollux/software/xilinx/2020.2/Vivado/2020.2/tps/lnx64/binutils-2.26/bin:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/bin/../gnu/aarch64/lin/aarch64-linux/bin:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/bin/../gnu/ppc64le/4.9.3/lnx64/bin:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/bin/../gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin:/mnt/pollux/software/xilinx/2020.2/Vivado/2020.2/tps/lnx64/gcc-6.2.0/bin:/mnt/pollux/software/xilinx/2020.2/Vivado/2020.2/gnu/microblaze/lin/bin:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/bin:/mnt/pollux/software/xilinx/2020.2/Vivado/2020.2/bin:/usr/sbin:/Model_Composer/2020.2/bin:/mnt/pollux/software/xilinx/2020.2/Vitis_HLS/2020.2/bin:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/gnu/microblaze/lin/bin:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/gnu/arm/lin/bin:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/gnu/microblaze/linux_toolchain/lin64_le/bin:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/gnu/aarch64/lin/aarch64-linux/bin:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/gnu/aarch64/lin/aarch64-none/bin:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/gnu/armr5/lin/gcc-arm-none-eabi/bin:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/tps/lnx64/cmake-3.3.2/bin:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/cardano/bin:/home1/c/cis5710/tools/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/homer/bin:/usr/lib/mit/bin:/usr/local/mirnylib/bin:/usr/local/Qt5.4.0/Tools/QtCreator/bin:/usr/local/samtools/bin:/usr/local/sra-toolkit/bin:/usr/local/tophat/bin
+JAVA_BINDIR=/usr/lib64/jvm/java-17-openjdk-17/bin
 GUESTFISH_OUTPUT=\e[0m
 RDI_JAVA_PLATFORM=
 G_BROKEN_FILENAMES=1
+QT_IM_SWITCHER=imsw-multi
 MAKEFLAGS=
 HISTSIZE=1000
 HDI_PROCESSOR=x86_64
+GJS_DEBUG_TOPICS=JS ERROR;JS LOG
+SESSION_MANAGER=local/altair.seas.upenn.edu:@/tmp/.ICE-unix/28237,unix/altair.seas.upenn.edu:/tmp/.ICE-unix/28237
 RDI_LIBDIR=/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/lib/lnx64.o/SuSE:/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/lib/lnx64.o
 CPU=x86_64
 CVS_RSH=ssh
 LESSOPEN=lessopen.sh %s
+GTK_IM_MODULE=fcitx
 _=/mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/bin/unwrapped/lnx64.o/v++
-XILINX_CD_CONNECT_ID=46531
-XILINX_CD_SESSION=79f87dc7-6a53-46df-9cd1-e8f2d7562dcc
-XILINX_RS_PORT=33637
-XILINX_RS_SESSION=bea23c67-c99c-4a17-9e40-c1f20f39841c
+XILINX_CD_CONNECT_ID=45733
+XILINX_CD_SESSION=e659e8b6-2305-4d0e-b8ec-c8e79d24c5a7
+XILINX_RS_PORT=39979
+XILINX_RS_SESSION=baae1185-1df1-4bcf-b264-92481d739f94
 
 
 V++ command line:
@@ -181,43 +210,43 @@ FINAL PLATFORM PATH
 
 ==========================================
 new:  steps log generated by v++ for new launch 
-timestamp: 01 Dec 2024 17:56:57
+timestamp: 08 Dec 2024 20:25:38
 ------------------------------------------
 V++ internal step: running xclbinutil to extract system diagram from input xclbin
-timestamp: 01 Dec 2024 17:56:57
-cmd: /mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/bin/xclbinutil --input /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/lzw_fpga.xclbin --dump-section SYSTEM_METADATA:RAW:/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/package_build/package/extractedSystemDiagram.json --quiet
+timestamp: 08 Dec 2024 20:25:38
+cmd: /mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/bin/xclbinutil --input /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/lzw_fpga.xclbin --dump-section SYSTEM_METADATA:RAW:/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/package_build/package/extractedSystemDiagram.json --quiet
 V++ internal step status: success
 ------------------------------------------
 V++ internal step: running xclbinutil to extract bit file from input xclbin for hw target
-timestamp: 01 Dec 2024 17:56:59
-cmd: /mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/bin/xclbinutil --input /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/lzw_fpga.xclbin --dump-section BITSTREAM:RAW:/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/package_build/package/system.bit --quiet
+timestamp: 08 Dec 2024 20:25:39
+cmd: /mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/bin/xclbinutil --input /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/lzw_fpga.xclbin --dump-section BITSTREAM:RAW:/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/package_build/package/system.bit --quiet
 V++ internal step status: success
 ------------------------------------------
 V++ internal step: generating a boot image
-timestamp: 01 Dec 2024 17:57:00
+timestamp: 08 Dec 2024 20:25:40
 V++ internal step status: success
 ------------------------------------------
-V++ internal step: copying input xclbin to output xclbin, from /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/lzw_fpga.xclbin to /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/a.xclbin
-timestamp: 01 Dec 2024 17:57:13
+V++ internal step: copying input xclbin to output xclbin, from /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/lzw_fpga.xclbin to /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/a.xclbin
+timestamp: 08 Dec 2024 20:25:55
 V++ internal step status: success
 ------------------------------------------
 V++ internal step: adding the output xclbin as sd file
-timestamp: 01 Dec 2024 17:57:13
+timestamp: 08 Dec 2024 20:25:55
 V++ internal step status: success
 ------------------------------------------
 V++ internal step: generating other output files
-timestamp: 01 Dec 2024 17:57:13
+timestamp: 08 Dec 2024 20:25:55
 V++ internal step status: success
 ------------------------------------------
-V++ internal step: running xclbinutil to replace a section SYSTEM_METADATA:RAW: with a file /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/package_build/package/packagedSystemDiagram.json to output xclbin: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/package_build/package/upsert.xclbin
-timestamp: 01 Dec 2024 17:59:03
-cmd: /mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/bin/xclbinutil --input /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/a.xclbin --replace-section SYSTEM_METADATA:RAW:/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/package_build/package/packagedSystemDiagram.json -o /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/package_build/package/upsert.xclbin --quiet --force
+V++ internal step: running xclbinutil to replace a section SYSTEM_METADATA:RAW: with a file /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/package_build/package/packagedSystemDiagram.json to output xclbin: /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/package_build/package/upsert.xclbin
+timestamp: 08 Dec 2024 20:26:58
+cmd: /mnt/pollux/software/xilinx/2020.2/Vitis/2020.2/bin/xclbinutil --input /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/a.xclbin --replace-section SYSTEM_METADATA:RAW:/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/package_build/package/packagedSystemDiagram.json -o /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/package_build/package/upsert.xclbin --quiet --force
 V++ internal step status: success
 ------------------------------------------
-V++ internal step: copying xclbin from /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/package_build/package/upsert.xclbin to /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/a.xclbin
-timestamp: 01 Dec 2024 17:59:04
+V++ internal step: copying xclbin from /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/package_build/package/upsert.xclbin to /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/a.xclbin
+timestamp: 08 Dec 2024 20:26:58
 V++ internal step status: success
 ------------------------------------------
-V++ internal step: removing temporary xclbin: /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/package_build/package/upsert.xclbin
-timestamp: 01 Dec 2024 17:59:04
+V++ internal step: removing temporary xclbin: /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/package_build/package/upsert.xclbin
+timestamp: 08 Dec 2024 20:26:59
 V++ internal step status: success

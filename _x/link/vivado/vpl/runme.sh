@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/vivado/vpl'
+HD_PWD='/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/vivado/vpl'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -1,0 +1,41 @@
+Begin Function 'copy_output'
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage0)
+# ST_3
+local i <phi_237> <integer> <Phi> 'phi' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:179->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237>
+add_ln179 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:179
+add_ln179 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237
+reg: i_reg_104[8:0] lv
+
+local icmp_ln179_1 <icmp_237> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:179->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237>
+icmp_ln179_1 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:179
+icmp_ln179_1 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237
+reg: icmp_ln179_1_reg_172[0:0] lv
+
+# ST_4
+local local_output_load <load_237> <integer> <ArrayAccess><ArrayLoad><MultiCycle> 'load' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:181->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237>
+local_output_load /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:181
+local_output_load /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237
+reg: local_output_load_reg_181[7:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state1)
+# ST_1
+local output_length_cast2_i_i <zext_237> <integer> <> 'zext' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:178->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237>
+output_length_cast2_i_i /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:178
+output_length_cast2_i_i /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237
+reg: output_length_cast2_i_i_reg_152[31:0] lv
+
+local icmp_ln179 <icmp_237> <integer> <Comparator> 'icmp' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:179->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237>
+icmp_ln179 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:179
+icmp_ln179 /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237
+reg: icmp_ln179_reg_157[0:0] lv
+
+local gmem2_addr <getelementptr_237> <integer> <> 'getelementptr' </mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:179->/mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237>
+gmem2_addr /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:179
+gmem2_addr /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/hls/lzw_hls.cpp:237
+reg: gmem2_addr_reg_161[63:0] lv
+
+
+End Function 'copy_output'
+

@@ -20,7 +20,7 @@ write_cookie_file_impl "lzw_fpga"
 report_utilization_impl true "lzw_fpga" "routed" "" "../../../input" "../../../output"
 
 # kernel service update
-update_kernel_info ../../../../../link.steps.log /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/int
+update_kernel_info ../../../../../link.steps.log /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/int
 
 # update noc node information
-update_profile_metadata_postroute /mnt/castor/seas_home/n/nmavuso/ese5320_final_project/_x/link/int
+update_profile_metadata_postroute /mnt/castor/seas_home/a/abdellah/Documents/ese5320_final_project/_x/link/int

@@ -7,9 +7,9 @@
     "design_state": "Synthesized",
     "user_budget": {
         "actual_resources": {
-            "LUT": "7064",
-            "LUTAsMem": "2058",
-            "REG": "6838",
+            "LUT": "7554",
+            "LUTAsMem": "2367",
+            "REG": "7532",
             "BRAM": "3",
             "DSP": "0"
         },
@@ -29,9 +29,9 @@
                 {
                     "cu_name": "lzw_fpga_1",
                     "actual_resources": {
-                        "LUT": "7064",
-                        "LUTAsMem": "2058",
-                        "REG": "6838",
+                        "LUT": "7554",
+                        "LUTAsMem": "2367",
+                        "REG": "7532",
                         "BRAM": "3",
                         "DSP": "0"
                     }

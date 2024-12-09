@@ -19,7 +19,7 @@
     <build_flow/>
     <host architecture="unknown"/>
     <device name="fpga0" fpgaDevice="zynquplus:xczu3eg:sbva484:-1:i" addrWidth="0">
-      <core name="OCL_REGION_0" target="bitstream" type="clc_region" clockFreq="0MHz" numComputeUnits="60"><kernelClocks><clock port="KERNEL_CLK" frequency="300.000000MHz"/><clock port="DATA_CLK" frequency="150.000000MHz"/></kernelClocks><kernel name="lzw_fpga" language="c" vlnv="xilinx.com:hls:lzw_fpga:1.0" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="false" interrupt="true" hwControlProtocol="ap_ctrl_chain">
+      <core name="OCL_REGION_0" target="bitstream" type="clc_region" clockFreq="0MHz" numComputeUnits="60"><kernelClocks><clock port="KERNEL_CLK" frequency="300.000000MHz"/><clock port="DATA_CLK" frequency="150.000000MHz"/></kernelClocks><kernel name="lzw_fpga" language="c" vlnv="xilinx.com:hls:lzw_fpga:1.0" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="true" interrupt="true" hwControlProtocol="ap_ctrl_chain">
           <module name="lzw_fpga">
             <module name="decoding" instName="decoding_U0" type="DataflowHS"/>
             <module name="encoding" instName="encoding_U0" type="DataflowHS">

@@ -1,0 +1,163 @@
+
+
+================================================================
+== Vitis HLS Report for 'store_output'
+================================================================
+* Date:           Sun Dec  8 20:09:55 2024
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        lzw_fpga
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.67 ns|  3.608 ns|     1.80 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        3|      258|  20.001 ns|  1.720 us|    3|  258|     none|
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |                     |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip  |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |- store_output_loop  |        1|      256|         1|          1|          1|  1 ~ 256|       yes|
+        +---------------------+---------+---------+----------+-----------+-----------+---------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     34|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     74|    -|
+|Register         |        -|    -|      23|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      23|    108|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      432|  360|  141120|  70560|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------+----------+----+---+----+------------+------------+
+    |         Variable Name         | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------+----------+----+---+----+------------+------------+
+    |i_fu_126_p2                    |         +|   0|  0|  16|           9|           1|
+    |ap_block_state2                |       and|   0|  0|   2|           1|           1|
+    |ap_condition_82                |       and|   0|  0|   2|           1|           1|
+    |ap_ext_blocking_n              |       and|   0|  0|   2|           2|           2|
+    |ap_int_blocking_cur_n          |       and|   0|  0|   2|           1|           1|
+    |ap_int_blocking_n              |       and|   0|  0|   2|           1|           2|
+    |ap_predicate_op17_read_state2  |       and|   0|  0|   2|           1|           1|
+    |ap_str_blocking_n              |       and|   0|  0|   2|           2|           2|
+    |tmp_i_nbreadreq_fu_58_p3       |       and|   0|  0|   2|           1|           0|
+    |ap_block_state1                |        or|   0|  0|   2|           1|           1|
+    +-------------------------------+----------+----+---+----+------------+------------+
+    |Total                          |          |   0|  0|  34|          20|          12|
+    +-------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------+----+-----------+-----+-----------+
+    |               Name               | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                         |  20|          4|    1|          4|
+    |ap_done                           |   9|          2|    1|          2|
+    |local_output_length_dc_0_reg_105  |   9|          2|    9|         18|
+    |local_output_length_out_blk_n     |   9|          2|    1|          2|
+    |out_index_1_reg_93                |   9|          2|    9|         18|
+    |output_stream_blk_n               |   9|          2|    1|          2|
+    |real_start                        |   9|          2|    1|          2|
+    +----------------------------------+----+-----------+-----+-----------+
+    |Total                             |  74|         16|   23|         48|
+    +----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+---+----+-----+-----------+
+    |               Name               | FF| LUT| Bits| Const Bits|
+    +----------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                         |  3|   0|    3|          0|
+    |ap_done_reg                       |  1|   0|    1|          0|
+    |local_output_length_dc_0_reg_105  |  9|   0|    9|          0|
+    |out_index_1_reg_93                |  9|   0|    9|          0|
+    |start_once_reg                    |  1|   0|    1|          0|
+    +----------------------------------+---+----+-----+-----------+
+    |Total                             | 23|   0|   23|          0|
+    +----------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------+-----+-----+------------+-------------------------+--------------+
+|            RTL Ports           | Dir | Bits|  Protocol  |      Source Object      |    C Type    |
++--------------------------------+-----+-----+------------+-------------------------+--------------+
+|ap_clk                          |   in|    1|  ap_ctrl_hs|             store_output|  return value|
+|ap_rst                          |   in|    1|  ap_ctrl_hs|             store_output|  return value|
+|ap_start                        |   in|    1|  ap_ctrl_hs|             store_output|  return value|
+|start_full_n                    |   in|    1|  ap_ctrl_hs|             store_output|  return value|
+|ap_done                         |  out|    1|  ap_ctrl_hs|             store_output|  return value|
+|ap_continue                     |   in|    1|  ap_ctrl_hs|             store_output|  return value|
+|ap_idle                         |  out|    1|  ap_ctrl_hs|             store_output|  return value|
+|ap_ready                        |  out|    1|  ap_ctrl_hs|             store_output|  return value|
+|start_out                       |  out|    1|  ap_ctrl_hs|             store_output|  return value|
+|start_write                     |  out|    1|  ap_ctrl_hs|             store_output|  return value|
+|ap_ext_blocking_n               |  out|    1|  ap_ctrl_hs|             store_output|  return value|
+|ap_str_blocking_n               |  out|    1|  ap_ctrl_hs|             store_output|  return value|
+|ap_int_blocking_n               |  out|    1|  ap_ctrl_hs|             store_output|  return value|
+|output_stream_dout              |   in|    8|     ap_fifo|            output_stream|       pointer|
+|output_stream_empty_n           |   in|    1|     ap_fifo|            output_stream|       pointer|
+|output_stream_read              |  out|    1|     ap_fifo|            output_stream|       pointer|
+|local_output_address0           |  out|    8|   ap_memory|             local_output|         array|
+|local_output_ce0                |  out|    1|   ap_memory|             local_output|         array|
+|local_output_we0                |  out|    1|   ap_memory|             local_output|         array|
+|local_output_d0                 |  out|    8|   ap_memory|             local_output|         array|
+|local_output_length_out_din     |  out|    9|     ap_fifo|  local_output_length_out|       pointer|
+|local_output_length_out_full_n  |   in|    1|     ap_fifo|  local_output_length_out|       pointer|
+|local_output_length_out_write   |  out|    1|     ap_fifo|  local_output_length_out|       pointer|
++--------------------------------+-----+-----+------------+-------------------------+--------------+
+
