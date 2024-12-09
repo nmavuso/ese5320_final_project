@@ -32,7 +32,6 @@ bool is_at_16bit_boundary(FILE* file) {
     return (offset % 2 == 0); // True if aligned to 16-bit boundary
 }
 
-
 uint64_t compute_hash(const char *chunk, int size) {
  
     uint8_t hash_output[64]; 
@@ -136,8 +135,12 @@ void pack_codes_msb_first(const uint16_t* codes, size_t num_codes, uint8_t* pack
     packed_data[packed_data_size++] = header & 0xFF;
 
     std::cout << "Reformatting Endianness Starting" << std::endl;
-    for (size_t i = 0; i < num_codes; ++i) {
+    int counter = 0;
+    int i = -1;
+    while (counter < num_codes && i < counter * 2 + 10) {
+        i++;
         if (codes[i] == 0) continue;
+        counter++;
 
         // Add the current code_length code to the buffer
         bit_buffer = (bit_buffer << code_length) | (codes[i] & ((1 << code_length) - 1));
@@ -313,15 +316,15 @@ int deduplicate_chunks(const char *chunk, int chunk_size, HashTable *hash_table,
         printf("Encoded Size: %d\n", encoded_size);
 
         // Print encoded data 
-        // printf("Encoded Output Codes FPGA: ");
-        // for (int j = 0; j < encoded_size; ++j) {
-        //     printf("%d ", output_code[j]);
-        // }
+        printf("Encoded Output Codes FPGA: ");
+        for (int j = 0; j < encoded_size; ++j) {
+            printf("%d ", output_code[j]);
+        }
 
-        // printf("Decoded Output FPGA: ");
-        // for (int j = 0; j < encoded_size; ++j) {
-        //     printf("%c", output[j]);
-        // }
+        printf("Decoded Output FPGA: ");
+        for (int j = 0; j < encoded_size; ++j) {
+            printf("%c", output[j]);
+        }
 
         // Print out decoded output:
         // std::cout << "output_hw: " << output_r << std::endl;
@@ -341,7 +344,7 @@ int deduplicate_chunks(const char *chunk, int chunk_size, HashTable *hash_table,
         // std::vector<uint8_t> packed_data;
         // pack_codes_msb_first(reinterpret_cast<const uint16_t*>(output_code), encoded_size, packed_data, outfc, header, outputFileName);
 
-        size_t max_packed_data_size = encoded_size + 10;
+        size_t max_packed_data_size = encoded_size * 2;
         uint8_t packed_data[max_packed_data_size];
         size_t packed_data_size = 0;
         pack_codes_msb_first(reinterpret_cast<const uint16_t*>(output_code), encoded_size, packed_data, packed_data_size, max_packed_data_size, outfc, header, outputFileName);

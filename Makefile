@@ -53,11 +53,10 @@ SERVER_SOURCES = Server/encoder.cpp Server/server.cpp Server/lzw_hw.cpp Server/c
 SERVER_OBJECTS = $(SERVER_SOURCES:.cpp=.o)
 SERVER_EXE = encoder
  
-DECODER_SOURCES = Decoder/Decoder.cpp
+DECODER_SOURCES = Decoder/Decoder.cpp Server/lzw_hw.cpp
 DECODER_OBJECTS = $(DECODER_SOURCES:.cpp=.o)
 DECODER_EXE = decoder
 
-# Host files
 # Host files
 HOST_SOURCES = ./fpga_accelerate/Host.cpp ./common/Utilities.cpp ./common/EventTimer.cpp hls/lzw_hls.cpp
 HOST_OBJECTS = $(HOST_SOURCES:.cpp=.o)

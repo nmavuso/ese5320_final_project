@@ -333,9 +333,10 @@ int main(int argc, char* argv[]) {
 
             // Do Nothing for it to skip
         } else {
-            // Now that the packet is not done, call the appHost
-            appHost(buffer, length, krnl_lzw, q, input_buf, output_code_buf, output_size_buf, output_buf, output_length_buf, input_hw, output_code_hw, output_size_hw, output_hw, output_length_hw, outputFileName);
         }
+        // Now that the packet is not done, call the appHost
+        appHost(buffer, length, krnl_lzw, q, input_buf, output_code_buf, output_size_buf, output_buf, output_length_buf, input_hw, output_code_hw, output_size_hw, output_hw, output_length_hw, outputFileName);
+
         // Update the offset
         offset += length;
         writer++;
