@@ -112,7 +112,7 @@ int main(int Parameter_count, char* Parameters[]) {
         // Swap endianess for the header
         Header = manual_swap_endian_16bit(Header);
 
-        std::cout << "Header NEW (Hex): 0x"
+        std::cout << "Header: 0x"
                   << std::hex << Header << std::endl;
 
         // Check the MSB to determine chunk type
@@ -130,6 +130,34 @@ int main(int Parameter_count, char* Parameters[]) {
                 std::swap(buffer[i], buffer[i + 1]);
             }
 
+            // std::cerr << "Going to Hexdump" << std::endl;
+
+            // const size_t bytes_per_line = 16; // Number of bytes per line in the hexdump
+
+            // for (size_t i = 0; i < 50; i += bytes_per_line) {
+            //     // Print the offset for each line
+            //     printf("%08zx  ", i);
+
+            //     // Print bytes in hexadecimal
+            //     for (size_t j = 0; j < bytes_per_line; ++j) {
+            //         if (i + j < 50) {
+            //             printf("%02x ", buffer[i + j] & 0xFF);
+            //         } else {
+            //             printf("   "); // Pad if fewer than bytes_per_line remaining
+            //         }
+            //     }
+
+            //     // Print ASCII representation
+            //     printf(" |");
+            //     for (size_t j = 0; j < bytes_per_line; ++j) {
+            //         if (i + j < 50) {
+            //             char c = buffer[i + j];
+            //             printf("%c", (c >= 32 && c <= 126) ? c : '.'); // Printable ASCII or '.'
+            //         }
+            //     }
+            //     printf("|\n");
+            // }
+
             int codes_read = bytes_read * 8 / CODE_LENGTH;
             int EncodedData[codes_read];
             int current_code = 0;
@@ -141,21 +169,48 @@ int main(int Parameter_count, char* Parameters[]) {
 
                     code |= ((buffer[byte_index] >> (7 - bit_offset)) & 1) << (CODE_LENGTH - 1 - bit);
                 }
+
                 EncodedData[current_code++] = code;
             }
 
-            std::cout << "Last Three: " << EncodedData[codes_read - 3] << std::endl;
-            std::cout << "Last Three: " << EncodedData[codes_read - 2] << std::endl;
-            std::cout << "Last Three: " << EncodedData[codes_read - 1] << std::endl;
+            // for (size_t i = 0; i + 1 < 50; i += 1) {
+            //   std::cout << "Encoded Data: "
+            //             << "Binary: ";
+            //   for (int bit = CODE_LENGTH - 1; bit >= 0; --bit) {
+            //       std::cout << ((EncodedData[i] >> bit) & 1);
+            //   }
+
+            //   std::cout << " | Hex: 0x" << std::hex << EncodedData[i]
+            //             << " | Decimal: " << std::dec << EncodedData[i];
+
+            //   // Add ASCII equivalent if printable
+            //   if (EncodedData[i] >= 32 && EncodedData[i] <= 126) { // Printable ASCII range
+            //       std::cout << " | ASCII: '" << static_cast<char>(EncodedData[i]) << "'";
+            //   } else {
+            //       std::cout << " | ASCII: (non-printable)";
+            //   }
+
+            //   std::cout << std::endl;
+            // }
 
             // Decode the LZW chunk
             char DecodedOutput[MAX_CHUNK_STORAGE];
             int DecodedOutputLength = 0;
             decoding_sw(EncodedData, codes_read, DecodedOutput, DecodedOutputLength);
 
+            // std::cout << "First 50 characters of Decoded Output:" << std::endl;
+            // for (int i = 0; i < std::min(50, DecodedOutputLength); ++i) {
+            //     char c = DecodedOutput[i];
+            //     std::cout << "Char[" << i << "]: '" << c 
+            //               << "' | Hex: 0x" << std::hex << (c & 0xFF) 
+            //               << " | Decimal: " << std::dec << (c & 0xFF) << std::endl;
+            // }
+
             // Store the decoded chunk and write to the output file
             Chunks.emplace_back(DecodedOutput, DecodedOutputLength);
             std::cout << "Decompressed chunk with size " << DecodedOutputLength << ".\n";
+
+            
             fwrite(DecodedOutput, sizeof(char), DecodedOutputLength, Output);
         } else { // Duplicate Chunk
             int Location = Header & 0x7FFFFFFF; // Remove MSB to get location

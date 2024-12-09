@@ -46,44 +46,29 @@ int appHost(unsigned char* buffer, unsigned int length,
             cl::Kernel &krnl_lzw, cl::CommandQueue &q,
             cl::Buffer &input_buf, cl::Buffer &output_code_buf, cl::Buffer &output_size_buf, cl::Buffer &output_buf,cl::Buffer &output_length_buf,
             char *input_hw, int *output_code_hw, int *output_size_hw, char *output_hw, int *output_length_hw, std::string outputFileName) {
-    std::cout << "Encoding Working Started" << std::endl;
-
     /*************************************/
     /********** Initialization ***********/
     /*************************************/
-    std::cout << "Initializing hash table..." << std::endl;
     HashTable hash_table;
     initialize_hash_table(&hash_table);
-    std::cout << "Hash table initialized successfully." << std::endl;
 
     // Step 1: Process Ethernet Input
-    std::cout << "Processing Ethernet Input..." << std::endl;
     unsigned int buffer_size = length;
-    std::cout << "Buffer size: " << buffer_size << std::endl;
 
     // Step 2: Chunking the Ethernet input
-    std::cout << "Chunking Ethernet Input..." << std::endl;
     Chunk chunks[NUM_PACKETS];
     int num_chunks = 0;
     cdc(buffer, buffer_size, chunks, &num_chunks);
-    std::cout << "Number of chunks created: " << num_chunks << std::endl;
 
     // Step 3: Deduplication and Encoding
-    std::cout << "Starting deduplication and encoding..." << std::endl;
     for (int i = 0; i < num_chunks; ++i) {
-        std::cout << "Processing chunk " << i + 1 << "..." << std::endl;
         const char* chunk_data = reinterpret_cast<const char*>(chunks[i].data);
         int chunk_size = chunks[i].size;
-        std::cout << "Chunk size: " << chunk_size << std::endl;
 
         // Deduplicate chunk (conditional check done here)
-        std::cout << "Before Deduplicate chunks HERE" << std::endl;
         int is_new_chunk = deduplicate_chunks(chunk_data, chunk_size, &hash_table, krnl_lzw, q, input_buf, output_buf, output_size_buf, output_buf, output_length_buf, input_hw, output_code_hw, output_size_hw, output_hw, output_length_hw, outputFileName);
-
-        std::cout << "Deduplication result for chunk " << i + 1 << ": " << is_new_chunk << std::endl;
     }
 
-    std::cout << "Encoding Complete" << std::endl;
     return 0;
 }
 
@@ -150,7 +135,6 @@ int main(int argc, char* argv[]) {
     std::string binaryFile = "lzw_fpga.xclbin";
 
     // Initialize an event timer for monitoring the application
-    printf("Sanity Check inside Encoder combined Host.cpp\n");
     EventTimer timer;
 
     // ------------------------------------------------------------------------------------
@@ -277,21 +261,15 @@ int main(int argc, char* argv[]) {
         length = buffer[0] | (buffer[1] << 8);
         length &= ~DONE_BIT_H;
 
-        std::cout << "Packet " << packet_count << " received:" << std::endl;
-        std::cout << "  Writer index: " << writer << std::endl;
-        std::cout << "  Packet length: " << length << " bytes" << std::endl;
-        std::cout << "  Is last packet: " << (is_done ? "Yes" : "No") << std::endl;
-        std::cout << "  Current offset: " << offset << " bytes" << std::endl;
-
         // Now that the packet is not done, call the appHost
         if (packet_count == 1 && length == MAX_CHUNK_SIZE && !is_done && firstChunkCheckFunction(buffer)) {
             // This is to skip an error where there comes a duplicate chunk when the chunk is less than the minimum sive
 
             // Do Nothing for it to skip
         } else {
+            // Now that the packet is not done, call the appHost
+            appHost(buffer, length, krnl_lzw, q, input_buf, output_code_buf, output_size_buf, output_buf, output_length_buf, input_hw, output_code_hw, output_size_hw, output_hw, output_length_hw, outputFileName);
         }
-        // Now that the packet is not done, call the appHost
-        appHost(buffer, length, krnl_lzw, q, input_buf, output_code_buf, output_size_buf, output_buf, output_length_buf, input_hw, output_code_hw, output_size_hw, output_hw, output_length_hw, outputFileName);
 
         // Update the offset
         offset += length;

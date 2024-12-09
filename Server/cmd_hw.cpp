@@ -22,16 +22,6 @@ const int MAX_OUTPUT_SIZE = 4096;
 HashEntry hash_table_entries[HASH_TABLE_SIZE];
 HashEntry *hash_table_array[HASH_TABLE_SIZE];
 
-bool is_at_16bit_boundary(FILE* file) {
-    long offset = ftell(file); // Get the current file position
-    if (offset == -1) {
-        perror("ftell failed");
-        return false; // Error occurred
-    }
-
-    return (offset % 2 == 0); // True if aligned to 16-bit boundary
-}
-
 uint64_t compute_hash(const char *chunk, int size) {
  
     uint8_t hash_output[64]; 
@@ -136,37 +126,6 @@ void pack_codes_msb_first(const uint16_t* codes, size_t num_codes, uint8_t* pack
     int code_length = std::ceil(std::log2(MAX_CHUNK_SIZE));
     packed_data_size = 0;      // Initialize packed data size
 
-    // Add the header to the packed data
-    std::cerr << "Header (Hex): 0x" 
-              << std::hex << std::setw(8) << std::setfill('0') << header << std::endl;
-
-    // Retrieve the last byte from the file if necessary
-    bool isAt16BitBoundary = is_at_16bit_boundary(file);
-
-    if (!isAt16BitBoundary && ftell(file) > 0) {
-        // Save current file position
-        long current_pos = ftell(file);
-
-        // Move back to the last byte
-        uint8_t last_byte;
-        FILE* fileSeek = fopen(outputFileName.c_str(), "rb");
-        fseek(fileSeek, -1, SEEK_END);
-        fread(&last_byte, sizeof(uint8_t), 1, fileSeek);
-        std::cout << "Inside Last Byte: 0x" << std::hex << static_cast<int>(last_byte) << std::endl;
-
-        // Push the last byte into packed_data
-        if (packed_data_size >= max_packed_data_size) {
-            std::cerr << "Error: packed_data array is full." << std::endl;
-            return;
-        }
-
-        packed_data[packed_data_size++] = last_byte;
-
-        // Truncate the file to remove the last byte
-        fseek(file, -1, SEEK_END);
-        ftruncate(fileno(file), current_pos - 1);
-    }
-
     // Break the header into bytes and add to the array
     if (packed_data_size + 4 > max_packed_data_size) {
         std::cerr << "Error: packed_data array is full." << std::endl;
@@ -203,8 +162,6 @@ void pack_codes_msb_first(const uint16_t* codes, size_t num_codes, uint8_t* pack
         }
     }
 
-    std::cout << "Finished Outside For Loop" << std::endl;
-
     // Write any remaining bits from the buffer, padded to align to an 8-bit boundary
     if (bits_in_buffer > 0) {
         if (packed_data_size >= max_packed_data_size) {
@@ -215,26 +172,6 @@ void pack_codes_msb_first(const uint16_t* codes, size_t num_codes, uint8_t* pack
         uint8_t byte_to_write = (bit_buffer << (8 - bits_in_buffer)) & 0xFF;
         packed_data[packed_data_size++] = byte_to_write;
     }
-
-    // std::cout << "Packed Data (Hex and Binary BEFORE ENDIANESS):" << std::endl;
-    // for (size_t i = 0; i < packed_data_size; ++i) {
-    //     // Print the hex representation
-    //     printf("Hex: %02x ", packed_data[i]);
-
-    //     // Print the binary representation
-    //     printf("Binary: ");
-    //     for (int bit = 7; bit >= 0; --bit) {
-    //         printf("%d", (packed_data[i] >> bit) & 1);
-    //     }
-
-    //     printf("  "); // Separate each byte for readability
-
-    //     // Newline every 4 bytes for compactness (or 16 if preferred)
-    //     if ((i + 1) % 4 == 0) {
-    //         printf("\n");
-    //     }
-    // }
-    // std::cout << std::endl;
 
     for (size_t i = 0; i + 1 < packed_data_size; i += 2) {
         std::swap(packed_data[i], packed_data[i + 1]);
@@ -272,13 +209,10 @@ int deduplicate_chunks(const char *chunk, int chunk_size, HashTable *hash_table,
         return -1;
     }
 
-    printf("Computing hash for chunk of size %d\n", chunk_size);
     uint64_t chunk_hash = compute_hash(chunk, chunk_size);
-    printf("Computed hash: %lu\n", chunk_hash);
 
     int existing_size;
     int *existing = lookup_hash_table(hash_table, chunk_hash, &existing_size);
-    printf("Lookup result: %p, existing size: %d\n", (void *)existing, existing_size);
 
     // Output File (Get Ready to Write)
     FILE *outfc = fopen(outputFileName.c_str(), "ab");
@@ -289,7 +223,6 @@ int deduplicate_chunks(const char *chunk, int chunk_size, HashTable *hash_table,
 
     if (existing != NULL && existing_size == chunk_size &&
         memcmp(existing, chunk, chunk_size) == 0) {
-        printf("Chunk is a duplicate\n");
 
         // Write the chunk with its corresponding Chunk Index
         uint32_t header = (chunk_hash | 0x80000000);
@@ -305,38 +238,13 @@ int deduplicate_chunks(const char *chunk, int chunk_size, HashTable *hash_table,
         // ----------------------
         // Kernel Hardware Execution
         // ----------------------
-        printf("Inside the Kernel Hardware Execution...\n");
-
-        std::cout << "Chunk content (size: " << chunk_size << "): ";
-        // for (int i = 0; i < chunk_size; ++i) {
-        //     std::cout << chunk[i];
-        // }
-        std::cout << std::endl;
 
         // Clean and then copy the chunk data into the input hardware array that then gets sent to the FPGA
-        std::cerr << "Chunk Size (No Cleaned): " << chunk_size << std::endl;
-
-        // Test out values in input are valid
-        // char clean_data[MAX_INPUT_SIZE];
-        // int clean_size;
-
-        // clean_chunk(chunk, chunk_size, clean_data, clean_size);
-        //         std::cerr << "Cleaned Size: " << clean_size << std::endl;
-
-        // strncpy(input_hw, (const char *)clean_data, MAX_INPUT_SIZE);
-
-        // std::cout << "Cleaned Data: ";
-        // for (int i = 0; i < clean_size; ++i) {
-        //     std::cout << input_hw[i];
-        // }
-        // std::cout << std::endl;
 
         // Set the input_size argument
         // std::cerr << "Cleaned Size: " << clean_size << std::endl;
         // krnl_lzw.setArg(1, clean_size);
 
-        // printf("Running Software LZW...\n");
-        // lzw_sw(input_hw, clean_size, output_code, *output_size, output, *output_length);
         lzw_sw(chunk, chunk_size, output_code, *output_size, output, *output_length);
 
         // // Migrate input buffer to FPGA
@@ -358,9 +266,8 @@ int deduplicate_chunks(const char *chunk, int chunk_size, HashTable *hash_table,
         // Retrieve encoded data
         int encoded_size = *output_size;
         int decoded_length = *output_length;
-        printf("Encoded Size: %d\n", encoded_size);
 
-        // Print encoded data 
+        // Print encoded data FOR DEBUGGING
         // printf("Encoded Output Codes FPGA: ");
         // for (int j = 0; j < encoded_size; ++j) {
         //     printf("%d ", output_code[j]);
@@ -373,8 +280,6 @@ int deduplicate_chunks(const char *chunk, int chunk_size, HashTable *hash_table,
 
         // Print out decoded output:
         // std::cout << "output_hw: " << output_r << std::endl;
-
-        printf("\n");
 
         if (encoded_size == 0) {
             fprintf(stderr, "Failed to encode chunk\n");
