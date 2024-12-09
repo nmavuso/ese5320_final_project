@@ -107,50 +107,6 @@ void handle_input(int argc, char* argv[], int* blocksize) {
     }
 }
 
-void handle_16bit_boundary(const std::string& outputFileName) {
-    // Open the file for both reading and writing
-    FILE* file = fopen(outputFileName.c_str(), "r+b");
-    if (!file) {
-        perror("Error opening file");
-        return;
-    }
-
-    // Get the file size
-    fseek(file, 0, SEEK_END);
-    long file_size = ftell(file);
-
-    if (file_size <= 0) {
-        std::cerr << "File is empty or corrupted." << std::endl;
-        fclose(file);
-        return;
-    }
-
-    // Check if the file is at a 16-bit boundary
-    bool is_at_16bit_boundary = (file_size % 2 == 0);
-
-    if (!is_at_16bit_boundary) {
-        // Add a 0x00 byte to the file to align to a 16-bit boundary
-        uint8_t padding = 0x00;
-        fwrite(&padding, sizeof(uint8_t), 1, file);
-
-        // Recalculate the file size after padding
-        file_size += 1;
-
-        // Swap the last two bytes in the file
-        fseek(file, -2, SEEK_END); // Move to the second last byte
-        uint8_t second_last_byte, last_byte;
-        fread(&second_last_byte, sizeof(uint8_t), 1, file); // Read the second last byte
-        fread(&last_byte, sizeof(uint8_t), 1, file);        // Read the last byte
-
-        // Write them in swapped order
-        fseek(file, -2, SEEK_END); // Move back to overwrite the last two bytes
-        fwrite(&last_byte, sizeof(uint8_t), 1, file);
-        fwrite(&second_last_byte, sizeof(uint8_t), 1, file);
-    }
-
-    fclose(file); // Close the file
-}
-
 bool firstChunkCheckFunction(const unsigned char* buffer) {
     // Check if the last 10 bytes of the buffer are zero
     for (int i = MAX_CHUNK_SIZE - 10; i < MAX_CHUNK_SIZE; ++i) {
@@ -381,8 +337,6 @@ int main(int argc, char* argv[]) {
     q.enqueueUnmapMemObject(output_size_buf, output_size_hw);
     q.enqueueUnmapMemObject(output_length_buf, output_length_hw);
     q.finish();
-
-    handle_16bit_boundary(outputFileName);
 
     free(file);
 

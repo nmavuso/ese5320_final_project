@@ -25,16 +25,6 @@ uint32_t manual_swap_endian_16bit(uint32_t value) {
            ((value & 0xFFFF) << 16);  // Move lower 16 bits to upper
 }
 
-bool is_at_16bit_boundary(FILE* file) {
-    long offset = ftell(file); // Get the current file position
-    if (offset == -1) {
-        perror("ftell failed");
-        return false; // Error occurred
-    }
-
-    return (offset % 2 == 0); // True if aligned to 16-bit boundary
-}
-
 static int Read_code(void)
 {
   static unsigned char Byte;
@@ -120,13 +110,7 @@ int main(int Parameter_count, char* Parameters[]) {
         }
 
         // Swap endianess for the header
-        bool isAt16BitBoundary = is_at_16bit_boundary(Input);
-
-        if (isAt16BitBoundary) {
-          Header = manual_swap_endian_16bit(Header);
-        } else {
-          Header = manual_swap_endian_16bit(Header);
-        }
+        Header = manual_swap_endian_16bit(Header);
 
         std::cout << "Header NEW (Hex): 0x"
                   << std::hex << Header << std::endl;
@@ -159,6 +143,10 @@ int main(int Parameter_count, char* Parameters[]) {
                 }
                 EncodedData[current_code++] = code;
             }
+
+            std::cout << "Last Three: " << EncodedData[codes_read - 3] << std::endl;
+            std::cout << "Last Three: " << EncodedData[codes_read - 2] << std::endl;
+            std::cout << "Last Three: " << EncodedData[codes_read - 1] << std::endl;
 
             // Decode the LZW chunk
             char DecodedOutput[MAX_CHUNK_STORAGE];

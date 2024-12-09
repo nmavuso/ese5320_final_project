@@ -60,6 +60,50 @@ void reset_hash_table(HashTable *table) {
     }
 }
 
+void handle_16bit_boundary(const std::string& outputFileName) {
+    // Open the file for both reading and writing
+    FILE* file = fopen(outputFileName.c_str(), "r+b");
+    if (!file) {
+        perror("Error opening file");
+        return;
+    }
+
+    // Get the file size
+    fseek(file, 0, SEEK_END);
+    long file_size = ftell(file);
+
+    if (file_size <= 0) {
+        std::cerr << "File is empty or corrupted." << std::endl;
+        fclose(file);
+        return;
+    }
+
+    // Check if the file is at a 16-bit boundary
+    bool is_at_16bit_boundary = (file_size % 2 == 0);
+
+    if (!is_at_16bit_boundary) {
+        // Add a 0x00 byte to the file to align to a 16-bit boundary
+        uint8_t padding = 0x00;
+        fwrite(&padding, sizeof(uint8_t), 1, file);
+
+        // Recalculate the file size after padding
+        file_size += 1;
+
+        // Swap the last two bytes in the file
+        fseek(file, -2, SEEK_END); // Move to the second last byte
+        uint8_t second_last_byte, last_byte;
+        fread(&second_last_byte, sizeof(uint8_t), 1, file); // Read the second last byte
+        fread(&last_byte, sizeof(uint8_t), 1, file);        // Read the last byte
+
+        // Write them in swapped order
+        fseek(file, -2, SEEK_END); // Move back to overwrite the last two bytes
+        fwrite(&last_byte, sizeof(uint8_t), 1, file);
+        fwrite(&second_last_byte, sizeof(uint8_t), 1, file);
+    }
+
+    fclose(file); // Close the file
+}
+
 void insert_hash_table(HashTable *table, uint64_t key, int *value, int size) {
     int index = (int)(key % table->size);
     HashEntry *new_entry = &hash_table_entries[index];
@@ -172,25 +216,25 @@ void pack_codes_msb_first(const uint16_t* codes, size_t num_codes, uint8_t* pack
         packed_data[packed_data_size++] = byte_to_write;
     }
 
-    std::cout << "Packed Data (Hex and Binary BEFORE ENDIANESS):" << std::endl;
-    for (size_t i = 0; i < packed_data_size; ++i) {
-        // Print the hex representation
-        printf("Hex: %02x ", packed_data[i]);
+    // std::cout << "Packed Data (Hex and Binary BEFORE ENDIANESS):" << std::endl;
+    // for (size_t i = 0; i < packed_data_size; ++i) {
+    //     // Print the hex representation
+    //     printf("Hex: %02x ", packed_data[i]);
 
-        // Print the binary representation
-        printf("Binary: ");
-        for (int bit = 7; bit >= 0; --bit) {
-            printf("%d", (packed_data[i] >> bit) & 1);
-        }
+    //     // Print the binary representation
+    //     printf("Binary: ");
+    //     for (int bit = 7; bit >= 0; --bit) {
+    //         printf("%d", (packed_data[i] >> bit) & 1);
+    //     }
 
-        printf("  "); // Separate each byte for readability
+    //     printf("  "); // Separate each byte for readability
 
-        // Newline every 4 bytes for compactness (or 16 if preferred)
-        if ((i + 1) % 4 == 0) {
-            printf("\n");
-        }
-    }
-    std::cout << std::endl;
+    //     // Newline every 4 bytes for compactness (or 16 if preferred)
+    //     if ((i + 1) % 4 == 0) {
+    //         printf("\n");
+    //     }
+    // }
+    // std::cout << std::endl;
 
     for (size_t i = 0; i + 1 < packed_data_size; i += 2) {
         std::swap(packed_data[i], packed_data[i + 1]);
@@ -313,18 +357,19 @@ int deduplicate_chunks(const char *chunk, int chunk_size, HashTable *hash_table,
 
         // Retrieve encoded data
         int encoded_size = *output_size;
+        int decoded_length = *output_length;
         printf("Encoded Size: %d\n", encoded_size);
 
         // Print encoded data 
-        printf("Encoded Output Codes FPGA: ");
-        for (int j = 0; j < encoded_size; ++j) {
-            printf("%d ", output_code[j]);
-        }
+        // printf("Encoded Output Codes FPGA: ");
+        // for (int j = 0; j < encoded_size; ++j) {
+        //     printf("%d ", output_code[j]);
+        // }
 
-        printf("Decoded Output FPGA: ");
-        for (int j = 0; j < encoded_size; ++j) {
-            printf("%c", output[j]);
-        }
+        // printf("Decoded Output FPGA: ");
+        // for (int j = 0; j < decoded_length; ++j) {
+        //     printf("%c", output[j]);
+        // }
 
         // Print out decoded output:
         // std::cout << "output_hw: " << output_r << std::endl;
@@ -348,6 +393,9 @@ int deduplicate_chunks(const char *chunk, int chunk_size, HashTable *hash_table,
         uint8_t packed_data[max_packed_data_size];
         size_t packed_data_size = 0;
         pack_codes_msb_first(reinterpret_cast<const uint16_t*>(output_code), encoded_size, packed_data, packed_data_size, max_packed_data_size, outfc, header, outputFileName);
+
+        // Make sure the file always ends at a 16bit boundery
+        handle_16bit_boundary(outputFileName);
 
         // Ensure chunk_hash is within bounds
         if (chunk_hash >= HASH_TABLE_SIZE) {
