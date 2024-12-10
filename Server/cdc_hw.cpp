@@ -31,27 +31,34 @@ uint64_t update_hash(uint64_t hash, unsigned char outgoing, unsigned char incomi
     return hash;
 }
 
-void cdc(const unsigned char* buff, unsigned int buff_size, Chunk chunks[], int *num_chunks) {
-    std::cout <<"Buffer Size: " << buff_size << std::endl;
+#define MAX_CHUNKS 8192 // Adjust this based on your needs
+void cdc(const unsigned char* buff, unsigned int buff_size, std::vector<Chunk>& chunks, int *num_chunks) {
+    std::cout << "Buffer Size: " << buff_size << std::endl;
 
     uint64_t rolling_hash = initialize_hash(buff, WINDOW_SIZE);
-    int chunk_index = 0;
     
     Chunk current_chunk;
-//    int current_chunk_size = 0;
+    current_chunk.size = 0;
+
+    const uint64_t MASK = (1ULL << 10) - 1;  // Creates chunks on average every 1KB
 
     for (unsigned int i = 0; i < buff_size; ++i) {
+        if (current_chunk.size >= MAX_CHUNK_SIZE) {
+            chunks.push_back(current_chunk);
+            current_chunk.size = 0;
+        }
+
         current_chunk.data[current_chunk.size++] = buff[i];
-        //std::cout <<"Current Chunk Data: " << buff[i] <<"||->  current_chunk.size = " << current_chunk.size <<std::endl;
+
         if (i >= WINDOW_SIZE) {
             unsigned char outgoing = buff[i - WINDOW_SIZE];
             rolling_hash = update_hash(rolling_hash, outgoing, buff[i]);
         }
 
-        if ((rolling_hash == 0 && current_chunk.size >= MIN_CHUNK_SIZE) || 
+        if ((current_chunk.size >= MIN_CHUNK_SIZE && (rolling_hash & MASK) == 0) || 
             (current_chunk.size >= MAX_CHUNK_SIZE)) {
             
-            chunks[chunk_index++] = current_chunk;
+            chunks.push_back(current_chunk);
             current_chunk.size = 0;
             
             if (i + 1 < buff_size) {
@@ -61,9 +68,9 @@ void cdc(const unsigned char* buff, unsigned int buff_size, Chunk chunks[], int 
     }
 
     if (current_chunk.size > 0) {
-        chunks[chunk_index++] = current_chunk;
+        chunks.push_back(current_chunk);
     }
 
-    *num_chunks = chunk_index;
-    std::cout <<"Number of chunks: " << chunk_index << std::endl;
+    *num_chunks = chunks.size();
+    std::cout << "Number of chunks: " << *num_chunks << std::endl;
 }

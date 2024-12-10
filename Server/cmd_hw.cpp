@@ -237,35 +237,48 @@ int deduplicate_chunks(const char *chunk, int chunk_size, HashTable *hash_table,
         return 0;
     }     else {
         
-        // printf("Copying mem...");
-        // memcpy(input_hw, chunk, chunk_size * sizeof(char));
-
-        // printf("set args");
-        // krnl_lzw.setArg(1, chunk_size);
-        
-        // printf("enqueue task");
-        // q.enqueueTask(krnl_lzw);    
-        // q.finish();
-
-        // q.enqueueReadBuffer(output_size_buf, CL_TRUE, 0, sizeof(int), output_size);
-        // q.enqueueReadBuffer(output_length_buf, CL_TRUE, 0, sizeof(int), output_length);
-
-        // int encoded_size = *output_size;
-        // int decoded_length = *output_length;
-
-        // cl::Event event;
-        // q.enqueueReadBuffer(output_code_buf, CL_TRUE, 0, encoded_size * sizeof(int), output_code_hw, NULL, &event);
-        // q.enqueueReadBuffer(output_buf, CL_TRUE, 0, decoded_length * sizeof(char), output_hw, NULL, &event);
-
-        // q.enqueueUnmapMemObject(input_buf, input_hw);
-        // q.finish();
-
-
         // ----------------------
-        // Kernel Software Execution
+        // Kernel Hardware Execution
         // ----------------------
 
-        lzw_sw(chunk, chunk_size, output_code_hw, *output_size, output_hw, *output_length);
+        // Clean and then copy the chunk data into the input hardware array that then gets sent to the FPGA
+        printf("Copying memory...\n");
+        memcpy(input_hw, chunk, chunk_size * sizeof(char));
+        // Set the input_size argument
+        printf("Cleaned size: %d\n", chunk_size);
+        // std::cerr << "Cleaned Size: " << chunk_size << std::endl;
+        krnl_lzw.setArg(1, chunk_size);
+
+        // lzw_sw(chunk, chunk_size, output_code, *output_size, output, *output_length);
+
+        // Migrate input buffer to FPGA
+        printf("KRNL 2...\n");
+        q.enqueueMigrateMemObjects({input_buf}, 0 /* Host to device */, NULL, NULL);
+        printf("KRNL 3...\n");
+        q.finish();
+        cl_int err; 
+        // Launch the FPGA kernel
+       err = q.enqueueTask(krnl_lzw);
+        if (err != CL_SUCCESS) {
+            std::cerr << "Error enqueueing kernel task: " << err << std::endl;
+            return -1;
+        }
+        std::cout << "Kernel enqueued successfully" << std::endl;
+
+        err = q.finish();
+        if (err != CL_SUCCESS) {
+            std::cerr << "Error waiting for kernel completion: " << err << std::endl;
+            return -1;
+        }
+        std::cout << "Kernel execution completed" << std::endl;
+
+                printf("KRNL 4...\n");
+        q.finish();
+
+        // Migrate output buffer back to host
+        printf("KRNL 5...\n");
+        q.enqueueMigrateMemObjects({output_code_buf, output_size_buf, output_buf, output_length_buf}, CL_MIGRATE_MEM_OBJECT_HOST);
+        q.finish();
 
         // Retrieve encoded data
         int encoded_size = *output_size;
@@ -282,6 +295,9 @@ int deduplicate_chunks(const char *chunk, int chunk_size, HashTable *hash_table,
         //     printf("%c", output[j]);
         // }
 
+        // Print out decoded output:
+        // std::cout << "output_hw: " << output_r << std::endl;
+
         if (encoded_size == 0) {
             fprintf(stderr, "Failed to encode chunk\n");
             return -1;
@@ -292,6 +308,9 @@ int deduplicate_chunks(const char *chunk, int chunk_size, HashTable *hash_table,
         uint32_t header = (encoded_size & 0x7FFFFFFF);
         
         // Step 2: Pack the Compressed Data (e.g. 13-bit codes) into an 8-bit-aligned format
+        // std::vector<uint8_t> packed_data;
+        // pack_codes_msb_first(reinterpret_cast<const uint16_t*>(output_code), encoded_size, packed_data, outfc, header, outputFileName);
+
         size_t max_packed_data_size = encoded_size * 2;
         uint8_t packed_data[max_packed_data_size];
         size_t packed_data_size = 0;
@@ -315,7 +334,7 @@ int deduplicate_chunks(const char *chunk, int chunk_size, HashTable *hash_table,
         }
 
         // Copy encoded data to storage
-        memcpy(encoding_storage[chunk_hash], output_hw, encoded_size * sizeof(int));
+        // memcpy(encoding_storage[chunk_hash], output, encoded_size * sizeof(int));
         printf("Storing encoded data for hash: %lu\n", chunk_hash);
 
         // Insert into hash table

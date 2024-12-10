@@ -56,7 +56,7 @@ int appHost(unsigned char* buffer, unsigned int length,
     unsigned int buffer_size = length;
 
     // Step 2: Chunking the Ethernet input
-    Chunk chunks[NUM_PACKETS];
+    std::vector<Chunk> chunks;
     int num_chunks = 0;
     cdc(buffer, buffer_size, chunks, &num_chunks);
 
@@ -65,8 +65,13 @@ int appHost(unsigned char* buffer, unsigned int length,
         const char* chunk_data = reinterpret_cast<const char*>(chunks[i].data);
         int chunk_size = chunks[i].size;
 
+        if (chunk_size > MAX_CHUNK_SIZE) {
+            std::cerr << "Error: Chunk size " << chunk_size << " exceeds maximum allowed size of " << MAX_CHUNK_SIZE << std::endl;
+            continue; // Skip this chunk
+        }
+
         // Deduplicate chunk (conditional check done here)
-        printf("About to deduplicate\n");
+        printf("About to deduplicate chunk %d of size %d\n", i, chunk_size);
         int is_new_chunk = deduplicate_chunks(chunk_data, chunk_size, &hash_table, 
                                       krnl_lzw, q, input_buf, 
                                       output_code_buf, output_size_buf, 
@@ -74,10 +79,14 @@ int appHost(unsigned char* buffer, unsigned int length,
                                       input_hw, output_code_hw, 
                                       output_size_hw, output_hw, 
                                       output_length_hw, outputFileName);
+        if (is_new_chunk < 0) {
+            std::cerr << "Error deduplicating chunk " << i << std::endl;
+        }
     }
 
     return 0;
 }
+
 
 void handle_input(int argc, char* argv[], int* blocksize) {
     int option;
@@ -198,8 +207,8 @@ int main(int argc, char* argv[]) {
     // set Argument 1 of input size gets set in the 
     krnl_lzw.setArg(2, output_code_buf);
     krnl_lzw.setArg(3, output_size_buf);
-    krnl_lzw.setArg(4, output_buf);
-    krnl_lzw.setArg(5, output_length_buf);
+    //krnl_lzw.setArg(4, output_buf);
+    //krnl_lzw.setArg(5, output_length_buf);
 
     // ------------------------------------------------------------------------------------
     // Ethernet Setup
